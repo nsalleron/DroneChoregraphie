@@ -1,0 +1,90 @@
+\documentclass[12pt, openany]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[frenchb]{babel}
+\usepackage{libertine}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{scrextend}
+\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
+\usepackage{float, caption}
+\usepackage{colortbl}
+\usepackage{array}
+
+%Réglage de l'espacement pour les chapitres
+\titleformat{\chapter}[display]   
+	{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{5pt}{\Huge}  
+\titlespacing*{\chapter}{0pt}{-30pt}{5pt}
+
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+
+\begin{titlepage}
+\includegraphics[width=5cm]{upmc.png}
+\begin{sffamily}
+\begin{center}
+% Mise en place de l'image
+\includegraphics[scale=0.4]{img1.jpg}~\\[1cm]
+\textsc{\Large Projet : DRONE AUTOPILOT}\\[1cm]
+
+% Titre
+\HRule \\[0.4cm]
+	 { \huge \bfseries Cahier des charges\\[0.4cm] }
+ \HRule \\[2cm]
+ 
+ \textsc{\LARGE Université Pierre et Marie Curie}\\[3cm]
+
+ % Auteurs et tuteur
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+Alex \textsc{Archambault}\\
+Yoann \textsc{Ghigoff}\\
+Nicolas \textsc{Salleron}\\	%Sens Alphabétique
+Kévin \textsc{Vu-Saintonge}\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Tuteur :} M. Fabrice \textsc{Kordon}\\
+\today
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+\end{center}
+\end{sffamily}
+\end{titlepage}
+
+
+%Mise en place du sommaire
+\tableofcontents
+
+
+%%%%%% INTRODUCTION %%%%%%
+%Précise l'objectif du document et en résume le contenu
+
+\chapter{Introduction}
+\paragraph{}
+Utilisés depuis les années 1990 dans le cadre militaire, les drones font aujourd'hui partie de notre vie de tous les jours. Des sociétés comme Parrot les ont popularisés au sein du grand public. Les smartphones étant de plus en plus répandus et performants, les applications peuvent exploiter les multiples capacités de leurs capteurs embarqués. Les progrès de la miniaturisation permettent même l'utilisation de ces technologies dans de plus petits objets connectés telles les montres.\\
+Les drones sont très souvent utilisés, notamment dans les domaines artistiques comme la danse. Des émissions en témoignent : "La France a un incroyable talent" (25/10/2016) et "Britain's got talent", outre-Manche.\\À Las Vegas, durant le CES 2016, la société Parrot a réalisé le "Drone dance" dans lequel les drones Parrot "dansent" de manière autonome sur une chorégraphie pré-enregistrée. A Londres la même année, la société BeTomorrow a présenté le "Flying Oreo show". 
+Nous observons un réel intérêt du grand public pour les drones et la démonstration de leurs capacités à travers le spectacle et la danse.
+\paragraph{}Notre projet s'inscrit dans l'utilisation grandissante des drones dans la discipline artistique. L'objectif est de permettre à  un danseur de réaliser une chorégraphie. Il s'inscrit également dans l'UE "IDM" de notre cursus et est nécessaire pour l'obtention du master M2 à  l'UPMC.\\ Ce projet a pour but de présenter les fonctionnalités que nous allons implémenter pour le projet "DroneAutoPilot". Dabs cette partie nous expliquerons le contexte et les objectifs du projet.
+
+
+\section{Contexte}
+\paragraph{}
+TODO
+
+\section{Objectifs}
+\paragraph{}
+TODO
+\end{document}
