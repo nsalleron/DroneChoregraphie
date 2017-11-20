@@ -1,0 +1,9 @@
+Décoller
+Atterir
+Monter
+Descendre
+Avancer
+Reculer
+Gauche
+Droite
+Pause
