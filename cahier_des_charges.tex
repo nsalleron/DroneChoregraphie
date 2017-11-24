@@ -85,59 +85,301 @@ Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le
 \section{Objectifs}
 \paragraph{} L'objectif est de permettre à  un danseur de réaliser une chorégraphie. Pour ce faire notre équipe produira un langage de programmation simple et compréhensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de manière autonome afin de préparer en amont la chorégraphie de son drone. Une fois la chorégraphie validée et compiler par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application générée par notre frontal. Cette application enverra différents ordres au drone et réalisera la chorégraphie.
 
+
+\chapter{Tests de validation}
+%USE CASE 1
+\subsection{Contrôler drone depuis l'ordinateur} 
+\subsubsection{Décollage}
+
+% Décollage
+\begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
+\hline
+\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{Décollage du drone } \\
+\hline
+Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{TODO} \\
+\hline
+\hline
+Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
+\hline
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est au sol, prêt à décoller} \\
+\hline
+Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. L'utilisateur à déjà réaliser son application ne contenant que l'instruction de décollage.} \\
+\hline
+Scénario & {
+	\begin{minipage}[t]{\linewidth}
+	Utilisateur : \\
+	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que l'instruction de décollage.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Application :\\
+	2. Le système fait décoller le drone. \\
+	4. Le système le place à une hauteur minimale de fonctionnement. \\
+	6. Le système enclenche le mode de vol stationnaire\\
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Drone :\\
+	3. Le drone décolle.\\
+	5. Le drone se place à la hauteur minimale de fonctionnement.
+	 \end{minipage}
+	} \\
+
+\hline
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone n'est plus au sol et est maintenant dans le mode de vol "Stationnaire"}\\
+\hline
+\end{tabular}
+
+%Validation décollage
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TV01 Décollage\\
+\hline
+Contexte :& L'ordinateur est connecté au drone et l'utilisateur à compiler son application ne contenant que l'instruction de décollage.\\
+\hline
+Entrée :& Aucune. \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \begin{enumerate}
+    \item L'utilisateur lance son application.\\
+    \end{enumerate}
+\end{minipage} \\
+\hline
+Moyen de vérification :& Visuel, le drone est à sa hauteur minimale de fonctionnement. \\
+\hline
+\end{tabular}
+
+\subsubsection{Atterrissage}
+% Atterrissage
+\begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
+\hline
+\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{Atterrissage du drone} \\
+\hline
+Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{TODO} \\
+\hline
+Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
+\hline
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est en mode stationnaire, prêt à atterrir.} \\
+\hline
+Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé (et est en mode stationnaire).L'utilisateur à déjà réaliser son application ne contenant que l'instruction de d'Atterrisage.} \\
+\hline
+Scénario & {
+	\begin{minipage}[t]{\linewidth}
+	Utilisateur : \\
+	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que l'instruction de d'atterrissage.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Application :\\
+	2. Le système entre en phase d'atterrissage.\\
+	3. Le système descend lentement le drone vers le sol.\\
+	5. Au sol, le système coupe le fonctionnement des hélices. \\
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Drone :\\
+	4. Le drone descend vers le sol.\\
+	6. Le drone est au sol, les hélices ne bougent plus.\\
+	 \end{minipage}
+	} \\
+
+\hline
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone est au sol.}\\
+\hline
+\end{tabular}
+
+%Validation Atterrissage
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TV02 Atterrisage\\
+\hline
+Contexte :& L'ordinateur est connecté au drone et l'utilisateur à compiler son application ne contenant que l'instruction de d'atterrissage.\\
+\hline
+Entrée :& Aucune. \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \begin{enumerate}
+     \item L'utilisateur lance son application.\\
+    \end{enumerate}
+\end{minipage} \\
+\hline
+Moyen de vérification :& Visuel, le drone est au sol, les hélices sont en arrêt de fonctionnement. \\
+\hline
+\end{tabular}
+
+
+\vspace*{10px}
+
+\subsubsection{Mouvements sur le plan horizontal}
+%Mouvement sur le plan horizontal
+\begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
+\hline
+\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{Mouvement sur le plan horizontal (axe X ou Y)} \\
+\hline
+Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{TODO} \\
+\hline
+Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
+\hline
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone réagit aux commandes définies par l'utilisateur dans son application.} \\
+\hline
+Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé. L'utilisateur à déjà réaliser son application ne contenant que des instructions de mouvements sur le plan horizontal} \\
+\hline
+Scénario & {
+	\begin{minipage}[t]{\linewidth}
+	Utilisateur : \\
+	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que des instructions de déplacement sur les axes X et Y.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Application :\\
+	2. Le système donne des ordres au drone pour le déplacement.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Drone :\\
+	3. Le drone se déplace de gauche à droite sur l'axe X (ou Y).
+	 \end{minipage}
+	} \\
+
+\hline
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de position.}\\
+\hline
+\end{tabular}
+
+%Validation mouvement horizontal
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TV03 Mouvement horizontal (axe X ou Y)\\
+\hline
+Contexte :& L'ordinateur est connecté au drone. Le drone a décollé et est en mode stationnaire. L'utilisateur à compiler son application ne contenant que des instructions de déplacement sur les axes X et/ou Y. \\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \begin{enumerate}
+ \item L'utilisateur lance son application.\\
+    \end{enumerate}
+\end{minipage} \\
+\hline
+Moyen de vérification :& Visuel, le drone a changé de position. \\
+\hline
+\end{tabular}
+\vspace*{10px}
+
+\subsubsection{Mouvement sur le plan vertical}
+%Mouvement sur le plan vertical
+\begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
+\hline
+\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{Mouvement sur le plan vertical (axe Z)} \\
+\hline
+Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{TODO} \\
+\hline
+Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
+\hline
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone réagit aux actions de l'utilisateur sur le plan vertical} \\
+\hline
+Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé. L'utilisateur à déjà réaliser son application ne contenant que des instructions de déplacement sur l'axe Z} \\
+\hline
+Scénario & {
+	\begin{minipage}[t]{\linewidth}
+	Utilisateur : \\
+	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que des instructions de déplacement sur l'axe Z.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Application :\\
+	2. Le système donne des ordres au drone pour le déplacement.
+	 \end{minipage}
+	} & {
+	\begin{minipage}[t]{\linewidth}
+	Drone :\\
+	3. Le drone se déplace de gauche à droite sur l'axe Z.
+	 \end{minipage}
+	} \\
+
+\hline
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de position.}\\
+\hline
+\end{tabular}
+
+%Validation mouvement Vertical
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TV04 Mouvement vertical\\
+\hline
+Contexte :& Le mobile est connecté au drone. Le drone a décollé et est en mode stationnaire. L'utilisateur à compiler son application ne contenant que des instructions de déplacement sur l'axe Z. \\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \begin{enumerate}
+    \item L'utilisateur lance son application.\\
+    \end{enumerate}
+\end{minipage} \\
+\hline
+Moyen de vérification :& Visuel, le drone a changé de position. \\
+\hline
+\end{tabular}
+
+
 \section{Langage de contrôle de drone}
 \paragraph{}
 Afin de rendre accessible le pilotage de drone à tous, nous implémenterons un langage dédié. Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
 
 \subsection{Décoller}
-\quad Syntaxe: \textit{decoller()}\bigbreak
+\quad Syntaxe: \textbf{decoller()}\bigbreak
 Cette commande permettra à un drone de décoller. Elle devra obligatoirement être la première commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas atterri. Il est possible de décoller après chaque atterrissage.
 
 \subsection{Atterrir}
-\quad Syntaxe: \textit{atterrir()}\bigbreak
+\quad Syntaxe: \textbf{atterrir()}\bigbreak
 Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
 
 \subsection{Monter}
-\quad Syntaxe: \textit{monter(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{monter(durée: réel, vitesse\_vertical: entier)}\bigbreak
 Cette commande permettra à un drone de monter en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone s'élève. 
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone s'élève. 
+Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
 
 \subsection{Descendre}
-\quad Syntaxe: \textit{descendre(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{descendre(durée: réel, vitesse\_vertical: entier)}\bigbreak
 Cette commande permettra à un drone de descendre en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone décline.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone décline.
+Le paramètre \textbf{vitesse\_vertical} est un entier négatif compris entre -100 et -1. Il indique la vitesse d'élèvation du drone.
 
 \subsection{Avancer}
-\quad Syntaxe: \textit{avancer(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{avancer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \subsection{Reculer}
-\quad Syntaxe: \textit{reculer(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{reculer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
 
 \subsection{Gauche}
-\quad Syntaxe: \textit{gauche(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{gauche(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
 
 \subsection{Droite}
-\quad Syntaxe: \textit{droite(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{droite(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
+Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \subsection{Pause}
-\quad Syntaxe: \textit{pause(durée: réel)}\bigbreak
+\quad Syntaxe: \textbf{pause(durée: réel)}\bigbreak
 Cette commande permettra à un drone de s'arrêter en position stationnaire pendant une certaine durée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
+
+
 
 
 \end{document}
+
