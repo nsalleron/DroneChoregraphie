@@ -24,6 +24,13 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+\newenvironment{indentpar}[1]%
+  {\begin{list}{}%
+          {\setlength{\leftmargin}{#1}}%
+          \item[]%
+  }
+  {\end{list}}
+
 \begin{document}
 
 
@@ -54,7 +61,7 @@ Kévin \textsc{Vu-Saintonge}\\
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Tuteur :} M. Fabrice \textsc{Kordon}\\
-\today
+-\today
 \end{flushright}
 \end{minipage}
 
@@ -85,9 +92,12 @@ Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le
 \section{Objectifs}
 \paragraph{} L'objectif est de permettre à  un danseur de réaliser une chorégraphie. Pour ce faire notre équipe produira un langage de programmation simple et compréhensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de manière autonome afin de préparer en amont la chorégraphie de son drone. Une fois la chorégraphie validée et compiler par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application générée par notre frontal. Cette application enverra différents ordres au drone et réalisera la chorégraphie.
 
+
 \section{Langage de contrôle de drone}
+
 \paragraph{}
-Afin de rendre accessible le pilotage de drone à tous, nous implémenterons un langage dédié. Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
+Dans le but de rendre accessible le pilotage de drone aux artistes chorégraphes du futur, nous implémenterons un langage dédié permttant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\
+Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
 
 \subsection{Décoller}
 \quad Syntaxe: \textit{decoller()}\bigbreak
@@ -139,5 +149,104 @@ Cette commande permettra à un drone de s'arrêter en position stationnaire pendan
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textit{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
 
+
+\section{Editeur du langage}
+
+\subsection{Description}
+Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\
+Celui-ci permettra entre autre : l'auto-completion du langage décrit précédemment, la détection de fautes syntaxiques ainsi que les erreurs de cohérence dans les scénarios.\\
+Une erreur de cohérence simple peut être le fait de commander au drone d'avancer avant que celui-ci n'ai décollé.
+
+\subsection{Tests de validation de l'éditeur du langage}
+
+Ci-dessous une liste de tests permettant au client de valider la recette de l'éditeur du langage.\bigbreak
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0)\\
+	avancer(1.0)\\
+	reculer(1.0)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	blabalbla()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{blabalbla}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter("hello")\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	atterrir()\\
+	monter(1.0)\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	monter(1.0)\\
+	decoller()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	decoller()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{decoller}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0)\\
+	atterrir()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{atterrir}.
 
 \end{document}
