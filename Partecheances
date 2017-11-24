@@ -1,3 +1,8 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
 \paragraph{1. D\'ecoller\\}
 Gr\^ace \`a la fonctionnalit\'e decoller(), l'utilisateur pourra faire d\'ecoller le drone de sa position courante. Cela marque le d\'ebut de la chor\'egraphie.
 
