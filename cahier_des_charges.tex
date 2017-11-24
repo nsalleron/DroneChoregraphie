@@ -24,6 +24,14 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+\newenvironment{indentpar}[1]%
+  {\begin{list}{}%
+          {\setlength{\leftmargin}{#1}}%
+          \item[]%
+  }
+  {\end{list}}
+
+
 \begin{document}
 
 
@@ -87,73 +95,78 @@ Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le
 
 \chapter{Le langage de pilotage du drone}
 
-\subsection{Description}
-Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera généré à partir d'un modèle qui respectera un méta-modèle. Une extension de fichier spécifique au langage sera utilisée. Un système d'auto-complétion sera activé pour faciliter l'écriture d'une instance du langage.
+\section{Description}
+Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera généré à partir d'un modèle qui respectera un méta-modèle. Une extension de fichier spécifique au langage sera utilisée. 
 
-\subsection{Écriture de la chorégraphie par l'utilisateur}
+\section{Description de l'editeur du langage}
+
+Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\
+Celui-ci permettra entre autre : l'auto-completion du langage décrit précédemment, la détection de fautes syntaxiques ainsi que les erreurs de cohérence dans les scénarios.\\
+Une erreur de cohérence simple peut être le fait de commander au drone d'avancer avant que celui-ci n'ai décollé.
+
+\section{Écriture de la chorégraphie par l'utilisateur}
 L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans la partie "commandes à implémenter?. Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
-\subsection{Déploiement}
+\section{Déploiement}
 
-   Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
-            \begin{itemize}
-                \item Le drone doit être allumé par l'utilisateur.
-                \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
-                \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
-                \item Le programme utilisateur doit être réalisé sous le logiciel Eclipse Oxygen version 4.7.0.
-                \item L'ordinateur exécutant le programme réalisé par l'utilisateur doit avoir installé Java version 1.8.
-            \end{itemize}
+Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
+\begin{itemize}
+      \item Le drone doit être allumé par l'utilisateur.
+      \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
+      \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
+      \item Le programme utilisateur doit être réalisé sous le logiciel Eclipse Oxygen version 4.7.0.
+      \item L'ordinateur exécutant le programme réalisé par l'utilisateur doit avoir installé Java version 1.8.
+\end{itemize}
            
-           
-           Des fichiers et documents aideront pour son déploiement.
+\vspace{10px}           
+Des fichiers et documents aideront pour son déploiement.
 
 
 \chapter{Fonctionnement du drone}
 
-\section{Pilotage du drone}
-    \subsection{Décollage - Taking off}
-        Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyés (il les effectuera quand il sera dans un état stable). \\
-        Il correspond à l'instruction suivante dans le projet :
-        \begin{itemize}
-            \item \textbf{decoller}
-        \end{itemize}
+\section{Décollage - Taking off}
+Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyés (il les effectuera quand il sera dans un état stable). \\
+Il correspond à l'instruction suivante dans le projet :
+\begin{itemize}
+     \item \textbf{decoller}
+\end{itemize}
         
-    \subsection{Altitude - Gaz}
-        Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
-        Il correspond aux instructions suivantes dans le projet :
-        \begin{itemize}
-            \item \textbf{monter}
-            \item \textbf{descendre}
-        \end{itemize}
+\section{Altitude - Gaz}
+Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
+-Il correspond aux instructions suivantes dans le projet :
+\begin{itemize}
+     \item \textbf{monter}
+     \item \textbf{descendre}
+\end{itemize}
         
-    \subsection{Mouvements horizontales - Roll}
-        Le drone est capable de se déplacer horizontalement (axe x), pour se faire le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
-        Il correspond aux instructions suivantes dans le projet :
-        \begin{itemize}
-            \item \textbf{gauche}
-            \item \textbf{droite}
-        \end{itemize}
+\section{Mouvements horizontales - Roll}
+Le drone est capable de se déplacer horizontalement (axe x), pour se faire le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
+Il correspond aux instructions suivantes dans le projet :
+\begin{itemize}
+     \item \textbf{gauche}
+     \item \textbf{droite}
+\end{itemize}
     
-    \subsection{Mouvements de profondeur - Pitch}
-        Le drone est capable de se déplacer en profondeur (axe y), pour se faire le drone va s'incliner en avant ou en arrière d'un certain angle. \\
-        Il correspond aux instructions suivantes dans le projet :
-        \begin{itemize}
-            \item \textbf{avancer}
-            \item \textbf{reculer}
-        \end{itemize}
+\section{Mouvements de profondeur - Pitch}
+Le drone est capable de se déplacer en profondeur (axe y), pour se faire le drone va s'incliner en avant ou en arrière d'un certain angle. \\
+Il correspond aux instructions suivantes dans le projet :
+\begin{itemize}
+    \item \textbf{avancer}
+    \item \textbf{reculer}
+\end{itemize}
         
-    \subsection{Pause - Stop}
-        Le drone est capable de faire du surplace (stabilisation). \\
-        Il correspond à l'instruction suivante dans le projet :
-        \begin{itemize}
-            \item \textbf{pause}
-        \end{itemize}
+\section{Pause - Stop}
+Le drone est capable de faire du surplace (stabilisation). \\
+Il correspond à l'instruction suivante dans le projet :
+\begin{itemize}
+      \item \textbf{pause}
+\end{itemize}
         
-    \subsection{Atterrissage - Landing}
-        Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
-        Il correspond à l'instruction suivante dans le projet :
-        \begin{itemize}
-            \item \textbf{atterrir}
-        \end{itemize}
+\subsection{Atterrissage - Landing}
+Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
+Il correspond à l'instruction suivante dans le projet :
+\begin{itemize}
+      \item \textbf{atterrir}
+ \end{itemize}
         
         
         
@@ -163,63 +176,63 @@ L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un reto
 \paragraph{}
 Afin de rendre accessible le pilotage de drone à tous, nous implémenterons un langage dédié. Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
 
-\subsection{Décoller}
+\section{Décoller}
 \quad Syntaxe: \textbf{decoller()}\bigbreak
 Cette commande permettra à un drone de décoller. Elle devra obligatoirement être la première commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas atterri. Il est possible de décoller après chaque atterrissage.
 
-\subsection{Atterrir}
+\section{Atterrir}
 \quad Syntaxe: \textbf{atterrir()}\bigbreak
 Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
 
-\subsection{Monter}
+\section{Monter}
 \quad Syntaxe: \textbf{monter(durée: réel, vitesse\_vertical: entier)}\bigbreak
 Cette commande permettra à un drone de monter en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone s'élève. 
 Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
 
-\subsection{Descendre}
+\section{Descendre}
 \quad Syntaxe: \textbf{descendre(durée: réel, vitesse\_vertical: entier)}\bigbreak
 Cette commande permettra à un drone de descendre en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone décline.
 Le paramètre \textbf{vitesse\_vertical} est un entier négatif compris entre -100 et -1. Il indique la vitesse d'élèvation du drone.
 
-\subsection{Avancer}
+\section{Avancer}
 \quad Syntaxe: \textbf{avancer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
 Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
-\subsection{Reculer}
+\section{Reculer}
 \quad Syntaxe: \textbf{reculer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
 Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
 
-\subsection{Gauche}
+\section{Gauche}
 \quad Syntaxe: \textbf{gauche(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
 Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
 
-\subsection{Droite}
+\section{Droite}
 \quad Syntaxe: \textbf{droite(durée: réel, vitesse\_deplacement: entier)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
 Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
-\subsection{Pause}
+\section{Pause}
 \quad Syntaxe: \textbf{pause(durée: réel)}\bigbreak
 Cette commande permettra à un drone de s'arrêter en position stationnaire pendant une certaine durée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
 
-\subsection{Exemple d'une exécution}
+\section{Exemple d'une exécution}
     Voici un exemple type de programme que l'utilisateur peut faire: \\
     \begin{figure}[h!]
             \fbox {
@@ -240,9 +253,9 @@ Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone 
 
 \chapter{Tests de validation}
 %USE CASE 1
-\subsection{Contrôler drone depuis l'ordinateur} 
-\subsubsection{Décollage}
+\subsection{Contrôler drone depuis l'ordinateur (via le programme utilisateur)} 
 
+\subsubsection{Décollage}
 % Décollage
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
@@ -469,12 +482,97 @@ Moyen de vérification :& Visuel, le drone a changé de position. \\
 \hline
 \end{tabular}
 
+\subsection{Tests de validation de l'éditeur du langage}
 
+Ci-dessous une liste de tests permettant au client de valider la recette de l'éditeur du langage.\bigbreak
 
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
 
+\noindent\rule{15cm}{0.4pt}
 
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	avancer(1.0, 20)\\
+	reculer(1.0, 20)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
 
+\noindent\rule{15cm}{0.4pt}
 
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	blabalbla()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{blabalbla}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter("hello")\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	atterrir()\\
+	monter(1.0, 20)\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	monter(1.0, 20)\\
+	decoller()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	decoller()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{decoller}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	atterrir()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{atterrir}.
 
 
 
