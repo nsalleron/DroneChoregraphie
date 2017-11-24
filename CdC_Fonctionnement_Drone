@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Pré-conditions d'utilisation}
+        Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
+            \begin{itemize}
+                \item Le drone doit être allumé par l'utilisateur.
+                \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
+                \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
+                \item Le programme utilisateur doit être réalisé sous le logiciel Eclipse Oxygen version 4.7.0.
+                \item L'ordinateur exécutant le programme réalisé par l'utilisateur doit avoir installé Java version 1.8.
+            \end{itemize}
+
+\section{Pilotage du drone}
+    \subsection{Décollage - Taking off}
+        Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyés (il les effectuera quand il sera dans un état stable). \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{decoller}
+        \end{itemize}
+        
+    \subsection{Altitude - Gaz}
+        Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{monter}
+            \item \textbf{descendre}
+        \end{itemize}
+        
+    \subsection{Mouvements horizontales - Roll}
+        Le drone est capable de se déplacer horizontalement (axe x), pour se faire le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{gauche}
+            \item \textbf{droite}
+        \end{itemize}
+    
+    \subsection{Mouvements de profondeur - Pitch}
+        Le drone est capable de se déplacer en profondeur (axe y), pour se faire le drone va s'incliner en avant ou en arrière d'un certain angle. \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{avancer}
+            \item \textbf{reculer}
+        \end{itemize}
+        
+    \subsection{Pause - Stop}
+        Le drone est capable de faire du surplace (stabilisation). \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{pause()}
+        \end{itemize}
+        
+    \subsection{Atterrissage - Landing}
+        Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{atterrir}
+        \end{itemize}
+
+\section{Exemple d'une exécution}
+    Voici un exemple type de programme que l'utilisateur peut faire: \\
+    \begin{figure}[h!]
+            \fbox {
+                \begin{minipage}{\textwidth}
+                    \begin{center}
+                        decoller() \\
+                        monter(2, 10) \\
+                        avancer(2, 20) \\
+                        droite(2, 15) \\
+                        atterrir() \\
+                    \end{center}
+                \end{minipage}}
+            \caption{Exemple de programme utilisateur}
+            \label{Exemple de programme utilisateur}
+    \end{figure}
+    \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter on programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+    
+\section{Commande : Atterrissage}
+    La commande \textbf{atterrir()} fait atterrir le drone comme indiqué dans la section 2.5. La dernière instruction du programme utilisateur doit être cette commande. \\
+    Exemple :
+    \begin{figure}[h!]
+            \fbox {
+                \begin{minipage}{\textwidth}
+                    \begin{center}
+                        ... \\
+                        atterrir() \\
+                    \end{center}
+                \end{minipage}}
+            \caption{Exemple de programme utilisateur}
+            \label{Exemple de la commande atterrir}
+    \end{figure}
+\end{document}
