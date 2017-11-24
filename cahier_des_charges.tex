@@ -24,6 +24,13 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+\newenvironment{indentpar}[1]%
+  {\begin{list}{}%
+          {\setlength{\leftmargin}{#1}}%
+          \item[]%
+  }
+  {\end{list}}
+
 \begin{document}
 
 
@@ -54,7 +61,7 @@ Kévin \textsc{Vu-Saintonge}\\
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Tuteur :} M. Fabrice \textsc{Kordon}\\
-\today
+-\today
 \end{flushright}
 \end{minipage}
 
@@ -156,12 +163,11 @@ L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un reto
         \end{itemize}
         
         
-        
-        
-        
 \chapter{Les commandes à implémenter}
+
 \paragraph{}
-Afin de rendre accessible le pilotage de drone à tous, nous implémenterons un langage dédié. Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
+Dans le but de rendre accessible le pilotage de drone aux artistes chorégraphes du futur, nous implémenterons un langage dédié permttant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\
+Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
 
 \subsection{Décoller}
 \quad Syntaxe: \textbf{decoller()}\bigbreak
@@ -236,6 +242,106 @@ Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone 
             \label{Exemple de programme utilisateur}
     \end{figure}
     \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter on programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+
+
+\section{Editeur du langage}
+
+\subsection{Description}
+Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\
+Celui-ci permettra entre autre : l'auto-completion du langage décrit précédemment, la détection de fautes syntaxiques ainsi que les erreurs de cohérence dans les scénarios.\\
+Une erreur de cohérence simple peut être le fait de commander au drone d'avancer avant que celui-ci n'ai décollé.
+
+\subsection{Tests de validation de l'éditeur du langage}
+
+Ci-dessous une liste de tests permettant au client de valider la recette de l'éditeur du langage.\bigbreak
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	avancer(1.0, 20)\\
+	reculer(1.0, -20)\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Aucune erreur n'est détectée par l'éditeur.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	blabalbla()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{blabalbla}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter("hello")\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	atterrir()\\
+	monter(1.0, 20)\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	monter(1.0, 20)\\
+	decoller()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la commande \textit{monter}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	decoller()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{decoller}.
+
+\noindent\rule{15cm}{0.4pt}
+
+\textbf{Pour le scénario suivant:}
+\begin{indentpar}{3cm}
+	decoller()\\
+	monter(1.0, 20)\\
+	atterrir()\\
+	atterrir()\\
+\end{indentpar}
+\textbf{Résultat attendu:}
+Une erreur est détéctée sur la deuxième commande \textit{atterrir}.
 
 
 \chapter{Tests de validation}
@@ -470,14 +576,6 @@ Moyen de vérification :& Visuel, le drone a changé de position. \\
 \end{tabular}
 
 
-
-
-
-
-
-
-
-
 \chapter{Étapes du projet}
 \vspace{1\baselineskip}
 \normalsize
@@ -515,6 +613,7 @@ L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du 
 Cette derni\`ere \'etape consistera \`a une livraison de la distribution permettant d'ex\'ecuter une chor\'egraphie par l'utilisateur et sa mise en place sur un syst\`eme de d\'eploiement avec l'installation des plugins pour le DSL.
 Le serveur sera li\'e au drone qui ex\'ecutera le sc\'enario. \\
 Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distribution.
+
 \end{document}
 
 
