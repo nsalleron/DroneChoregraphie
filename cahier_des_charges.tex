@@ -252,9 +252,9 @@ Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone 
 
 \chapter{Tests de validation}
 %USE CASE 1
-\subsection{Contrôler drone depuis l'ordinateur (via le programme utilisateur)} 
+\section{Contrôler drone depuis l'ordinateur (via le programme utilisateur)} 
 
-\subsubsection{Décollage}
+\subsection*{Décollage}
 % Décollage
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
@@ -312,7 +312,7 @@ Moyen de vérification :& Visuel, le drone est à sa hauteur minimale de fonctionn
 \hline
 \end{tabular}
 
-\subsubsection{Atterrissage}
+\subsection*{Atterrissage}
 % Atterrissage
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
@@ -372,7 +372,7 @@ Moyen de vérification :& Visuel, le drone est au sol, les hélices sont en arrêt 
 
 \vspace*{10px}
 
-\subsubsection{Mouvements sur le plan horizontal}
+\subsection*{Mouvements sur le plan horizontal}
 %Mouvement sur le plan horizontal
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
@@ -427,7 +427,7 @@ Moyen de vérification :& Visuel, le drone a changé de position. \\
 \end{tabular}
 \vspace*{10px}
 
-\subsubsection{Mouvement sur le plan vertical}
+\subsection*{Mouvement sur le plan vertical}
 %Mouvement sur le plan vertical
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
@@ -481,7 +481,7 @@ Moyen de vérification :& Visuel, le drone a changé de position. \\
 \hline
 \end{tabular}
 
-\subsection{Tests de validation de l'éditeur du langage}
+\section{Tests de validation de l'éditeur du langage}
 
 Ci-dessous une liste de tests permettant au client de valider la recette de l'éditeur du langage.\bigbreak
 
@@ -656,38 +656,31 @@ Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{atte
 \end{tabular}
 
 \chapter{Étapes du projet}
-\vspace{1\baselineskip}
+
 \normalsize
 
 À propos des délais de livraison, nous avons opté pour une livraison en tranches à intervalles réguliers. Le client aura donc un état d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un délai maximum les tranches suivantes :
 
 
-\section*{6.0 Tranche 0 : 28 novembre 2017}
-\addcontentsline{toc}{section}{4.0 Tranche 0}
-\vspace{1\baselineskip}
+\section{Tranche 0 : 28 novembre 2017}
+\vspace{1px}
 Tout d'abord, nous livrerons un cahier des charges au client pour formaliser notre compr\'ehension du projet et de ses modalit\'es. Nous exposerons l'analyse des besoins, les r\'eponses apport\'ees, les tests que pourra effectuer le client afin de tester le fonctionnement du programme et nous d\'ecrirons les modalit\'es finales du projet.
 
-\section*{6.1 Tranche 1 : 14 d\'ecembre 2017}
-\addcontentsline{toc}{section}{4.1 Tranche 1}
-\normalsize
-\vspace{1\baselineskip}
+\section{Tranche 1 : 14 d\'ecembre 2017}
+\vspace{1px}
 
 Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
 Nous livrerons un \'éditeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'éditeur appel\'e les instructions qui sont reconnues par l'\'éditeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-08
 
-\section*{6.2 Tranche 2  : 12 janvier 2018}
-\addcontentsline{toc}{section}{4.2 Tranche 2}
-\normalsize
-\vspace{1\baselineskip}
+\section{Tranche 2  : 12 janvier 2018}
+\vspace{1px}
 
 La tranche 2 consistera \`a produire un programme pour que le drone puisse \'executer un sc\'enario.\\
 Le langage cible JAVA du programme sera g\'en\'er\'e \`a partir du DSL sp\'ecifi\'e pour le sc\'enario.\\
 L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone. Enfin la validation de cette tranche se fera avec les tests de validation TV-01 à TV-04
 
-\section*{6.3 Tranche 3 : 25 janvier 2018}
-\addcontentsline{toc}{section}{4.3 Tranche 3}
-\normalsize
-\vspace{1\baselineskip}
+\section{Tranche 3 : 25 janvier 2018}
+\vspace{1px}
 
 Cette derni\`ere \'etape consistera \`a une livraison de la distribution permettant d'ex\'ecuter une chor\'egraphie par l'utilisateur et sa mise en place sur un syst\`eme de d\'eploiement avec l'installation des plugins pour le DSL.
 Le serveur sera li\'e au drone qui ex\'ecutera le sc\'enario. \\
