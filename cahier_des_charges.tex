@@ -378,8 +378,149 @@ Cette commande permettra à un drone de s'arrêter en position stationnaire pendan
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
 
+%TODO
+
+\section{Pré-conditions d'utilisation}
+        Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
+            \begin{itemize}
+                \item Le drone doit être allumé par l'utilisateur.
+                \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
+                \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
+                \item Le programme utilisateur doit être réalisé sous le logiciel Eclipse Oxygen version 4.7.0.
+                \item L'ordinateur exécutant le programme réalisé par l'utilisateur doit avoir installé Java version 1.8.
+            \end{itemize}
+            
+%END TODO
+
+
+\chapter{Fonctionnement du drone}
+
+\section{Pilotage du drone}
+    \subsection{Décollage - Taking off}
+        Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyés (il les effectuera quand il sera dans un état stable). \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{decoller}
+        \end{itemize}
+        
+    \subsection{Altitude - Gaz}
+        Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{monter}
+            \item \textbf{descendre}
+        \end{itemize}
+        
+    \subsection{Mouvements horizontales - Roll}
+        Le drone est capable de se déplacer horizontalement (axe x), pour se faire le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{gauche}
+            \item \textbf{droite}
+        \end{itemize}
+    
+    \subsection{Mouvements de profondeur - Pitch}
+        Le drone est capable de se déplacer en profondeur (axe y), pour se faire le drone va s'incliner en avant ou en arrière d'un certain angle. \\
+        Il correspond aux instructions suivantes dans le projet :
+        \begin{itemize}
+            \item \textbf{avancer}
+            \item \textbf{reculer}
+        \end{itemize}
+        
+    \subsection{Pause - Stop}
+        Le drone est capable de faire du surplace (stabilisation). \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{pause}
+        \end{itemize}
+        
+    \subsection{Atterrissage - Landing}
+        Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
+        Il correspond à l'instruction suivante dans le projet :
+        \begin{itemize}
+            \item \textbf{atterrir}
+        \end{itemize}
+
+
+%TODO A SORTIR
+\section{Exemple d'une exécution}
+    Voici un exemple type de programme que l'utilisateur peut faire: \\
+    \begin{figure}[h!]
+            \fbox {
+                \begin{minipage}{\textwidth}
+                    \begin{center}
+                        decoller() \\
+                        monter(2, 10) \\
+                        avancer(2, 20) \\
+                        droite(2, 15) \\
+                        atterrir() \\
+                    \end{center}
+                \end{minipage}}
+            \caption{Exemple de programme utilisateur}
+            \label{Exemple de programme utilisateur}
+    \end{figure}
+    \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter on programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+%TODO END
+\section{Commande : Atterrissage}
+    La commande \textbf{atterrir()} fait atterrir le drone comme indiqué dans la section 2.5. La dernière instruction du programme utilisateur doit être cette commande. \\
+    Exemple :
+    \begin{figure}[h!]
+            \fbox {
+                \begin{minipage}{\textwidth}
+                    \begin{center}
+                        ... \\
+                        atterrir() \\
+                    \end{center}
+                \end{minipage}}
+            \caption{Exemple de programme utilisateur}
+            \label{Exemple de la commande atterrir}
+    \end{figure}
 
 
 
+
+
+
+
+
+
+\chapter{Délais de livraison}
+\vspace{1\baselineskip}
+\normalsize
+
+À propos des délais de livraison, nous avons opté pour une livraison en tranches à intervalles réguliers. Le client aura donc un état d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un délai maximum les tranches suivantes :
+
+
+\section*{4.0 Tranche 0 : 28 novembre 2017}
+\addcontentsline{toc}{section}{4.0 Tranche 0}
+\vspace{1\baselineskip}
+Tout d'abord, nous livrerons un cahier des charges au client pour formaliser notre compr\'ehension du projet et de ses modalit\'es. Nous exposerons l'analyse des besoins, les r\'eponses apport\'ees, les tests que pourra effectuer le client afin de tester le fonctionnement du programme et nous d\'ecrirons les modalit\'es finales du projet.
+
+\section*{4.1 Tranche 1 : 14 d\'ecembre 2017}
+\addcontentsline{toc}{section}{4.1 Tranche 1}
+\normalsize
+\vspace{1\baselineskip}
+
+Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
+Nous livrerons un \'editeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'editeur appel\'e les instructions qui sont reconnues par l'\'editeur
+
+\section*{4.2 Tranche 2  : 12 janvier 2018}
+\addcontentsline{toc}{section}{4.2 Tranche 2}
+\normalsize
+\vspace{1\baselineskip}
+
+La tranche 2 consistera \`a produire un programme pour que le drone puisse \'executer un sc\'enario.\\
+Le langage cible JAVA du programme sera g\'en\'er\'e \`a partir du DSL sp\'ecifi\'e pour le sc\'enario.\\
+L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone.
+
+\section*{4.3 Tranche 3 : 25 janvier 2018}
+\addcontentsline{toc}{section}{4.3 Tranche 3}
+\normalsize
+\vspace{1\baselineskip}
+
+Cette derni\`ere \'etape consistera \`a une livraison de la distribution permettant d'ex\'ecuter une chor\'egraphie par l'utilisateur et sa mise en place sur un syst\`eme de d\'eploiement avec l'installation des plugins pour le DSL.
+Le serveur sera li\'e au drone qui ex\'ecutera le sc\'enario. \\
+Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distribution.
 \end{document}
+
 
