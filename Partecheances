@@ -1,0 +1,42 @@
+\paragraph{1. D\'ecoller\\}
+Gr\^ace \`a la fonctionnalit\'e decoller(), l'utilisateur pourra faire d\'ecoller le drone de sa position courante. Cela marque le d\'ebut de la chor\'egraphie.
+
+\newpage
+\noindent \Huge \textbf{4 D\'elais de livraison}
+\addcontentsline{toc}{chapter}{4 D\'elais de livraison}
+\vspace{1\baselineskip}
+\normalsize
+
+Ã propos des d\'elais de livraison, nous avons opt\'e pour une livraison en tranches \`a intervalles r\'eguliers. Le client aura donc un \'etat d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un d\'elai maximum les tranches suivantes :
+
+\section*{4.0 Tranche 0 : 28 novembre 2017}
+\addcontentsline{toc}{section}{4.0 Tranche 0}
+\vspace{1\baselineskip}
+Tout d'abord, nous livrerons un cahier des charges au client pour formaliser notre compr\'ehension du projet et de ses modalit\'es. Nous exposerons l'analyse des besoins, les r\'eponses apport\'ees, les tests que pourra effectuer le client afin de tester le fonctionnement du programme et nous d\'ecrirons les modalit\'es finales du projet.
+
+\section*{4.1 Tranche 1 : 14 d\'ecembre 2017}
+\addcontentsline{toc}{section}{4.1 Tranche 1}
+\normalsize
+\vspace{1\baselineskip}
+
+Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
+Nous livrerons un \'editeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'editeur appel\'e les instructions qui sont reconnues par l'\'editeur
+
+\section*{4.2 Tranche 2  : 12 janvier 2018}
+\addcontentsline{toc}{section}{4.2 Tranche 2}
+\normalsize
+\vspace{1\baselineskip}
+
+La tranche 2 consistera \`a produire un programme pour que le drone puisse \'executer un sc\'enario.\\
+Le langage cible JAVA du programme sera g\'en\'er\'e \`a partir du DSL sp\'ecifi\'e pour le sc\'enario.\\
+L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone.
+
+\section*{4.3 Tranche 3 : 25 janvier 2018}
+\addcontentsline{toc}{section}{4.3 Tranche 3}
+\normalsize
+\vspace{1\baselineskip}
+
+Cette derni\`ere \'etape consistera \`a une livraison de la distribution permettant d'ex\'ecuter une chor\'egraphie par l'utilisateur et sa mise en place sur un syst\`eme de d\'eploiement avec l'installation des plugins pour le DSL.
+Le serveur sera li\'e au drone qui ex\'ecutera le sc\'enario. \\
+Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distribution.
+\end{document}
