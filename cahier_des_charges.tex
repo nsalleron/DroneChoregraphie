@@ -164,7 +164,7 @@ Ci-dessous une liste de tests permettant au client de valider la recette de l'éd
 \textbf{Pour le scénario suivant:}
 \begin{indentpar}{3cm}
 	decoller()\\
-	monter(1.0)\\
+	monter(1.0, 20)\\
 	atterrir()\\
 \end{indentpar}
 \textbf{Résultat attendu:}
@@ -175,9 +175,9 @@ Aucune erreur n'est détectée par l'éditeur.
 \textbf{Pour le scénario suivant:}
 \begin{indentpar}{3cm}
 	decoller()\\
-	monter(1.0)\\
-	avancer(1.0)\\
-	reculer(1.0)\\
+	monter(1.0, 20)\\
+	avancer(1.0, 20)\\
+	reculer(1.0, -20)\\
 	atterrir()\\
 \end{indentpar}
 \textbf{Résultat attendu:}
@@ -211,7 +211,7 @@ Une erreur est détéctée sur la commande \textit{monter}.
 \begin{indentpar}{3cm}
 	decoller()\\
 	atterrir()\\
-	monter(1.0)\\
+	monter(1.0, 20)\\
 \end{indentpar}
 \textbf{Résultat attendu:}
 Une erreur est détéctée sur la commande \textit{monter}.
@@ -220,7 +220,7 @@ Une erreur est détéctée sur la commande \textit{monter}.
 
 \textbf{Pour le scénario suivant:}
 \begin{indentpar}{3cm}
-	monter(1.0)\\
+	monter(1.0, 20)\\
 	decoller()\\
 	atterrir()\\
 \end{indentpar}
@@ -242,7 +242,7 @@ Une erreur est détéctée sur la deuxième commande \textit{decoller}.
 \textbf{Pour le scénario suivant:}
 \begin{indentpar}{3cm}
 	decoller()\\
-	monter(1.0)\\
+	monter(1.0, 20)\\
 	atterrir()\\
 	atterrir()\\
 \end{indentpar}
