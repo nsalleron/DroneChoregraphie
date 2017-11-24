@@ -49,7 +49,7 @@
         Le drone est capable de faire du surplace (stabilisation). \\
         Il correspond à l'instruction suivante dans le projet :
         \begin{itemize}
-            \item \textbf{pause()}
+            \item \textbf{pause}
         \end{itemize}
         
     \subsection{Atterrissage - Landing}
