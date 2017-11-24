@@ -94,17 +94,16 @@ Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le
 
 \chapter{Le langage de pilotage du drone}
 
-\section{Description}
 Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera généré à partir d'un modèle qui respectera un méta-modèle. Une extension de fichier spécifique au langage sera utilisée. 
 
-\section{Description de l'editeur du langage}
+\section{Description de l'éditeur du langage}
 
 Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\
-Celui-ci permettra entre autre : l'auto-completion du langage décrit précédemment, la détection de fautes syntaxiques ainsi que les erreurs de cohérence dans les scénarios.\\
+Celui-ci permettra entre autre : l'auto-completion du langage décrit dans la partie "commandes à implémenter", la détection de fautes syntaxiques ainsi que les erreurs de cohérence dans les scénarios.\\
 Une erreur de cohérence simple peut être le fait de commander au drone d'avancer avant que celui-ci n'ai décollé.
 
 \section{Écriture de la chorégraphie par l'utilisateur}
-L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans la partie "commandes à implémenter?. Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
+L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans la partie "commandes à implémenter". Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
 \section{Déploiement}
 
 Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
@@ -117,7 +116,7 @@ Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisa
 \end{itemize}
            
 \vspace{10px}           
-Des fichiers et documents aideront pour son déploiement.
+Des fichiers et documents aideront à son déploiement et son utilisation. 
 
 
 \chapter{Fonctionnement du drone}
@@ -131,7 +130,7 @@ Il correspond à l'instruction suivante dans le projet :
         
 \section{Altitude - Gaz}
 Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
--Il correspond aux instructions suivantes dans le projet :
+Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
      \item \textbf{monter}
      \item \textbf{descendre}
@@ -160,7 +159,7 @@ Il correspond à l'instruction suivante dans le projet :
       \item \textbf{pause}
 \end{itemize}
         
-\subsection{Atterrissage - Landing}
+\section{Atterrissage - Landing}
 Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
 Il correspond à l'instruction suivante dans le projet :
 \begin{itemize}
@@ -663,20 +662,20 @@ Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{atte
 À propos des délais de livraison, nous avons opté pour une livraison en tranches à intervalles réguliers. Le client aura donc un état d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un délai maximum les tranches suivantes :
 
 
-\section*{4.0 Tranche 0 : 28 novembre 2017}
+\section*{6.0 Tranche 0 : 28 novembre 2017}
 \addcontentsline{toc}{section}{4.0 Tranche 0}
 \vspace{1\baselineskip}
 Tout d'abord, nous livrerons un cahier des charges au client pour formaliser notre compr\'ehension du projet et de ses modalit\'es. Nous exposerons l'analyse des besoins, les r\'eponses apport\'ees, les tests que pourra effectuer le client afin de tester le fonctionnement du programme et nous d\'ecrirons les modalit\'es finales du projet.
 
-\section*{4.1 Tranche 1 : 14 d\'ecembre 2017}
+\section*{6.1 Tranche 1 : 14 d\'ecembre 2017}
 \addcontentsline{toc}{section}{4.1 Tranche 1}
 \normalsize
 \vspace{1\baselineskip}
 
 Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
-Nous livrerons un \'editeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'editeur appel\'e les instructions qui sont reconnues par l'\'editeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-08
+Nous livrerons un \'éditeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'éditeur appel\'e les instructions qui sont reconnues par l'\'éditeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-08
 
-\section*{4.2 Tranche 2  : 12 janvier 2018}
+\section*{6.2 Tranche 2  : 12 janvier 2018}
 \addcontentsline{toc}{section}{4.2 Tranche 2}
 \normalsize
 \vspace{1\baselineskip}
@@ -685,7 +684,7 @@ La tranche 2 consistera \`a produire un programme pour que le drone puisse \'exe
 Le langage cible JAVA du programme sera g\'en\'er\'e \`a partir du DSL sp\'ecifi\'e pour le sc\'enario.\\
 L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone. Enfin la validation de cette tranche se fera avec les tests de validation TV-01 à TV-04
 
-\section*{4.3 Tranche 3 : 25 janvier 2018}
+\section*{6.3 Tranche 3 : 25 janvier 2018}
 \addcontentsline{toc}{section}{4.3 Tranche 3}
 \normalsize
 \vspace{1\baselineskip}
