@@ -167,67 +167,81 @@ Il correspond à l'instruction suivante dans le projet :
  \end{itemize}
         
         
-\chapter{Les commandes à implémenter}
+\chapter{Les commandes basiques à implémenter}
 
 \paragraph{}
-Dans le but de rendre accessible le pilotage de drone aux artistes chorégraphes du futur, nous implémenterons un langage dédié permttant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\
-Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles.
+Dans le but de rendre accessible le pilotage de drone aux artistes chorégraphes du futur, nous implémenterons un langage dédié permettant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\
+Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles. Nous avons décidé de séparer les mouvements horizontaux et verticaux en 6 fonctions distinctes (Monter, Descendre, Avancer, Reculer, Gauche, Droite) afin de rendre l'utilisation du langage plus implicite pour l'utilisateur. L'unité du paramètre durée est en Seconde.\\La vitesse verticale étant dépendante du drone, nous avons fait le choix d'exprimer ce paramètre sous la forme d'une unité en pourcentage de la vitesse maximale du drone. L'inclinaison étant également dépendant du drone cible, nous avons fait le choix de l'exprimer également en pourcentage d'inclinaison par rapport à l'inclinaison maximale disponible. 
 
 \section{Décoller}
 \quad Syntaxe: \textbf{decoller()}\bigbreak
-Cette commande permettra à un drone de décoller. Elle devra obligatoirement être la première commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas atterri. Il est possible de décoller après chaque atterrissage.
+Cette commande permettra à un drone de décoller. Elle devra obligatoirement être la première commande exécutée dans un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas atterri. Il est possible de décoller après chaque atterrissage. 
 
 \section{Atterrir}
 \quad Syntaxe: \textbf{atterrir()}\bigbreak
-Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande lors de l'exécution d'un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
+Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande exécutée dans un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
 
 \section{Monter}
-\quad Syntaxe: \textbf{monter(durée: réel, vitesse\_vertical: entier)}\bigbreak
+\quad Syntaxe: \textbf{monter(durée: Seconde, vitesse\_vertical: Pourcentage)}\bigbreak
 Cette commande permettra à un drone de monter en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone s'élève. 
 Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
 
 \section{Descendre}
-\quad Syntaxe: \textbf{descendre(durée: réel, vitesse\_vertical: entier)}\bigbreak
+\quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_vertical: Pourcentage)}\bigbreak
 Cette commande permettra à un drone de descendre en altitude. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone décline.
-Le paramètre \textbf{vitesse\_vertical} est un entier négatif compris entre -100 et -1. Il indique la vitesse d'élèvation du drone.
+Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
 
 \section{Avancer}
-\quad Syntaxe: \textbf{avancer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
+\quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcentage)}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \section{Reculer}
-\quad Syntaxe: \textbf{reculer(durée: réel, vitesse\_deplacement: entier)}\bigbreak
+\quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \section{Gauche}
-\quad Syntaxe: \textbf{gauche(durée: réel, vitesse\_deplacement: entier)}\bigbreak
+\quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre -100 et -1. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \section{Droite}
-\quad Syntaxe: \textbf{droite(durée: réel, vitesse\_deplacement: entier)}\bigbreak
+\quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier négatif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
 
 \section{Pause}
 \quad Syntaxe: \textbf{pause(durée: réel)}\bigbreak
 Cette commande permettra à un drone de s'arrêter en position stationnaire pendant une certaine durée. 
 Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
+
+\section{RotationGauche}
+\quad Syntaxe: \textbf{rotation\_gauche(durée: Seconde, vitesse\_rotation: Pourcentage)}\bigbreak
+Cette commande permettra à un drone de tourner sur lui même dans le sens inverse des aiguilles d'une montre. 
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit tourner
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de rotation du drone.
+
+\section{RotationDroite}
+\quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcentage)}\bigbreak
+Cette commande permettra à un drone de tourner sur lui même dans le sens des aiguilles d'une montre. 
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit tourner
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de rotation du drone.
 
 \section{Exemple d'une exécution}
     Voici un exemple type de programme que l'utilisateur peut faire: \\
@@ -249,6 +263,63 @@ Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone 
 
 
 
+\chapter{Fonctions}
+Notre langage impose des contraintes sur les fonctions. D'abord, la première fonction du fichier du langage s'appelle "main", elle est la première fonction exécutée par le drone. De plus, les fonctions ne peuvent pas être récursive, c'est à dire, qu'une fonction ne peut s'appeller elle même. 
+
+\section{Création de composition}
+En plus des commandes de base, notre langage permet à l'utilisateur de définir ses propres compositions qui sont des suites d'instructions à exécuter par le drone. \\
+
+Exemple :\\
+ \begin{tabbing}
+        func \= \_nom\_de\_la\_fonction\_ \{ \\
+       
+        \> monter(2, 10) \\
+        \>    avancer(2, 20) \\
+        \>    droite(2, 15) \\
+\end{tabbing}
+\} \\
+
+
+\section{Figures prédéfinies}
+Nous allons de plus implémenter une bibliothèque de figures prédéfinies pour l'utilisateur final comme le : carré horizontal, carré vertical. 
+
+\subsection{carré horizontal}
+\quad Syntaxe: \textbf{carre\_horizontal(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+Cette commande permettra à un drone de réaliser un carré horizontal en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré horizontal. \\
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré horizontal.\\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+
+\subsection{carré vertical}
+\quad Syntaxe: \textbf{carre\_vertical(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+Cette commande permettra à un drone de réaliser un carré vertical en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré vertical. \\
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré vertical.\\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+
+\subsection{triange}
+\quad Syntaxe: \textbf{triange(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+Cette commande permettra à un drone de réaliser un triange isocèle horizontale en fonction de la vitesse de deplacement et d'une durée pour le réaliser.\\
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son triangle.\\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+
+\subsection{carré ascendant}
+\quad Syntaxe: \textbf{carre\_ascendant(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+Cette commande permettra à un drone de réaliser un carré ascendant en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré ascendant. \\
+Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré ascendant.\\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+
+\section{Fonction de composition parallèle}
+Notre langage intégrera un mécanisme de composition d'exécution de commandes en parallèle. 
+Il permettra par exemple de monter et d'avancer en même temps. \\Ce mécanisme sera implémenté dans notre langage par le biais du symbole '\textit{\&}'. \\
+La parallélisation ne sera disponible que sur les commandes de bases. Elle n'est pas disponible pour paralléliser deux fonctions. \\
+De plus on ne pourra pas composer deux commandes opposées en parallèle par exemple : \\
+    - Monter(1,10) \& Descendre(1,10) \\
+    - Avancer(1,10) \& Reculer(1,10) \\
+    - Gauche(1,10) \& Droite(1,10) \\
+    - RotationGauche(1,10) \& RotationDroite(1,10)
 
 \chapter{Tests de validation}
 %USE CASE 1
