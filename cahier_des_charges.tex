@@ -269,16 +269,14 @@ Notre langage impose des contraintes sur les fonctions. D'abord, la première fon
 \section{Création de composition}
 En plus des commandes de base, notre langage permet à l'utilisateur de définir ses propres compositions qui sont des suites d'instructions à exécuter par le drone. \\
 
-Exemple :\\
+Exemple :
  \begin{tabbing}
         func \= \_nom\_de\_la\_fonction\_ \{ \\
-       
         \> monter(2, 10) \\
         \>    avancer(2, 20) \\
         \>    droite(2, 15) \\
-\end{tabbing}
 \} \\
-
+\end{tabbing}
 
 \section{Figures prédéfinies}
 Nous allons de plus implémenter une bibliothèque de figures prédéfinies pour l'utilisateur final comme le : carré horizontal, carré vertical. 
@@ -315,12 +313,13 @@ Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et
 Notre langage intégrera un mécanisme de composition d'exécution de commandes en parallèle. 
 Il permettra par exemple de monter et d'avancer en même temps. \\Ce mécanisme sera implémenté dans notre langage par le biais du symbole '\textit{\&}'. \\
 La parallélisation ne sera disponible que sur les commandes de bases. Elle n'est pas disponible pour paralléliser deux fonctions. \\
-De plus on ne pourra pas composer deux commandes opposées en parallèle par exemple : \\
-    - Monter(1,10) \& Descendre(1,10) \\
-    - Avancer(1,10) \& Reculer(1,10) \\
-    - Gauche(1,10) \& Droite(1,10) \\
-    - RotationGauche(1,10) \& RotationDroite(1,10)
-
+\begin{tabbing}
+De plus \=on ne pourra pas composer deux commandes opposées en parallèle par exemple : \\
+    \>- Monter(1,10) \& Descendre(1,10) \\
+    \>- Avancer(1,10) \& Reculer(1,10) \\
+    \>- Gauche(1,10) \& Droite(1,10) \\
+    \>- RotationGauche(1,10) \& RotationDroite(1,10)
+\end{tabbing}
 \chapter{Tests de validation}
 %USE CASE 1
 \section{Contrôler drone depuis l'ordinateur (via le programme utilisateur)} 
