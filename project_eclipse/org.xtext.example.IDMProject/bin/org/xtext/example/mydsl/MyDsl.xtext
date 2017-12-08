@@ -1,0 +1,196 @@
+grammar org.xtext.example.mydsl.MyTurtleDsl with org.eclipse.xtext.common.Terminals
+
+generate myTurtleDsl "http://www.xtext.org/example/mydsl/MyTurtleDsl"
+
+Model:
+	(
+		(includes+=Includes)*'\n'*
+		'func' 'main' '{'
+			(Start)'\n'*
+			(SeconDec+=IntDecl		|
+			 PourDec+=PourcentDecl 	|
+			 statements+=Statement	|
+			 fonctions+=FonctionCall|
+			 parallele+=(Parallele2|Parallele3)
+			)*'\n'*
+			(End)'\n'*
+		'}' '\n'*
+		(fonctions+=FonctionDecl)*'\n'*
+	)*;
+	
+	
+Includes:
+    'import''<'importURI=INCLUDE'>;';
+    
+terminal INCLUDE: ID('.drone');
+	
+Decoller:
+	'decoller''('')'
+;
+
+Atterrir:
+	'atterrir''('')'
+;
+
+Monter:
+	'monter''('
+		duree=IntExp','
+		vitesse_verticale=IntExp
+		')'
+;
+
+Descendre:
+	'descendre''('
+		duree=IntExp','
+		vitesse_verticale=IntExp
+		')'
+;
+
+Avancer:
+	'avancer''(' 
+		duree=IntExp','
+		vitesse_deplacement=IntExp
+		')'
+;
+
+Reculer:
+	'reculer''(' 
+		duree=IntExp','
+		vitesse_deplacement=IntExp
+		')'
+;
+
+Gauche:
+	'gauche''(' 
+		duree=IntExp','
+		vitesse_deplacement=IntExp
+		')'
+;
+
+Droite:
+	'droite''(' 
+		duree=IntExp','
+		vitesse_deplacement=IntExp
+		')'
+;
+
+Pause:
+	'droite''(' 
+		duree=IntExp
+		')'
+;
+
+RotationGauche:
+	'rotation_gauche''(' 
+		duree=IntExp','
+		vitesse_rotation=IntExp
+		')'
+;
+
+RotationDroite:
+	'rotation_droite''(' 
+		duree=IntExp','
+		vitesse_rotation=IntExp
+		')'
+;
+
+Start:
+	Decoller
+;
+	
+End:
+	Atterrir
+;
+Statement:
+	Avancer|Descendre|RotationDroite|RotationGauche|Pause|Droite|Gauche|Reculer|Monter
+;
+	
+FonctionDecl:
+	'func' name=ID '('')' '{' body+=(Statement)*'\n''}'
+;
+
+IntConstante:
+	val=INT
+;
+
+
+IntDecl:
+	'Seconde' name=ID '=' val=IntExp
+;
+
+PourcentDecl:
+	'Pourcent' name=ID '=' val=IntExp
+;
+
+RefIntVar:
+	var=[IntDecl]
+;
+
+
+IntExp:
+	IntConstante|RefIntVar
+;
+
+FonctionCall:
+	func=[FonctionDecl]'('')'
+;
+
+	
+MD : 
+	(Monter|Descendre)
+;
+
+GDr : 
+	(Gauche|Droite)
+;
+
+RGRD :
+	(RotationGauche|RotationDroite)
+;
+
+AR:
+	(Avancer|Reculer)
+;
+
+Parallele2:
+	(a=MD)	'&' (t=GDr)		|
+	(a=MD)	'&' (t=AR)		|
+	(a=MD)	'&' (t=RGRD)	|
+	(t=GDr)	'&' (b=AR) 		|
+	(t=GDr)	'&' (b=MD )		|
+	(t=GDr)	'&' (b=RGRD)	|
+	(t=RGRD) '&' (a=MD )	|
+	(t=RGRD) '&' (a=AR)		|
+	(t=RGRD) '&' (a=GDr)	|
+	(t=AR) '&' (a=MD )		|
+	(t=AR) '&' (a=RGRD) 	|
+	(t=AR) '&' (a=GDr) 
+	//(statements+=Statement|fonctions+=FonctionCall) '&' (statements+=Statement|fonctions+=FonctionCall)
+;
+
+Parallele3:
+	(a=AR) 	'&' (b=GDr) '&' (c=MD)		|
+	(a=AR) 	'&' (b=GDr) '&' (c =RGRD)	|
+	(a=AR) 	'&' (b=MD)  '&' (c = GDr)	|
+	(a=AR) 	'&' (b=MD)	'&' (c= RGRD) 	|
+	(a=AR) 	'&' (b=RGRD) '&' (c = MD) 	|
+	(a=AR) 	'&' (b=RGRD) '&' (c = GDr) 	|
+	(a=GDr) '&' (b=AR) '&' (c=MD)		|
+	(a=GDr) '&' (b=AR) '&' (c=RGRD)		|
+	(a=GDr) '&' (b=MD) '&' (c=AR)		|
+	(a=GDr) '&' (b=MD) '&' (c=RGRD)		|
+	(a=GDr) '&' (b=RGRD) '&' (c=AR)		|
+	(a=GDr) '&' (b=RGRD) '&' (c=MD)		|
+	(a=MD) 	'&' (b=AR) '&' (c=GDr)		|
+	(a=MD) 	'&' (b=AR) '&' (c=RGRD)		|
+	(a=MD) 	'&' (b=GDr) '&' (c=AR)		|
+	(a=MD) 	'&' (b=GDr) '&' (c=RGRD)	|
+	(a=MD) 	'&' (b=RGRD) '&' (c=GDr)	|
+	(a=MD) 	'&' (b=RGRD) '&' (c=AR)		|
+	(a=RGRD)'&' (b=AR) '&' (c=MD)		|
+	(a=RGRD)'&' (b=AR) '&' (c=GDr)		|
+	(a=RGRD)'&' (b=MD) '&' (c=AR)		|
+	(a=RGRD)'&' (b=MD) '&' (c=GDr)		|
+	(a=RGRD)'&' (b=GDr) '&' (c=MD)		|
+	(a=RGRD)'&' (b=GDr) '&' (c=AR)	
+;
