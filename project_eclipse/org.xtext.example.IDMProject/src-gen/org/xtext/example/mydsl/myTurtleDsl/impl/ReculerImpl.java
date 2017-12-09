@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.Reculer;
  *
  * @generated
  */
-public class ReculerImpl extends ARImpl implements Reculer
+public class ReculerImpl extends StatementImpl implements Reculer
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

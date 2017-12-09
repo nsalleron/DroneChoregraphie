@@ -167,7 +167,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (val: ");
     result.append(val);
     result.append(')');

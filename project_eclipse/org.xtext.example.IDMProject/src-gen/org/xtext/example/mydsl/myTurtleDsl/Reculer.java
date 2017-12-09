@@ -21,7 +21,7 @@ package org.xtext.example.mydsl.myTurtleDsl;
  * @model
  * @generated
  */
-public interface Reculer extends AR, Statement
+public interface Reculer extends Statement, AR
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

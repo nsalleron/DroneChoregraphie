@@ -21,7 +21,7 @@ package org.xtext.example.mydsl.myTurtleDsl;
  * @model
  * @generated
  */
-public interface RotationDroite extends RGRD, Statement
+public interface RotationDroite extends Statement, RGRD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

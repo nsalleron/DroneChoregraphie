@@ -10,7 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -24,14 +23,14 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Model_LineFeedKeyword_10_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_12_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_14_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_16_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_19_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_1_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_6_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_21_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_23_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_25_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_27_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_8_a;
-	protected AbstractElementAlias match_Model___LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__a;
-	protected AbstractElementAlias match_Model___LineFeedKeyword_14_q___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__q__p;
-	protected AbstractElementAlias match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__a;
-	protected AbstractElementAlias match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__p;
-	protected AbstractElementAlias match_Model___LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a__a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -39,14 +38,14 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Model_LineFeedKeyword_10_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10());
 		match_Model_LineFeedKeyword_12_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12());
 		match_Model_LineFeedKeyword_14_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14());
+		match_Model_LineFeedKeyword_16_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_16());
+		match_Model_LineFeedKeyword_19_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_19());
 		match_Model_LineFeedKeyword_1_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1());
-		match_Model_LineFeedKeyword_6_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6());
+		match_Model_LineFeedKeyword_21_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_21());
+		match_Model_LineFeedKeyword_23_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_23());
+		match_Model_LineFeedKeyword_25_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_25());
+		match_Model_LineFeedKeyword_27_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_27());
 		match_Model_LineFeedKeyword_8_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8());
-		match_Model___LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__a = new GroupAlias(true, true, new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getFuncKeyword_2()), new TokenAlias(false, false, grammarAccess.getModelAccess().getMainKeyword_3()), new TokenAlias(false, false, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4()), new TokenAlias(false, false, grammarAccess.getModelAccess().getStartParserRuleCall_5()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8()), new TokenAlias(false, false, grammarAccess.getModelAccess().getEndParserRuleCall_9()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10()), new TokenAlias(false, false, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_11()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12()));
-		match_Model___LineFeedKeyword_14_q___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__q__p = new GroupAlias(true, false, new TokenAlias(false, true, grammarAccess.getModelAccess().getLineFeedKeyword_14()), new GroupAlias(false, true, new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getFuncKeyword_2()), new TokenAlias(false, false, grammarAccess.getModelAccess().getMainKeyword_3()), new TokenAlias(false, false, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4()), new TokenAlias(false, false, grammarAccess.getModelAccess().getStartParserRuleCall_5()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8()), new TokenAlias(false, false, grammarAccess.getModelAccess().getEndParserRuleCall_9()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10()), new TokenAlias(false, false, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_11()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12())));
-		match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__a = new GroupAlias(true, true, new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getFuncKeyword_2()), new TokenAlias(false, false, grammarAccess.getModelAccess().getMainKeyword_3()), new TokenAlias(false, false, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4()), new TokenAlias(false, false, grammarAccess.getModelAccess().getStartParserRuleCall_5()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8()), new TokenAlias(false, false, grammarAccess.getModelAccess().getEndParserRuleCall_9()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10()), new TokenAlias(false, false, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_11()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14()));
-		match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__p = new GroupAlias(true, false, new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getFuncKeyword_2()), new TokenAlias(false, false, grammarAccess.getModelAccess().getMainKeyword_3()), new TokenAlias(false, false, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4()), new TokenAlias(false, false, grammarAccess.getModelAccess().getStartParserRuleCall_5()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8()), new TokenAlias(false, false, grammarAccess.getModelAccess().getEndParserRuleCall_9()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10()), new TokenAlias(false, false, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_11()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14()));
-		match_Model___LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a__a = new GroupAlias(true, true, new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8()), new TokenAlias(false, false, grammarAccess.getModelAccess().getEndParserRuleCall_9()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10()), new TokenAlias(false, false, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_11()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getFuncKeyword_2()), new TokenAlias(false, false, grammarAccess.getModelAccess().getMainKeyword_3()), new TokenAlias(false, false, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4()), new TokenAlias(false, false, grammarAccess.getModelAccess().getStartParserRuleCall_5()), new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_6()));
 	}
 	
 	@Override
@@ -92,22 +91,22 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Model_LineFeedKeyword_12_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_14_a.equals(syntax))
 				emit_Model_LineFeedKeyword_14_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_16_a.equals(syntax))
+				emit_Model_LineFeedKeyword_16_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_19_a.equals(syntax))
+				emit_Model_LineFeedKeyword_19_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_1_a.equals(syntax))
 				emit_Model_LineFeedKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_6_a.equals(syntax))
-				emit_Model_LineFeedKeyword_6_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_21_a.equals(syntax))
+				emit_Model_LineFeedKeyword_21_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_23_a.equals(syntax))
+				emit_Model_LineFeedKeyword_23_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_25_a.equals(syntax))
+				emit_Model_LineFeedKeyword_25_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_27_a.equals(syntax))
+				emit_Model_LineFeedKeyword_27_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_8_a.equals(syntax))
 				emit_Model_LineFeedKeyword_8_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model___LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__a.equals(syntax))
-				emit_Model___LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model___LineFeedKeyword_14_q___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__q__p.equals(syntax))
-				emit_Model___LineFeedKeyword_14_q___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__q__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__a.equals(syntax))
-				emit_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__p.equals(syntax))
-				emit_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model___LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a__a.equals(syntax))
-				emit_Model___LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -118,646 +117,7 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             (ambiguity) 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
+	 *     pvdm+=Pourcent_vitesse_deplacement_max (ambiguity) pvrm+=Pourcent_vitesse_rotation_max
 	 */
 	protected void emit_Model_LineFeedKeyword_10_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -769,646 +129,7 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity) 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
+	 *     pvrm+=Pourcent_vitesse_rotation_max (ambiguity) hm+=Hauteur_max
 	 */
 	protected void emit_Model_LineFeedKeyword_12_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1420,582 +141,7 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             (ambiguity)
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
+	 *     hm+=Hauteur_max (ambiguity) em+=Eloignement_max
 	 */
 	protected void emit_Model_LineFeedKeyword_14_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -2008,11 +154,9 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (
-	 *         (rule start) 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
@@ -2024,405 +168,21 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         PourDec+=PourcentDecl
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
-	 *         (rule start) 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
@@ -2434,207 +194,417 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         PourDec+=PourcentDecl
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         SeconDec+=IntDecl
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         fonctions+=FonctionCall
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         parallele+=Parallele2
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
 	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         parallele+=Parallele3
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         statements+=Statement
+	 *     )
+	 */
+	protected void emit_Model_LineFeedKeyword_16_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         PourDec+=PourcentDecl
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         SeconDec+=IntDecl
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionCall
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         parallele+=Parallele2
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         parallele+=Parallele3
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         statements+=Statement
+	 *     )
+	 */
+	protected void emit_Model_LineFeedKeyword_19_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         (ambiguity) 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         statements+=Statement
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionDecl 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (rule start) (ambiguity) 'func' 'main' '{' 'prologue' '{' pvhm+=Pourcent_vitesse_hauteur_max
+	 *     includes+=Includes (ambiguity) 'func' 'main' '{' 'prologue' '{' pvhm+=Pourcent_vitesse_hauteur_max
 	 */
 	protected void emit_Model_LineFeedKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -2647,225 +617,14 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
+	 *         PourDec+=PourcentDecl 
 	 *         (ambiguity) 
-	 *         '
-	 *         '* 
 	 *         End 
 	 *         '
 	 *         '* 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
 	 *         '
 	 *         '* 
 	 *         '
@@ -2873,409 +632,415 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         PourDec+=PourcentDecl
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
+	 *         PourDec+=PourcentDecl 
 	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
 	 *         End 
 	 *         '
 	 *         '* 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity) 
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         SeconDec+=IntDecl 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         PourDec+=PourcentDecl
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         SeconDec+=IntDecl 
+	 *         (ambiguity) 
+	 *         End 
 	 *         '
 	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         SeconDec+=IntDecl
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         SeconDec+=IntDecl 
+	 *         (ambiguity) 
+	 *         End 
 	 *         '
 	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         fonctions+=FonctionCall
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         SeconDec+=IntDecl 
+	 *         (ambiguity) 
+	 *         End 
 	 *         '
 	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele2
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         parallele+=Parallele3
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
 	 *         (ambiguity) 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             (ambiguity)
-	 *         )* 
-	 *         statements+=Statement
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
 	 *     )
 	 */
-	protected void emit_Model_LineFeedKeyword_6_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_21_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -3286,681 +1051,558 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (
-	 *         (rule start) 
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
 	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         (rule end)
 	 *     )
 	 *     (
 	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
 	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         includes+=Includes 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
 	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         (rule end)
 	 *     )
 	 *     (
 	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
 	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         (rule end)
 	 *     )
 	 *     (
 	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 *     (
 	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
 	 *         (rule end)
 	 *     )
 	 *     (
 	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
 	 *         '
 	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
 	 *         '}' 
 	 *         '
 	 *         '* 
-	 *         (
-	 *             '
-	 *             '* 
-	 *             '
-	 *             '* 
-	 *             'func' 
-	 *             'main' 
-	 *             '{' 
-	 *             Start 
-	 *             '
-	 *             '* 
-	 *             (ambiguity) 
-	 *             End 
-	 *             '
-	 *             '* 
-	 *             '}' 
-	 *             '
-	 *             '*
-	 *         )* 
 	 *         fonctions+=FonctionDecl
 	 *     )
 	 */
-	protected void emit_Model_LineFeedKeyword_8_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_23_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         'func' 
-	  *         'main' 
-	  *         '{' 
-	  *         Start 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         End 
-	  *         '
-	  *         '* 
-	  *         '}' 
-	  *         '
-	  *         '*
-	  *     )*
+	 *     '
+	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (
-	 *         (rule start) 
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
 	 *         '
 	 *         '* 
 	 *         'func' 
 	 *         'main' 
 	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
@@ -3970,10 +1612,331 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         fonctions+=FonctionDecl
+	 *     )
+	 */
+	protected void emit_Model_LineFeedKeyword_25_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
 	 *         PourDec+=PourcentDecl 
@@ -3986,7 +1949,20 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         SeconDec+=IntDecl 
@@ -3999,10 +1975,17 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
-	 *         fonctions+=FonctionCall 
+	 *         SeconDec+=IntDecl 
 	 *         '
 	 *         '* 
 	 *         End 
@@ -4012,15 +1995,26 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         (rule end)
 	 *     )
 	 *     (
-	 *         includes+=Includes 
+	 *         SeconDec+=IntDecl 
 	 *         '
 	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
 	 *         Start 
 	 *         '
 	 *         '* 
@@ -4033,7 +2027,110 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         em+=Eloignement_max 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionDecl 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
 	 *     (
 	 *         parallele+=Parallele2 
@@ -4046,7 +2143,40 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         parallele+=Parallele3 
@@ -4059,7 +2189,40 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
 	 *     )
 	 *     (
 	 *         statements+=Statement 
@@ -4072,598 +2235,57 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         '
 	 *         '* 
 	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
+	 *         '
+	 *         '* 
+	 *         'func' 
+	 *         'main' 
+	 *         '{' 
+	 *         'prologue' 
+	 *         '{' 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
 	 *     )
-	 *     fonctions+=FonctionDecl (ambiguity) fonctions+=FonctionDecl
-	 */
-	protected void emit_Model___LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     (
-	  *         '
-	  *         '? 
-	  *         (
-	  *             '
-	  *             '* 
-	  *             'func' 
-	  *             'main' 
-	  *             '{' 
-	  *             Start 
-	  *             '
-	  *             '* 
-	  *             '
-	  *             '* 
-	  *             End 
-	  *             '
-	  *             '* 
-	  *             '}' 
-	  *             '
-	  *             '*
-	  *         )?
-	  *     )+
-	 *
-	 * This ambiguous syntax occurs at:
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         includes+=Includes
+	 *     )
 	 *     fonctions+=FonctionDecl (ambiguity) (rule end)
 	 *     fonctions+=FonctionDecl (ambiguity) includes+=Includes
 	 */
-	protected void emit_Model___LineFeedKeyword_14_q___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a__q__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_27_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (
-	  *         '
-	  *         '* 
-	  *         'func' 
-	  *         'main' 
-	  *         '{' 
-	  *         Start 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         End 
-	  *         '
-	  *         '* 
-	  *         '}' 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '*
-	  *     )*
+	 *     '
+	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (rule start) (ambiguity) (rule start)
-	 *     (rule start) (ambiguity) includes+=Includes
-	 *     includes+=Includes (ambiguity) includes+=Includes
+	 *     pvhm+=Pourcent_vitesse_hauteur_max (ambiguity) pvdm+=Pourcent_vitesse_deplacement_max
 	 */
-	protected void emit_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         '
-	  *         '* 
-	  *         'func' 
-	  *         'main' 
-	  *         '{' 
-	  *         Start 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         End 
-	  *         '
-	  *         '* 
-	  *         '}' 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '*
-	  *     )+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 *     includes+=Includes (ambiguity) (rule end)
-	 */
-	protected void emit_Model___LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a_LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         '
-	  *         '* 
-	  *         End 
-	  *         '
-	  *         '* 
-	  *         '}' 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         '
-	  *         '* 
-	  *         'func' 
-	  *         'main' 
-	  *         '{' 
-	  *         Start 
-	  *         '
-	  *         '*
-	  *     )*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         (rule start) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         statements+=Statement
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         includes+=Includes 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         statements+=Statement
-	 *     )
-	 *     PourDec+=PourcentDecl (ambiguity) PourDec+=PourcentDecl
-	 *     PourDec+=PourcentDecl (ambiguity) SeconDec+=IntDecl
-	 *     PourDec+=PourcentDecl (ambiguity) fonctions+=FonctionCall
-	 *     PourDec+=PourcentDecl (ambiguity) parallele+=Parallele2
-	 *     PourDec+=PourcentDecl (ambiguity) parallele+=Parallele3
-	 *     PourDec+=PourcentDecl (ambiguity) statements+=Statement
-	 *     SeconDec+=IntDecl (ambiguity) PourDec+=PourcentDecl
-	 *     SeconDec+=IntDecl (ambiguity) SeconDec+=IntDecl
-	 *     SeconDec+=IntDecl (ambiguity) fonctions+=FonctionCall
-	 *     SeconDec+=IntDecl (ambiguity) parallele+=Parallele2
-	 *     SeconDec+=IntDecl (ambiguity) parallele+=Parallele3
-	 *     SeconDec+=IntDecl (ambiguity) statements+=Statement
-	 *     fonctions+=FonctionCall (ambiguity) PourDec+=PourcentDecl
-	 *     fonctions+=FonctionCall (ambiguity) SeconDec+=IntDecl
-	 *     fonctions+=FonctionCall (ambiguity) fonctions+=FonctionCall
-	 *     fonctions+=FonctionCall (ambiguity) parallele+=Parallele2
-	 *     fonctions+=FonctionCall (ambiguity) parallele+=Parallele3
-	 *     fonctions+=FonctionCall (ambiguity) statements+=Statement
-	 *     parallele+=Parallele2 (ambiguity) PourDec+=PourcentDecl
-	 *     parallele+=Parallele2 (ambiguity) SeconDec+=IntDecl
-	 *     parallele+=Parallele2 (ambiguity) fonctions+=FonctionCall
-	 *     parallele+=Parallele2 (ambiguity) parallele+=Parallele2
-	 *     parallele+=Parallele2 (ambiguity) parallele+=Parallele3
-	 *     parallele+=Parallele2 (ambiguity) statements+=Statement
-	 *     parallele+=Parallele3 (ambiguity) PourDec+=PourcentDecl
-	 *     parallele+=Parallele3 (ambiguity) SeconDec+=IntDecl
-	 *     parallele+=Parallele3 (ambiguity) fonctions+=FonctionCall
-	 *     parallele+=Parallele3 (ambiguity) parallele+=Parallele2
-	 *     parallele+=Parallele3 (ambiguity) parallele+=Parallele3
-	 *     parallele+=Parallele3 (ambiguity) statements+=Statement
-	 *     statements+=Statement (ambiguity) PourDec+=PourcentDecl
-	 *     statements+=Statement (ambiguity) SeconDec+=IntDecl
-	 *     statements+=Statement (ambiguity) fonctions+=FonctionCall
-	 *     statements+=Statement (ambiguity) parallele+=Parallele2
-	 *     statements+=Statement (ambiguity) parallele+=Parallele3
-	 *     statements+=Statement (ambiguity) statements+=Statement
-	 */
-	protected void emit_Model___LineFeedKeyword_8_a_EndParserRuleCall_9_LineFeedKeyword_10_a_RightCurlyBracketKeyword_11_LineFeedKeyword_12_a_LineFeedKeyword_14_a_LineFeedKeyword_1_a_FuncKeyword_2_MainKeyword_3_LeftCurlyBracketKeyword_4_StartParserRuleCall_5_LineFeedKeyword_6_a__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_8_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

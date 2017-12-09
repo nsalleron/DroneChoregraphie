@@ -18,11 +18,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.example.mydsl.myTurtleDsl.Eloignement_max;
+import org.xtext.example.mydsl.myTurtleDsl.Hauteur_max;
 import org.xtext.example.mydsl.myTurtleDsl.Includes;
 import org.xtext.example.mydsl.myTurtleDsl.IntDecl;
 import org.xtext.example.mydsl.myTurtleDsl.Model;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
 import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max;
 import org.xtext.example.mydsl.myTurtleDsl.Statement;
 
 /**
@@ -34,6 +39,11 @@ import org.xtext.example.mydsl.myTurtleDsl.Statement;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvhm <em>Pvhm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvdm <em>Pvdm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvrm <em>Pvrm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getHm <em>Hm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getEm <em>Em</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getSeconDec <em>Secon Dec</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPourDec <em>Pour Dec</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getStatements <em>Statements</em>}</li>
@@ -54,6 +64,56 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @ordered
    */
   protected EList<Includes> includes;
+
+  /**
+   * The cached value of the '{@link #getPvhm() <em>Pvhm</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPvhm()
+   * @generated
+   * @ordered
+   */
+  protected EList<Pourcent_vitesse_hauteur_max> pvhm;
+
+  /**
+   * The cached value of the '{@link #getPvdm() <em>Pvdm</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPvdm()
+   * @generated
+   * @ordered
+   */
+  protected EList<Pourcent_vitesse_deplacement_max> pvdm;
+
+  /**
+   * The cached value of the '{@link #getPvrm() <em>Pvrm</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPvrm()
+   * @generated
+   * @ordered
+   */
+  protected EList<Pourcent_vitesse_rotation_max> pvrm;
+
+  /**
+   * The cached value of the '{@link #getHm() <em>Hm</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHm()
+   * @generated
+   * @ordered
+   */
+  protected EList<Hauteur_max> hm;
+
+  /**
+   * The cached value of the '{@link #getEm() <em>Em</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEm()
+   * @generated
+   * @ordered
+   */
+  protected EList<Eloignement_max> em;
 
   /**
    * The cached value of the '{@link #getSeconDec() <em>Secon Dec</em>}' containment reference list.
@@ -145,6 +205,76 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Pourcent_vitesse_hauteur_max> getPvhm()
+  {
+    if (pvhm == null)
+    {
+      pvhm = new EObjectContainmentEList<Pourcent_vitesse_hauteur_max>(Pourcent_vitesse_hauteur_max.class, this, MyTurtleDslPackage.MODEL__PVHM);
+    }
+    return pvhm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Pourcent_vitesse_deplacement_max> getPvdm()
+  {
+    if (pvdm == null)
+    {
+      pvdm = new EObjectContainmentEList<Pourcent_vitesse_deplacement_max>(Pourcent_vitesse_deplacement_max.class, this, MyTurtleDslPackage.MODEL__PVDM);
+    }
+    return pvdm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Pourcent_vitesse_rotation_max> getPvrm()
+  {
+    if (pvrm == null)
+    {
+      pvrm = new EObjectContainmentEList<Pourcent_vitesse_rotation_max>(Pourcent_vitesse_rotation_max.class, this, MyTurtleDslPackage.MODEL__PVRM);
+    }
+    return pvrm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Hauteur_max> getHm()
+  {
+    if (hm == null)
+    {
+      hm = new EObjectContainmentEList<Hauteur_max>(Hauteur_max.class, this, MyTurtleDslPackage.MODEL__HM);
+    }
+    return hm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Eloignement_max> getEm()
+  {
+    if (em == null)
+    {
+      em = new EObjectContainmentEList<Eloignement_max>(Eloignement_max.class, this, MyTurtleDslPackage.MODEL__EM);
+    }
+    return em;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<IntDecl> getSeconDec()
   {
     if (seconDec == null)
@@ -222,6 +352,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case MyTurtleDslPackage.MODEL__INCLUDES:
         return ((InternalEList<?>)getIncludes()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__PVHM:
+        return ((InternalEList<?>)getPvhm()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__PVDM:
+        return ((InternalEList<?>)getPvdm()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__PVRM:
+        return ((InternalEList<?>)getPvrm()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__HM:
+        return ((InternalEList<?>)getHm()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__EM:
+        return ((InternalEList<?>)getEm()).basicRemove(otherEnd, msgs);
       case MyTurtleDslPackage.MODEL__SECON_DEC:
         return ((InternalEList<?>)getSeconDec()).basicRemove(otherEnd, msgs);
       case MyTurtleDslPackage.MODEL__POUR_DEC:
@@ -248,6 +388,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case MyTurtleDslPackage.MODEL__INCLUDES:
         return getIncludes();
+      case MyTurtleDslPackage.MODEL__PVHM:
+        return getPvhm();
+      case MyTurtleDslPackage.MODEL__PVDM:
+        return getPvdm();
+      case MyTurtleDslPackage.MODEL__PVRM:
+        return getPvrm();
+      case MyTurtleDslPackage.MODEL__HM:
+        return getHm();
+      case MyTurtleDslPackage.MODEL__EM:
+        return getEm();
       case MyTurtleDslPackage.MODEL__SECON_DEC:
         return getSeconDec();
       case MyTurtleDslPackage.MODEL__POUR_DEC:
@@ -276,6 +426,26 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case MyTurtleDslPackage.MODEL__INCLUDES:
         getIncludes().clear();
         getIncludes().addAll((Collection<? extends Includes>)newValue);
+        return;
+      case MyTurtleDslPackage.MODEL__PVHM:
+        getPvhm().clear();
+        getPvhm().addAll((Collection<? extends Pourcent_vitesse_hauteur_max>)newValue);
+        return;
+      case MyTurtleDslPackage.MODEL__PVDM:
+        getPvdm().clear();
+        getPvdm().addAll((Collection<? extends Pourcent_vitesse_deplacement_max>)newValue);
+        return;
+      case MyTurtleDslPackage.MODEL__PVRM:
+        getPvrm().clear();
+        getPvrm().addAll((Collection<? extends Pourcent_vitesse_rotation_max>)newValue);
+        return;
+      case MyTurtleDslPackage.MODEL__HM:
+        getHm().clear();
+        getHm().addAll((Collection<? extends Hauteur_max>)newValue);
+        return;
+      case MyTurtleDslPackage.MODEL__EM:
+        getEm().clear();
+        getEm().addAll((Collection<? extends Eloignement_max>)newValue);
         return;
       case MyTurtleDslPackage.MODEL__SECON_DEC:
         getSeconDec().clear();
@@ -314,6 +484,21 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case MyTurtleDslPackage.MODEL__INCLUDES:
         getIncludes().clear();
         return;
+      case MyTurtleDslPackage.MODEL__PVHM:
+        getPvhm().clear();
+        return;
+      case MyTurtleDslPackage.MODEL__PVDM:
+        getPvdm().clear();
+        return;
+      case MyTurtleDslPackage.MODEL__PVRM:
+        getPvrm().clear();
+        return;
+      case MyTurtleDslPackage.MODEL__HM:
+        getHm().clear();
+        return;
+      case MyTurtleDslPackage.MODEL__EM:
+        getEm().clear();
+        return;
       case MyTurtleDslPackage.MODEL__SECON_DEC:
         getSeconDec().clear();
         return;
@@ -345,6 +530,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case MyTurtleDslPackage.MODEL__INCLUDES:
         return includes != null && !includes.isEmpty();
+      case MyTurtleDslPackage.MODEL__PVHM:
+        return pvhm != null && !pvhm.isEmpty();
+      case MyTurtleDslPackage.MODEL__PVDM:
+        return pvdm != null && !pvdm.isEmpty();
+      case MyTurtleDslPackage.MODEL__PVRM:
+        return pvrm != null && !pvrm.isEmpty();
+      case MyTurtleDslPackage.MODEL__HM:
+        return hm != null && !hm.isEmpty();
+      case MyTurtleDslPackage.MODEL__EM:
+        return em != null && !em.isEmpty();
       case MyTurtleDslPackage.MODEL__SECON_DEC:
         return seconDec != null && !seconDec.isEmpty();
       case MyTurtleDslPackage.MODEL__POUR_DEC:

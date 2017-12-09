@@ -80,48 +80,6 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MyTurtleDslPackage.MD:
-      {
-        MD md = (MD)theEObject;
-        T result = caseMD(md);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyTurtleDslPackage.GDR:
-      {
-        GDr gDr = (GDr)theEObject;
-        T result = caseGDr(gDr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyTurtleDslPackage.RGRD:
-      {
-        RGRD rgrd = (RGRD)theEObject;
-        T result = caseRGRD(rgrd);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyTurtleDslPackage.AR:
-      {
-        AR ar = (AR)theEObject;
-        T result = caseAR(ar);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyTurtleDslPackage.PARALLELE2:
-      {
-        Parallele2 parallele2 = (Parallele2)theEObject;
-        T result = caseParallele2(parallele2);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyTurtleDslPackage.PARALLELE3:
-      {
-        Parallele3 parallele3 = (Parallele3)theEObject;
-        T result = caseParallele3(parallele3);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MyTurtleDslPackage.INCLUDES:
       {
         Includes includes = (Includes)theEObject;
@@ -129,12 +87,47 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyTurtleDslPackage.POURCENT_VITESSE_HAUTEUR_MAX:
+      {
+        Pourcent_vitesse_hauteur_max pourcent_vitesse_hauteur_max = (Pourcent_vitesse_hauteur_max)theEObject;
+        T result = casePourcent_vitesse_hauteur_max(pourcent_vitesse_hauteur_max);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.POURCENT_VITESSE_DEPLACEMENT_MAX:
+      {
+        Pourcent_vitesse_deplacement_max pourcent_vitesse_deplacement_max = (Pourcent_vitesse_deplacement_max)theEObject;
+        T result = casePourcent_vitesse_deplacement_max(pourcent_vitesse_deplacement_max);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.POURCENT_VITESSE_ROTATION_MAX:
+      {
+        Pourcent_vitesse_rotation_max pourcent_vitesse_rotation_max = (Pourcent_vitesse_rotation_max)theEObject;
+        T result = casePourcent_vitesse_rotation_max(pourcent_vitesse_rotation_max);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.HAUTEUR_MAX:
+      {
+        Hauteur_max hauteur_max = (Hauteur_max)theEObject;
+        T result = caseHauteur_max(hauteur_max);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.ELOIGNEMENT_MAX:
+      {
+        Eloignement_max eloignement_max = (Eloignement_max)theEObject;
+        T result = caseEloignement_max(eloignement_max);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyTurtleDslPackage.MONTER:
       {
         Monter monter = (Monter)theEObject;
         T result = caseMonter(monter);
-        if (result == null) result = caseMD(monter);
         if (result == null) result = caseStatement(monter);
+        if (result == null) result = caseMD(monter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -142,8 +135,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         Descendre descendre = (Descendre)theEObject;
         T result = caseDescendre(descendre);
-        if (result == null) result = caseMD(descendre);
         if (result == null) result = caseStatement(descendre);
+        if (result == null) result = caseMD(descendre);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -151,8 +144,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         Avancer avancer = (Avancer)theEObject;
         T result = caseAvancer(avancer);
-        if (result == null) result = caseAR(avancer);
         if (result == null) result = caseStatement(avancer);
+        if (result == null) result = caseAR(avancer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -160,8 +153,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         Reculer reculer = (Reculer)theEObject;
         T result = caseReculer(reculer);
-        if (result == null) result = caseAR(reculer);
         if (result == null) result = caseStatement(reculer);
+        if (result == null) result = caseAR(reculer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -169,8 +162,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         Gauche gauche = (Gauche)theEObject;
         T result = caseGauche(gauche);
-        if (result == null) result = caseGDr(gauche);
         if (result == null) result = caseStatement(gauche);
+        if (result == null) result = caseGDr(gauche);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -178,8 +171,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         Droite droite = (Droite)theEObject;
         T result = caseDroite(droite);
-        if (result == null) result = caseGDr(droite);
         if (result == null) result = caseStatement(droite);
+        if (result == null) result = caseGDr(droite);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -195,8 +188,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         RotationGauche rotationGauche = (RotationGauche)theEObject;
         T result = caseRotationGauche(rotationGauche);
-        if (result == null) result = caseRGRD(rotationGauche);
         if (result == null) result = caseStatement(rotationGauche);
+        if (result == null) result = caseRGRD(rotationGauche);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -204,8 +197,8 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
       {
         RotationDroite rotationDroite = (RotationDroite)theEObject;
         T result = caseRotationDroite(rotationDroite);
-        if (result == null) result = caseRGRD(rotationDroite);
         if (result == null) result = caseStatement(rotationDroite);
+        if (result == null) result = caseRGRD(rotationDroite);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -267,6 +260,48 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyTurtleDslPackage.MD:
+      {
+        MD md = (MD)theEObject;
+        T result = caseMD(md);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.GDR:
+      {
+        GDr gDr = (GDr)theEObject;
+        T result = caseGDr(gDr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.RGRD:
+      {
+        RGRD rgrd = (RGRD)theEObject;
+        T result = caseRGRD(rgrd);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.AR:
+      {
+        AR ar = (AR)theEObject;
+        T result = caseAR(ar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.PARALLELE2:
+      {
+        Parallele2 parallele2 = (Parallele2)theEObject;
+        T result = caseParallele2(parallele2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.PARALLELE3:
+      {
+        Parallele3 parallele3 = (Parallele3)theEObject;
+        T result = caseParallele3(parallele3);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -288,102 +323,6 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MD</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MD</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMD(MD object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>GDr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>GDr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGDr(GDr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>RGRD</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>RGRD</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRGRD(RGRD object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>AR</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>AR</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAR(AR object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parallele2</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parallele2</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParallele2(Parallele2 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parallele3</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parallele3</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParallele3(Parallele3 object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Includes</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -395,6 +334,86 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIncludes(Includes object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent vitesse hauteur max</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent vitesse hauteur max</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePourcent_vitesse_hauteur_max(Pourcent_vitesse_hauteur_max object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent vitesse deplacement max</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent vitesse deplacement max</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePourcent_vitesse_deplacement_max(Pourcent_vitesse_deplacement_max object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent vitesse rotation max</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent vitesse rotation max</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePourcent_vitesse_rotation_max(Pourcent_vitesse_rotation_max object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Hauteur max</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Hauteur max</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHauteur_max(Hauteur_max object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Eloignement max</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Eloignement max</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEloignement_max(Eloignement_max object)
   {
     return null;
   }
@@ -667,6 +686,102 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFonctionCall(FonctionCall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MD</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MD</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMD(MD object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GDr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GDr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGDr(GDr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RGRD</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RGRD</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRGRD(RGRD object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>AR</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>AR</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAR(AR object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parallele2</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parallele2</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParallele2(Parallele2 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parallele3</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parallele3</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParallele3(Parallele3 object)
   {
     return null;
   }

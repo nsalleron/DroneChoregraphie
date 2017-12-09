@@ -21,7 +21,7 @@ package org.xtext.example.mydsl.myTurtleDsl;
  * @model
  * @generated
  */
-public interface Monter extends MD, Statement
+public interface Monter extends Statement, MD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
  *
  * @generated
  */
-public class DescendreImpl extends MDImpl implements Descendre
+public class DescendreImpl extends StatementImpl implements Descendre
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

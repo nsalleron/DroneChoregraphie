@@ -77,13 +77,58 @@ public interface MyTurtleDslPackage extends EPackage
   int MODEL__INCLUDES = 0;
 
   /**
+   * The feature id for the '<em><b>Pvhm</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__PVHM = 1;
+
+  /**
+   * The feature id for the '<em><b>Pvdm</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__PVDM = 2;
+
+  /**
+   * The feature id for the '<em><b>Pvrm</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__PVRM = 3;
+
+  /**
+   * The feature id for the '<em><b>Hm</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__HM = 4;
+
+  /**
+   * The feature id for the '<em><b>Em</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__EM = 5;
+
+  /**
    * The feature id for the '<em><b>Secon Dec</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__SECON_DEC = 1;
+  int MODEL__SECON_DEC = 6;
 
   /**
    * The feature id for the '<em><b>Pour Dec</b></em>' containment reference list.
@@ -92,7 +137,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__POUR_DEC = 2;
+  int MODEL__POUR_DEC = 7;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -101,7 +146,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__STATEMENTS = 3;
+  int MODEL__STATEMENTS = 8;
 
   /**
    * The feature id for the '<em><b>Fonctions</b></em>' containment reference list.
@@ -110,7 +155,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__FONCTIONS = 4;
+  int MODEL__FONCTIONS = 9;
 
   /**
    * The feature id for the '<em><b>Parallele</b></em>' containment reference list.
@@ -119,7 +164,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PARALLELE = 5;
+  int MODEL__PARALLELE = 10;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -128,7 +173,732 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 6;
+  int MODEL_FEATURE_COUNT = 11;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl <em>Includes</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIncludes()
+   * @generated
+   */
+  int INCLUDES = 1;
+
+  /**
+   * The feature id for the '<em><b>Import URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES__IMPORT_URI = 0;
+
+  /**
+   * The number of structural features of the '<em>Includes</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_hauteur_maxImpl <em>Pourcent vitesse hauteur max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_hauteur_maxImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_hauteur_max()
+   * @generated
+   */
+  int POURCENT_VITESSE_HAUTEUR_MAX = 2;
+
+  /**
+   * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE = 0;
+
+  /**
+   * The number of structural features of the '<em>Pourcent vitesse hauteur max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_HAUTEUR_MAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_deplacement_maxImpl <em>Pourcent vitesse deplacement max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_deplacement_maxImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_deplacement_max()
+   * @generated
+   */
+  int POURCENT_VITESSE_DEPLACEMENT_MAX = 3;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Pourcent vitesse deplacement max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_DEPLACEMENT_MAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_rotation_maxImpl <em>Pourcent vitesse rotation max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_rotation_maxImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_rotation_max()
+   * @generated
+   */
+  int POURCENT_VITESSE_ROTATION_MAX = 4;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Pourcent vitesse rotation max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_VITESSE_ROTATION_MAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Hauteur_maxImpl <em>Hauteur max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.Hauteur_maxImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getHauteur_max()
+   * @generated
+   */
+  int HAUTEUR_MAX = 5;
+
+  /**
+   * The feature id for the '<em><b>Hauteur max</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAUTEUR_MAX__HAUTEUR_MAX = 0;
+
+  /**
+   * The number of structural features of the '<em>Hauteur max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAUTEUR_MAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Eloignement_maxImpl <em>Eloignement max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.Eloignement_maxImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getEloignement_max()
+   * @generated
+   */
+  int ELOIGNEMENT_MAX = 6;
+
+  /**
+   * The feature id for the '<em><b>Hauteur max</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELOIGNEMENT_MAX__HAUTEUR_MAX = 0;
+
+  /**
+   * The number of structural features of the '<em>Eloignement max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELOIGNEMENT_MAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.StatementImpl <em>Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.StatementImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getStatement()
+   * @generated
+   */
+  int STATEMENT = 16;
+
+  /**
+   * The number of structural features of the '<em>Statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MonterImpl <em>Monter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MonterImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getMonter()
+   * @generated
+   */
+  int MONTER = 7;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MONTER__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MONTER__VITESSE_VERTICALE = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Monter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MONTER_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.DescendreImpl <em>Descendre</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.DescendreImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getDescendre()
+   * @generated
+   */
+  int DESCENDRE = 8;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESCENDRE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESCENDRE__VITESSE_VERTICALE = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Descendre</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESCENDRE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.AvancerImpl <em>Avancer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.AvancerImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getAvancer()
+   * @generated
+   */
+  int AVANCER = 9;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AVANCER__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AVANCER__VITESSE_DEPLACEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Avancer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AVANCER_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.ReculerImpl <em>Reculer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.ReculerImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getReculer()
+   * @generated
+   */
+  int RECULER = 10;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECULER__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECULER__VITESSE_DEPLACEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Reculer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECULER_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.GaucheImpl <em>Gauche</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.GaucheImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getGauche()
+   * @generated
+   */
+  int GAUCHE = 11;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GAUCHE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GAUCHE__VITESSE_DEPLACEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Gauche</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GAUCHE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.DroiteImpl <em>Droite</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.DroiteImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getDroite()
+   * @generated
+   */
+  int DROITE = 12;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DROITE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DROITE__VITESSE_DEPLACEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Droite</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DROITE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.PauseImpl <em>Pause</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.PauseImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPause()
+   * @generated
+   */
+  int PAUSE = 13;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAUSE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Pause</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RotationGaucheImpl <em>Rotation Gauche</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RotationGaucheImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRotationGauche()
+   * @generated
+   */
+  int ROTATION_GAUCHE = 14;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_GAUCHE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse rotation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_GAUCHE__VITESSE_ROTATION = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Rotation Gauche</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_GAUCHE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RotationDroiteImpl <em>Rotation Droite</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RotationDroiteImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRotationDroite()
+   * @generated
+   */
+  int ROTATION_DROITE = 15;
+
+  /**
+   * The feature id for the '<em><b>Duree</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_DROITE__DUREE = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Vitesse rotation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_DROITE__VITESSE_ROTATION = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Rotation Droite</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATION_DROITE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.FonctionDeclImpl <em>Fonction Decl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.FonctionDeclImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getFonctionDecl()
+   * @generated
+   */
+  int FONCTION_DECL = 17;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL__BODY = 1;
+
+  /**
+   * The number of structural features of the '<em>Fonction Decl</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntExpImpl <em>Int Exp</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntExpImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntExp()
+   * @generated
+   */
+  int INT_EXP = 22;
+
+  /**
+   * The number of structural features of the '<em>Int Exp</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_EXP_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntConstanteImpl <em>Int Constante</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntConstanteImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntConstante()
+   * @generated
+   */
+  int INT_CONSTANTE = 18;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANTE__VAL = INT_EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Int Constante</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANTE_FEATURE_COUNT = INT_EXP_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntDeclImpl <em>Int Decl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntDeclImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntDecl()
+   * @generated
+   */
+  int INT_DECL = 19;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_DECL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_DECL__VAL = 1;
+
+  /**
+   * The number of structural features of the '<em>Int Decl</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_DECL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.PourcentDeclImpl <em>Pourcent Decl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.PourcentDeclImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcentDecl()
+   * @generated
+   */
+  int POURCENT_DECL = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_DECL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_DECL__VAL = 1;
+
+  /**
+   * The number of structural features of the '<em>Pourcent Decl</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POURCENT_DECL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RefIntVarImpl <em>Ref Int Var</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RefIntVarImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRefIntVar()
+   * @generated
+   */
+  int REF_INT_VAR = 21;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_INT_VAR__VAR = INT_EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Ref Int Var</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_INT_VAR_FEATURE_COUNT = INT_EXP_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.FonctionCallImpl <em>Fonction Call</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.FonctionCallImpl
+   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getFonctionCall()
+   * @generated
+   */
+  int FONCTION_CALL = 23;
+
+  /**
+   * The feature id for the '<em><b>Func</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL__FUNC = 0;
+
+  /**
+   * The number of structural features of the '<em>Fonction Call</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MDImpl <em>MD</em>}' class.
@@ -138,7 +908,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getMD()
    * @generated
    */
-  int MD = 1;
+  int MD = 24;
 
   /**
    * The number of structural features of the '<em>MD</em>' class.
@@ -157,7 +927,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getGDr()
    * @generated
    */
-  int GDR = 2;
+  int GDR = 25;
 
   /**
    * The number of structural features of the '<em>GDr</em>' class.
@@ -176,7 +946,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRGRD()
    * @generated
    */
-  int RGRD = 3;
+  int RGRD = 26;
 
   /**
    * The number of structural features of the '<em>RGRD</em>' class.
@@ -195,7 +965,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getAR()
    * @generated
    */
-  int AR = 4;
+  int AR = 27;
 
   /**
    * The number of structural features of the '<em>AR</em>' class.
@@ -214,7 +984,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele2()
    * @generated
    */
-  int PARALLELE2 = 5;
+  int PARALLELE2 = 28;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -260,7 +1030,7 @@ public interface MyTurtleDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele3()
    * @generated
    */
-  int PARALLELE3 = 6;
+  int PARALLELE3 = 29;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -298,591 +1068,6 @@ public interface MyTurtleDslPackage extends EPackage
    */
   int PARALLELE3_FEATURE_COUNT = 3;
 
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl <em>Includes</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIncludes()
-   * @generated
-   */
-  int INCLUDES = 7;
-
-  /**
-   * The feature id for the '<em><b>Import URI</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUDES__IMPORT_URI = 0;
-
-  /**
-   * The number of structural features of the '<em>Includes</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUDES_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MonterImpl <em>Monter</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MonterImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getMonter()
-   * @generated
-   */
-  int MONTER = 8;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MONTER__DUREE = MD_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MONTER__VITESSE_VERTICALE = MD_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Monter</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MONTER_FEATURE_COUNT = MD_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.DescendreImpl <em>Descendre</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.DescendreImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getDescendre()
-   * @generated
-   */
-  int DESCENDRE = 9;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DESCENDRE__DUREE = MD_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DESCENDRE__VITESSE_VERTICALE = MD_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Descendre</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DESCENDRE_FEATURE_COUNT = MD_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.AvancerImpl <em>Avancer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.AvancerImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getAvancer()
-   * @generated
-   */
-  int AVANCER = 10;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AVANCER__DUREE = AR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AVANCER__VITESSE_DEPLACEMENT = AR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Avancer</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AVANCER_FEATURE_COUNT = AR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.ReculerImpl <em>Reculer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.ReculerImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getReculer()
-   * @generated
-   */
-  int RECULER = 11;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECULER__DUREE = AR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECULER__VITESSE_DEPLACEMENT = AR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Reculer</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECULER_FEATURE_COUNT = AR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.GaucheImpl <em>Gauche</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.GaucheImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getGauche()
-   * @generated
-   */
-  int GAUCHE = 12;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GAUCHE__DUREE = GDR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GAUCHE__VITESSE_DEPLACEMENT = GDR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Gauche</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GAUCHE_FEATURE_COUNT = GDR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.DroiteImpl <em>Droite</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.DroiteImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getDroite()
-   * @generated
-   */
-  int DROITE = 13;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DROITE__DUREE = GDR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DROITE__VITESSE_DEPLACEMENT = GDR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Droite</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DROITE_FEATURE_COUNT = GDR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.StatementImpl <em>Statement</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.StatementImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getStatement()
-   * @generated
-   */
-  int STATEMENT = 17;
-
-  /**
-   * The number of structural features of the '<em>Statement</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.PauseImpl <em>Pause</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.PauseImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPause()
-   * @generated
-   */
-  int PAUSE = 14;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAUSE__DUREE = STATEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Pause</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RotationGaucheImpl <em>Rotation Gauche</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RotationGaucheImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRotationGauche()
-   * @generated
-   */
-  int ROTATION_GAUCHE = 15;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_GAUCHE__DUREE = RGRD_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse rotation</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_GAUCHE__VITESSE_ROTATION = RGRD_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Rotation Gauche</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_GAUCHE_FEATURE_COUNT = RGRD_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RotationDroiteImpl <em>Rotation Droite</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RotationDroiteImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRotationDroite()
-   * @generated
-   */
-  int ROTATION_DROITE = 16;
-
-  /**
-   * The feature id for the '<em><b>Duree</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_DROITE__DUREE = RGRD_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Vitesse rotation</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_DROITE__VITESSE_ROTATION = RGRD_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Rotation Droite</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATION_DROITE_FEATURE_COUNT = RGRD_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.FonctionDeclImpl <em>Fonction Decl</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.FonctionDeclImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getFonctionDecl()
-   * @generated
-   */
-  int FONCTION_DECL = 18;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_DECL__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Body</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_DECL__BODY = 1;
-
-  /**
-   * The number of structural features of the '<em>Fonction Decl</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_DECL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntExpImpl <em>Int Exp</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntExpImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntExp()
-   * @generated
-   */
-  int INT_EXP = 23;
-
-  /**
-   * The number of structural features of the '<em>Int Exp</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_EXP_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntConstanteImpl <em>Int Constante</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntConstanteImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntConstante()
-   * @generated
-   */
-  int INT_CONSTANTE = 19;
-
-  /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_CONSTANTE__VAL = INT_EXP_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Int Constante</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_CONSTANTE_FEATURE_COUNT = INT_EXP_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IntDeclImpl <em>Int Decl</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.IntDeclImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getIntDecl()
-   * @generated
-   */
-  int INT_DECL = 20;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_DECL__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Val</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_DECL__VAL = 1;
-
-  /**
-   * The number of structural features of the '<em>Int Decl</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_DECL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.PourcentDeclImpl <em>Pourcent Decl</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.PourcentDeclImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcentDecl()
-   * @generated
-   */
-  int POURCENT_DECL = 21;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POURCENT_DECL__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Val</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POURCENT_DECL__VAL = 1;
-
-  /**
-   * The number of structural features of the '<em>Pourcent Decl</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POURCENT_DECL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RefIntVarImpl <em>Ref Int Var</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.RefIntVarImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRefIntVar()
-   * @generated
-   */
-  int REF_INT_VAR = 22;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REF_INT_VAR__VAR = INT_EXP_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Ref Int Var</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REF_INT_VAR_FEATURE_COUNT = INT_EXP_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.FonctionCallImpl <em>Fonction Call</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.FonctionCallImpl
-   * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getFonctionCall()
-   * @generated
-   */
-  int FONCTION_CALL = 24;
-
-  /**
-   * The feature id for the '<em><b>Func</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_CALL__FUNC = 0;
-
-  /**
-   * The number of structural features of the '<em>Fonction Call</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_CALL_FEATURE_COUNT = 1;
-
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Model <em>Model</em>}'.
@@ -904,6 +1089,61 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    */
   EReference getModel_Includes();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvhm <em>Pvhm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Pvhm</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Model#getPvhm()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Pvhm();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvdm <em>Pvdm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Pvdm</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Model#getPvdm()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Pvdm();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvrm <em>Pvrm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Pvrm</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Model#getPvrm()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Pvrm();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getHm <em>Hm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Hm</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Model#getHm()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Hm();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getEm <em>Em</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Em</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Model#getEm()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Em();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getSeconDec <em>Secon Dec</em>}'.
@@ -961,132 +1201,6 @@ public interface MyTurtleDslPackage extends EPackage
   EReference getModel_Parallele();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.MD <em>MD</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>MD</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MD
-   * @generated
-   */
-  EClass getMD();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.GDr <em>GDr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>GDr</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.GDr
-   * @generated
-   */
-  EClass getGDr();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.RGRD <em>RGRD</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>RGRD</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.RGRD
-   * @generated
-   */
-  EClass getRGRD();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.AR <em>AR</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>AR</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.AR
-   * @generated
-   */
-  EClass getAR();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2 <em>Parallele2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parallele2</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2
-   * @generated
-   */
-  EClass getParallele2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getA()
-   * @see #getParallele2()
-   * @generated
-   */
-  EReference getParallele2_A();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getT <em>T</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>T</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getT()
-   * @see #getParallele2()
-   * @generated
-   */
-  EReference getParallele2_T();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getB()
-   * @see #getParallele2()
-   * @generated
-   */
-  EReference getParallele2_B();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3 <em>Parallele3</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parallele3</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3
-   * @generated
-   */
-  EClass getParallele3();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getA()
-   * @see #getParallele3()
-   * @generated
-   */
-  EReference getParallele3_A();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getB()
-   * @see #getParallele3()
-   * @generated
-   */
-  EReference getParallele3_B();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getC <em>C</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>C</em>'.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getC()
-   * @see #getParallele3()
-   * @generated
-   */
-  EReference getParallele3_C();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Includes <em>Includes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1106,6 +1220,111 @@ public interface MyTurtleDslPackage extends EPackage
    * @generated
    */
   EAttribute getIncludes_ImportURI();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max <em>Pourcent vitesse hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pourcent vitesse hauteur max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max
+   * @generated
+   */
+  EClass getPourcent_vitesse_hauteur_max();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max#getVitesse_verticale <em>Vitesse verticale</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Vitesse verticale</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max#getVitesse_verticale()
+   * @see #getPourcent_vitesse_hauteur_max()
+   * @generated
+   */
+  EReference getPourcent_vitesse_hauteur_max_Vitesse_verticale();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max <em>Pourcent vitesse deplacement max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pourcent vitesse deplacement max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max
+   * @generated
+   */
+  EClass getPourcent_vitesse_deplacement_max();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max#getVitesse_deplacement <em>Vitesse deplacement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Vitesse deplacement</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max#getVitesse_deplacement()
+   * @see #getPourcent_vitesse_deplacement_max()
+   * @generated
+   */
+  EReference getPourcent_vitesse_deplacement_max_Vitesse_deplacement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max <em>Pourcent vitesse rotation max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pourcent vitesse rotation max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max
+   * @generated
+   */
+  EClass getPourcent_vitesse_rotation_max();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max#getVitesse_deplacement <em>Vitesse deplacement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Vitesse deplacement</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max#getVitesse_deplacement()
+   * @see #getPourcent_vitesse_rotation_max()
+   * @generated
+   */
+  EReference getPourcent_vitesse_rotation_max_Vitesse_deplacement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Hauteur_max <em>Hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Hauteur max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Hauteur_max
+   * @generated
+   */
+  EClass getHauteur_max();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Hauteur_max#getHauteur_max <em>Hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Hauteur max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Hauteur_max#getHauteur_max()
+   * @see #getHauteur_max()
+   * @generated
+   */
+  EReference getHauteur_max_Hauteur_max();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Eloignement_max <em>Eloignement max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Eloignement max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Eloignement_max
+   * @generated
+   */
+  EClass getEloignement_max();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Eloignement_max#getHauteur_max <em>Hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Hauteur max</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Eloignement_max#getHauteur_max()
+   * @see #getEloignement_max()
+   * @generated
+   */
+  EReference getEloignement_max_Hauteur_max();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Monter <em>Monter</em>}'.
@@ -1564,6 +1783,132 @@ public interface MyTurtleDslPackage extends EPackage
   EReference getFonctionCall_Func();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.MD <em>MD</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MD</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MD
+   * @generated
+   */
+  EClass getMD();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.GDr <em>GDr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>GDr</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.GDr
+   * @generated
+   */
+  EClass getGDr();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.RGRD <em>RGRD</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RGRD</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.RGRD
+   * @generated
+   */
+  EClass getRGRD();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.AR <em>AR</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>AR</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.AR
+   * @generated
+   */
+  EClass getAR();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2 <em>Parallele2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parallele2</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2
+   * @generated
+   */
+  EClass getParallele2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getA()
+   * @see #getParallele2()
+   * @generated
+   */
+  EReference getParallele2_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getT <em>T</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>T</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getT()
+   * @see #getParallele2()
+   * @generated
+   */
+  EReference getParallele2_T();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>B</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2#getB()
+   * @see #getParallele2()
+   * @generated
+   */
+  EReference getParallele2_B();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3 <em>Parallele3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parallele3</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3
+   * @generated
+   */
+  EClass getParallele3();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getA()
+   * @see #getParallele3()
+   * @generated
+   */
+  EReference getParallele3_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>B</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getB()
+   * @see #getParallele3()
+   * @generated
+   */
+  EReference getParallele3_B();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3#getC <em>C</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>C</em>'.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3#getC()
+   * @see #getParallele3()
+   * @generated
+   */
+  EReference getParallele3_C();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1603,6 +1948,46 @@ public interface MyTurtleDslPackage extends EPackage
      * @generated
      */
     EReference MODEL__INCLUDES = eINSTANCE.getModel_Includes();
+
+    /**
+     * The meta object literal for the '<em><b>Pvhm</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__PVHM = eINSTANCE.getModel_Pvhm();
+
+    /**
+     * The meta object literal for the '<em><b>Pvdm</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__PVDM = eINSTANCE.getModel_Pvdm();
+
+    /**
+     * The meta object literal for the '<em><b>Pvrm</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__PVRM = eINSTANCE.getModel_Pvrm();
+
+    /**
+     * The meta object literal for the '<em><b>Hm</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__HM = eINSTANCE.getModel_Hm();
+
+    /**
+     * The meta object literal for the '<em><b>Em</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__EM = eINSTANCE.getModel_Em();
 
     /**
      * The meta object literal for the '<em><b>Secon Dec</b></em>' containment reference list feature.
@@ -1645,114 +2030,6 @@ public interface MyTurtleDslPackage extends EPackage
     EReference MODEL__PARALLELE = eINSTANCE.getModel_Parallele();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MDImpl <em>MD</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MDImpl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getMD()
-     * @generated
-     */
-    EClass MD = eINSTANCE.getMD();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.GDrImpl <em>GDr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.GDrImpl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getGDr()
-     * @generated
-     */
-    EClass GDR = eINSTANCE.getGDr();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RGRDImpl <em>RGRD</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.RGRDImpl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRGRD()
-     * @generated
-     */
-    EClass RGRD = eINSTANCE.getRGRD();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.ARImpl <em>AR</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.ARImpl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getAR()
-     * @generated
-     */
-    EClass AR = eINSTANCE.getAR();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Parallele2Impl <em>Parallele2</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Parallele2Impl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele2()
-     * @generated
-     */
-    EClass PARALLELE2 = eINSTANCE.getParallele2();
-
-    /**
-     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE2__A = eINSTANCE.getParallele2_A();
-
-    /**
-     * The meta object literal for the '<em><b>T</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE2__T = eINSTANCE.getParallele2_T();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE2__B = eINSTANCE.getParallele2_B();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Parallele3Impl <em>Parallele3</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Parallele3Impl
-     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele3()
-     * @generated
-     */
-    EClass PARALLELE3 = eINSTANCE.getParallele3();
-
-    /**
-     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE3__A = eINSTANCE.getParallele3_A();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE3__B = eINSTANCE.getParallele3_B();
-
-    /**
-     * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE3__C = eINSTANCE.getParallele3_C();
-
-    /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl <em>Includes</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1769,6 +2046,96 @@ public interface MyTurtleDslPackage extends EPackage
      * @generated
      */
     EAttribute INCLUDES__IMPORT_URI = eINSTANCE.getIncludes_ImportURI();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_hauteur_maxImpl <em>Pourcent vitesse hauteur max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_hauteur_maxImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_hauteur_max()
+     * @generated
+     */
+    EClass POURCENT_VITESSE_HAUTEUR_MAX = eINSTANCE.getPourcent_vitesse_hauteur_max();
+
+    /**
+     * The meta object literal for the '<em><b>Vitesse verticale</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE = eINSTANCE.getPourcent_vitesse_hauteur_max_Vitesse_verticale();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_deplacement_maxImpl <em>Pourcent vitesse deplacement max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_deplacement_maxImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_deplacement_max()
+     * @generated
+     */
+    EClass POURCENT_VITESSE_DEPLACEMENT_MAX = eINSTANCE.getPourcent_vitesse_deplacement_max();
+
+    /**
+     * The meta object literal for the '<em><b>Vitesse deplacement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT = eINSTANCE.getPourcent_vitesse_deplacement_max_Vitesse_deplacement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_rotation_maxImpl <em>Pourcent vitesse rotation max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Pourcent_vitesse_rotation_maxImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getPourcent_vitesse_rotation_max()
+     * @generated
+     */
+    EClass POURCENT_VITESSE_ROTATION_MAX = eINSTANCE.getPourcent_vitesse_rotation_max();
+
+    /**
+     * The meta object literal for the '<em><b>Vitesse deplacement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT = eINSTANCE.getPourcent_vitesse_rotation_max_Vitesse_deplacement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Hauteur_maxImpl <em>Hauteur max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Hauteur_maxImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getHauteur_max()
+     * @generated
+     */
+    EClass HAUTEUR_MAX = eINSTANCE.getHauteur_max();
+
+    /**
+     * The meta object literal for the '<em><b>Hauteur max</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HAUTEUR_MAX__HAUTEUR_MAX = eINSTANCE.getHauteur_max_Hauteur_max();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Eloignement_maxImpl <em>Eloignement max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Eloignement_maxImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getEloignement_max()
+     * @generated
+     */
+    EClass ELOIGNEMENT_MAX = eINSTANCE.getEloignement_max();
+
+    /**
+     * The meta object literal for the '<em><b>Hauteur max</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ELOIGNEMENT_MAX__HAUTEUR_MAX = eINSTANCE.getEloignement_max_Hauteur_max();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MonterImpl <em>Monter</em>}' class.
@@ -2147,6 +2514,114 @@ public interface MyTurtleDslPackage extends EPackage
      * @generated
      */
     EReference FONCTION_CALL__FUNC = eINSTANCE.getFonctionCall_Func();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.MDImpl <em>MD</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MDImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getMD()
+     * @generated
+     */
+    EClass MD = eINSTANCE.getMD();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.GDrImpl <em>GDr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.GDrImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getGDr()
+     * @generated
+     */
+    EClass GDR = eINSTANCE.getGDr();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.RGRDImpl <em>RGRD</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.RGRDImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getRGRD()
+     * @generated
+     */
+    EClass RGRD = eINSTANCE.getRGRD();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.ARImpl <em>AR</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.ARImpl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getAR()
+     * @generated
+     */
+    EClass AR = eINSTANCE.getAR();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Parallele2Impl <em>Parallele2</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Parallele2Impl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele2()
+     * @generated
+     */
+    EClass PARALLELE2 = eINSTANCE.getParallele2();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE2__A = eINSTANCE.getParallele2_A();
+
+    /**
+     * The meta object literal for the '<em><b>T</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE2__T = eINSTANCE.getParallele2_T();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE2__B = eINSTANCE.getParallele2_B();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myTurtleDsl.impl.Parallele3Impl <em>Parallele3</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.Parallele3Impl
+     * @see org.xtext.example.mydsl.myTurtleDsl.impl.MyTurtleDslPackageImpl#getParallele3()
+     * @generated
+     */
+    EClass PARALLELE3 = eINSTANCE.getParallele3();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE3__A = eINSTANCE.getParallele3_A();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE3__B = eINSTANCE.getParallele3_B();
+
+    /**
+     * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE3__C = eINSTANCE.getParallele3_C();
 
   }
 

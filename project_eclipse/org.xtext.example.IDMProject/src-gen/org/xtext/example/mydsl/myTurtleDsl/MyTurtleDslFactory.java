@@ -33,60 +33,6 @@ public interface MyTurtleDslFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>MD</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>MD</em>'.
-   * @generated
-   */
-  MD createMD();
-
-  /**
-   * Returns a new object of class '<em>GDr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>GDr</em>'.
-   * @generated
-   */
-  GDr createGDr();
-
-  /**
-   * Returns a new object of class '<em>RGRD</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>RGRD</em>'.
-   * @generated
-   */
-  RGRD createRGRD();
-
-  /**
-   * Returns a new object of class '<em>AR</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>AR</em>'.
-   * @generated
-   */
-  AR createAR();
-
-  /**
-   * Returns a new object of class '<em>Parallele2</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parallele2</em>'.
-   * @generated
-   */
-  Parallele2 createParallele2();
-
-  /**
-   * Returns a new object of class '<em>Parallele3</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parallele3</em>'.
-   * @generated
-   */
-  Parallele3 createParallele3();
-
-  /**
    * Returns a new object of class '<em>Includes</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -94,6 +40,51 @@ public interface MyTurtleDslFactory extends EFactory
    * @generated
    */
   Includes createIncludes();
+
+  /**
+   * Returns a new object of class '<em>Pourcent vitesse hauteur max</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent vitesse hauteur max</em>'.
+   * @generated
+   */
+  Pourcent_vitesse_hauteur_max createPourcent_vitesse_hauteur_max();
+
+  /**
+   * Returns a new object of class '<em>Pourcent vitesse deplacement max</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent vitesse deplacement max</em>'.
+   * @generated
+   */
+  Pourcent_vitesse_deplacement_max createPourcent_vitesse_deplacement_max();
+
+  /**
+   * Returns a new object of class '<em>Pourcent vitesse rotation max</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent vitesse rotation max</em>'.
+   * @generated
+   */
+  Pourcent_vitesse_rotation_max createPourcent_vitesse_rotation_max();
+
+  /**
+   * Returns a new object of class '<em>Hauteur max</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hauteur max</em>'.
+   * @generated
+   */
+  Hauteur_max createHauteur_max();
+
+  /**
+   * Returns a new object of class '<em>Eloignement max</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Eloignement max</em>'.
+   * @generated
+   */
+  Eloignement_max createEloignement_max();
 
   /**
    * Returns a new object of class '<em>Monter</em>'.
@@ -247,6 +238,60 @@ public interface MyTurtleDslFactory extends EFactory
    * @generated
    */
   FonctionCall createFonctionCall();
+
+  /**
+   * Returns a new object of class '<em>MD</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MD</em>'.
+   * @generated
+   */
+  MD createMD();
+
+  /**
+   * Returns a new object of class '<em>GDr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>GDr</em>'.
+   * @generated
+   */
+  GDr createGDr();
+
+  /**
+   * Returns a new object of class '<em>RGRD</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RGRD</em>'.
+   * @generated
+   */
+  RGRD createRGRD();
+
+  /**
+   * Returns a new object of class '<em>AR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>AR</em>'.
+   * @generated
+   */
+  AR createAR();
+
+  /**
+   * Returns a new object of class '<em>Parallele2</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parallele2</em>'.
+   * @generated
+   */
+  Parallele2 createParallele2();
+
+  /**
+   * Returns a new object of class '<em>Parallele3</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parallele3</em>'.
+   * @generated
+   */
+  Parallele3 createParallele3();
 
   /**
    * Returns the package supported by this factory.

@@ -6,11 +6,18 @@ Model:
 	(
 		(includes+=Includes)*'\n'*
 		'func' 'main' '{'
+			'prologue' '{' 
+				(pvhm+=Pourcent_vitesse_hauteur_max)'\n'*
+				(pvdm+=Pourcent_vitesse_deplacement_max)'\n'*	
+				(pvrm+=Pourcent_vitesse_rotation_max)'\n'*	
+				(hm+=Hauteur_max)'\n'*
+				(em+=Eloignement_max)'\n'*
+			'}'
 			(Start)'\n'*
-			(SeconDec+=IntDecl		|
-			 PourDec+=PourcentDecl 	|
-			 statements+=Statement	|
-			 fonctions+=FonctionCall|
+			(SeconDec+=IntDecl			|
+			 PourDec+=PourcentDecl 		|
+			 statements+=Statement		|
+			 fonctions+=FonctionCall		|
 			 parallele+=(Parallele2|Parallele3)
 			)*'\n'*
 			(End)'\n'*
@@ -23,6 +30,33 @@ Includes:
     'import''<'importURI=INCLUDE'>;';
     
 terminal INCLUDE: ID('.drone');
+
+//Prologue
+Pourcent_vitesse_hauteur_max:
+	'def_pourcent_vitesse_hauteur_max''('
+		vitesse_verticale=IntExp
+		')'
+;
+Pourcent_vitesse_deplacement_max:
+	'def_pourcent_vitesse_deplacement_max''('
+		vitesse_deplacement=IntExp
+		')'
+;
+Pourcent_vitesse_rotation_max:
+	'def_pourcent_vitesse_rotation_max''('
+		vitesse_deplacement=IntExp
+		')'
+;
+Hauteur_max:
+	'def_hauteur_max''('
+		hauteur_max=IntExp
+		')'
+;
+Eloignement_max:
+	'def_eloignement_max''('
+		hauteur_max=IntExp
+		')'
+;
 	
 Decoller:
 	'decoller''('')'
@@ -184,8 +218,8 @@ Parallele3:
 	(a=MD) 	'&' (b=AR) '&' (c=GDr)		|
 	(a=MD) 	'&' (b=AR) '&' (c=RGRD)		|
 	(a=MD) 	'&' (b=GDr) '&' (c=AR)		|
-	(a=MD) 	'&' (b=GDr) '&' (c=RGRD)	|
-	(a=MD) 	'&' (b=RGRD) '&' (c=GDr)	|
+	(a=MD) 	'&' (b=GDr) '&' (c=RGRD)		|
+	(a=MD) 	'&' (b=RGRD) '&' (c=GDr)		|
 	(a=MD) 	'&' (b=RGRD) '&' (c=AR)		|
 	(a=RGRD)'&' (b=AR) '&' (c=MD)		|
 	(a=RGRD)'&' (b=AR) '&' (c=GDr)		|

@@ -13,10 +13,12 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.example.mydsl.myTurtleDsl.Avancer;
 import org.xtext.example.mydsl.myTurtleDsl.Descendre;
 import org.xtext.example.mydsl.myTurtleDsl.Droite;
+import org.xtext.example.mydsl.myTurtleDsl.Eloignement_max;
 import org.xtext.example.mydsl.myTurtleDsl.FonctionCall;
 import org.xtext.example.mydsl.myTurtleDsl.FonctionDecl;
 import org.xtext.example.mydsl.myTurtleDsl.GDr;
 import org.xtext.example.mydsl.myTurtleDsl.Gauche;
+import org.xtext.example.mydsl.myTurtleDsl.Hauteur_max;
 import org.xtext.example.mydsl.myTurtleDsl.Includes;
 import org.xtext.example.mydsl.myTurtleDsl.IntConstante;
 import org.xtext.example.mydsl.myTurtleDsl.IntDecl;
@@ -29,6 +31,9 @@ import org.xtext.example.mydsl.myTurtleDsl.Parallele2;
 import org.xtext.example.mydsl.myTurtleDsl.Parallele3;
 import org.xtext.example.mydsl.myTurtleDsl.Pause;
 import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
+import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max;
 import org.xtext.example.mydsl.myTurtleDsl.Reculer;
 import org.xtext.example.mydsl.myTurtleDsl.RefIntVar;
 import org.xtext.example.mydsl.myTurtleDsl.RotationDroite;
@@ -55,49 +60,42 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass mdEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass gDrEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass rgrdEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass arEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass parallele2EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass parallele3EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass includesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcent_vitesse_hauteur_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcent_vitesse_deplacement_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcent_vitesse_rotation_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass hauteur_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eloignement_maxEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -219,6 +217,48 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
   private EClass fonctionCallEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mdEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gDrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rgrdEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parallele2EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parallele3EClass = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -247,7 +287,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   *
+   * 
    * <p>This method is used to initialize {@link MyTurtleDslPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -262,8 +302,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     if (isInited) return (MyTurtleDslPackage)EPackage.Registry.INSTANCE.getEPackage(MyTurtleDslPackage.eNS_URI);
 
     // Obtain or create and register package
-    Object registeredMyTurtleDslPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-    MyTurtleDslPackageImpl theMyTurtleDslPackage = registeredMyTurtleDslPackage instanceof MyTurtleDslPackageImpl ? (MyTurtleDslPackageImpl)registeredMyTurtleDslPackage : new MyTurtleDslPackageImpl();
+    MyTurtleDslPackageImpl theMyTurtleDslPackage = (MyTurtleDslPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof MyTurtleDslPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new MyTurtleDslPackageImpl());
 
     isInited = true;
 
@@ -276,6 +315,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     // Mark meta-data to indicate it can't be changed
     theMyTurtleDslPackage.freeze();
 
+  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(MyTurtleDslPackage.eNS_URI, theMyTurtleDslPackage);
     return theMyTurtleDslPackage;
@@ -306,7 +346,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_SeconDec()
+  public EReference getModel_Pvhm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
@@ -316,7 +356,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_PourDec()
+  public EReference getModel_Pvdm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(2);
   }
@@ -326,7 +366,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Statements()
+  public EReference getModel_Pvrm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(3);
   }
@@ -336,7 +376,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Fonctions()
+  public EReference getModel_Hm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(4);
   }
@@ -346,7 +386,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Parallele()
+  public EReference getModel_Em()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(5);
   }
@@ -356,9 +396,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMD()
+  public EReference getModel_SeconDec()
   {
-    return mdEClass;
+    return (EReference)modelEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -366,9 +406,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGDr()
+  public EReference getModel_PourDec()
   {
-    return gDrEClass;
+    return (EReference)modelEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -376,9 +416,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getRGRD()
+  public EReference getModel_Statements()
   {
-    return rgrdEClass;
+    return (EReference)modelEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -386,9 +426,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAR()
+  public EReference getModel_Fonctions()
   {
-    return arEClass;
+    return (EReference)modelEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -396,79 +436,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getParallele2()
+  public EReference getModel_Parallele()
   {
-    return parallele2EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele2_A()
-  {
-    return (EReference)parallele2EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele2_T()
-  {
-    return (EReference)parallele2EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele2_B()
-  {
-    return (EReference)parallele2EClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getParallele3()
-  {
-    return parallele3EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele3_A()
-  {
-    return (EReference)parallele3EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele3_B()
-  {
-    return (EReference)parallele3EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParallele3_C()
-  {
-    return (EReference)parallele3EClass.getEStructuralFeatures().get(2);
+    return (EReference)modelEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -489,6 +459,106 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
   public EAttribute getIncludes_ImportURI()
   {
     return (EAttribute)includesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcent_vitesse_hauteur_max()
+  {
+    return pourcent_vitesse_hauteur_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPourcent_vitesse_hauteur_max_Vitesse_verticale()
+  {
+    return (EReference)pourcent_vitesse_hauteur_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcent_vitesse_deplacement_max()
+  {
+    return pourcent_vitesse_deplacement_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPourcent_vitesse_deplacement_max_Vitesse_deplacement()
+  {
+    return (EReference)pourcent_vitesse_deplacement_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcent_vitesse_rotation_max()
+  {
+    return pourcent_vitesse_rotation_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPourcent_vitesse_rotation_max_Vitesse_deplacement()
+  {
+    return (EReference)pourcent_vitesse_rotation_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHauteur_max()
+  {
+    return hauteur_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getHauteur_max_Hauteur_max()
+  {
+    return (EReference)hauteur_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEloignement_max()
+  {
+    return eloignement_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEloignement_max_Hauteur_max()
+  {
+    return (EReference)eloignement_maxEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -926,6 +996,126 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getMD()
+  {
+    return mdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGDr()
+  {
+    return gDrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRGRD()
+  {
+    return rgrdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAR()
+  {
+    return arEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParallele2()
+  {
+    return parallele2EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele2_A()
+  {
+    return (EReference)parallele2EClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele2_T()
+  {
+    return (EReference)parallele2EClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele2_B()
+  {
+    return (EReference)parallele2EClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParallele3()
+  {
+    return parallele3EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele3_A()
+  {
+    return (EReference)parallele3EClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele3_B()
+  {
+    return (EReference)parallele3EClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele3_C()
+  {
+    return (EReference)parallele3EClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MyTurtleDslFactory getMyTurtleDslFactory()
   {
     return (MyTurtleDslFactory)getEFactoryInstance();
@@ -953,32 +1143,34 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     // Create classes and their features
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__INCLUDES);
+    createEReference(modelEClass, MODEL__PVHM);
+    createEReference(modelEClass, MODEL__PVDM);
+    createEReference(modelEClass, MODEL__PVRM);
+    createEReference(modelEClass, MODEL__HM);
+    createEReference(modelEClass, MODEL__EM);
     createEReference(modelEClass, MODEL__SECON_DEC);
     createEReference(modelEClass, MODEL__POUR_DEC);
     createEReference(modelEClass, MODEL__STATEMENTS);
     createEReference(modelEClass, MODEL__FONCTIONS);
     createEReference(modelEClass, MODEL__PARALLELE);
 
-    mdEClass = createEClass(MD);
-
-    gDrEClass = createEClass(GDR);
-
-    rgrdEClass = createEClass(RGRD);
-
-    arEClass = createEClass(AR);
-
-    parallele2EClass = createEClass(PARALLELE2);
-    createEReference(parallele2EClass, PARALLELE2__A);
-    createEReference(parallele2EClass, PARALLELE2__T);
-    createEReference(parallele2EClass, PARALLELE2__B);
-
-    parallele3EClass = createEClass(PARALLELE3);
-    createEReference(parallele3EClass, PARALLELE3__A);
-    createEReference(parallele3EClass, PARALLELE3__B);
-    createEReference(parallele3EClass, PARALLELE3__C);
-
     includesEClass = createEClass(INCLUDES);
     createEAttribute(includesEClass, INCLUDES__IMPORT_URI);
+
+    pourcent_vitesse_hauteur_maxEClass = createEClass(POURCENT_VITESSE_HAUTEUR_MAX);
+    createEReference(pourcent_vitesse_hauteur_maxEClass, POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE);
+
+    pourcent_vitesse_deplacement_maxEClass = createEClass(POURCENT_VITESSE_DEPLACEMENT_MAX);
+    createEReference(pourcent_vitesse_deplacement_maxEClass, POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT);
+
+    pourcent_vitesse_rotation_maxEClass = createEClass(POURCENT_VITESSE_ROTATION_MAX);
+    createEReference(pourcent_vitesse_rotation_maxEClass, POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT);
+
+    hauteur_maxEClass = createEClass(HAUTEUR_MAX);
+    createEReference(hauteur_maxEClass, HAUTEUR_MAX__HAUTEUR_MAX);
+
+    eloignement_maxEClass = createEClass(ELOIGNEMENT_MAX);
+    createEReference(eloignement_maxEClass, ELOIGNEMENT_MAX__HAUTEUR_MAX);
 
     monterEClass = createEClass(MONTER);
     createEReference(monterEClass, MONTER__DUREE);
@@ -1039,6 +1231,24 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
 
     fonctionCallEClass = createEClass(FONCTION_CALL);
     createEReference(fonctionCallEClass, FONCTION_CALL__FUNC);
+
+    mdEClass = createEClass(MD);
+
+    gDrEClass = createEClass(GDR);
+
+    rgrdEClass = createEClass(RGRD);
+
+    arEClass = createEClass(AR);
+
+    parallele2EClass = createEClass(PARALLELE2);
+    createEReference(parallele2EClass, PARALLELE2__A);
+    createEReference(parallele2EClass, PARALLELE2__T);
+    createEReference(parallele2EClass, PARALLELE2__B);
+
+    parallele3EClass = createEClass(PARALLELE3);
+    createEReference(parallele3EClass, PARALLELE3__A);
+    createEReference(parallele3EClass, PARALLELE3__B);
+    createEReference(parallele3EClass, PARALLELE3__C);
   }
 
   /**
@@ -1070,55 +1280,57 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    monterEClass.getESuperTypes().add(this.getMD());
     monterEClass.getESuperTypes().add(this.getStatement());
-    descendreEClass.getESuperTypes().add(this.getMD());
+    monterEClass.getESuperTypes().add(this.getMD());
     descendreEClass.getESuperTypes().add(this.getStatement());
-    avancerEClass.getESuperTypes().add(this.getAR());
+    descendreEClass.getESuperTypes().add(this.getMD());
     avancerEClass.getESuperTypes().add(this.getStatement());
-    reculerEClass.getESuperTypes().add(this.getAR());
+    avancerEClass.getESuperTypes().add(this.getAR());
     reculerEClass.getESuperTypes().add(this.getStatement());
-    gaucheEClass.getESuperTypes().add(this.getGDr());
+    reculerEClass.getESuperTypes().add(this.getAR());
     gaucheEClass.getESuperTypes().add(this.getStatement());
-    droiteEClass.getESuperTypes().add(this.getGDr());
+    gaucheEClass.getESuperTypes().add(this.getGDr());
     droiteEClass.getESuperTypes().add(this.getStatement());
+    droiteEClass.getESuperTypes().add(this.getGDr());
     pauseEClass.getESuperTypes().add(this.getStatement());
-    rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
     rotationGaucheEClass.getESuperTypes().add(this.getStatement());
-    rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
+    rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
     rotationDroiteEClass.getESuperTypes().add(this.getStatement());
+    rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
     intConstanteEClass.getESuperTypes().add(this.getIntExp());
     refIntVarEClass.getESuperTypes().add(this.getIntExp());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Includes(), this.getIncludes(), null, "includes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Pvhm(), this.getPourcent_vitesse_hauteur_max(), null, "pvhm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Pvdm(), this.getPourcent_vitesse_deplacement_max(), null, "pvdm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Pvrm(), this.getPourcent_vitesse_rotation_max(), null, "pvrm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Hm(), this.getHauteur_max(), null, "hm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Em(), this.getEloignement_max(), null, "em", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_SeconDec(), this.getIntDecl(), null, "SeconDec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_PourDec(), this.getPourcentDecl(), null, "PourDec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Statements(), this.getStatement(), null, "statements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Fonctions(), ecorePackage.getEObject(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Parallele(), ecorePackage.getEObject(), null, "parallele", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(mdEClass, org.xtext.example.mydsl.myTurtleDsl.MD.class, "MD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(gDrEClass, GDr.class, "GDr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(rgrdEClass, org.xtext.example.mydsl.myTurtleDsl.RGRD.class, "RGRD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(arEClass, org.xtext.example.mydsl.myTurtleDsl.AR.class, "AR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(parallele2EClass, Parallele2.class, "Parallele2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParallele2_A(), ecorePackage.getEObject(), null, "a", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParallele2_T(), ecorePackage.getEObject(), null, "t", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParallele2_B(), ecorePackage.getEObject(), null, "b", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(parallele3EClass, Parallele3.class, "Parallele3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParallele3_A(), ecorePackage.getEObject(), null, "a", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParallele3_B(), ecorePackage.getEObject(), null, "b", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParallele3_C(), ecorePackage.getEObject(), null, "c", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(includesEClass, Includes.class, "Includes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIncludes_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Includes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pourcent_vitesse_hauteur_maxEClass, Pourcent_vitesse_hauteur_max.class, "Pourcent_vitesse_hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPourcent_vitesse_hauteur_max_Vitesse_verticale(), this.getIntExp(), null, "vitesse_verticale", null, 0, 1, Pourcent_vitesse_hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pourcent_vitesse_deplacement_maxEClass, Pourcent_vitesse_deplacement_max.class, "Pourcent_vitesse_deplacement_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPourcent_vitesse_deplacement_max_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_deplacement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pourcent_vitesse_rotation_maxEClass, Pourcent_vitesse_rotation_max.class, "Pourcent_vitesse_rotation_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPourcent_vitesse_rotation_max_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(hauteur_maxEClass, Hauteur_max.class, "Hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getHauteur_max_Hauteur_max(), this.getIntExp(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(eloignement_maxEClass, Eloignement_max.class, "Eloignement_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEloignement_max_Hauteur_max(), this.getIntExp(), null, "hauteur_max", null, 0, 1, Eloignement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(monterEClass, Monter.class, "Monter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMonter_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1179,6 +1391,24 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
 
     initEClass(fonctionCallEClass, FonctionCall.class, "FonctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFonctionCall_Func(), this.getFonctionDecl(), null, "func", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mdEClass, org.xtext.example.mydsl.myTurtleDsl.MD.class, "MD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(gDrEClass, GDr.class, "GDr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(rgrdEClass, org.xtext.example.mydsl.myTurtleDsl.RGRD.class, "RGRD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(arEClass, org.xtext.example.mydsl.myTurtleDsl.AR.class, "AR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(parallele2EClass, Parallele2.class, "Parallele2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParallele2_A(), ecorePackage.getEObject(), null, "a", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParallele2_T(), ecorePackage.getEObject(), null, "t", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParallele2_B(), ecorePackage.getEObject(), null, "b", null, 0, 1, Parallele2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parallele3EClass, Parallele3.class, "Parallele3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParallele3_A(), ecorePackage.getEObject(), null, "a", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParallele3_B(), ecorePackage.getEObject(), null, "b", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParallele3_C(), ecorePackage.getEObject(), null, "c", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

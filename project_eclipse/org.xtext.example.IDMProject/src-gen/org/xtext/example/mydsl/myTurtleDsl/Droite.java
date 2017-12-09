@@ -21,7 +21,7 @@ package org.xtext.example.mydsl.myTurtleDsl;
  * @model
  * @generated
  */
-public interface Droite extends GDr, Statement
+public interface Droite extends Statement, GDr
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

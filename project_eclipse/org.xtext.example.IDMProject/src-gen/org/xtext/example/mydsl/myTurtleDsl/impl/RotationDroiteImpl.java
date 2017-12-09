@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.RotationDroite;
  *
  * @generated
  */
-public class RotationDroiteImpl extends RGRDImpl implements RotationDroite
+public class RotationDroiteImpl extends StatementImpl implements RotationDroite
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

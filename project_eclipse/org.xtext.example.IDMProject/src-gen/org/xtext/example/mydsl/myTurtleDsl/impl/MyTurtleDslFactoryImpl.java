@@ -66,13 +66,12 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
     switch (eClass.getClassifierID())
     {
       case MyTurtleDslPackage.MODEL: return createModel();
-      case MyTurtleDslPackage.MD: return createMD();
-      case MyTurtleDslPackage.GDR: return createGDr();
-      case MyTurtleDslPackage.RGRD: return createRGRD();
-      case MyTurtleDslPackage.AR: return createAR();
-      case MyTurtleDslPackage.PARALLELE2: return createParallele2();
-      case MyTurtleDslPackage.PARALLELE3: return createParallele3();
       case MyTurtleDslPackage.INCLUDES: return createIncludes();
+      case MyTurtleDslPackage.POURCENT_VITESSE_HAUTEUR_MAX: return createPourcent_vitesse_hauteur_max();
+      case MyTurtleDslPackage.POURCENT_VITESSE_DEPLACEMENT_MAX: return createPourcent_vitesse_deplacement_max();
+      case MyTurtleDslPackage.POURCENT_VITESSE_ROTATION_MAX: return createPourcent_vitesse_rotation_max();
+      case MyTurtleDslPackage.HAUTEUR_MAX: return createHauteur_max();
+      case MyTurtleDslPackage.ELOIGNEMENT_MAX: return createEloignement_max();
       case MyTurtleDslPackage.MONTER: return createMonter();
       case MyTurtleDslPackage.DESCENDRE: return createDescendre();
       case MyTurtleDslPackage.AVANCER: return createAvancer();
@@ -90,6 +89,12 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
       case MyTurtleDslPackage.REF_INT_VAR: return createRefIntVar();
       case MyTurtleDslPackage.INT_EXP: return createIntExp();
       case MyTurtleDslPackage.FONCTION_CALL: return createFonctionCall();
+      case MyTurtleDslPackage.MD: return createMD();
+      case MyTurtleDslPackage.GDR: return createGDr();
+      case MyTurtleDslPackage.RGRD: return createRGRD();
+      case MyTurtleDslPackage.AR: return createAR();
+      case MyTurtleDslPackage.PARALLELE2: return createParallele2();
+      case MyTurtleDslPackage.PARALLELE3: return createParallele3();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -111,76 +116,65 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
    * <!-- end-user-doc -->
    * @generated
    */
-  public MD createMD()
-  {
-    MDImpl md = new MDImpl();
-    return md;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GDr createGDr()
-  {
-    GDrImpl gDr = new GDrImpl();
-    return gDr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RGRD createRGRD()
-  {
-    RGRDImpl rgrd = new RGRDImpl();
-    return rgrd;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AR createAR()
-  {
-    ARImpl ar = new ARImpl();
-    return ar;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Parallele2 createParallele2()
-  {
-    Parallele2Impl parallele2 = new Parallele2Impl();
-    return parallele2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Parallele3 createParallele3()
-  {
-    Parallele3Impl parallele3 = new Parallele3Impl();
-    return parallele3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Includes createIncludes()
   {
     IncludesImpl includes = new IncludesImpl();
     return includes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pourcent_vitesse_hauteur_max createPourcent_vitesse_hauteur_max()
+  {
+    Pourcent_vitesse_hauteur_maxImpl pourcent_vitesse_hauteur_max = new Pourcent_vitesse_hauteur_maxImpl();
+    return pourcent_vitesse_hauteur_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pourcent_vitesse_deplacement_max createPourcent_vitesse_deplacement_max()
+  {
+    Pourcent_vitesse_deplacement_maxImpl pourcent_vitesse_deplacement_max = new Pourcent_vitesse_deplacement_maxImpl();
+    return pourcent_vitesse_deplacement_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pourcent_vitesse_rotation_max createPourcent_vitesse_rotation_max()
+  {
+    Pourcent_vitesse_rotation_maxImpl pourcent_vitesse_rotation_max = new Pourcent_vitesse_rotation_maxImpl();
+    return pourcent_vitesse_rotation_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Hauteur_max createHauteur_max()
+  {
+    Hauteur_maxImpl hauteur_max = new Hauteur_maxImpl();
+    return hauteur_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Eloignement_max createEloignement_max()
+  {
+    Eloignement_maxImpl eloignement_max = new Eloignement_maxImpl();
+    return eloignement_max;
   }
 
   /**
@@ -368,6 +362,72 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
   {
     FonctionCallImpl fonctionCall = new FonctionCallImpl();
     return fonctionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MD createMD()
+  {
+    MDImpl md = new MDImpl();
+    return md;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GDr createGDr()
+  {
+    GDrImpl gDr = new GDrImpl();
+    return gDr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RGRD createRGRD()
+  {
+    RGRDImpl rgrd = new RGRDImpl();
+    return rgrd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AR createAR()
+  {
+    ARImpl ar = new ARImpl();
+    return ar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parallele2 createParallele2()
+  {
+    Parallele2Impl parallele2 = new Parallele2Impl();
+    return parallele2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parallele3 createParallele3()
+  {
+    Parallele3Impl parallele3 = new Parallele3Impl();
+    return parallele3;
   }
 
   /**

@@ -21,7 +21,7 @@ package org.xtext.example.mydsl.myTurtleDsl;
  * @model
  * @generated
  */
-public interface Avancer extends AR, Statement
+public interface Avancer extends Statement, AR
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

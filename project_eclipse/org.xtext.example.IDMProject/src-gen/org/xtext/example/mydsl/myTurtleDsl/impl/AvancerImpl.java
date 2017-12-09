@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
  *
  * @generated
  */
-public class AvancerImpl extends ARImpl implements Avancer
+public class AvancerImpl extends StatementImpl implements Avancer
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

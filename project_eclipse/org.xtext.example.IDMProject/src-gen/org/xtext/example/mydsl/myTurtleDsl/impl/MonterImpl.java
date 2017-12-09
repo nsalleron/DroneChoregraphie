@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
  *
  * @generated
  */
-public class MonterImpl extends MDImpl implements Monter
+public class MonterImpl extends StatementImpl implements Monter
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

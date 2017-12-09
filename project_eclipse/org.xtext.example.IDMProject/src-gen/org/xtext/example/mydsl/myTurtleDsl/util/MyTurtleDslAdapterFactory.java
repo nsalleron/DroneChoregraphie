@@ -81,39 +81,34 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseMD(MD object)
-      {
-        return createMDAdapter();
-      }
-      @Override
-      public Adapter caseGDr(GDr object)
-      {
-        return createGDrAdapter();
-      }
-      @Override
-      public Adapter caseRGRD(RGRD object)
-      {
-        return createRGRDAdapter();
-      }
-      @Override
-      public Adapter caseAR(AR object)
-      {
-        return createARAdapter();
-      }
-      @Override
-      public Adapter caseParallele2(Parallele2 object)
-      {
-        return createParallele2Adapter();
-      }
-      @Override
-      public Adapter caseParallele3(Parallele3 object)
-      {
-        return createParallele3Adapter();
-      }
-      @Override
       public Adapter caseIncludes(Includes object)
       {
         return createIncludesAdapter();
+      }
+      @Override
+      public Adapter casePourcent_vitesse_hauteur_max(Pourcent_vitesse_hauteur_max object)
+      {
+        return createPourcent_vitesse_hauteur_maxAdapter();
+      }
+      @Override
+      public Adapter casePourcent_vitesse_deplacement_max(Pourcent_vitesse_deplacement_max object)
+      {
+        return createPourcent_vitesse_deplacement_maxAdapter();
+      }
+      @Override
+      public Adapter casePourcent_vitesse_rotation_max(Pourcent_vitesse_rotation_max object)
+      {
+        return createPourcent_vitesse_rotation_maxAdapter();
+      }
+      @Override
+      public Adapter caseHauteur_max(Hauteur_max object)
+      {
+        return createHauteur_maxAdapter();
+      }
+      @Override
+      public Adapter caseEloignement_max(Eloignement_max object)
+      {
+        return createEloignement_maxAdapter();
       }
       @Override
       public Adapter caseMonter(Monter object)
@@ -201,6 +196,36 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
         return createFonctionCallAdapter();
       }
       @Override
+      public Adapter caseMD(MD object)
+      {
+        return createMDAdapter();
+      }
+      @Override
+      public Adapter caseGDr(GDr object)
+      {
+        return createGDrAdapter();
+      }
+      @Override
+      public Adapter caseRGRD(RGRD object)
+      {
+        return createRGRDAdapter();
+      }
+      @Override
+      public Adapter caseAR(AR object)
+      {
+        return createARAdapter();
+      }
+      @Override
+      public Adapter caseParallele2(Parallele2 object)
+      {
+        return createParallele2Adapter();
+      }
+      @Override
+      public Adapter caseParallele3(Parallele3 object)
+      {
+        return createParallele3Adapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -238,96 +263,6 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.MD <em>MD</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MD
-   * @generated
-   */
-  public Adapter createMDAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.GDr <em>GDr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.GDr
-   * @generated
-   */
-  public Adapter createGDrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.RGRD <em>RGRD</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.RGRD
-   * @generated
-   */
-  public Adapter createRGRDAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.AR <em>AR</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.AR
-   * @generated
-   */
-  public Adapter createARAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2 <em>Parallele2</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2
-   * @generated
-   */
-  public Adapter createParallele2Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3 <em>Parallele3</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3
-   * @generated
-   */
-  public Adapter createParallele3Adapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Includes <em>Includes</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -338,6 +273,81 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIncludesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max <em>Pourcent vitesse hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max
+   * @generated
+   */
+  public Adapter createPourcent_vitesse_hauteur_maxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max <em>Pourcent vitesse deplacement max</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max
+   * @generated
+   */
+  public Adapter createPourcent_vitesse_deplacement_maxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max <em>Pourcent vitesse rotation max</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max
+   * @generated
+   */
+  public Adapter createPourcent_vitesse_rotation_maxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Hauteur_max <em>Hauteur max</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Hauteur_max
+   * @generated
+   */
+  public Adapter createHauteur_maxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Eloignement_max <em>Eloignement max</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Eloignement_max
+   * @generated
+   */
+  public Adapter createEloignement_maxAdapter()
   {
     return null;
   }
@@ -593,6 +603,96 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFonctionCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.MD <em>MD</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MD
+   * @generated
+   */
+  public Adapter createMDAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.GDr <em>GDr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.GDr
+   * @generated
+   */
+  public Adapter createGDrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.RGRD <em>RGRD</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.RGRD
+   * @generated
+   */
+  public Adapter createRGRDAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.AR <em>AR</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.AR
+   * @generated
+   */
+  public Adapter createARAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele2 <em>Parallele2</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele2
+   * @generated
+   */
+  public Adapter createParallele2Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Parallele3 <em>Parallele3</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Parallele3
+   * @generated
+   */
+  public Adapter createParallele3Adapter()
   {
     return null;
   }

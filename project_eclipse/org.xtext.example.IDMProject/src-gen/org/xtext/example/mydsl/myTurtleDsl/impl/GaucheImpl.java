@@ -29,7 +29,7 @@ import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
  *
  * @generated
  */
-public class GaucheImpl extends GDrImpl implements Gauche
+public class GaucheImpl extends StatementImpl implements Gauche
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

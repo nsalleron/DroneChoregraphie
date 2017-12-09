@@ -17,6 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvhm <em>Pvhm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvdm <em>Pvdm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvrm <em>Pvrm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getHm <em>Hm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getEm <em>Em</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getSeconDec <em>Secon Dec</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPourDec <em>Pour Dec</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getStatements <em>Statements</em>}</li>
@@ -45,6 +50,86 @@ public interface Model extends EObject
    * @generated
    */
   EList<Includes> getIncludes();
+
+  /**
+   * Returns the value of the '<em><b>Pvhm</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pvhm</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pvhm</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Pvhm()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Pourcent_vitesse_hauteur_max> getPvhm();
+
+  /**
+   * Returns the value of the '<em><b>Pvdm</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pvdm</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pvdm</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Pvdm()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Pourcent_vitesse_deplacement_max> getPvdm();
+
+  /**
+   * Returns the value of the '<em><b>Pvrm</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pvrm</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pvrm</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Pvrm()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Pourcent_vitesse_rotation_max> getPvrm();
+
+  /**
+   * Returns the value of the '<em><b>Hm</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Hauteur_max}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hm</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hm</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Hm()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Hauteur_max> getHm();
+
+  /**
+   * Returns the value of the '<em><b>Em</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Eloignement_max}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Em</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Em</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Em()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Eloignement_max> getEm();
 
   /**
    * Returns the value of the '<em><b>Secon Dec</b></em>' containment reference list.
