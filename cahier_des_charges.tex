@@ -112,6 +112,7 @@ L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un reto
 
 Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
 \begin{itemize}
+	  \item Le drone utilisé est un drone à hélices, le langage ne supportera pas les drones type avion.
       \item Le drone doit être allumé par l'utilisateur.
       \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
       \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
@@ -289,7 +290,7 @@ Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et
             \caption{Exemple de programme utilisateur}
             \label{Exemple de programme utilisateur}
     \end{figure}
-    \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter on programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+    \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
 
 
 
@@ -308,38 +309,43 @@ Exemple :
 \} \\
 \end{tabbing}
 
-\subsection{Figures prédéfinies}
-TODO - "Ça c'est un peu casse gueule" -> import monfic.funcDrone. Le client doit charger la bibliothèque.\\
+\subsection{Bilbiothèque de fonctions}
+Une fois que l'utilisateur a défini ses fonctions de composition et les a sauvegardées dans un fichier, celui-ci aura la possibilité de les référencer depuis un autre fichier au moyen d'un système d'import. Ainsi l'uilisateur pourra appeler dans un fichier une fonction définie dans un autre fichier.\\
+Ce système permettra à l'utilisateur de créer ses propres bilbiothèques de fonctions.\\
+Afin de pouvoir appeler les fonctions définies dans un fichier, ce dernier devra se trouver dans le même répertoire que celui contenant le fichier appelant les fonctions. 
 
-Nous allons de plus implémenter une bibliothèque de figures prédéfinies pour l'utilisateur final comme le : carré horizontal, carré vertical. 
-
-\subsubsection{carré horizontal}
-\quad Syntaxe: \textbf{carre\_horizontal(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-Cette commande permettra à un drone de réaliser un carré horizontal en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré horizontal. \\
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré horizontal.\\
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
-
-\subsubsection{carré vertical}
-\quad Syntaxe: \textbf{carre\_vertical(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-Cette commande permettra à un drone de réaliser un carré vertical en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré vertical. \\
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré vertical.\\
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
-
-\subsubsection{triange}
-\quad Syntaxe: \textbf{triange(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-Cette commande permettra à un drone de réaliser un triange isocèle horizontale en fonction de la vitesse de deplacement et d'une durée pour le réaliser.\\
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son triangle.\\
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
-
-\subsubsection{carré ascendant}
-\quad Syntaxe: \textbf{carre\_ascendant(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-Cette commande permettra à un drone de réaliser un carré ascendant en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré ascendant. \\
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré ascendant.\\
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%\subsection{Figures prédéfinies}
+%TODO - "Ça c'est un peu casse gueule" -> import monfic.funcDrone. Le client doit charger la bibliothèque.\\
+%
+%Nous allons de plus implémenter une bibliothèque de figures prédéfinies pour l'utilisateur final comme le : carré horizontal, carré vertical. 
+%
+%\subsubsection{carré horizontal}
+%\quad Syntaxe: \textbf{carre\_horizontal(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra à un drone de réaliser un carré horizontal en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré horizontal. \\
+%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré horizontal.\\
+%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%
+%\subsubsection{carré vertical}
+%\quad Syntaxe: \textbf{carre\_vertical(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra à un drone de réaliser un carré vertical en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré vertical. \\
+%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré vertical.\\
+%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%
+%\subsubsection{triange}
+%\quad Syntaxe: \textbf{triange(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra à un drone de réaliser un triange isocèle horizontale en fonction de la vitesse de deplacement et d'une durée pour le réaliser.\\
+%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son triangle.\\
+%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%
+%\subsubsection{carré ascendant}
+%\quad Syntaxe: \textbf{carre\_ascendant(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra à un drone de réaliser un carré ascendant en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré ascendant. \\
+%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
+%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré ascendant.\\
+%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 
 \subsection{Fonction de composition parallèle}
 Notre langage intégrera un mécanisme de composition d'exécution de commandes en parallèle. 
