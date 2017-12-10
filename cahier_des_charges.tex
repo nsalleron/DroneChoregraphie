@@ -295,14 +295,14 @@ Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et
 
 
 \section{Fonction de composition}
-Notre langage impose des contraintes sur les fonctions. D'abord, la première fonction du fichier du langage s'appelle "main", elle est la première fonction exécutée par le drone. De plus, les fonctions ne peuvent pas être récursive, c'est à dire, qu'une fonction ne peut s'appeller elle même. 
+Notre langage impose des contraintes sur les fonctions. D'abord, la première fonction du fichier à exécuter s'appelle "main", elle est la première fonction exécutée par le drone. De plus, les fonctions ne peuvent pas être récursive, c'est à dire, qu'une fonction ne peut s'appeller elle même. 
 
 \subsection{Création de composition sequentielle}
 En plus des commandes de base, notre langage permet à l'utilisateur de définir ses propres compositions qui sont des suites d'instructions à exécuter par le drone. \\
 
 Exemple :
  \begin{tabbing}
-        func \= \_nom\_de\_la\_fonction\_ \{ \\
+        func \= \_nom\_de\_la\_fonction\_() \{ \\
         \> monter(2, 10) \\
         \>    avancer(2, 20) \\
         \>    droite(2, 15) \\
@@ -372,10 +372,17 @@ Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-    decoller()\\
-    monter(1.0, 20)\\
-    atterrir()\\
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+	    monter(1.0, 20)\\
+	    atterrir()
+    \end{indentpar}
+    \}\\
     \end{indentpar}
 \end{minipage} \\
 \hline
@@ -392,13 +399,20 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-   \vspace{1px}
-   \begin{indentpar}{1cm}
-   	decoller()\\
-	monter(1.0, 20)\\
-	avancer(1.0, 20)\\
-	reculer(1.0, 20)\\
-	atterrir()\\
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		monter(1.0, 20)\\
+		avancer(1.0, 20)\\
+		reculer(1.0, 20)\\
+		atterrir()
+    \end{indentpar}
+    \}\\
     \end{indentpar}
 \end{minipage} \\
 \hline
@@ -415,11 +429,18 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
     \begin{indentpar}{1cm}
-   	decoller()\\
-	blabalbla()\\
-	atterrir()\\
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		blabalbla()\\
+		atterrir()
+    \end{indentpar}
+    \}\\
     \end{indentpar}
 \end{minipage} \\
 \hline
@@ -435,11 +456,18 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-   	decoller()\\
-	monter("hello")\\
-	atterrir()\\
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		monter("hello")\\
+		atterrir()
+    \end{indentpar}
+    \}\\
     \end{indentpar}
 \end{minipage} \\
 \hline
@@ -456,12 +484,19 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-	decoller()\\
-	atterrir()\\
-	monter(1.0, 20)\\
-\end{indentpar}
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		atterrir()\\
+		monter(1.0, 20)
+    \end{indentpar}
+    \}\\
+    \end{indentpar}
 \end{minipage} \\
 \hline
 Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
@@ -477,12 +512,19 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-	monter(1.0, 20)\\
-	decoller()\\
-	atterrir()\\
-\end{indentpar}
+     	prologue \{
+
+     	\}\\
+	    monter(1.0, 20)\\
+		decoller()\\
+		atterrir()
+    \end{indentpar}
+    \}\\
+    \end{indentpar}
 \end{minipage} \\
 \hline
 Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
@@ -499,11 +541,18 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-	decoller()\\
-	decoller()\\
-\end{indentpar}
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		decoller()
+    \end{indentpar}
+    \}\\
+    \end{indentpar}
 \end{minipage} \\
 \hline
 Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{decoller}.\\
@@ -518,18 +567,147 @@ Contexte :& L'utilisateur a démarré son éditeur.\\
 Entrée :& aucune \\
 \hline
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
-  \vspace{1px}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
      \begin{indentpar}{1cm}
-	decoller()\\
-	monter(1.0, 20)\\
-	atterrir()\\
-	atterrir()\\
-\end{indentpar}
+     	prologue \{
+
+     	\}\\
+	    decoller()\\
+		monter(1.0, 20)\\
+		atterrir()\\
+		atterrir()
+    \end{indentpar}
+    \}\\
+    \end{indentpar}
 \end{minipage} \\
 \hline
 Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{atterrir}.\\
 \hline
 \end{tabular}
+
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-09\\
+\hline
+Contexte :& L'utilisateur a démarré son éditeur.\\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+     	decoller()\\
+	    aller\_retour()\\
+	    atterrir()
+    \end{indentpar}
+    \}\\
+    func aller\_retour() \{
+     \begin{indentpar}{1cm}
+		avancer(1.0, 20)\\
+		reculer(1.0, 20)
+     \end{indentpar}
+    \}\\
+    \end{indentpar}
+\end{minipage} \\
+\hline
+Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-10\\
+\hline
+Contexte :& L'utilisateur a démarré son éditeur.\\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+     	decoller()\\
+	    foo()\\
+	    atterrir()
+    \end{indentpar}
+    \}\\
+    func bar() \{
+     \begin{indentpar}{1cm}
+		avancer(1.0, 20)
+     \end{indentpar}
+    \}\\
+    \end{indentpar}
+\end{minipage} \\
+\hline
+Résultat attendu:& Une erreur est détéctée sur l'appel à la fonction \textit{foo}.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-11\\
+\hline
+Contexte :& L'utilisateur a démarré son éditeur.\\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+     	decoller()\\
+	    monter(1.0, 20) \& avancer(1.0, 20)\\
+	    atterrir()
+     \end{indentpar}
+    \}\\
+    \end{indentpar}
+\end{minipage} \\
+\hline
+Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
+\rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-12\\
+\hline
+Contexte :& L'utilisateur a démarré son éditeur.\\
+\hline
+Entrée :& aucune \\
+\hline
+Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+    \vspace{1px}
+    \begin{indentpar}{1cm}
+    func main \{
+     \begin{indentpar}{1cm}
+     	prologue \{
+
+     	\}\\
+     	decoller()\\
+	    monter(1.0, 20) \& descendre(1.0, 20)\\
+	    atterrir()
+     \end{indentpar}
+    \}\\
+    \end{indentpar}
+\end{minipage} \\
+\hline
+Résultat attendu:& Une erreur est détéctée sur l'appel de la composition parallèle des fonctions \textit{monter} et \textit{descendre}.\\
+\hline
+\end{tabular}
+
+
+
 TODO - Faire des tests plus méchants (fct composition séquence, etc)
 
 \section{Validation tranche 3 -  (Contrôler drone depuis l'ordinateur via le programme utilisateur)} 
