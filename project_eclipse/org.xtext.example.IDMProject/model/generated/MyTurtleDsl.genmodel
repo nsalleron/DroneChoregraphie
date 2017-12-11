@@ -7,20 +7,30 @@
   <genPackages prefix="MyTurtleDsl" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
       fileExtensions="mydsl" ecorePackage="MyTurtleDsl.ecore#/">
     <genClasses ecoreClass="MyTurtleDsl.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/includes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/pvhm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/pvdm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/pvrm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/hm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/em"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/SeconDec"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/PourDec"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/statements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/m"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/fonctions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Model/parallele"/>
     </genClasses>
-    <genClasses ecoreClass="MyTurtleDsl.ecore#//Includes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//Includes/importURI"/>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//Main">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Main/SeconDec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Main/PourDec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Main/statements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Main/fonctions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Main/parallele"/>
+    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//PourcentConst">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//PourcentConst/val"/>
+    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//Imports">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Imports/includes"/>
+    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//Import/importURI"/>
     </genClasses>
     <genClasses ecoreClass="MyTurtleDsl.ecore#//Pourcent_vitesse_hauteur_max">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//Pourcent_vitesse_hauteur_max/vitesse_verticale"/>
@@ -77,19 +87,23 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//FonctionDecl/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//FonctionDecl/body"/>
     </genClasses>
-    <genClasses ecoreClass="MyTurtleDsl.ecore#//IntConstante">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//IntConstante/val"/>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//PourcentDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//PourcentDecl/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//PourcentDecl/val"/>
     </genClasses>
     <genClasses ecoreClass="MyTurtleDsl.ecore#//IntDecl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//IntDecl/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//IntDecl/val"/>
     </genClasses>
-    <genClasses ecoreClass="MyTurtleDsl.ecore#//PourcentDecl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//PourcentDecl/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//PourcentDecl/val"/>
-    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//PourcentExp"/>
     <genClasses ecoreClass="MyTurtleDsl.ecore#//RefIntVar">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//RefIntVar/var"/>
+    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//RefPourcentVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyTurtleDsl.ecore#//RefPourcentVar/var"/>
+    </genClasses>
+    <genClasses ecoreClass="MyTurtleDsl.ecore#//IntConstante">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyTurtleDsl.ecore#//IntConstante/val"/>
     </genClasses>
     <genClasses ecoreClass="MyTurtleDsl.ecore#//IntExp"/>
     <genClasses ecoreClass="MyTurtleDsl.ecore#//FonctionCall">

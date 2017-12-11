@@ -66,7 +66,10 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
     switch (eClass.getClassifierID())
     {
       case MyTurtleDslPackage.MODEL: return createModel();
-      case MyTurtleDslPackage.INCLUDES: return createIncludes();
+      case MyTurtleDslPackage.MAIN: return createMain();
+      case MyTurtleDslPackage.POURCENT_CONST: return createPourcentConst();
+      case MyTurtleDslPackage.IMPORTS: return createImports();
+      case MyTurtleDslPackage.IMPORT: return createImport();
       case MyTurtleDslPackage.POURCENT_VITESSE_HAUTEUR_MAX: return createPourcent_vitesse_hauteur_max();
       case MyTurtleDslPackage.POURCENT_VITESSE_DEPLACEMENT_MAX: return createPourcent_vitesse_deplacement_max();
       case MyTurtleDslPackage.POURCENT_VITESSE_ROTATION_MAX: return createPourcent_vitesse_rotation_max();
@@ -83,10 +86,12 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
       case MyTurtleDslPackage.ROTATION_DROITE: return createRotationDroite();
       case MyTurtleDslPackage.STATEMENT: return createStatement();
       case MyTurtleDslPackage.FONCTION_DECL: return createFonctionDecl();
-      case MyTurtleDslPackage.INT_CONSTANTE: return createIntConstante();
-      case MyTurtleDslPackage.INT_DECL: return createIntDecl();
       case MyTurtleDslPackage.POURCENT_DECL: return createPourcentDecl();
+      case MyTurtleDslPackage.INT_DECL: return createIntDecl();
+      case MyTurtleDslPackage.POURCENT_EXP: return createPourcentExp();
       case MyTurtleDslPackage.REF_INT_VAR: return createRefIntVar();
+      case MyTurtleDslPackage.REF_POURCENT_VAR: return createRefPourcentVar();
+      case MyTurtleDslPackage.INT_CONSTANTE: return createIntConstante();
       case MyTurtleDslPackage.INT_EXP: return createIntExp();
       case MyTurtleDslPackage.FONCTION_CALL: return createFonctionCall();
       case MyTurtleDslPackage.MD: return createMD();
@@ -116,10 +121,43 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Includes createIncludes()
+  public Main createMain()
   {
-    IncludesImpl includes = new IncludesImpl();
-    return includes;
+    MainImpl main = new MainImpl();
+    return main;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentConst createPourcentConst()
+  {
+    PourcentConstImpl pourcentConst = new PourcentConstImpl();
+    return pourcentConst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Imports createImports()
+  {
+    ImportsImpl imports = new ImportsImpl();
+    return imports;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**
@@ -303,10 +341,10 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntConstante createIntConstante()
+  public PourcentDecl createPourcentDecl()
   {
-    IntConstanteImpl intConstante = new IntConstanteImpl();
-    return intConstante;
+    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
+    return pourcentDecl;
   }
 
   /**
@@ -325,10 +363,10 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
    * <!-- end-user-doc -->
    * @generated
    */
-  public PourcentDecl createPourcentDecl()
+  public PourcentExp createPourcentExp()
   {
-    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
-    return pourcentDecl;
+    PourcentExpImpl pourcentExp = new PourcentExpImpl();
+    return pourcentExp;
   }
 
   /**
@@ -340,6 +378,28 @@ public class MyTurtleDslFactoryImpl extends EFactoryImpl implements MyTurtleDslF
   {
     RefIntVarImpl refIntVar = new RefIntVarImpl();
     return refIntVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefPourcentVar createRefPourcentVar()
+  {
+    RefPourcentVarImpl refPourcentVar = new RefPourcentVarImpl();
+    return refPourcentVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntConstante createIntConstante()
+  {
+    IntConstanteImpl intConstante = new IntConstanteImpl();
+    return intConstante;
   }
 
   /**

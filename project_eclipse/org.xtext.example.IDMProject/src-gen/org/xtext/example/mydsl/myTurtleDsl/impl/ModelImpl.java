@@ -5,30 +5,30 @@ package org.xtext.example.mydsl.myTurtleDsl.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.mydsl.myTurtleDsl.Eloignement_max;
+import org.xtext.example.mydsl.myTurtleDsl.FonctionDecl;
 import org.xtext.example.mydsl.myTurtleDsl.Hauteur_max;
-import org.xtext.example.mydsl.myTurtleDsl.Includes;
-import org.xtext.example.mydsl.myTurtleDsl.IntDecl;
+import org.xtext.example.mydsl.myTurtleDsl.Import;
+import org.xtext.example.mydsl.myTurtleDsl.Main;
 import org.xtext.example.mydsl.myTurtleDsl.Model;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
-import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max;
-import org.xtext.example.mydsl.myTurtleDsl.Statement;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,17 +38,14 @@ import org.xtext.example.mydsl.myTurtleDsl.Statement;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvhm <em>Pvhm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvdm <em>Pvdm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPvrm <em>Pvrm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getHm <em>Hm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getEm <em>Em</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getSeconDec <em>Secon Dec</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getPourDec <em>Pour Dec</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getM <em>M</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getFonctions <em>Fonctions</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.ModelImpl#getParallele <em>Parallele</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,14 +53,14 @@ import org.xtext.example.mydsl.myTurtleDsl.Statement;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getIncludes() <em>Includes</em>}' containment reference list.
+   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIncludes()
+   * @see #getImports()
    * @generated
    * @ordered
    */
-  protected EList<Includes> includes;
+  protected EList<Import> imports;
 
   /**
    * The cached value of the '{@link #getPvhm() <em>Pvhm</em>}' containment reference list.
@@ -116,34 +113,14 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EList<Eloignement_max> em;
 
   /**
-   * The cached value of the '{@link #getSeconDec() <em>Secon Dec</em>}' containment reference list.
+   * The cached value of the '{@link #getM() <em>M</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSeconDec()
+   * @see #getM()
    * @generated
    * @ordered
    */
-  protected EList<IntDecl> seconDec;
-
-  /**
-   * The cached value of the '{@link #getPourDec() <em>Pour Dec</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPourDec()
-   * @generated
-   * @ordered
-   */
-  protected EList<PourcentDecl> pourDec;
-
-  /**
-   * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStatements()
-   * @generated
-   * @ordered
-   */
-  protected EList<Statement> statements;
+  protected Main m;
 
   /**
    * The cached value of the '{@link #getFonctions() <em>Fonctions</em>}' containment reference list.
@@ -153,17 +130,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<EObject> fonctions;
-
-  /**
-   * The cached value of the '{@link #getParallele() <em>Parallele</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParallele()
-   * @generated
-   * @ordered
-   */
-  protected EList<EObject> parallele;
+  protected EList<FonctionDecl> fonctions;
 
   /**
    * <!-- begin-user-doc -->
@@ -191,13 +158,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Includes> getIncludes()
+  public EList<Import> getImports()
   {
-    if (includes == null)
+    if (imports == null)
     {
-      includes = new EObjectContainmentEList<Includes>(Includes.class, this, MyTurtleDslPackage.MODEL__INCLUDES);
+      imports = new EObjectContainmentEList<Import>(Import.class, this, MyTurtleDslPackage.MODEL__IMPORTS);
     }
-    return includes;
+    return imports;
   }
 
   /**
@@ -275,13 +242,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IntDecl> getSeconDec()
+  public Main getM()
   {
-    if (seconDec == null)
-    {
-      seconDec = new EObjectContainmentEList<IntDecl>(IntDecl.class, this, MyTurtleDslPackage.MODEL__SECON_DEC);
-    }
-    return seconDec;
+    return m;
   }
 
   /**
@@ -289,13 +252,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PourcentDecl> getPourDec()
+  public NotificationChain basicSetM(Main newM, NotificationChain msgs)
   {
-    if (pourDec == null)
+    Main oldM = m;
+    m = newM;
+    if (eNotificationRequired())
     {
-      pourDec = new EObjectContainmentEList<PourcentDecl>(PourcentDecl.class, this, MyTurtleDslPackage.MODEL__POUR_DEC);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyTurtleDslPackage.MODEL__M, oldM, newM);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return pourDec;
+    return msgs;
   }
 
   /**
@@ -303,13 +269,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Statement> getStatements()
+  public void setM(Main newM)
   {
-    if (statements == null)
+    if (newM != m)
     {
-      statements = new EObjectContainmentEList<Statement>(Statement.class, this, MyTurtleDslPackage.MODEL__STATEMENTS);
+      NotificationChain msgs = null;
+      if (m != null)
+        msgs = ((InternalEObject)m).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyTurtleDslPackage.MODEL__M, null, msgs);
+      if (newM != null)
+        msgs = ((InternalEObject)newM).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyTurtleDslPackage.MODEL__M, null, msgs);
+      msgs = basicSetM(newM, msgs);
+      if (msgs != null) msgs.dispatch();
     }
-    return statements;
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyTurtleDslPackage.MODEL__M, newM, newM));
   }
 
   /**
@@ -317,27 +290,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<EObject> getFonctions()
+  public EList<FonctionDecl> getFonctions()
   {
     if (fonctions == null)
     {
-      fonctions = new EObjectContainmentEList<EObject>(EObject.class, this, MyTurtleDslPackage.MODEL__FONCTIONS);
+      fonctions = new EObjectContainmentEList<FonctionDecl>(FonctionDecl.class, this, MyTurtleDslPackage.MODEL__FONCTIONS);
     }
     return fonctions;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<EObject> getParallele()
-  {
-    if (parallele == null)
-    {
-      parallele = new EObjectContainmentEList<EObject>(EObject.class, this, MyTurtleDslPackage.MODEL__PARALLELE);
-    }
-    return parallele;
   }
 
   /**
@@ -350,8 +309,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.MODEL__INCLUDES:
-        return ((InternalEList<?>)getIncludes()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__IMPORTS:
+        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
       case MyTurtleDslPackage.MODEL__PVHM:
         return ((InternalEList<?>)getPvhm()).basicRemove(otherEnd, msgs);
       case MyTurtleDslPackage.MODEL__PVDM:
@@ -362,16 +321,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return ((InternalEList<?>)getHm()).basicRemove(otherEnd, msgs);
       case MyTurtleDslPackage.MODEL__EM:
         return ((InternalEList<?>)getEm()).basicRemove(otherEnd, msgs);
-      case MyTurtleDslPackage.MODEL__SECON_DEC:
-        return ((InternalEList<?>)getSeconDec()).basicRemove(otherEnd, msgs);
-      case MyTurtleDslPackage.MODEL__POUR_DEC:
-        return ((InternalEList<?>)getPourDec()).basicRemove(otherEnd, msgs);
-      case MyTurtleDslPackage.MODEL__STATEMENTS:
-        return ((InternalEList<?>)getStatements()).basicRemove(otherEnd, msgs);
+      case MyTurtleDslPackage.MODEL__M:
+        return basicSetM(null, msgs);
       case MyTurtleDslPackage.MODEL__FONCTIONS:
         return ((InternalEList<?>)getFonctions()).basicRemove(otherEnd, msgs);
-      case MyTurtleDslPackage.MODEL__PARALLELE:
-        return ((InternalEList<?>)getParallele()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -386,8 +339,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.MODEL__INCLUDES:
-        return getIncludes();
+      case MyTurtleDslPackage.MODEL__IMPORTS:
+        return getImports();
       case MyTurtleDslPackage.MODEL__PVHM:
         return getPvhm();
       case MyTurtleDslPackage.MODEL__PVDM:
@@ -398,16 +351,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return getHm();
       case MyTurtleDslPackage.MODEL__EM:
         return getEm();
-      case MyTurtleDslPackage.MODEL__SECON_DEC:
-        return getSeconDec();
-      case MyTurtleDslPackage.MODEL__POUR_DEC:
-        return getPourDec();
-      case MyTurtleDslPackage.MODEL__STATEMENTS:
-        return getStatements();
+      case MyTurtleDslPackage.MODEL__M:
+        return getM();
       case MyTurtleDslPackage.MODEL__FONCTIONS:
         return getFonctions();
-      case MyTurtleDslPackage.MODEL__PARALLELE:
-        return getParallele();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -423,9 +370,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.MODEL__INCLUDES:
-        getIncludes().clear();
-        getIncludes().addAll((Collection<? extends Includes>)newValue);
+      case MyTurtleDslPackage.MODEL__IMPORTS:
+        getImports().clear();
+        getImports().addAll((Collection<? extends Import>)newValue);
         return;
       case MyTurtleDslPackage.MODEL__PVHM:
         getPvhm().clear();
@@ -447,25 +394,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         getEm().clear();
         getEm().addAll((Collection<? extends Eloignement_max>)newValue);
         return;
-      case MyTurtleDslPackage.MODEL__SECON_DEC:
-        getSeconDec().clear();
-        getSeconDec().addAll((Collection<? extends IntDecl>)newValue);
-        return;
-      case MyTurtleDslPackage.MODEL__POUR_DEC:
-        getPourDec().clear();
-        getPourDec().addAll((Collection<? extends PourcentDecl>)newValue);
-        return;
-      case MyTurtleDslPackage.MODEL__STATEMENTS:
-        getStatements().clear();
-        getStatements().addAll((Collection<? extends Statement>)newValue);
+      case MyTurtleDslPackage.MODEL__M:
+        setM((Main)newValue);
         return;
       case MyTurtleDslPackage.MODEL__FONCTIONS:
         getFonctions().clear();
-        getFonctions().addAll((Collection<? extends EObject>)newValue);
-        return;
-      case MyTurtleDslPackage.MODEL__PARALLELE:
-        getParallele().clear();
-        getParallele().addAll((Collection<? extends EObject>)newValue);
+        getFonctions().addAll((Collection<? extends FonctionDecl>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -481,8 +415,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.MODEL__INCLUDES:
-        getIncludes().clear();
+      case MyTurtleDslPackage.MODEL__IMPORTS:
+        getImports().clear();
         return;
       case MyTurtleDslPackage.MODEL__PVHM:
         getPvhm().clear();
@@ -499,20 +433,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case MyTurtleDslPackage.MODEL__EM:
         getEm().clear();
         return;
-      case MyTurtleDslPackage.MODEL__SECON_DEC:
-        getSeconDec().clear();
-        return;
-      case MyTurtleDslPackage.MODEL__POUR_DEC:
-        getPourDec().clear();
-        return;
-      case MyTurtleDslPackage.MODEL__STATEMENTS:
-        getStatements().clear();
+      case MyTurtleDslPackage.MODEL__M:
+        setM((Main)null);
         return;
       case MyTurtleDslPackage.MODEL__FONCTIONS:
         getFonctions().clear();
-        return;
-      case MyTurtleDslPackage.MODEL__PARALLELE:
-        getParallele().clear();
         return;
     }
     super.eUnset(featureID);
@@ -528,8 +453,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.MODEL__INCLUDES:
-        return includes != null && !includes.isEmpty();
+      case MyTurtleDslPackage.MODEL__IMPORTS:
+        return imports != null && !imports.isEmpty();
       case MyTurtleDslPackage.MODEL__PVHM:
         return pvhm != null && !pvhm.isEmpty();
       case MyTurtleDslPackage.MODEL__PVDM:
@@ -540,16 +465,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return hm != null && !hm.isEmpty();
       case MyTurtleDslPackage.MODEL__EM:
         return em != null && !em.isEmpty();
-      case MyTurtleDslPackage.MODEL__SECON_DEC:
-        return seconDec != null && !seconDec.isEmpty();
-      case MyTurtleDslPackage.MODEL__POUR_DEC:
-        return pourDec != null && !pourDec.isEmpty();
-      case MyTurtleDslPackage.MODEL__STATEMENTS:
-        return statements != null && !statements.isEmpty();
+      case MyTurtleDslPackage.MODEL__M:
+        return m != null;
       case MyTurtleDslPackage.MODEL__FONCTIONS:
         return fonctions != null && !fonctions.isEmpty();
-      case MyTurtleDslPackage.MODEL__PARALLELE:
-        return parallele != null && !parallele.isEmpty();
     }
     return super.eIsSet(featureID);
   }

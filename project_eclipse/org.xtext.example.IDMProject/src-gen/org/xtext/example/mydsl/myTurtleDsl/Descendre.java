@@ -58,12 +58,12 @@ public interface Descendre extends Statement, MD
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vitesse verticale</em>' containment reference.
-   * @see #setVitesse_verticale(IntExp)
+   * @see #setVitesse_verticale(PourcentExp)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getDescendre_Vitesse_verticale()
    * @model containment="true"
    * @generated
    */
-  IntExp getVitesse_verticale();
+  PourcentExp getVitesse_verticale();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Descendre#getVitesse_verticale <em>Vitesse verticale</em>}' containment reference.
@@ -73,6 +73,6 @@ public interface Descendre extends Statement, MD
    * @see #getVitesse_verticale()
    * @generated
    */
-  void setVitesse_verticale(IntExp value);
+  void setVitesse_verticale(PourcentExp value);
 
 } // Descendre

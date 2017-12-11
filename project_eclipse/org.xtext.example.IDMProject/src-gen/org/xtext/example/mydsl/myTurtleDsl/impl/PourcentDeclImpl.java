@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentConst;
 import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
 
 /**
@@ -60,7 +60,7 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
    * @generated
    * @ordered
    */
-  protected IntExp val;
+  protected PourcentConst val;
 
   /**
    * <!-- begin-user-doc -->
@@ -111,7 +111,7 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVal()
+  public PourcentConst getVal()
   {
     return val;
   }
@@ -121,9 +121,9 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVal(IntExp newVal, NotificationChain msgs)
+  public NotificationChain basicSetVal(PourcentConst newVal, NotificationChain msgs)
   {
-    IntExp oldVal = val;
+    PourcentConst oldVal = val;
     val = newVal;
     if (eNotificationRequired())
     {
@@ -138,7 +138,7 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(IntExp newVal)
+  public void setVal(PourcentConst newVal)
   {
     if (newVal != val)
     {
@@ -202,7 +202,7 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
         setName((String)newValue);
         return;
       case MyTurtleDslPackage.POURCENT_DECL__VAL:
-        setVal((IntExp)newValue);
+        setVal((PourcentConst)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -222,7 +222,7 @@ public class PourcentDeclImpl extends MinimalEObjectImpl.Container implements Po
         setName(NAME_EDEFAULT);
         return;
       case MyTurtleDslPackage.POURCENT_DECL__VAL:
-        setVal((IntExp)null);
+        setVal((PourcentConst)null);
         return;
     }
     super.eUnset(featureID);

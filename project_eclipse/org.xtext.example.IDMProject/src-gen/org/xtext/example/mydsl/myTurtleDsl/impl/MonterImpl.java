@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.Monter;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentExp;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +50,7 @@ public class MonterImpl extends StatementImpl implements Monter
    * @generated
    * @ordered
    */
-  protected IntExp vitesse_verticale;
+  protected PourcentExp vitesse_verticale;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,7 +126,7 @@ public class MonterImpl extends StatementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVitesse_verticale()
+  public PourcentExp getVitesse_verticale()
   {
     return vitesse_verticale;
   }
@@ -135,9 +136,9 @@ public class MonterImpl extends StatementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_verticale(IntExp newVitesse_verticale, NotificationChain msgs)
+  public NotificationChain basicSetVitesse_verticale(PourcentExp newVitesse_verticale, NotificationChain msgs)
   {
-    IntExp oldVitesse_verticale = vitesse_verticale;
+    PourcentExp oldVitesse_verticale = vitesse_verticale;
     vitesse_verticale = newVitesse_verticale;
     if (eNotificationRequired())
     {
@@ -152,7 +153,7 @@ public class MonterImpl extends StatementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_verticale(IntExp newVitesse_verticale)
+  public void setVitesse_verticale(PourcentExp newVitesse_verticale)
   {
     if (newVitesse_verticale != vitesse_verticale)
     {
@@ -218,7 +219,7 @@ public class MonterImpl extends StatementImpl implements Monter
         setDuree((IntExp)newValue);
         return;
       case MyTurtleDslPackage.MONTER__VITESSE_VERTICALE:
-        setVitesse_verticale((IntExp)newValue);
+        setVitesse_verticale((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,7 +239,7 @@ public class MonterImpl extends StatementImpl implements Monter
         setDuree((IntExp)null);
         return;
       case MyTurtleDslPackage.MONTER__VITESSE_VERTICALE:
-        setVitesse_verticale((IntExp)null);
+        setVitesse_verticale((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);

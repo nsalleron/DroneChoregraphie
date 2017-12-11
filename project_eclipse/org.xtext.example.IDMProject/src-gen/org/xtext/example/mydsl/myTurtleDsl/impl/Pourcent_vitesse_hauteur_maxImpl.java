@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentConst;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
 
 /**
@@ -39,7 +39,7 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
    * @generated
    * @ordered
    */
-  protected IntExp vitesse_verticale;
+  protected PourcentConst vitesse_verticale;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVitesse_verticale()
+  public PourcentConst getVitesse_verticale()
   {
     return vitesse_verticale;
   }
@@ -77,9 +77,9 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_verticale(IntExp newVitesse_verticale, NotificationChain msgs)
+  public NotificationChain basicSetVitesse_verticale(PourcentConst newVitesse_verticale, NotificationChain msgs)
   {
-    IntExp oldVitesse_verticale = vitesse_verticale;
+    PourcentConst oldVitesse_verticale = vitesse_verticale;
     vitesse_verticale = newVitesse_verticale;
     if (eNotificationRequired())
     {
@@ -94,7 +94,7 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_verticale(IntExp newVitesse_verticale)
+  public void setVitesse_verticale(PourcentConst newVitesse_verticale)
   {
     if (newVitesse_verticale != vitesse_verticale)
     {
@@ -153,7 +153,7 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
     switch (featureID)
     {
       case MyTurtleDslPackage.POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE:
-        setVitesse_verticale((IntExp)newValue);
+        setVitesse_verticale((PourcentConst)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,7 +170,7 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
     switch (featureID)
     {
       case MyTurtleDslPackage.POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE:
-        setVitesse_verticale((IntExp)null);
+        setVitesse_verticale((PourcentConst)null);
         return;
     }
     super.eUnset(featureID);

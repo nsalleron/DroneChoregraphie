@@ -58,12 +58,12 @@ public interface Gauche extends Statement, GDr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #setVitesse_deplacement(IntExp)
+   * @see #setVitesse_deplacement(PourcentExp)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getGauche_Vitesse_deplacement()
    * @model containment="true"
    * @generated
    */
-  IntExp getVitesse_deplacement();
+  PourcentExp getVitesse_deplacement();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Gauche#getVitesse_deplacement <em>Vitesse deplacement</em>}' containment reference.
@@ -73,6 +73,6 @@ public interface Gauche extends Statement, GDr
    * @see #getVitesse_deplacement()
    * @generated
    */
-  void setVitesse_deplacement(IntExp value);
+  void setVitesse_deplacement(PourcentExp value);
 
 } // Gauche

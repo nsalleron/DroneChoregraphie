@@ -59,12 +59,12 @@ public interface PourcentDecl extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Val</em>' containment reference.
-   * @see #setVal(IntExp)
+   * @see #setVal(PourcentConst)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getPourcentDecl_Val()
    * @model containment="true"
    * @generated
    */
-  IntExp getVal();
+  PourcentConst getVal();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.PourcentDecl#getVal <em>Val</em>}' containment reference.
@@ -74,6 +74,6 @@ public interface PourcentDecl extends EObject
    * @see #getVal()
    * @generated
    */
-  void setVal(IntExp value);
+  void setVal(PourcentConst value);
 
 } // PourcentDecl

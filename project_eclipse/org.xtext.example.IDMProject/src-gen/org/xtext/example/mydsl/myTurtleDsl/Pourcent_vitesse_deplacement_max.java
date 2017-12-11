@@ -32,12 +32,12 @@ public interface Pourcent_vitesse_deplacement_max extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #setVitesse_deplacement(IntExp)
+   * @see #setVitesse_deplacement(PourcentConst)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getPourcent_vitesse_deplacement_max_Vitesse_deplacement()
    * @model containment="true"
    * @generated
    */
-  IntExp getVitesse_deplacement();
+  PourcentConst getVitesse_deplacement();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max#getVitesse_deplacement <em>Vitesse deplacement</em>}' containment reference.
@@ -47,6 +47,6 @@ public interface Pourcent_vitesse_deplacement_max extends EObject
    * @see #getVitesse_deplacement()
    * @generated
    */
-  void setVitesse_deplacement(IntExp value);
+  void setVitesse_deplacement(PourcentConst value);
 
 } // Pourcent_vitesse_deplacement_max

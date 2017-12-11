@@ -16,17 +16,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getImports <em>Imports</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvhm <em>Pvhm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvdm <em>Pvdm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPvrm <em>Pvrm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getHm <em>Hm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getEm <em>Em</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getSeconDec <em>Secon Dec</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getPourDec <em>Pour Dec</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getM <em>M</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getFonctions <em>Fonctions</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Model#getParallele <em>Parallele</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel()
@@ -36,20 +33,20 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Includes</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Includes}.
+   * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Import}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Includes</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Includes</em>' containment reference list.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Includes()
+   * @return the value of the '<em>Imports</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Imports()
    * @model containment="true"
    * @generated
    */
-  EList<Includes> getIncludes();
+  EList<Import> getImports();
 
   /**
    * Returns the value of the '<em><b>Pvhm</b></em>' containment reference list.
@@ -132,56 +129,34 @@ public interface Model extends EObject
   EList<Eloignement_max> getEm();
 
   /**
-   * Returns the value of the '<em><b>Secon Dec</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.IntDecl}.
+   * Returns the value of the '<em><b>M</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Secon Dec</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>M</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Secon Dec</em>' containment reference list.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_SeconDec()
+   * @return the value of the '<em>M</em>' containment reference.
+   * @see #setM(Main)
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_M()
    * @model containment="true"
    * @generated
    */
-  EList<IntDecl> getSeconDec();
+  Main getM();
 
   /**
-   * Returns the value of the '<em><b>Pour Dec</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.PourcentDecl}.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Model#getM <em>M</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pour Dec</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pour Dec</em>' containment reference list.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_PourDec()
-   * @model containment="true"
+   * @param value the new value of the '<em>M</em>' containment reference.
+   * @see #getM()
    * @generated
    */
-  EList<PourcentDecl> getPourDec();
-
-  /**
-   * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.Statement}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Statements</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Statements</em>' containment reference list.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Statements()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Statement> getStatements();
+  void setM(Main value);
 
   /**
    * Returns the value of the '<em><b>Fonctions</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+   * The list contents are of type {@link org.xtext.example.mydsl.myTurtleDsl.FonctionDecl}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Fonctions</em>' containment reference list isn't clear,
@@ -193,22 +168,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<EObject> getFonctions();
-
-  /**
-   * Returns the value of the '<em><b>Parallele</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Parallele</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Parallele</em>' containment reference list.
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getModel_Parallele()
-   * @model containment="true"
-   * @generated
-   */
-  EList<EObject> getParallele();
+  EList<FonctionDecl> getFonctions();
 
 } // Model

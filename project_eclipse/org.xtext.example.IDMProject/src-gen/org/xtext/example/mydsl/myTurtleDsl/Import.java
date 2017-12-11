@@ -7,21 +7,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Includes</b></em>'.
+ * A representation of the model object '<em><b>Import</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Includes#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.Import#getImportURI <em>Import URI</em>}</li>
  * </ul>
  *
- * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getIncludes()
+ * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getImport()
  * @model
  * @generated
  */
-public interface Includes extends EObject
+public interface Import extends EObject
 {
   /**
    * Returns the value of the '<em><b>Import URI</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface Includes extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Import URI</em>' attribute.
    * @see #setImportURI(String)
-   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getIncludes_ImportURI()
+   * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getImport_ImportURI()
    * @model
    * @generated
    */
   String getImportURI();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Includes#getImportURI <em>Import URI</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Import#getImportURI <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Import URI</em>' attribute.
@@ -49,4 +49,4 @@ public interface Includes extends EObject
    */
   void setImportURI(String value);
 
-} // Includes
+} // Import

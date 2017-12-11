@@ -33,13 +33,40 @@ public interface MyTurtleDslFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Includes</em>'.
+   * Returns a new object of class '<em>Main</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Includes</em>'.
+   * @return a new object of class '<em>Main</em>'.
    * @generated
    */
-  Includes createIncludes();
+  Main createMain();
+
+  /**
+   * Returns a new object of class '<em>Pourcent Const</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent Const</em>'.
+   * @generated
+   */
+  PourcentConst createPourcentConst();
+
+  /**
+   * Returns a new object of class '<em>Imports</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Imports</em>'.
+   * @generated
+   */
+  Imports createImports();
+
+  /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  Import createImport();
 
   /**
    * Returns a new object of class '<em>Pourcent vitesse hauteur max</em>'.
@@ -186,13 +213,13 @@ public interface MyTurtleDslFactory extends EFactory
   FonctionDecl createFonctionDecl();
 
   /**
-   * Returns a new object of class '<em>Int Constante</em>'.
+   * Returns a new object of class '<em>Pourcent Decl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Constante</em>'.
+   * @return a new object of class '<em>Pourcent Decl</em>'.
    * @generated
    */
-  IntConstante createIntConstante();
+  PourcentDecl createPourcentDecl();
 
   /**
    * Returns a new object of class '<em>Int Decl</em>'.
@@ -204,13 +231,13 @@ public interface MyTurtleDslFactory extends EFactory
   IntDecl createIntDecl();
 
   /**
-   * Returns a new object of class '<em>Pourcent Decl</em>'.
+   * Returns a new object of class '<em>Pourcent Exp</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pourcent Decl</em>'.
+   * @return a new object of class '<em>Pourcent Exp</em>'.
    * @generated
    */
-  PourcentDecl createPourcentDecl();
+  PourcentExp createPourcentExp();
 
   /**
    * Returns a new object of class '<em>Ref Int Var</em>'.
@@ -220,6 +247,24 @@ public interface MyTurtleDslFactory extends EFactory
    * @generated
    */
   RefIntVar createRefIntVar();
+
+  /**
+   * Returns a new object of class '<em>Ref Pourcent Var</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ref Pourcent Var</em>'.
+   * @generated
+   */
+  RefPourcentVar createRefPourcentVar();
+
+  /**
+   * Returns a new object of class '<em>Int Constante</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Constante</em>'.
+   * @generated
+   */
+  IntConstante createIntConstante();
 
   /**
    * Returns a new object of class '<em>Int Exp</em>'.

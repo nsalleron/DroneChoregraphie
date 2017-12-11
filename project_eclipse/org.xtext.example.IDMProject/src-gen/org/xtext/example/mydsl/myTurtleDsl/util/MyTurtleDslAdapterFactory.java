@@ -81,9 +81,24 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseIncludes(Includes object)
+      public Adapter caseMain(Main object)
       {
-        return createIncludesAdapter();
+        return createMainAdapter();
+      }
+      @Override
+      public Adapter casePourcentConst(PourcentConst object)
+      {
+        return createPourcentConstAdapter();
+      }
+      @Override
+      public Adapter caseImports(Imports object)
+      {
+        return createImportsAdapter();
+      }
+      @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
       }
       @Override
       public Adapter casePourcent_vitesse_hauteur_max(Pourcent_vitesse_hauteur_max object)
@@ -166,9 +181,9 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
         return createFonctionDeclAdapter();
       }
       @Override
-      public Adapter caseIntConstante(IntConstante object)
+      public Adapter casePourcentDecl(PourcentDecl object)
       {
-        return createIntConstanteAdapter();
+        return createPourcentDeclAdapter();
       }
       @Override
       public Adapter caseIntDecl(IntDecl object)
@@ -176,14 +191,24 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
         return createIntDeclAdapter();
       }
       @Override
-      public Adapter casePourcentDecl(PourcentDecl object)
+      public Adapter casePourcentExp(PourcentExp object)
       {
-        return createPourcentDeclAdapter();
+        return createPourcentExpAdapter();
       }
       @Override
       public Adapter caseRefIntVar(RefIntVar object)
       {
         return createRefIntVarAdapter();
+      }
+      @Override
+      public Adapter caseRefPourcentVar(RefPourcentVar object)
+      {
+        return createRefPourcentVarAdapter();
+      }
+      @Override
+      public Adapter caseIntConstante(IntConstante object)
+      {
+        return createIntConstanteAdapter();
       }
       @Override
       public Adapter caseIntExp(IntExp object)
@@ -263,16 +288,61 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Includes <em>Includes</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Main <em>Main</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.Includes
+   * @see org.xtext.example.mydsl.myTurtleDsl.Main
    * @generated
    */
-  public Adapter createIncludesAdapter()
+  public Adapter createMainAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.PourcentConst <em>Pourcent Const</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.PourcentConst
+   * @generated
+   */
+  public Adapter createPourcentConstAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Imports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Imports
+   * @generated
+   */
+  public Adapter createImportsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
   {
     return null;
   }
@@ -518,16 +588,16 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.IntConstante <em>Int Constante</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.PourcentDecl <em>Pourcent Decl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.IntConstante
+   * @see org.xtext.example.mydsl.myTurtleDsl.PourcentDecl
    * @generated
    */
-  public Adapter createIntConstanteAdapter()
+  public Adapter createPourcentDeclAdapter()
   {
     return null;
   }
@@ -548,16 +618,16 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.PourcentDecl <em>Pourcent Decl</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.PourcentExp <em>Pourcent Exp</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.myTurtleDsl.PourcentDecl
+   * @see org.xtext.example.mydsl.myTurtleDsl.PourcentExp
    * @generated
    */
-  public Adapter createPourcentDeclAdapter()
+  public Adapter createPourcentExpAdapter()
   {
     return null;
   }
@@ -573,6 +643,36 @@ public class MyTurtleDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRefIntVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.RefPourcentVar <em>Ref Pourcent Var</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.RefPourcentVar
+   * @generated
+   */
+  public Adapter createRefPourcentVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myTurtleDsl.IntConstante <em>Int Constante</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myTurtleDsl.IntConstante
+   * @generated
+   */
+  public Adapter createIntConstanteAdapter()
   {
     return null;
   }

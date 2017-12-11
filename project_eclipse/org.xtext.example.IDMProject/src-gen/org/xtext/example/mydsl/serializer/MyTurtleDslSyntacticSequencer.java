@@ -20,32 +20,36 @@ import org.xtext.example.mydsl.services.MyTurtleDslGrammarAccess;
 public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MyTurtleDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_10_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_12_a;
+	protected AbstractElementAlias match_Import_LineFeedKeyword_4_a;
+	protected AbstractElementAlias match_Main_LineFeedKeyword_3_a;
+	protected AbstractElementAlias match_Main_LineFeedKeyword_3_q;
+	protected AbstractElementAlias match_Main_LineFeedKeyword_5_a;
+	protected AbstractElementAlias match_Main_LineFeedKeyword_7_a;
+	protected AbstractElementAlias match_Main_LineFeedKeyword_9_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_11_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_14_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_16_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_19_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_1_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_21_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_23_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_25_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_27_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_8_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_3_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_5_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_7_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_9_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MyTurtleDslGrammarAccess) access;
-		match_Model_LineFeedKeyword_10_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_10());
-		match_Model_LineFeedKeyword_12_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_12());
+		match_Import_LineFeedKeyword_4_a = new TokenAlias(true, true, grammarAccess.getImportAccess().getLineFeedKeyword_4());
+		match_Main_LineFeedKeyword_3_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_3());
+		match_Main_LineFeedKeyword_3_q = new TokenAlias(false, true, grammarAccess.getMainAccess().getLineFeedKeyword_3());
+		match_Main_LineFeedKeyword_5_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_5());
+		match_Main_LineFeedKeyword_7_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_7());
+		match_Main_LineFeedKeyword_9_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_9());
+		match_Model_LineFeedKeyword_11_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_11());
 		match_Model_LineFeedKeyword_14_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14());
-		match_Model_LineFeedKeyword_16_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_16());
-		match_Model_LineFeedKeyword_19_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_19());
 		match_Model_LineFeedKeyword_1_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1());
-		match_Model_LineFeedKeyword_21_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_21());
-		match_Model_LineFeedKeyword_23_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_23());
-		match_Model_LineFeedKeyword_25_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_25());
-		match_Model_LineFeedKeyword_27_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_27());
-		match_Model_LineFeedKeyword_8_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_8());
+		match_Model_LineFeedKeyword_3_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_3());
+		match_Model_LineFeedKeyword_5_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_5());
+		match_Model_LineFeedKeyword_7_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_7());
+		match_Model_LineFeedKeyword_9_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_9());
 	}
 	
 	@Override
@@ -85,28 +89,32 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Model_LineFeedKeyword_10_a.equals(syntax))
-				emit_Model_LineFeedKeyword_10_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_12_a.equals(syntax))
-				emit_Model_LineFeedKeyword_12_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Import_LineFeedKeyword_4_a.equals(syntax))
+				emit_Import_LineFeedKeyword_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Main_LineFeedKeyword_3_a.equals(syntax))
+				emit_Main_LineFeedKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Main_LineFeedKeyword_3_q.equals(syntax))
+				emit_Main_LineFeedKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Main_LineFeedKeyword_5_a.equals(syntax))
+				emit_Main_LineFeedKeyword_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Main_LineFeedKeyword_7_a.equals(syntax))
+				emit_Main_LineFeedKeyword_7_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Main_LineFeedKeyword_9_a.equals(syntax))
+				emit_Main_LineFeedKeyword_9_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_11_a.equals(syntax))
+				emit_Model_LineFeedKeyword_11_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_14_a.equals(syntax))
 				emit_Model_LineFeedKeyword_14_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_16_a.equals(syntax))
-				emit_Model_LineFeedKeyword_16_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_19_a.equals(syntax))
-				emit_Model_LineFeedKeyword_19_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_1_a.equals(syntax))
 				emit_Model_LineFeedKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_21_a.equals(syntax))
-				emit_Model_LineFeedKeyword_21_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_23_a.equals(syntax))
-				emit_Model_LineFeedKeyword_23_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_25_a.equals(syntax))
-				emit_Model_LineFeedKeyword_25_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_27_a.equals(syntax))
-				emit_Model_LineFeedKeyword_27_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_8_a.equals(syntax))
-				emit_Model_LineFeedKeyword_8_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_3_a.equals(syntax))
+				emit_Model_LineFeedKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_5_a.equals(syntax))
+				emit_Model_LineFeedKeyword_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_7_a.equals(syntax))
+				emit_Model_LineFeedKeyword_7_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_9_a.equals(syntax))
+				emit_Model_LineFeedKeyword_9_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -117,9 +125,9 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     pvdm+=Pourcent_vitesse_deplacement_max (ambiguity) pvrm+=Pourcent_vitesse_rotation_max
+	 *     importURI=INCLUDE '>' (ambiguity) (rule end)
 	 */
-	protected void emit_Model_LineFeedKeyword_10_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Import_LineFeedKeyword_4_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -129,9 +137,41 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     pvrm+=Pourcent_vitesse_rotation_max (ambiguity) hm+=Hauteur_max
+	 *     (
+	 *         (rule start) 
+	 *         'main' 
+	 *         '{' 
+	 *         Start 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule start)
+	 *     )
 	 */
-	protected void emit_Model_LineFeedKeyword_12_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Main_LineFeedKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'main' '{' Start (ambiguity) PourDec+=PourcentDecl
+	 *     (rule start) 'main' '{' Start (ambiguity) SeconDec+=IntDecl
+	 *     (rule start) 'main' '{' Start (ambiguity) fonctions+=FonctionCall
+	 *     (rule start) 'main' '{' Start (ambiguity) parallele+=Parallele2
+	 *     (rule start) 'main' '{' Start (ambiguity) parallele+=Parallele3
+	 *     (rule start) 'main' '{' Start (ambiguity) statements+=Statement
+	 */
+	protected void emit_Main_LineFeedKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -141,7 +181,299 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     hm+=Hauteur_max (ambiguity) em+=Eloignement_max
+	 *     (
+	 *         (rule start) 
+	 *         'main' 
+	 *         '{' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule start)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         (ambiguity) 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 */
+	protected void emit_Main_LineFeedKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         (rule start) 
+	 *         'main' 
+	 *         '{' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule start)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         '
+	 *         '* 
+	 *         (rule end)
+	 *     )
+	 */
+	protected void emit_Main_LineFeedKeyword_7_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         (rule start) 
+	 *         'main' 
+	 *         '{' 
+	 *         Start 
+	 *         '
+	 *         '* 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule start)
+	 *     )
+	 *     (
+	 *         PourDec+=PourcentDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         SeconDec+=IntDecl 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         fonctions+=FonctionCall 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele2 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         parallele+=Parallele3 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         statements+=Statement 
+	 *         '
+	 *         '* 
+	 *         End 
+	 *         '
+	 *         '* 
+	 *         '}' 
+	 *         (ambiguity) 
+	 *         (rule end)
+	 *     )
+	 */
+	protected void emit_Main_LineFeedKeyword_9_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     em+=Eloignement_max (ambiguity) m=Main
+	 */
+	protected void emit_Model_LineFeedKeyword_11_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     fonctions+=FonctionDecl (ambiguity) (rule end)
+	 *     m=Main (ambiguity) (rule end)
 	 */
 	protected void emit_Model_LineFeedKeyword_14_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -153,458 +485,8 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         statements+=Statement
-	 *     )
-	 */
-	protected void emit_Model_LineFeedKeyword_16_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         PourDec+=PourcentDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         SeconDec+=IntDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionCall
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele2
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         parallele+=Parallele3
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         (ambiguity) 
-	 *         statements+=Statement
-	 *     )
-	 */
-	protected void emit_Model_LineFeedKeyword_19_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (rule start) (ambiguity) 'func' 'main' '{' 'prologue' '{' pvhm+=Pourcent_vitesse_hauteur_max
-	 *     includes+=Includes (ambiguity) 'func' 'main' '{' 'prologue' '{' pvhm+=Pourcent_vitesse_hauteur_max
+	 *     (rule start) (ambiguity) pvhm+=Pourcent_vitesse_hauteur_max
+	 *     imports+=Import (ambiguity) pvhm+=Pourcent_vitesse_hauteur_max
 	 */
 	protected void emit_Model_LineFeedKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -616,1676 +498,45 @@ public class MyTurtleDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 */
-	protected void emit_Model_LineFeedKeyword_21_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 */
-	protected void emit_Model_LineFeedKeyword_23_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         fonctions+=FonctionDecl
-	 *     )
-	 */
-	protected void emit_Model_LineFeedKeyword_25_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         em+=Eloignement_max 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         Start 
-	 *         '
-	 *         '* 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         fonctions+=FonctionDecl 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         '
-	 *         '* 
-	 *         'func' 
-	 *         'main' 
-	 *         '{' 
-	 *         'prologue' 
-	 *         '{' 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         statements+=Statement 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (ambiguity) 
-	 *         includes+=Includes
-	 *     )
-	 *     fonctions+=FonctionDecl (ambiguity) (rule end)
-	 *     fonctions+=FonctionDecl (ambiguity) includes+=Includes
-	 */
-	protected void emit_Model_LineFeedKeyword_27_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
 	 *     pvhm+=Pourcent_vitesse_hauteur_max (ambiguity) pvdm+=Pourcent_vitesse_deplacement_max
 	 */
-	protected void emit_Model_LineFeedKeyword_8_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     pvdm+=Pourcent_vitesse_deplacement_max (ambiguity) pvrm+=Pourcent_vitesse_rotation_max
+	 */
+	protected void emit_Model_LineFeedKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     pvrm+=Pourcent_vitesse_rotation_max (ambiguity) hm+=Hauteur_max
+	 */
+	protected void emit_Model_LineFeedKeyword_7_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     hm+=Hauteur_max (ambiguity) em+=Eloignement_max
+	 */
+	protected void emit_Model_LineFeedKeyword_9_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -32,12 +32,12 @@ public interface Pourcent_vitesse_hauteur_max extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vitesse verticale</em>' containment reference.
-   * @see #setVitesse_verticale(IntExp)
+   * @see #setVitesse_verticale(PourcentConst)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getPourcent_vitesse_hauteur_max_Vitesse_verticale()
    * @model containment="true"
    * @generated
    */
-  IntExp getVitesse_verticale();
+  PourcentConst getVitesse_verticale();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max#getVitesse_verticale <em>Vitesse verticale</em>}' containment reference.
@@ -47,6 +47,6 @@ public interface Pourcent_vitesse_hauteur_max extends EObject
    * @see #getVitesse_verticale()
    * @generated
    */
-  void setVitesse_verticale(IntExp value);
+  void setVitesse_verticale(PourcentConst value);
 
 } // Pourcent_vitesse_hauteur_max

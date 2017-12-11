@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentExp;
 import org.xtext.example.mydsl.myTurtleDsl.RotationDroite;
 
 /**
@@ -49,7 +50,7 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
    * @generated
    * @ordered
    */
-  protected IntExp vitesse_rotation;
+  protected PourcentExp vitesse_rotation;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,7 +126,7 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVitesse_rotation()
+  public PourcentExp getVitesse_rotation()
   {
     return vitesse_rotation;
   }
@@ -135,9 +136,9 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_rotation(IntExp newVitesse_rotation, NotificationChain msgs)
+  public NotificationChain basicSetVitesse_rotation(PourcentExp newVitesse_rotation, NotificationChain msgs)
   {
-    IntExp oldVitesse_rotation = vitesse_rotation;
+    PourcentExp oldVitesse_rotation = vitesse_rotation;
     vitesse_rotation = newVitesse_rotation;
     if (eNotificationRequired())
     {
@@ -152,7 +153,7 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_rotation(IntExp newVitesse_rotation)
+  public void setVitesse_rotation(PourcentExp newVitesse_rotation)
   {
     if (newVitesse_rotation != vitesse_rotation)
     {
@@ -218,7 +219,7 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
         setDuree((IntExp)newValue);
         return;
       case MyTurtleDslPackage.ROTATION_DROITE__VITESSE_ROTATION:
-        setVitesse_rotation((IntExp)newValue);
+        setVitesse_rotation((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,7 +239,7 @@ public class RotationDroiteImpl extends StatementImpl implements RotationDroite
         setDuree((IntExp)null);
         return;
       case MyTurtleDslPackage.ROTATION_DROITE__VITESSE_ROTATION:
-        setVitesse_rotation((IntExp)null);
+        setVitesse_rotation((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);

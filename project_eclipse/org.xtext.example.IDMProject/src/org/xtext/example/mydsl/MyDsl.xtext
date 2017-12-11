@@ -1,18 +1,30 @@
 grammar org.xtext.example.mydsl.MyTurtleDsl with org.eclipse.xtext.common.Terminals
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+
+    
 generate myTurtleDsl "http://www.xtext.org/example/mydsl/MyTurtleDsl"
+
+
 
 Model:
 	(
-		(includes+=Includes)*'\n'*
-		'func' 'main' '{'
-			'prologue' '{' 
-				(pvhm+=Pourcent_vitesse_hauteur_max)'\n'*
-				(pvdm+=Pourcent_vitesse_deplacement_max)'\n'*	
-				(pvrm+=Pourcent_vitesse_rotation_max)'\n'*	
-				(hm+=Hauteur_max)'\n'*
-				(em+=Eloignement_max)'\n'*
-			'}'
+		(imports+=Import)*'\n'*
+			
+		(pvhm+=Pourcent_vitesse_hauteur_max)'\n'*
+		(pvdm+=Pourcent_vitesse_deplacement_max)'\n'*
+		(pvrm+=Pourcent_vitesse_rotation_max)'\n'*	
+		(hm+=Hauteur_max)'\n'*
+		(em+=Eloignement_max)'\n'*
+		
+		(m=Main)
+		
+		(fonctions+=FonctionDecl)*'\n'*
+	);
+	
+	
+Main:
+'main' '{'
 			(Start)'\n'*
 			(SeconDec+=IntDecl			|
 			 PourDec+=PourcentDecl 		|
@@ -22,40 +34,45 @@ Model:
 			)*'\n'*
 			(End)'\n'*
 		'}' '\n'*
-		(fonctions+=FonctionDecl)*'\n'*
-	)*;
+;
 	
-	
-Includes:
-    'import''<'importURI=INCLUDE'>;';
+terminal POURCENT returns ecore::EString:
+	 (('1'..'9')|('1'..'9')('0'..'9')|('100'..'100'))'%'
+;
+
+PourcentConst:
+	val=POURCENT
+;
+  
+Imports : 
+	includes+=Import
+;
+Import:
+    'import''<'importURI=INCLUDE'>''\n'*;
     
 terminal INCLUDE: ID('.drone');
 
 //Prologue
 Pourcent_vitesse_hauteur_max:
-	'def_pourcent_vitesse_hauteur_max''('
-		vitesse_verticale=IntExp
-		')'
+	'define' 'vitesse_hauteur_max'
+		vitesse_verticale=PourcentConst
 ;
 Pourcent_vitesse_deplacement_max:
-	'def_pourcent_vitesse_deplacement_max''('
-		vitesse_deplacement=IntExp
-		')'
+	'define' 'vitesse_deplacement_max'
+		vitesse_deplacement=PourcentConst
 ;
 Pourcent_vitesse_rotation_max:
-	'def_pourcent_vitesse_rotation_max''('
-		vitesse_deplacement=IntExp
-		')'
+	'define' 'vitesse_rotation_max'
+		vitesse_deplacement=PourcentConst
 ;
 Hauteur_max:
-	'def_hauteur_max''('
+	'define' 'hauteur_max'
 		hauteur_max=IntExp
-		')'
+		
 ;
 Eloignement_max:
-	'def_eloignement_max''('
+	'define' 'eloignement_max'
 		hauteur_max=IntExp
-		')'
 ;
 	
 Decoller:
@@ -69,42 +86,42 @@ Atterrir:
 Monter:
 	'monter''('
 		duree=IntExp','
-		vitesse_verticale=IntExp
+		vitesse_verticale=PourcentExp
 		')'
 ;
 
 Descendre:
 	'descendre''('
 		duree=IntExp','
-		vitesse_verticale=IntExp
+		vitesse_verticale=PourcentExp
 		')'
 ;
 
 Avancer:
 	'avancer''(' 
 		duree=IntExp','
-		vitesse_deplacement=IntExp
+		vitesse_deplacement=PourcentExp
 		')'
 ;
 
 Reculer:
 	'reculer''(' 
 		duree=IntExp','
-		vitesse_deplacement=IntExp
+		vitesse_deplacement=PourcentExp
 		')'
 ;
 
 Gauche:
 	'gauche''(' 
 		duree=IntExp','
-		vitesse_deplacement=IntExp
+		vitesse_deplacement=PourcentExp
 		')'
 ;
 
 Droite:
 	'droite''(' 
 		duree=IntExp','
-		vitesse_deplacement=IntExp
+		vitesse_deplacement=PourcentExp
 		')'
 ;
 
@@ -117,14 +134,14 @@ Pause:
 RotationGauche:
 	'rotation_gauche''(' 
 		duree=IntExp','
-		vitesse_rotation=IntExp
+		vitesse_rotation=PourcentExp
 		')'
 ;
 
 RotationDroite:
 	'rotation_droite''(' 
 		duree=IntExp','
-		vitesse_rotation=IntExp
+		vitesse_rotation=PourcentExp
 		')'
 ;
 
@@ -143,23 +160,37 @@ FonctionDecl:
 	'func' name=ID '('')' '{' body+=(Statement)*'\n''}'
 ;
 
-IntConstante:
-	val=INT
+/*
+
+RefPourVar:
+	var=[PourcentDecl]
 ;
-
-
+PourConstante:
+	val=POURCENT
+;
+*/
+PourcentDecl:
+	'Pourcent' name=ID '=' val=PourcentConst
+;
 IntDecl:
 	'Seconde' name=ID '=' val=IntExp
 ;
 
-PourcentDecl:
-	'Pourcent' name=ID '=' val=IntExp
+PourcentExp:
+	PourcentConst|RefPourcentVar
 ;
 
 RefIntVar:
 	var=[IntDecl]
 ;
 
+RefPourcentVar:
+	var=[PourcentDecl]
+;
+
+IntConstante:
+	val=INT
+;
 
 IntExp:
 	IntConstante|RefIntVar
@@ -187,12 +218,12 @@ AR:
 ;
 
 Parallele2:
-	(a=MD)	'&' (t=GDr)		|
-	(a=MD)	'&' (t=AR)		|
-	(a=MD)	'&' (t=RGRD)	|
-	(t=GDr)	'&' (b=AR) 		|
-	(t=GDr)	'&' (b=MD )		|
-	(t=GDr)	'&' (b=RGRD)	|
+	(a=MD)		'&' (t=GDr)		|
+	(a=MD)		'&' (t=AR)		|
+	(a=MD)		'&' (t=RGRD)	|
+	(t=GDr)		'&' (b=AR) 		|
+	(t=GDr)		'&' (b=MD )		|
+	(t=GDr)		'&' (b=RGRD)	|
 	(t=RGRD) '&' (a=MD )	|
 	(t=RGRD) '&' (a=AR)		|
 	(t=RGRD) '&' (a=GDr)	|
@@ -203,28 +234,29 @@ Parallele2:
 ;
 
 Parallele3:
-	(a=AR) 	'&' (b=GDr) '&' (c=MD)		|
-	(a=AR) 	'&' (b=GDr) '&' (c =RGRD)	|
-	(a=AR) 	'&' (b=MD)  '&' (c = GDr)	|
-	(a=AR) 	'&' (b=MD)	'&' (c= RGRD) 	|
-	(a=AR) 	'&' (b=RGRD) '&' (c = MD) 	|
-	(a=AR) 	'&' (b=RGRD) '&' (c = GDr) 	|
-	(a=GDr) '&' (b=AR) '&' (c=MD)		|
-	(a=GDr) '&' (b=AR) '&' (c=RGRD)		|
-	(a=GDr) '&' (b=MD) '&' (c=AR)		|
-	(a=GDr) '&' (b=MD) '&' (c=RGRD)		|
-	(a=GDr) '&' (b=RGRD) '&' (c=AR)		|
-	(a=GDr) '&' (b=RGRD) '&' (c=MD)		|
-	(a=MD) 	'&' (b=AR) '&' (c=GDr)		|
-	(a=MD) 	'&' (b=AR) '&' (c=RGRD)		|
-	(a=MD) 	'&' (b=GDr) '&' (c=AR)		|
-	(a=MD) 	'&' (b=GDr) '&' (c=RGRD)		|
-	(a=MD) 	'&' (b=RGRD) '&' (c=GDr)		|
-	(a=MD) 	'&' (b=RGRD) '&' (c=AR)		|
-	(a=RGRD)'&' (b=AR) '&' (c=MD)		|
-	(a=RGRD)'&' (b=AR) '&' (c=GDr)		|
-	(a=RGRD)'&' (b=MD) '&' (c=AR)		|
-	(a=RGRD)'&' (b=MD) '&' (c=GDr)		|
-	(a=RGRD)'&' (b=GDr) '&' (c=MD)		|
-	(a=RGRD)'&' (b=GDr) '&' (c=AR)	
+	(a=AR) 	'&' (b=GDr) 		'&' (c=MD)		|
+	(a=AR) 	'&' (b=GDr) 		'&' (c =RGRD)	|
+	(a=AR) 	'&' (b=MD)  		'&' (c = GDr)	|
+	(a=AR) 	'&' (b=MD)		'&' (c= RGRD) 	|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = MD) 	|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = GDr) 	|
+	(a=GDr) '&' (b=AR) 		'&' (c=MD)		|
+	(a=GDr) '&' (b=AR) 		'&' (c=RGRD)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=AR)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=RGRD)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=AR)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=MD)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=GDr)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=RGRD)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=AR)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=RGRD)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=GDr)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=AR)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=MD)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=GDr)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=AR)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=GDr)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=MD)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=AR)	
 ;
+    

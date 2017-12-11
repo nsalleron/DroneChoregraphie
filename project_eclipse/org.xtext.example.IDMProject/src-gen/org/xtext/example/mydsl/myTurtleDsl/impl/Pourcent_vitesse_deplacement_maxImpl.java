@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentConst;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
 
 /**
@@ -39,7 +39,7 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
    * @generated
    * @ordered
    */
-  protected IntExp vitesse_deplacement;
+  protected PourcentConst vitesse_deplacement;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVitesse_deplacement()
+  public PourcentConst getVitesse_deplacement()
   {
     return vitesse_deplacement;
   }
@@ -77,9 +77,9 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_deplacement(IntExp newVitesse_deplacement, NotificationChain msgs)
+  public NotificationChain basicSetVitesse_deplacement(PourcentConst newVitesse_deplacement, NotificationChain msgs)
   {
-    IntExp oldVitesse_deplacement = vitesse_deplacement;
+    PourcentConst oldVitesse_deplacement = vitesse_deplacement;
     vitesse_deplacement = newVitesse_deplacement;
     if (eNotificationRequired())
     {
@@ -94,7 +94,7 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_deplacement(IntExp newVitesse_deplacement)
+  public void setVitesse_deplacement(PourcentConst newVitesse_deplacement)
   {
     if (newVitesse_deplacement != vitesse_deplacement)
     {
@@ -153,7 +153,7 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
     switch (featureID)
     {
       case MyTurtleDslPackage.POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((IntExp)newValue);
+        setVitesse_deplacement((PourcentConst)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,7 +170,7 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
     switch (featureID)
     {
       case MyTurtleDslPackage.POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((IntExp)null);
+        setVitesse_deplacement((PourcentConst)null);
         return;
     }
     super.eUnset(featureID);

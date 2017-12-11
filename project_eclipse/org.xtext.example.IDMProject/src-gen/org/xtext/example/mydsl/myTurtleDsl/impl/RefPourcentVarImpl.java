@@ -6,54 +6,45 @@ package org.xtext.example.mydsl.myTurtleDsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.mydsl.myTurtleDsl.Includes;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
+import org.xtext.example.mydsl.myTurtleDsl.RefPourcentVar;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Includes</b></em>'.
+ * An implementation of the model object '<em><b>Ref Pourcent Var</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.IncludesImpl#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myTurtleDsl.impl.RefPourcentVarImpl#getVar <em>Var</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IncludesImpl extends MinimalEObjectImpl.Container implements Includes
+public class RefPourcentVarImpl extends PourcentExpImpl implements RefPourcentVar
 {
   /**
-   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportURI()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String IMPORT_URI_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImportURI()
-   * @generated
-   * @ordered
-   */
-  protected String importURI = IMPORT_URI_EDEFAULT;
+  protected PourcentDecl var;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IncludesImpl()
+  protected RefPourcentVarImpl()
   {
     super();
   }
@@ -66,7 +57,7 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
   @Override
   protected EClass eStaticClass()
   {
-    return MyTurtleDslPackage.Literals.INCLUDES;
+    return MyTurtleDslPackage.Literals.REF_POURCENT_VAR;
   }
 
   /**
@@ -74,9 +65,19 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getImportURI()
+  public PourcentDecl getVar()
   {
-    return importURI;
+    if (var != null && var.eIsProxy())
+    {
+      InternalEObject oldVar = (InternalEObject)var;
+      var = (PourcentDecl)eResolveProxy(oldVar);
+      if (var != oldVar)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MyTurtleDslPackage.REF_POURCENT_VAR__VAR, oldVar, var));
+      }
+    }
+    return var;
   }
 
   /**
@@ -84,12 +85,22 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportURI(String newImportURI)
+  public PourcentDecl basicGetVar()
   {
-    String oldImportURI = importURI;
-    importURI = newImportURI;
+    return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar(PourcentDecl newVar)
+  {
+    PourcentDecl oldVar = var;
+    var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyTurtleDslPackage.INCLUDES__IMPORT_URI, oldImportURI, importURI));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyTurtleDslPackage.REF_POURCENT_VAR__VAR, oldVar, var));
   }
 
   /**
@@ -102,8 +113,9 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.INCLUDES__IMPORT_URI:
-        return getImportURI();
+      case MyTurtleDslPackage.REF_POURCENT_VAR__VAR:
+        if (resolve) return getVar();
+        return basicGetVar();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +130,8 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.INCLUDES__IMPORT_URI:
-        setImportURI((String)newValue);
+      case MyTurtleDslPackage.REF_POURCENT_VAR__VAR:
+        setVar((PourcentDecl)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +147,8 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.INCLUDES__IMPORT_URI:
-        setImportURI(IMPORT_URI_EDEFAULT);
+      case MyTurtleDslPackage.REF_POURCENT_VAR__VAR:
+        setVar((PourcentDecl)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,27 +164,10 @@ public class IncludesImpl extends MinimalEObjectImpl.Container implements Includ
   {
     switch (featureID)
     {
-      case MyTurtleDslPackage.INCLUDES__IMPORT_URI:
-        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
+      case MyTurtleDslPackage.REF_POURCENT_VAR__VAR:
+        return var != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (importURI: ");
-    result.append(importURI);
-    result.append(')');
-    return result.toString();
-  }
-
-} //IncludesImpl
+} //RefPourcentVarImpl

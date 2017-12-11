@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.xtext.example.mydsl.myTurtleDsl.Gauche;
 import org.xtext.example.mydsl.myTurtleDsl.IntExp;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentExp;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +50,7 @@ public class GaucheImpl extends StatementImpl implements Gauche
    * @generated
    * @ordered
    */
-  protected IntExp vitesse_deplacement;
+  protected PourcentExp vitesse_deplacement;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,7 +126,7 @@ public class GaucheImpl extends StatementImpl implements Gauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVitesse_deplacement()
+  public PourcentExp getVitesse_deplacement()
   {
     return vitesse_deplacement;
   }
@@ -135,9 +136,9 @@ public class GaucheImpl extends StatementImpl implements Gauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_deplacement(IntExp newVitesse_deplacement, NotificationChain msgs)
+  public NotificationChain basicSetVitesse_deplacement(PourcentExp newVitesse_deplacement, NotificationChain msgs)
   {
-    IntExp oldVitesse_deplacement = vitesse_deplacement;
+    PourcentExp oldVitesse_deplacement = vitesse_deplacement;
     vitesse_deplacement = newVitesse_deplacement;
     if (eNotificationRequired())
     {
@@ -152,7 +153,7 @@ public class GaucheImpl extends StatementImpl implements Gauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_deplacement(IntExp newVitesse_deplacement)
+  public void setVitesse_deplacement(PourcentExp newVitesse_deplacement)
   {
     if (newVitesse_deplacement != vitesse_deplacement)
     {
@@ -218,7 +219,7 @@ public class GaucheImpl extends StatementImpl implements Gauche
         setDuree((IntExp)newValue);
         return;
       case MyTurtleDslPackage.GAUCHE__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((IntExp)newValue);
+        setVitesse_deplacement((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,7 +239,7 @@ public class GaucheImpl extends StatementImpl implements Gauche
         setDuree((IntExp)null);
         return;
       case MyTurtleDslPackage.GAUCHE__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((IntExp)null);
+        setVitesse_deplacement((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);

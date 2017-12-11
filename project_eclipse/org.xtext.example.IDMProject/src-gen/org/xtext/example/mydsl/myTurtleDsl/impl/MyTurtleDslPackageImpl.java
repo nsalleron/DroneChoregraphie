@@ -19,10 +19,12 @@ import org.xtext.example.mydsl.myTurtleDsl.FonctionDecl;
 import org.xtext.example.mydsl.myTurtleDsl.GDr;
 import org.xtext.example.mydsl.myTurtleDsl.Gauche;
 import org.xtext.example.mydsl.myTurtleDsl.Hauteur_max;
-import org.xtext.example.mydsl.myTurtleDsl.Includes;
+import org.xtext.example.mydsl.myTurtleDsl.Import;
+import org.xtext.example.mydsl.myTurtleDsl.Imports;
 import org.xtext.example.mydsl.myTurtleDsl.IntConstante;
 import org.xtext.example.mydsl.myTurtleDsl.IntDecl;
 import org.xtext.example.mydsl.myTurtleDsl.IntExp;
+import org.xtext.example.mydsl.myTurtleDsl.Main;
 import org.xtext.example.mydsl.myTurtleDsl.Model;
 import org.xtext.example.mydsl.myTurtleDsl.Monter;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslFactory;
@@ -30,12 +32,15 @@ import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
 import org.xtext.example.mydsl.myTurtleDsl.Parallele2;
 import org.xtext.example.mydsl.myTurtleDsl.Parallele3;
 import org.xtext.example.mydsl.myTurtleDsl.Pause;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentConst;
 import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentExp;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max;
 import org.xtext.example.mydsl.myTurtleDsl.Reculer;
 import org.xtext.example.mydsl.myTurtleDsl.RefIntVar;
+import org.xtext.example.mydsl.myTurtleDsl.RefPourcentVar;
 import org.xtext.example.mydsl.myTurtleDsl.RotationDroite;
 import org.xtext.example.mydsl.myTurtleDsl.RotationGauche;
 import org.xtext.example.mydsl.myTurtleDsl.Statement;
@@ -60,7 +65,28 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass includesEClass = null;
+  private EClass mainEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcentConstEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -179,7 +205,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass intConstanteEClass = null;
+  private EClass pourcentDeclEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -193,7 +219,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass pourcentDeclEClass = null;
+  private EClass pourcentExpEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -201,6 +227,20 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * @generated
    */
   private EClass refIntVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass refPourcentVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intConstanteEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -336,7 +376,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Includes()
+  public EReference getModel_Imports()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -396,7 +436,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_SeconDec()
+  public EReference getModel_M()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(6);
   }
@@ -406,7 +446,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_PourDec()
+  public EReference getModel_Fonctions()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(7);
   }
@@ -416,9 +456,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Statements()
+  public EClass getMain()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(8);
+    return mainEClass;
   }
 
   /**
@@ -426,9 +466,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Fonctions()
+  public EReference getMain_SeconDec()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(9);
+    return (EReference)mainEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -436,9 +476,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Parallele()
+  public EReference getMain_PourDec()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(10);
+    return (EReference)mainEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -446,9 +486,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getIncludes()
+  public EReference getMain_Statements()
   {
-    return includesEClass;
+    return (EReference)mainEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -456,9 +496,79 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIncludes_ImportURI()
+  public EReference getMain_Fonctions()
   {
-    return (EAttribute)includesEClass.getEStructuralFeatures().get(0);
+    return (EReference)mainEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMain_Parallele()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcentConst()
+  {
+    return pourcentConstEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPourcentConst_Val()
+  {
+    return (EAttribute)pourcentConstEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImports()
+  {
+    return importsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImports_Includes()
+  {
+    return (EReference)importsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImport()
+  {
+    return importEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImport_ImportURI()
+  {
+    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -866,9 +976,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getIntConstante()
+  public EClass getPourcentDecl()
   {
-    return intConstanteEClass;
+    return pourcentDeclEClass;
   }
 
   /**
@@ -876,9 +986,19 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntConstante_Val()
+  public EAttribute getPourcentDecl_Name()
   {
-    return (EAttribute)intConstanteEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)pourcentDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPourcentDecl_Val()
+  {
+    return (EReference)pourcentDeclEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -916,29 +1036,9 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPourcentDecl()
+  public EClass getPourcentExp()
   {
-    return pourcentDeclEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPourcentDecl_Name()
-  {
-    return (EAttribute)pourcentDeclEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPourcentDecl_Val()
-  {
-    return (EReference)pourcentDeclEClass.getEStructuralFeatures().get(1);
+    return pourcentExpEClass;
   }
 
   /**
@@ -959,6 +1059,46 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
   public EReference getRefIntVar_Var()
   {
     return (EReference)refIntVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRefPourcentVar()
+  {
+    return refPourcentVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefPourcentVar_Var()
+  {
+    return (EReference)refPourcentVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntConstante()
+  {
+    return intConstanteEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntConstante_Val()
+  {
+    return (EAttribute)intConstanteEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1142,20 +1282,30 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__INCLUDES);
+    createEReference(modelEClass, MODEL__IMPORTS);
     createEReference(modelEClass, MODEL__PVHM);
     createEReference(modelEClass, MODEL__PVDM);
     createEReference(modelEClass, MODEL__PVRM);
     createEReference(modelEClass, MODEL__HM);
     createEReference(modelEClass, MODEL__EM);
-    createEReference(modelEClass, MODEL__SECON_DEC);
-    createEReference(modelEClass, MODEL__POUR_DEC);
-    createEReference(modelEClass, MODEL__STATEMENTS);
+    createEReference(modelEClass, MODEL__M);
     createEReference(modelEClass, MODEL__FONCTIONS);
-    createEReference(modelEClass, MODEL__PARALLELE);
 
-    includesEClass = createEClass(INCLUDES);
-    createEAttribute(includesEClass, INCLUDES__IMPORT_URI);
+    mainEClass = createEClass(MAIN);
+    createEReference(mainEClass, MAIN__SECON_DEC);
+    createEReference(mainEClass, MAIN__POUR_DEC);
+    createEReference(mainEClass, MAIN__STATEMENTS);
+    createEReference(mainEClass, MAIN__FONCTIONS);
+    createEReference(mainEClass, MAIN__PARALLELE);
+
+    pourcentConstEClass = createEClass(POURCENT_CONST);
+    createEAttribute(pourcentConstEClass, POURCENT_CONST__VAL);
+
+    importsEClass = createEClass(IMPORTS);
+    createEReference(importsEClass, IMPORTS__INCLUDES);
+
+    importEClass = createEClass(IMPORT);
+    createEAttribute(importEClass, IMPORT__IMPORT_URI);
 
     pourcent_vitesse_hauteur_maxEClass = createEClass(POURCENT_VITESSE_HAUTEUR_MAX);
     createEReference(pourcent_vitesse_hauteur_maxEClass, POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE);
@@ -1213,19 +1363,24 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     createEAttribute(fonctionDeclEClass, FONCTION_DECL__NAME);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
 
-    intConstanteEClass = createEClass(INT_CONSTANTE);
-    createEAttribute(intConstanteEClass, INT_CONSTANTE__VAL);
+    pourcentDeclEClass = createEClass(POURCENT_DECL);
+    createEAttribute(pourcentDeclEClass, POURCENT_DECL__NAME);
+    createEReference(pourcentDeclEClass, POURCENT_DECL__VAL);
 
     intDeclEClass = createEClass(INT_DECL);
     createEAttribute(intDeclEClass, INT_DECL__NAME);
     createEReference(intDeclEClass, INT_DECL__VAL);
 
-    pourcentDeclEClass = createEClass(POURCENT_DECL);
-    createEAttribute(pourcentDeclEClass, POURCENT_DECL__NAME);
-    createEReference(pourcentDeclEClass, POURCENT_DECL__VAL);
+    pourcentExpEClass = createEClass(POURCENT_EXP);
 
     refIntVarEClass = createEClass(REF_INT_VAR);
     createEReference(refIntVarEClass, REF_INT_VAR__VAR);
+
+    refPourcentVarEClass = createEClass(REF_POURCENT_VAR);
+    createEReference(refPourcentVarEClass, REF_POURCENT_VAR__VAR);
+
+    intConstanteEClass = createEClass(INT_CONSTANTE);
+    createEAttribute(intConstanteEClass, INT_CONSTANTE__VAL);
 
     intExpEClass = createEClass(INT_EXP);
 
@@ -1280,6 +1435,7 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    pourcentConstEClass.getESuperTypes().add(this.getPourcentExp());
     monterEClass.getESuperTypes().add(this.getStatement());
     monterEClass.getESuperTypes().add(this.getMD());
     descendreEClass.getESuperTypes().add(this.getStatement());
@@ -1297,34 +1453,45 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
     rotationDroiteEClass.getESuperTypes().add(this.getStatement());
     rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
-    intConstanteEClass.getESuperTypes().add(this.getIntExp());
     refIntVarEClass.getESuperTypes().add(this.getIntExp());
+    refPourcentVarEClass.getESuperTypes().add(this.getPourcentExp());
+    intConstanteEClass.getESuperTypes().add(this.getIntExp());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Includes(), this.getIncludes(), null, "includes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Imports(), this.getImport(), null, "imports", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvhm(), this.getPourcent_vitesse_hauteur_max(), null, "pvhm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvdm(), this.getPourcent_vitesse_deplacement_max(), null, "pvdm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvrm(), this.getPourcent_vitesse_rotation_max(), null, "pvrm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Hm(), this.getHauteur_max(), null, "hm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Em(), this.getEloignement_max(), null, "em", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_SeconDec(), this.getIntDecl(), null, "SeconDec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_PourDec(), this.getPourcentDecl(), null, "PourDec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Statements(), this.getStatement(), null, "statements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Fonctions(), ecorePackage.getEObject(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Parallele(), ecorePackage.getEObject(), null, "parallele", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_M(), this.getMain(), null, "m", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Fonctions(), this.getFonctionDecl(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(includesEClass, Includes.class, "Includes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIncludes_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Includes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMain_SeconDec(), this.getIntDecl(), null, "SeconDec", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_PourDec(), this.getPourcentDecl(), null, "PourDec", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Statements(), this.getStatement(), null, "statements", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Fonctions(), this.getFonctionCall(), null, "fonctions", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Parallele(), ecorePackage.getEObject(), null, "parallele", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pourcentConstEClass, PourcentConst.class, "PourcentConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPourcentConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, PourcentConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(importsEClass, Imports.class, "Imports", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImports_Includes(), this.getImport(), null, "includes", null, 0, -1, Imports.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcent_vitesse_hauteur_maxEClass, Pourcent_vitesse_hauteur_max.class, "Pourcent_vitesse_hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPourcent_vitesse_hauteur_max_Vitesse_verticale(), this.getIntExp(), null, "vitesse_verticale", null, 0, 1, Pourcent_vitesse_hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPourcent_vitesse_hauteur_max_Vitesse_verticale(), this.getPourcentConst(), null, "vitesse_verticale", null, 0, 1, Pourcent_vitesse_hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcent_vitesse_deplacement_maxEClass, Pourcent_vitesse_deplacement_max.class, "Pourcent_vitesse_deplacement_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPourcent_vitesse_deplacement_max_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_deplacement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPourcent_vitesse_deplacement_max_Vitesse_deplacement(), this.getPourcentConst(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_deplacement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcent_vitesse_rotation_maxEClass, Pourcent_vitesse_rotation_max.class, "Pourcent_vitesse_rotation_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPourcent_vitesse_rotation_max_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPourcent_vitesse_rotation_max_Vitesse_deplacement(), this.getPourcentConst(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hauteur_maxEClass, Hauteur_max.class, "Hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getHauteur_max_Hauteur_max(), this.getIntExp(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1334,38 +1501,38 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
 
     initEClass(monterEClass, Monter.class, "Monter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMonter_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMonter_Vitesse_verticale(), this.getIntExp(), null, "vitesse_verticale", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMonter_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(descendreEClass, Descendre.class, "Descendre", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDescendre_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDescendre_Vitesse_verticale(), this.getIntExp(), null, "vitesse_verticale", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDescendre_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(avancerEClass, Avancer.class, "Avancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAvancer_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAvancer_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAvancer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(reculerEClass, Reculer.class, "Reculer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getReculer_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getReculer_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReculer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(gaucheEClass, Gauche.class, "Gauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGauche_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGauche_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGauche_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(droiteEClass, Droite.class, "Droite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDroite_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDroite_Vitesse_deplacement(), this.getIntExp(), null, "vitesse_deplacement", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDroite_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPause_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Pause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotationGaucheEClass, RotationGauche.class, "RotationGauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRotationGauche_Duree(), this.getIntExp(), null, "duree", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRotationGauche_Vitesse_rotation(), this.getIntExp(), null, "vitesse_rotation", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRotationGauche_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotationDroiteEClass, RotationDroite.class, "RotationDroite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRotationDroite_Duree(), this.getIntExp(), null, "duree", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRotationDroite_Vitesse_rotation(), this.getIntExp(), null, "vitesse_rotation", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRotationDroite_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1373,19 +1540,24 @@ public class MyTurtleDslPackageImpl extends EPackageImpl implements MyTurtleDslP
     initEAttribute(getFonctionDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFonctionDecl_Body(), this.getStatement(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(intConstanteEClass, IntConstante.class, "IntConstante", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntConstante_Val(), ecorePackage.getEInt(), "val", null, 0, 1, IntConstante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(pourcentDeclEClass, PourcentDecl.class, "PourcentDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPourcentDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPourcentDecl_Val(), this.getPourcentConst(), null, "val", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intDeclEClass, IntDecl.class, "IntDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIntDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, IntDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIntDecl_Val(), this.getIntExp(), null, "val", null, 0, 1, IntDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(pourcentDeclEClass, PourcentDecl.class, "PourcentDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPourcentDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPourcentDecl_Val(), this.getIntExp(), null, "val", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(pourcentExpEClass, PourcentExp.class, "PourcentExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(refIntVarEClass, RefIntVar.class, "RefIntVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefIntVar_Var(), this.getIntDecl(), null, "var", null, 0, 1, RefIntVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(refPourcentVarEClass, RefPourcentVar.class, "RefPourcentVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefPourcentVar_Var(), this.getPourcentDecl(), null, "var", null, 0, 1, RefPourcentVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intConstanteEClass, IntConstante.class, "IntConstante", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntConstante_Val(), ecorePackage.getEInt(), "val", null, 0, 1, IntConstante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intExpEClass, IntExp.class, "IntExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

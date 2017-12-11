@@ -79,18 +79,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getIncludesIncludesParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0());
 				}
-				lv_includes_0_0=ruleIncludes
+				lv_imports_0_0=ruleImport
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"includes",
-						lv_includes_0_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.Includes");
+						"imports",
+						lv_imports_0_0,
+						"org.xtext.example.mydsl.MyTurtleDsl.Import");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -101,32 +101,12 @@ ruleModel returns [EObject current=null]
 				newLeafNode(otherlv_1, grammarAccess.getModelAccess().getLineFeedKeyword_1());
 			}
 		)*
-		otherlv_2='func'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getModelAccess().getFuncKeyword_2());
-		}
-		otherlv_3='main'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getModelAccess().getMainKeyword_3());
-		}
-		otherlv_4='{'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_4());
-		}
-		otherlv_5='prologue'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getModelAccess().getPrologueKeyword_5());
-		}
-		otherlv_6='{'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_6());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0());
 				}
-				lv_pvhm_7_0=rulePourcent_vitesse_hauteur_max
+				lv_pvhm_2_0=rulePourcent_vitesse_hauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -134,24 +114,24 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"pvhm",
-						lv_pvhm_7_0,
+						lv_pvhm_2_0,
 						"org.xtext.example.mydsl.MyTurtleDsl.Pourcent_vitesse_hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_8='\n'
+			otherlv_3='\n'
 			{
-				newLeafNode(otherlv_8, grammarAccess.getModelAccess().getLineFeedKeyword_8());
+				newLeafNode(otherlv_3, grammarAccess.getModelAccess().getLineFeedKeyword_3());
 			}
 		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0());
 				}
-				lv_pvdm_9_0=rulePourcent_vitesse_deplacement_max
+				lv_pvdm_4_0=rulePourcent_vitesse_deplacement_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -159,24 +139,24 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"pvdm",
-						lv_pvdm_9_0,
+						lv_pvdm_4_0,
 						"org.xtext.example.mydsl.MyTurtleDsl.Pourcent_vitesse_deplacement_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_10='\n'
+			otherlv_5='\n'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getModelAccess().getLineFeedKeyword_10());
+				newLeafNode(otherlv_5, grammarAccess.getModelAccess().getLineFeedKeyword_5());
 			}
 		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0());
 				}
-				lv_pvrm_11_0=rulePourcent_vitesse_rotation_max
+				lv_pvrm_6_0=rulePourcent_vitesse_rotation_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -184,24 +164,24 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"pvrm",
-						lv_pvrm_11_0,
+						lv_pvrm_6_0,
 						"org.xtext.example.mydsl.MyTurtleDsl.Pourcent_vitesse_rotation_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_12='\n'
+			otherlv_7='\n'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getModelAccess().getLineFeedKeyword_12());
+				newLeafNode(otherlv_7, grammarAccess.getModelAccess().getLineFeedKeyword_7());
 			}
 		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_8_0());
 				}
-				lv_hm_13_0=ruleHauteur_max
+				lv_hm_8_0=ruleHauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -209,24 +189,24 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"hm",
-						lv_hm_13_0,
+						lv_hm_8_0,
 						"org.xtext.example.mydsl.MyTurtleDsl.Hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_14='\n'
+			otherlv_9='\n'
 			{
-				newLeafNode(otherlv_14, grammarAccess.getModelAccess().getLineFeedKeyword_14());
+				newLeafNode(otherlv_9, grammarAccess.getModelAccess().getLineFeedKeyword_9());
 			}
 		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_10_0());
 				}
-				lv_em_15_0=ruleEloignement_max
+				lv_em_10_0=ruleEloignement_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -234,50 +214,117 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"em",
-						lv_em_15_0,
+						lv_em_10_0,
 						"org.xtext.example.mydsl.MyTurtleDsl.Eloignement_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_16='\n'
+			otherlv_11='\n'
 			{
-				newLeafNode(otherlv_16, grammarAccess.getModelAccess().getLineFeedKeyword_16());
+				newLeafNode(otherlv_11, grammarAccess.getModelAccess().getLineFeedKeyword_11());
 			}
 		)*
-		otherlv_17='}'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getModelAccess().getMMainParserRuleCall_12_0());
+				}
+				lv_m_12_0=ruleMain
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getModelRule());
+					}
+					set(
+						$current,
+						"m",
+						lv_m_12_0,
+						"org.xtext.example.mydsl.MyTurtleDsl.Main");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_13_0());
+				}
+				lv_fonctions_13_0=ruleFonctionDecl
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getModelRule());
+					}
+					add(
+						$current,
+						"fonctions",
+						lv_fonctions_13_0,
+						"org.xtext.example.mydsl.MyTurtleDsl.FonctionDecl");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			otherlv_14='\n'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getModelAccess().getLineFeedKeyword_14());
+			}
+		)*
+	)
+;
+
+// Entry rule entryRuleMain
+entryRuleMain returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMainRule()); }
+	iv_ruleMain=ruleMain
+	{ $current=$iv_ruleMain.current; }
+	EOF;
+
+// Rule Main
+ruleMain returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='main'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_17());
+			newLeafNode(otherlv_0, grammarAccess.getMainAccess().getMainKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getMainAccess().getLeftCurlyBracketKeyword_1());
 		}
 		{
-			newCompositeNode(grammarAccess.getModelAccess().getStartParserRuleCall_18());
+			newCompositeNode(grammarAccess.getMainAccess().getStartParserRuleCall_2());
 		}
 		ruleStart
 		{
 			afterParserOrEnumRuleCall();
 		}
 		(
-			otherlv_19='\n'
+			otherlv_3='\n'
 			{
-				newLeafNode(otherlv_19, grammarAccess.getModelAccess().getLineFeedKeyword_19());
+				newLeafNode(otherlv_3, grammarAccess.getMainAccess().getLineFeedKeyword_3());
 			}
 		)*
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getModelAccess().getSeconDecIntDeclParserRuleCall_20_0_0());
+						newCompositeNode(grammarAccess.getMainAccess().getSeconDecIntDeclParserRuleCall_4_0_0());
 					}
-					lv_SeconDec_20_0=ruleIntDecl
+					lv_SeconDec_4_0=ruleIntDecl
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelRule());
+							$current = createModelElementForParent(grammarAccess.getMainRule());
 						}
 						add(
 							$current,
 							"SeconDec",
-							lv_SeconDec_20_0,
+							lv_SeconDec_4_0,
 							"org.xtext.example.mydsl.MyTurtleDsl.IntDecl");
 						afterParserOrEnumRuleCall();
 					}
@@ -287,17 +334,17 @@ ruleModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getModelAccess().getPourDecPourcentDeclParserRuleCall_20_1_0());
+						newCompositeNode(grammarAccess.getMainAccess().getPourDecPourcentDeclParserRuleCall_4_1_0());
 					}
-					lv_PourDec_21_0=rulePourcentDecl
+					lv_PourDec_5_0=rulePourcentDecl
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelRule());
+							$current = createModelElementForParent(grammarAccess.getMainRule());
 						}
 						add(
 							$current,
 							"PourDec",
-							lv_PourDec_21_0,
+							lv_PourDec_5_0,
 							"org.xtext.example.mydsl.MyTurtleDsl.PourcentDecl");
 						afterParserOrEnumRuleCall();
 					}
@@ -307,17 +354,17 @@ ruleModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getModelAccess().getStatementsStatementParserRuleCall_20_2_0());
+						newCompositeNode(grammarAccess.getMainAccess().getStatementsStatementParserRuleCall_4_2_0());
 					}
-					lv_statements_22_0=ruleStatement
+					lv_statements_6_0=ruleStatement
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelRule());
+							$current = createModelElementForParent(grammarAccess.getMainRule());
 						}
 						add(
 							$current,
 							"statements",
-							lv_statements_22_0,
+							lv_statements_6_0,
 							"org.xtext.example.mydsl.MyTurtleDsl.Statement");
 						afterParserOrEnumRuleCall();
 					}
@@ -327,17 +374,17 @@ ruleModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionCallParserRuleCall_20_3_0());
+						newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionCallParserRuleCall_4_3_0());
 					}
-					lv_fonctions_23_0=ruleFonctionCall
+					lv_fonctions_7_0=ruleFonctionCall
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelRule());
+							$current = createModelElementForParent(grammarAccess.getMainRule());
 						}
 						add(
 							$current,
 							"fonctions",
-							lv_fonctions_23_0,
+							lv_fonctions_7_0,
 							"org.xtext.example.mydsl.MyTurtleDsl.FonctionCall");
 						afterParserOrEnumRuleCall();
 					}
@@ -348,33 +395,33 @@ ruleModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getModelAccess().getParalleleParallele2ParserRuleCall_20_4_0_0());
+							newCompositeNode(grammarAccess.getMainAccess().getParalleleParallele2ParserRuleCall_4_4_0_0());
 						}
-						lv_parallele_24_1=ruleParallele2
+						lv_parallele_8_1=ruleParallele2
 						{
 							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getModelRule());
+								$current = createModelElementForParent(grammarAccess.getMainRule());
 							}
 							add(
 								$current,
 								"parallele",
-								lv_parallele_24_1,
+								lv_parallele_8_1,
 								"org.xtext.example.mydsl.MyTurtleDsl.Parallele2");
 							afterParserOrEnumRuleCall();
 						}
 						    |
 						{
-							newCompositeNode(grammarAccess.getModelAccess().getParalleleParallele3ParserRuleCall_20_4_0_1());
+							newCompositeNode(grammarAccess.getMainAccess().getParalleleParallele3ParserRuleCall_4_4_0_1());
 						}
-						lv_parallele_24_2=ruleParallele3
+						lv_parallele_8_2=ruleParallele3
 						{
 							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getModelRule());
+								$current = createModelElementForParent(grammarAccess.getMainRule());
 							}
 							add(
 								$current,
 								"parallele",
-								lv_parallele_24_2,
+								lv_parallele_8_2,
 								"org.xtext.example.mydsl.MyTurtleDsl.Parallele3");
 							afterParserOrEnumRuleCall();
 						}
@@ -383,71 +430,81 @@ ruleModel returns [EObject current=null]
 			)
 		)*
 		(
-			otherlv_25='\n'
+			otherlv_9='\n'
 			{
-				newLeafNode(otherlv_25, grammarAccess.getModelAccess().getLineFeedKeyword_21());
+				newLeafNode(otherlv_9, grammarAccess.getMainAccess().getLineFeedKeyword_5());
 			}
 		)*
 		{
-			newCompositeNode(grammarAccess.getModelAccess().getEndParserRuleCall_22());
+			newCompositeNode(grammarAccess.getMainAccess().getEndParserRuleCall_6());
 		}
 		ruleEnd
 		{
 			afterParserOrEnumRuleCall();
 		}
 		(
-			otherlv_27='\n'
+			otherlv_11='\n'
 			{
-				newLeafNode(otherlv_27, grammarAccess.getModelAccess().getLineFeedKeyword_23());
+				newLeafNode(otherlv_11, grammarAccess.getMainAccess().getLineFeedKeyword_7());
 			}
 		)*
-		otherlv_28='}'
+		otherlv_12='}'
 		{
-			newLeafNode(otherlv_28, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_24());
+			newLeafNode(otherlv_12, grammarAccess.getMainAccess().getRightCurlyBracketKeyword_8());
 		}
 		(
-			otherlv_29='\n'
+			otherlv_13='\n'
 			{
-				newLeafNode(otherlv_29, grammarAccess.getModelAccess().getLineFeedKeyword_25());
+				newLeafNode(otherlv_13, grammarAccess.getMainAccess().getLineFeedKeyword_9());
 			}
 		)*
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_26_0());
-				}
-				lv_fonctions_30_0=ruleFonctionDecl
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getModelRule());
-					}
-					add(
-						$current,
-						"fonctions",
-						lv_fonctions_30_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.FonctionDecl");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)*
-		(
-			otherlv_31='\n'
-			{
-				newLeafNode(otherlv_31, grammarAccess.getModelAccess().getLineFeedKeyword_27());
-			}
-		)*
-	)*
+	)
 ;
 
-// Entry rule entryRuleIncludes
-entryRuleIncludes returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIncludesRule()); }
-	iv_ruleIncludes=ruleIncludes
-	{ $current=$iv_ruleIncludes.current; }
+// Entry rule entryRulePourcentConst
+entryRulePourcentConst returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPourcentConstRule()); }
+	iv_rulePourcentConst=rulePourcentConst
+	{ $current=$iv_rulePourcentConst.current; }
 	EOF;
 
-// Rule Includes
-ruleIncludes returns [EObject current=null]
+// Rule PourcentConst
+rulePourcentConst returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0=RULE_POURCENT
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getPourcentConstAccess().getValPOURCENTTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getPourcentConstRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"val",
+					lv_val_0_0,
+					"org.xtext.example.mydsl.MyTurtleDsl.POURCENT");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleImport
+entryRuleImport returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getImportRule()); }
+	iv_ruleImport=ruleImport
+	{ $current=$iv_ruleImport.current; }
+	EOF;
+
+// Rule Import
+ruleImport returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -457,21 +514,21 @@ ruleIncludes returns [EObject current=null]
 	(
 		otherlv_0='import'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getIncludesAccess().getImportKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getImportAccess().getImportKeyword_0());
 		}
 		otherlv_1='<'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getIncludesAccess().getLessThanSignKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getImportAccess().getLessThanSignKeyword_1());
 		}
 		(
 			(
 				lv_importURI_2_0=RULE_INCLUDE
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getIncludesAccess().getImportURIINCLUDETerminalRuleCall_2_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getImportAccess().getImportURIINCLUDETerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIncludesRule());
+						$current = createModelElement(grammarAccess.getImportRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -481,10 +538,16 @@ ruleIncludes returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='>;'
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getIncludesAccess().getGreaterThanSignSemicolonKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getImportAccess().getGreaterThanSignKeyword_3());
 		}
+		(
+			otherlv_4='\n'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getImportAccess().getLineFeedKeyword_4());
+			}
+		)*
 	)
 ;
 
@@ -504,20 +567,20 @@ rulePourcent_vitesse_hauteur_max returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='def_pourcent_vitesse_hauteur_max'
+		otherlv_0='define'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getDef_pourcent_vitesse_hauteur_maxKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getDefineKeyword_0());
 		}
-		otherlv_1='('
+		otherlv_1='vitesse_hauteur_max'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_hauteur_maxKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticaleIntExpParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticalePourcentConstParserRuleCall_2_0());
 				}
-				lv_vitesse_verticale_2_0=ruleIntExp
+				lv_vitesse_verticale_2_0=rulePourcentConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPourcent_vitesse_hauteur_maxRule());
@@ -526,15 +589,11 @@ rulePourcent_vitesse_hauteur_max returns [EObject current=null]
 						$current,
 						"vitesse_verticale",
 						lv_vitesse_verticale_2_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentConst");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getRightParenthesisKeyword_3());
-		}
 	)
 ;
 
@@ -554,20 +613,20 @@ rulePourcent_vitesse_deplacement_max returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='def_pourcent_vitesse_deplacement_max'
+		otherlv_0='define'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getDef_pourcent_vitesse_deplacement_maxKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getDefineKeyword_0());
 		}
-		otherlv_1='('
+		otherlv_1='vitesse_deplacement_max'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacement_maxKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementIntExpParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0());
 				}
-				lv_vitesse_deplacement_2_0=ruleIntExp
+				lv_vitesse_deplacement_2_0=rulePourcentConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPourcent_vitesse_deplacement_maxRule());
@@ -576,15 +635,11 @@ rulePourcent_vitesse_deplacement_max returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_2_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentConst");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getRightParenthesisKeyword_3());
-		}
 	)
 ;
 
@@ -604,20 +659,20 @@ rulePourcent_vitesse_rotation_max returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='def_pourcent_vitesse_rotation_max'
+		otherlv_0='define'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getDef_pourcent_vitesse_rotation_maxKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getDefineKeyword_0());
 		}
-		otherlv_1='('
+		otherlv_1='vitesse_rotation_max'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotation_maxKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementIntExpParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0());
 				}
-				lv_vitesse_deplacement_2_0=ruleIntExp
+				lv_vitesse_deplacement_2_0=rulePourcentConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPourcent_vitesse_rotation_maxRule());
@@ -626,15 +681,11 @@ rulePourcent_vitesse_rotation_max returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_2_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentConst");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getRightParenthesisKeyword_3());
-		}
 	)
 ;
 
@@ -654,13 +705,13 @@ ruleHauteur_max returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='def_hauteur_max'
+		otherlv_0='define'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getHauteur_maxAccess().getDef_hauteur_maxKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getHauteur_maxAccess().getDefineKeyword_0());
 		}
-		otherlv_1='('
+		otherlv_1='hauteur_max'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getHauteur_maxAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getHauteur_maxAccess().getHauteur_maxKeyword_1());
 		}
 		(
 			(
@@ -681,10 +732,6 @@ ruleHauteur_max returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getHauteur_maxAccess().getRightParenthesisKeyword_3());
-		}
 	)
 ;
 
@@ -704,13 +751,13 @@ ruleEloignement_max returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='def_eloignement_max'
+		otherlv_0='define'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getEloignement_maxAccess().getDef_eloignement_maxKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getEloignement_maxAccess().getDefineKeyword_0());
 		}
-		otherlv_1='('
+		otherlv_1='eloignement_max'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getEloignement_maxAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getEloignement_maxAccess().getEloignement_maxKeyword_1());
 		}
 		(
 			(
@@ -731,10 +778,6 @@ ruleEloignement_max returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getEloignement_maxAccess().getRightParenthesisKeyword_3());
-		}
 	)
 ;
 
@@ -856,9 +899,9 @@ ruleMonter returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMonterAccess().getVitesse_verticaleIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getMonterAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_verticale_4_0=ruleIntExp
+				lv_vitesse_verticale_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMonterRule());
@@ -867,7 +910,7 @@ ruleMonter returns [EObject current=null]
 						$current,
 						"vitesse_verticale",
 						lv_vitesse_verticale_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -929,9 +972,9 @@ ruleDescendre returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDescendreAccess().getVitesse_verticaleIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDescendreAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_verticale_4_0=ruleIntExp
+				lv_vitesse_verticale_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDescendreRule());
@@ -940,7 +983,7 @@ ruleDescendre returns [EObject current=null]
 						$current,
 						"vitesse_verticale",
 						lv_vitesse_verticale_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1002,9 +1045,9 @@ ruleAvancer returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAvancerAccess().getVitesse_deplacementIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getAvancerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_deplacement_4_0=ruleIntExp
+				lv_vitesse_deplacement_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAvancerRule());
@@ -1013,7 +1056,7 @@ ruleAvancer returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1075,9 +1118,9 @@ ruleReculer returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getReculerAccess().getVitesse_deplacementIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getReculerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_deplacement_4_0=ruleIntExp
+				lv_vitesse_deplacement_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getReculerRule());
@@ -1086,7 +1129,7 @@ ruleReculer returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1148,9 +1191,9 @@ ruleGauche returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGaucheAccess().getVitesse_deplacementIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGaucheAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_deplacement_4_0=ruleIntExp
+				lv_vitesse_deplacement_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGaucheRule());
@@ -1159,7 +1202,7 @@ ruleGauche returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1221,9 +1264,9 @@ ruleDroite returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDroiteAccess().getVitesse_deplacementIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDroiteAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_deplacement_4_0=ruleIntExp
+				lv_vitesse_deplacement_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDroiteRule());
@@ -1232,7 +1275,7 @@ ruleDroite returns [EObject current=null]
 						$current,
 						"vitesse_deplacement",
 						lv_vitesse_deplacement_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1344,9 +1387,9 @@ ruleRotationGauche returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRotationGaucheAccess().getVitesse_rotationIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getRotationGaucheAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_rotation_4_0=ruleIntExp
+				lv_vitesse_rotation_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRotationGaucheRule());
@@ -1355,7 +1398,7 @@ ruleRotationGauche returns [EObject current=null]
 						$current,
 						"vitesse_rotation",
 						lv_vitesse_rotation_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1417,9 +1460,9 @@ ruleRotationDroite returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRotationDroiteAccess().getVitesse_rotationIntExpParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getRotationDroiteAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0());
 				}
-				lv_vitesse_rotation_4_0=ruleIntExp
+				lv_vitesse_rotation_4_0=rulePourcentExp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRotationDroiteRule());
@@ -1428,7 +1471,7 @@ ruleRotationDroite returns [EObject current=null]
 						$current,
 						"vitesse_rotation",
 						lv_vitesse_rotation_4_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentExp");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1673,15 +1716,15 @@ ruleFonctionDecl returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleIntConstante
-entryRuleIntConstante returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIntConstanteRule()); }
-	iv_ruleIntConstante=ruleIntConstante
-	{ $current=$iv_ruleIntConstante.current; }
+// Entry rule entryRulePourcentDecl
+entryRulePourcentDecl returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPourcentDeclRule()); }
+	iv_rulePourcentDecl=rulePourcentDecl
+	{ $current=$iv_rulePourcentDecl.current; }
 	EOF;
 
-// Rule IntConstante
-ruleIntConstante returns [EObject current=null]
+// Rule PourcentDecl
+rulePourcentDecl returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1689,21 +1732,50 @@ ruleIntConstante returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='Pourcent'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getPourcentDeclAccess().getPourcentKeyword_0());
+		}
 		(
-			lv_val_0_0=RULE_INT
-			{
-				newLeafNode(lv_val_0_0, grammarAccess.getIntConstanteAccess().getValINTTerminalRuleCall_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getIntConstanteRule());
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getPourcentDeclAccess().getNameIDTerminalRuleCall_1_0());
 				}
-				setWithLastConsumed(
-					$current,
-					"val",
-					lv_val_0_0,
-					"org.eclipse.xtext.common.Terminals.INT");
-			}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPourcentDeclRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2='='
+		{
+			newLeafNode(otherlv_2, grammarAccess.getPourcentDeclAccess().getEqualsSignKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPourcentDeclAccess().getValPourcentConstParserRuleCall_3_0());
+				}
+				lv_val_3_0=rulePourcentConst
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPourcentDeclRule());
+					}
+					set(
+						$current,
+						"val",
+						lv_val_3_0,
+						"org.xtext.example.mydsl.MyTurtleDsl.PourcentConst");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
 	)
 ;
@@ -1772,15 +1844,15 @@ ruleIntDecl returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulePourcentDecl
-entryRulePourcentDecl returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getPourcentDeclRule()); }
-	iv_rulePourcentDecl=rulePourcentDecl
-	{ $current=$iv_rulePourcentDecl.current; }
+// Entry rule entryRulePourcentExp
+entryRulePourcentExp returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPourcentExpRule()); }
+	iv_rulePourcentExp=rulePourcentExp
+	{ $current=$iv_rulePourcentExp.current; }
 	EOF;
 
-// Rule PourcentDecl
-rulePourcentDecl returns [EObject current=null]
+// Rule PourcentExp
+rulePourcentExp returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1788,51 +1860,23 @@ rulePourcentDecl returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Pourcent'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getPourcentDeclAccess().getPourcentKeyword_0());
+			newCompositeNode(grammarAccess.getPourcentExpAccess().getPourcentConstParserRuleCall_0());
 		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getPourcentDeclAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPourcentDeclRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='='
+		this_PourcentConst_0=rulePourcentConst
 		{
-			newLeafNode(otherlv_2, grammarAccess.getPourcentDeclAccess().getEqualsSignKeyword_2());
+			$current = $this_PourcentConst_0.current;
+			afterParserOrEnumRuleCall();
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getPourcentDeclAccess().getValIntExpParserRuleCall_3_0());
-				}
-				lv_val_3_0=ruleIntExp
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getPourcentDeclRule());
-					}
-					set(
-						$current,
-						"val",
-						lv_val_3_0,
-						"org.xtext.example.mydsl.MyTurtleDsl.IntExp");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		    |
+		{
+			newCompositeNode(grammarAccess.getPourcentExpAccess().getRefPourcentVarParserRuleCall_1());
+		}
+		this_RefPourcentVar_1=ruleRefPourcentVar
+		{
+			$current = $this_RefPourcentVar_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -1861,6 +1905,71 @@ ruleRefIntVar returns [EObject current=null]
 			otherlv_0=RULE_ID
 			{
 				newLeafNode(otherlv_0, grammarAccess.getRefIntVarAccess().getVarIntDeclCrossReference_0());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleRefPourcentVar
+entryRuleRefPourcentVar returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRefPourcentVarRule()); }
+	iv_ruleRefPourcentVar=ruleRefPourcentVar
+	{ $current=$iv_ruleRefPourcentVar.current; }
+	EOF;
+
+// Rule RefPourcentVar
+ruleRefPourcentVar returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getRefPourcentVarRule());
+				}
+			}
+			otherlv_0=RULE_ID
+			{
+				newLeafNode(otherlv_0, grammarAccess.getRefPourcentVarAccess().getVarPourcentDeclCrossReference_0());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleIntConstante
+entryRuleIntConstante returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIntConstanteRule()); }
+	iv_ruleIntConstante=ruleIntConstante
+	{ $current=$iv_ruleIntConstante.current; }
+	EOF;
+
+// Rule IntConstante
+ruleIntConstante returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_val_0_0=RULE_INT
+			{
+				newLeafNode(lv_val_0_0, grammarAccess.getIntConstanteAccess().getValINTTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getIntConstanteRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"val",
+					lv_val_0_0,
+					"org.eclipse.xtext.common.Terminals.INT");
 			}
 		)
 	)
@@ -4293,6 +4402,8 @@ ruleParallele3 returns [EObject current=null]
 		)
 	)
 ;
+
+RULE_POURCENT : ('1'..'9'|'1'..'9' '0'..'9'|'100'..'100') '%';
 
 RULE_INCLUDE : RULE_ID '.drone';
 

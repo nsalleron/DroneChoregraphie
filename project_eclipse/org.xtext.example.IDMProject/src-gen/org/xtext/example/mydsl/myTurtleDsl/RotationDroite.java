@@ -58,12 +58,12 @@ public interface RotationDroite extends Statement, RGRD
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vitesse rotation</em>' containment reference.
-   * @see #setVitesse_rotation(IntExp)
+   * @see #setVitesse_rotation(PourcentExp)
    * @see org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage#getRotationDroite_Vitesse_rotation()
    * @model containment="true"
    * @generated
    */
-  IntExp getVitesse_rotation();
+  PourcentExp getVitesse_rotation();
 
   /**
    * Sets the value of the '{@link org.xtext.example.mydsl.myTurtleDsl.RotationDroite#getVitesse_rotation <em>Vitesse rotation</em>}' containment reference.
@@ -73,6 +73,6 @@ public interface RotationDroite extends Statement, RGRD
    * @see #getVitesse_rotation()
    * @generated
    */
-  void setVitesse_rotation(IntExp value);
+  void setVitesse_rotation(PourcentExp value);
 
 } // RotationDroite

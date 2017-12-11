@@ -80,10 +80,32 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MyTurtleDslPackage.INCLUDES:
+      case MyTurtleDslPackage.MAIN:
       {
-        Includes includes = (Includes)theEObject;
-        T result = caseIncludes(includes);
+        Main main = (Main)theEObject;
+        T result = caseMain(main);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.POURCENT_CONST:
+      {
+        PourcentConst pourcentConst = (PourcentConst)theEObject;
+        T result = casePourcentConst(pourcentConst);
+        if (result == null) result = casePourcentExp(pourcentConst);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.IMPORTS:
+      {
+        Imports imports = (Imports)theEObject;
+        T result = caseImports(imports);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.IMPORT:
+      {
+        Import import_ = (Import)theEObject;
+        T result = caseImport(import_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -216,11 +238,10 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MyTurtleDslPackage.INT_CONSTANTE:
+      case MyTurtleDslPackage.POURCENT_DECL:
       {
-        IntConstante intConstante = (IntConstante)theEObject;
-        T result = caseIntConstante(intConstante);
-        if (result == null) result = caseIntExp(intConstante);
+        PourcentDecl pourcentDecl = (PourcentDecl)theEObject;
+        T result = casePourcentDecl(pourcentDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -231,10 +252,10 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MyTurtleDslPackage.POURCENT_DECL:
+      case MyTurtleDslPackage.POURCENT_EXP:
       {
-        PourcentDecl pourcentDecl = (PourcentDecl)theEObject;
-        T result = casePourcentDecl(pourcentDecl);
+        PourcentExp pourcentExp = (PourcentExp)theEObject;
+        T result = casePourcentExp(pourcentExp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -243,6 +264,22 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
         RefIntVar refIntVar = (RefIntVar)theEObject;
         T result = caseRefIntVar(refIntVar);
         if (result == null) result = caseIntExp(refIntVar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.REF_POURCENT_VAR:
+      {
+        RefPourcentVar refPourcentVar = (RefPourcentVar)theEObject;
+        T result = caseRefPourcentVar(refPourcentVar);
+        if (result == null) result = casePourcentExp(refPourcentVar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyTurtleDslPackage.INT_CONSTANTE:
+      {
+        IntConstante intConstante = (IntConstante)theEObject;
+        T result = caseIntConstante(intConstante);
+        if (result == null) result = caseIntExp(intConstante);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -323,17 +360,65 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Includes</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Main</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Includes</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Main</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIncludes(Includes object)
+  public T caseMain(Main object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent Const</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent Const</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePourcentConst(PourcentConst object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Imports</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Imports</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImports(Imports object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImport(Import object)
   {
     return null;
   }
@@ -595,17 +680,17 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Constante</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent Decl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Constante</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent Decl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIntConstante(IntConstante object)
+  public T casePourcentDecl(PourcentDecl object)
   {
     return null;
   }
@@ -627,17 +712,17 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Pourcent Decl</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pourcent Exp</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pourcent Decl</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pourcent Exp</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePourcentDecl(PourcentDecl object)
+  public T casePourcentExp(PourcentExp object)
   {
     return null;
   }
@@ -654,6 +739,38 @@ public class MyTurtleDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRefIntVar(RefIntVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ref Pourcent Var</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ref Pourcent Var</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRefPourcentVar(RefPourcentVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Constante</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Constante</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntConstante(IntConstante object)
   {
     return null;
   }

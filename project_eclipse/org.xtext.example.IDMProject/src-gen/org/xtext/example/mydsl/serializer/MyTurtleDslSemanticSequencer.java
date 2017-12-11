@@ -22,21 +22,25 @@ import org.xtext.example.mydsl.myTurtleDsl.FonctionCall;
 import org.xtext.example.mydsl.myTurtleDsl.FonctionDecl;
 import org.xtext.example.mydsl.myTurtleDsl.Gauche;
 import org.xtext.example.mydsl.myTurtleDsl.Hauteur_max;
-import org.xtext.example.mydsl.myTurtleDsl.Includes;
+import org.xtext.example.mydsl.myTurtleDsl.Import;
+import org.xtext.example.mydsl.myTurtleDsl.Imports;
 import org.xtext.example.mydsl.myTurtleDsl.IntConstante;
 import org.xtext.example.mydsl.myTurtleDsl.IntDecl;
+import org.xtext.example.mydsl.myTurtleDsl.Main;
 import org.xtext.example.mydsl.myTurtleDsl.Model;
 import org.xtext.example.mydsl.myTurtleDsl.Monter;
 import org.xtext.example.mydsl.myTurtleDsl.MyTurtleDslPackage;
 import org.xtext.example.mydsl.myTurtleDsl.Parallele2;
 import org.xtext.example.mydsl.myTurtleDsl.Parallele3;
 import org.xtext.example.mydsl.myTurtleDsl.Pause;
+import org.xtext.example.mydsl.myTurtleDsl.PourcentConst;
 import org.xtext.example.mydsl.myTurtleDsl.PourcentDecl;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_deplacement_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_hauteur_max;
 import org.xtext.example.mydsl.myTurtleDsl.Pourcent_vitesse_rotation_max;
 import org.xtext.example.mydsl.myTurtleDsl.Reculer;
 import org.xtext.example.mydsl.myTurtleDsl.RefIntVar;
+import org.xtext.example.mydsl.myTurtleDsl.RefPourcentVar;
 import org.xtext.example.mydsl.myTurtleDsl.RotationDroite;
 import org.xtext.example.mydsl.myTurtleDsl.RotationGauche;
 import org.xtext.example.mydsl.services.MyTurtleDslGrammarAccess;
@@ -79,14 +83,20 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case MyTurtleDslPackage.HAUTEUR_MAX:
 				sequence_Hauteur_max(context, (Hauteur_max) semanticObject); 
 				return; 
-			case MyTurtleDslPackage.INCLUDES:
-				sequence_Includes(context, (Includes) semanticObject); 
+			case MyTurtleDslPackage.IMPORT:
+				sequence_Import(context, (Import) semanticObject); 
+				return; 
+			case MyTurtleDslPackage.IMPORTS:
+				sequence_Imports(context, (Imports) semanticObject); 
 				return; 
 			case MyTurtleDslPackage.INT_CONSTANTE:
 				sequence_IntConstante(context, (IntConstante) semanticObject); 
 				return; 
 			case MyTurtleDslPackage.INT_DECL:
 				sequence_IntDecl(context, (IntDecl) semanticObject); 
+				return; 
+			case MyTurtleDslPackage.MAIN:
+				sequence_Main(context, (Main) semanticObject); 
 				return; 
 			case MyTurtleDslPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -102,6 +112,9 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				return; 
 			case MyTurtleDslPackage.PAUSE:
 				sequence_Pause(context, (Pause) semanticObject); 
+				return; 
+			case MyTurtleDslPackage.POURCENT_CONST:
+				sequence_PourcentConst(context, (PourcentConst) semanticObject); 
 				return; 
 			case MyTurtleDslPackage.POURCENT_DECL:
 				sequence_PourcentDecl(context, (PourcentDecl) semanticObject); 
@@ -121,6 +134,9 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case MyTurtleDslPackage.REF_INT_VAR:
 				sequence_RefIntVar(context, (RefIntVar) semanticObject); 
 				return; 
+			case MyTurtleDslPackage.REF_POURCENT_VAR:
+				sequence_RefPourcentVar(context, (RefPourcentVar) semanticObject); 
+				return; 
 			case MyTurtleDslPackage.ROTATION_DROITE:
 				sequence_RotationDroite(context, (RotationDroite) semanticObject); 
 				return; 
@@ -139,7 +155,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     AR returns Avancer
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=IntExp)
+	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Avancer(ISerializationContext context, Avancer semanticObject) {
 		if (errorAcceptor != null) {
@@ -150,7 +166,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAvancerAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getAvancerAccess().getVitesse_deplacementIntExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getAvancerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -162,7 +178,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     MD returns Descendre
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_verticale=IntExp)
+	 *     (duree=IntExp vitesse_verticale=PourcentExp)
 	 */
 	protected void sequence_Descendre(ISerializationContext context, Descendre semanticObject) {
 		if (errorAcceptor != null) {
@@ -173,7 +189,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDescendreAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getDescendreAccess().getVitesse_verticaleIntExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
+		feeder.accept(grammarAccess.getDescendreAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
 		feeder.finish();
 	}
 	
@@ -185,7 +201,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GDr returns Droite
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=IntExp)
+	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Droite(ISerializationContext context, Droite semanticObject) {
 		if (errorAcceptor != null) {
@@ -196,7 +212,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDroiteAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getDroiteAccess().getVitesse_deplacementIntExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getDroiteAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -256,7 +272,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GDr returns Gauche
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=IntExp)
+	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Gauche(ISerializationContext context, Gauche semanticObject) {
 		if (errorAcceptor != null) {
@@ -267,7 +283,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGaucheAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getGaucheAccess().getVitesse_deplacementIntExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getGaucheAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -292,19 +308,31 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
-	 *     Includes returns Includes
+	 *     Import returns Import
 	 *
 	 * Constraint:
 	 *     importURI=INCLUDE
 	 */
-	protected void sequence_Includes(ISerializationContext context, Includes semanticObject) {
+	protected void sequence_Import(ISerializationContext context, Import semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyTurtleDslPackage.Literals.INCLUDES__IMPORT_URI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.INCLUDES__IMPORT_URI));
+			if (transientValues.isValueTransient(semanticObject, MyTurtleDslPackage.Literals.IMPORT__IMPORT_URI) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIncludesAccess().getImportURIINCLUDETerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getImportAccess().getImportURIINCLUDETerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Imports returns Imports
+	 *
+	 * Constraint:
+	 *     includes+=Import
+	 */
+	protected void sequence_Imports(ISerializationContext context, Imports semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -350,26 +378,38 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     Main returns Main
+	 *
+	 * Constraint:
+	 *     (
+	 *         SeconDec+=IntDecl | 
+	 *         PourDec+=PourcentDecl | 
+	 *         statements+=Statement | 
+	 *         fonctions+=FonctionCall | 
+	 *         parallele+=Parallele2 | 
+	 *         parallele+=Parallele3
+	 *     )+
+	 */
+	protected void sequence_Main(ISerializationContext context, Main semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Model returns Model
 	 *
 	 * Constraint:
 	 *     (
-	 *         includes+=Includes* 
+	 *         imports+=Import* 
 	 *         pvhm+=Pourcent_vitesse_hauteur_max 
 	 *         pvdm+=Pourcent_vitesse_deplacement_max 
 	 *         pvrm+=Pourcent_vitesse_rotation_max 
 	 *         hm+=Hauteur_max 
 	 *         em+=Eloignement_max 
-	 *         (
-	 *             SeconDec+=IntDecl | 
-	 *             PourDec+=PourcentDecl | 
-	 *             statements+=Statement | 
-	 *             fonctions+=FonctionCall | 
-	 *             parallele+=Parallele2 | 
-	 *             parallele+=Parallele3
-	 *         )* 
+	 *         m=Main 
 	 *         fonctions+=FonctionDecl*
-	 *     )+
+	 *     )
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -383,7 +423,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     MD returns Monter
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_verticale=IntExp)
+	 *     (duree=IntExp vitesse_verticale=PourcentExp)
 	 */
 	protected void sequence_Monter(ISerializationContext context, Monter semanticObject) {
 		if (errorAcceptor != null) {
@@ -394,7 +434,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMonterAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getMonterAccess().getVitesse_verticaleIntExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
+		feeder.accept(grammarAccess.getMonterAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
 		feeder.finish();
 	}
 	
@@ -482,10 +522,29 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     PourcentConst returns PourcentConst
+	 *     PourcentExp returns PourcentConst
+	 *
+	 * Constraint:
+	 *     val=POURCENT
+	 */
+	protected void sequence_PourcentConst(ISerializationContext context, PourcentConst semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyTurtleDslPackage.Literals.POURCENT_CONST__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.POURCENT_CONST__VAL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPourcentConstAccess().getValPOURCENTTerminalRuleCall_0(), semanticObject.getVal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     PourcentDecl returns PourcentDecl
 	 *
 	 * Constraint:
-	 *     (name=ID val=IntExp)
+	 *     (name=ID val=PourcentConst)
 	 */
 	protected void sequence_PourcentDecl(ISerializationContext context, PourcentDecl semanticObject) {
 		if (errorAcceptor != null) {
@@ -496,7 +555,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getPourcentDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getPourcentDeclAccess().getValIntExpParserRuleCall_3_0(), semanticObject.getVal());
+		feeder.accept(grammarAccess.getPourcentDeclAccess().getValPourcentConstParserRuleCall_3_0(), semanticObject.getVal());
 		feeder.finish();
 	}
 	
@@ -506,7 +565,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Pourcent_vitesse_deplacement_max returns Pourcent_vitesse_deplacement_max
 	 *
 	 * Constraint:
-	 *     vitesse_deplacement=IntExp
+	 *     vitesse_deplacement=PourcentConst
 	 */
 	protected void sequence_Pourcent_vitesse_deplacement_max(ISerializationContext context, Pourcent_vitesse_deplacement_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -514,7 +573,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementIntExpParserRuleCall_2_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -524,7 +583,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Pourcent_vitesse_hauteur_max returns Pourcent_vitesse_hauteur_max
 	 *
 	 * Constraint:
-	 *     vitesse_verticale=IntExp
+	 *     vitesse_verticale=PourcentConst
 	 */
 	protected void sequence_Pourcent_vitesse_hauteur_max(ISerializationContext context, Pourcent_vitesse_hauteur_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -532,7 +591,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticaleIntExpParserRuleCall_2_0(), semanticObject.getVitesse_verticale());
+		feeder.accept(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticalePourcentConstParserRuleCall_2_0(), semanticObject.getVitesse_verticale());
 		feeder.finish();
 	}
 	
@@ -542,7 +601,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Pourcent_vitesse_rotation_max returns Pourcent_vitesse_rotation_max
 	 *
 	 * Constraint:
-	 *     vitesse_deplacement=IntExp
+	 *     vitesse_deplacement=PourcentConst
 	 */
 	protected void sequence_Pourcent_vitesse_rotation_max(ISerializationContext context, Pourcent_vitesse_rotation_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -550,7 +609,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementIntExpParserRuleCall_2_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -562,7 +621,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     AR returns Reculer
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=IntExp)
+	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Reculer(ISerializationContext context, Reculer semanticObject) {
 		if (errorAcceptor != null) {
@@ -573,7 +632,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getReculerAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getReculerAccess().getVitesse_deplacementIntExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getReculerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -599,12 +658,31 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     PourcentExp returns RefPourcentVar
+	 *     RefPourcentVar returns RefPourcentVar
+	 *
+	 * Constraint:
+	 *     var=[PourcentDecl|ID]
+	 */
+	protected void sequence_RefPourcentVar(ISerializationContext context, RefPourcentVar semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyTurtleDslPackage.Literals.REF_POURCENT_VAR__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyTurtleDslPackage.Literals.REF_POURCENT_VAR__VAR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRefPourcentVarAccess().getVarPourcentDeclIDTerminalRuleCall_0_1(), semanticObject.eGet(MyTurtleDslPackage.Literals.REF_POURCENT_VAR__VAR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     RotationDroite returns RotationDroite
 	 *     Statement returns RotationDroite
 	 *     RGRD returns RotationDroite
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_rotation=IntExp)
+	 *     (duree=IntExp vitesse_rotation=PourcentExp)
 	 */
 	protected void sequence_RotationDroite(ISerializationContext context, RotationDroite semanticObject) {
 		if (errorAcceptor != null) {
@@ -615,7 +693,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getRotationDroiteAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getRotationDroiteAccess().getVitesse_rotationIntExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
+		feeder.accept(grammarAccess.getRotationDroiteAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
 		feeder.finish();
 	}
 	
@@ -627,7 +705,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     RGRD returns RotationGauche
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_rotation=IntExp)
+	 *     (duree=IntExp vitesse_rotation=PourcentExp)
 	 */
 	protected void sequence_RotationGauche(ISerializationContext context, RotationGauche semanticObject) {
 		if (errorAcceptor != null) {
@@ -638,7 +716,7 @@ public class MyTurtleDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getRotationGaucheAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getRotationGaucheAccess().getVitesse_rotationIntExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
+		feeder.accept(grammarAccess.getRotationGaucheAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
 		feeder.finish();
 	}
 	
