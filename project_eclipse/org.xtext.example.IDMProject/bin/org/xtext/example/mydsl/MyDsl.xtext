@@ -1,9 +1,9 @@
-grammar org.xtext.example.mydsl.MyTurtleDsl with org.eclipse.xtext.common.Terminals
+grammar org.xtext.example.mydsl.IDMProject with org.eclipse.xtext.common.Terminals
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 
     
-generate myTurtleDsl "http://www.xtext.org/example/mydsl/MyTurtleDsl"
+generate idm_project "http://www.xtext.org/example/mydsl/IDMProject"
 
 
 
@@ -220,16 +220,16 @@ AR:
 Parallele2:
 	(a=MD)		'&' (t=GDr)		|
 	(a=MD)		'&' (t=AR)		|
-	(a=MD)		'&' (t=RGRD)	|
+	(a=MD)		'&' (t=RGRD)		|
 	(t=GDr)		'&' (b=AR) 		|
 	(t=GDr)		'&' (b=MD )		|
-	(t=GDr)		'&' (b=RGRD)	|
-	(t=RGRD) '&' (a=MD )	|
-	(t=RGRD) '&' (a=AR)		|
-	(t=RGRD) '&' (a=GDr)	|
-	(t=AR) '&' (a=MD )		|
-	(t=AR) '&' (a=RGRD) 	|
-	(t=AR) '&' (a=GDr) 
+	(t=GDr)		'&' (b=RGRD)		|
+	(t=RGRD) 	'&' (a=MD )		|
+	(t=RGRD) 	'&' (a=AR)		|
+	(t=RGRD) 	'&' (a=GDr)		|
+	(t=AR)		'&' (a=MD )		|
+	(t=AR) 		'&' (a=RGRD) 	|
+	(t=AR) 		'&' (a=GDr) 
 	//(statements+=Statement|fonctions+=FonctionCall) '&' (statements+=Statement|fonctions+=FonctionCall)
 ;
 

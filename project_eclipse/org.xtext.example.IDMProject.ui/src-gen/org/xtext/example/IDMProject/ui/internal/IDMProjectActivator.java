@@ -14,8 +14,8 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
-import org.xtext.example.mydsl.MyTurtleDslRuntimeModule;
-import org.xtext.example.mydsl.ui.MyTurtleDslUiModule;
+import org.xtext.example.mydsl.IDMProjectRuntimeModule;
+import org.xtext.example.mydsl.ui.IDMProjectUiModule;
 
 /**
  * This class was generated. Customizations should only happen in a newly
@@ -23,7 +23,7 @@ import org.xtext.example.mydsl.ui.MyTurtleDslUiModule;
  */
 public class IDMProjectActivator extends AbstractUIPlugin {
 
-	public static final String ORG_XTEXT_EXAMPLE_MYDSL_MYTURTLEDSL = "org.xtext.example.mydsl.MyTurtleDsl";
+	public static final String ORG_XTEXT_EXAMPLE_MYDSL_IDMPROJECT = "org.xtext.example.mydsl.IDMProject";
 	
 	private static final Logger logger = Logger.getLogger(IDMProjectActivator.class);
 	
@@ -73,15 +73,15 @@ public class IDMProjectActivator extends AbstractUIPlugin {
 	}
 	
 	protected Module getRuntimeModule(String grammar) {
-		if (ORG_XTEXT_EXAMPLE_MYDSL_MYTURTLEDSL.equals(grammar)) {
-			return new MyTurtleDslRuntimeModule();
+		if (ORG_XTEXT_EXAMPLE_MYDSL_IDMPROJECT.equals(grammar)) {
+			return new IDMProjectRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected Module getUiModule(String grammar) {
-		if (ORG_XTEXT_EXAMPLE_MYDSL_MYTURTLEDSL.equals(grammar)) {
-			return new MyTurtleDslUiModule(this);
+		if (ORG_XTEXT_EXAMPLE_MYDSL_IDMPROJECT.equals(grammar)) {
+			return new IDMProjectUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

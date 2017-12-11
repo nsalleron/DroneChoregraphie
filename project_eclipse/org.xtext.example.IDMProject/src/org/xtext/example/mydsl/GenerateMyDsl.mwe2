@@ -31,7 +31,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "org.xtext.example.mydsl.MyDsl"
-			fileExtensions = "mydsl"
+			fileExtensions = "drone_main"
 
 			serializer = {
 				generateStub = false

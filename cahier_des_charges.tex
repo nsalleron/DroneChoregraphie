@@ -12,6 +12,9 @@
 \usepackage{float, caption}
 \usepackage{colortbl}
 \usepackage{array}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+
 
 %Réglage de l'espacement pour les chapitres
 \titleformat{\chapter}[display]   
@@ -187,16 +190,25 @@ Nous avons fait le choix de ne pas nous occuper de la caméra, car certains drone
 \chapter{Les commandes du DSL}
 
 \section{Prologue}
-\subsection{Pourcentage vitesse max?}
-\subsection{vitesse\_deplacement max}
-\subsection{vitesse\_rotation max}
-\subsection{Hauteux max}
-\subsection{Eloignement max}
+Nous avons fait le choix de rendre obligatoire la définition de certaines constantes de vol.
+\subsection{define vitesse\_hauteur\_max}
+Ce define permet de définir la vitesse maximale du drone pendant la chorégraphie par rapport à sa vitesse maximale.
+\subsection{define vitesse\_deplacement\_max}
+Ce define permet de définir la vitesse maximale de déplacement sur le plan horizontal du drone pendant la chorégraphie par rapport à sa vitesse maximale.
+\subsection{define vitesse\_rotation\_max}
+Ce define permet de définir la vitesse maximale de rotation du drone sur le plan horizontal du drone pendant la chorégraphie par rapport à sa vitesse maximale.
+\subsection{define hauteur\_max}
+Ce define permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la hauteur.
+\subsection{define eloignement\_max}
+Ce define permet de contrôler la distance du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, un message d'alarme s'affiche sur votre smartphone.
 
-\section{Les fonctions basiques}
+\section{Instructions basique}
 \paragraph{}
-Dans le but de rendre accessible le pilotage de drone aux artistes chorégraphes du futur, nous implémenterons un langage dédié permettant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\
-Dans cette partie nous présentons les commandes de base de ce langage ainsi que les actions réalisées par un drone pour chacune d'elles. Nous avons décidé de séparer les mouvements horizontaux et verticaux en 6 fonctions distinctes (Monter, Descendre, Avancer, Reculer, Gauche, Droite) afin de rendre l'utilisation du langage plus implicite pour l'utilisateur. L'unité du paramètre durée est en Seconde.\\La vitesse verticale étant dépendante du drone, nous avons fait le choix d'exprimer ce paramètre sous la forme d'une unité en pourcentage de la vitesse maximale du drone. L'inclinaison étant également dépendant du drone cible, nous avons fait le choix de l'exprimer également en pourcentage d'inclinaison par rapport à l'inclinaison maximale disponible. 
+Dans le but de rendre accessible le pilotage de drone aux chorégraphes, nous implémenterons un langage dédié permettant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\ \\
+Dans cette partie, nous présenterons les commandes de base de ce langage, ainsi que les actions réalisées par un drone pour chacune d'elles.
+Nous avons décidé de séparer les mouvements horizontaux et verticaux en 11 instructions distinctes (Décoller, Atterrir, Monter, Descendre, Avancer, Reculer, Gauche, Droite, Pause, RotationGauche, RotationDroite) afin de rendre l'utilisation du langage plus explicite pour l'utilisateur. La plupart de ces instructions ont besoin de deux paramètres qui doivent être renseignés par l'utilisateur. \\ \\
+Le premier paramètre est durée du mouvement, il est exprimé en Seconde.\\
+Le deuxième paramètre est la vitesse du mouvement, il est exprimé en pourcentage. Ce pourcentage représente la vitesse du drone par rapport à la vitesse définie auparavant dans la section "prologue".\\
 
 \subsection{Décoller}
 \quad Syntaxe: \textbf{decoller()}\bigbreak
@@ -207,113 +219,182 @@ Cette commande permettra à un drone de décoller. Elle devra obligatoirement être
 Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande exécutée dans un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
 
 \subsection{Monter}
-\quad Syntaxe: \textbf{monter(durée: Seconde, vitesse\_verticale: Pourcentage)}\bigbreak
+\quad Syntaxe: \textbf{monter(durée: Seconde, vitesse\_verticale: Pourcentage)} \\
 Cette commande permettra à un drone de monter en altitude. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone s'élève. 
-Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone s'élève. 
+Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (c.f 4.1.1). \\
 
 \subsection{Descendre}
-\quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_verticale: Pourcentage)}\bigbreak
+\quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_verticale: Pourcentage)} \\
 Cette commande permettra à un drone de descendre en altitude. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone décline.
-Le paramètre \textbf{vitesse\_vertical} est un entier positif compris entre 1 et 100. Il indique la vitesse d'élèvation du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone descend. 
+Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (c.f 4.1.1).\\
 
 \subsection{Avancer}
-\quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcentage)}\bigbreak
+\quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcentage)} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone avance. 
+Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
 
 \subsection{Reculer}
-\quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+\quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone recule. 
+Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
 
 \subsection{Gauche}
-\quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+\quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
+Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
 
 \subsection{Droite}
-\quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+\quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
+Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone.
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
 
 \subsection{Pause}
-\quad Syntaxe: \textbf{pause(durée: Seconde)}\bigbreak
+\quad Syntaxe: \textbf{pause(durée: Seconde)} \\
 Cette commande permettra à un drone de s'arrêter en position stationnaire pendant une certaine durée. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit s'arrêter.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se stabiliser. \\
 
 \subsection{RotationGauche}
-\quad Syntaxe: \textbf{rotation\_gauche(durée: Seconde, vitesse\_rotation: Pourcentage)}\bigbreak
-TODO\\
-TODO	KORDON veut l'angle?\\
-TODO\\
+\quad Syntaxe: \textbf{rotation\_gauche(durée: Seconde, vitesse\_rotation: Pourcentage)} \\
 Cette commande permettra à un drone de tourner sur lui même dans le sens inverse des aiguilles d'une montre. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit tourner
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de rotation du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (c.f 4.1.3). \\
 
 \subsection{RotationDroite}
-\quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcentage)}\bigbreak
-TODO\\
-TODO	KORDON veut l'angle?\\
-TODO\\
+\quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcentage)} \\
 Cette commande permettra à un drone de tourner sur lui même dans le sens des aiguilles d'une montre. 
-Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit tourner
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de rotation du drone.
+Elle ne pourra être exécutée que si le drone est en vol.
+Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (c.f 4.1.3). \\
 
-\subsection{Exemple d'une exécution}
-    Voici un exemple type de programme que l'utilisateur peut faire: \\
+\subsection{Le point d'entée "main"}
+Le point d'entrée du programme est défini par le mot clef main. C'est à dire que ce qui est contenu dans le bloc d'instruction suivant ce mot clef sera les instructions exécutées par le drone.
+
     \begin{figure}[h!]
-            \fbox {
-                \begin{minipage}{\textwidth}
-                    \begin{center}
-                        decoller() \\
-                        monter(2, 10) \\
-                        avancer(2, 20) \\
-                        droite(2, 15) \\
-                        atterrir() \\
-                    \end{center}
-                \end{minipage}}
-            \caption{Exemple de programme utilisateur}
-            \label{Exemple de programme utilisateur}
+        \begin{center}
+            \begin{Verbatim}
+            main {
+                decoller()
+                gauche(1,10%)
+                reculer(1,20%)
+                atterrir()
+            }
+            \end{Verbatim}
+        \end{center}
+        \caption{Exemple de programme utilisateur}
+        \label{Exemple de programme utilisateur}
     \end{figure}
-    \\ Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
 
+\section{Instructions parallèles}
+Le langage intégrera un mécanisme d'exécution d'instructions en parallèle. C'est à dire qu'il est possible d'ordonner au drone de faire deux instructions en même temps.
+Il permettra par exemple de monter et d'avancer en même temps. \\
+Ce mécanisme sera implémenté dans le langage par le biais du symbole '\textit{\&}'. \\
+La parallélisation ne sera disponible que sur les instructions de base.
+Les instructions parallélisables sont les suivantes :
 
+    \begin{itemize}
+        \item monter
+        \item descendre
+        \item avancer
+        \item reculer
+        \item gauche
+        \item droite
+        \item rotationGauche
+        \item rotationDroite
+    \end{itemize}
+    
+L'utilisateur peut paralléliser un maximum de 3 instructions.
+De plus, il n'est pas possible de paralléliser la même instruction plusieurs fois, ni de paralléliser deux instructions opposées.
 
-\section{Fonction de composition}
-Notre langage impose des contraintes sur les fonctions. D'abord, la première fonction du fichier à exécuter s'appelle "main", elle est la première fonction exécutée par le drone. De plus, les fonctions ne peuvent pas être récursive, c'est à dire, qu'une fonction ne peut s'appeller elle même. 
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+            monter(1,10%) & descendre(4,20%)
+            -> Impossible les deux commandes s'opposent.
+            gauche(3,25%) & gauche (6,80%)
+            -> Impossible les deux commandes sont de même type.
+            rotationDroite(2,20%) & avancer(3,20%) 
+            gauche(2,5) & monter(1,15%) & avancer(4,10%) 
+            \end{Verbatim}
+        \end{center}
+        \caption{Exemple d'instructions parallelisees}
+        \label{Exemple d'instructions parallelisees}
+    \end{figure}
 
-\subsection{Création de composition sequentielle}
-En plus des commandes de base, notre langage permet à l'utilisateur de définir ses propres compositions qui sont des suites d'instructions à exécuter par le drone. \\
+\section{Fonction}
+Le langage permet de définir des fonctions, ces dernières sont une suite d'instructions séquentielles qu'exécutera le drone.
+Les fonctions ont un nom qui permet de les identifier.
+Il n'est pas possible de paralléliser deux fonctions.
+La définition d'une fonction est de la forme suivante :
 
-Exemple :
- \begin{tabbing}
-        func \= \_nom\_de\_la\_fonction\_() \{ \\
-        \> monter(2, 10) \\
-        \>    avancer(2, 20) \\
-        \>    droite(2, 15) \\
-\} \\
-\end{tabbing}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+            func nomDeLaFonction() {
+                Mettre une instruction par ligne
+            }
+            \end{Verbatim}
+        \end{center}
+        \caption{Exemple de definition de fonction}
+        \label{Exemple de definition de fonction}
+    \end{figure}
+    
+Une fois une fonction définie, il est possible de l'appeler pour que le drone exécute les instructions contenues dans cette dernière. Il n'est pas possible pour une fonction de s'appeler elle-même.
+On ne peux appeler des fonctions que dans le bloc du main.
 
-\subsection{Bilbiothèque de fonctions}
-Une fois que l'utilisateur a défini ses fonctions de composition et les a sauvegardées dans un fichier, celui-ci aura la possibilité de les référencer depuis un autre fichier au moyen d'un système d'import. Ainsi l'uilisateur pourra appeler dans un fichier une fonction définie dans un autre fichier.\\
-Ce système permettra à l'utilisateur de créer ses propres bilbiothèques de fonctions.\\
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+            main {
+                decoller()
+                gauche(1,10%)
+                maFonction()
+                reculer(1,20%)
+                atterrir()
+            }
+                
+            func maFonction() {
+                monter(2,10%) & droite(1,15%)
+                avancer(2,20%)
+                droite(2,15%)
+            }
+            
+            \end{Verbatim}
+        \end{center}
+        \caption{Exemple d'appel de fonction}
+        \label{Exemple d'appel de fonction}
+    \end{figure}
+    
+\newpage
+
+\subsection{Bibliothèque de fonctions}
+Une fois que l'utilisateur a défini ses fonctions de composition et les a sauvegardées dans un fichier, celui-ci aura la possibilité de les référencer depuis un autre fichier au moyen d'un système d'import. Ainsi l'utilisateur pourra appeler dans un fichier une fonction définie dans un autre fichier.\\
+Ce système permettra à l'utilisateur de créer ses propres bibliothèques de fonctions.\\
 Afin de pouvoir appeler les fonctions définies dans un fichier, ce dernier devra se trouver dans le même répertoire que celui contenant le fichier appelant les fonctions. 
+Il est possible d'utiliser des fonctions définies dans d'autres programmes .drone, ces fichiers doivent être dans le même répertoire.
+Pour cela, il que l'utilisateur indique les fichiers contenant ces fonctions dans le programme via l'instruction \textbf{import}.
 
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+            import <monFichier.drone>
+            \end{Verbatim}
+        \end{center}
+    \end{figure}
 %\subsection{Figures prédéfinies}
 %TODO - "Ça c'est un peu casse gueule" -> import monfic.funcDrone. Le client doit charger la bibliothèque.\\
 %
@@ -347,17 +428,7 @@ Afin de pouvoir appeler les fonctions définies dans un fichier, ce dernier devra
 %Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré ascendant.\\
 %Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 
-\subsection{Fonction de composition parallèle}
-Notre langage intégrera un mécanisme de composition d'exécution de commandes en parallèle. 
-Il permettra par exemple de monter et d'avancer en même temps. \\Ce mécanisme sera implémenté dans notre langage par le biais du symbole '\textit{\&}'. \\
-La parallélisation ne sera disponible que sur les commandes de bases. Elle n'est pas disponible pour paralléliser deux fonctions. \\
-\begin{tabbing}
-De plus \=on ne pourra pas composer deux commandes opposées en parallèle par exemple : \\
-    \>- Monter(1,10) \& Descendre(1,10) \\
-    \>- Avancer(1,10) \& Reculer(1,10) \\
-    \>- Gauche(1,10) \& Droite(1,10) \\
-    \>- RotationGauche(1,10) \& RotationDroite(1,10)
-\end{tabbing}
+
 \chapter{Tests de validation}
 %USE CASE 1
 \section{Validation tranche 1 -  (Validation de l'éditeur du langage)} 
@@ -373,13 +444,16 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+ define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
 	    decoller()\\
-	    monter(1.0, 20)\\
+	    monter(1.0, 20\%)\\
 	    atterrir()
     \end{indentpar}
     \}\\
@@ -401,15 +475,19 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+
+     \begin{indentpar}{1cm}
 	    decoller()\\
-		monter(1.0, 20)\\
-		avancer(1.0, 20)\\
-		reculer(1.0, 20)\\
+		monter(1.0, 20\%)\\
+		avancer(1.0, 20\%)\\
+		reculer(1.0, 20\%)\\
 		atterrir()
     \end{indentpar}
     \}\\
@@ -431,11 +509,14 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+   define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
 	    decoller()\\
 		blabalbla()\\
 		atterrir()
@@ -458,11 +539,13 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
      \begin{indentpar}{1cm}
-     	prologue \{
-
-     	\}\\
 	    decoller()\\
 		monter("hello")\\
 		atterrir()
@@ -486,14 +569,17 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
 	    decoller()\\
 		atterrir()\\
-		monter(1.0, 20)
+		monter(1.0, 20\%)
     \end{indentpar}
     \}\\
     \end{indentpar}
@@ -514,12 +600,15 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
-	    monter(1.0, 20)\\
+     \begin{indentpar}{1cm}
+	    monter(1.0, 20\%)\\
 		decoller()\\
 		atterrir()
     \end{indentpar}
@@ -543,11 +632,14 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
 	    decoller()\\
 		decoller()
     \end{indentpar}
@@ -569,13 +661,16 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
 	    decoller()\\
-		monter(1.0, 20)\\
+		monter(1.0, 20\%)\\
 		atterrir()\\
 		atterrir()
     \end{indentpar}
@@ -597,11 +692,15 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
+
      	decoller()\\
 	    aller\_retour()\\
 	    atterrir()
@@ -609,8 +708,8 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \}\\
     func aller\_retour() \{
      \begin{indentpar}{1cm}
-		avancer(1.0, 20)\\
-		reculer(1.0, 20)
+		avancer(1.0, 20\%)\\
+		reculer(1.0, 20\%)
      \end{indentpar}
     \}\\
     \end{indentpar}
@@ -630,11 +729,15 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+    define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
+     	
      	decoller()\\
 	    foo()\\
 	    atterrir()
@@ -642,7 +745,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \}\\
     func bar() \{
      \begin{indentpar}{1cm}
-		avancer(1.0, 20)
+		avancer(1.0, 20\%)
      \end{indentpar}
     \}\\
     \end{indentpar}
@@ -662,13 +765,16 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+   define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
      	decoller()\\
-	    monter(1.0, 20) \& avancer(1.0, 20)\\
+	    monter(1.0, 20\%) \& avancer(1.0, 20\%)\\
 	    atterrir()
      \end{indentpar}
     \}\\
@@ -689,13 +795,17 @@ Entrée :& aucune \\
 Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
-    func main \{
-     \begin{indentpar}{1cm}
-     	prologue \{
+   define vitesse\_hauteur\_max 100\%
+    \\define vitesse\_deplacement\_max 40\%
+    \\define vitesse\_rotation\_max 50\%
+    \\define hauteur\_max 10
+    \\define eloignement\_max 4\\
+    \\main \{
 
-     	\}\\
+     \begin{indentpar}{1cm}
+     	
      	decoller()\\
-	    monter(1.0, 20) \& descendre(1.0, 20)\\
+	    monter(1.0, 20\%) \& descendre(1.0, 20\%)\\
 	    atterrir()
      \end{indentpar}
     \}\\
@@ -705,10 +815,6 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
 Résultat attendu:& Une erreur est détéctée sur l'appel de la composition parallèle des fonctions \textit{monter} et \textit{descendre}.\\
 \hline
 \end{tabular}
-
-
-
-TODO - Faire des tests plus méchants (fct composition séquence, etc)
 
 \section{Validation tranche 3 -  (Contrôler drone depuis l'ordinateur via le programme utilisateur)} 
 
@@ -956,7 +1062,7 @@ Tout d'abord, nous livrerons un cahier des charges au client pour formaliser not
 \vspace{1px}
 
 Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
-Nous livrerons un \'éditeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'éditeur appel\'e les instructions qui sont reconnues par l'\'éditeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-08
+Nous livrerons un \'éditeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'éditeur appel\'e les instructions qui sont reconnues par l'\'éditeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-12
 
 \section{Tranche 2  : 12 janvier 2018}
 \vspace{1px}
@@ -975,7 +1081,8 @@ Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distr
 
 
 \chapter{Glossaire}
-\paragraph{méta-modèle} TODO
+\paragraph{méta-modèle} la représentation d'un point de vue structurel d'un systeme. Ici c'est la syntaxe du langage de programmation du drone. 
+\paragraph{quadricoptère} C'est un aéronef à voilure tournante comportant quatre rotors pour sa sustentation.
 \end{document}
 
 
