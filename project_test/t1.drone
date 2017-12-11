@@ -1,0 +1,3 @@
+func test () {
+	monter(1,10%)
+}

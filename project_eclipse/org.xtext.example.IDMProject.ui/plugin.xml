@@ -4,48 +4,48 @@
 	<extension
 		point="org.eclipse.ui.editors">
 		<editor
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
-			extensions="mydsl"
-			id="org.xtext.example.mydsl.MyTurtleDsl"
-			name="MyTurtleDsl Editor">
+			extensions="drone_main"
+			id="org.xtext.example.mydsl.IDMProject"
+			name="IDMProject Editor">
 		</editor>
 	</extension>
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
 			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
 			<activeWhen>
 				<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-			commandId="org.xtext.example.mydsl.MyTurtleDsl.validate">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="org.xtext.example.mydsl.IDMProject.validate">
 		<activeWhen>
 			<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 			</reference>
 		</activeWhen>
 		</handler>
 		<!-- copy qualified name -->
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
 			<activeWhen>
-				<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened" />
+				<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened" />
 			</activeWhen>
 		</handler>
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
 			<activeWhen>
 				<and>
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.XtextEditor.opened" />
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.XtextEditor.opened" />
 					<iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -54,22 +54,22 @@
 		</handler>
 	</extension>
 	<extension point="org.eclipse.core.expressions.definitions">
-		<definition id="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+		<definition id="org.xtext.example.mydsl.IDMProject.Editor.opened">
 			<and>
 				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="org.xtext.example.mydsl.MyTurtleDsl"
+						value="org.xtext.example.mydsl.IDMProject"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
 		</definition>
-		<definition id="org.xtext.example.mydsl.MyTurtleDsl.XtextEditor.opened">
+		<definition id="org.xtext.example.mydsl.IDMProject.XtextEditor.opened">
 			<and>
 				<reference definitionId="isXtextEditorActive"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="org.xtext.example.mydsl.MyTurtleDsl"
+						value="org.xtext.example.mydsl.IDMProject"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
@@ -78,33 +78,33 @@
 	<extension
 			point="org.eclipse.ui.preferencePages">
 		<page
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl"
-			name="MyTurtleDsl">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject"
+			name="IDMProject">
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 		</page>
 		<page
-			category="org.xtext.example.mydsl.MyTurtleDsl"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl.coloring"
+			category="org.xtext.example.mydsl.IDMProject"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject.coloring"
 			name="Syntax Coloring">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 		</page>
 		<page
-			category="org.xtext.example.mydsl.MyTurtleDsl"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl.templates"
+			category="org.xtext.example.mydsl.IDMProject"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="org.xtext.example.mydsl.IDMProject.templates"
 			name="Templates">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 		</page>
 	</extension>
 	<extension
 			point="org.eclipse.ui.propertyPages">
 		<page
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl"
-			name="MyTurtleDsl">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject"
+			name="IDMProject">
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -114,14 +114,14 @@
 	<extension
 		point="org.eclipse.ui.keywords">
 		<keyword
-			id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"
-			label="MyTurtleDsl"/>
+			id="org.xtext.example.mydsl.ui.keyword_IDMProject"
+			label="IDMProject"/>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
 	<command
 			description="Trigger expensive validation"
-			id="org.xtext.example.mydsl.MyTurtleDsl.validate"
+			id="org.xtext.example.mydsl.IDMProject.validate"
 			name="Validate">
 	</command>
 	<!-- copy qualified name -->
@@ -142,12 +142,12 @@
 		<menuContribution
 			locationURI="popup:#TextEditorContext?after=group.edit">
 			 <command
-				 commandId="org.xtext.example.mydsl.MyTurtleDsl.validate"
+				 commandId="org.xtext.example.mydsl.IDMProject.validate"
 				 style="push"
 				 tooltip="Trigger expensive validation">
 			<visibleWhen checkEnabled="false">
 				<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 				</reference>
 			</visibleWhen>
 		</command>
@@ -157,7 +157,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened" />
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -165,7 +165,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened" />
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -174,7 +174,7 @@
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<and>
-						<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.XtextEditor.opened" />
+						<reference definitionId="org.xtext.example.mydsl.IDMProject.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -187,7 +187,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -195,11 +195,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
 			commandId="org.eclipse.xtext.ui.editor.FindReferences">
 			<activeWhen>
 				<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -208,59 +208,59 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="mydsl">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="drone_main">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-			uriExtension="mydsl">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			uriExtension="drone_main">
 		</resourceServiceProvider>
 	</extension>
-	<!-- marker definitions for org.xtext.example.mydsl.MyTurtleDsl -->
+	<!-- marker definitions for org.xtext.example.mydsl.IDMProject -->
 	<extension
-			id="myturtledsl.check.fast"
-			name="MyTurtleDsl Problem"
+			id="idmproject.check.fast"
+			name="IDMProject Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.fast"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="myturtledsl.check.normal"
-			name="MyTurtleDsl Problem"
+			id="idmproject.check.normal"
+			name="IDMProject Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.normal"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="myturtledsl.check.expensive"
-			name="MyTurtleDsl Problem"
+			id="idmproject.check.expensive"
+			name="IDMProject Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
 	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-			fileExtensions="mydsl"/>
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			fileExtensions="drone_main"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="org.xtext.example.mydsl.MyTurtleDsl"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl.compiler.preferencePage"
+			category="org.xtext.example.mydsl.IDMProject"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject.compiler.preferencePage"
 			name="Compiler">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.ui.propertyPages">
 		<page
-			category="org.xtext.example.mydsl.MyTurtleDsl"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl.compiler.propertyPage"
+			category="org.xtext.example.mydsl.IDMProject"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject.compiler.propertyPage"
 			name="Compiler">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -271,20 +271,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="org.xtext.example.mydsl.MyTurtleDsl.OpenGeneratedCode"
+				id="org.xtext.example.mydsl.IDMProject.OpenGeneratedCode"
 				style="push">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened" />
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 			<activeWhen>
-				<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened" />
+				<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened" />
 			</activeWhen>
 		</handler>
 	</extension>
@@ -292,11 +292,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -316,33 +316,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened"/>
+					<reference definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-	<!-- quickfix marker resolution generator for org.xtext.example.mydsl.MyTurtleDsl -->
+	<!-- quickfix marker resolution generator for org.xtext.example.mydsl.IDMProject -->
 	<extension
 			point="org.eclipse.ui.ide.markerResolution">
 		<markerResolutionGenerator
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="org.xtext.example.IDMProject.ui.myturtledsl.check.fast">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.xtext.example.IDMProject.ui.idmproject.check.fast">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="org.xtext.example.IDMProject.ui.myturtledsl.check.normal">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.xtext.example.IDMProject.ui.idmproject.check.normal">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="org.xtext.example.IDMProject.ui.myturtledsl.check.expensive">
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.xtext.example.IDMProject.ui.idmproject.check.expensive">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -352,11 +352,11 @@
 	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+					definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -368,7 +368,7 @@
 				style="push">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="org.xtext.example.mydsl.MyTurtleDsl.Editor.opened">
+						definitionId="org.xtext.example.mydsl.IDMProject.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -376,34 +376,34 @@
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="org.xtext.example.mydsl.MyTurtleDsl"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-			id="org.xtext.example.mydsl.MyTurtleDsl.refactoring"
+			category="org.xtext.example.mydsl.IDMProject"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="org.xtext.example.mydsl.IDMProject.refactoring"
 			name="Refactoring">
-			<keywordReference id="org.xtext.example.mydsl.ui.keyword_MyTurtleDsl"/>
+			<keywordReference id="org.xtext.example.mydsl.ui.keyword_IDMProject"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.compare.contentViewers">
-		<viewer id="org.xtext.example.mydsl.MyTurtleDsl.compare.contentViewers"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="mydsl">
+		<viewer id="org.xtext.example.mydsl.IDMProject.compare.contentViewers"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="drone_main">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
-		<viewer id="org.xtext.example.mydsl.MyTurtleDsl.compare.contentMergeViewers"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="mydsl" label="MyTurtleDsl Compare">
+		<viewer id="org.xtext.example.mydsl.IDMProject.compare.contentMergeViewers"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="drone_main" label="IDMProject Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
-		<provider id="org.xtext.example.mydsl.MyTurtleDsl.editors.documentProviders"
-			class="org.xtext.example.mydsl.ui.MyTurtleDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-			extensions="mydsl">
+		<provider id="org.xtext.example.mydsl.IDMProject.editors.documentProviders"
+			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+			extensions="drone_main">
 		</provider>
 	</extension>
 	<extension point="org.eclipse.team.core.fileTypes">
 		<fileTypes
-			extension="mydsl"
+			extension="drone_main"
 			type="text">
 		</fileTypes>
 	</extension>

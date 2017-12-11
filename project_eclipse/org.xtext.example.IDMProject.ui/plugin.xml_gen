@@ -7,7 +7,7 @@
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
-			extensions="drone_main"
+			extensions="drone_main;drone"
 			id="org.xtext.example.mydsl.IDMProject"
 			name="IDMProject Editor">
 		</editor>
@@ -209,13 +209,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="drone_main">
+			type="drone_main;drone">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-			uriExtension="drone_main">
+			uriExtension="drone_main;drone">
 		</resourceServiceProvider>
 	</extension>
 	<!-- marker definitions for org.xtext.example.mydsl.IDMProject -->
@@ -243,7 +243,7 @@
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-			fileExtensions="drone_main"/>
+			fileExtensions="drone_main;drone"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
@@ -386,24 +386,24 @@
 	<extension point="org.eclipse.compare.contentViewers">
 		<viewer id="org.xtext.example.mydsl.IDMProject.compare.contentViewers"
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="drone_main">
+			extensions="drone_main;drone">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.xtext.example.mydsl.IDMProject.compare.contentMergeViewers"
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="drone_main" label="IDMProject Compare">
+			extensions="drone_main;drone" label="IDMProject Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.xtext.example.mydsl.IDMProject.editors.documentProviders"
 			class="org.xtext.example.mydsl.ui.IDMProjectExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-			extensions="drone_main">
+			extensions="drone_main;drone">
 		</provider>
 	</extension>
 	<extension point="org.eclipse.team.core.fileTypes">
 		<fileTypes
-			extension="drone_main"
+			extension="drone_main;drone"
 			type="text">
 		</fileTypes>
 	</extension>

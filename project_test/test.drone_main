@@ -1,0 +1,13 @@
+import <t1.drone>
+
+define vitesse_hauteur_max 10%
+define vitesse_deplacement_max 20%
+define vitesse_rotation_max 3%
+define hauteur_max 5
+define eloignement_max 10
+
+main {
+	decoller()
+	test()
+	atterrir()
+}
