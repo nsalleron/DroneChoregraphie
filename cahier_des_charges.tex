@@ -1,5 +1,6 @@
 \documentclass[12pt, openany]{report}
 \usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage[frenchb]{babel}
@@ -84,7 +85,7 @@ Kévin \textsc{Vu-Saintonge}\\
 
 \chapter{Introduction}
 \paragraph{}
-Utilisés depuis les années 1990 dans le cadre militaire, les drones font aujourd'hui partie de notre vie de tous les jours. Des sociétés comme Parrot les ont popularisés au sein du grand public. Les smartphones étant de plus en plus répandus et performants, les applications peuvent exploiter les multiples capacités de leurs capteurs embarqués. Les progrès de la miniaturisation permettent même l'utilisation de ces technologies dans de plus petits objets connectés telles les montres.\\
+Utilisés depuis les années 1990 dans le cadre militaire, les drones font aujourd'hui partie de notre vie de tous les jours. Des sociétés comme Parrot les ont popularisé au sein du grand public. Les smartphones étant de plus en plus répandus et performants, les applications peuvent exploiter les multiples capacités de leurs capteurs embarqués. Les progrès de la miniaturisation permettent même l'utilisation de ces technologies dans de plus petits objets connectés tels les montres.\\
 Les drones sont très souvent utilisés, notamment dans les domaines artistiques comme la danse. Des émissions en témoignent : "La France a un incroyable talent" (25/10/2016) et "Britain's got talent", outre-Manche.\\À Las Vegas, durant le CES 2016, la société Parrot a réalisé le "Drone dance" dans lequel les drones Parrot "dansent" de manière autonome sur une chorégraphie pré-enregistrée. A Londres la même année, la société BeTomorrow a présenté le "Flying Oreo show". 
 Nous observons un réel intérêt du grand public pour les drones et la démonstration de leurs capacités à travers le spectacle et la danse.
 
@@ -93,7 +94,7 @@ Nous observons un réel intérêt du grand public pour les drones et la démonstrati
 Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le domaine de la danse. Un danseur doit être capable de préparer la chorégraphie puis de l'exécuter sur le terrain de son choix. L'utilisateur utilisera pour ce faire un langage de programmation spécifique que nous allons réaliser afin de préparer ses danses simplement. 
 
 \section{Objectifs}
-\paragraph{} L'objectif est de permettre à  un danseur de réaliser une chorégraphie. Pour ce faire notre équipe produira un langage de programmation simple et compréhensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de manière autonome afin de préparer en amont la chorégraphie de son drone. Une fois la chorégraphie validée et compiler par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application générée par notre frontal. Cette application enverra différents ordres au drone et réalisera la chorégraphie.
+\paragraph{} L'objectif est de permettre à un danseur de réaliser une chorégraphie. Pour ce faire notre équipe produira un langage de programmation simple et compréhensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de manière autonome afin de préparer en amont la chorégraphie de son drone. Une fois la chorégraphie validée et compilée par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application générée par notre frontal. Cette application enverra différents ordres au drone et réalisera la chorégraphie.
 
 \chapter{Le langage de pilotage du drone}
 
@@ -103,19 +104,18 @@ Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera génér
 
 Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\ Cet éditeur aura les fonctionnalités suivantes : 
 \begin{itemize}
-	\item l'auto-completion du langage (décrit dans la partie "commandes à implémenter")
+	\item l'auto-complétion du langage (cf Chapitre 4)
 	\item la détection de fautes syntaxiques.
-	\item la détection des erreurs de cohérence dans les scénarios. Ex: Une erreur de cohérence simple peut être le fait de commander au drone d'avancer avant que celui-ci n'ai décollé. 
-	\item TODO des "bullets" avec d'autres exemples
+	\item la détection des erreurs de cohérence dans les scénarios écrit par l'utilisateur (cf Chapitre 4).
 \end{itemize}
 
 \section{Écriture de la chorégraphie par l'utilisateur}
-L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans la partie "commandes à implémenter". Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
+L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans le Chapitre 4. Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
 \section{Conditions de fonctionnement}
 
-Pour que l'application fonctionne un certains nombre de pré-conditions d'utilisation:
+Pour que l'application fonctionne un certain nombre de pré-conditions d'utilisation sont requises :
 \begin{itemize}
-	  \item Le drone utilisé est un drone à hélices, le langage ne supportera pas les drones type avion.
+	  \item Le drone utilisé est un drone à hélices, le langage ne supportera pas les drones de type avion.
       \item Le drone doit être allumé par l'utilisateur.
       \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
       \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
@@ -131,7 +131,7 @@ Des fichiers et documents aideront à son déploiement et son utilisation.
 Nous considérons par drone les objets connectés volants, type aéronef à voilure tournante comportant quatre rotors pour sa sustentation.
 
 \section{Décollage}
-Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyés (il les effectuera quand il sera dans un état stable). \\
+Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyées (il les effectuera quand il sera dans un état stable). \\
 Il correspond à l'instruction suivante dans le projet :
 \begin{itemize}
      \item \textbf{decoller}
@@ -146,7 +146,7 @@ Il correspond aux instructions suivantes dans le projet :
 \end{itemize}
         
 \section{Mouvements horizontaux - Roll}
-Le drone est capable de se déplacer horizontalement (axe x), pour se faire le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
+Le drone est capable de se déplacer horizontalement (axe x), pour cela le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
 Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
      \item \textbf{gauche}
@@ -154,7 +154,7 @@ Il correspond aux instructions suivantes dans le projet :
 \end{itemize}
     
 \section{Mouvements horizontaux - Pitch}
-Le drone est capable de se déplacer en profondeur (axe y), pour se faire le drone va s'incliner en avant ou en arrière d'un certain angle. \\
+Le drone est capable de se déplacer en profondeur (axe y), pour cela le drone va s'incliner en avant ou en arrière d'un certain angle. \\
 Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
     \item \textbf{avancer}
@@ -178,7 +178,7 @@ Il correspond aux instructions suivantes dans le projet :
         
  
 \section{Atterrissage}
-Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyés. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
+Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyées. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
 Il correspond à l'instruction suivante dans le projet :
 \begin{itemize}
       \item \textbf{atterrir}
@@ -190,18 +190,35 @@ Nous avons fait le choix de ne pas nous occuper de la caméra, car certains drone
 \chapter{Les commandes du DSL}
 
 \section{Prologue}
-Nous avons fait le choix de rendre obligatoire la définition de certaines constantes de vol.
-\subsection{define vitesse\_hauteur\_max}
-Ce define permet de définir la vitesse maximale du drone pendant la chorégraphie par rapport à sa vitesse maximale.
-\subsection{define vitesse\_deplacement\_max}
-Ce define permet de définir la vitesse maximale de déplacement sur le plan horizontal du drone pendant la chorégraphie par rapport à sa vitesse maximale.
-\subsection{define vitesse\_rotation\_max}
-Ce define permet de définir la vitesse maximale de rotation du drone sur le plan horizontal du drone pendant la chorégraphie par rapport à sa vitesse maximale.
-\subsection{define hauteur\_max}
-Ce define permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la hauteur.
-\subsection{define eloignement\_max}
-Ce define permet de contrôler la distance du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, un message d'alarme s'affiche sur votre smartphone.
+Pour fonctionner, l'utilisateur doit définir 5 constantes de vol.
+Cela permet au programme d'adapter les instructions en fonction de ces dernières.
+Il peut les définir comme ceci au début du fichier \newline
 
+\begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+                define vitesse_hauteur_max 50%
+            \end{Verbatim}
+        \end{center}
+        \caption{Exemple de define}
+        \label{Exemple de define}
+    \end{figure}
+
+\subsection{define vitesse\_hauteur\_max}
+Cette constante permet de définir la vitesse maximale d'élévation du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
+La valeur de cette constante doit être comprise entre 1 et 100\%.
+\subsection{define vitesse\_deplacement\_max}
+Cette constante permet de définir la vitesse maximale de déplacement sur le plan horizontal du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
+La valeur de cette constante doit être comprise entre 1 et 100\%.
+\subsection{define vitesse\_rotation\_max}
+Cette constante permet de définir la vitesse maximale de rotation du drone pour la chorégraphie par rapport à sa vitesse maximale. \newline
+La valeur de cette constante doit être comprise entre 1 et 100\%.
+\subsection{define hauteur\_max}
+Cette constante permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la hauteur maximale. \newline
+La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la hauteur maximale possible du drone.
+\subsection{define eloignement\_max}
+Cette constante permet de contrôler la distance horizontale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la distance maximale horizontale. \newline
+La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la distance maximale horizontale possible du drone.
 \section{Instructions basique}
 \paragraph{}
 Dans le but de rendre accessible le pilotage de drone aux chorégraphes, nous implémenterons un langage dédié permettant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\ \\
@@ -223,42 +240,42 @@ Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être 
 Cette commande permettra à un drone de monter en altitude. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone s'élève. 
-Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (c.f 4.1.1). \\
+Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (cf 4.1.1). \\
 
 \subsection{Descendre}
 \quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_verticale: Pourcentage)} \\
 Cette commande permettra à un drone de descendre en altitude. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone descend. 
-Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (c.f 4.1.1).\\
+Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (cf 4.1.1).\\
 
 \subsection{Avancer}
 \quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcentage)} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone avance. 
-Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
+Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Reculer}
 \quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone recule. 
-Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
+Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Gauche}
 \quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Droite}
 \quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
 Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (c.f 4.1.2). \\
+Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Pause}
 \quad Syntaxe: \textbf{pause(durée: Seconde)} \\
@@ -271,16 +288,16 @@ Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone 
 Cette commande permettra à un drone de tourner sur lui même dans le sens inverse des aiguilles d'une montre. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (c.f 4.1.3). \\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (cf 4.1.3). \\
 
 \subsection{RotationDroite}
 \quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcentage)} \\
 Cette commande permettra à un drone de tourner sur lui même dans le sens des aiguilles d'une montre. 
 Elle ne pourra être exécutée que si le drone est en vol.
 Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (c.f 4.1.3). \\
+Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (cf 4.1.3). \\
 
-\subsection{Le point d'entée "main"}
+\subsection{Le point d'entrée "main"}
 Le point d'entrée du programme est défini par le mot clef main. C'est à dire que ce qui est contenu dans le bloc d'instruction suivant ce mot clef sera les instructions exécutées par le drone.
 
     \begin{figure}[h!]
@@ -297,7 +314,7 @@ Le point d'entrée du programme est défini par le mot clef main. C'est à dire que
         \caption{Exemple de programme utilisateur}
         \label{Exemple de programme utilisateur}
     \end{figure}
-Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour se faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour ce faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
 
 \section{Instructions parallèles}
 Le langage intégrera un mécanisme d'exécution d'instructions en parallèle. C'est à dire qu'il est possible d'ordonner au drone de faire deux instructions en même temps.
@@ -328,7 +345,9 @@ De plus, il n'est pas possible de paralléliser la même instruction plusieurs foi
             gauche(3,25%) & gauche (6,80%)
             -> Impossible les deux commandes sont de même type.
             rotationDroite(2,20%) & avancer(3,20%) 
-            gauche(2,5) & monter(1,15%) & avancer(4,10%) 
+            -> OK
+            gauche(2,5) & monter(1,15%) & avancer(4,10%)
+            -> OK
             \end{Verbatim}
         \end{center}
         \caption{Exemple d'instructions parallelisees}
@@ -382,10 +401,7 @@ On ne peux appeler des fonctions que dans le bloc du main.
 \newpage
 
 \subsection{Bibliothèque de fonctions}
-Une fois que l'utilisateur a défini ses fonctions de composition et les a sauvegardées dans un fichier, celui-ci aura la possibilité de les référencer depuis un autre fichier au moyen d'un système d'import. Ainsi l'utilisateur pourra appeler dans un fichier une fonction définie dans un autre fichier.\\
-Ce système permettra à l'utilisateur de créer ses propres bibliothèques de fonctions.\\
-Afin de pouvoir appeler les fonctions définies dans un fichier, ce dernier devra se trouver dans le même répertoire que celui contenant le fichier appelant les fonctions. 
-Il est possible d'utiliser des fonctions définies dans d'autres programmes .drone, ces fichiers doivent être dans le même répertoire.
+Il est possible d'utiliser des fonctions définies dans d'autres fichiers .drone, ces fichiers doivent être dans le même répertoire que le fichier appelant les fonctions.
 Pour cela, il que l'utilisateur indique les fichiers contenant ces fonctions dans le programme via l'instruction \textbf{import}.
 
     \begin{figure}[h!]
@@ -1081,7 +1097,7 @@ Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distr
 
 
 \chapter{Glossaire}
-\paragraph{méta-modèle} la représentation d'un point de vue structurel d'un systeme. Ici c'est la syntaxe du langage de programmation du drone. 
+\paragraph{méta-modèle} La représentation d'un point de vue structurel d'un système. Ici c'est la syntaxe du langage de programmation du drone. 
 \paragraph{quadricoptère} C'est un aéronef à voilure tournante comportant quatre rotors pour sa sustentation.
 \end{document}
 
