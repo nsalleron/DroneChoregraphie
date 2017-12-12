@@ -28,3 +28,11 @@ Projet IDM
 
 * Repo owner or admin
 * Other community or team contact
+
+
+JavaSE-1.8 (jdk1.8.0_45)
+
+VM Arguments:
+-Xms40m -Xmx512m
+
+https://www.eclipse.org/forums/index.php/t/275845/
