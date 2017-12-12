@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+>
+   <extension
+         id="droneDSLEditorProduct"
+         name="droneDSLEditorProduct"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            description="Editor for Drone DSL"
+            name="Drone DSL Editor">
+         <property
+               name="appName"
+               value="Drone DSL Editor">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/app16.png,icons/app32.png,icons/app48.png,icons/app64.png,icons/app128.png,icons/app256.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/app32.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Editor for Drone DSL">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="808080">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="10,275,435,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="10,260,435,10">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+</plugin>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.idmteam1.idmproject.dronedsl.ide
+Bundle-Vendor: fr.idmteam1
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: fr.idmteam1.idmproject.dronedsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: fr.idmteam1.idmproject.dronedsl,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: fr.idmteam1.idmproject.dronedsl.ide.contentassist.antlr.internal,
+ fr.idmteam1.idmproject.dronedsl.ide.contentassist.antlr
+

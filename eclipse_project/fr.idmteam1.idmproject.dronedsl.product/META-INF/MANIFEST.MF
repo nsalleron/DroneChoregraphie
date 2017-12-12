@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Product
+Bundle-SymbolicName: fr.idmteam1.idmproject.dronedsl.product;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: fr.idmteam1
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.equinox.app
