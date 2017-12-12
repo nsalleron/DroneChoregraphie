@@ -106,7 +106,7 @@ Notre éditeur posséde les fonctionnalités suivantes :
 
 \begin{block}{Écriture de la chorégraphie}
 \begin{itemize}
-\item L'utilisateur écrit sa chorégraphie par une suite d'action séparé par un retour à la ligne.
+\item L'utilisateur écrit sa chorégraphie par une suite d'action séparée par un retour à la ligne.
 \item Une chorégraphie commence par un décollage et un atterrissage.
 \item Usage possible de fonctions et d'instruction simple.
 \end{itemize}
@@ -212,15 +212,15 @@ Le but est de rendre accessible le pilotage de drone aux chorégraphes.
 \end{itemize}
 \end{block}
 \begin{itemize}
-\item 1er paramétre est la durée du mouvement, en Seconde.
-\item 2éme paramétre est la vitesse du mouvement, en pourcentage. Il représente la vitesse du drone par rapport à la vitesse définie dans la section "prologue".
+\item 1er paramètre est la durée du mouvement, en Seconde.
+\item 2éme paramètre est la vitesse du mouvement, en pourcentage. Il représente la vitesse du drone par rapport à la vitesse définie dans la section "prologue".
 \end{itemize}
 \end{frame}
 
 	\subsection{Instructions paralléles} 
 \begin{frame}{Les Instructions paralléles} 
 \begin{itemize}
-\item Notre langage intégre un mécanisme d'exécution d'instructions paralléle.
+\item Notre langage intègre un mécanisme d'exécution d'instructions parallèle.
 \item Il est possible d'ordonner au drone de faire plusieurs instructions en même temps. 
 \item Mécanisme implémenter par le symbole '\&'. \pause
 \item Disponible que pour certaines instructions comme :  
@@ -288,7 +288,7 @@ Exemple : \=\\
 Le point d'entrée "main \{ \}" :\\
 \begin{itemize}
 \item Défini par le mot clé "main"
-\item Le contenu de ce bloc d'instruction sera exécuter.
+\item Le contenu de ce bloc d'instruction sera exécuté.
 \item Il est le seul à pouvoir appeler des fonctions.
 \end{itemize}\pause
 
@@ -312,7 +312,7 @@ Exemple : \=\\
 \end{tabbing}	
 \end{column}
 \begin{column}{0.5\textwidth}
-Les bibliothéques de fonctions (instruction import):\\
+Les bibliothéques de fonctions:\\
 \begin{itemize}
 \item Possibilité d'utiliser des fonctions définies dans des fichiers .drone.
 \item Doivent être dans le même répertoire que le fichier appelant les fonctions.
@@ -325,16 +325,6 @@ Exemple :\=\\            \>\color{Framarouge}import <\color{black}monFichier.dr
 \end{columns}
 
 \end{frame}
-
-
-
-
-
-
-
-
-
-
 
 \section{Tests de validations}
 
