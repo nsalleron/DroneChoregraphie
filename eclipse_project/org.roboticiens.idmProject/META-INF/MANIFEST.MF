@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.roboticiens.idmProject
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.roboticiens.idmProject; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.roboticiens.idmProject.droneMain.util,
+ org.roboticiens.idmProject.serializer,
+ org.roboticiens.idmProject.parser.antlr,
+ org.roboticiens.idmProject.services,
+ org.roboticiens.idmProject,
+ org.roboticiens.idmProject.parser.antlr.internal,
+ org.roboticiens.idmProject.scoping,
+ org.roboticiens.idmProject.droneMain,
+ org.roboticiens.idmProject.droneMain.impl,
+ org.roboticiens.idmProject.generator,
+ org.roboticiens.idmProject.validation
+Import-Package: org.apache.log4j
