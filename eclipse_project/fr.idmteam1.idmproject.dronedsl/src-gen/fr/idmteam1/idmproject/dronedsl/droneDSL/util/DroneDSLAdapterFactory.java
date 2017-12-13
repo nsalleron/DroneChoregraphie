@@ -91,11 +91,6 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createPourcentConstAdapter();
       }
       @Override
-      public Adapter caseImports(Imports object)
-      {
-        return createImportsAdapter();
-      }
-      @Override
       public Adapter caseImport(Import object)
       {
         return createImportAdapter();
@@ -181,6 +176,16 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createFonctionDeclAdapter();
       }
       @Override
+      public Adapter caseFonctionExterne(FonctionExterne object)
+      {
+        return createFonctionExterneAdapter();
+      }
+      @Override
+      public Adapter caseFonctionRef(FonctionRef object)
+      {
+        return createFonctionRefAdapter();
+      }
+      @Override
       public Adapter casePourcentDecl(PourcentDecl object)
       {
         return createPourcentDeclAdapter();
@@ -189,6 +194,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseIntDecl(IntDecl object)
       {
         return createIntDeclAdapter();
+      }
+      @Override
+      public Adapter caseVarDecl(VarDecl object)
+      {
+        return createVarDeclAdapter();
       }
       @Override
       public Adapter casePourcentExp(PourcentExp object)
@@ -239,6 +249,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAR(AR object)
       {
         return createARAdapter();
+      }
+      @Override
+      public Adapter caseParallele(Parallele object)
+      {
+        return createParalleleAdapter();
       }
       @Override
       public Adapter caseParallele2(Parallele2 object)
@@ -313,21 +328,6 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPourcentConstAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Imports <em>Imports</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Imports
-   * @generated
-   */
-  public Adapter createImportsAdapter()
   {
     return null;
   }
@@ -588,6 +588,36 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne <em>Fonction Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne
+   * @generated
+   */
+  public Adapter createFonctionExterneAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef <em>Fonction Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef
+   * @generated
+   */
+  public Adapter createFonctionRefAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl <em>Pourcent Decl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -613,6 +643,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIntDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl <em>Var Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl
+   * @generated
+   */
+  public Adapter createVarDeclAdapter()
   {
     return null;
   }
@@ -763,6 +808,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createARAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele <em>Parallele</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele
+   * @generated
+   */
+  public Adapter createParalleleAdapter()
   {
     return null;
   }

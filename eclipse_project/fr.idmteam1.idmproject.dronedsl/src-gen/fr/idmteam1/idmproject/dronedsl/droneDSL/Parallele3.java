@@ -14,8 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getA <em>A</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getB <em>B</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getC <em>C</em>}</li>
  * </ul>
  *
@@ -23,60 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Parallele3 extends EObject
+public interface Parallele3 extends Parallele
 {
-  /**
-   * Returns the value of the '<em><b>A</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>A</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>A</em>' containment reference.
-   * @see #setA(EObject)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getParallele3_A()
-   * @model containment="true"
-   * @generated
-   */
-  EObject getA();
-
-  /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getA <em>A</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>A</em>' containment reference.
-   * @see #getA()
-   * @generated
-   */
-  void setA(EObject value);
-
-  /**
-   * Returns the value of the '<em><b>B</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>B</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>B</em>' containment reference.
-   * @see #setB(EObject)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getParallele3_B()
-   * @model containment="true"
-   * @generated
-   */
-  EObject getB();
-
-  /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getB <em>B</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>B</em>' containment reference.
-   * @see #getB()
-   * @generated
-   */
-  void setB(EObject value);
-
   /**
    * Returns the value of the '<em><b>C</b></em>' containment reference.
    * <!-- begin-user-doc -->

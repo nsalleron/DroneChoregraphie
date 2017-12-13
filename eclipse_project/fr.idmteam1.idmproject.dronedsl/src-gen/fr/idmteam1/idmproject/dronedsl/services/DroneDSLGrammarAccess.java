@@ -29,29 +29,33 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cImportsAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cImportsImportParserRuleCall_0_0 = (RuleCall)cImportsAssignment_0.eContents().get(0);
 		private final Keyword cLineFeedKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPvhmAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0 = (RuleCall)cPvhmAssignment_2.eContents().get(0);
+		private final Assignment cExternalFuncsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExternalFuncsFonctionExterneParserRuleCall_2_0 = (RuleCall)cExternalFuncsAssignment_2.eContents().get(0);
 		private final Keyword cLineFeedKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cPvdmAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0 = (RuleCall)cPvdmAssignment_4.eContents().get(0);
+		private final Assignment cPvhmAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPvhmPourcent_vitesse_hauteur_maxParserRuleCall_4_0 = (RuleCall)cPvhmAssignment_4.eContents().get(0);
 		private final Keyword cLineFeedKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cPvrmAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0 = (RuleCall)cPvrmAssignment_6.eContents().get(0);
+		private final Assignment cPvdmAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPvdmPourcent_vitesse_deplacement_maxParserRuleCall_6_0 = (RuleCall)cPvdmAssignment_6.eContents().get(0);
 		private final Keyword cLineFeedKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cHmAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cHmHauteur_maxParserRuleCall_8_0 = (RuleCall)cHmAssignment_8.eContents().get(0);
+		private final Assignment cPvrmAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cPvrmPourcent_vitesse_rotation_maxParserRuleCall_8_0 = (RuleCall)cPvrmAssignment_8.eContents().get(0);
 		private final Keyword cLineFeedKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cEmAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cEmEloignement_maxParserRuleCall_10_0 = (RuleCall)cEmAssignment_10.eContents().get(0);
+		private final Assignment cHmAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cHmHauteur_maxParserRuleCall_10_0 = (RuleCall)cHmAssignment_10.eContents().get(0);
 		private final Keyword cLineFeedKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cMAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cMMainParserRuleCall_12_0 = (RuleCall)cMAssignment_12.eContents().get(0);
-		private final Assignment cFonctionsAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cFonctionsFonctionDeclParserRuleCall_13_0 = (RuleCall)cFonctionsAssignment_13.eContents().get(0);
-		private final Keyword cLineFeedKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Assignment cEmAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cEmEloignement_maxParserRuleCall_12_0 = (RuleCall)cEmAssignment_12.eContents().get(0);
+		private final Keyword cLineFeedKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cMAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cMMainParserRuleCall_14_0 = (RuleCall)cMAssignment_14.eContents().get(0);
+		private final Assignment cFonctionsAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cFonctionsFonctionDeclParserRuleCall_15_0 = (RuleCall)cFonctionsAssignment_15.eContents().get(0);
+		private final Keyword cLineFeedKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//Model:
 		//	imports+=Import* '\n'*
+		//	externalFuncs+=FonctionExterne* '\n'*
 		//	pvhm+=Pourcent_vitesse_hauteur_max '\n'*
 		//	pvdm+=Pourcent_vitesse_deplacement_max '\n'*
 		//	pvrm+=Pourcent_vitesse_rotation_max '\n'*
@@ -60,9 +64,9 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//	m=Main fonctions+=FonctionDecl* '\n'*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//imports+=Import* '\n'* pvhm+=Pourcent_vitesse_hauteur_max '\n'* pvdm+=Pourcent_vitesse_deplacement_max '\n'*
-		//pvrm+=Pourcent_vitesse_rotation_max '\n'* hm+=Hauteur_max '\n'* em+=Eloignement_max '\n'* m=Main
-		//fonctions+=FonctionDecl* '\n'*
+		//imports+=Import* '\n'* externalFuncs+=FonctionExterne* '\n'* pvhm+=Pourcent_vitesse_hauteur_max '\n'*
+		//pvdm+=Pourcent_vitesse_deplacement_max '\n'* pvrm+=Pourcent_vitesse_rotation_max '\n'* hm+=Hauteur_max '\n'*
+		//em+=Eloignement_max '\n'* m=Main fonctions+=FonctionDecl* '\n'*
 		public Group getGroup() { return cGroup; }
 		
 		//imports+=Import*
@@ -74,65 +78,74 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'\n'*
 		public Keyword getLineFeedKeyword_1() { return cLineFeedKeyword_1; }
 		
-		//pvhm+=Pourcent_vitesse_hauteur_max
-		public Assignment getPvhmAssignment_2() { return cPvhmAssignment_2; }
+		//externalFuncs+=FonctionExterne*
+		public Assignment getExternalFuncsAssignment_2() { return cExternalFuncsAssignment_2; }
 		
-		//Pourcent_vitesse_hauteur_max
-		public RuleCall getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0() { return cPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0; }
+		//FonctionExterne
+		public RuleCall getExternalFuncsFonctionExterneParserRuleCall_2_0() { return cExternalFuncsFonctionExterneParserRuleCall_2_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_3() { return cLineFeedKeyword_3; }
 		
-		//pvdm+=Pourcent_vitesse_deplacement_max
-		public Assignment getPvdmAssignment_4() { return cPvdmAssignment_4; }
+		//pvhm+=Pourcent_vitesse_hauteur_max
+		public Assignment getPvhmAssignment_4() { return cPvhmAssignment_4; }
 		
-		//Pourcent_vitesse_deplacement_max
-		public RuleCall getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0() { return cPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0; }
+		//Pourcent_vitesse_hauteur_max
+		public RuleCall getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_4_0() { return cPvhmPourcent_vitesse_hauteur_maxParserRuleCall_4_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_5() { return cLineFeedKeyword_5; }
 		
-		//pvrm+=Pourcent_vitesse_rotation_max
-		public Assignment getPvrmAssignment_6() { return cPvrmAssignment_6; }
+		//pvdm+=Pourcent_vitesse_deplacement_max
+		public Assignment getPvdmAssignment_6() { return cPvdmAssignment_6; }
 		
-		//Pourcent_vitesse_rotation_max
-		public RuleCall getPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0() { return cPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0; }
+		//Pourcent_vitesse_deplacement_max
+		public RuleCall getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_6_0() { return cPvdmPourcent_vitesse_deplacement_maxParserRuleCall_6_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_7() { return cLineFeedKeyword_7; }
 		
-		//hm+=Hauteur_max
-		public Assignment getHmAssignment_8() { return cHmAssignment_8; }
+		//pvrm+=Pourcent_vitesse_rotation_max
+		public Assignment getPvrmAssignment_8() { return cPvrmAssignment_8; }
 		
-		//Hauteur_max
-		public RuleCall getHmHauteur_maxParserRuleCall_8_0() { return cHmHauteur_maxParserRuleCall_8_0; }
+		//Pourcent_vitesse_rotation_max
+		public RuleCall getPvrmPourcent_vitesse_rotation_maxParserRuleCall_8_0() { return cPvrmPourcent_vitesse_rotation_maxParserRuleCall_8_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_9() { return cLineFeedKeyword_9; }
 		
-		//em+=Eloignement_max
-		public Assignment getEmAssignment_10() { return cEmAssignment_10; }
+		//hm+=Hauteur_max
+		public Assignment getHmAssignment_10() { return cHmAssignment_10; }
 		
-		//Eloignement_max
-		public RuleCall getEmEloignement_maxParserRuleCall_10_0() { return cEmEloignement_maxParserRuleCall_10_0; }
+		//Hauteur_max
+		public RuleCall getHmHauteur_maxParserRuleCall_10_0() { return cHmHauteur_maxParserRuleCall_10_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_11() { return cLineFeedKeyword_11; }
 		
-		//m=Main
-		public Assignment getMAssignment_12() { return cMAssignment_12; }
+		//em+=Eloignement_max
+		public Assignment getEmAssignment_12() { return cEmAssignment_12; }
 		
-		//Main
-		public RuleCall getMMainParserRuleCall_12_0() { return cMMainParserRuleCall_12_0; }
-		
-		//fonctions+=FonctionDecl*
-		public Assignment getFonctionsAssignment_13() { return cFonctionsAssignment_13; }
-		
-		//FonctionDecl
-		public RuleCall getFonctionsFonctionDeclParserRuleCall_13_0() { return cFonctionsFonctionDeclParserRuleCall_13_0; }
+		//Eloignement_max
+		public RuleCall getEmEloignement_maxParserRuleCall_12_0() { return cEmEloignement_maxParserRuleCall_12_0; }
 		
 		//'\n'*
-		public Keyword getLineFeedKeyword_14() { return cLineFeedKeyword_14; }
+		public Keyword getLineFeedKeyword_13() { return cLineFeedKeyword_13; }
+		
+		//m=Main
+		public Assignment getMAssignment_14() { return cMAssignment_14; }
+		
+		//Main
+		public RuleCall getMMainParserRuleCall_14_0() { return cMMainParserRuleCall_14_0; }
+		
+		//fonctions+=FonctionDecl*
+		public Assignment getFonctionsAssignment_15() { return cFonctionsAssignment_15; }
+		
+		//FonctionDecl
+		public RuleCall getFonctionsFonctionDeclParserRuleCall_15_0() { return cFonctionsFonctionDeclParserRuleCall_15_0; }
+		
+		//'\n'*
+		public Keyword getLineFeedKeyword_16() { return cLineFeedKeyword_16; }
 	}
 	public class MainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Main");
@@ -142,18 +155,10 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStartParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Keyword cLineFeedKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
-		private final Assignment cSeconDecAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
-		private final RuleCall cSeconDecIntDeclParserRuleCall_4_0_0 = (RuleCall)cSeconDecAssignment_4_0.eContents().get(0);
-		private final Assignment cPourDecAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
-		private final RuleCall cPourDecPourcentDeclParserRuleCall_4_1_0 = (RuleCall)cPourDecAssignment_4_1.eContents().get(0);
-		private final Assignment cStatementsAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
-		private final RuleCall cStatementsStatementParserRuleCall_4_2_0 = (RuleCall)cStatementsAssignment_4_2.eContents().get(0);
-		private final Assignment cFonctionsAssignment_4_3 = (Assignment)cAlternatives_4.eContents().get(3);
-		private final RuleCall cFonctionsFonctionCallParserRuleCall_4_3_0 = (RuleCall)cFonctionsAssignment_4_3.eContents().get(0);
-		private final Assignment cParalleleAssignment_4_4 = (Assignment)cAlternatives_4.eContents().get(4);
-		private final Alternatives cParalleleAlternatives_4_4_0 = (Alternatives)cParalleleAssignment_4_4.eContents().get(0);
-		private final RuleCall cParalleleParallele2ParserRuleCall_4_4_0_0 = (RuleCall)cParalleleAlternatives_4_4_0.eContents().get(0);
-		private final RuleCall cParalleleParallele3ParserRuleCall_4_4_0_1 = (RuleCall)cParalleleAlternatives_4_4_0.eContents().get(1);
+		private final Assignment cStatementsAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cStatementsStatementParserRuleCall_4_0_0 = (RuleCall)cStatementsAssignment_4_0.eContents().get(0);
+		private final Assignment cFonctionsAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
+		private final RuleCall cFonctionsFonctionCallParserRuleCall_4_1_0 = (RuleCall)cFonctionsAssignment_4_1.eContents().get(0);
 		private final Keyword cLineFeedKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final RuleCall cEndParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		private final Keyword cLineFeedKeyword_7 = (Keyword)cGroup.eContents().get(7);
@@ -162,14 +167,12 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Main:
 		//	'main' '{'
-		//	Start '\n'* (SeconDec+=IntDecl | PourDec+=PourcentDecl | statements+=Statement | fonctions+=FonctionCall |
-		//	parallele+=(Parallele2 | Parallele3))* '\n'*
+		//	Start '\n'* (statements+=Statement | fonctions+=FonctionCall)* '\n'*
 		//	End '\n'*
 		//	'}' '\n'*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'main' '{' Start '\n'* (SeconDec+=IntDecl | PourDec+=PourcentDecl | statements+=Statement | fonctions+=FonctionCall |
-		//parallele+=(Parallele2 | Parallele3))* '\n'* End '\n'* '}' '\n'*
+		//'main' '{' Start '\n'* (statements+=Statement | fonctions+=FonctionCall)* '\n'* End '\n'* '}' '\n'*
 		public Group getGroup() { return cGroup; }
 		
 		//'main'
@@ -184,45 +187,20 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'\n'*
 		public Keyword getLineFeedKeyword_3() { return cLineFeedKeyword_3; }
 		
-		//(SeconDec+=IntDecl | PourDec+=PourcentDecl | statements+=Statement | fonctions+=FonctionCall | parallele+=(Parallele2 |
-		//Parallele3))*
+		//(statements+=Statement | fonctions+=FonctionCall)*
 		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 		
-		//SeconDec+=IntDecl
-		public Assignment getSeconDecAssignment_4_0() { return cSeconDecAssignment_4_0; }
-		
-		//IntDecl
-		public RuleCall getSeconDecIntDeclParserRuleCall_4_0_0() { return cSeconDecIntDeclParserRuleCall_4_0_0; }
-		
-		//PourDec+=PourcentDecl
-		public Assignment getPourDecAssignment_4_1() { return cPourDecAssignment_4_1; }
-		
-		//PourcentDecl
-		public RuleCall getPourDecPourcentDeclParserRuleCall_4_1_0() { return cPourDecPourcentDeclParserRuleCall_4_1_0; }
-		
 		//statements+=Statement
-		public Assignment getStatementsAssignment_4_2() { return cStatementsAssignment_4_2; }
+		public Assignment getStatementsAssignment_4_0() { return cStatementsAssignment_4_0; }
 		
 		//Statement
-		public RuleCall getStatementsStatementParserRuleCall_4_2_0() { return cStatementsStatementParserRuleCall_4_2_0; }
+		public RuleCall getStatementsStatementParserRuleCall_4_0_0() { return cStatementsStatementParserRuleCall_4_0_0; }
 		
 		//fonctions+=FonctionCall
-		public Assignment getFonctionsAssignment_4_3() { return cFonctionsAssignment_4_3; }
+		public Assignment getFonctionsAssignment_4_1() { return cFonctionsAssignment_4_1; }
 		
 		//FonctionCall
-		public RuleCall getFonctionsFonctionCallParserRuleCall_4_3_0() { return cFonctionsFonctionCallParserRuleCall_4_3_0; }
-		
-		//parallele+=(Parallele2 | Parallele3)
-		public Assignment getParalleleAssignment_4_4() { return cParalleleAssignment_4_4; }
-		
-		//(Parallele2 | Parallele3)
-		public Alternatives getParalleleAlternatives_4_4_0() { return cParalleleAlternatives_4_4_0; }
-		
-		//Parallele2
-		public RuleCall getParalleleParallele2ParserRuleCall_4_4_0_0() { return cParalleleParallele2ParserRuleCall_4_4_0_0; }
-		
-		//Parallele3
-		public RuleCall getParalleleParallele3ParserRuleCall_4_4_0_1() { return cParalleleParallele3ParserRuleCall_4_4_0_1; }
+		public RuleCall getFonctionsFonctionCallParserRuleCall_4_1_0() { return cFonctionsFonctionCallParserRuleCall_4_1_0; }
 		
 		//'\n'*
 		public Keyword getLineFeedKeyword_5() { return cLineFeedKeyword_5; }
@@ -253,21 +231,6 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//POURCENT
 		public RuleCall getValPOURCENTTerminalRuleCall_0() { return cValPOURCENTTerminalRuleCall_0; }
-	}
-	public class ImportsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Imports");
-		private final Assignment cIncludesAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cIncludesImportParserRuleCall_0 = (RuleCall)cIncludesAssignment.eContents().get(0);
-		
-		//Imports:
-		//	includes+=Import;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//includes+=Import
-		public Assignment getIncludesAssignment() { return cIncludesAssignment; }
-		
-		//Import
-		public RuleCall getIncludesImportParserRuleCall_0() { return cIncludesImportParserRuleCall_0; }
 	}
 	public class ImportElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Import");
@@ -926,12 +889,15 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGaucheParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cReculerParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cMonterParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cParalleleParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cVarDeclParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//Statement:
-		//	Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter;
+		//	Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter | Parallele |
+		//	VarDecl;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter
+		//Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter | Parallele | VarDecl
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Avancer
@@ -960,6 +926,12 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Monter
 		public RuleCall getMonterParserRuleCall_8() { return cMonterParserRuleCall_8; }
+		
+		//Parallele
+		public RuleCall getParalleleParserRuleCall_9() { return cParalleleParserRuleCall_9; }
+		
+		//VarDecl
+		public RuleCall getVarDeclParserRuleCall_10() { return cVarDeclParserRuleCall_10; }
 	}
 	public class FonctionDeclElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionDecl");
@@ -1012,6 +984,64 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
+	public class FonctionExterneElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionExterne");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExternKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFuncKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cLineFeedKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//FonctionExterne:
+		//	'extern' 'func' name=ID '(' ')' '\n'*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'extern' 'func' name=ID '(' ')' '\n'*
+		public Group getGroup() { return cGroup; }
+		
+		//'extern'
+		public Keyword getExternKeyword_0() { return cExternKeyword_0; }
+		
+		//'func'
+		public Keyword getFuncKeyword_1() { return cFuncKeyword_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		
+		//'\n'*
+		public Keyword getLineFeedKeyword_5() { return cLineFeedKeyword_5; }
+	}
+	public class FonctionRefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionRef");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cFonctionDeclParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFonctionExterneParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//FonctionRef:
+		//	FonctionDecl | FonctionExterne;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//FonctionDecl | FonctionExterne
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//FonctionDecl
+		public RuleCall getFonctionDeclParserRuleCall_0() { return cFonctionDeclParserRuleCall_0; }
+		
+		//FonctionExterne
+		public RuleCall getFonctionExterneParserRuleCall_1() { return cFonctionExterneParserRuleCall_1; }
+	}
 	public class PourcentDeclElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentDecl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1022,15 +1052,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cValPourcentConstParserRuleCall_3_0 = (RuleCall)cValAssignment_3.eContents().get(0);
 		
-		///*
-		//
-		//RefPourVar:
-		//	var=[PourcentDecl]
-		//;
-		//PourConstante:
-		//	val=POURCENT
-		//;
-		//*/ PourcentDecl:
+		//PourcentDecl:
 		//	'Pourcent' name=ID '=' val=PourcentConst;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1089,6 +1111,25 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//IntExp
 		public RuleCall getValIntExpParserRuleCall_3_0() { return cValIntExpParserRuleCall_3_0; }
+	}
+	public class VarDeclElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.VarDecl");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cPourcentDeclParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIntDeclParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//VarDecl:
+		//	PourcentDecl | IntDecl;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//PourcentDecl | IntDecl
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//PourcentDecl
+		public RuleCall getPourcentDeclParserRuleCall_0() { return cPourcentDeclParserRuleCall_0; }
+		
+		//IntDecl
+		public RuleCall getIntDeclParserRuleCall_1() { return cIntDeclParserRuleCall_1; }
 	}
 	public class PourcentExpElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
@@ -1185,26 +1226,26 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionCall");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cFuncAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cFuncFonctionDeclCrossReference_0_0 = (CrossReference)cFuncAssignment_0.eContents().get(0);
-		private final RuleCall cFuncFonctionDeclIDTerminalRuleCall_0_0_1 = (RuleCall)cFuncFonctionDeclCrossReference_0_0.eContents().get(1);
+		private final CrossReference cFuncFonctionRefCrossReference_0_0 = (CrossReference)cFuncAssignment_0.eContents().get(0);
+		private final RuleCall cFuncFonctionRefIDTerminalRuleCall_0_0_1 = (RuleCall)cFuncFonctionRefCrossReference_0_0.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//FonctionCall:
-		//	func=[FonctionDecl] '(' ')';
+		//	func=[FonctionRef] '(' ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//func=[FonctionDecl] '(' ')'
+		//func=[FonctionRef] '(' ')'
 		public Group getGroup() { return cGroup; }
 		
-		//func=[FonctionDecl]
+		//func=[FonctionRef]
 		public Assignment getFuncAssignment_0() { return cFuncAssignment_0; }
 		
-		//[FonctionDecl]
-		public CrossReference getFuncFonctionDeclCrossReference_0_0() { return cFuncFonctionDeclCrossReference_0_0; }
+		//[FonctionRef]
+		public CrossReference getFuncFonctionRefCrossReference_0_0() { return cFuncFonctionRefCrossReference_0_0; }
 		
 		//ID
-		public RuleCall getFuncFonctionDeclIDTerminalRuleCall_0_0_1() { return cFuncFonctionDeclIDTerminalRuleCall_0_0_1; }
+		public RuleCall getFuncFonctionRefIDTerminalRuleCall_0_0_1() { return cFuncFonctionRefIDTerminalRuleCall_0_0_1; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
@@ -1287,6 +1328,25 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Reculer
 		public RuleCall getReculerParserRuleCall_1() { return cReculerParserRuleCall_1; }
+	}
+	public class ParalleleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Parallele");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cParallele2ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cParallele3ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Parallele:
+		//	Parallele2 | Parallele3;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Parallele2 | Parallele3
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Parallele2
+		public RuleCall getParallele2ParserRuleCall_0() { return cParallele2ParserRuleCall_0; }
+		
+		//Parallele3
+		public RuleCall getParallele3ParserRuleCall_1() { return cParallele3ParserRuleCall_1; }
 	}
 	public class Parallele2Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Parallele2");
@@ -2480,7 +2540,6 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final MainElements pMain;
 	private final TerminalRule tPOURCENT;
 	private final PourcentConstElements pPourcentConst;
-	private final ImportsElements pImports;
 	private final ImportElements pImport;
 	private final TerminalRule tINCLUDE;
 	private final Pourcent_vitesse_hauteur_maxElements pPourcent_vitesse_hauteur_max;
@@ -2503,8 +2562,11 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final EndElements pEnd;
 	private final StatementElements pStatement;
 	private final FonctionDeclElements pFonctionDecl;
+	private final FonctionExterneElements pFonctionExterne;
+	private final FonctionRefElements pFonctionRef;
 	private final PourcentDeclElements pPourcentDecl;
 	private final IntDeclElements pIntDecl;
+	private final VarDeclElements pVarDecl;
 	private final PourcentExpElements pPourcentExp;
 	private final RefIntVarElements pRefIntVar;
 	private final RefPourcentVarElements pRefPourcentVar;
@@ -2515,6 +2577,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final GDrElements pGDr;
 	private final RGRDElements pRGRD;
 	private final ARElements pAR;
+	private final ParalleleElements pParallele;
 	private final Parallele2Elements pParallele2;
 	private final Parallele3Elements pParallele3;
 	
@@ -2531,7 +2594,6 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMain = new MainElements();
 		this.tPOURCENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.POURCENT");
 		this.pPourcentConst = new PourcentConstElements();
-		this.pImports = new ImportsElements();
 		this.pImport = new ImportElements();
 		this.tINCLUDE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.INCLUDE");
 		this.pPourcent_vitesse_hauteur_max = new Pourcent_vitesse_hauteur_maxElements();
@@ -2554,8 +2616,11 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEnd = new EndElements();
 		this.pStatement = new StatementElements();
 		this.pFonctionDecl = new FonctionDeclElements();
+		this.pFonctionExterne = new FonctionExterneElements();
+		this.pFonctionRef = new FonctionRefElements();
 		this.pPourcentDecl = new PourcentDeclElements();
 		this.pIntDecl = new IntDeclElements();
+		this.pVarDecl = new VarDeclElements();
 		this.pPourcentExp = new PourcentExpElements();
 		this.pRefIntVar = new RefIntVarElements();
 		this.pRefPourcentVar = new RefPourcentVarElements();
@@ -2566,6 +2631,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGDr = new GDrElements();
 		this.pRGRD = new RGRDElements();
 		this.pAR = new ARElements();
+		this.pParallele = new ParalleleElements();
 		this.pParallele2 = new Parallele2Elements();
 		this.pParallele3 = new Parallele3Elements();
 	}
@@ -2599,6 +2665,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Model:
 	//	imports+=Import* '\n'*
+	//	externalFuncs+=FonctionExterne* '\n'*
 	//	pvhm+=Pourcent_vitesse_hauteur_max '\n'*
 	//	pvdm+=Pourcent_vitesse_deplacement_max '\n'*
 	//	pvrm+=Pourcent_vitesse_rotation_max '\n'*
@@ -2615,8 +2682,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Main:
 	//	'main' '{'
-	//	Start '\n'* (SeconDec+=IntDecl | PourDec+=PourcentDecl | statements+=Statement | fonctions+=FonctionCall |
-	//	parallele+=(Parallele2 | Parallele3))* '\n'*
+	//	Start '\n'* (statements+=Statement | fonctions+=FonctionCall)* '\n'*
 	//	End '\n'*
 	//	'}' '\n'*;
 	public MainElements getMainAccess() {
@@ -2643,16 +2709,6 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getPourcentConstAccess().getRule();
 	}
 	
-	//Imports:
-	//	includes+=Import;
-	public ImportsElements getImportsAccess() {
-		return pImports;
-	}
-	
-	public ParserRule getImportsRule() {
-		return getImportsAccess().getRule();
-	}
-	
 	//Import:
 	//	'import' '<' importURI=INCLUDE '>' '\n'*;
 	public ImportElements getImportAccess() {
@@ -2664,7 +2720,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal INCLUDE:
-	//	ID '.drone';
+	//	ID '.lib_drone';
 	public TerminalRule getINCLUDERule() {
 		return tINCLUDE;
 	}
@@ -2882,7 +2938,8 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Statement:
-	//	Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter;
+	//	Avancer | Descendre | RotationDroite | RotationGauche | Pause | Droite | Gauche | Reculer | Monter | Parallele |
+	//	VarDecl;
 	public StatementElements getStatementAccess() {
 		return pStatement;
 	}
@@ -2901,15 +2958,27 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getFonctionDeclAccess().getRule();
 	}
 	
-	///*
-	//
-	//RefPourVar:
-	//	var=[PourcentDecl]
-	//;
-	//PourConstante:
-	//	val=POURCENT
-	//;
-	//*/ PourcentDecl:
+	//FonctionExterne:
+	//	'extern' 'func' name=ID '(' ')' '\n'*;
+	public FonctionExterneElements getFonctionExterneAccess() {
+		return pFonctionExterne;
+	}
+	
+	public ParserRule getFonctionExterneRule() {
+		return getFonctionExterneAccess().getRule();
+	}
+	
+	//FonctionRef:
+	//	FonctionDecl | FonctionExterne;
+	public FonctionRefElements getFonctionRefAccess() {
+		return pFonctionRef;
+	}
+	
+	public ParserRule getFonctionRefRule() {
+		return getFonctionRefAccess().getRule();
+	}
+	
+	//PourcentDecl:
 	//	'Pourcent' name=ID '=' val=PourcentConst;
 	public PourcentDeclElements getPourcentDeclAccess() {
 		return pPourcentDecl;
@@ -2927,6 +2996,16 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getIntDeclRule() {
 		return getIntDeclAccess().getRule();
+	}
+	
+	//VarDecl:
+	//	PourcentDecl | IntDecl;
+	public VarDeclElements getVarDeclAccess() {
+		return pVarDecl;
+	}
+	
+	public ParserRule getVarDeclRule() {
+		return getVarDeclAccess().getRule();
 	}
 	
 	//PourcentExp:
@@ -2980,7 +3059,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FonctionCall:
-	//	func=[FonctionDecl] '(' ')';
+	//	func=[FonctionRef] '(' ')';
 	public FonctionCallElements getFonctionCallAccess() {
 		return pFonctionCall;
 	}
@@ -3027,6 +3106,16 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getARRule() {
 		return getARAccess().getRule();
+	}
+	
+	//Parallele:
+	//	Parallele2 | Parallele3;
+	public ParalleleElements getParalleleAccess() {
+		return pParallele;
+	}
+	
+	public ParserRule getParalleleRule() {
+		return getParalleleAccess().getRule();
 	}
 	
 	//Parallele2:

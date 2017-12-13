@@ -7,4 +7,10 @@
 			class = "fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage"
 			genModel = "model/generated/DroneDSL.genmodel" />
 	</extension>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
+			uri = "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSLLib" 
+			class = "fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage" 
+			genModel = "model/generated/DroneDSLLib.genmodel" />
+	</extension>
 </plugin>

@@ -95,13 +95,6 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DroneDSLPackage.IMPORTS:
-      {
-        Imports imports = (Imports)theEObject;
-        T result = caseImports(imports);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case DroneDSLPackage.IMPORT:
       {
         Import import_ = (Import)theEObject;
@@ -235,6 +228,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         FonctionDecl fonctionDecl = (FonctionDecl)theEObject;
         T result = caseFonctionDecl(fonctionDecl);
+        if (result == null) result = caseFonctionRef(fonctionDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.FONCTION_EXTERNE:
+      {
+        FonctionExterne fonctionExterne = (FonctionExterne)theEObject;
+        T result = caseFonctionExterne(fonctionExterne);
+        if (result == null) result = caseFonctionRef(fonctionExterne);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.FONCTION_REF:
+      {
+        FonctionRef fonctionRef = (FonctionRef)theEObject;
+        T result = caseFonctionRef(fonctionRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -242,6 +251,8 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         PourcentDecl pourcentDecl = (PourcentDecl)theEObject;
         T result = casePourcentDecl(pourcentDecl);
+        if (result == null) result = caseVarDecl(pourcentDecl);
+        if (result == null) result = caseStatement(pourcentDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -249,6 +260,16 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         IntDecl intDecl = (IntDecl)theEObject;
         T result = caseIntDecl(intDecl);
+        if (result == null) result = caseVarDecl(intDecl);
+        if (result == null) result = caseStatement(intDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.VAR_DECL:
+      {
+        VarDecl varDecl = (VarDecl)theEObject;
+        T result = caseVarDecl(varDecl);
+        if (result == null) result = caseStatement(varDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -325,10 +346,20 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLPackage.PARALLELE:
+      {
+        Parallele parallele = (Parallele)theEObject;
+        T result = caseParallele(parallele);
+        if (result == null) result = caseStatement(parallele);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLPackage.PARALLELE2:
       {
         Parallele2 parallele2 = (Parallele2)theEObject;
         T result = caseParallele2(parallele2);
+        if (result == null) result = caseParallele(parallele2);
+        if (result == null) result = caseStatement(parallele2);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -336,6 +367,8 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Parallele3 parallele3 = (Parallele3)theEObject;
         T result = caseParallele3(parallele3);
+        if (result == null) result = caseParallele(parallele3);
+        if (result == null) result = caseStatement(parallele3);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -387,22 +420,6 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePourcentConst(PourcentConst object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Imports</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Imports</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImports(Imports object)
   {
     return null;
   }
@@ -680,6 +697,38 @@ public class DroneDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Externe</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Externe</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionExterne(FonctionExterne object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionRef(FonctionRef object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Pourcent Decl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -707,6 +756,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIntDecl(IntDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Var Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Var Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVarDecl(VarDecl object)
   {
     return null;
   }
@@ -867,6 +932,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAR(AR object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parallele</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parallele</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParallele(Parallele object)
   {
     return null;
   }

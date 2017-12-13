@@ -9,16 +9,12 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Statement;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -31,34 +27,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements FonctionDecl
+public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -88,29 +63,6 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.FONCTION_DECL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.FONCTION_DECL__NAME, oldName, name));
   }
 
   /**
@@ -153,8 +105,6 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_DECL__NAME:
-        return getName();
       case DroneDSLPackage.FONCTION_DECL__BODY:
         return getBody();
     }
@@ -172,9 +122,6 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_DECL__NAME:
-        setName((String)newValue);
-        return;
       case DroneDSLPackage.FONCTION_DECL__BODY:
         getBody().clear();
         getBody().addAll((Collection<? extends Statement>)newValue);
@@ -193,9 +140,6 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_DECL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case DroneDSLPackage.FONCTION_DECL__BODY:
         getBody().clear();
         return;
@@ -213,29 +157,10 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_DECL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DroneDSLPackage.FONCTION_DECL__BODY:
         return body != null && !body.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //FonctionDeclImpl

@@ -11,10 +11,10 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Imports;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
@@ -77,6 +77,9 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case DroneDSLPackage.FONCTION_DECL:
 				sequence_FonctionDecl(context, (FonctionDecl) semanticObject); 
 				return; 
+			case DroneDSLPackage.FONCTION_EXTERNE:
+				sequence_FonctionExterne(context, (FonctionExterne) semanticObject); 
+				return; 
 			case DroneDSLPackage.GAUCHE:
 				sequence_Gauche(context, (Gauche) semanticObject); 
 				return; 
@@ -85,9 +88,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case DroneDSLPackage.IMPORT:
 				sequence_Import(context, (Import) semanticObject); 
-				return; 
-			case DroneDSLPackage.IMPORTS:
-				sequence_Imports(context, (Imports) semanticObject); 
 				return; 
 			case DroneDSLPackage.INT_CONSTANTE:
 				sequence_IntConstante(context, (IntConstante) semanticObject); 
@@ -240,7 +240,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     FonctionCall returns FonctionCall
 	 *
 	 * Constraint:
-	 *     func=[FonctionDecl|ID]
+	 *     func=[FonctionRef|ID]
 	 */
 	protected void sequence_FonctionCall(ISerializationContext context, FonctionCall semanticObject) {
 		if (errorAcceptor != null) {
@@ -248,7 +248,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__FUNC));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionCallAccess().getFuncFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__FUNC, false));
+		feeder.accept(grammarAccess.getFonctionCallAccess().getFuncFonctionRefIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__FUNC, false));
 		feeder.finish();
 	}
 	
@@ -256,12 +256,32 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     FonctionDecl returns FonctionDecl
+	 *     FonctionRef returns FonctionDecl
 	 *
 	 * Constraint:
 	 *     (name=ID body+=Statement*)
 	 */
 	protected void sequence_FonctionDecl(ISerializationContext context, FonctionDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FonctionExterne returns FonctionExterne
+	 *     FonctionRef returns FonctionExterne
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_FonctionExterne(ISerializationContext context, FonctionExterne semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_REF__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_REF__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -326,18 +346,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Imports returns Imports
-	 *
-	 * Constraint:
-	 *     includes+=Import
-	 */
-	protected void sequence_Imports(ISerializationContext context, Imports semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     IntConstante returns IntConstante
 	 *     IntExp returns IntConstante
 	 *
@@ -357,15 +365,17 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns IntDecl
 	 *     IntDecl returns IntDecl
+	 *     VarDecl returns IntDecl
 	 *
 	 * Constraint:
 	 *     (name=ID val=IntExp)
 	 */
 	protected void sequence_IntDecl(ISerializationContext context, IntDecl semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.INT_DECL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.INT_DECL__NAME));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME));
 			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.INT_DECL__VAL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.INT_DECL__VAL));
 		}
@@ -381,14 +391,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Main returns Main
 	 *
 	 * Constraint:
-	 *     (
-	 *         SeconDec+=IntDecl | 
-	 *         PourDec+=PourcentDecl | 
-	 *         statements+=Statement | 
-	 *         fonctions+=FonctionCall | 
-	 *         parallele+=Parallele2 | 
-	 *         parallele+=Parallele3
-	 *     )+
+	 *     (statements+=Statement | fonctions+=FonctionCall)+
 	 */
 	protected void sequence_Main(ISerializationContext context, Main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -402,6 +405,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Constraint:
 	 *     (
 	 *         imports+=Import* 
+	 *         externalFuncs+=FonctionExterne* 
 	 *         pvhm+=Pourcent_vitesse_hauteur_max 
 	 *         pvdm+=Pourcent_vitesse_deplacement_max 
 	 *         pvrm+=Pourcent_vitesse_rotation_max 
@@ -441,6 +445,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Parallele2
+	 *     Parallele returns Parallele2
 	 *     Parallele2 returns Parallele2
 	 *
 	 * Constraint:
@@ -466,6 +472,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Parallele3
+	 *     Parallele returns Parallele3
 	 *     Parallele3 returns Parallele3
 	 *
 	 * Constraint:
@@ -541,15 +549,17 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns PourcentDecl
 	 *     PourcentDecl returns PourcentDecl
+	 *     VarDecl returns PourcentDecl
 	 *
 	 * Constraint:
 	 *     (name=ID val=PourcentConst)
 	 */
 	protected void sequence_PourcentDecl(ISerializationContext context, PourcentDecl semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.POURCENT_DECL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.POURCENT_DECL__NAME));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME));
 			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.POURCENT_DECL__VAL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.POURCENT_DECL__VAL));
 		}

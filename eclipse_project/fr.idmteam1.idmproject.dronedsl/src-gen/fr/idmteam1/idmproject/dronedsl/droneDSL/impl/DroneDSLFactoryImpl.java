@@ -68,7 +68,6 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.MODEL: return createModel();
       case DroneDSLPackage.MAIN: return createMain();
       case DroneDSLPackage.POURCENT_CONST: return createPourcentConst();
-      case DroneDSLPackage.IMPORTS: return createImports();
       case DroneDSLPackage.IMPORT: return createImport();
       case DroneDSLPackage.POURCENT_VITESSE_HAUTEUR_MAX: return createPourcent_vitesse_hauteur_max();
       case DroneDSLPackage.POURCENT_VITESSE_DEPLACEMENT_MAX: return createPourcent_vitesse_deplacement_max();
@@ -86,8 +85,11 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.ROTATION_DROITE: return createRotationDroite();
       case DroneDSLPackage.STATEMENT: return createStatement();
       case DroneDSLPackage.FONCTION_DECL: return createFonctionDecl();
+      case DroneDSLPackage.FONCTION_EXTERNE: return createFonctionExterne();
+      case DroneDSLPackage.FONCTION_REF: return createFonctionRef();
       case DroneDSLPackage.POURCENT_DECL: return createPourcentDecl();
       case DroneDSLPackage.INT_DECL: return createIntDecl();
+      case DroneDSLPackage.VAR_DECL: return createVarDecl();
       case DroneDSLPackage.POURCENT_EXP: return createPourcentExp();
       case DroneDSLPackage.REF_INT_VAR: return createRefIntVar();
       case DroneDSLPackage.REF_POURCENT_VAR: return createRefPourcentVar();
@@ -98,6 +100,7 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.GDR: return createGDr();
       case DroneDSLPackage.RGRD: return createRGRD();
       case DroneDSLPackage.AR: return createAR();
+      case DroneDSLPackage.PARALLELE: return createParallele();
       case DroneDSLPackage.PARALLELE2: return createParallele2();
       case DroneDSLPackage.PARALLELE3: return createParallele3();
       default:
@@ -136,17 +139,6 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     PourcentConstImpl pourcentConst = new PourcentConstImpl();
     return pourcentConst;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Imports createImports()
-  {
-    ImportsImpl imports = new ImportsImpl();
-    return imports;
   }
 
   /**
@@ -341,6 +333,28 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public FonctionExterne createFonctionExterne()
+  {
+    FonctionExterneImpl fonctionExterne = new FonctionExterneImpl();
+    return fonctionExterne;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionRef createFonctionRef()
+  {
+    FonctionRefImpl fonctionRef = new FonctionRefImpl();
+    return fonctionRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public PourcentDecl createPourcentDecl()
   {
     PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
@@ -356,6 +370,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     IntDeclImpl intDecl = new IntDeclImpl();
     return intDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarDecl createVarDecl()
+  {
+    VarDeclImpl varDecl = new VarDeclImpl();
+    return varDecl;
   }
 
   /**
@@ -466,6 +491,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     ARImpl ar = new ARImpl();
     return ar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parallele createParallele()
+  {
+    ParalleleImpl parallele = new ParalleleImpl();
+    return parallele;
   }
 
   /**

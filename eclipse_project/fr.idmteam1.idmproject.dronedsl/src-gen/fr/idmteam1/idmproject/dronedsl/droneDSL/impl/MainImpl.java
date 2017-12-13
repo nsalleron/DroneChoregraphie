@@ -5,9 +5,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Statement;
 
 import java.util.Collection;
@@ -17,7 +15,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -33,37 +30,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getSeconDec <em>Secon Dec</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getPourDec <em>Pour Dec</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getStatements <em>Statements</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getFonctions <em>Fonctions</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getParallele <em>Parallele</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MainImpl extends MinimalEObjectImpl.Container implements Main
 {
-  /**
-   * The cached value of the '{@link #getSeconDec() <em>Secon Dec</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSeconDec()
-   * @generated
-   * @ordered
-   */
-  protected EList<IntDecl> seconDec;
-
-  /**
-   * The cached value of the '{@link #getPourDec() <em>Pour Dec</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPourDec()
-   * @generated
-   * @ordered
-   */
-  protected EList<PourcentDecl> pourDec;
-
   /**
    * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -85,16 +59,6 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   protected EList<FonctionCall> fonctions;
 
   /**
-   * The cached value of the '{@link #getParallele() <em>Parallele</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParallele()
-   * @generated
-   * @ordered
-   */
-  protected EList<EObject> parallele;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -113,34 +77,6 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.MAIN;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<IntDecl> getSeconDec()
-  {
-    if (seconDec == null)
-    {
-      seconDec = new EObjectContainmentEList<IntDecl>(IntDecl.class, this, DroneDSLPackage.MAIN__SECON_DEC);
-    }
-    return seconDec;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<PourcentDecl> getPourDec()
-  {
-    if (pourDec == null)
-    {
-      pourDec = new EObjectContainmentEList<PourcentDecl>(PourcentDecl.class, this, DroneDSLPackage.MAIN__POUR_DEC);
-    }
-    return pourDec;
   }
 
   /**
@@ -176,35 +112,15 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<EObject> getParallele()
-  {
-    if (parallele == null)
-    {
-      parallele = new EObjectContainmentEList<EObject>(EObject.class, this, DroneDSLPackage.MAIN__PARALLELE);
-    }
-    return parallele;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__SECON_DEC:
-        return ((InternalEList<?>)getSeconDec()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MAIN__POUR_DEC:
-        return ((InternalEList<?>)getPourDec()).basicRemove(otherEnd, msgs);
       case DroneDSLPackage.MAIN__STATEMENTS:
         return ((InternalEList<?>)getStatements()).basicRemove(otherEnd, msgs);
       case DroneDSLPackage.MAIN__FONCTIONS:
         return ((InternalEList<?>)getFonctions()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MAIN__PARALLELE:
-        return ((InternalEList<?>)getParallele()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -219,16 +135,10 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__SECON_DEC:
-        return getSeconDec();
-      case DroneDSLPackage.MAIN__POUR_DEC:
-        return getPourDec();
       case DroneDSLPackage.MAIN__STATEMENTS:
         return getStatements();
       case DroneDSLPackage.MAIN__FONCTIONS:
         return getFonctions();
-      case DroneDSLPackage.MAIN__PARALLELE:
-        return getParallele();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -244,14 +154,6 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__SECON_DEC:
-        getSeconDec().clear();
-        getSeconDec().addAll((Collection<? extends IntDecl>)newValue);
-        return;
-      case DroneDSLPackage.MAIN__POUR_DEC:
-        getPourDec().clear();
-        getPourDec().addAll((Collection<? extends PourcentDecl>)newValue);
-        return;
       case DroneDSLPackage.MAIN__STATEMENTS:
         getStatements().clear();
         getStatements().addAll((Collection<? extends Statement>)newValue);
@@ -259,10 +161,6 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
       case DroneDSLPackage.MAIN__FONCTIONS:
         getFonctions().clear();
         getFonctions().addAll((Collection<? extends FonctionCall>)newValue);
-        return;
-      case DroneDSLPackage.MAIN__PARALLELE:
-        getParallele().clear();
-        getParallele().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -278,20 +176,11 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__SECON_DEC:
-        getSeconDec().clear();
-        return;
-      case DroneDSLPackage.MAIN__POUR_DEC:
-        getPourDec().clear();
-        return;
       case DroneDSLPackage.MAIN__STATEMENTS:
         getStatements().clear();
         return;
       case DroneDSLPackage.MAIN__FONCTIONS:
         getFonctions().clear();
-        return;
-      case DroneDSLPackage.MAIN__PARALLELE:
-        getParallele().clear();
         return;
     }
     super.eUnset(featureID);
@@ -307,16 +196,10 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__SECON_DEC:
-        return seconDec != null && !seconDec.isEmpty();
-      case DroneDSLPackage.MAIN__POUR_DEC:
-        return pourDec != null && !pourDec.isEmpty();
       case DroneDSLPackage.MAIN__STATEMENTS:
         return statements != null && !statements.isEmpty();
       case DroneDSLPackage.MAIN__FONCTIONS:
         return fonctions != null && !fonctions.isEmpty();
-      case DroneDSLPackage.MAIN__PARALLELE:
-        return parallele != null && !parallele.isEmpty();
     }
     return super.eIsSet(featureID);
   }
