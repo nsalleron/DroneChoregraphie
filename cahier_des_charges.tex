@@ -1,6 +1,6 @@
 \documentclass[12pt, openany]{report}
-\usepackage[latin1]{inputenc}
-%\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage[frenchb]{babel}
@@ -17,7 +17,7 @@
 \usepackage{fancyvrb}
 
 
-%Réglage de l'espacement pour les chapitres
+%RÃ©glage de l'espacement pour les chapitres
 \titleformat{\chapter}[display]   
 	{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{5pt}{\Huge}  
 \titlespacing*{\chapter}{0pt}{-30pt}{5pt}
@@ -51,15 +51,15 @@
 	 { \huge \bfseries Cahier des charges\\[0.4cm] }
  \HRule \\[2cm]
  
- \textsc{\LARGE Université Pierre et Marie Curie}\\[3cm]
+ \textsc{\LARGE UniversitÃ© Pierre et Marie Curie}\\[3cm]
 
  % Auteurs et tuteur
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 Alex \textsc{Archambault}\\
 Yoann \textsc{Ghigoff}\\
-Nicolas \textsc{Salleron}\\	%Sens Alphabétique
-Kévin \textsc{Vu-Saintonge}\\
+Nicolas \textsc{Salleron}\\	%Sens AlphabÃ©tique
+KÃ©vin \textsc{Vu-Saintonge}\\
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
@@ -81,64 +81,64 @@ Kévin \textsc{Vu-Saintonge}\\
 
 
 %%%%%% INTRODUCTION %%%%%%
-%Précise l'objectif du document et en résume le contenu
+%PrÃ©cise l'objectif du document et en rÃ©sume le contenu
 
 \chapter{Introduction}
 \paragraph{}
-Utilisés depuis les années 1990 dans le cadre militaire, les drones font aujourd'hui partie de notre vie de tous les jours. Des sociétés comme Parrot les ont popularisé au sein du grand public. Les smartphones étant de plus en plus répandus et performants, les applications peuvent exploiter les multiples capacités de leurs capteurs embarqués. Les progrès de la miniaturisation permettent même l'utilisation de ces technologies dans de plus petits objets connectés tels les montres.\\
-Les drones sont très souvent utilisés, notamment dans les domaines artistiques comme la danse. Des émissions en témoignent : "La France a un incroyable talent" (25/10/2016) et "Britain's got talent", outre-Manche.\\À Las Vegas, durant le CES 2016, la société Parrot a réalisé le "Drone dance" dans lequel les drones Parrot "dansent" de manière autonome sur une chorégraphie pré-enregistrée. A Londres la même année, la société BeTomorrow a présenté le "Flying Oreo show". 
-Nous observons un réel intérêt du grand public pour les drones et la démonstration de leurs capacités à travers le spectacle et la danse.
+UtilisÃ©s depuis les annÃ©es 1990 dans le cadre militaire, les drones font aujourd'hui partie de notre vie de tous les jours. Des sociÃ©tÃ©s comme Parrot les ont popularisÃ© au sein du grand public. Les smartphones Ã©tant de plus en plus rÃ©pandus et performants, les applications peuvent exploiter les multiples capacitÃ©s de leurs capteurs embarquÃ©s. Les progrÃ¨s de la miniaturisation permettent mÃªme l'utilisation de ces technologies dans de plus petits objets connectÃ©s tels les montres.\\
+Les drones sont trÃ¨s souvent utilisÃ©s, notamment dans les domaines artistiques comme la danse. Des Ã©missions en tÃ©moignent : "La France a un incroyable talent" (25/10/2016) et "Britain's got talent", outre-Manche.\\Ã€ Las Vegas, durant le CES 2016, la sociÃ©tÃ© Parrot a rÃ©alisÃ© le "Drone dance" dans lequel les drones Parrot "dansent" de maniÃ¨re autonome sur une chorÃ©graphie prÃ©-enregistrÃ©e. A Londres la mÃªme annÃ©e, la sociÃ©tÃ© BeTomorrow a prÃ©sentÃ© le "Flying Oreo show". 
+Nous observons un rÃ©el intÃ©rÃªt du grand public pour les drones et la dÃ©monstration de leurs capacitÃ©s Ã  travers le spectacle et la danse.
 
 \section{Contexte}
 \paragraph{}
-Notre projet d'"\textit{Ingénierie Dirigée par les modèles}" est inscrit dans le domaine de la danse. Un danseur doit être capable de préparer la chorégraphie puis de l'exécuter sur le terrain de son choix. L'utilisateur utilisera pour ce faire un langage de programmation spécifique que nous allons réaliser afin de préparer ses danses simplement. 
+Notre projet d'"\textit{IngÃ©nierie DirigÃ©e par les modÃ¨les}" est inscrit dans le domaine de la danse. Un danseur doit Ãªtre capable de prÃ©parer la chorÃ©graphie puis de l'exÃ©cuter sur le terrain de son choix. L'utilisateur utilisera pour ce faire un langage de programmation spÃ©cifique que nous allons rÃ©aliser afin de prÃ©parer ses danses simplement. 
 
 \section{Objectifs}
-\paragraph{} L'objectif est de permettre à un danseur de réaliser une chorégraphie. Pour ce faire notre équipe produira un langage de programmation simple et compréhensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de manière autonome afin de préparer en amont la chorégraphie de son drone. Une fois la chorégraphie validée et compilée par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application générée par notre frontal. Cette application enverra différents ordres au drone et réalisera la chorégraphie.
+\paragraph{} L'objectif est de permettre Ã  un danseur de rÃ©aliser une chorÃ©graphie. Pour ce faire notre Ã©quipe produira un langage de programmation simple et comprÃ©hensible pour l'utilisateur. \\Ce dernier devra par la suite l'utiliser de maniÃ¨re autonome afin de prÃ©parer en amont la chorÃ©graphie de son drone. Une fois la chorÃ©graphie validÃ©e et compilÃ©e par notre logiciel frontal, l'utilisateur doit pouvoir lancer l'application gÃ©nÃ©rÃ©e par notre frontal. Cette application enverra diffÃ©rents ordres au drone et rÃ©alisera la chorÃ©graphie.
 
 \chapter{Le langage de pilotage du drone}
 
-Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera généré à partir d'un modèle qui respectera un méta-modèle. Une extension de fichier spécifique au langage sera utilisée. 
+Notre solution sera un langage avec une syntaxe textuelle. Ce langage sera gÃ©nÃ©rÃ© Ã  partir d'un modÃ¨le qui respectera un mÃ©ta-modÃ¨le. Une extension de fichier spÃ©cifique au langage sera utilisÃ©e. 
 
-\section{Description de l'éditeur du langage}
+\section{Description de l'Ã©diteur du langage}
 
-Afin de faciliter l'écriture des scénarios de pilotage, un éditeur textuel sera fourni au client.\\ Cet éditeur aura les fonctionnalités suivantes : 
+Afin de faciliter l'Ã©criture des scÃ©narios de pilotage, un Ã©diteur textuel sera fourni au client.\\ Cet Ã©diteur aura les fonctionnalitÃ©s suivantes : 
 \begin{itemize}
-	\item l'auto-complétion du langage (cf Chapitre 4)
-	\item la détection de fautes syntaxiques.
-	\item la détection des erreurs de cohérence dans les scénarios écrit par l'utilisateur (cf Chapitre 4).
+	\item l'auto-complÃ©tion du langage (cf Chapitre 4)
+	\item la dÃ©tection de fautes syntaxiques.
+	\item la dÃ©tection des erreurs de cohÃ©rence dans les scÃ©narios Ã©crit par l'utilisateur (cf Chapitre 4).
 \end{itemize}
 
-\section{Écriture de la chorégraphie par l'utilisateur}
-L'utilisateur écrit sa chorégraphie par une suite d'actions séparées par un retour à la ligne. La liste des actions disponibles et leurs paramètres sont listés dans le Chapitre 4. Une chorégraphie commencera forcément par un décollage et finira par un atterrissage.
+\section{Ã‰criture de la chorÃ©graphie par l'utilisateur}
+L'utilisateur Ã©crit sa chorÃ©graphie par une suite d'actions sÃ©parÃ©es par un retour Ã  la ligne. La liste des actions disponibles et leurs paramÃ¨tres sont listÃ©s dans le Chapitre 4. Une chorÃ©graphie commencera forcÃ©ment par un dÃ©collage et finira par un atterrissage.
 \section{Conditions de fonctionnement}
 
-Pour que l'application fonctionne un certain nombre de pré-conditions d'utilisation sont requises :
+Pour que l'application fonctionne un certain nombre de prÃ©-conditions d'utilisation sont requises :
 \begin{itemize}
-	  \item Le drone utilisé est un drone à hélices, le langage ne supportera pas les drones de type avion.
-      \item Le drone doit être allumé par l'utilisateur.
-      \item Le drone doit être connecté via Wi-Fi à l'ordinateur exécutant le programme réalisé par l'utilisateur.
-      \item Le drone doit être utilisé dans un endroit sans un vent de trop grande envergure.
-      \item Le programme utilisateur doit être réalisé sous le logiciel Eclipse Oxygen version 4.7.0.
-      \item L'ordinateur exécutant le programme réalisé par l'utilisateur doit avoir installé Java version 1.8.
+	  \item Le drone utilisÃ© est un drone Ã  hÃ©lices, le langage ne supportera pas les drones de type avion.
+      \item Le drone doit Ãªtre allumÃ© par l'utilisateur.
+      \item Le drone doit Ãªtre connectÃ© via Wi-Fi Ã  l'ordinateur exÃ©cutant le programme rÃ©alisÃ© par l'utilisateur.
+      \item Le drone doit Ãªtre utilisÃ© dans un endroit sans un vent de trop grande envergure.
+      \item Le programme utilisateur doit Ãªtre rÃ©alisÃ© sous le logiciel Eclipse Oxygen version 4.7.0.
+      \item L'ordinateur exÃ©cutant le programme rÃ©alisÃ© par l'utilisateur doit avoir installÃ© Java version 1.8.
 \end{itemize}
            
 \vspace{10px}           
-Des fichiers et documents aideront à son déploiement et son utilisation. 
+Des fichiers et documents aideront Ã  son dÃ©ploiement et son utilisation. 
 
 
 \chapter{Fonctionnement du drone}
-Nous considérons par drone les objets connectés volants, type aéronef à voilure tournante comportant quatre rotors pour sa sustentation.
+Nous considÃ©rons par drone les objets connectÃ©s volants, type aÃ©ronef Ã  voilure tournante comportant quatre rotors pour sa sustentation.
 
-\section{Décollage}
-Le drone est capable de décoller en faisant tourner ses rotors. Le décollage se fait en un temps fini, durant ce laps de temps le drone n'interprète pas les commandes qui lui sont envoyées (il les effectuera quand il sera dans un état stable). \\
-Il correspond à l'instruction suivante dans le projet :
+\section{DÃ©collage}
+Le drone est capable de dÃ©coller en faisant tourner ses rotors. Le dÃ©collage se fait en un temps fini, durant ce laps de temps le drone n'interprÃ¨te pas les commandes qui lui sont envoyÃ©es (il les effectuera quand il sera dans un Ã©tat stable). \\
+Il correspond Ã  l'instruction suivante dans le projet :
 \begin{itemize}
      \item \textbf{decoller}
 \end{itemize}
         
 \section{Altitude - Gaz}
-Le drone est capable de se déplacer verticalement (axe z), c'est à dire qu'il peut élever ou réduire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
+Le drone est capable de se dÃ©placer verticalement (axe z), c'est Ã  dire qu'il peut Ã©lever ou rÃ©duire son altitude avec plus ou moins de vitesse en fonction de la vitesse de rotation des rotors (donc des moteurs). \\
 Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
      \item \textbf{monter}
@@ -146,7 +146,7 @@ Il correspond aux instructions suivantes dans le projet :
 \end{itemize}
         
 \section{Mouvements horizontaux - Roll}
-Le drone est capable de se déplacer horizontalement (axe x), pour cela le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
+Le drone est capable de se dÃ©placer horizontalement (axe x), pour cela le drone va s'incliner vers la gauche ou la droite d'un certain angle. \\
 Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
      \item \textbf{gauche}
@@ -154,7 +154,7 @@ Il correspond aux instructions suivantes dans le projet :
 \end{itemize}
     
 \section{Mouvements horizontaux - Pitch}
-Le drone est capable de se déplacer en profondeur (axe y), pour cela le drone va s'incliner en avant ou en arrière d'un certain angle. \\
+Le drone est capable de se dÃ©placer en profondeur (axe y), pour cela le drone va s'incliner en avant ou en arriÃ¨re d'un certain angle. \\
 Il correspond aux instructions suivantes dans le projet :
 \begin{itemize}
     \item \textbf{avancer}
@@ -163,7 +163,7 @@ Il correspond aux instructions suivantes dans le projet :
         
 \section{Pause}
 Le drone est capable de faire du surplace (stabilisation). \\
-Il correspond à l'instruction suivante dans le projet :
+Il correspond Ã  l'instruction suivante dans le projet :
 \begin{itemize}
       \item \textbf{pause}
 \end{itemize}
@@ -178,21 +178,21 @@ Il correspond aux instructions suivantes dans le projet :
         
  
 \section{Atterrissage}
-Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprète pas les commandes qui lui sont envoyées. Une fois au sol, il ne peut plus exécuter d'instruction sauf celle de décollage. \\
-Il correspond à l'instruction suivante dans le projet :
+Le drone est capable d'atterrir en ralentissant ses rotors. L'atterrissage se fait en un temps fini, durant l'atterrissage le drone n'interprÃ¨te pas les commandes qui lui sont envoyÃ©es. Une fois au sol, il ne peut plus exÃ©cuter d'instruction sauf celle de dÃ©collage. \\
+Il correspond Ã  l'instruction suivante dans le projet :
 \begin{itemize}
       \item \textbf{atterrir}
 \end{itemize}
  
 \section{Camera}
-Nous avons fait le choix de ne pas nous occuper de la caméra, car certains drones n'en possèdent pas. Il n'est pas standard qu'un drone possède une caméra.
+Nous avons fait le choix de ne pas nous occuper de la camÃ©ra, car certains drones n'en possÃ¨dent pas. Il n'est pas standard qu'un drone possÃ¨de une camÃ©ra.
 
 \chapter{Les commandes du DSL}
 
 \section{Prologue}
-Pour fonctionner, l'utilisateur doit définir 5 constantes de vol.
-Cela permet au programme d'adapter les instructions en fonction de ces dernières.
-Il peut les définir comme ceci au début du fichier \newline
+Pour fonctionner, l'utilisateur doit dÃ©finir 5 constantes de vol.
+Cela permet au programme d'adapter les instructions en fonction de ces derniÃ¨res.
+Il peut les dÃ©finir comme ceci au dÃ©but du fichier \newline
 
 \begin{figure}[h!]
         \begin{center}
@@ -205,100 +205,100 @@ Il peut les définir comme ceci au début du fichier \newline
     \end{figure}
 
 \subsection{define vitesse\_hauteur\_max}
-Cette constante permet de définir la vitesse maximale d'élévation du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
-La valeur de cette constante doit être comprise entre 1 et 100\%.
+Cette constante permet de dÃ©finir la vitesse maximale d'Ã©lÃ©vation du drone pour la chorÃ©graphie par rapport Ã  sa vitesse maximale possible. \newline
+La valeur de cette constante doit Ãªtre comprise entre 1 et 100\%.
 \subsection{define vitesse\_deplacement\_max}
-Cette constante permet de définir la vitesse maximale de déplacement sur le plan horizontal du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
-La valeur de cette constante doit être comprise entre 1 et 100\%.
+Cette constante permet de dÃ©finir la vitesse maximale de dÃ©placement sur le plan horizontal du drone pour la chorÃ©graphie par rapport Ã  sa vitesse maximale possible. \newline
+La valeur de cette constante doit Ãªtre comprise entre 1 et 100\%.
 \subsection{define vitesse\_rotation\_max}
-Cette constante permet de définir la vitesse maximale de rotation du drone pour la chorégraphie par rapport à sa vitesse maximale. \newline
-La valeur de cette constante doit être comprise entre 1 et 100\%.
+Cette constante permet de dÃ©finir la vitesse maximale de rotation du drone pour la chorÃ©graphie par rapport Ã  sa vitesse maximale. \newline
+La valeur de cette constante doit Ãªtre comprise entre 1 et 100\%.
 \subsection{define hauteur\_max}
-Cette constante permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la hauteur maximale. \newline
-La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la hauteur maximale possible du drone.
+Cette constante permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dÃ©passer cette limite, il se stabilise automatiquement Ã  la hauteur maximale. \newline
+La valeur de cette constante doit Ãªtre un entier positif qui ne doit pas Ãªtre supÃ©rieure Ã  la hauteur maximale possible du drone.
 \subsection{define eloignement\_max}
-Cette constante permet de contrôler la distance horizontale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la distance maximale horizontale. \newline
-La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la distance maximale horizontale possible du drone.
+Cette constante permet de contrÃ´ler la distance horizontale du drone en vol. Lorsque le drone est sur le point de dÃ©passer cette limite, il se stabilise automatiquement Ã  la distance maximale horizontale. \newline
+La valeur de cette constante doit Ãªtre un entier positif qui ne doit pas Ãªtre supÃ©rieure Ã  la distance maximale horizontale possible du drone.
 \section{Instructions basique}
 \paragraph{}
-Dans le but de rendre accessible le pilotage de drone aux chorégraphes, nous implémenterons un langage dédié permettant de décrire un scénario de pilotage prédéfini sous la forme d'un script.\\ \\
-Dans cette partie, nous présenterons les commandes de base de ce langage, ainsi que les actions réalisées par un drone pour chacune d'elles.
-Nous avons décidé de séparer les mouvements horizontaux et verticaux en 11 instructions distinctes (Décoller, Atterrir, Monter, Descendre, Avancer, Reculer, Gauche, Droite, Pause, RotationGauche, RotationDroite) afin de rendre l'utilisation du langage plus explicite pour l'utilisateur. La plupart de ces instructions ont besoin de deux paramètres qui doivent être renseignés par l'utilisateur. \\ \\
-Le premier paramètre est durée du mouvement, il est exprimé en Seconde.\\
-Le deuxième paramètre est la vitesse du mouvement, il est exprimé en pourcentage. Ce pourcentage représente la vitesse du drone par rapport à la vitesse définie auparavant dans la section "prologue".\\
+Dans le but de rendre accessible le pilotage de drone aux chorÃ©graphes, nous implÃ©menterons un langage dÃ©diÃ© permettant de dÃ©crire un scÃ©nario de pilotage prÃ©dÃ©fini sous la forme d'un script.\\ \\
+Dans cette partie, nous prÃ©senterons les commandes de base de ce langage, ainsi que les actions rÃ©alisÃ©es par un drone pour chacune d'elles.
+Nous avons dÃ©cidÃ© de sÃ©parer les mouvements horizontaux et verticaux en 11 instructions distinctes (DÃ©coller, Atterrir, Monter, Descendre, Avancer, Reculer, Gauche, Droite, Pause, RotationGauche, RotationDroite) afin de rendre l'utilisation du langage plus explicite pour l'utilisateur. La plupart de ces instructions ont besoin de deux paramÃ¨tres qui doivent Ãªtre renseignÃ©s par l'utilisateur. \\ \\
+Le premier paramÃ¨tre est durÃ©e du mouvement, il est exprimÃ© en Seconde.\\
+Le deuxiÃ¨me paramÃ¨tre est la vitesse du mouvement, il est exprimÃ© en pourcentage. Ce pourcentage reprÃ©sente la vitesse du drone par rapport Ã  la vitesse dÃ©finie auparavant dans la section "prologue".\\
 
-\subsection{Décoller}
+\subsection{DÃ©coller}
 \quad Syntaxe: \textbf{decoller()}\bigbreak
-Cette commande permettra à un drone de décoller. Elle devra obligatoirement être la première commande exécutée dans un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas atterri. Il est possible de décoller après chaque atterrissage. 
+Cette commande permettra Ã  un drone de dÃ©coller. Elle devra obligatoirement Ãªtre la premiÃ¨re commande exÃ©cutÃ©e dans un script du langage et ne pourra pas Ãªtre Ã  nouveau exÃ©cutÃ©e si le drone n'a pas atterri. Il est possible de dÃ©coller aprÃ¨s chaque atterrissage. 
 
 \subsection{Atterrir}
 \quad Syntaxe: \textbf{atterrir()}\bigbreak
-Cette commande permettra à un drone d'atterrir. Elle devra obligatoirement être la dernière commande exécutée dans un script du langage et ne pourra pas être à nouveau exécutée si le drone n'a pas décoller. Il est possible d'atterrir après chaque décollage.
+Cette commande permettra Ã  un drone d'atterrir. Elle devra obligatoirement Ãªtre la derniÃ¨re commande exÃ©cutÃ©e dans un script du langage et ne pourra pas Ãªtre Ã  nouveau exÃ©cutÃ©e si le drone n'a pas dÃ©coller. Il est possible d'atterrir aprÃ¨s chaque dÃ©collage.
 
 \subsection{Monter}
-\quad Syntaxe: \textbf{monter(durée: Seconde, vitesse\_verticale: Pourcentage)} \\
-Cette commande permettra à un drone de monter en altitude. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone s'élève. 
-Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (cf 4.1.1). \\
+\quad Syntaxe: \textbf{monter(durÃ©e: Seconde, vitesse\_verticale: Pourcentage)} \\
+Cette commande permettra Ã  un drone de monter en altitude. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} est le temps en secondes durant lequel le drone s'Ã©lÃ¨ve. 
+Le paramÃ¨tre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'Ã©lÃ©vation du drone par rapport Ã  la vitesse verticale maximum dÃ©finie par l'utilisateur (cf 4.1.1). \\
 
 \subsection{Descendre}
-\quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_verticale: Pourcentage)} \\
-Cette commande permettra à un drone de descendre en altitude. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone descend. 
-Le paramètre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur (cf 4.1.1).\\
+\quad Syntaxe: \textbf{descendre(durÃ©e: Seconde, vitesse\_verticale: Pourcentage)} \\
+Cette commande permettra Ã  un drone de descendre en altitude. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} est le temps en secondes durant lequel le drone descend. 
+Le paramÃ¨tre \textbf{vitesse\_vertical} est un pourcentage compris entre 1 et 100. Il indique la vitesse d'Ã©lÃ©vation du drone par rapport Ã  la vitesse verticale maximum dÃ©finie par l'utilisateur (cf 4.1.1).\\
 
 \subsection{Avancer}
-\quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcentage)} \\
-Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone avance. 
-Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
+\quad Syntaxe: \textbf{avancer(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage)} \\
+Cette commande permettra Ã  un drone de se dÃ©placer sur un axe horizontal dans la direction vers laquelle sa face avant est tournÃ©e. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} est le temps en secondes durant lequel le drone avance. 
+Le paramÃ¨tre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse horizontale maximum dÃ©finie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Reculer}
-\quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
-Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} est le temps en secondes durant lequel le drone recule. 
-Le paramètre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
+\quad Syntaxe: \textbf{reculer(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))} \\
+Cette commande permettra Ã  un drone de se dÃ©placer sur un axe horizontal dans la direction opposÃ©e Ã  celle vers laquelle est tournÃ©e sa face avant. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} est le temps en secondes durant lequel le drone recule. 
+Le paramÃ¨tre \textbf{vitesse\_verticale} est un pourcentage compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse horizontale maximum dÃ©finie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Gauche}
-\quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
-Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
+\quad Syntaxe: \textbf{gauche(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))} \\
+Cette commande permettra Ã  un drone de se dÃ©placer sur un axe horizontal dans la direction Ã  gauche de celle vers laquelle est tournÃ©e sa face avant. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit se dÃ©placer.
+Le paramÃ¨tre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse horizontale maximum dÃ©finie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Droite}
-\quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcentage))} \\
-Cette commande permettra à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se déplacer.
-Le paramètre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur (cf 4.1.2). \\
+\quad Syntaxe: \textbf{droite(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))} \\
+Cette commande permettra Ã  un drone de se dÃ©placer sur un axe horizontal dans la direction Ã  droite de celle vers laquelle est tournÃ©e sa face avant. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit se dÃ©placer.
+Le paramÃ¨tre \textbf{vitesse\_deplacement} est un entier positif compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse horizontale maximum dÃ©finie par l'utilisateur (cf 4.1.2). \\
 
 \subsection{Pause}
-\quad Syntaxe: \textbf{pause(durée: Seconde)} \\
-Cette commande permettra à un drone de s'arrêter en position stationnaire pendant une certaine durée. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se stabiliser. \\
+\quad Syntaxe: \textbf{pause(durÃ©e: Seconde)} \\
+Cette commande permettra Ã  un drone de s'arrÃªter en position stationnaire pendant une certaine durÃ©e. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit se stabiliser. \\
 
 \subsection{RotationGauche}
-\quad Syntaxe: \textbf{rotation\_gauche(durée: Seconde, vitesse\_rotation: Pourcentage)} \\
-Cette commande permettra à un drone de tourner sur lui même dans le sens inverse des aiguilles d'une montre. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (cf 4.1.3). \\
+\quad Syntaxe: \textbf{rotation\_gauche(durÃ©e: Seconde, vitesse\_rotation: Pourcentage)} \\
+Cette commande permettra Ã  un drone de tourner sur lui mÃªme dans le sens inverse des aiguilles d'une montre. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit pivoter.
+Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse de rotation maximale dÃ©finie par l'utilisateur (cf 4.1.3). \\
 
 \subsection{RotationDroite}
-\quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcentage)} \\
-Cette commande permettra à un drone de tourner sur lui même dans le sens des aiguilles d'une montre. 
-Elle ne pourra être exécutée que si le drone est en vol.
-Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit pivoter.
-Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximale définie par l'utilisateur (cf 4.1.3). \\
+\quad Syntaxe: \textbf{rotation\_droite(durÃ©e: Seconde, vitesse\_rotation: Pourcentage)} \\
+Cette commande permettra Ã  un drone de tourner sur lui mÃªme dans le sens des aiguilles d'une montre. 
+Elle ne pourra Ãªtre exÃ©cutÃ©e que si le drone est en vol.
+Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit pivoter.
+Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de dÃ©placement du drone par rapport Ã  la vitesse de rotation maximale dÃ©finie par l'utilisateur (cf 4.1.3). \\
 
-\subsection{Le point d'entrée "main"}
-Le point d'entrée du programme est défini par le mot clef main. C'est à dire que ce qui est contenu dans le bloc d'instruction suivant ce mot clef sera les instructions exécutées par le drone.
+\subsection{Le point d'entrÃ©e "main"}
+Le point d'entrÃ©e du programme est dÃ©fini par le mot clef main. C'est Ã  dire que ce qui est contenu dans le bloc d'instruction suivant ce mot clef sera les instructions exÃ©cutÃ©es par le drone.
 
     \begin{figure}[h!]
         \begin{center}
@@ -314,14 +314,14 @@ Le point d'entrée du programme est défini par le mot clef main. C'est à dire que
         \caption{Exemple de programme utilisateur}
         \label{Exemple de programme utilisateur}
     \end{figure}
-Le programme utilisateur sera ensuite inspecté, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exécuter son programme. Pour ce faire, son programme sera copié et cette copie sera transformée en programme JAVA, ce dernier sera ensuite exécuté ce qui demandera au drone d'effectuer les instructions qui ont été renseignées par l'utilisateur dans son programme.
+Le programme utilisateur sera ensuite inspectÃ©, si ce dernier est syntaxiquement correct, l'utilisateur sera capable d'exÃ©cuter son programme. Pour ce faire, son programme sera copiÃ© et cette copie sera transformÃ©e en programme JAVA, ce dernier sera ensuite exÃ©cutÃ© ce qui demandera au drone d'effectuer les instructions qui ont Ã©tÃ© renseignÃ©es par l'utilisateur dans son programme.
 
-\section{Instructions parallèles}
-Le langage intégrera un mécanisme d'exécution d'instructions en parallèle. C'est à dire qu'il est possible d'ordonner au drone de faire deux instructions en même temps.
-Il permettra par exemple de monter et d'avancer en même temps. \\
-Ce mécanisme sera implémenté dans le langage par le biais du symbole '\textit{\&}'. \\
-La parallélisation ne sera disponible que sur les instructions de base.
-Les instructions parallélisables sont les suivantes :
+\section{Instructions parallÃ¨les}
+Le langage intÃ©grera un mÃ©canisme d'exÃ©cution d'instructions en parallÃ¨le. C'est Ã  dire qu'il est possible d'ordonner au drone de faire deux instructions en mÃªme temps.
+Il permettra par exemple de monter et d'avancer en mÃªme temps. \\
+Ce mÃ©canisme sera implÃ©mentÃ© dans le langage par le biais du symbole '\textit{\&}'. \\
+La parallÃ©lisation ne sera disponible que sur les instructions de base.
+Les instructions parallÃ©lisables sont les suivantes :
 
     \begin{itemize}
         \item monter
@@ -334,8 +334,8 @@ Les instructions parallélisables sont les suivantes :
         \item rotationDroite
     \end{itemize}
     
-L'utilisateur peut paralléliser un maximum de 3 instructions.
-De plus, il n'est pas possible de paralléliser la même instruction plusieurs fois, ni de paralléliser deux instructions opposées.
+L'utilisateur peut parallÃ©liser un maximum de 3 instructions.
+De plus, il n'est pas possible de parallÃ©liser la mÃªme instruction plusieurs fois, ni de parallÃ©liser deux instructions opposÃ©es.
 
     \begin{figure}[h!]
         \begin{center}
@@ -343,7 +343,7 @@ De plus, il n'est pas possible de paralléliser la même instruction plusieurs foi
             monter(1,10%) & descendre(4,20%)
             -> Impossible les deux commandes s'opposent.
             gauche(3,25%) & gauche (6,80%)
-            -> Impossible les deux commandes sont de même type.
+            -> Impossible les deux commandes sont de mÃªme type.
             rotationDroite(2,20%) & avancer(3,20%) 
             -> OK
             gauche(2,5) & monter(1,15%) & avancer(4,10%)
@@ -355,10 +355,10 @@ De plus, il n'est pas possible de paralléliser la même instruction plusieurs foi
     \end{figure}
 
 \section{Fonction}
-Le langage permet de définir des fonctions, ces dernières sont une suite d'instructions séquentielles qu'exécutera le drone.
+Le langage permet de dÃ©finir des fonctions, ces derniÃ¨res sont une suite d'instructions sÃ©quentielles qu'exÃ©cutera le drone.
 Les fonctions ont un nom qui permet de les identifier.
-Il n'est pas possible de paralléliser deux fonctions.
-La définition d'une fonction est de la forme suivante :
+Il n'est pas possible de parallÃ©liser deux fonctions.
+La dÃ©finition d'une fonction est de la forme suivante :
 
     \begin{figure}[h!]
         \begin{center}
@@ -372,7 +372,7 @@ La définition d'une fonction est de la forme suivante :
         \label{Exemple de definition de fonction}
     \end{figure}
     
-Une fois une fonction définie, il est possible de l'appeler pour que le drone exécute les instructions contenues dans cette dernière. Il n'est pas possible pour une fonction de s'appeler elle-même.
+Une fois une fonction dÃ©finie, il est possible de l'appeler pour que le drone exÃ©cute les instructions contenues dans cette derniÃ¨re. Il n'est pas possible pour une fonction de s'appeler elle-mÃªme.
 On ne peux appeler des fonctions que dans le bloc du main.
 
     \begin{figure}[h!]
@@ -400,64 +400,74 @@ On ne peux appeler des fonctions que dans le bloc du main.
     
 \newpage
 
-\subsection{Bibliothèque de fonctions}
-Il est possible d'utiliser des fonctions définies dans d'autres fichiers .drone, ces fichiers doivent être dans le même répertoire que le fichier appelant les fonctions.
+\subsection{BibliothÃ¨que de fonctions}
+Il est possible d'utiliser des fonctions dÃ©finies dans d'autres fichiers .lib\_drone, ces fichiers doivent Ãªtre dans le mÃªme rÃ©pertoire que le fichier appelant les fonctions.
 Pour cela, il que l'utilisateur indique les fichiers contenant ces fonctions dans le programme via l'instruction \textbf{import}.
 
     \begin{figure}[h!]
         \begin{center}
             \begin{Verbatim}
-            import <monFichier.drone>
+            import <monFichier.lib_drone>
             \end{Verbatim}
         \end{center}
     \end{figure}
-%\subsection{Figures prédéfinies}
-%TODO - "Ça c'est un peu casse gueule" -> import monfic.funcDrone. Le client doit charger la bibliothèque.\\
+
+Pour rÃ©fÃ©rencer la fonction de notre bibliothÃ¨que au sein notre programme, nous utilisons le mot-clÃ© \textbf{extern}.
+   \begin{figure}[h!]
+        \begin{center}
+            \begin{Verbatim}
+            import <monFichier.lib_drone>
+            extern func toto()
+            \end{Verbatim}
+        \end{center}
+    \end{figure}
+%\subsection{Figures prÃ©dÃ©finies}
+%TODO - "Ã‡a c'est un peu casse gueule" -> import monfic.funcDrone. Le client doit charger la bibliothÃ¨que.\\
 %
-%Nous allons de plus implémenter une bibliothèque de figures prédéfinies pour l'utilisateur final comme le : carré horizontal, carré vertical. 
+%Nous allons de plus implÃ©menter une bibliothÃ¨que de figures prÃ©dÃ©finies pour l'utilisateur final comme le : carrÃ© horizontal, carrÃ© vertical. 
 %
-%\subsubsection{carré horizontal}
-%\quad Syntaxe: \textbf{carre\_horizontal(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-%Cette commande permettra à un drone de réaliser un carré horizontal en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré horizontal. \\
-%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré horizontal.\\
-%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%\subsubsection{carrÃ© horizontal}
+%\quad Syntaxe: \textbf{carre\_horizontal(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra Ã  un drone de rÃ©aliser un carrÃ© horizontal en fonction de la vitesse de deplacement et d'une durÃ©e pour rÃ©aliser le carrÃ© horizontal. \\
+%Elle ne pourra Ãªtre exÃ©cutÃ©e que si un drone a dÃ©collÃ© et n'a pas atterri.\\
+%Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit effectuer son carrÃ© horizontal.\\
+%Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 %
-%\subsubsection{carré vertical}
-%\quad Syntaxe: \textbf{carre\_vertical(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-%Cette commande permettra à un drone de réaliser un carré vertical en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré vertical. \\
-%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré vertical.\\
-%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%\subsubsection{carrÃ© vertical}
+%\quad Syntaxe: \textbf{carre\_vertical(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra Ã  un drone de rÃ©aliser un carrÃ© vertical en fonction de la vitesse de deplacement et d'une durÃ©e pour rÃ©aliser le carrÃ© vertical. \\
+%Elle ne pourra Ãªtre exÃ©cutÃ©e que si un drone a dÃ©collÃ© et n'a pas atterri.\\
+%Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit effectuer son carrÃ© vertical.\\
+%Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 %
 %\subsubsection{triange}
-%\quad Syntaxe: \textbf{triange(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-%Cette commande permettra à un drone de réaliser un triange isocèle horizontale en fonction de la vitesse de deplacement et d'une durée pour le réaliser.\\
-%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son triangle.\\
-%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%\quad Syntaxe: \textbf{triange(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra Ã  un drone de rÃ©aliser un triange isocÃ¨le horizontale en fonction de la vitesse de deplacement et d'une durÃ©e pour le rÃ©aliser.\\
+%Elle ne pourra Ãªtre exÃ©cutÃ©e que si un drone a dÃ©collÃ© et n'a pas atterri.\\
+%Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit effectuer son triangle.\\
+%Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 %
-%\subsubsection{carré ascendant}
-%\quad Syntaxe: \textbf{carre\_ascendant(durée: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
-%Cette commande permettra à un drone de réaliser un carré ascendant en fonction de la vitesse de deplacement et d'une durée pour réaliser le carré ascendant. \\
-%Elle ne pourra être exécutée que si un drone a décollé et n'a pas atterri.\\
-%Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit effectuer son carré ascendant.\\
-%Le paramètre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
+%\subsubsection{carrÃ© ascendant}
+%\quad Syntaxe: \textbf{carre\_ascendant(durÃ©e: Seconde, vitesse\_deplacement: Pourcentage))}\bigbreak
+%Cette commande permettra Ã  un drone de rÃ©aliser un carrÃ© ascendant en fonction de la vitesse de deplacement et d'une durÃ©e pour rÃ©aliser le carrÃ© ascendant. \\
+%Elle ne pourra Ãªtre exÃ©cutÃ©e que si un drone a dÃ©collÃ© et n'a pas atterri.\\
+%Le paramÃ¨tre \textbf{durÃ©e} donnera le temps en secondes durant lequel le drone doit effectuer son carrÃ© ascendant.\\
+%Le paramÃ¨tre \textbf{vitesse\_rotation} est un entier positif compris entre 1 et 100. Il indique la vitesse de deplacement du drone.\\
 
 
 \chapter{Tests de validation}
 %USE CASE 1
-\section{Validation tranche 1 -  (Validation de l'éditeur du langage)} 
-Ci-dessous une liste de tests permettant au client de valider la recette de l'éditeur du langage.\bigbreak
+\section{Validation tranche 1 -  (Validation de l'Ã©diteur du langage)} 
+Ci-dessous une liste de tests permettant au client de valider la recette de l'Ã©diteur du langage.\bigbreak
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-01\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
  define vitesse\_hauteur\_max 100\%
@@ -476,7 +486,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+RÃ©sultat attendu:& Aucune erreur n'est dÃ©tectÃ©e par l'Ã©diteur. \\
 \hline
 \end{tabular}
 
@@ -484,11 +494,11 @@ Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-02\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
 define vitesse\_hauteur\_max 100\%
@@ -510,7 +520,7 @@ define vitesse\_hauteur\_max 100\%
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+RÃ©sultat attendu:& Aucune erreur n'est dÃ©tectÃ©e par l'Ã©diteur. \\
 \hline
 \end{tabular}
 
@@ -518,11 +528,11 @@ Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-03\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
    define vitesse\_hauteur\_max 100\%
@@ -541,18 +551,18 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la commande \textit{blabalbla}. \\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la commande \textit{blabalbla}. \\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-04\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -570,7 +580,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la commande \textit{monter}. \\
 \hline
 \end{tabular}
 
@@ -578,11 +588,11 @@ Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-05\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -601,7 +611,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la commande \textit{monter}. \\
 \hline
 \end{tabular}
 
@@ -609,11 +619,11 @@ Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-06\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -632,7 +642,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la commande \textit{monter}. \\
 \hline
 \end{tabular}
 
@@ -641,11 +651,11 @@ Résultat attendu:& Une erreur est détéctée sur la commande \textit{monter}. \\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-07\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -663,18 +673,18 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{decoller}.\\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la deuxiÃ¨me commande \textit{decoller}.\\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-08\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
 define vitesse\_hauteur\_max 100\%
@@ -694,18 +704,18 @@ define vitesse\_hauteur\_max 100\%
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur la deuxième commande \textit{atterrir}.\\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur la deuxiÃ¨me commande \textit{atterrir}.\\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-09\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -731,18 +741,18 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+RÃ©sultat attendu:& Aucune erreur n'est dÃ©tectÃ©e par l'Ã©diteur. \\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-10\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
     define vitesse\_hauteur\_max 100\%
@@ -767,18 +777,18 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur l'appel à la fonction \textit{foo}.\\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur l'appel Ã  la fonction \textit{foo}.\\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-11\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
    define vitesse\_hauteur\_max 100\%
@@ -797,18 +807,18 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
+RÃ©sultat attendu:& Aucune erreur n'est dÃ©tectÃ©e par l'Ã©diteur. \\
 \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TVEDT-12\\
 \hline
-Contexte :& L'utilisateur a démarré son éditeur.\\
+Contexte :& L'utilisateur a dÃ©marrÃ© son Ã©diteur.\\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \vspace{1px}
     \begin{indentpar}{1cm}
    define vitesse\_hauteur\_max 100\%
@@ -828,44 +838,44 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{indentpar}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détéctée sur l'appel de la composition parallèle des fonctions \textit{monter} et \textit{descendre}.\\
+RÃ©sultat attendu:& Une erreur est dÃ©tÃ©ctÃ©e sur l'appel de la composition parallÃ¨le des fonctions \textit{monter} et \textit{descendre}.\\
 \hline
 \end{tabular}
 
-\section{Validation tranche 3 -  (Contrôler drone depuis l'ordinateur via le programme utilisateur)} 
+\section{Validation tranche 3 -  (ContrÃ´ler drone depuis l'ordinateur via le programme utilisateur)} 
 
-\subsection*{Décollage}
-% Décollage
+\subsection*{DÃ©collage}
+% DÃ©collage
 \begin{tabular}{|p{0.25\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} | p{0.21\linewidth} |} 
 \hline
-\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{Décollage du drone } \\
+\rowcolor[RGB]{200, 200, 200}Titre :& \multicolumn{3}{p{0.70\linewidth}|}{DÃ©collage du drone } \\
 \hline
 Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{2} \\
 \hline
 \hline
 Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
 \hline
-Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est au sol, prêt à décoller} \\
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est au sol, prÃªt Ã  dÃ©coller} \\
 \hline
-Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. L'utilisateur à déjà réalisé son application ne contenant que l'instruction de décollage.} \\
+PrÃ©condition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connectÃ© au drone. L'utilisateur Ã  dÃ©jÃ  rÃ©alisÃ© son application ne contenant que l'instruction de dÃ©collage.} \\
 \hline
-Scénario & {
+ScÃ©nario & {
 	\begin{minipage}[t]{\linewidth}
 	Utilisateur : \\
-	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que l'instruction de décollage.
+	1. Le testeur lance l'application compilÃ©e par l'environnement de dÃ©veloppement fourni. Elle ne contient que l'instruction de dÃ©collage.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Application :\\
-	2. Le système fait décoller le drone. \\
-	4. Le système le place à une hauteur minimale de fonctionnement. \\
-	6. Le système enclenche le mode de vol stationnaire\\
+	2. Le systÃ¨me fait dÃ©coller le drone. \\
+	4. Le systÃ¨me le place Ã  une hauteur minimale de fonctionnement. \\
+	6. Le systÃ¨me enclenche le mode de vol stationnaire\\
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Drone :\\
-	3. Le drone décolle.\\
-	5. Le drone se place à la hauteur minimale de fonctionnement.
+	3. Le drone dÃ©colle.\\
+	5. Le drone se place Ã  la hauteur minimale de fonctionnement.
 	 \end{minipage}
 	} \\
 
@@ -874,21 +884,21 @@ Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone n'est plus au sol
 \hline
 \end{tabular}
 
-%Validation décollage
+%Validation dÃ©collage
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
-\rowcolor[RGB]{200, 200, 200}Validation :& TV01 Décollage\\
+\rowcolor[RGB]{200, 200, 200}Validation :& TV01 DÃ©collage\\
 \hline
-Contexte :& L'ordinateur est connecté au drone et l'utilisateur à compiler son application ne contenant que l'instruction de décollage.\\
+Contexte :& L'ordinateur est connectÃ© au drone et l'utilisateur Ã  compiler son application ne contenant que l'instruction de dÃ©collage.\\
 \hline
-Entrée :& Aucune. \\
+EntrÃ©e :& Aucune. \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \begin{enumerate}
     \item L'utilisateur lance son application.\\
     \end{enumerate}
 \end{minipage} \\
 \hline
-Moyen de vérification :& Visuel, le drone est à sa hauteur minimale de fonctionnement. \\
+Moyen de vÃ©rification :& Visuel, le drone est Ã  sa hauteur minimale de fonctionnement. \\
 \hline
 \end{tabular}
 
@@ -902,27 +912,27 @@ Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{2} \\
 \hline
 Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
 \hline
-Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est en mode stationnaire, prêt à atterrir.} \\
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone est en mode stationnaire, prÃªt Ã  atterrir.} \\
 \hline
-Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé (et est en mode stationnaire).L'utilisateur à déjà réalisé son application ne contenant que l'instruction de d'Atterrisage.} \\
+PrÃ©condition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connectÃ© au drone. Le drone a dÃ©collÃ© (et est en mode stationnaire).L'utilisateur Ã  dÃ©jÃ  rÃ©alisÃ© son application ne contenant que l'instruction de d'Atterrisage.} \\
 \hline
-Scénario & {
+ScÃ©nario & {
 	\begin{minipage}[t]{\linewidth}
 	Utilisateur : \\
-	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que l'instruction de d'atterrissage.
+	1. Le testeur lance l'application compilÃ©e par l'environnement de dÃ©veloppement fourni. Elle ne contient que l'instruction de d'atterrissage.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Application :\\
-	2. Le système entre en phase d'atterrissage.\\
-	3. Le système descend lentement le drone vers le sol.\\
-	5. Au sol, le système coupe le fonctionnement des hélices. \\
+	2. Le systÃ¨me entre en phase d'atterrissage.\\
+	3. Le systÃ¨me descend lentement le drone vers le sol.\\
+	5. Au sol, le systÃ¨me coupe le fonctionnement des hÃ©lices. \\
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Drone :\\
 	4. Le drone descend vers le sol.\\
-	6. Le drone est au sol, les hélices ne bougent plus.\\
+	6. Le drone est au sol, les hÃ©lices ne bougent plus.\\
 	 \end{minipage}
 	} \\
 
@@ -935,17 +945,17 @@ Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone est au sol.}\\
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TV02 Atterrisage\\
 \hline
-Contexte :& L'ordinateur est connecté au drone et l'utilisateur à compiler son application ne contenant que l'instruction de d'atterrissage.\\
+Contexte :& L'ordinateur est connectÃ© au drone et l'utilisateur Ã  compiler son application ne contenant que l'instruction de d'atterrissage.\\
 \hline
-Entrée :& Aucune. \\
+EntrÃ©e :& Aucune. \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \begin{enumerate}
      \item L'utilisateur lance son application.\\
     \end{enumerate}
 \end{minipage} \\
 \hline
-Moyen de vérification :& Visuel, le drone est au sol, les hélices sont en arrêt de fonctionnement. \\
+Moyen de vÃ©rification :& Visuel, le drone est au sol, les hÃ©lices sont en arrÃªt de fonctionnement. \\
 \hline
 \end{tabular}
 
@@ -962,29 +972,29 @@ Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{2} \\
 \hline
 Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
 \hline
-Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone réagit aux commandes définies par l'utilisateur dans son application.} \\
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone rÃ©agit aux commandes dÃ©finies par l'utilisateur dans son application.} \\
 \hline
-Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé. L'utilisateur à déjà réalisé son application ne contenant que des instructions de mouvements sur le plan horizontal} \\
+PrÃ©condition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connectÃ© au drone. Le drone a dÃ©collÃ©. L'utilisateur Ã  dÃ©jÃ  rÃ©alisÃ© son application ne contenant que des instructions de mouvements sur le plan horizontal} \\
 \hline
-Scénario & {
+ScÃ©nario & {
 	\begin{minipage}[t]{\linewidth}
 	Utilisateur : \\
-	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que des instructions de déplacement sur les axes X et Y.
+	1. Le testeur lance l'application compilÃ©e par l'environnement de dÃ©veloppement fourni. Elle ne contient que des instructions de dÃ©placement sur les axes X et Y.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Application :\\
-	2. Le système donne des ordres au drone pour le déplacement.
+	2. Le systÃ¨me donne des ordres au drone pour le dÃ©placement.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Drone :\\
-	3. Le drone se déplace de gauche à droite sur l'axe X (ou Y).
+	3. Le drone se dÃ©place de gauche Ã  droite sur l'axe X (ou Y).
 	 \end{minipage}
 	} \\
 
 \hline
-Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de position.}\\
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changÃ© de position.}\\
 \hline
 \end{tabular}
 
@@ -992,17 +1002,17 @@ Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de posit
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TV03 Mouvement horizontal (axe X ou Y)\\
 \hline
-Contexte :& L'ordinateur est connecté au drone. Le drone a décollé et est en mode stationnaire. L'utilisateur à compiler son application ne contenant que des instructions de déplacement sur les axes X et/ou Y. \\
+Contexte :& L'ordinateur est connectÃ© au drone. Le drone a dÃ©collÃ© et est en mode stationnaire. L'utilisateur Ã  compiler son application ne contenant que des instructions de dÃ©placement sur les axes X et/ou Y. \\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \begin{enumerate}
  \item L'utilisateur lance son application.\\
     \end{enumerate}
 \end{minipage} \\
 \hline
-Moyen de vérification :& Visuel, le drone a changé de position. \\
+Moyen de vÃ©rification :& Visuel, le drone a changÃ© de position. \\
 \hline
 \end{tabular}
 \vspace*{10px}
@@ -1017,29 +1027,29 @@ Tranche :& \multicolumn{3}{p{0.70\linewidth}|}{2} \\
 \hline
 Date :& \multicolumn{3}{p{0.70\linewidth}|}{\today }\\
 \hline
-Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone réagit aux actions de l'utilisateur sur le plan vertical} \\
+Description :& \multicolumn{3}{p{0.70\linewidth}|}{Le drone rÃ©agit aux actions de l'utilisateur sur le plan vertical} \\
 \hline
-Précondition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connecté au drone. Le drone a décollé. L'utilisateur à compiler son application ne contenant que des instructions de déplacement sur l'axe Z} \\
+PrÃ©condition :& \multicolumn{3}{p{0.70\linewidth}|}{L'ordinateur est connectÃ© au drone. Le drone a dÃ©collÃ©. L'utilisateur Ã  compiler son application ne contenant que des instructions de dÃ©placement sur l'axe Z} \\
 \hline
-Scénario & {
+ScÃ©nario & {
 	\begin{minipage}[t]{\linewidth}
 	Utilisateur : \\
-	1. Le testeur lance l'application compilée par l'environnement de développement fourni. Elle ne contient que des instructions de déplacement sur l'axe Z.
+	1. Le testeur lance l'application compilÃ©e par l'environnement de dÃ©veloppement fourni. Elle ne contient que des instructions de dÃ©placement sur l'axe Z.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Application :\\
-	2. Le système donne des ordres au drone pour le déplacement.
+	2. Le systÃ¨me donne des ordres au drone pour le dÃ©placement.
 	 \end{minipage}
 	} & {
 	\begin{minipage}[t]{\linewidth}
 	Drone :\\
-	3. Le drone se déplace de gauche à droite sur l'axe Z.
+	3. Le drone se dÃ©place de gauche Ã  droite sur l'axe Z.
 	 \end{minipage}
 	} \\
 
 \hline
-Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de position.}\\
+Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changÃ© de position.}\\
 \hline
 \end{tabular}
 
@@ -1047,27 +1057,27 @@ Postcondition : & \multicolumn{3}{p{0.70\linewidth}|}{Le drone a changé de posit
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{200, 200, 200}Validation :& TV04 Mouvement vertical\\
 \hline
-Contexte :& L'ordinateur est connecté au drone. Le drone a décollé et est en mode stationnaire. L'utilisateur à compiler son application ne contenant que des instructions de déplacement sur l'axe Z. \\
+Contexte :& L'ordinateur est connectÃ© au drone. Le drone a dÃ©collÃ© et est en mode stationnaire. L'utilisateur Ã  compiler son application ne contenant que des instructions de dÃ©placement sur l'axe Z. \\
 \hline
-Entrée :& aucune \\
+EntrÃ©e :& aucune \\
 \hline
-Scénario :&  \begin{minipage}[t]{0.7\textwidth}
+ScÃ©nario :&  \begin{minipage}[t]{0.7\textwidth}
     \begin{enumerate}
     \item L'utilisateur lance son application.\\
     \end{enumerate}
 \end{minipage} \\
 \hline
-Moyen de vérification :& Visuel, le drone a changé de position. \\
+Moyen de vÃ©rification :& Visuel, le drone a changÃ© de position. \\
 \hline
 \end{tabular}
 
 
 
-\chapter{Étapes du projet}
+\chapter{Ã‰tapes du projet}
 
 \normalsize
 
-À propos des délais de livraison, nous avons opté pour une livraison en tranches à intervalles réguliers. Le client aura donc un état d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un délai maximum les tranches suivantes :
+Ã€ propos des dÃ©lais de livraison, nous avons optÃ© pour une livraison en tranches Ã  intervalles rÃ©guliers. Le client aura donc un Ã©tat d'avancement continu du projet. Ainsi, avec son accord, nous livrerons dans un dÃ©lai maximum les tranches suivantes :
 
 
 \section{Tranche 0 : 28 novembre 2017}
@@ -1078,14 +1088,14 @@ Tout d'abord, nous livrerons un cahier des charges au client pour formaliser not
 \vspace{1px}
 
 Nous sp\'ecifirons un m\'etamod\`ele pour d\'evelopper un langage compr\'ehensible pour l'utilisateur afin qu'il puisse envoyer des commandes au drone. Ce dernier pourra ex\'ecuter les mouvements gr\^ace \`a des appels de fonction du type (D\'ecoller, Atterrir, Avancer, Monter...) sp\'ecifi\'es dans la partie Commandes.\\
-Nous livrerons un \'éditeur textuel bas\'e sur XText  sp\'ecifique au langage afin de pouvoir d\'eterminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra gr\^ace \`a cet \'éditeur appel\'e les instructions qui sont reconnues par l'\'éditeur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 à TVEDT-12
+Nous livrerons un Ã©diteur textuel bas\'e sur XText  spÃ©cifique au langage afin de pouvoir dÃ©terminer un enchainement de mouvements qui d\'efinira une chor\'egraphie. L'utilisateur pourra grÃ¢ce \`a cet Ã©diteur appel\'e les instructions qui sont reconnues par l'Ã©diteur. Enfin la validation de cette tranche se fera avec les tests de validation TVEDT-01 Ã  TVEDT-12
 
 \section{Tranche 2  : 12 janvier 2018}
 \vspace{1px}
 
 La tranche 2 consistera \`a produire un programme pour que le drone puisse \'executer un sc\'enario.\\
 Le langage cible JAVA du programme sera g\'en\'er\'e \`a partir du DSL sp\'ecifi\'e pour le sc\'enario.\\
-L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone. Enfin la validation de cette tranche se fera avec les tests de validation TV-01 à TV-04
+L'ensemble des instructions sera li\'e avec des appels de fonctions de l'API du drone Parrot. Le code ainsi g\'en\'er\'e sera ensuite compil\'e afin de produire un programme ex\'ecutable par le drone. Enfin la validation de cette tranche se fera avec les tests de validation TV-01 Ã  TV-04
 
 \section{Tranche 3 : 25 janvier 2018}
 \vspace{1px}
@@ -1097,8 +1107,8 @@ Enfin une d\'emonstration avec le drone illustrera le fonctionnement de la distr
 
 
 \chapter{Glossaire}
-\paragraph{méta-modèle} La représentation d'un point de vue structurel d'un système. Ici c'est la syntaxe du langage de programmation du drone. 
-\paragraph{quadricoptère} C'est un aéronef à voilure tournante comportant quatre rotors pour sa sustentation.
+\paragraph{mÃ©ta-modÃ¨le} La reprÃ©sentation d'un point de vue structurel d'un systÃ¨me. Ici c'est la syntaxe du langage de programmation du drone. 
+\paragraph{quadricoptÃ¨re} C'est un aÃ©ronef Ã  voilure tournante comportant quatre rotors pour sa sustentation.
 \end{document}
 
 
