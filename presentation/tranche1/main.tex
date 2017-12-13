@@ -293,7 +293,7 @@ Le point d'entrée "main \{ \}" :\\
 \end{itemize}\pause
 
 \begin{tabbing}
-Exemple : \=\\
+Exem\=ple :\\
 	\>\color{Framarouge}main  \{\=\\ 
 	\>\>\color{Framarouge}decoller()\\
 	\>\>\color{Framarouge}gauche(\color{black}1\color{Framarouge},\color{Framagris}10\%\color{Framarouge})\\ 
@@ -318,7 +318,8 @@ Les bibliothèques de fonctions:\\
 \item Doivent être dans le même répertoire que le fichier appelant les fonctions.
 \end{itemize}\pause
 \begin{tabbing}
-Exemple :\=\\            \>\color{Framarouge}import <\color{black}monFichier.lib\_drone\color{Framarouge}>\pause
+Exemple :\=\\
+            \>\color{Framarouge}import <\color{black}monFichier.lib\_drone\color{Framarouge}>\pause
 \end{tabbing}		
 \vspace{10px}
 Utilisation du mot-clé "\color{Framarouge}extern\color{black}" pour référencer la fonction de la bibliothèque que nous souhaitons utiliser.
@@ -327,14 +328,47 @@ Exemple :\=\\
             \>\color{Framarouge}import <\color{black}monFichier.lib\_drone\color{Framarouge}>\\
 	    \>\color{Framarouge}extern func \color{black} toto()
 \end{tabbing}
+\vspace{30px}
 
 \end{column}
 \end{columns}
 
 \end{frame}
 
-\section{Tests de validations}
 
+\section{Environnement et tests de validations}
+
+	\subsection{Environnement}
+\begin{frame}{Environnement}
+\begin{block}{Lancement de l'environnement}
+\begin{itemize}
+\item via un script shell.
+\end{itemize}
+\end{block}\pause
+\begin{figure}
+\centering
+\includegraphics[scale=0.15]{images/IDE00.png}
+\caption{Image de lancement de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Environnement}
+\begin{block}{Création d'un projet}
+\begin{itemize}
+\item via l'interface graphique (file -> new -> project).
+\item création/ajout des fichiers ".main\_drone" et ".lib\_drone" manuellement.
+\end{itemize}
+\end{block}
+\begin{figure}
+\centering
+\includegraphics[scale=0.21]{images/IDE01.png}
+\caption{Environnement de développement}
+\end{figure}
+\end{frame}
+
+
+
+	\subsection{Tests de validations}
 \begin{frame}{Tests de validations} 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{18,144,176}\color{white}Validation :& \color{white}TVEDT-01\\
@@ -406,6 +440,28 @@ Résultat attendu:& Aucune erreur n'est détectée par l'éditeur. \\
 \end{frame}
 
 
+%résultat de TVEDT-01 et 02
+
+\begin{frame}{Résultats TVEDT-01 et TVEDT-02} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{images/TVEDT-01.png}
+\caption{Résultat de TVEDT-01}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-02.png}
+\caption{Résultat de TVEDT-02}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}{Tests de validations} 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
@@ -434,7 +490,7 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
     \end{tabbing}
 \end{minipage} \\
 \hline
-Résultat attendu:& Une erreur est détectée sur la commande \textit{blabalbla}.  \\
+Résultat attendu:& Une erreur est détectée sur la commande \textit{blablabla}.  \\
 \hline
 \end{tabular}
 
@@ -475,6 +531,30 @@ Résultat attendu:& Une erreur est détectée sur la commande \textit{monter}. \
 \end{frame}
 
 
+
+%résultat de TVEDT-03 et 04
+
+\begin{frame}{Résultats TVEDT-03 et TVEDT-04} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-03.png}
+\caption{Résultat de TVEDT-03}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-04.png}
+\caption{Résultat de TVEDT-04}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
 \begin{frame}{Tests de validations} 
 \begin{tabular}{|p{0.25\linewidth} | p{0.70\linewidth}|}
 \rowcolor[RGB]{18,144,176}\color{white}Validation :& \color{white}TVEDT-05\\
@@ -505,7 +585,6 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
 Résultat attendu:& Une erreur est détectée sur la commande \textit{monter}. \\
 \hline
 \end{tabular}
-
 \end{frame}
 
 
@@ -539,8 +618,30 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
 Résultat attendu:& Une erreur est détectée sur la commande \textit{monter}.\\
 \hline
 \end{tabular}
-
 \end{frame}
+
+
+%résultat de TVEDT-05 et 06
+
+\begin{frame}{Résultats TVEDT-05 et TVEDT-06} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-05.png}
+\caption{Résultat de TVEDT-05}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-06.png}
+\caption{Résultat de TVEDT-06}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 
 \begin{frame}{Tests de validations} 
@@ -606,8 +707,30 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
 Résultat attendu:& Une erreur est détectée sur la deuxième commande \textit{atterrir}.\\
 \hline
 \end{tabular}
-
 \end{frame}
+
+
+%résultat de TVEDT-07 et 08
+
+\begin{frame}{Résultats TVEDT-07 et TVEDT-08} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-07.png}
+\caption{Résultat de TVEDT-07}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-08.png}
+\caption{Résultat de TVEDT-08}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 
 
@@ -682,8 +805,29 @@ Scénario :&  \begin{minipage}[t]{0.7\textwidth}
 Résultat attendu:& Une erreur est détectée sur l'appel de la fonction \textit{foo}.\\
 \hline
 \end{tabular}
-
 \end{frame}
+
+%résultat de TVEDT-09 et 10
+
+\begin{frame}{Résultats TVEDT-09 et TVEDT-10} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-09.png}
+\caption{Résultat de TVEDT-09}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.43]{images/TVEDT-10.png}
+\caption{Résultat de TVEDT-10}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 
 \begin{frame}{Tests de validations} 
@@ -757,7 +901,26 @@ Résultat attendu:& Une erreur est détectée sur l'appel de la composition para
 
 \end{frame}
 
+%résultat de TVEDT-11 et 12
 
+\begin{frame}{Résultats TVEDT-11 et TVEDT-12} 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{images/TVEDT-11.png}
+\caption{Résultat de TVEDT-11}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.43]{images/TVEDT-12.png}
+\caption{Résultat de TVEDT-12}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
 
 
 
