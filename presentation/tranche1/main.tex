@@ -277,8 +277,8 @@ Exemple : \=\\
 \end{frame}
 
 
-\subsection{Le bloc "main" et les bibliothéques de fonctions} 
-\begin{frame}{Le bloc "main" et les bibliothéques de fonctions} 
+\subsection{Le bloc "main" et les bibliothèques de fonctions} 
+\begin{frame}{Le bloc "main" et les bibliothèques de fonctions} 
 
 \begin{columns}
 
@@ -312,15 +312,22 @@ Exemple : \=\\
 \end{tabbing}	
 \end{column}
 \begin{column}{0.5\textwidth}
-Les bibliothéques de fonctions:\\
+Les bibliothèques de fonctions:\\
 \begin{itemize}
-\item Possibilité d'utiliser des fonctions définies dans des fichiers .drone.
+\item Possibilité d'utiliser des fonctions définies dans des fichiers .lib\_drone.
 \item Doivent être dans le même répertoire que le fichier appelant les fonctions.
 \end{itemize}\pause
 \begin{tabbing}
-Exemple :\=\\            \>\color{Framarouge}import <\color{black}monFichier.drone\color{Framarouge}>
+Exemple :\=\\            \>\color{Framarouge}import <\color{black}monFichier.lib\_drone\color{Framarouge}>\pause
 \end{tabbing}		
-\vspace{90px}
+\vspace{10px}
+Utilisation du mot-clé "\color{Framarouge}extern\color{black}" pour référencer la fonction de la bibliothèque que nous souhaitons utiliser.
+\begin{tabbing}
+Exemple :\=\\
+            \>\color{Framarouge}import <\color{black}monFichier.lib\_drone\color{Framarouge}>\\
+	    \>\color{Framarouge}extern func \color{black} toto()
+\end{tabbing}
+
 \end{column}
 \end{columns}
 
