@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getImports <em>Imports</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getExternalFuncs <em>External Funcs</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvhm <em>Pvhm</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvdm <em>Pvdm</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvrm <em>Pvrm</em>}</li>
@@ -47,6 +48,22 @@ public interface Model extends EObject
    * @generated
    */
   EList<Import> getImports();
+
+  /**
+   * Returns the value of the '<em><b>External Funcs</b></em>' containment reference list.
+   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>External Funcs</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>External Funcs</em>' containment reference list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_ExternalFuncs()
+   * @model containment="true"
+   * @generated
+   */
+  EList<FonctionExterne> getExternalFuncs();
 
   /**
    * Returns the value of the '<em><b>Pvhm</b></em>' containment reference list.

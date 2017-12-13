@@ -104,22 +104,22 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getModelAccess().getExternalFuncsFonctionExterneParserRuleCall_2_0());
 				}
-				lv_pvhm_2_0=rulePourcent_vitesse_hauteur_max
+				lv_externalFuncs_2_0=ruleFonctionExterne
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvhm",
-						lv_pvhm_2_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_hauteur_max");
+						"externalFuncs",
+						lv_externalFuncs_2_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionExterne");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)*
 		(
 			otherlv_3='\n'
 			{
@@ -129,18 +129,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_4_0());
 				}
-				lv_pvdm_4_0=rulePourcent_vitesse_deplacement_max
+				lv_pvhm_4_0=rulePourcent_vitesse_hauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvdm",
-						lv_pvdm_4_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_deplacement_max");
+						"pvhm",
+						lv_pvhm_4_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -154,18 +154,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_6_0());
 				}
-				lv_pvrm_6_0=rulePourcent_vitesse_rotation_max
+				lv_pvdm_6_0=rulePourcent_vitesse_deplacement_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvrm",
-						lv_pvrm_6_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_rotation_max");
+						"pvdm",
+						lv_pvdm_6_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_deplacement_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -179,18 +179,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_8_0());
 				}
-				lv_hm_8_0=ruleHauteur_max
+				lv_pvrm_8_0=rulePourcent_vitesse_rotation_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"hm",
-						lv_hm_8_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Hauteur_max");
+						"pvrm",
+						lv_pvrm_8_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_rotation_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -204,18 +204,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_10_0());
 				}
-				lv_em_10_0=ruleEloignement_max
+				lv_hm_10_0=ruleHauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"em",
-						lv_em_10_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Eloignement_max");
+						"hm",
+						lv_hm_10_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -229,9 +229,34 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getMMainParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_12_0());
 				}
-				lv_m_12_0=ruleMain
+				lv_em_12_0=ruleEloignement_max
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getModelRule());
+					}
+					add(
+						$current,
+						"em",
+						lv_em_12_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Eloignement_max");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_13='\n'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getModelAccess().getLineFeedKeyword_13());
+			}
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getModelAccess().getMMainParserRuleCall_14_0());
+				}
+				lv_m_14_0=ruleMain
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -239,7 +264,7 @@ ruleModel returns [EObject current=null]
 					set(
 						$current,
 						"m",
-						lv_m_12_0,
+						lv_m_14_0,
 						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Main");
 					afterParserOrEnumRuleCall();
 				}
@@ -248,9 +273,9 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_15_0());
 				}
-				lv_fonctions_13_0=ruleFonctionDecl
+				lv_fonctions_15_0=ruleFonctionDecl
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -258,16 +283,16 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"fonctions",
-						lv_fonctions_13_0,
+						lv_fonctions_15_0,
 						"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionDecl");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
 		(
-			otherlv_14='\n'
+			otherlv_16='\n'
 			{
-				newLeafNode(otherlv_14, grammarAccess.getModelAccess().getLineFeedKeyword_14());
+				newLeafNode(otherlv_16, grammarAccess.getModelAccess().getLineFeedKeyword_16());
 			}
 		)*
 	)
@@ -314,49 +339,9 @@ ruleMain returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMainAccess().getSeconDecIntDeclParserRuleCall_4_0_0());
+						newCompositeNode(grammarAccess.getMainAccess().getStatementsStatementParserRuleCall_4_0_0());
 					}
-					lv_SeconDec_4_0=ruleIntDecl
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMainRule());
-						}
-						add(
-							$current,
-							"SeconDec",
-							lv_SeconDec_4_0,
-							"fr.idmteam1.idmproject.dronedsl.DroneDSL.IntDecl");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMainAccess().getPourDecPourcentDeclParserRuleCall_4_1_0());
-					}
-					lv_PourDec_5_0=rulePourcentDecl
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMainRule());
-						}
-						add(
-							$current,
-							"PourDec",
-							lv_PourDec_5_0,
-							"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentDecl");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMainAccess().getStatementsStatementParserRuleCall_4_2_0());
-					}
-					lv_statements_6_0=ruleStatement
+					lv_statements_4_0=ruleStatement
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMainRule());
@@ -364,7 +349,7 @@ ruleMain returns [EObject current=null]
 						add(
 							$current,
 							"statements",
-							lv_statements_6_0,
+							lv_statements_4_0,
 							"fr.idmteam1.idmproject.dronedsl.DroneDSL.Statement");
 						afterParserOrEnumRuleCall();
 					}
@@ -374,9 +359,9 @@ ruleMain returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionCallParserRuleCall_4_3_0());
+						newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionCallParserRuleCall_4_1_0());
 					}
-					lv_fonctions_7_0=ruleFonctionCall
+					lv_fonctions_5_0=ruleFonctionCall
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMainRule());
@@ -384,55 +369,17 @@ ruleMain returns [EObject current=null]
 						add(
 							$current,
 							"fonctions",
-							lv_fonctions_7_0,
+							lv_fonctions_5_0,
 							"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionCall");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			    |
-			(
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getMainAccess().getParalleleParallele2ParserRuleCall_4_4_0_0());
-						}
-						lv_parallele_8_1=ruleParallele2
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getMainRule());
-							}
-							add(
-								$current,
-								"parallele",
-								lv_parallele_8_1,
-								"fr.idmteam1.idmproject.dronedsl.DroneDSL.Parallele2");
-							afterParserOrEnumRuleCall();
-						}
-						    |
-						{
-							newCompositeNode(grammarAccess.getMainAccess().getParalleleParallele3ParserRuleCall_4_4_0_1());
-						}
-						lv_parallele_8_2=ruleParallele3
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getMainRule());
-							}
-							add(
-								$current,
-								"parallele",
-								lv_parallele_8_2,
-								"fr.idmteam1.idmproject.dronedsl.DroneDSL.Parallele3");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)
 		)*
 		(
-			otherlv_9='\n'
+			otherlv_6='\n'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getMainAccess().getLineFeedKeyword_5());
+				newLeafNode(otherlv_6, grammarAccess.getMainAccess().getLineFeedKeyword_5());
 			}
 		)*
 		{
@@ -443,19 +390,19 @@ ruleMain returns [EObject current=null]
 			afterParserOrEnumRuleCall();
 		}
 		(
-			otherlv_11='\n'
+			otherlv_8='\n'
 			{
-				newLeafNode(otherlv_11, grammarAccess.getMainAccess().getLineFeedKeyword_7());
+				newLeafNode(otherlv_8, grammarAccess.getMainAccess().getLineFeedKeyword_7());
 			}
 		)*
-		otherlv_12='}'
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getMainAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_9, grammarAccess.getMainAccess().getRightCurlyBracketKeyword_8());
 		}
 		(
-			otherlv_13='\n'
+			otherlv_10='\n'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getMainAccess().getLineFeedKeyword_9());
+				newLeafNode(otherlv_10, grammarAccess.getMainAccess().getLineFeedKeyword_9());
 			}
 		)*
 	)
@@ -1633,6 +1580,24 @@ ruleStatement returns [EObject current=null]
 			$current = $this_Monter_8.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getParalleleParserRuleCall_9());
+		}
+		this_Parallele_9=ruleParallele
+		{
+			$current = $this_Parallele_9.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getVarDeclParserRuleCall_10());
+		}
+		this_VarDecl_10=ruleVarDecl
+		{
+			$current = $this_VarDecl_10.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -1713,6 +1678,65 @@ ruleFonctionDecl returns [EObject current=null]
 		{
 			newLeafNode(otherlv_7, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_7());
 		}
+	)
+;
+
+// Entry rule entryRuleFonctionExterne
+entryRuleFonctionExterne returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFonctionExterneRule()); }
+	iv_ruleFonctionExterne=ruleFonctionExterne
+	{ $current=$iv_ruleFonctionExterne.current; }
+	EOF;
+
+// Rule FonctionExterne
+ruleFonctionExterne returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='extern'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getFonctionExterneAccess().getExternKeyword_0());
+		}
+		otherlv_1='func'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getFonctionExterneAccess().getFuncKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFonctionExterneRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_3='('
+		{
+			newLeafNode(otherlv_3, grammarAccess.getFonctionExterneAccess().getLeftParenthesisKeyword_3());
+		}
+		otherlv_4=')'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getFonctionExterneAccess().getRightParenthesisKeyword_4());
+		}
+		(
+			otherlv_5='\n'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_5());
+			}
+		)*
 	)
 ;
 
@@ -1841,6 +1865,42 @@ ruleIntDecl returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleVarDecl
+entryRuleVarDecl returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVarDeclRule()); }
+	iv_ruleVarDecl=ruleVarDecl
+	{ $current=$iv_ruleVarDecl.current; }
+	EOF;
+
+// Rule VarDecl
+ruleVarDecl returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getVarDeclAccess().getPourcentDeclParserRuleCall_0());
+		}
+		this_PourcentDecl_0=rulePourcentDecl
+		{
+			$current = $this_PourcentDecl_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getVarDeclAccess().getIntDeclParserRuleCall_1());
+		}
+		this_IntDecl_1=ruleIntDecl
+		{
+			$current = $this_IntDecl_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -2036,7 +2096,7 @@ ruleFonctionCall returns [EObject current=null]
 				}
 				otherlv_0=RULE_ID
 				{
-					newLeafNode(otherlv_0, grammarAccess.getFonctionCallAccess().getFuncFonctionDeclCrossReference_0_0());
+					newLeafNode(otherlv_0, grammarAccess.getFonctionCallAccess().getFuncFonctionRefCrossReference_0_0());
 				}
 			)
 		)
@@ -2190,6 +2250,42 @@ ruleAR returns [EObject current=null]
 		this_Reculer_1=ruleReculer
 		{
 			$current = $this_Reculer_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleParallele
+entryRuleParallele returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getParalleleRule()); }
+	iv_ruleParallele=ruleParallele
+	{ $current=$iv_ruleParallele.current; }
+	EOF;
+
+// Rule Parallele
+ruleParallele returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getParalleleAccess().getParallele2ParserRuleCall_0());
+		}
+		this_Parallele2_0=ruleParallele2
+		{
+			$current = $this_Parallele2_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getParalleleAccess().getParallele3ParserRuleCall_1());
+		}
+		this_Parallele3_1=ruleParallele3
+		{
+			$current = $this_Parallele3_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -4405,7 +4501,7 @@ ruleParallele3 returns [EObject current=null]
 
 RULE_POURCENT : ('1'..'9'|'1'..'9' '0'..'9'|'100'..'100') '%';
 
-RULE_INCLUDE : RULE_ID '.drone';
+RULE_INCLUDE : RULE_ID '.lib_drone';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

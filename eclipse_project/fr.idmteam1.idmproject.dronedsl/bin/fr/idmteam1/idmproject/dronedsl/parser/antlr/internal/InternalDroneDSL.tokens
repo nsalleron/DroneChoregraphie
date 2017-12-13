@@ -1,12 +1,12 @@
-'&'=43
+'&'=44
 '('=27
 ')'=28
 ','=31
 '<'=18
-'='=41
+'='=42
 '>'=19
-'Pourcent'=40
-'Seconde'=42
+'Pourcent'=41
+'Seconde'=43
 '\n'=13
 'atterrir'=29
 'avancer'=33
@@ -15,6 +15,7 @@
 'descendre'=32
 'droite'=36
 'eloignement_max'=25
+'extern'=40
 'func'=39
 'gauche'=35
 'hauteur_max'=24
@@ -69,3 +70,4 @@ T__40=40
 T__41=41
 T__42=42
 T__43=43
+T__44=44

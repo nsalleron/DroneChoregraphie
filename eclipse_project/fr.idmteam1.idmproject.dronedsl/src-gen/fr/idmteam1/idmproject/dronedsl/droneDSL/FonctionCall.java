@@ -32,12 +32,12 @@ public interface FonctionCall extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Func</em>' reference.
-   * @see #setFunc(FonctionDecl)
+   * @see #setFunc(FonctionRef)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall_Func()
    * @model
    * @generated
    */
-  FonctionDecl getFunc();
+  FonctionRef getFunc();
 
   /**
    * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getFunc <em>Func</em>}' reference.
@@ -47,6 +47,6 @@ public interface FonctionCall extends EObject
    * @see #getFunc()
    * @generated
    */
-  void setFunc(FonctionDecl value);
+  void setFunc(FonctionRef value);
 
 } // FonctionCall

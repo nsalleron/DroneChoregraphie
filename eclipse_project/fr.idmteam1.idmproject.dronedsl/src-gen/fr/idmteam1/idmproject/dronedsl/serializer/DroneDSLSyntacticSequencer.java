@@ -20,6 +20,7 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected DroneDSLGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_FonctionExterne_LineFeedKeyword_5_a;
 	protected AbstractElementAlias match_Import_LineFeedKeyword_4_a;
 	protected AbstractElementAlias match_Main_LineFeedKeyword_3_a;
 	protected AbstractElementAlias match_Main_LineFeedKeyword_3_q;
@@ -27,7 +28,8 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Main_LineFeedKeyword_7_a;
 	protected AbstractElementAlias match_Main_LineFeedKeyword_9_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_11_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_14_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_13_a;
+	protected AbstractElementAlias match_Model_LineFeedKeyword_16_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_1_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_3_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_5_a;
@@ -37,6 +39,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (DroneDSLGrammarAccess) access;
+		match_FonctionExterne_LineFeedKeyword_5_a = new TokenAlias(true, true, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_5());
 		match_Import_LineFeedKeyword_4_a = new TokenAlias(true, true, grammarAccess.getImportAccess().getLineFeedKeyword_4());
 		match_Main_LineFeedKeyword_3_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_3());
 		match_Main_LineFeedKeyword_3_q = new TokenAlias(false, true, grammarAccess.getMainAccess().getLineFeedKeyword_3());
@@ -44,7 +47,8 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Main_LineFeedKeyword_7_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_7());
 		match_Main_LineFeedKeyword_9_a = new TokenAlias(true, true, grammarAccess.getMainAccess().getLineFeedKeyword_9());
 		match_Model_LineFeedKeyword_11_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_11());
-		match_Model_LineFeedKeyword_14_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_14());
+		match_Model_LineFeedKeyword_13_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_13());
+		match_Model_LineFeedKeyword_16_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_16());
 		match_Model_LineFeedKeyword_1_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1());
 		match_Model_LineFeedKeyword_3_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_3());
 		match_Model_LineFeedKeyword_5_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_5());
@@ -89,7 +93,9 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Import_LineFeedKeyword_4_a.equals(syntax))
+			if (match_FonctionExterne_LineFeedKeyword_5_a.equals(syntax))
+				emit_FonctionExterne_LineFeedKeyword_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Import_LineFeedKeyword_4_a.equals(syntax))
 				emit_Import_LineFeedKeyword_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Main_LineFeedKeyword_3_a.equals(syntax))
 				emit_Main_LineFeedKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -103,8 +109,10 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Main_LineFeedKeyword_9_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_11_a.equals(syntax))
 				emit_Model_LineFeedKeyword_11_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_14_a.equals(syntax))
-				emit_Model_LineFeedKeyword_14_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_13_a.equals(syntax))
+				emit_Model_LineFeedKeyword_13_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_16_a.equals(syntax))
+				emit_Model_LineFeedKeyword_16_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_1_a.equals(syntax))
 				emit_Model_LineFeedKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_LineFeedKeyword_3_a.equals(syntax))
@@ -119,6 +127,18 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=ID '(' ')' (ambiguity) (rule end)
+	 */
+	protected void emit_FonctionExterne_LineFeedKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     '
@@ -164,11 +184,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'main' '{' Start (ambiguity) PourDec+=PourcentDecl
-	 *     (rule start) 'main' '{' Start (ambiguity) SeconDec+=IntDecl
 	 *     (rule start) 'main' '{' Start (ambiguity) fonctions+=FonctionCall
-	 *     (rule start) 'main' '{' Start (ambiguity) parallele+=Parallele2
-	 *     (rule start) 'main' '{' Start (ambiguity) parallele+=Parallele3
 	 *     (rule start) 'main' '{' Start (ambiguity) statements+=Statement
 	 */
 	protected void emit_Main_LineFeedKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -198,51 +214,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         (rule start)
 	 *     )
 	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
 	 *         fonctions+=FonctionCall 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         (ambiguity) 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
 	 *         (ambiguity) 
 	 *         End 
 	 *         '
@@ -291,51 +263,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         (rule start)
 	 *     )
 	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
 	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         (ambiguity) 
-	 *         '}' 
-	 *         '
-	 *         '* 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
 	 *         '
 	 *         '* 
 	 *         End 
@@ -384,51 +312,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *         (rule start)
 	 *     )
 	 *     (
-	 *         PourDec+=PourcentDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         SeconDec+=IntDecl 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
 	 *         fonctions+=FonctionCall 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele2 
-	 *         '
-	 *         '* 
-	 *         End 
-	 *         '
-	 *         '* 
-	 *         '}' 
-	 *         (ambiguity) 
-	 *         (rule end)
-	 *     )
-	 *     (
-	 *         parallele+=Parallele3 
 	 *         '
 	 *         '* 
 	 *         End 
@@ -460,9 +344,21 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     em+=Eloignement_max (ambiguity) m=Main
+	 *     hm+=Hauteur_max (ambiguity) em+=Eloignement_max
 	 */
 	protected void emit_Model_LineFeedKeyword_11_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     em+=Eloignement_max (ambiguity) m=Main
+	 */
+	protected void emit_Model_LineFeedKeyword_13_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -475,7 +371,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     fonctions+=FonctionDecl (ambiguity) (rule end)
 	 *     m=Main (ambiguity) (rule end)
 	 */
-	protected void emit_Model_LineFeedKeyword_14_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_LineFeedKeyword_16_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -485,8 +381,22 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) pvhm+=Pourcent_vitesse_hauteur_max
-	 *     imports+=Import (ambiguity) pvhm+=Pourcent_vitesse_hauteur_max
+	 *     (
+	 *         (rule start) 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         imports+=Import 
+	 *         (ambiguity) 
+	 *         '
+	 *         '* 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (rule start) (ambiguity) externalFuncs+=FonctionExterne
+	 *     imports+=Import (ambiguity) externalFuncs+=FonctionExterne
 	 */
 	protected void emit_Model_LineFeedKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -498,7 +408,21 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     pvhm+=Pourcent_vitesse_hauteur_max (ambiguity) pvdm+=Pourcent_vitesse_deplacement_max
+	 *     (
+	 *         (rule start) 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     (
+	 *         imports+=Import 
+	 *         '
+	 *         '* 
+	 *         (ambiguity) 
+	 *         pvhm+=Pourcent_vitesse_hauteur_max
+	 *     )
+	 *     externalFuncs+=FonctionExterne (ambiguity) pvhm+=Pourcent_vitesse_hauteur_max
 	 */
 	protected void emit_Model_LineFeedKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -510,7 +434,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     pvdm+=Pourcent_vitesse_deplacement_max (ambiguity) pvrm+=Pourcent_vitesse_rotation_max
+	 *     pvhm+=Pourcent_vitesse_hauteur_max (ambiguity) pvdm+=Pourcent_vitesse_deplacement_max
 	 */
 	protected void emit_Model_LineFeedKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -522,7 +446,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     pvrm+=Pourcent_vitesse_rotation_max (ambiguity) hm+=Hauteur_max
+	 *     pvdm+=Pourcent_vitesse_deplacement_max (ambiguity) pvrm+=Pourcent_vitesse_rotation_max
 	 */
 	protected void emit_Model_LineFeedKeyword_7_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -534,7 +458,7 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     '*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     hm+=Hauteur_max (ambiguity) em+=Eloignement_max
+	 *     pvrm+=Pourcent_vitesse_rotation_max (ambiguity) hm+=Hauteur_max
 	 */
 	protected void emit_Model_LineFeedKeyword_9_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

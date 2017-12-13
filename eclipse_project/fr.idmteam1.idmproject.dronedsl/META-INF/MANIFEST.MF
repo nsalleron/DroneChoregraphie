@@ -25,5 +25,8 @@ Export-Package: fr.idmteam1.idmproject.dronedsl.serializer,
  fr.idmteam1.idmproject.dronedsl.droneDSL,
  fr.idmteam1.idmproject.dronedsl.parser.antlr,
  fr.idmteam1.idmproject.dronedsl.validation,
- fr.idmteam1.idmproject.dronedsl.droneDSL.util
+ fr.idmteam1.idmproject.dronedsl.droneDSL.util,
+ fr.idmteam1.idmproject.dronedsl.droneDSLLib.util,
+ fr.idmteam1.idmproject.dronedsl.droneDSLLib,
+ fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl
 Import-Package: org.apache.log4j

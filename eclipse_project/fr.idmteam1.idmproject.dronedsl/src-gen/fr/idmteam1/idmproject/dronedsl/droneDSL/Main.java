@@ -16,11 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getSeconDec <em>Secon Dec</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getPourDec <em>Pour Dec</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getStatements <em>Statements</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getFonctions <em>Fonctions</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getParallele <em>Parallele</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain()
@@ -29,38 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Main extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Secon Dec</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Secon Dec</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Secon Dec</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_SeconDec()
-   * @model containment="true"
-   * @generated
-   */
-  EList<IntDecl> getSeconDec();
-
-  /**
-   * Returns the value of the '<em><b>Pour Dec</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pour Dec</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Pour Dec</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_PourDec()
-   * @model containment="true"
-   * @generated
-   */
-  EList<PourcentDecl> getPourDec();
-
   /**
    * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
    * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Statement}.
@@ -92,21 +57,5 @@ public interface Main extends EObject
    * @generated
    */
   EList<FonctionCall> getFonctions();
-
-  /**
-   * Returns the value of the '<em><b>Parallele</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Parallele</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Parallele</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Parallele()
-   * @model containment="true"
-   * @generated
-   */
-  EList<EObject> getParallele();
 
 } // Main

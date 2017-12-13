@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,25 +23,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl#getA <em>A</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl#getT <em>T</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl#getB <em>B</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Parallele2Impl extends MinimalEObjectImpl.Container implements Parallele2
+public class Parallele2Impl extends ParalleleImpl implements Parallele2
 {
-  /**
-   * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getA()
-   * @generated
-   * @ordered
-   */
-  protected EObject a;
-
   /**
    * The cached value of the '{@link #getT() <em>T</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -52,16 +39,6 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
    * @ordered
    */
   protected EObject t;
-
-  /**
-   * The cached value of the '{@link #getB() <em>B</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getB()
-   * @generated
-   * @ordered
-   */
-  protected EObject b;
 
   /**
    * <!-- begin-user-doc -->
@@ -82,54 +59,6 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.PARALLELE2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EObject getA()
-  {
-    return a;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetA(EObject newA, NotificationChain msgs)
-  {
-    EObject oldA = a;
-    a = newA;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE2__A, oldA, newA);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setA(EObject newA)
-  {
-    if (newA != a)
-    {
-      NotificationChain msgs = null;
-      if (a != null)
-        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE2__A, null, msgs);
-      if (newA != null)
-        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE2__A, null, msgs);
-      msgs = basicSetA(newA, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE2__A, newA, newA));
   }
 
   /**
@@ -185,65 +114,13 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getB()
-  {
-    return b;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetB(EObject newB, NotificationChain msgs)
-  {
-    EObject oldB = b;
-    b = newB;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE2__B, oldB, newB);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setB(EObject newB)
-  {
-    if (newB != b)
-    {
-      NotificationChain msgs = null;
-      if (b != null)
-        msgs = ((InternalEObject)b).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE2__B, null, msgs);
-      if (newB != null)
-        msgs = ((InternalEObject)newB).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE2__B, null, msgs);
-      msgs = basicSetB(newB, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE2__B, newB, newB));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE2__A:
-        return basicSetA(null, msgs);
       case DroneDSLPackage.PARALLELE2__T:
         return basicSetT(null, msgs);
-      case DroneDSLPackage.PARALLELE2__B:
-        return basicSetB(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -258,12 +135,8 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE2__A:
-        return getA();
       case DroneDSLPackage.PARALLELE2__T:
         return getT();
-      case DroneDSLPackage.PARALLELE2__B:
-        return getB();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -278,14 +151,8 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE2__A:
-        setA((EObject)newValue);
-        return;
       case DroneDSLPackage.PARALLELE2__T:
         setT((EObject)newValue);
-        return;
-      case DroneDSLPackage.PARALLELE2__B:
-        setB((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -301,14 +168,8 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE2__A:
-        setA((EObject)null);
-        return;
       case DroneDSLPackage.PARALLELE2__T:
         setT((EObject)null);
-        return;
-      case DroneDSLPackage.PARALLELE2__B:
-        setB((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -324,12 +185,8 @@ public class Parallele2Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE2__A:
-        return a != null;
       case DroneDSLPackage.PARALLELE2__T:
         return t != null;
-      case DroneDSLPackage.PARALLELE2__B:
-        return b != null;
     }
     return super.eIsSet(featureID);
   }

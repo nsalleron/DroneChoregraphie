@@ -77,13 +77,22 @@ public interface DroneDSLPackage extends EPackage
   int MODEL__IMPORTS = 0;
 
   /**
+   * The feature id for the '<em><b>External Funcs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__EXTERNAL_FUNCS = 1;
+
+  /**
    * The feature id for the '<em><b>Pvhm</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__PVHM = 1;
+  int MODEL__PVHM = 2;
 
   /**
    * The feature id for the '<em><b>Pvdm</b></em>' containment reference list.
@@ -92,7 +101,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PVDM = 2;
+  int MODEL__PVDM = 3;
 
   /**
    * The feature id for the '<em><b>Pvrm</b></em>' containment reference list.
@@ -101,7 +110,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PVRM = 3;
+  int MODEL__PVRM = 4;
 
   /**
    * The feature id for the '<em><b>Hm</b></em>' containment reference list.
@@ -110,7 +119,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__HM = 4;
+  int MODEL__HM = 5;
 
   /**
    * The feature id for the '<em><b>Em</b></em>' containment reference list.
@@ -119,7 +128,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__EM = 5;
+  int MODEL__EM = 6;
 
   /**
    * The feature id for the '<em><b>M</b></em>' containment reference.
@@ -128,7 +137,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__M = 6;
+  int MODEL__M = 7;
 
   /**
    * The feature id for the '<em><b>Fonctions</b></em>' containment reference list.
@@ -137,7 +146,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__FONCTIONS = 7;
+  int MODEL__FONCTIONS = 8;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -146,7 +155,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 8;
+  int MODEL_FEATURE_COUNT = 9;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl <em>Main</em>}' class.
@@ -159,31 +168,13 @@ public interface DroneDSLPackage extends EPackage
   int MAIN = 1;
 
   /**
-   * The feature id for the '<em><b>Secon Dec</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN__SECON_DEC = 0;
-
-  /**
-   * The feature id for the '<em><b>Pour Dec</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN__POUR_DEC = 1;
-
-  /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN__STATEMENTS = 2;
+  int MAIN__STATEMENTS = 0;
 
   /**
    * The feature id for the '<em><b>Fonctions</b></em>' containment reference list.
@@ -192,16 +183,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MAIN__FONCTIONS = 3;
-
-  /**
-   * The feature id for the '<em><b>Parallele</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN__PARALLELE = 4;
+  int MAIN__FONCTIONS = 1;
 
   /**
    * The number of structural features of the '<em>Main</em>' class.
@@ -210,7 +192,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MAIN_FEATURE_COUNT = 5;
+  int MAIN_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PourcentExpImpl <em>Pourcent Exp</em>}' class.
@@ -220,7 +202,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPourcentExp()
    * @generated
    */
-  int POURCENT_EXP = 23;
+  int POURCENT_EXP = 25;
 
   /**
    * The number of structural features of the '<em>Pourcent Exp</em>' class.
@@ -260,34 +242,6 @@ public interface DroneDSLPackage extends EPackage
   int POURCENT_CONST_FEATURE_COUNT = POURCENT_EXP_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportsImpl <em>Imports</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportsImpl
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getImports()
-   * @generated
-   */
-  int IMPORTS = 3;
-
-  /**
-   * The feature id for the '<em><b>Includes</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMPORTS__INCLUDES = 0;
-
-  /**
-   * The number of structural features of the '<em>Imports</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMPORTS_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportImpl <em>Import</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -295,7 +249,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getImport()
    * @generated
    */
-  int IMPORT = 4;
+  int IMPORT = 3;
 
   /**
    * The feature id for the '<em><b>Import URI</b></em>' attribute.
@@ -323,7 +277,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPourcent_vitesse_hauteur_max()
    * @generated
    */
-  int POURCENT_VITESSE_HAUTEUR_MAX = 5;
+  int POURCENT_VITESSE_HAUTEUR_MAX = 4;
 
   /**
    * The feature id for the '<em><b>Vitesse verticale</b></em>' containment reference.
@@ -351,7 +305,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPourcent_vitesse_deplacement_max()
    * @generated
    */
-  int POURCENT_VITESSE_DEPLACEMENT_MAX = 6;
+  int POURCENT_VITESSE_DEPLACEMENT_MAX = 5;
 
   /**
    * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
@@ -379,7 +333,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPourcent_vitesse_rotation_max()
    * @generated
    */
-  int POURCENT_VITESSE_ROTATION_MAX = 7;
+  int POURCENT_VITESSE_ROTATION_MAX = 6;
 
   /**
    * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
@@ -407,7 +361,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getHauteur_max()
    * @generated
    */
-  int HAUTEUR_MAX = 8;
+  int HAUTEUR_MAX = 7;
 
   /**
    * The feature id for the '<em><b>Hauteur max</b></em>' containment reference.
@@ -435,7 +389,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getEloignement_max()
    * @generated
    */
-  int ELOIGNEMENT_MAX = 9;
+  int ELOIGNEMENT_MAX = 8;
 
   /**
    * The feature id for the '<em><b>Hauteur max</b></em>' containment reference.
@@ -463,7 +417,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 19;
+  int STATEMENT = 18;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -482,7 +436,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getMonter()
    * @generated
    */
-  int MONTER = 10;
+  int MONTER = 9;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -519,7 +473,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getDescendre()
    * @generated
    */
-  int DESCENDRE = 11;
+  int DESCENDRE = 10;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -556,7 +510,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getAvancer()
    * @generated
    */
-  int AVANCER = 12;
+  int AVANCER = 11;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -593,7 +547,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getReculer()
    * @generated
    */
-  int RECULER = 13;
+  int RECULER = 12;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -630,7 +584,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getGauche()
    * @generated
    */
-  int GAUCHE = 14;
+  int GAUCHE = 13;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -667,7 +621,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getDroite()
    * @generated
    */
-  int DROITE = 15;
+  int DROITE = 14;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -704,7 +658,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPause()
    * @generated
    */
-  int PAUSE = 16;
+  int PAUSE = 15;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -732,7 +686,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRotationGauche()
    * @generated
    */
-  int ROTATION_GAUCHE = 17;
+  int ROTATION_GAUCHE = 16;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -769,7 +723,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRotationDroite()
    * @generated
    */
-  int ROTATION_DROITE = 18;
+  int ROTATION_DROITE = 17;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -799,14 +753,14 @@ public interface DroneDSLPackage extends EPackage
   int ROTATION_DROITE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl <em>Fonction Decl</em>}' class.
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionRefImpl <em>Fonction Ref</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionDecl()
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionRefImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionRef()
    * @generated
    */
-  int FONCTION_DECL = 20;
+  int FONCTION_REF = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -815,7 +769,35 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL__NAME = 0;
+  int FONCTION_REF__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Fonction Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_REF_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl <em>Fonction Decl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionDeclImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionDecl()
+   * @generated
+   */
+  int FONCTION_DECL = 19;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL__NAME = FONCTION_REF__NAME;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference list.
@@ -824,7 +806,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL__BODY = 1;
+  int FONCTION_DECL__BODY = FONCTION_REF_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Fonction Decl</em>' class.
@@ -833,7 +815,63 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL_FEATURE_COUNT = 2;
+  int FONCTION_DECL_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionExterneImpl <em>Fonction Externe</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionExterneImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionExterne()
+   * @generated
+   */
+  int FONCTION_EXTERNE = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_EXTERNE__NAME = FONCTION_REF__NAME;
+
+  /**
+   * The number of structural features of the '<em>Fonction Externe</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_EXTERNE_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.VarDeclImpl <em>Var Decl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.VarDeclImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getVarDecl()
+   * @generated
+   */
+  int VAR_DECL = 24;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECL__NAME = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Var Decl</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECL_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PourcentDeclImpl <em>Pourcent Decl</em>}' class.
@@ -843,7 +881,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getPourcentDecl()
    * @generated
    */
-  int POURCENT_DECL = 21;
+  int POURCENT_DECL = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -852,7 +890,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POURCENT_DECL__NAME = 0;
+  int POURCENT_DECL__NAME = VAR_DECL__NAME;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' containment reference.
@@ -861,7 +899,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POURCENT_DECL__VAL = 1;
+  int POURCENT_DECL__VAL = VAR_DECL_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Pourcent Decl</em>' class.
@@ -870,7 +908,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POURCENT_DECL_FEATURE_COUNT = 2;
+  int POURCENT_DECL_FEATURE_COUNT = VAR_DECL_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntDeclImpl <em>Int Decl</em>}' class.
@@ -880,7 +918,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getIntDecl()
    * @generated
    */
-  int INT_DECL = 22;
+  int INT_DECL = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -889,7 +927,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_DECL__NAME = 0;
+  int INT_DECL__NAME = VAR_DECL__NAME;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' containment reference.
@@ -898,7 +936,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_DECL__VAL = 1;
+  int INT_DECL__VAL = VAR_DECL_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Int Decl</em>' class.
@@ -907,7 +945,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_DECL_FEATURE_COUNT = 2;
+  int INT_DECL_FEATURE_COUNT = VAR_DECL_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntExpImpl <em>Int Exp</em>}' class.
@@ -917,7 +955,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getIntExp()
    * @generated
    */
-  int INT_EXP = 27;
+  int INT_EXP = 29;
 
   /**
    * The number of structural features of the '<em>Int Exp</em>' class.
@@ -936,7 +974,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRefIntVar()
    * @generated
    */
-  int REF_INT_VAR = 24;
+  int REF_INT_VAR = 26;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -964,7 +1002,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRefPourcentVar()
    * @generated
    */
-  int REF_POURCENT_VAR = 25;
+  int REF_POURCENT_VAR = 27;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -992,7 +1030,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getIntConstante()
    * @generated
    */
-  int INT_CONSTANTE = 26;
+  int INT_CONSTANTE = 28;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1020,7 +1058,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionCall()
    * @generated
    */
-  int FONCTION_CALL = 28;
+  int FONCTION_CALL = 30;
 
   /**
    * The feature id for the '<em><b>Func</b></em>' reference.
@@ -1048,7 +1086,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getMD()
    * @generated
    */
-  int MD = 29;
+  int MD = 31;
 
   /**
    * The number of structural features of the '<em>MD</em>' class.
@@ -1067,7 +1105,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getGDr()
    * @generated
    */
-  int GDR = 30;
+  int GDR = 32;
 
   /**
    * The number of structural features of the '<em>GDr</em>' class.
@@ -1086,7 +1124,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRGRD()
    * @generated
    */
-  int RGRD = 31;
+  int RGRD = 33;
 
   /**
    * The number of structural features of the '<em>RGRD</em>' class.
@@ -1105,7 +1143,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getAR()
    * @generated
    */
-  int AR = 32;
+  int AR = 34;
 
   /**
    * The number of structural features of the '<em>AR</em>' class.
@@ -1117,14 +1155,14 @@ public interface DroneDSLPackage extends EPackage
   int AR_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl <em>Parallele2</em>}' class.
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl <em>Parallele</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele2()
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele()
    * @generated
    */
-  int PARALLELE2 = 33;
+  int PARALLELE = 35;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1133,16 +1171,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE2__A = 0;
-
-  /**
-   * The feature id for the '<em><b>T</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARALLELE2__T = 1;
+  int PARALLELE__A = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>B</b></em>' containment reference.
@@ -1151,7 +1180,53 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE2__B = 2;
+  int PARALLELE__B = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Parallele</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARALLELE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl <em>Parallele2</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele2()
+   * @generated
+   */
+  int PARALLELE2 = 36;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARALLELE2__A = PARALLELE__A;
+
+  /**
+   * The feature id for the '<em><b>B</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARALLELE2__B = PARALLELE__B;
+
+  /**
+   * The feature id for the '<em><b>T</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARALLELE2__T = PARALLELE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Parallele2</em>' class.
@@ -1160,7 +1235,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE2_FEATURE_COUNT = 3;
+  int PARALLELE2_FEATURE_COUNT = PARALLELE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele3Impl <em>Parallele3</em>}' class.
@@ -1170,7 +1245,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele3()
    * @generated
    */
-  int PARALLELE3 = 34;
+  int PARALLELE3 = 37;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1179,7 +1254,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE3__A = 0;
+  int PARALLELE3__A = PARALLELE__A;
 
   /**
    * The feature id for the '<em><b>B</b></em>' containment reference.
@@ -1188,7 +1263,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE3__B = 1;
+  int PARALLELE3__B = PARALLELE__B;
 
   /**
    * The feature id for the '<em><b>C</b></em>' containment reference.
@@ -1197,7 +1272,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE3__C = 2;
+  int PARALLELE3__C = PARALLELE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Parallele3</em>' class.
@@ -1206,7 +1281,7 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARALLELE3_FEATURE_COUNT = 3;
+  int PARALLELE3_FEATURE_COUNT = PARALLELE_FEATURE_COUNT + 1;
 
 
   /**
@@ -1229,6 +1304,17 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EReference getModel_Imports();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getExternalFuncs <em>External Funcs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>External Funcs</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getExternalFuncs()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_ExternalFuncs();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvhm <em>Pvhm</em>}'.
@@ -1318,28 +1404,6 @@ public interface DroneDSLPackage extends EPackage
   EClass getMain();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getSeconDec <em>Secon Dec</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Secon Dec</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getSeconDec()
-   * @see #getMain()
-   * @generated
-   */
-  EReference getMain_SeconDec();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getPourDec <em>Pour Dec</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Pour Dec</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getPourDec()
-   * @see #getMain()
-   * @generated
-   */
-  EReference getMain_PourDec();
-
-  /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getStatements <em>Statements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1362,17 +1426,6 @@ public interface DroneDSLPackage extends EPackage
   EReference getMain_Fonctions();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getParallele <em>Parallele</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parallele</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getParallele()
-   * @see #getMain()
-   * @generated
-   */
-  EReference getMain_Parallele();
-
-  /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentConst <em>Pourcent Const</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1392,27 +1445,6 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EAttribute getPourcentConst_Val();
-
-  /**
-   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Imports <em>Imports</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Imports</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Imports
-   * @generated
-   */
-  EClass getImports();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Imports#getIncludes <em>Includes</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Includes</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Imports#getIncludes()
-   * @see #getImports()
-   * @generated
-   */
-  EReference getImports_Includes();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import <em>Import</em>}'.
@@ -1838,17 +1870,6 @@ public interface DroneDSLPackage extends EPackage
   EClass getFonctionDecl();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getName()
-   * @see #getFonctionDecl()
-   * @generated
-   */
-  EAttribute getFonctionDecl_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getBody <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1860,6 +1881,37 @@ public interface DroneDSLPackage extends EPackage
   EReference getFonctionDecl_Body();
 
   /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne <em>Fonction Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Externe</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne
+   * @generated
+   */
+  EClass getFonctionExterne();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef <em>Fonction Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Ref</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef
+   * @generated
+   */
+  EClass getFonctionRef();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef#getName()
+   * @see #getFonctionRef()
+   * @generated
+   */
+  EAttribute getFonctionRef_Name();
+
+  /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl <em>Pourcent Decl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1868,17 +1920,6 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EClass getPourcentDecl();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl#getName()
-   * @see #getPourcentDecl()
-   * @generated
-   */
-  EAttribute getPourcentDecl_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl#getVal <em>Val</em>}'.
@@ -1902,17 +1943,6 @@ public interface DroneDSLPackage extends EPackage
   EClass getIntDecl();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl#getName()
-   * @see #getIntDecl()
-   * @generated
-   */
-  EAttribute getIntDecl_Name();
-
-  /**
    * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl#getVal <em>Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1922,6 +1952,27 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EReference getIntDecl_Val();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl <em>Var Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Decl</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl
+   * @generated
+   */
+  EClass getVarDecl();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl#getName()
+   * @see #getVarDecl()
+   * @generated
+   */
+  EAttribute getVarDecl_Name();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentExp <em>Pourcent Exp</em>}'.
@@ -2068,6 +2119,38 @@ public interface DroneDSLPackage extends EPackage
   EClass getAR();
 
   /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele <em>Parallele</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parallele</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele
+   * @generated
+   */
+  EClass getParallele();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele#getA()
+   * @see #getParallele()
+   * @generated
+   */
+  EReference getParallele_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>B</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele#getB()
+   * @see #getParallele()
+   * @generated
+   */
+  EReference getParallele_B();
+
+  /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2 <em>Parallele2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2076,17 +2159,6 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EClass getParallele2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2#getA()
-   * @see #getParallele2()
-   * @generated
-   */
-  EReference getParallele2_A();
 
   /**
    * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2#getT <em>T</em>}'.
@@ -2100,17 +2172,6 @@ public interface DroneDSLPackage extends EPackage
   EReference getParallele2_T();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2#getB()
-   * @see #getParallele2()
-   * @generated
-   */
-  EReference getParallele2_B();
-
-  /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3 <em>Parallele3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2119,28 +2180,6 @@ public interface DroneDSLPackage extends EPackage
    * @generated
    */
   EClass getParallele3();
-
-  /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getA()
-   * @see #getParallele3()
-   * @generated
-   */
-  EReference getParallele3_A();
-
-  /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getB()
-   * @see #getParallele3()
-   * @generated
-   */
-  EReference getParallele3_B();
 
   /**
    * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3#getC <em>C</em>}'.
@@ -2193,6 +2232,14 @@ public interface DroneDSLPackage extends EPackage
      * @generated
      */
     EReference MODEL__IMPORTS = eINSTANCE.getModel_Imports();
+
+    /**
+     * The meta object literal for the '<em><b>External Funcs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__EXTERNAL_FUNCS = eINSTANCE.getModel_ExternalFuncs();
 
     /**
      * The meta object literal for the '<em><b>Pvhm</b></em>' containment reference list feature.
@@ -2261,22 +2308,6 @@ public interface DroneDSLPackage extends EPackage
     EClass MAIN = eINSTANCE.getMain();
 
     /**
-     * The meta object literal for the '<em><b>Secon Dec</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MAIN__SECON_DEC = eINSTANCE.getMain_SeconDec();
-
-    /**
-     * The meta object literal for the '<em><b>Pour Dec</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MAIN__POUR_DEC = eINSTANCE.getMain_PourDec();
-
-    /**
      * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2291,14 +2322,6 @@ public interface DroneDSLPackage extends EPackage
      * @generated
      */
     EReference MAIN__FONCTIONS = eINSTANCE.getMain_Fonctions();
-
-    /**
-     * The meta object literal for the '<em><b>Parallele</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MAIN__PARALLELE = eINSTANCE.getMain_Parallele();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PourcentConstImpl <em>Pourcent Const</em>}' class.
@@ -2317,24 +2340,6 @@ public interface DroneDSLPackage extends EPackage
      * @generated
      */
     EAttribute POURCENT_CONST__VAL = eINSTANCE.getPourcentConst_Val();
-
-    /**
-     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportsImpl <em>Imports</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportsImpl
-     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getImports()
-     * @generated
-     */
-    EClass IMPORTS = eINSTANCE.getImports();
-
-    /**
-     * The meta object literal for the '<em><b>Includes</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference IMPORTS__INCLUDES = eINSTANCE.getImports_Includes();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ImportImpl <em>Import</em>}' class.
@@ -2691,20 +2696,40 @@ public interface DroneDSLPackage extends EPackage
     EClass FONCTION_DECL = eINSTANCE.getFonctionDecl();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FONCTION_DECL__NAME = eINSTANCE.getFonctionDecl_Name();
-
-    /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference FONCTION_DECL__BODY = eINSTANCE.getFonctionDecl_Body();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionExterneImpl <em>Fonction Externe</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionExterneImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionExterne()
+     * @generated
+     */
+    EClass FONCTION_EXTERNE = eINSTANCE.getFonctionExterne();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionRefImpl <em>Fonction Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionRefImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionRef()
+     * @generated
+     */
+    EClass FONCTION_REF = eINSTANCE.getFonctionRef();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONCTION_REF__NAME = eINSTANCE.getFonctionRef_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PourcentDeclImpl <em>Pourcent Decl</em>}' class.
@@ -2715,14 +2740,6 @@ public interface DroneDSLPackage extends EPackage
      * @generated
      */
     EClass POURCENT_DECL = eINSTANCE.getPourcentDecl();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POURCENT_DECL__NAME = eINSTANCE.getPourcentDecl_Name();
 
     /**
      * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
@@ -2743,20 +2760,30 @@ public interface DroneDSLPackage extends EPackage
     EClass INT_DECL = eINSTANCE.getIntDecl();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INT_DECL__NAME = eINSTANCE.getIntDecl_Name();
-
-    /**
      * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference INT_DECL__VAL = eINSTANCE.getIntDecl_Val();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.VarDeclImpl <em>Var Decl</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.VarDeclImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getVarDecl()
+     * @generated
+     */
+    EClass VAR_DECL = eINSTANCE.getVarDecl();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAR_DECL__NAME = eINSTANCE.getVarDecl_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PourcentExpImpl <em>Pourcent Exp</em>}' class.
@@ -2891,6 +2918,32 @@ public interface DroneDSLPackage extends EPackage
     EClass AR = eINSTANCE.getAR();
 
     /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl <em>Parallele</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele()
+     * @generated
+     */
+    EClass PARALLELE = eINSTANCE.getParallele();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE__A = eINSTANCE.getParallele_A();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARALLELE__B = eINSTANCE.getParallele_B();
+
+    /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele2Impl <em>Parallele2</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2901,28 +2954,12 @@ public interface DroneDSLPackage extends EPackage
     EClass PARALLELE2 = eINSTANCE.getParallele2();
 
     /**
-     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE2__A = eINSTANCE.getParallele2_A();
-
-    /**
      * The meta object literal for the '<em><b>T</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference PARALLELE2__T = eINSTANCE.getParallele2_T();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE2__B = eINSTANCE.getParallele2_B();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele3Impl <em>Parallele3</em>}' class.
@@ -2933,22 +2970,6 @@ public interface DroneDSLPackage extends EPackage
      * @generated
      */
     EClass PARALLELE3 = eINSTANCE.getParallele3();
-
-    /**
-     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE3__A = eINSTANCE.getParallele3_A();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARALLELE3__B = eINSTANCE.getParallele3_B();
 
     /**
      * The meta object literal for the '<em><b>C</b></em>' containment reference feature.

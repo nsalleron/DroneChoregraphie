@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,35 +23,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele3Impl#getA <em>A</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele3Impl#getB <em>B</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Parallele3Impl#getC <em>C</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Parallele3Impl extends MinimalEObjectImpl.Container implements Parallele3
+public class Parallele3Impl extends ParalleleImpl implements Parallele3
 {
-  /**
-   * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getA()
-   * @generated
-   * @ordered
-   */
-  protected EObject a;
-
-  /**
-   * The cached value of the '{@link #getB() <em>B</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getB()
-   * @generated
-   * @ordered
-   */
-  protected EObject b;
-
   /**
    * The cached value of the '{@link #getC() <em>C</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -82,102 +59,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.PARALLELE3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EObject getA()
-  {
-    return a;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetA(EObject newA, NotificationChain msgs)
-  {
-    EObject oldA = a;
-    a = newA;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE3__A, oldA, newA);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setA(EObject newA)
-  {
-    if (newA != a)
-    {
-      NotificationChain msgs = null;
-      if (a != null)
-        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE3__A, null, msgs);
-      if (newA != null)
-        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE3__A, null, msgs);
-      msgs = basicSetA(newA, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE3__A, newA, newA));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EObject getB()
-  {
-    return b;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetB(EObject newB, NotificationChain msgs)
-  {
-    EObject oldB = b;
-    b = newB;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE3__B, oldB, newB);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setB(EObject newB)
-  {
-    if (newB != b)
-    {
-      NotificationChain msgs = null;
-      if (b != null)
-        msgs = ((InternalEObject)b).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE3__B, null, msgs);
-      if (newB != null)
-        msgs = ((InternalEObject)newB).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.PARALLELE3__B, null, msgs);
-      msgs = basicSetB(newB, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE3__B, newB, newB));
   }
 
   /**
@@ -238,10 +119,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE3__A:
-        return basicSetA(null, msgs);
-      case DroneDSLPackage.PARALLELE3__B:
-        return basicSetB(null, msgs);
       case DroneDSLPackage.PARALLELE3__C:
         return basicSetC(null, msgs);
     }
@@ -258,10 +135,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE3__A:
-        return getA();
-      case DroneDSLPackage.PARALLELE3__B:
-        return getB();
       case DroneDSLPackage.PARALLELE3__C:
         return getC();
     }
@@ -278,12 +151,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE3__A:
-        setA((EObject)newValue);
-        return;
-      case DroneDSLPackage.PARALLELE3__B:
-        setB((EObject)newValue);
-        return;
       case DroneDSLPackage.PARALLELE3__C:
         setC((EObject)newValue);
         return;
@@ -301,12 +168,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE3__A:
-        setA((EObject)null);
-        return;
-      case DroneDSLPackage.PARALLELE3__B:
-        setB((EObject)null);
-        return;
       case DroneDSLPackage.PARALLELE3__C:
         setC((EObject)null);
         return;
@@ -324,10 +185,6 @@ public class Parallele3Impl extends MinimalEObjectImpl.Container implements Para
   {
     switch (featureID)
     {
-      case DroneDSLPackage.PARALLELE3__A:
-        return a != null;
-      case DroneDSLPackage.PARALLELE3__B:
-        return b != null;
       case DroneDSLPackage.PARALLELE3__C:
         return c != null;
     }

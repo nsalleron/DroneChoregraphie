@@ -40,5 +40,16 @@ Workflow {
 				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}
 		}
+		language = StandardLanguage {
+			name = "fr.idmteam1.idmproject.dronedsl.DroneDSLLib"
+			fileExtensions = "lib_drone"
+
+			serializer = {
+				generateStub = false
+			}
+			validator = {
+				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+			}
+		}
 	}
 }

@@ -7,7 +7,9 @@ import com.google.common.collect.Maps;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
+import fr.idmteam1.idmproject.dronedsl.DroneDSLLibRuntimeModule;
 import fr.idmteam1.idmproject.dronedsl.DroneDSLRuntimeModule;
+import fr.idmteam1.idmproject.dronedsl.ui.DroneDSLLibUiModule;
 import fr.idmteam1.idmproject.dronedsl.ui.DroneDSLUiModule;
 import java.util.Collections;
 import java.util.Map;
@@ -24,6 +26,7 @@ import org.osgi.framework.BundleContext;
 public class DronedslActivator extends AbstractUIPlugin {
 
 	public static final String FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSL = "fr.idmteam1.idmproject.dronedsl.DroneDSL";
+	public static final String FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSLLIB = "fr.idmteam1.idmproject.dronedsl.DroneDSLLib";
 	
 	private static final Logger logger = Logger.getLogger(DronedslActivator.class);
 	
@@ -76,12 +79,18 @@ public class DronedslActivator extends AbstractUIPlugin {
 		if (FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSL.equals(grammar)) {
 			return new DroneDSLRuntimeModule();
 		}
+		if (FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSLLIB.equals(grammar)) {
+			return new DroneDSLLibRuntimeModule();
+		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected Module getUiModule(String grammar) {
 		if (FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSL.equals(grammar)) {
 			return new DroneDSLUiModule(this);
+		}
+		if (FR_IDMTEAM1_IDMPROJECT_DRONEDSL_DRONEDSLLIB.equals(grammar)) {
+			return new DroneDSLLibUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

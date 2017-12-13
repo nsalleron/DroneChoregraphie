@@ -6,6 +6,8 @@ generate droneDSL "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSL"
 Model:
 	(
 		(imports+=Import)*'\n'*
+		
+		(externalFuncs+=FonctionExterne)*'\n'*
 			
 		(pvhm+=Pourcent_vitesse_hauteur_max)'\n'*
 		(pvdm+=Pourcent_vitesse_deplacement_max)'\n'*
@@ -22,11 +24,9 @@ Model:
 Main:
 'main' '{'
 			(Start)'\n'*
-			(SeconDec+=IntDecl			|
-			 PourDec+=PourcentDecl 		|
+			(
 			 statements+=Statement		|
-			 fonctions+=FonctionCall		|
-			 parallele+=(Parallele2|Parallele3)
+			 fonctions+=FonctionCall
 			)*'\n'*
 			(End)'\n'*
 		'}' '\n'*
@@ -39,14 +39,11 @@ terminal POURCENT returns ecore::EString:
 PourcentConst:
 	val=POURCENT
 ;
-  
-Imports : 
-	includes+=Import
-;
+
 Import:
     'import''<'importURI=INCLUDE'>''\n'*;
     
-terminal INCLUDE: ID('.drone');
+terminal INCLUDE: ID('.lib_drone');
 
 //Prologue
 Pourcent_vitesse_hauteur_max:
@@ -149,27 +146,31 @@ End:
 	Atterrir
 ;
 Statement:
-	Avancer|Descendre|RotationDroite|RotationGauche|Pause|Droite|Gauche|Reculer|Monter
+	Avancer|Descendre|RotationDroite|RotationGauche|Pause|Droite|Gauche|Reculer|Monter|Parallele|VarDecl
 ;
 	
 FonctionDecl:
 	'func' name=ID '('')' '{' body+=(Statement)*'\n''}'
 ;
 
-/*
+FonctionExterne:
+	'extern' 'func' name=ID '('')''\n'*
+;
 
-RefPourVar:
-	var=[PourcentDecl]
+FonctionRef:
+	FonctionDecl|FonctionExterne
 ;
-PourConstante:
-	val=POURCENT
-;
-*/
+
 PourcentDecl:
 	'Pourcent' name=ID '=' val=PourcentConst
 ;
+
 IntDecl:
 	'Seconde' name=ID '=' val=IntExp
+;
+
+VarDecl:
+	PourcentDecl|IntDecl
 ;
 
 PourcentExp:
@@ -193,7 +194,7 @@ IntExp:
 ;
 
 FonctionCall:
-	func=[FonctionDecl]'('')'
+	func=[FonctionRef]'('')'
 ;
 
 	
@@ -213,6 +214,10 @@ AR:
 	(Avancer|Reculer)
 ;
 
+Parallele:
+	Parallele2|Parallele3
+;
+
 Parallele2:
 	(a=MD)		'&' (t=GDr)		|
 	(a=MD)		'&' (t=AR)		|
@@ -226,7 +231,6 @@ Parallele2:
 	(t=AR)		'&' (a=MD )		|
 	(t=AR) 		'&' (a=RGRD) 	|
 	(t=AR) 		'&' (a=GDr) 
-	//(statements+=Statement|fonctions+=FonctionCall) '&' (statements+=Statement|fonctions+=FonctionCall)
 ;
 
 Parallele3:

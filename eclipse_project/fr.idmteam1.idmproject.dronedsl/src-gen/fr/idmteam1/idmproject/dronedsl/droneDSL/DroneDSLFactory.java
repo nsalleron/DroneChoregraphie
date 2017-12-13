@@ -51,15 +51,6 @@ public interface DroneDSLFactory extends EFactory
   PourcentConst createPourcentConst();
 
   /**
-   * Returns a new object of class '<em>Imports</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Imports</em>'.
-   * @generated
-   */
-  Imports createImports();
-
-  /**
    * Returns a new object of class '<em>Import</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -213,6 +204,24 @@ public interface DroneDSLFactory extends EFactory
   FonctionDecl createFonctionDecl();
 
   /**
+   * Returns a new object of class '<em>Fonction Externe</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Externe</em>'.
+   * @generated
+   */
+  FonctionExterne createFonctionExterne();
+
+  /**
+   * Returns a new object of class '<em>Fonction Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Ref</em>'.
+   * @generated
+   */
+  FonctionRef createFonctionRef();
+
+  /**
    * Returns a new object of class '<em>Pourcent Decl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -229,6 +238,15 @@ public interface DroneDSLFactory extends EFactory
    * @generated
    */
   IntDecl createIntDecl();
+
+  /**
+   * Returns a new object of class '<em>Var Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Decl</em>'.
+   * @generated
+   */
+  VarDecl createVarDecl();
 
   /**
    * Returns a new object of class '<em>Pourcent Exp</em>'.
@@ -319,6 +337,15 @@ public interface DroneDSLFactory extends EFactory
    * @generated
    */
   AR createAR();
+
+  /**
+   * Returns a new object of class '<em>Parallele</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parallele</em>'.
+   * @generated
+   */
+  Parallele createParallele();
 
   /**
    * Returns a new object of class '<em>Parallele2</em>'.

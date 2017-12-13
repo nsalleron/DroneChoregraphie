@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,34 +23,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntDeclImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntDeclImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
+public class IntDeclImpl extends VarDeclImpl implements IntDecl
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -81,29 +59,6 @@ public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.INT_DECL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.INT_DECL__NAME, oldName, name));
   }
 
   /**
@@ -180,8 +135,6 @@ public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__NAME:
-        return getName();
       case DroneDSLPackage.INT_DECL__VAL:
         return getVal();
     }
@@ -198,9 +151,6 @@ public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__NAME:
-        setName((String)newValue);
-        return;
       case DroneDSLPackage.INT_DECL__VAL:
         setVal((IntExp)newValue);
         return;
@@ -218,9 +168,6 @@ public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case DroneDSLPackage.INT_DECL__VAL:
         setVal((IntExp)null);
         return;
@@ -238,29 +185,10 @@ public class IntDeclImpl extends MinimalEObjectImpl.Container implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DroneDSLPackage.INT_DECL__VAL:
         return val != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //IntDeclImpl
