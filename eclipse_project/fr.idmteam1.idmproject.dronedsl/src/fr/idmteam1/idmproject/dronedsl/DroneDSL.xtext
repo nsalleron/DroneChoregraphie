@@ -215,7 +215,7 @@ AR:
 ;
 
 Parallele:
-	Parallele2|Parallele3
+	Parallele2|Parallele3|Parallele4
 ;
 
 Parallele2:
@@ -258,4 +258,32 @@ Parallele3:
 	(a=RGRD)'&' (b=MD) 		'&' (c=GDr)		|
 	(a=RGRD)'&' (b=GDr) 		'&' (c=MD)		|
 	(a=RGRD)'&' (b=GDr) 		'&' (c=AR)	
+;
+
+//Voici les 4 commandes 
+Parallele4:
+	(a=AR) 	'&' (b=GDr) 		'&' (c=MD)			'&' (d=RGRD) 	|
+	(a=AR) 	'&' (b=GDr) 		'&' (c =RGRD)		'&' (d=MD)		|
+	(a=AR) 	'&' (b=MD)  		'&' (c = GDr)		'&'	(d=RGRD)		|
+	(a=AR) 	'&' (b=MD)		'&' (c= RGRD) 		'&'	(d=GDr)		|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = MD) 		'&'	(d=GDr)		|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = GDr) 		'&'	(d=MD)		|
+	(a=GDr) '&' (b=AR) 		'&' (c=MD)			'&'	(d=RGRD)		|
+	(a=GDr) '&' (b=AR) 		'&' (c=RGRD)			'&'	(d=MD)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=AR)			'&' (d=RGRD)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=RGRD)			'&'	(d=AR)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=AR)			'&'	(d=MD)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=MD)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=GDr)			'&'	(d=RGRD)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=RGRD)			'&'	(d=GDr)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=AR)			'&'	(d=RGRD)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=RGRD)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=GDr)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=AR)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=MD)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=GDr)			'&'	(d=MD)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=AR)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=GDr)			'&'	(d=AR)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=MD)			'&'	(d=AR)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=AR)			'&'	(d=MD)		
 ;
