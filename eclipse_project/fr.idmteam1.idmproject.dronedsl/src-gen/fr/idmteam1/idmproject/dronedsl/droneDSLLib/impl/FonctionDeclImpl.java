@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -27,6 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getA <em>A</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getB <em>B</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -34,6 +37,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
 {
+  /**
+   * The cached value of the '{@link #getA() <em>A</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getA()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> a;
+
+  /**
+   * The cached value of the '{@link #getB() <em>B</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getB()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> b;
+
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -63,6 +86,34 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   protected EClass eStaticClass()
   {
     return DroneDSLLibPackage.Literals.FONCTION_DECL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getA()
+  {
+    if (a == null)
+    {
+      a = new EDataTypeEList<String>(String.class, this, DroneDSLLibPackage.FONCTION_DECL__A);
+    }
+    return a;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getB()
+  {
+    if (b == null)
+    {
+      b = new EDataTypeEList<String>(String.class, this, DroneDSLLibPackage.FONCTION_DECL__B);
+    }
+    return b;
   }
 
   /**
@@ -105,6 +156,10 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
+      case DroneDSLLibPackage.FONCTION_DECL__A:
+        return getA();
+      case DroneDSLLibPackage.FONCTION_DECL__B:
+        return getB();
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         return getBody();
     }
@@ -122,6 +177,14 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
+      case DroneDSLLibPackage.FONCTION_DECL__A:
+        getA().clear();
+        getA().addAll((Collection<? extends String>)newValue);
+        return;
+      case DroneDSLLibPackage.FONCTION_DECL__B:
+        getB().clear();
+        getB().addAll((Collection<? extends String>)newValue);
+        return;
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         getBody().clear();
         getBody().addAll((Collection<? extends EObject>)newValue);
@@ -140,6 +203,12 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
+      case DroneDSLLibPackage.FONCTION_DECL__A:
+        getA().clear();
+        return;
+      case DroneDSLLibPackage.FONCTION_DECL__B:
+        getB().clear();
+        return;
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         getBody().clear();
         return;
@@ -157,10 +226,33 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
+      case DroneDSLLibPackage.FONCTION_DECL__A:
+        return a != null && !a.isEmpty();
+      case DroneDSLLibPackage.FONCTION_DECL__B:
+        return b != null && !b.isEmpty();
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         return body != null && !body.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (a: ");
+    result.append(a);
+    result.append(", b: ");
+    result.append(b);
+    result.append(')');
+    return result.toString();
   }
 
 } //FonctionDeclImpl

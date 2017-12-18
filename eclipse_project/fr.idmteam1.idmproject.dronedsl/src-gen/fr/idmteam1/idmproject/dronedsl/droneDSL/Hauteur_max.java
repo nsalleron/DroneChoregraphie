@@ -32,12 +32,12 @@ public interface Hauteur_max extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hauteur max</em>' containment reference.
-   * @see #setHauteur_max(IntExp)
+   * @see #setHauteur_max(SecondeExp)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getHauteur_max_Hauteur_max()
    * @model containment="true"
    * @generated
    */
-  IntExp getHauteur_max();
+  SecondeExp getHauteur_max();
 
   /**
    * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max#getHauteur_max <em>Hauteur max</em>}' containment reference.
@@ -47,6 +47,6 @@ public interface Hauteur_max extends EObject
    * @see #getHauteur_max()
    * @generated
    */
-  void setHauteur_max(IntExp value);
+  void setHauteur_max(SecondeExp value);
 
 } // Hauteur_max

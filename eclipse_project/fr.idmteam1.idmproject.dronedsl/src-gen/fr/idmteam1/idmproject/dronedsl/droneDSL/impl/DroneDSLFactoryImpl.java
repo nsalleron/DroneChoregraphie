@@ -66,36 +66,35 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
     switch (eClass.getClassifierID())
     {
       case DroneDSLPackage.MODEL: return createModel();
-      case DroneDSLPackage.MAIN: return createMain();
-      case DroneDSLPackage.POURCENT_CONST: return createPourcentConst();
       case DroneDSLPackage.IMPORT: return createImport();
       case DroneDSLPackage.POURCENT_VITESSE_HAUTEUR_MAX: return createPourcent_vitesse_hauteur_max();
       case DroneDSLPackage.POURCENT_VITESSE_DEPLACEMENT_MAX: return createPourcent_vitesse_deplacement_max();
       case DroneDSLPackage.POURCENT_VITESSE_ROTATION_MAX: return createPourcent_vitesse_rotation_max();
       case DroneDSLPackage.HAUTEUR_MAX: return createHauteur_max();
       case DroneDSLPackage.ELOIGNEMENT_MAX: return createEloignement_max();
+      case DroneDSLPackage.PROLOGUE: return createPrologue();
+      case DroneDSLPackage.SECONDE_CONST: return createSecondeConst();
+      case DroneDSLPackage.POURCENT_CONST: return createPourcentConst();
+      case DroneDSLPackage.SECONDE_DECL: return createSecondeDecl();
+      case DroneDSLPackage.POURCENT_DECL: return createPourcentDecl();
+      case DroneDSLPackage.VAR_DECL: return createVarDecl();
+      case DroneDSLPackage.REF_SECONDE_VAR: return createRefSecondeVar();
+      case DroneDSLPackage.REF_POURCENT_VAR: return createRefPourcentVar();
+      case DroneDSLPackage.POURCENT_EXP: return createPourcentExp();
+      case DroneDSLPackage.SECONDE_EXP: return createSecondeExp();
       case DroneDSLPackage.MONTER: return createMonter();
       case DroneDSLPackage.DESCENDRE: return createDescendre();
       case DroneDSLPackage.AVANCER: return createAvancer();
       case DroneDSLPackage.RECULER: return createReculer();
       case DroneDSLPackage.GAUCHE: return createGauche();
       case DroneDSLPackage.DROITE: return createDroite();
-      case DroneDSLPackage.PAUSE: return createPause();
       case DroneDSLPackage.ROTATION_GAUCHE: return createRotationGauche();
       case DroneDSLPackage.ROTATION_DROITE: return createRotationDroite();
-      case DroneDSLPackage.STATEMENT: return createStatement();
+      case DroneDSLPackage.PAUSE: return createPause();
+      case DroneDSLPackage.COMMANDE_BASIQUE: return createCommandeBasique();
       case DroneDSLPackage.FONCTION_DECL: return createFonctionDecl();
-      case DroneDSLPackage.FONCTION_EXTERNE: return createFonctionExterne();
-      case DroneDSLPackage.FONCTION_REF: return createFonctionRef();
-      case DroneDSLPackage.POURCENT_DECL: return createPourcentDecl();
-      case DroneDSLPackage.INT_DECL: return createIntDecl();
-      case DroneDSLPackage.VAR_DECL: return createVarDecl();
-      case DroneDSLPackage.POURCENT_EXP: return createPourcentExp();
-      case DroneDSLPackage.REF_INT_VAR: return createRefIntVar();
-      case DroneDSLPackage.REF_POURCENT_VAR: return createRefPourcentVar();
-      case DroneDSLPackage.INT_CONSTANTE: return createIntConstante();
-      case DroneDSLPackage.INT_EXP: return createIntExp();
       case DroneDSLPackage.FONCTION_CALL: return createFonctionCall();
+      case DroneDSLPackage.MAIN: return createMain();
       case DroneDSLPackage.MD: return createMD();
       case DroneDSLPackage.GDR: return createGDr();
       case DroneDSLPackage.RGRD: return createRGRD();
@@ -118,28 +117,6 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     ModelImpl model = new ModelImpl();
     return model;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Main createMain()
-  {
-    MainImpl main = new MainImpl();
-    return main;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PourcentConst createPourcentConst()
-  {
-    PourcentConstImpl pourcentConst = new PourcentConstImpl();
-    return pourcentConst;
   }
 
   /**
@@ -213,6 +190,116 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Prologue createPrologue()
+  {
+    PrologueImpl prologue = new PrologueImpl();
+    return prologue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecondeConst createSecondeConst()
+  {
+    SecondeConstImpl secondeConst = new SecondeConstImpl();
+    return secondeConst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentConst createPourcentConst()
+  {
+    PourcentConstImpl pourcentConst = new PourcentConstImpl();
+    return pourcentConst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecondeDecl createSecondeDecl()
+  {
+    SecondeDeclImpl secondeDecl = new SecondeDeclImpl();
+    return secondeDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentDecl createPourcentDecl()
+  {
+    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
+    return pourcentDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarDecl createVarDecl()
+  {
+    VarDeclImpl varDecl = new VarDeclImpl();
+    return varDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefSecondeVar createRefSecondeVar()
+  {
+    RefSecondeVarImpl refSecondeVar = new RefSecondeVarImpl();
+    return refSecondeVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefPourcentVar createRefPourcentVar()
+  {
+    RefPourcentVarImpl refPourcentVar = new RefPourcentVarImpl();
+    return refPourcentVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentExp createPourcentExp()
+  {
+    PourcentExpImpl pourcentExp = new PourcentExpImpl();
+    return pourcentExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecondeExp createSecondeExp()
+  {
+    SecondeExpImpl secondeExp = new SecondeExpImpl();
+    return secondeExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Monter createMonter()
   {
     MonterImpl monter = new MonterImpl();
@@ -279,17 +366,6 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Pause createPause()
-  {
-    PauseImpl pause = new PauseImpl();
-    return pause;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public RotationGauche createRotationGauche()
   {
     RotationGaucheImpl rotationGauche = new RotationGaucheImpl();
@@ -312,10 +388,21 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Statement createStatement()
+  public Pause createPause()
   {
-    StatementImpl statement = new StatementImpl();
-    return statement;
+    PauseImpl pause = new PauseImpl();
+    return pause;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CommandeBasique createCommandeBasique()
+  {
+    CommandeBasiqueImpl commandeBasique = new CommandeBasiqueImpl();
+    return commandeBasique;
   }
 
   /**
@@ -334,120 +421,21 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FonctionExterne createFonctionExterne()
-  {
-    FonctionExterneImpl fonctionExterne = new FonctionExterneImpl();
-    return fonctionExterne;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FonctionRef createFonctionRef()
-  {
-    FonctionRefImpl fonctionRef = new FonctionRefImpl();
-    return fonctionRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PourcentDecl createPourcentDecl()
-  {
-    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
-    return pourcentDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntDecl createIntDecl()
-  {
-    IntDeclImpl intDecl = new IntDeclImpl();
-    return intDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarDecl createVarDecl()
-  {
-    VarDeclImpl varDecl = new VarDeclImpl();
-    return varDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PourcentExp createPourcentExp()
-  {
-    PourcentExpImpl pourcentExp = new PourcentExpImpl();
-    return pourcentExp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RefIntVar createRefIntVar()
-  {
-    RefIntVarImpl refIntVar = new RefIntVarImpl();
-    return refIntVar;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RefPourcentVar createRefPourcentVar()
-  {
-    RefPourcentVarImpl refPourcentVar = new RefPourcentVarImpl();
-    return refPourcentVar;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntConstante createIntConstante()
-  {
-    IntConstanteImpl intConstante = new IntConstanteImpl();
-    return intConstante;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntExp createIntExp()
-  {
-    IntExpImpl intExp = new IntExpImpl();
-    return intExp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public FonctionCall createFonctionCall()
   {
     FonctionCallImpl fonctionCall = new FonctionCallImpl();
     return fonctionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Main createMain()
+  {
+    MainImpl main = new MainImpl();
+    return main;
   }
 
   /**

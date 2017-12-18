@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface RotationDroite extends Statement, RGRD
+public interface RotationDroite extends CommandeBasique, RGRD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.
@@ -32,12 +32,12 @@ public interface RotationDroite extends Statement, RGRD
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Duree</em>' containment reference.
-   * @see #setDuree(IntExp)
+   * @see #setDuree(SecondeExp)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRotationDroite_Duree()
    * @model containment="true"
    * @generated
    */
-  IntExp getDuree();
+  SecondeExp getDuree();
 
   /**
    * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getDuree <em>Duree</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface RotationDroite extends Statement, RGRD
    * @see #getDuree()
    * @generated
    */
-  void setDuree(IntExp value);
+  void setDuree(SecondeExp value);
 
   /**
    * Returns the value of the '<em><b>Vitesse rotation</b></em>' containment reference.

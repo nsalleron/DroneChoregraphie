@@ -5,28 +5,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Import" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pvhm" upperBound="-1" eType="#//Pourcent_vitesse_hauteur_max"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pvdm" upperBound="-1" eType="#//Pourcent_vitesse_deplacement_max"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pvrm" upperBound="-1" eType="#//Pourcent_vitesse_rotation_max"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hm" upperBound="-1" eType="#//Hauteur_max"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="em" upperBound="-1" eType="#//Eloignement_max"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prologue" eType="#//Prologue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="m" eType="#//Main" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fonctions" upperBound="-1"
         eType="#//FonctionDecl" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Main">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
-        eType="#//Statement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fonctions" upperBound="-1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PourcentConst" eSuperTypes="#//PourcentExp">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Import">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -44,108 +27,122 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hauteur_max">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//IntExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//SecondeExp"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Eloignement_max">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//IntExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//SecondeExp"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Monter" eSuperTypes="#//Statement #//MD">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
+  <eClassifiers xsi:type="ecore:EClass" name="Prologue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_verticale" eType="#//Pourcent_vitesse_hauteur_max"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_verticale" eType="#//PourcentExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//Pourcent_vitesse_deplacement_max"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Descendre" eSuperTypes="#//Statement #//MD">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//Pourcent_vitesse_rotation_max"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_verticale" eType="#//PourcentExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur" eType="#//Hauteur_max"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Avancer" eSuperTypes="#//Statement #//AR">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eloignement" eType="#//Eloignement_max"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Reculer" eSuperTypes="#//Statement #//AR">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecondeConst" eSuperTypes="#//SecondeExp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gauche" eSuperTypes="#//Statement #//GDr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PourcentConst" eSuperTypes="#//PourcentExp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Droite" eSuperTypes="#//Statement #//GDr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
+  <eClassifiers xsi:type="ecore:EClass" name="SecondeDecl" eSuperTypes="#//VarDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//SecondeConst"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Pause" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RotationGauche" eSuperTypes="#//Statement #//RGRD">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//PourcentExp"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RotationDroite" eSuperTypes="#//Statement #//RGRD">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//IntExp"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//PourcentExp"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FonctionDecl" eSuperTypes="#//FonctionRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="a" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FonctionExterne" eSuperTypes="#//FonctionRef"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FonctionRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PourcentDecl" eSuperTypes="#//VarDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//PourcentConst"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntDecl" eSuperTypes="#//VarDecl">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//IntExp"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VarDecl" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="VarDecl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PourcentExp"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RefIntVar" eSuperTypes="#//IntExp">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//IntDecl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RefSecondeVar" eSuperTypes="#//SecondeExp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//SecondeDecl"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefPourcentVar" eSuperTypes="#//PourcentExp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//PourcentDecl"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntConstante" eSuperTypes="#//IntExp">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PourcentExp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecondeExp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Monter" eSuperTypes="#//CommandeBasique #//MD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_verticale" eType="#//PourcentExp"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntExp"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FonctionCall">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="func" eType="#//FonctionRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Descendre" eSuperTypes="#//CommandeBasique #//MD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_verticale" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Avancer" eSuperTypes="#//CommandeBasique #//AR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reculer" eSuperTypes="#//CommandeBasique #//AR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gauche" eSuperTypes="#//CommandeBasique #//GDr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Droite" eSuperTypes="#//CommandeBasique #//GDr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RotationGauche" eSuperTypes="#//CommandeBasique #//RGRD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RotationDroite" eSuperTypes="#//CommandeBasique #//RGRD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//PourcentExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pause" eSuperTypes="#//CommandeBasique">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duree" eType="#//SecondeExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommandeBasique" eSuperTypes="#//FonctionDecl #//Main"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionDecl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" upperBound="-1" eType="#//VarDecl"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionCall" eSuperTypes="#//FonctionDecl #//Main">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//FonctionDecl"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atterrissage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Main">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decollage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainbody" upperBound="-1"
+        eType="#//VarDecl" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MD"/>
   <eClassifiers xsi:type="ecore:EClass" name="GDr"/>
   <eClassifiers xsi:type="ecore:EClass" name="RGRD"/>
   <eClassifiers xsi:type="ecore:EClass" name="AR"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Parallele" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="Parallele" eSuperTypes="#//FonctionDecl #//Main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"

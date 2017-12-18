@@ -6,21 +6,21 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Int Constante</b></em>'.
+ * A representation of the model object '<em><b>Seconde Const</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst#getVal <em>Val</em>}</li>
  * </ul>
  *
- * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getIntConstante()
+ * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getSecondeConst()
  * @model
  * @generated
  */
-public interface IntConstante extends IntExp
+public interface SecondeConst extends SecondeExp
 {
   /**
    * Returns the value of the '<em><b>Val</b></em>' attribute.
@@ -31,21 +31,21 @@ public interface IntConstante extends IntExp
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Val</em>' attribute.
-   * @see #setVal(int)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getIntConstante_Val()
+   * @see #setVal(String)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getSecondeConst_Val()
    * @model
    * @generated
    */
-  int getVal();
+  String getVal();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante#getVal <em>Val</em>}' attribute.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst#getVal <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Val</em>' attribute.
    * @see #getVal()
    * @generated
    */
-  void setVal(int value);
+  void setVal(String value);
 
-} // IntConstante
+} // SecondeConst

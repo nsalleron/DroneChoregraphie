@@ -6,21 +6,21 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Int Decl</b></em>'.
+ * A representation of the model object '<em><b>Seconde Decl</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl#getVal <em>Val</em>}</li>
  * </ul>
  *
- * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getIntDecl()
+ * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getSecondeDecl()
  * @model
  * @generated
  */
-public interface IntDecl extends VarDecl
+public interface SecondeDecl extends VarDecl
 {
   /**
    * Returns the value of the '<em><b>Val</b></em>' containment reference.
@@ -31,21 +31,21 @@ public interface IntDecl extends VarDecl
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Val</em>' containment reference.
-   * @see #setVal(IntExp)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getIntDecl_Val()
+   * @see #setVal(SecondeConst)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getSecondeDecl_Val()
    * @model containment="true"
    * @generated
    */
-  IntExp getVal();
+  SecondeConst getVal();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl#getVal <em>Val</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl#getVal <em>Val</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Val</em>' containment reference.
    * @see #getVal()
    * @generated
    */
-  void setVal(IntExp value);
+  void setVal(SecondeConst value);
 
-} // IntDecl
+} // SecondeDecl

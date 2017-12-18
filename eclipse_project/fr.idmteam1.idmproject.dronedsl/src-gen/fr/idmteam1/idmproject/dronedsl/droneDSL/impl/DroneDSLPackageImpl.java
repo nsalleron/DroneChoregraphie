@@ -4,6 +4,7 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Avancer;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.CommandeBasique;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Descendre;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Droite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLFactory;
@@ -11,15 +12,10 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.GDr;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntExp;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Monter;
@@ -34,12 +30,15 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentExp;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_deplacement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Reculer;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.RefIntVar;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RefPourcentVar;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.RefSecondeVar;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RotationGauche;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Statement;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeExp;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -63,20 +62,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * @generated
    */
   private EClass modelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mainEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass pourcentConstEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,6 +110,76 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass prologueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass secondeConstEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcentConstEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass secondeDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcentDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass varDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass refSecondeVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass refPourcentVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pourcentExpEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass secondeExpEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass monterEClass = null;
 
   /**
@@ -167,13 +222,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass pauseEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass rotationGaucheEClass = null;
 
   /**
@@ -188,7 +236,14 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass statementEClass = null;
+  private EClass pauseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass commandeBasiqueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -202,77 +257,14 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fonctionExterneEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fonctionRefEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass pourcentDeclEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intDeclEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass varDeclEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass pourcentExpEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass refIntVarEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass refPourcentVarEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intConstanteEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intExpEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass fonctionCallEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mainEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -418,7 +410,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvhm()
+  public EReference getModel_Prologue()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
@@ -428,7 +420,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvdm()
+  public EReference getModel_M()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(2);
   }
@@ -438,99 +430,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvrm()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getModel_Hm()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getModel_Em()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getModel_M()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getModel_Fonctions()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMain()
-  {
-    return mainEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMain_Statements()
-  {
-    return (EReference)mainEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMain_Fonctions()
-  {
-    return (EReference)mainEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPourcentConst()
-  {
-    return pourcentConstEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPourcentConst_Val()
-  {
-    return (EAttribute)pourcentConstEClass.getEStructuralFeatures().get(0);
+    return (EReference)modelEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -651,6 +553,226 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
   public EReference getEloignement_max_Hauteur_max()
   {
     return (EReference)eloignement_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPrologue()
+  {
+    return prologueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPrologue_Vitesse_verticale()
+  {
+    return (EReference)prologueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPrologue_Vitesse_deplacement()
+  {
+    return (EReference)prologueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPrologue_Vitesse_rotation()
+  {
+    return (EReference)prologueEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPrologue_Hauteur()
+  {
+    return (EReference)prologueEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPrologue_Eloignement()
+  {
+    return (EReference)prologueEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSecondeConst()
+  {
+    return secondeConstEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSecondeConst_Val()
+  {
+    return (EAttribute)secondeConstEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcentConst()
+  {
+    return pourcentConstEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPourcentConst_Val()
+  {
+    return (EAttribute)pourcentConstEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSecondeDecl()
+  {
+    return secondeDeclEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSecondeDecl_Val()
+  {
+    return (EReference)secondeDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcentDecl()
+  {
+    return pourcentDeclEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPourcentDecl_Val()
+  {
+    return (EReference)pourcentDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVarDecl()
+  {
+    return varDeclEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVarDecl_Name()
+  {
+    return (EAttribute)varDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRefSecondeVar()
+  {
+    return refSecondeVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefSecondeVar_Var()
+  {
+    return (EReference)refSecondeVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRefPourcentVar()
+  {
+    return refPourcentVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefPourcentVar_Var()
+  {
+    return (EReference)refPourcentVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPourcentExp()
+  {
+    return pourcentExpEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSecondeExp()
+  {
+    return secondeExpEClass;
   }
 
   /**
@@ -838,26 +960,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPause()
-  {
-    return pauseEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPause_Duree()
-  {
-    return (EReference)pauseEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getRotationGauche()
   {
     return rotationGaucheEClass;
@@ -918,9 +1020,29 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getStatement()
+  public EClass getPause()
   {
-    return statementEClass;
+    return pauseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPause_Duree()
+  {
+    return (EReference)pauseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCommandeBasique()
+  {
+    return commandeBasiqueEClass;
   }
 
   /**
@@ -938,7 +1060,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFonctionDecl_A()
+  public EAttribute getFonctionDecl_Name()
   {
     return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(0);
   }
@@ -948,189 +1070,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFonctionDecl_B()
-  {
-    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getFonctionDecl_Body()
   {
-    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFonctionExterne()
-  {
-    return fonctionExterneEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFonctionRef()
-  {
-    return fonctionRefEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFonctionRef_Name()
-  {
-    return (EAttribute)fonctionRefEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPourcentDecl()
-  {
-    return pourcentDeclEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPourcentDecl_Val()
-  {
-    return (EReference)pourcentDeclEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntDecl()
-  {
-    return intDeclEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getIntDecl_Val()
-  {
-    return (EReference)intDeclEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVarDecl()
-  {
-    return varDeclEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVarDecl_Name()
-  {
-    return (EAttribute)varDeclEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPourcentExp()
-  {
-    return pourcentExpEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRefIntVar()
-  {
-    return refIntVarEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRefIntVar_Var()
-  {
-    return (EReference)refIntVarEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRefPourcentVar()
-  {
-    return refPourcentVarEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRefPourcentVar_Var()
-  {
-    return (EReference)refPourcentVarEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntConstante()
-  {
-    return intConstanteEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIntConstante_Val()
-  {
-    return (EAttribute)intConstanteEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntExp()
-  {
-    return intExpEClass;
+    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1148,9 +1090,49 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFonctionCall_Func()
+  public EReference getFonctionCall_Ref()
   {
     return (EReference)fonctionCallEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFonctionCall_Atterrissage()
+  {
+    return (EAttribute)fonctionCallEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMain()
+  {
+    return mainEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMain_Decollage()
+  {
+    return (EAttribute)mainEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMain_Mainbody()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1325,20 +1307,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     // Create classes and their features
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__IMPORTS);
-    createEReference(modelEClass, MODEL__PVHM);
-    createEReference(modelEClass, MODEL__PVDM);
-    createEReference(modelEClass, MODEL__PVRM);
-    createEReference(modelEClass, MODEL__HM);
-    createEReference(modelEClass, MODEL__EM);
+    createEReference(modelEClass, MODEL__PROLOGUE);
     createEReference(modelEClass, MODEL__M);
     createEReference(modelEClass, MODEL__FONCTIONS);
-
-    mainEClass = createEClass(MAIN);
-    createEReference(mainEClass, MAIN__STATEMENTS);
-    createEReference(mainEClass, MAIN__FONCTIONS);
-
-    pourcentConstEClass = createEClass(POURCENT_CONST);
-    createEAttribute(pourcentConstEClass, POURCENT_CONST__VAL);
 
     importEClass = createEClass(IMPORT);
     createEAttribute(importEClass, IMPORT__IMPORT_URI);
@@ -1357,6 +1328,38 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     eloignement_maxEClass = createEClass(ELOIGNEMENT_MAX);
     createEReference(eloignement_maxEClass, ELOIGNEMENT_MAX__HAUTEUR_MAX);
+
+    prologueEClass = createEClass(PROLOGUE);
+    createEReference(prologueEClass, PROLOGUE__VITESSE_VERTICALE);
+    createEReference(prologueEClass, PROLOGUE__VITESSE_DEPLACEMENT);
+    createEReference(prologueEClass, PROLOGUE__VITESSE_ROTATION);
+    createEReference(prologueEClass, PROLOGUE__HAUTEUR);
+    createEReference(prologueEClass, PROLOGUE__ELOIGNEMENT);
+
+    secondeConstEClass = createEClass(SECONDE_CONST);
+    createEAttribute(secondeConstEClass, SECONDE_CONST__VAL);
+
+    pourcentConstEClass = createEClass(POURCENT_CONST);
+    createEAttribute(pourcentConstEClass, POURCENT_CONST__VAL);
+
+    secondeDeclEClass = createEClass(SECONDE_DECL);
+    createEReference(secondeDeclEClass, SECONDE_DECL__VAL);
+
+    pourcentDeclEClass = createEClass(POURCENT_DECL);
+    createEReference(pourcentDeclEClass, POURCENT_DECL__VAL);
+
+    varDeclEClass = createEClass(VAR_DECL);
+    createEAttribute(varDeclEClass, VAR_DECL__NAME);
+
+    refSecondeVarEClass = createEClass(REF_SECONDE_VAR);
+    createEReference(refSecondeVarEClass, REF_SECONDE_VAR__VAR);
+
+    refPourcentVarEClass = createEClass(REF_POURCENT_VAR);
+    createEReference(refPourcentVarEClass, REF_POURCENT_VAR__VAR);
+
+    pourcentExpEClass = createEClass(POURCENT_EXP);
+
+    secondeExpEClass = createEClass(SECONDE_EXP);
 
     monterEClass = createEClass(MONTER);
     createEReference(monterEClass, MONTER__DUREE);
@@ -1382,9 +1385,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     createEReference(droiteEClass, DROITE__DUREE);
     createEReference(droiteEClass, DROITE__VITESSE_DEPLACEMENT);
 
-    pauseEClass = createEClass(PAUSE);
-    createEReference(pauseEClass, PAUSE__DUREE);
-
     rotationGaucheEClass = createEClass(ROTATION_GAUCHE);
     createEReference(rotationGaucheEClass, ROTATION_GAUCHE__DUREE);
     createEReference(rotationGaucheEClass, ROTATION_GAUCHE__VITESSE_ROTATION);
@@ -1393,42 +1393,22 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     createEReference(rotationDroiteEClass, ROTATION_DROITE__DUREE);
     createEReference(rotationDroiteEClass, ROTATION_DROITE__VITESSE_ROTATION);
 
-    statementEClass = createEClass(STATEMENT);
+    pauseEClass = createEClass(PAUSE);
+    createEReference(pauseEClass, PAUSE__DUREE);
+
+    commandeBasiqueEClass = createEClass(COMMANDE_BASIQUE);
 
     fonctionDeclEClass = createEClass(FONCTION_DECL);
-    createEAttribute(fonctionDeclEClass, FONCTION_DECL__A);
-    createEAttribute(fonctionDeclEClass, FONCTION_DECL__B);
+    createEAttribute(fonctionDeclEClass, FONCTION_DECL__NAME);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
 
-    fonctionExterneEClass = createEClass(FONCTION_EXTERNE);
-
-    fonctionRefEClass = createEClass(FONCTION_REF);
-    createEAttribute(fonctionRefEClass, FONCTION_REF__NAME);
-
-    pourcentDeclEClass = createEClass(POURCENT_DECL);
-    createEReference(pourcentDeclEClass, POURCENT_DECL__VAL);
-
-    intDeclEClass = createEClass(INT_DECL);
-    createEReference(intDeclEClass, INT_DECL__VAL);
-
-    varDeclEClass = createEClass(VAR_DECL);
-    createEAttribute(varDeclEClass, VAR_DECL__NAME);
-
-    pourcentExpEClass = createEClass(POURCENT_EXP);
-
-    refIntVarEClass = createEClass(REF_INT_VAR);
-    createEReference(refIntVarEClass, REF_INT_VAR__VAR);
-
-    refPourcentVarEClass = createEClass(REF_POURCENT_VAR);
-    createEReference(refPourcentVarEClass, REF_POURCENT_VAR__VAR);
-
-    intConstanteEClass = createEClass(INT_CONSTANTE);
-    createEAttribute(intConstanteEClass, INT_CONSTANTE__VAL);
-
-    intExpEClass = createEClass(INT_EXP);
-
     fonctionCallEClass = createEClass(FONCTION_CALL);
-    createEReference(fonctionCallEClass, FONCTION_CALL__FUNC);
+    createEReference(fonctionCallEClass, FONCTION_CALL__REF);
+    createEAttribute(fonctionCallEClass, FONCTION_CALL__ATTERRISSAGE);
+
+    mainEClass = createEClass(MAIN);
+    createEAttribute(mainEClass, MAIN__DECOLLAGE);
+    createEReference(mainEClass, MAIN__MAINBODY);
 
     mdEClass = createEClass(MD);
 
@@ -1482,33 +1462,35 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    secondeConstEClass.getESuperTypes().add(this.getSecondeExp());
     pourcentConstEClass.getESuperTypes().add(this.getPourcentExp());
-    monterEClass.getESuperTypes().add(this.getStatement());
-    monterEClass.getESuperTypes().add(this.getMD());
-    descendreEClass.getESuperTypes().add(this.getStatement());
-    descendreEClass.getESuperTypes().add(this.getMD());
-    avancerEClass.getESuperTypes().add(this.getStatement());
-    avancerEClass.getESuperTypes().add(this.getAR());
-    reculerEClass.getESuperTypes().add(this.getStatement());
-    reculerEClass.getESuperTypes().add(this.getAR());
-    gaucheEClass.getESuperTypes().add(this.getStatement());
-    gaucheEClass.getESuperTypes().add(this.getGDr());
-    droiteEClass.getESuperTypes().add(this.getStatement());
-    droiteEClass.getESuperTypes().add(this.getGDr());
-    pauseEClass.getESuperTypes().add(this.getStatement());
-    rotationGaucheEClass.getESuperTypes().add(this.getStatement());
-    rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
-    rotationDroiteEClass.getESuperTypes().add(this.getStatement());
-    rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
-    fonctionDeclEClass.getESuperTypes().add(this.getFonctionRef());
-    fonctionExterneEClass.getESuperTypes().add(this.getFonctionRef());
+    secondeDeclEClass.getESuperTypes().add(this.getVarDecl());
     pourcentDeclEClass.getESuperTypes().add(this.getVarDecl());
-    intDeclEClass.getESuperTypes().add(this.getVarDecl());
-    varDeclEClass.getESuperTypes().add(this.getStatement());
-    refIntVarEClass.getESuperTypes().add(this.getIntExp());
+    refSecondeVarEClass.getESuperTypes().add(this.getSecondeExp());
     refPourcentVarEClass.getESuperTypes().add(this.getPourcentExp());
-    intConstanteEClass.getESuperTypes().add(this.getIntExp());
-    paralleleEClass.getESuperTypes().add(this.getStatement());
+    monterEClass.getESuperTypes().add(this.getCommandeBasique());
+    monterEClass.getESuperTypes().add(this.getMD());
+    descendreEClass.getESuperTypes().add(this.getCommandeBasique());
+    descendreEClass.getESuperTypes().add(this.getMD());
+    avancerEClass.getESuperTypes().add(this.getCommandeBasique());
+    avancerEClass.getESuperTypes().add(this.getAR());
+    reculerEClass.getESuperTypes().add(this.getCommandeBasique());
+    reculerEClass.getESuperTypes().add(this.getAR());
+    gaucheEClass.getESuperTypes().add(this.getCommandeBasique());
+    gaucheEClass.getESuperTypes().add(this.getGDr());
+    droiteEClass.getESuperTypes().add(this.getCommandeBasique());
+    droiteEClass.getESuperTypes().add(this.getGDr());
+    rotationGaucheEClass.getESuperTypes().add(this.getCommandeBasique());
+    rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
+    rotationDroiteEClass.getESuperTypes().add(this.getCommandeBasique());
+    rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
+    pauseEClass.getESuperTypes().add(this.getCommandeBasique());
+    commandeBasiqueEClass.getESuperTypes().add(this.getFonctionDecl());
+    commandeBasiqueEClass.getESuperTypes().add(this.getMain());
+    fonctionCallEClass.getESuperTypes().add(this.getFonctionDecl());
+    fonctionCallEClass.getESuperTypes().add(this.getMain());
+    paralleleEClass.getESuperTypes().add(this.getFonctionDecl());
+    paralleleEClass.getESuperTypes().add(this.getMain());
     parallele2EClass.getESuperTypes().add(this.getParallele());
     parallele3EClass.getESuperTypes().add(this.getParallele());
     parallele4EClass.getESuperTypes().add(this.getParallele());
@@ -1516,20 +1498,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Imports(), this.getImport(), null, "imports", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Pvhm(), this.getPourcent_vitesse_hauteur_max(), null, "pvhm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Pvdm(), this.getPourcent_vitesse_deplacement_max(), null, "pvdm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Pvrm(), this.getPourcent_vitesse_rotation_max(), null, "pvrm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Hm(), this.getHauteur_max(), null, "hm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Em(), this.getEloignement_max(), null, "em", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Prologue(), this.getPrologue(), null, "prologue", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_M(), this.getMain(), null, "m", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Fonctions(), this.getFonctionDecl(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMain_Statements(), this.getStatement(), null, "statements", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMain_Fonctions(), ecorePackage.getEObject(), null, "fonctions", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pourcentConstEClass, PourcentConst.class, "PourcentConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPourcentConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, PourcentConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1544,82 +1515,91 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEReference(getPourcent_vitesse_rotation_max_Vitesse_deplacement(), this.getPourcentConst(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hauteur_maxEClass, Hauteur_max.class, "Hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHauteur_max_Hauteur_max(), this.getIntExp(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHauteur_max_Hauteur_max(), this.getSecondeExp(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eloignement_maxEClass, Eloignement_max.class, "Eloignement_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEloignement_max_Hauteur_max(), this.getIntExp(), null, "hauteur_max", null, 0, 1, Eloignement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEloignement_max_Hauteur_max(), this.getSecondeExp(), null, "hauteur_max", null, 0, 1, Eloignement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(monterEClass, Monter.class, "Monter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMonter_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMonter_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(prologueEClass, Prologue.class, "Prologue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPrologue_Vitesse_verticale(), this.getPourcent_vitesse_hauteur_max(), null, "vitesse_verticale", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrologue_Vitesse_deplacement(), this.getPourcent_vitesse_deplacement_max(), null, "vitesse_deplacement", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrologue_Vitesse_rotation(), this.getPourcent_vitesse_rotation_max(), null, "vitesse_rotation", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrologue_Hauteur(), this.getHauteur_max(), null, "hauteur", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrologue_Eloignement(), this.getEloignement_max(), null, "eloignement", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(descendreEClass, Descendre.class, "Descendre", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDescendre_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDescendre_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(secondeConstEClass, SecondeConst.class, "SecondeConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSecondeConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, SecondeConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(avancerEClass, Avancer.class, "Avancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAvancer_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAvancer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(pourcentConstEClass, PourcentConst.class, "PourcentConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPourcentConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, PourcentConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(reculerEClass, Reculer.class, "Reculer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReculer_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getReculer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(gaucheEClass, Gauche.class, "Gauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGauche_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGauche_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(droiteEClass, Droite.class, "Droite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDroite_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDroite_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPause_Duree(), this.getIntExp(), null, "duree", null, 0, 1, Pause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rotationGaucheEClass, RotationGauche.class, "RotationGauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRotationGauche_Duree(), this.getIntExp(), null, "duree", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRotationGauche_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rotationDroiteEClass, RotationDroite.class, "RotationDroite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRotationDroite_Duree(), this.getIntExp(), null, "duree", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRotationDroite_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFonctionDecl_A(), ecorePackage.getEString(), "a", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFonctionDecl_B(), ecorePackage.getEString(), "b", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFonctionDecl_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fonctionExterneEClass, FonctionExterne.class, "FonctionExterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(fonctionRefEClass, FonctionRef.class, "FonctionRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFonctionRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(secondeDeclEClass, SecondeDecl.class, "SecondeDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSecondeDecl_Val(), this.getSecondeConst(), null, "val", null, 0, 1, SecondeDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcentDeclEClass, PourcentDecl.class, "PourcentDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPourcentDecl_Val(), this.getPourcentConst(), null, "val", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(intDeclEClass, IntDecl.class, "IntDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getIntDecl_Val(), this.getIntExp(), null, "val", null, 0, 1, IntDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(varDeclEClass, VarDecl.class, "VarDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVarDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, VarDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(pourcentExpEClass, PourcentExp.class, "PourcentExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(refIntVarEClass, RefIntVar.class, "RefIntVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRefIntVar_Var(), this.getIntDecl(), null, "var", null, 0, 1, RefIntVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refSecondeVarEClass, RefSecondeVar.class, "RefSecondeVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefSecondeVar_Var(), this.getSecondeDecl(), null, "var", null, 0, 1, RefSecondeVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refPourcentVarEClass, RefPourcentVar.class, "RefPourcentVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefPourcentVar_Var(), this.getPourcentDecl(), null, "var", null, 0, 1, RefPourcentVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(intConstanteEClass, IntConstante.class, "IntConstante", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntConstante_Val(), ecorePackage.getEInt(), "val", null, 0, 1, IntConstante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(pourcentExpEClass, PourcentExp.class, "PourcentExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(intExpEClass, IntExp.class, "IntExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(secondeExpEClass, SecondeExp.class, "SecondeExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(monterEClass, Monter.class, "Monter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMonter_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMonter_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(descendreEClass, Descendre.class, "Descendre", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDescendre_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDescendre_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Descendre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(avancerEClass, Avancer.class, "Avancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAvancer_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAvancer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Avancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(reculerEClass, Reculer.class, "Reculer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReculer_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReculer_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Reculer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gaucheEClass, Gauche.class, "Gauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGauche_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGauche_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Gauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(droiteEClass, Droite.class, "Droite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDroite_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDroite_Vitesse_deplacement(), this.getPourcentExp(), null, "vitesse_deplacement", null, 0, 1, Droite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotationGaucheEClass, RotationGauche.class, "RotationGauche", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRotationGauche_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRotationGauche_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationGauche.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotationDroiteEClass, RotationDroite.class, "RotationDroite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRotationDroite_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRotationDroite_Vitesse_rotation(), this.getPourcentExp(), null, "vitesse_rotation", null, 0, 1, RotationDroite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPause_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Pause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(commandeBasiqueEClass, CommandeBasique.class, "CommandeBasique", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFonctionDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFonctionDecl_Body(), this.getVarDecl(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fonctionCallEClass, FonctionCall.class, "FonctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFonctionCall_Func(), this.getFonctionRef(), null, "func", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFonctionCall_Ref(), this.getFonctionDecl(), null, "ref", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFonctionCall_Atterrissage(), ecorePackage.getEString(), "atterrissage", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMain_Decollage(), ecorePackage.getEString(), "decollage", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Mainbody(), this.getVarDecl(), null, "mainbody", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mdEClass, fr.idmteam1.idmproject.dronedsl.droneDSL.MD.class, "MD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

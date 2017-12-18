@@ -4,7 +4,7 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Int Constante</b></em>'.
+ * An implementation of the model object '<em><b>Seconde Const</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntConstanteImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.SecondeConstImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntConstanteImpl extends IntExpImpl implements IntConstante
+public class SecondeConstImpl extends SecondeExpImpl implements SecondeConst
 {
   /**
    * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
@@ -35,7 +35,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
    * @generated
    * @ordered
    */
-  protected static final int VAL_EDEFAULT = 0;
+  protected static final String VAL_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
@@ -45,14 +45,14 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
    * @generated
    * @ordered
    */
-  protected int val = VAL_EDEFAULT;
+  protected String val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IntConstanteImpl()
+  protected SecondeConstImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   @Override
   protected EClass eStaticClass()
   {
-    return DroneDSLPackage.Literals.INT_CONSTANTE;
+    return DroneDSLPackage.Literals.SECONDE_CONST;
   }
 
   /**
@@ -73,7 +73,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getVal()
+  public String getVal()
   {
     return val;
   }
@@ -83,12 +83,12 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(int newVal)
+  public void setVal(String newVal)
   {
-    int oldVal = val;
+    String oldVal = val;
     val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.INT_CONSTANTE__VAL, oldVal, val));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.SECONDE_CONST__VAL, oldVal, val));
   }
 
   /**
@@ -101,7 +101,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_CONSTANTE__VAL:
+      case DroneDSLPackage.SECONDE_CONST__VAL:
         return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -117,8 +117,8 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_CONSTANTE__VAL:
-        setVal((Integer)newValue);
+      case DroneDSLPackage.SECONDE_CONST__VAL:
+        setVal((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,7 +134,7 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_CONSTANTE__VAL:
+      case DroneDSLPackage.SECONDE_CONST__VAL:
         setVal(VAL_EDEFAULT);
         return;
     }
@@ -151,8 +151,8 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_CONSTANTE__VAL:
-        return val != VAL_EDEFAULT;
+      case DroneDSLPackage.SECONDE_CONST__VAL:
+        return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
     }
     return super.eIsSet(featureID);
   }
@@ -174,4 +174,4 @@ public class IntConstanteImpl extends IntExpImpl implements IntConstante
     return result.toString();
   }
 
-} //IntConstanteImpl
+} //SecondeConstImpl

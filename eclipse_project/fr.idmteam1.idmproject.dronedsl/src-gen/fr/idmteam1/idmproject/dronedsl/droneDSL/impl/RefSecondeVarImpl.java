@@ -4,56 +4,47 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionRef;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.RefSecondeVar;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Fonction Ref</b></em>'.
+ * An implementation of the model object '<em><b>Ref Seconde Var</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionRefImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.RefSecondeVarImpl#getVar <em>Var</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FonctionRefImpl extends MinimalEObjectImpl.Container implements FonctionRef
+public class RefSecondeVarImpl extends SecondeExpImpl implements RefSecondeVar
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected SecondeDecl var;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FonctionRefImpl()
+  protected RefSecondeVarImpl()
   {
     super();
   }
@@ -66,7 +57,7 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
   @Override
   protected EClass eStaticClass()
   {
-    return DroneDSLPackage.Literals.FONCTION_REF;
+    return DroneDSLPackage.Literals.REF_SECONDE_VAR;
   }
 
   /**
@@ -74,9 +65,19 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public SecondeDecl getVar()
   {
-    return name;
+    if (var != null && var.eIsProxy())
+    {
+      InternalEObject oldVar = (InternalEObject)var;
+      var = (SecondeDecl)eResolveProxy(oldVar);
+      if (var != oldVar)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DroneDSLPackage.REF_SECONDE_VAR__VAR, oldVar, var));
+      }
+    }
+    return var;
   }
 
   /**
@@ -84,12 +85,22 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public SecondeDecl basicGetVar()
   {
-    String oldName = name;
-    name = newName;
+    return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar(SecondeDecl newVar)
+  {
+    SecondeDecl oldVar = var;
+    var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.FONCTION_REF__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.REF_SECONDE_VAR__VAR, oldVar, var));
   }
 
   /**
@@ -102,8 +113,9 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_REF__NAME:
-        return getName();
+      case DroneDSLPackage.REF_SECONDE_VAR__VAR:
+        if (resolve) return getVar();
+        return basicGetVar();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +130,8 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_REF__NAME:
-        setName((String)newValue);
+      case DroneDSLPackage.REF_SECONDE_VAR__VAR:
+        setVar((SecondeDecl)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +147,8 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_REF__NAME:
-        setName(NAME_EDEFAULT);
+      case DroneDSLPackage.REF_SECONDE_VAR__VAR:
+        setVar((SecondeDecl)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,27 +164,10 @@ public class FonctionRefImpl extends MinimalEObjectImpl.Container implements Fon
   {
     switch (featureID)
     {
-      case DroneDSLPackage.FONCTION_REF__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DroneDSLPackage.REF_SECONDE_VAR__VAR:
+        return var != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //FonctionRefImpl
+} //RefSecondeVarImpl

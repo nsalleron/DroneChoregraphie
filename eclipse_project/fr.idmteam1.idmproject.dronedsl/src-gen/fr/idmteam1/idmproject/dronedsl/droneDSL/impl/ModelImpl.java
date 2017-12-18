@@ -4,15 +4,11 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_deplacement_max;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_hauteur_max;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue;
 
 import java.util.Collection;
 
@@ -39,11 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvhm <em>Pvhm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvdm <em>Pvdm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvrm <em>Pvrm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getHm <em>Hm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getEm <em>Em</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPrologue <em>Prologue</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getM <em>M</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getFonctions <em>Fonctions</em>}</li>
  * </ul>
@@ -63,54 +55,14 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EList<Import> imports;
 
   /**
-   * The cached value of the '{@link #getPvhm() <em>Pvhm</em>}' containment reference list.
+   * The cached value of the '{@link #getPrologue() <em>Prologue</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPvhm()
+   * @see #getPrologue()
    * @generated
    * @ordered
    */
-  protected EList<Pourcent_vitesse_hauteur_max> pvhm;
-
-  /**
-   * The cached value of the '{@link #getPvdm() <em>Pvdm</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPvdm()
-   * @generated
-   * @ordered
-   */
-  protected EList<Pourcent_vitesse_deplacement_max> pvdm;
-
-  /**
-   * The cached value of the '{@link #getPvrm() <em>Pvrm</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPvrm()
-   * @generated
-   * @ordered
-   */
-  protected EList<Pourcent_vitesse_rotation_max> pvrm;
-
-  /**
-   * The cached value of the '{@link #getHm() <em>Hm</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHm()
-   * @generated
-   * @ordered
-   */
-  protected EList<Hauteur_max> hm;
-
-  /**
-   * The cached value of the '{@link #getEm() <em>Em</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEm()
-   * @generated
-   * @ordered
-   */
-  protected EList<Eloignement_max> em;
+  protected Prologue prologue;
 
   /**
    * The cached value of the '{@link #getM() <em>M</em>}' containment reference.
@@ -172,13 +124,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Pourcent_vitesse_hauteur_max> getPvhm()
+  public Prologue getPrologue()
   {
-    if (pvhm == null)
-    {
-      pvhm = new EObjectContainmentEList<Pourcent_vitesse_hauteur_max>(Pourcent_vitesse_hauteur_max.class, this, DroneDSLPackage.MODEL__PVHM);
-    }
-    return pvhm;
+    return prologue;
   }
 
   /**
@@ -186,13 +134,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Pourcent_vitesse_deplacement_max> getPvdm()
+  public NotificationChain basicSetPrologue(Prologue newPrologue, NotificationChain msgs)
   {
-    if (pvdm == null)
+    Prologue oldPrologue = prologue;
+    prologue = newPrologue;
+    if (eNotificationRequired())
     {
-      pvdm = new EObjectContainmentEList<Pourcent_vitesse_deplacement_max>(Pourcent_vitesse_deplacement_max.class, this, DroneDSLPackage.MODEL__PVDM);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MODEL__PROLOGUE, oldPrologue, newPrologue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return pvdm;
+    return msgs;
   }
 
   /**
@@ -200,41 +151,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Pourcent_vitesse_rotation_max> getPvrm()
+  public void setPrologue(Prologue newPrologue)
   {
-    if (pvrm == null)
+    if (newPrologue != prologue)
     {
-      pvrm = new EObjectContainmentEList<Pourcent_vitesse_rotation_max>(Pourcent_vitesse_rotation_max.class, this, DroneDSLPackage.MODEL__PVRM);
+      NotificationChain msgs = null;
+      if (prologue != null)
+        msgs = ((InternalEObject)prologue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MODEL__PROLOGUE, null, msgs);
+      if (newPrologue != null)
+        msgs = ((InternalEObject)newPrologue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MODEL__PROLOGUE, null, msgs);
+      msgs = basicSetPrologue(newPrologue, msgs);
+      if (msgs != null) msgs.dispatch();
     }
-    return pvrm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Hauteur_max> getHm()
-  {
-    if (hm == null)
-    {
-      hm = new EObjectContainmentEList<Hauteur_max>(Hauteur_max.class, this, DroneDSLPackage.MODEL__HM);
-    }
-    return hm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Eloignement_max> getEm()
-  {
-    if (em == null)
-    {
-      em = new EObjectContainmentEList<Eloignement_max>(Eloignement_max.class, this, DroneDSLPackage.MODEL__EM);
-    }
-    return em;
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MODEL__PROLOGUE, newPrologue, newPrologue));
   }
 
   /**
@@ -311,16 +241,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__PVHM:
-        return ((InternalEList<?>)getPvhm()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__PVDM:
-        return ((InternalEList<?>)getPvdm()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__PVRM:
-        return ((InternalEList<?>)getPvrm()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__HM:
-        return ((InternalEList<?>)getHm()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__EM:
-        return ((InternalEList<?>)getEm()).basicRemove(otherEnd, msgs);
+      case DroneDSLPackage.MODEL__PROLOGUE:
+        return basicSetPrologue(null, msgs);
       case DroneDSLPackage.MODEL__M:
         return basicSetM(null, msgs);
       case DroneDSLPackage.MODEL__FONCTIONS:
@@ -341,16 +263,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return getImports();
-      case DroneDSLPackage.MODEL__PVHM:
-        return getPvhm();
-      case DroneDSLPackage.MODEL__PVDM:
-        return getPvdm();
-      case DroneDSLPackage.MODEL__PVRM:
-        return getPvrm();
-      case DroneDSLPackage.MODEL__HM:
-        return getHm();
-      case DroneDSLPackage.MODEL__EM:
-        return getEm();
+      case DroneDSLPackage.MODEL__PROLOGUE:
+        return getPrologue();
       case DroneDSLPackage.MODEL__M:
         return getM();
       case DroneDSLPackage.MODEL__FONCTIONS:
@@ -374,25 +288,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
         return;
-      case DroneDSLPackage.MODEL__PVHM:
-        getPvhm().clear();
-        getPvhm().addAll((Collection<? extends Pourcent_vitesse_hauteur_max>)newValue);
-        return;
-      case DroneDSLPackage.MODEL__PVDM:
-        getPvdm().clear();
-        getPvdm().addAll((Collection<? extends Pourcent_vitesse_deplacement_max>)newValue);
-        return;
-      case DroneDSLPackage.MODEL__PVRM:
-        getPvrm().clear();
-        getPvrm().addAll((Collection<? extends Pourcent_vitesse_rotation_max>)newValue);
-        return;
-      case DroneDSLPackage.MODEL__HM:
-        getHm().clear();
-        getHm().addAll((Collection<? extends Hauteur_max>)newValue);
-        return;
-      case DroneDSLPackage.MODEL__EM:
-        getEm().clear();
-        getEm().addAll((Collection<? extends Eloignement_max>)newValue);
+      case DroneDSLPackage.MODEL__PROLOGUE:
+        setPrologue((Prologue)newValue);
         return;
       case DroneDSLPackage.MODEL__M:
         setM((Main)newValue);
@@ -418,20 +315,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case DroneDSLPackage.MODEL__IMPORTS:
         getImports().clear();
         return;
-      case DroneDSLPackage.MODEL__PVHM:
-        getPvhm().clear();
-        return;
-      case DroneDSLPackage.MODEL__PVDM:
-        getPvdm().clear();
-        return;
-      case DroneDSLPackage.MODEL__PVRM:
-        getPvrm().clear();
-        return;
-      case DroneDSLPackage.MODEL__HM:
-        getHm().clear();
-        return;
-      case DroneDSLPackage.MODEL__EM:
-        getEm().clear();
+      case DroneDSLPackage.MODEL__PROLOGUE:
+        setPrologue((Prologue)null);
         return;
       case DroneDSLPackage.MODEL__M:
         setM((Main)null);
@@ -455,16 +340,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case DroneDSLPackage.MODEL__PVHM:
-        return pvhm != null && !pvhm.isEmpty();
-      case DroneDSLPackage.MODEL__PVDM:
-        return pvdm != null && !pvdm.isEmpty();
-      case DroneDSLPackage.MODEL__PVRM:
-        return pvrm != null && !pvrm.isEmpty();
-      case DroneDSLPackage.MODEL__HM:
-        return hm != null && !hm.isEmpty();
-      case DroneDSLPackage.MODEL__EM:
-        return em != null && !em.isEmpty();
+      case DroneDSLPackage.MODEL__PROLOGUE:
+        return prologue != null;
       case DroneDSLPackage.MODEL__M:
         return m != null;
       case DroneDSLPackage.MODEL__FONCTIONS:

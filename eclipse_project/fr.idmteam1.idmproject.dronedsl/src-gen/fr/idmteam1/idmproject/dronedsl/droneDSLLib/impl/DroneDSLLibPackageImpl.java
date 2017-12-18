@@ -654,9 +654,29 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getFonctionDecl_A()
+  {
+    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFonctionDecl_B()
+  {
+    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getFonctionDecl_Body()
   {
-    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(0);
+    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1033,6 +1053,8 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
     statementEClass = createEClass(STATEMENT);
 
     fonctionDeclEClass = createEClass(FONCTION_DECL);
+    createEAttribute(fonctionDeclEClass, FONCTION_DECL__A);
+    createEAttribute(fonctionDeclEClass, FONCTION_DECL__B);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
 
     fonctionExterneEClass = createEClass(FONCTION_EXTERNE);
@@ -1188,6 +1210,8 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFonctionDecl_A(), ecorePackage.getEString(), "a", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFonctionDecl_B(), ecorePackage.getEString(), "b", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFonctionDecl_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fonctionExterneEClass, FonctionExterne.class, "FonctionExterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -3,7 +3,6 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,39 +13,66 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getFunc <em>Func</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getRef <em>Ref</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getAtterrissage <em>Atterrissage</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall()
  * @model
  * @generated
  */
-public interface FonctionCall extends EObject
+public interface FonctionCall extends FonctionDecl, Main
 {
   /**
-   * Returns the value of the '<em><b>Func</b></em>' reference.
+   * Returns the value of the '<em><b>Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Func</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Func</em>' reference.
-   * @see #setFunc(FonctionRef)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall_Func()
+   * @return the value of the '<em>Ref</em>' reference.
+   * @see #setRef(FonctionDecl)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall_Ref()
    * @model
    * @generated
    */
-  FonctionRef getFunc();
+  FonctionDecl getRef();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getFunc <em>Func</em>}' reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getRef <em>Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Func</em>' reference.
-   * @see #getFunc()
+   * @param value the new value of the '<em>Ref</em>' reference.
+   * @see #getRef()
    * @generated
    */
-  void setFunc(FonctionRef value);
+  void setRef(FonctionDecl value);
+
+  /**
+   * Returns the value of the '<em><b>Atterrissage</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Atterrissage</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Atterrissage</em>' attribute.
+   * @see #setAtterrissage(String)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall_Atterrissage()
+   * @model
+   * @generated
+   */
+  String getAtterrissage();
+
+  /**
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getAtterrissage <em>Atterrissage</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Atterrissage</em>' attribute.
+   * @see #getAtterrissage()
+   * @generated
+   */
+  void setAtterrissage(String value);
 
 } // FonctionCall

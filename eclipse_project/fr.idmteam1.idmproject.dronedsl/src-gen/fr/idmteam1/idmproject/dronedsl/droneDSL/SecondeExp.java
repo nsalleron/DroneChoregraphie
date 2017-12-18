@@ -7,14 +7,14 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Statement</b></em>'.
+ * A representation of the model object '<em><b>Seconde Exp</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getStatement()
+ * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getSecondeExp()
  * @model
  * @generated
  */
-public interface Statement extends EObject
+public interface SecondeExp extends EObject
 {
-} // Statement
+} // SecondeExp

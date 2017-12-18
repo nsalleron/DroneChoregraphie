@@ -4,8 +4,8 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntExp;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,18 +17,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Int Decl</b></em>'.
+ * An implementation of the model object '<em><b>Seconde Decl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.IntDeclImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.SecondeDeclImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntDeclImpl extends VarDeclImpl implements IntDecl
+public class SecondeDeclImpl extends VarDeclImpl implements SecondeDecl
 {
   /**
    * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
@@ -38,14 +38,14 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
    * @generated
    * @ordered
    */
-  protected IntExp val;
+  protected SecondeConst val;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IntDeclImpl()
+  protected SecondeDeclImpl()
   {
     super();
   }
@@ -58,7 +58,7 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   @Override
   protected EClass eStaticClass()
   {
-    return DroneDSLPackage.Literals.INT_DECL;
+    return DroneDSLPackage.Literals.SECONDE_DECL;
   }
 
   /**
@@ -66,7 +66,7 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getVal()
+  public SecondeConst getVal()
   {
     return val;
   }
@@ -76,13 +76,13 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVal(IntExp newVal, NotificationChain msgs)
+  public NotificationChain basicSetVal(SecondeConst newVal, NotificationChain msgs)
   {
-    IntExp oldVal = val;
+    SecondeConst oldVal = val;
     val = newVal;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.INT_DECL__VAL, oldVal, newVal);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.SECONDE_DECL__VAL, oldVal, newVal);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(IntExp newVal)
+  public void setVal(SecondeConst newVal)
   {
     if (newVal != val)
     {
       NotificationChain msgs = null;
       if (val != null)
-        msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.INT_DECL__VAL, null, msgs);
+        msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.SECONDE_DECL__VAL, null, msgs);
       if (newVal != null)
-        msgs = ((InternalEObject)newVal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.INT_DECL__VAL, null, msgs);
+        msgs = ((InternalEObject)newVal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.SECONDE_DECL__VAL, null, msgs);
       msgs = basicSetVal(newVal, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.INT_DECL__VAL, newVal, newVal));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.SECONDE_DECL__VAL, newVal, newVal));
   }
 
   /**
@@ -119,7 +119,7 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__VAL:
+      case DroneDSLPackage.SECONDE_DECL__VAL:
         return basicSetVal(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -135,7 +135,7 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__VAL:
+      case DroneDSLPackage.SECONDE_DECL__VAL:
         return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -151,8 +151,8 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__VAL:
-        setVal((IntExp)newValue);
+      case DroneDSLPackage.SECONDE_DECL__VAL:
+        setVal((SecondeConst)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__VAL:
-        setVal((IntExp)null);
+      case DroneDSLPackage.SECONDE_DECL__VAL:
+        setVal((SecondeConst)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,10 +185,10 @@ public class IntDeclImpl extends VarDeclImpl implements IntDecl
   {
     switch (featureID)
     {
-      case DroneDSLPackage.INT_DECL__VAL:
+      case DroneDSLPackage.SECONDE_DECL__VAL:
         return val != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //IntDeclImpl
+} //SecondeDeclImpl

@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getA <em>A</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getB <em>B</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -25,6 +27,38 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface FonctionDecl extends FonctionRef
 {
+  /**
+   * Returns the value of the '<em><b>A</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>A</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>A</em>' attribute list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getFonctionDecl_A()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getA();
+
+  /**
+   * Returns the value of the '<em><b>B</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>B</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>B</em>' attribute list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getFonctionDecl_B()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getB();
+
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference list.
    * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.

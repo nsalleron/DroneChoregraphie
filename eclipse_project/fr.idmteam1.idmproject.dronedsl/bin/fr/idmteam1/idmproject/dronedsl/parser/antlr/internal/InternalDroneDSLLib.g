@@ -942,21 +942,52 @@ ruleFonctionDecl returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getFonctionDeclAccess().getStartParserRuleCall_5_0());
-				}
-				ruleStart
-				{
-					afterParserOrEnumRuleCall();
-				}
-			)?
+				(
+					{
+						newCompositeNode(grammarAccess.getFonctionDeclAccess().getAStartParserRuleCall_5_0_0());
+					}
+					lv_a_5_0=ruleStart
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+						}
+						add(
+							$current,
+							"a",
+							lv_a_5_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.Start");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBEndParserRuleCall_5_1_0());
+					}
+					lv_b_6_0=ruleEnd
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+						}
+						add(
+							$current,
+							"b",
+							lv_b_6_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.End");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
 			(
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyStatementParserRuleCall_5_1_0_0());
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyStatementParserRuleCall_5_2_0_0());
 						}
-						lv_body_6_1=ruleStatement
+						lv_body_7_1=ruleStatement
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
@@ -964,15 +995,15 @@ ruleFonctionDecl returns [EObject current=null]
 							add(
 								$current,
 								"body",
-								lv_body_6_1,
+								lv_body_7_1,
 								"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.Statement");
 							afterParserOrEnumRuleCall();
 						}
 						    |
 						{
-							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionExterneParserRuleCall_5_1_0_1());
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionExterneParserRuleCall_5_2_0_1());
 						}
-						lv_body_6_2=ruleFonctionExterne
+						lv_body_7_2=ruleFonctionExterne
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
@@ -980,15 +1011,15 @@ ruleFonctionDecl returns [EObject current=null]
 							add(
 								$current,
 								"body",
-								lv_body_6_2,
+								lv_body_7_2,
 								"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionExterne");
 							afterParserOrEnumRuleCall();
 						}
 						    |
 						{
-							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionCallParserRuleCall_5_1_0_2());
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionCallParserRuleCall_5_2_0_2());
 						}
-						lv_body_6_3=ruleFonctionCall
+						lv_body_7_3=ruleFonctionCall
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
@@ -996,30 +1027,23 @@ ruleFonctionDecl returns [EObject current=null]
 							add(
 								$current,
 								"body",
-								lv_body_6_3,
+								lv_body_7_3,
 								"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionCall");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
-			)*
-			otherlv_7='\n'
+			)
+		)*
+		(
+			otherlv_8='\n'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_5_2());
+				newLeafNode(otherlv_8, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_6());
 			}
-			(
-				{
-					newCompositeNode(grammarAccess.getFonctionDeclAccess().getEndParserRuleCall_5_3());
-				}
-				ruleEnd
-				{
-					afterParserOrEnumRuleCall();
-				}
-			)?
 		)*
 		otherlv_9='}'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_9, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;
@@ -1044,15 +1068,11 @@ ruleFonctionExterne returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getFonctionExterneAccess().getExternKeyword_0());
 		}
-		otherlv_1='func'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getFonctionExterneAccess().getFuncKeyword_1());
-		}
 		(
 			(
-				lv_name_2_0=RULE_ID
+				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_2_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1061,23 +1081,23 @@ ruleFonctionExterne returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_2_0,
+						lv_name_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		otherlv_3='('
+		otherlv_2='('
 		{
-			newLeafNode(otherlv_3, grammarAccess.getFonctionExterneAccess().getLeftParenthesisKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getFonctionExterneAccess().getLeftParenthesisKeyword_2());
 		}
-		otherlv_4=')'
+		otherlv_3=')'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getFonctionExterneAccess().getRightParenthesisKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getFonctionExterneAccess().getRightParenthesisKeyword_3());
 		}
 		(
-			otherlv_5='\n'
+			otherlv_4='\n'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_5());
+				newLeafNode(otherlv_4, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_4());
 			}
 		)*
 	)

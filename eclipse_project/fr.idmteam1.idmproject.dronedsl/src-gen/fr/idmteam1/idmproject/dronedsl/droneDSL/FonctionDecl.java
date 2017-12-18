@@ -16,8 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getA <em>A</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getB <em>B</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getName <em>Name</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -25,43 +24,37 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FonctionDecl extends FonctionRef
+public interface FonctionDecl extends EObject
 {
   /**
-   * Returns the value of the '<em><b>A</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>A</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>A</em>' attribute list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionDecl_A()
-   * @model unique="false"
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionDecl_Name()
+   * @model
    * @generated
    */
-  EList<String> getA();
+  String getName();
 
   /**
-   * Returns the value of the '<em><b>B</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>B</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>B</em>' attribute list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionDecl_B()
-   * @model unique="false"
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  EList<String> getB();
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Body</em>' containment reference list isn't clear,
@@ -73,6 +66,6 @@ public interface FonctionDecl extends FonctionRef
    * @model containment="true"
    * @generated
    */
-  EList<EObject> getBody();
+  EList<VarDecl> getBody();
 
 } // FonctionDecl

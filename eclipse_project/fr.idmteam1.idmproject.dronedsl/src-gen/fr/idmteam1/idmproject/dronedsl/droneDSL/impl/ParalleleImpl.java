@@ -4,16 +4,25 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,14 +32,46 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl#getDecollage <em>Decollage</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl#getMainbody <em>Mainbody</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl#getA <em>A</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ParalleleImpl#getB <em>B</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ParalleleImpl extends StatementImpl implements Parallele
+public class ParalleleImpl extends FonctionDeclImpl implements Parallele
 {
+  /**
+   * The default value of the '{@link #getDecollage() <em>Decollage</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecollage()
+   * @generated
+   * @ordered
+   */
+  protected static final String DECOLLAGE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDecollage() <em>Decollage</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecollage()
+   * @generated
+   * @ordered
+   */
+  protected String decollage = DECOLLAGE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMainbody() <em>Mainbody</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMainbody()
+   * @generated
+   * @ordered
+   */
+  protected EList<VarDecl> mainbody;
+
   /**
    * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -70,6 +111,43 @@ public class ParalleleImpl extends StatementImpl implements Parallele
   protected EClass eStaticClass()
   {
     return DroneDSLPackage.Literals.PARALLELE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getDecollage()
+  {
+    return decollage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDecollage(String newDecollage)
+  {
+    String oldDecollage = decollage;
+    decollage = newDecollage;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.PARALLELE__DECOLLAGE, oldDecollage, decollage));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<VarDecl> getMainbody()
+  {
+    if (mainbody == null)
+    {
+      mainbody = new EObjectContainmentEList<VarDecl>(VarDecl.class, this, DroneDSLPackage.PARALLELE__MAINBODY);
+    }
+    return mainbody;
   }
 
   /**
@@ -178,6 +256,8 @@ public class ParalleleImpl extends StatementImpl implements Parallele
   {
     switch (featureID)
     {
+      case DroneDSLPackage.PARALLELE__MAINBODY:
+        return ((InternalEList<?>)getMainbody()).basicRemove(otherEnd, msgs);
       case DroneDSLPackage.PARALLELE__A:
         return basicSetA(null, msgs);
       case DroneDSLPackage.PARALLELE__B:
@@ -196,6 +276,10 @@ public class ParalleleImpl extends StatementImpl implements Parallele
   {
     switch (featureID)
     {
+      case DroneDSLPackage.PARALLELE__DECOLLAGE:
+        return getDecollage();
+      case DroneDSLPackage.PARALLELE__MAINBODY:
+        return getMainbody();
       case DroneDSLPackage.PARALLELE__A:
         return getA();
       case DroneDSLPackage.PARALLELE__B:
@@ -209,11 +293,19 @@ public class ParalleleImpl extends StatementImpl implements Parallele
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case DroneDSLPackage.PARALLELE__DECOLLAGE:
+        setDecollage((String)newValue);
+        return;
+      case DroneDSLPackage.PARALLELE__MAINBODY:
+        getMainbody().clear();
+        getMainbody().addAll((Collection<? extends VarDecl>)newValue);
+        return;
       case DroneDSLPackage.PARALLELE__A:
         setA((EObject)newValue);
         return;
@@ -234,6 +326,12 @@ public class ParalleleImpl extends StatementImpl implements Parallele
   {
     switch (featureID)
     {
+      case DroneDSLPackage.PARALLELE__DECOLLAGE:
+        setDecollage(DECOLLAGE_EDEFAULT);
+        return;
+      case DroneDSLPackage.PARALLELE__MAINBODY:
+        getMainbody().clear();
+        return;
       case DroneDSLPackage.PARALLELE__A:
         setA((EObject)null);
         return;
@@ -254,12 +352,73 @@ public class ParalleleImpl extends StatementImpl implements Parallele
   {
     switch (featureID)
     {
+      case DroneDSLPackage.PARALLELE__DECOLLAGE:
+        return DECOLLAGE_EDEFAULT == null ? decollage != null : !DECOLLAGE_EDEFAULT.equals(decollage);
+      case DroneDSLPackage.PARALLELE__MAINBODY:
+        return mainbody != null && !mainbody.isEmpty();
       case DroneDSLPackage.PARALLELE__A:
         return a != null;
       case DroneDSLPackage.PARALLELE__B:
         return b != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Main.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case DroneDSLPackage.PARALLELE__DECOLLAGE: return DroneDSLPackage.MAIN__DECOLLAGE;
+        case DroneDSLPackage.PARALLELE__MAINBODY: return DroneDSLPackage.MAIN__MAINBODY;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Main.class)
+    {
+      switch (baseFeatureID)
+      {
+        case DroneDSLPackage.MAIN__DECOLLAGE: return DroneDSLPackage.PARALLELE__DECOLLAGE;
+        case DroneDSLPackage.MAIN__MAINBODY: return DroneDSLPackage.PARALLELE__MAINBODY;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (decollage: ");
+    result.append(decollage);
+    result.append(')');
+    return result.toString();
   }
 
 } //ParalleleImpl

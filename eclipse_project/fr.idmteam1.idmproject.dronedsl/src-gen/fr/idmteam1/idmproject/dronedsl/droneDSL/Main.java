@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getStatements <em>Statements</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getFonctions <em>Fonctions</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getDecollage <em>Decollage</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getMainbody <em>Mainbody</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain()
@@ -27,35 +27,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface Main extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Statement}.
+   * Returns the value of the '<em><b>Decollage</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Statements</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Decollage</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Statements</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Statements()
-   * @model containment="true"
+   * @return the value of the '<em>Decollage</em>' attribute.
+   * @see #setDecollage(String)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Decollage()
+   * @model
    * @generated
    */
-  EList<Statement> getStatements();
+  String getDecollage();
 
   /**
-   * Returns the value of the '<em><b>Fonctions</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getDecollage <em>Decollage</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Decollage</em>' attribute.
+   * @see #getDecollage()
+   * @generated
+   */
+  void setDecollage(String value);
+
+  /**
+   * Returns the value of the '<em><b>Mainbody</b></em>' containment reference list.
+   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Fonctions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Mainbody</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Fonctions</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Fonctions()
+   * @return the value of the '<em>Mainbody</em>' containment reference list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Mainbody()
    * @model containment="true"
    * @generated
    */
-  EList<EObject> getFonctions();
+  EList<VarDecl> getMainbody();
 
 } // Main

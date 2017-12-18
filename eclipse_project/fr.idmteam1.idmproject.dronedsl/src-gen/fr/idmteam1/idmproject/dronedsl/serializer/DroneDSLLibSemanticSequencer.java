@@ -213,7 +213,7 @@ public class DroneDSLLibSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     FonctionRef returns FonctionDecl
 	 *
 	 * Constraint:
-	 *     (name=ID (body+=Statement | body+=FonctionExterne | body+=FonctionCall)*)
+	 *     (name=ID (a+=Start | b+=End | body+=Statement | body+=FonctionExterne | body+=FonctionCall)*)
 	 */
 	protected void sequence_FonctionDecl(ISerializationContext context, FonctionDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -234,7 +234,7 @@ public class DroneDSLLibSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLLibPackage.Literals.FONCTION_REF__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

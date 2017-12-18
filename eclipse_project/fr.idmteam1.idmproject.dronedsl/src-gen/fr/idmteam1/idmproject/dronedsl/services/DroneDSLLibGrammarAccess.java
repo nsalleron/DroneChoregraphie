@@ -527,25 +527,25 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final RuleCall cStartParserRuleCall_5_0 = (RuleCall)cGroup_5.eContents().get(0);
-		private final Assignment cBodyAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final Alternatives cBodyAlternatives_5_1_0 = (Alternatives)cBodyAssignment_5_1.eContents().get(0);
-		private final RuleCall cBodyStatementParserRuleCall_5_1_0_0 = (RuleCall)cBodyAlternatives_5_1_0.eContents().get(0);
-		private final RuleCall cBodyFonctionExterneParserRuleCall_5_1_0_1 = (RuleCall)cBodyAlternatives_5_1_0.eContents().get(1);
-		private final RuleCall cBodyFonctionCallParserRuleCall_5_1_0_2 = (RuleCall)cBodyAlternatives_5_1_0.eContents().get(2);
-		private final Keyword cLineFeedKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
-		private final RuleCall cEndParserRuleCall_5_3 = (RuleCall)cGroup_5.eContents().get(3);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Assignment cAAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cAStartParserRuleCall_5_0_0 = (RuleCall)cAAssignment_5_0.eContents().get(0);
+		private final Assignment cBAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
+		private final RuleCall cBEndParserRuleCall_5_1_0 = (RuleCall)cBAssignment_5_1.eContents().get(0);
+		private final Assignment cBodyAssignment_5_2 = (Assignment)cAlternatives_5.eContents().get(2);
+		private final Alternatives cBodyAlternatives_5_2_0 = (Alternatives)cBodyAssignment_5_2.eContents().get(0);
+		private final RuleCall cBodyStatementParserRuleCall_5_2_0_0 = (RuleCall)cBodyAlternatives_5_2_0.eContents().get(0);
+		private final RuleCall cBodyFonctionExterneParserRuleCall_5_2_0_1 = (RuleCall)cBodyAlternatives_5_2_0.eContents().get(1);
+		private final RuleCall cBodyFonctionCallParserRuleCall_5_2_0_2 = (RuleCall)cBodyAlternatives_5_2_0.eContents().get(2);
+		private final Keyword cLineFeedKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//FonctionDecl:
-		//	'func' name=ID '(' ')' '{' (Start?
-		//	body+=(Statement | FonctionExterne | FonctionCall)* '\n'
-		//	End?)*
+		//	'func' name=ID '(' ')' '{' (a+=Start | b+=End | body+=(Statement | FonctionExterne | FonctionCall))* '\n'*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'func' name=ID '(' ')' '{' (Start? body+=(Statement | FonctionExterne | FonctionCall)* '\n' End?)* '}'
+		//'func' name=ID '(' ')' '{' (a+=Start | b+=End | body+=(Statement | FonctionExterne | FonctionCall))* '\n'* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'func'
@@ -566,74 +566,76 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
-		//(Start? body+=(Statement | FonctionExterne | FonctionCall)* '\n' End?)*
-		public Group getGroup_5() { return cGroup_5; }
+		//(a+=Start | b+=End | body+=(Statement | FonctionExterne | FonctionCall))*
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 		
-		//Start?
-		public RuleCall getStartParserRuleCall_5_0() { return cStartParserRuleCall_5_0; }
+		//a+=Start
+		public Assignment getAAssignment_5_0() { return cAAssignment_5_0; }
 		
-		//body+=(Statement | FonctionExterne | FonctionCall)*
-		public Assignment getBodyAssignment_5_1() { return cBodyAssignment_5_1; }
+		//Start
+		public RuleCall getAStartParserRuleCall_5_0_0() { return cAStartParserRuleCall_5_0_0; }
+		
+		//b+=End
+		public Assignment getBAssignment_5_1() { return cBAssignment_5_1; }
+		
+		//End
+		public RuleCall getBEndParserRuleCall_5_1_0() { return cBEndParserRuleCall_5_1_0; }
+		
+		//body+=(Statement | FonctionExterne | FonctionCall)
+		public Assignment getBodyAssignment_5_2() { return cBodyAssignment_5_2; }
 		
 		//(Statement | FonctionExterne | FonctionCall)
-		public Alternatives getBodyAlternatives_5_1_0() { return cBodyAlternatives_5_1_0; }
+		public Alternatives getBodyAlternatives_5_2_0() { return cBodyAlternatives_5_2_0; }
 		
 		//Statement
-		public RuleCall getBodyStatementParserRuleCall_5_1_0_0() { return cBodyStatementParserRuleCall_5_1_0_0; }
+		public RuleCall getBodyStatementParserRuleCall_5_2_0_0() { return cBodyStatementParserRuleCall_5_2_0_0; }
 		
 		//FonctionExterne
-		public RuleCall getBodyFonctionExterneParserRuleCall_5_1_0_1() { return cBodyFonctionExterneParserRuleCall_5_1_0_1; }
+		public RuleCall getBodyFonctionExterneParserRuleCall_5_2_0_1() { return cBodyFonctionExterneParserRuleCall_5_2_0_1; }
 		
 		//FonctionCall
-		public RuleCall getBodyFonctionCallParserRuleCall_5_1_0_2() { return cBodyFonctionCallParserRuleCall_5_1_0_2; }
+		public RuleCall getBodyFonctionCallParserRuleCall_5_2_0_2() { return cBodyFonctionCallParserRuleCall_5_2_0_2; }
 		
-		//'\n'
-		public Keyword getLineFeedKeyword_5_2() { return cLineFeedKeyword_5_2; }
-		
-		//End?
-		public RuleCall getEndParserRuleCall_5_3() { return cEndParserRuleCall_5_3; }
+		//'\n'*
+		public Keyword getLineFeedKeyword_6() { return cLineFeedKeyword_6; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class FonctionExterneElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionExterne");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExternKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cFuncKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cLineFeedKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLineFeedKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//FonctionExterne:
-		//	'extern' 'func' name=ID '(' ')' '\n'*;
+		//	'extern' name=ID '(' ')' '\n'*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'extern' 'func' name=ID '(' ')' '\n'*
+		//'extern' name=ID '(' ')' '\n'*
 		public Group getGroup() { return cGroup; }
 		
 		//'extern'
 		public Keyword getExternKeyword_0() { return cExternKeyword_0; }
 		
-		//'func'
-		public Keyword getFuncKeyword_1() { return cFuncKeyword_1; }
-		
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 		
 		//'\n'*
-		public Keyword getLineFeedKeyword_5() { return cLineFeedKeyword_5; }
+		public Keyword getLineFeedKeyword_4() { return cLineFeedKeyword_4; }
 	}
 	public class FonctionCallElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionCall");
@@ -2481,9 +2483,7 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FonctionDecl:
-	//	'func' name=ID '(' ')' '{' (Start?
-	//	body+=(Statement | FonctionExterne | FonctionCall)* '\n'
-	//	End?)*
+	//	'func' name=ID '(' ')' '{' (a+=Start | b+=End | body+=(Statement | FonctionExterne | FonctionCall))* '\n'*
 	//	'}';
 	public FonctionDeclElements getFonctionDeclAccess() {
 		return pFonctionDecl;
@@ -2494,7 +2494,7 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FonctionExterne:
-	//	'extern' 'func' name=ID '(' ')' '\n'*;
+	//	'extern' name=ID '(' ')' '\n'*;
 	public FonctionExterneElements getFonctionExterneAccess() {
 		return pFonctionExterne;
 	}

@@ -5,7 +5,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntExp;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeExp;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -39,7 +39,7 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
    * @generated
    * @ordered
    */
-  protected IntExp hauteur_max;
+  protected SecondeExp hauteur_max;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getHauteur_max()
+  public SecondeExp getHauteur_max()
   {
     return hauteur_max;
   }
@@ -77,9 +77,9 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetHauteur_max(IntExp newHauteur_max, NotificationChain msgs)
+  public NotificationChain basicSetHauteur_max(SecondeExp newHauteur_max, NotificationChain msgs)
   {
-    IntExp oldHauteur_max = hauteur_max;
+    SecondeExp oldHauteur_max = hauteur_max;
     hauteur_max = newHauteur_max;
     if (eNotificationRequired())
     {
@@ -94,7 +94,7 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setHauteur_max(IntExp newHauteur_max)
+  public void setHauteur_max(SecondeExp newHauteur_max)
   {
     if (newHauteur_max != hauteur_max)
     {
@@ -153,7 +153,7 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
     switch (featureID)
     {
       case DroneDSLPackage.HAUTEUR_MAX__HAUTEUR_MAX:
-        setHauteur_max((IntExp)newValue);
+        setHauteur_max((SecondeExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,7 +170,7 @@ public class Hauteur_maxImpl extends MinimalEObjectImpl.Container implements Hau
     switch (featureID)
     {
       case DroneDSLPackage.HAUTEUR_MAX__HAUTEUR_MAX:
-        setHauteur_max((IntExp)null);
+        setHauteur_max((SecondeExp)null);
         return;
     }
     super.eUnset(featureID);

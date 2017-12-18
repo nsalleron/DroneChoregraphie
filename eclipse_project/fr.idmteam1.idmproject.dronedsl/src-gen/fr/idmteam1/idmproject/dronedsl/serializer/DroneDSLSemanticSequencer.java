@@ -11,12 +11,9 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntConstante;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.IntDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Monter;
@@ -29,11 +26,14 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_deplacement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Reculer;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.RefIntVar;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RefPourcentVar;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.RefSecondeVar;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.RotationGauche;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeDecl;
 import fr.idmteam1.idmproject.dronedsl.services.DroneDSLGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -73,13 +73,18 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				sequence_Eloignement_max(context, (Eloignement_max) semanticObject); 
 				return; 
 			case DroneDSLPackage.FONCTION_CALL:
-				sequence_FonctionCall(context, (FonctionCall) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getFonctionDeclRule()
+						|| rule == grammarAccess.getFonctionCallRule()) {
+					sequence_FonctionCall(context, (FonctionCall) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getMainRule()) {
+					sequence_FonctionCall_Main(context, (FonctionCall) semanticObject); 
+					return; 
+				}
+				else break;
 			case DroneDSLPackage.FONCTION_DECL:
 				sequence_FonctionDecl(context, (FonctionDecl) semanticObject); 
-				return; 
-			case DroneDSLPackage.FONCTION_EXTERNE:
-				sequence_FonctionExterne(context, (FonctionExterne) semanticObject); 
 				return; 
 			case DroneDSLPackage.GAUCHE:
 				sequence_Gauche(context, (Gauche) semanticObject); 
@@ -89,12 +94,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case DroneDSLPackage.IMPORT:
 				sequence_Import(context, (Import) semanticObject); 
-				return; 
-			case DroneDSLPackage.INT_CONSTANTE:
-				sequence_IntConstante(context, (IntConstante) semanticObject); 
-				return; 
-			case DroneDSLPackage.INT_DECL:
-				sequence_IntDecl(context, (IntDecl) semanticObject); 
 				return; 
 			case DroneDSLPackage.MAIN:
 				sequence_Main(context, (Main) semanticObject); 
@@ -132,20 +131,29 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case DroneDSLPackage.POURCENT_VITESSE_ROTATION_MAX:
 				sequence_Pourcent_vitesse_rotation_max(context, (Pourcent_vitesse_rotation_max) semanticObject); 
 				return; 
+			case DroneDSLPackage.PROLOGUE:
+				sequence_Prologue(context, (Prologue) semanticObject); 
+				return; 
 			case DroneDSLPackage.RECULER:
 				sequence_Reculer(context, (Reculer) semanticObject); 
 				return; 
-			case DroneDSLPackage.REF_INT_VAR:
-				sequence_RefIntVar(context, (RefIntVar) semanticObject); 
-				return; 
 			case DroneDSLPackage.REF_POURCENT_VAR:
 				sequence_RefPourcentVar(context, (RefPourcentVar) semanticObject); 
+				return; 
+			case DroneDSLPackage.REF_SECONDE_VAR:
+				sequence_RefSecondeVar(context, (RefSecondeVar) semanticObject); 
 				return; 
 			case DroneDSLPackage.ROTATION_DROITE:
 				sequence_RotationDroite(context, (RotationDroite) semanticObject); 
 				return; 
 			case DroneDSLPackage.ROTATION_GAUCHE:
 				sequence_RotationGauche(context, (RotationGauche) semanticObject); 
+				return; 
+			case DroneDSLPackage.SECONDE_CONST:
+				sequence_SecondeConst(context, (SecondeConst) semanticObject); 
+				return; 
+			case DroneDSLPackage.SECONDE_DECL:
+				sequence_SecondeDecl(context, (SecondeDecl) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -155,11 +163,13 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Avancer returns Avancer
-	 *     Statement returns Avancer
+	 *     CommandeBasique returns Avancer
+	 *     FonctionDecl returns Avancer
+	 *     Main returns Avancer
 	 *     AR returns Avancer
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
+	 *     (duree=SecondeExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Avancer(ISerializationContext context, Avancer semanticObject) {
 		if (errorAcceptor != null) {
@@ -169,8 +179,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.AVANCER__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAvancerAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getAvancerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getAvancerAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getAvancerAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -178,11 +188,13 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Descendre returns Descendre
-	 *     Statement returns Descendre
+	 *     CommandeBasique returns Descendre
+	 *     FonctionDecl returns Descendre
+	 *     Main returns Descendre
 	 *     MD returns Descendre
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_verticale=PourcentExp)
+	 *     (duree=SecondeExp vitesse_verticale=PourcentExp)
 	 */
 	protected void sequence_Descendre(ISerializationContext context, Descendre semanticObject) {
 		if (errorAcceptor != null) {
@@ -192,8 +204,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.DESCENDRE__VITESSE_VERTICALE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDescendreAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getDescendreAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
+		feeder.accept(grammarAccess.getDescendreAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getDescendreAccess().getVitesse_verticalePourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_verticale());
 		feeder.finish();
 	}
 	
@@ -201,11 +213,13 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Droite returns Droite
-	 *     Statement returns Droite
+	 *     CommandeBasique returns Droite
+	 *     FonctionDecl returns Droite
+	 *     Main returns Droite
 	 *     GDr returns Droite
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
+	 *     (duree=SecondeExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Droite(ISerializationContext context, Droite semanticObject) {
 		if (errorAcceptor != null) {
@@ -215,8 +229,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.DROITE__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDroiteAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getDroiteAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getDroiteAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getDroiteAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -226,7 +240,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Eloignement_max returns Eloignement_max
 	 *
 	 * Constraint:
-	 *     hauteur_max=IntExp
+	 *     hauteur_max=SecondeExp
 	 */
 	protected void sequence_Eloignement_max(ISerializationContext context, Eloignement_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -234,25 +248,47 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ELOIGNEMENT_MAX__HAUTEUR_MAX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEloignement_maxAccess().getHauteur_maxIntExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
+		feeder.accept(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     FonctionDecl returns FonctionCall
 	 *     FonctionCall returns FonctionCall
 	 *
 	 * Constraint:
-	 *     func=[FonctionRef|ID]
+	 *     ref=[FonctionDecl|ID]
 	 */
 	protected void sequence_FonctionCall(ISerializationContext context, FonctionCall semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__FUNC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__FUNC));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionCallAccess().getFuncFonctionRefIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__FUNC, false));
+		feeder.accept(grammarAccess.getFonctionCallAccess().getRefFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__REF, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Main returns FonctionCall
+	 *
+	 * Constraint:
+	 *     (ref=[FonctionDecl|ID] atterrissage=Atterrir)
+	 */
+	protected void sequence_FonctionCall_Main(ISerializationContext context, FonctionCall semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__ATTERRISSAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__ATTERRISSAGE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFonctionCallAccess().getRefFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__REF, false));
+		feeder.accept(grammarAccess.getMainAccess().getAtterrissageAtterrirParserRuleCall_3_1_0(), semanticObject.getAtterrissage());
 		feeder.finish();
 	}
 	
@@ -260,10 +296,9 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     FonctionDecl returns FonctionDecl
-	 *     FonctionRef returns FonctionDecl
 	 *
 	 * Constraint:
-	 *     (name=ID (a+=Start | b+=End | body+=Statement | body+=FonctionExterne | body+=FonctionCall)*)
+	 *     (name=ID body+=VarDecl)
 	 */
 	protected void sequence_FonctionDecl(ISerializationContext context, FonctionDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -272,31 +307,14 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionExterne returns FonctionExterne
-	 *     FonctionRef returns FonctionExterne
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_FonctionExterne(ISerializationContext context, FonctionExterne semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_REF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_REF__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionExterneAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Gauche returns Gauche
-	 *     Statement returns Gauche
+	 *     CommandeBasique returns Gauche
+	 *     FonctionDecl returns Gauche
+	 *     Main returns Gauche
 	 *     GDr returns Gauche
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
+	 *     (duree=SecondeExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Gauche(ISerializationContext context, Gauche semanticObject) {
 		if (errorAcceptor != null) {
@@ -306,8 +324,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.GAUCHE__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGaucheAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getGaucheAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getGaucheAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getGaucheAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
@@ -317,7 +335,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Hauteur_max returns Hauteur_max
 	 *
 	 * Constraint:
-	 *     hauteur_max=IntExp
+	 *     hauteur_max=SecondeExp
 	 */
 	protected void sequence_Hauteur_max(ISerializationContext context, Hauteur_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -325,7 +343,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.HAUTEUR_MAX__HAUTEUR_MAX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getHauteur_maxAccess().getHauteur_maxIntExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
+		feeder.accept(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
 		feeder.finish();
 	}
 	
@@ -350,52 +368,10 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     IntConstante returns IntConstante
-	 *     IntExp returns IntConstante
-	 *
-	 * Constraint:
-	 *     val=INT
-	 */
-	protected void sequence_IntConstante(ISerializationContext context, IntConstante semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.INT_CONSTANTE__VAL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.INT_CONSTANTE__VAL));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIntConstanteAccess().getValINTTerminalRuleCall_0(), semanticObject.getVal());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns IntDecl
-	 *     IntDecl returns IntDecl
-	 *     VarDecl returns IntDecl
-	 *
-	 * Constraint:
-	 *     (name=ID val=IntExp)
-	 */
-	protected void sequence_IntDecl(ISerializationContext context, IntDecl semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME));
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.INT_DECL__VAL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.INT_DECL__VAL));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIntDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getIntDeclAccess().getValIntExpParserRuleCall_3_0(), semanticObject.getVal());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Main returns Main
 	 *
 	 * Constraint:
-	 *     (statements+=Statement | fonctions+=FonctionCall | fonctions+=FonctionExterne)*
+	 *     (decollage=Decoller mainbody+=VarDecl)
 	 */
 	protected void sequence_Main(ISerializationContext context, Main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -407,16 +383,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (
-	 *         imports+=Import* 
-	 *         pvhm+=Pourcent_vitesse_hauteur_max 
-	 *         pvdm+=Pourcent_vitesse_deplacement_max 
-	 *         pvrm+=Pourcent_vitesse_rotation_max 
-	 *         hm+=Hauteur_max 
-	 *         em+=Eloignement_max 
-	 *         m=Main 
-	 *         fonctions+=FonctionDecl*
-	 *     )
+	 *     (imports+=Import prologue=Prologue m=Main fonctions+=FonctionDecl)
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -426,11 +393,13 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Monter returns Monter
-	 *     Statement returns Monter
+	 *     CommandeBasique returns Monter
+	 *     FonctionDecl returns Monter
+	 *     Main returns Monter
 	 *     MD returns Monter
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_verticale=PourcentExp)
+	 *     (duree=SecondeExp vitesse_verticale=PourcentExp)
 	 */
 	protected void sequence_Monter(ISerializationContext context, Monter semanticObject) {
 		if (errorAcceptor != null) {
@@ -440,15 +409,16 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.MONTER__VITESSE_VERTICALE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMonterAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getMonterAccess().getVitesse_verticalePourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_verticale());
+		feeder.accept(grammarAccess.getMonterAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getMonterAccess().getVitesse_verticalePourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_verticale());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Statement returns Parallele2
+	 *     FonctionDecl returns Parallele2
+	 *     Main returns Parallele2
 	 *     Parallele returns Parallele2
 	 *     Parallele2 returns Parallele2
 	 *
@@ -475,7 +445,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Statement returns Parallele3
+	 *     FonctionDecl returns Parallele3
+	 *     Main returns Parallele3
 	 *     Parallele returns Parallele3
 	 *     Parallele3 returns Parallele3
 	 *
@@ -514,7 +485,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Statement returns Parallele4
+	 *     FonctionDecl returns Parallele4
+	 *     Main returns Parallele4
 	 *     Parallele returns Parallele4
 	 *     Parallele4 returns Parallele4
 	 *
@@ -554,10 +526,12 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Pause returns Pause
-	 *     Statement returns Pause
+	 *     CommandeBasique returns Pause
+	 *     FonctionDecl returns Pause
+	 *     Main returns Pause
 	 *
 	 * Constraint:
-	 *     duree=IntExp
+	 *     duree=SecondeExp
 	 */
 	protected void sequence_Pause(ISerializationContext context, Pause semanticObject) {
 		if (errorAcceptor != null) {
@@ -565,7 +539,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.PAUSE__DUREE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPauseAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getPauseAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
 		feeder.finish();
 	}
 	
@@ -591,7 +565,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Statement returns PourcentDecl
 	 *     PourcentDecl returns PourcentDecl
 	 *     VarDecl returns PourcentDecl
 	 *
@@ -668,12 +641,32 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Prologue returns Prologue
+	 *
+	 * Constraint:
+	 *     (
+	 *         vitesse_verticale=Pourcent_vitesse_hauteur_max | 
+	 *         vitesse_deplacement=Pourcent_vitesse_deplacement_max | 
+	 *         vitesse_rotation=Pourcent_vitesse_rotation_max | 
+	 *         hauteur=Hauteur_max | 
+	 *         eloignement=Eloignement_max
+	 *     )+
+	 */
+	protected void sequence_Prologue(ISerializationContext context, Prologue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Reculer returns Reculer
-	 *     Statement returns Reculer
+	 *     CommandeBasique returns Reculer
+	 *     FonctionDecl returns Reculer
+	 *     Main returns Reculer
 	 *     AR returns Reculer
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_deplacement=PourcentExp)
+	 *     (duree=SecondeExp vitesse_deplacement=PourcentExp)
 	 */
 	protected void sequence_Reculer(ISerializationContext context, Reculer semanticObject) {
 		if (errorAcceptor != null) {
@@ -683,35 +676,16 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.RECULER__VITESSE_DEPLACEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getReculerAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getReculerAccess().getVitesse_deplacementPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getReculerAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getReculerAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_deplacement());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     RefIntVar returns RefIntVar
-	 *     IntExp returns RefIntVar
-	 *
-	 * Constraint:
-	 *     var=[IntDecl|ID]
-	 */
-	protected void sequence_RefIntVar(ISerializationContext context, RefIntVar semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.REF_INT_VAR__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.REF_INT_VAR__VAR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRefIntVarAccess().getVarIntDeclIDTerminalRuleCall_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.REF_INT_VAR__VAR, false));
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     PourcentExp returns RefPourcentVar
 	 *     RefPourcentVar returns RefPourcentVar
+	 *     PourcentExp returns RefPourcentVar
 	 *
 	 * Constraint:
 	 *     var=[PourcentDecl|ID]
@@ -729,12 +703,33 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     RefSecondeVar returns RefSecondeVar
+	 *     SecondeExp returns RefSecondeVar
+	 *
+	 * Constraint:
+	 *     var=[SecondeDecl|ID]
+	 */
+	protected void sequence_RefSecondeVar(ISerializationContext context, RefSecondeVar semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.REF_SECONDE_VAR__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.REF_SECONDE_VAR__VAR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRefSecondeVarAccess().getVarSecondeDeclIDTerminalRuleCall_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.REF_SECONDE_VAR__VAR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     RotationDroite returns RotationDroite
-	 *     Statement returns RotationDroite
+	 *     CommandeBasique returns RotationDroite
+	 *     FonctionDecl returns RotationDroite
+	 *     Main returns RotationDroite
 	 *     RGRD returns RotationDroite
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_rotation=PourcentExp)
+	 *     (duree=SecondeExp vitesse_rotation=PourcentExp)
 	 */
 	protected void sequence_RotationDroite(ISerializationContext context, RotationDroite semanticObject) {
 		if (errorAcceptor != null) {
@@ -744,8 +739,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ROTATION_DROITE__VITESSE_ROTATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRotationDroiteAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getRotationDroiteAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
+		feeder.accept(grammarAccess.getRotationDroiteAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getRotationDroiteAccess().getVitesse_rotationPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_rotation());
 		feeder.finish();
 	}
 	
@@ -753,11 +748,13 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     RotationGauche returns RotationGauche
-	 *     Statement returns RotationGauche
+	 *     CommandeBasique returns RotationGauche
+	 *     FonctionDecl returns RotationGauche
+	 *     Main returns RotationGauche
 	 *     RGRD returns RotationGauche
 	 *
 	 * Constraint:
-	 *     (duree=IntExp vitesse_rotation=PourcentExp)
+	 *     (duree=SecondeExp vitesse_rotation=PourcentExp)
 	 */
 	protected void sequence_RotationGauche(ISerializationContext context, RotationGauche semanticObject) {
 		if (errorAcceptor != null) {
@@ -767,8 +764,49 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ROTATION_GAUCHE__VITESSE_ROTATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRotationGaucheAccess().getDureeIntExpParserRuleCall_2_0(), semanticObject.getDuree());
-		feeder.accept(grammarAccess.getRotationGaucheAccess().getVitesse_rotationPourcentExpParserRuleCall_4_0(), semanticObject.getVitesse_rotation());
+		feeder.accept(grammarAccess.getRotationGaucheAccess().getDureeSecondeExpParserRuleCall_1_0(), semanticObject.getDuree());
+		feeder.accept(grammarAccess.getRotationGaucheAccess().getVitesse_rotationPourcentExpParserRuleCall_3_0(), semanticObject.getVitesse_rotation());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SecondeConst returns SecondeConst
+	 *     SecondeExp returns SecondeConst
+	 *
+	 * Constraint:
+	 *     val=SECONDE
+	 */
+	protected void sequence_SecondeConst(ISerializationContext context, SecondeConst semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.SECONDE_CONST__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.SECONDE_CONST__VAL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSecondeConstAccess().getValSECONDETerminalRuleCall_0(), semanticObject.getVal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SecondeDecl returns SecondeDecl
+	 *     VarDecl returns SecondeDecl
+	 *
+	 * Constraint:
+	 *     (name=ID val=SecondeConst)
+	 */
+	protected void sequence_SecondeDecl(ISerializationContext context, SecondeDecl semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.VAR_DECL__NAME));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.SECONDE_DECL__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.SECONDE_DECL__VAL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSecondeDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getSecondeDeclAccess().getValSecondeConstParserRuleCall_3_0(), semanticObject.getVal());
 		feeder.finish();
 	}
 	

@@ -3,6 +3,7 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface VarDecl extends Statement
+public interface VarDecl extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

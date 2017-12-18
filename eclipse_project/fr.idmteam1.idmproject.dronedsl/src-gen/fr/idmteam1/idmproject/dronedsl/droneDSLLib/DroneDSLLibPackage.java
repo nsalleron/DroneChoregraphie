@@ -523,13 +523,31 @@ public interface DroneDSLLibPackage extends EPackage
   int FONCTION_DECL__NAME = FONCTION_REF__NAME;
 
   /**
+   * The feature id for the '<em><b>A</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL__A = FONCTION_REF_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>B</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_DECL__B = FONCTION_REF_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Body</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FONCTION_DECL__BODY = FONCTION_REF_FEATURE_COUNT + 0;
+  int FONCTION_DECL__BODY = FONCTION_REF_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Fonction Decl</em>' class.
@@ -538,7 +556,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 1;
+  int FONCTION_DECL_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionExterneImpl <em>Fonction Externe</em>}' class.
@@ -1347,6 +1365,28 @@ public interface DroneDSLLibPackage extends EPackage
   EClass getFonctionDecl();
 
   /**
+   * Returns the meta object for the attribute list '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>A</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getA()
+   * @see #getFonctionDecl()
+   * @generated
+   */
+  EAttribute getFonctionDecl_A();
+
+  /**
+   * Returns the meta object for the attribute list '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>B</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getB()
+   * @see #getFonctionDecl()
+   * @generated
+   */
+  EAttribute getFonctionDecl_B();
+
+  /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getBody <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1973,6 +2013,22 @@ public interface DroneDSLLibPackage extends EPackage
      * @generated
      */
     EClass FONCTION_DECL = eINSTANCE.getFonctionDecl();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONCTION_DECL__A = eINSTANCE.getFonctionDecl_A();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONCTION_DECL__B = eINSTANCE.getFonctionDecl_B();
 
     /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference list feature.

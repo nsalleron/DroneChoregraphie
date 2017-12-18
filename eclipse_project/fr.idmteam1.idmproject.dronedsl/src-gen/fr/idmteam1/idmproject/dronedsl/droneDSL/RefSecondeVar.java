@@ -6,21 +6,21 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Ref Int Var</b></em>'.
+ * A representation of the model object '<em><b>Ref Seconde Var</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RefIntVar#getVar <em>Var</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RefSecondeVar#getVar <em>Var</em>}</li>
  * </ul>
  *
- * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRefIntVar()
+ * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRefSecondeVar()
  * @model
  * @generated
  */
-public interface RefIntVar extends IntExp
+public interface RefSecondeVar extends SecondeExp
 {
   /**
    * Returns the value of the '<em><b>Var</b></em>' reference.
@@ -31,21 +31,21 @@ public interface RefIntVar extends IntExp
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var</em>' reference.
-   * @see #setVar(IntDecl)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRefIntVar_Var()
+   * @see #setVar(SecondeDecl)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRefSecondeVar_Var()
    * @model
    * @generated
    */
-  IntDecl getVar();
+  SecondeDecl getVar();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RefIntVar#getVar <em>Var</em>}' reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RefSecondeVar#getVar <em>Var</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Var</em>' reference.
    * @see #getVar()
    * @generated
    */
-  void setVar(IntDecl value);
+  void setVar(SecondeDecl value);
 
-} // RefIntVar
+} // RefSecondeVar

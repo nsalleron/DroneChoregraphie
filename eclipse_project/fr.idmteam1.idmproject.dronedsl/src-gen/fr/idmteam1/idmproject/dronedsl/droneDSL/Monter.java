@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface Monter extends Statement, MD
+public interface Monter extends CommandeBasique, MD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.
@@ -32,12 +32,12 @@ public interface Monter extends Statement, MD
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Duree</em>' containment reference.
-   * @see #setDuree(IntExp)
+   * @see #setDuree(SecondeExp)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMonter_Duree()
    * @model containment="true"
    * @generated
    */
-  IntExp getDuree();
+  SecondeExp getDuree();
 
   /**
    * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Monter#getDuree <em>Duree</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface Monter extends Statement, MD
    * @see #getDuree()
    * @generated
    */
-  void setDuree(IntExp value);
+  void setDuree(SecondeExp value);
 
   /**
    * Returns the value of the '<em><b>Vitesse verticale</b></em>' containment reference.

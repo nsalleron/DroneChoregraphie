@@ -3,6 +3,7 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.CommandeBasique;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl;
@@ -18,26 +19,25 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Main</b></em>'.
+ * An implementation of the model object '<em><b>Commande Basique</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getDecollage <em>Decollage</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getMainbody <em>Mainbody</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.CommandeBasiqueImpl#getDecollage <em>Decollage</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.CommandeBasiqueImpl#getMainbody <em>Mainbody</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MainImpl extends MinimalEObjectImpl.Container implements Main
+public class CommandeBasiqueImpl extends FonctionDeclImpl implements CommandeBasique
 {
   /**
    * The default value of the '{@link #getDecollage() <em>Decollage</em>}' attribute.
@@ -74,7 +74,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MainImpl()
+  protected CommandeBasiqueImpl()
   {
     super();
   }
@@ -87,7 +87,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   @Override
   protected EClass eStaticClass()
   {
-    return DroneDSLPackage.Literals.MAIN;
+    return DroneDSLPackage.Literals.COMMANDE_BASIQUE;
   }
 
   /**
@@ -110,7 +110,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
     String oldDecollage = decollage;
     decollage = newDecollage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__DECOLLAGE, oldDecollage, decollage));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE, oldDecollage, decollage));
   }
 
   /**
@@ -122,7 +122,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     if (mainbody == null)
     {
-      mainbody = new EObjectContainmentEList<VarDecl>(VarDecl.class, this, DroneDSLPackage.MAIN__MAINBODY);
+      mainbody = new EObjectContainmentEList<VarDecl>(VarDecl.class, this, DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY);
     }
     return mainbody;
   }
@@ -137,7 +137,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__MAINBODY:
+      case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY:
         return ((InternalEList<?>)getMainbody()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -153,9 +153,9 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__DECOLLAGE:
+      case DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE:
         return getDecollage();
-      case DroneDSLPackage.MAIN__MAINBODY:
+      case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY:
         return getMainbody();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -172,10 +172,10 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__DECOLLAGE:
+      case DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE:
         setDecollage((String)newValue);
         return;
-      case DroneDSLPackage.MAIN__MAINBODY:
+      case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY:
         getMainbody().clear();
         getMainbody().addAll((Collection<? extends VarDecl>)newValue);
         return;
@@ -193,10 +193,10 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__DECOLLAGE:
+      case DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE:
         setDecollage(DECOLLAGE_EDEFAULT);
         return;
-      case DroneDSLPackage.MAIN__MAINBODY:
+      case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY:
         getMainbody().clear();
         return;
     }
@@ -213,12 +213,52 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
-      case DroneDSLPackage.MAIN__DECOLLAGE:
+      case DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE:
         return DECOLLAGE_EDEFAULT == null ? decollage != null : !DECOLLAGE_EDEFAULT.equals(decollage);
-      case DroneDSLPackage.MAIN__MAINBODY:
+      case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY:
         return mainbody != null && !mainbody.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Main.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE: return DroneDSLPackage.MAIN__DECOLLAGE;
+        case DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY: return DroneDSLPackage.MAIN__MAINBODY;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Main.class)
+    {
+      switch (baseFeatureID)
+      {
+        case DroneDSLPackage.MAIN__DECOLLAGE: return DroneDSLPackage.COMMANDE_BASIQUE__DECOLLAGE;
+        case DroneDSLPackage.MAIN__MAINBODY: return DroneDSLPackage.COMMANDE_BASIQUE__MAINBODY;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**
@@ -238,4 +278,4 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
     return result.toString();
   }
 
-} //MainImpl
+} //CommandeBasiqueImpl

@@ -17,11 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getImports <em>Imports</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvhm <em>Pvhm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvdm <em>Pvdm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPvrm <em>Pvrm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getHm <em>Hm</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getEm <em>Em</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPrologue <em>Prologue</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getM <em>M</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getFonctions <em>Fonctions</em>}</li>
  * </ul>
@@ -49,84 +45,30 @@ public interface Model extends EObject
   EList<Import> getImports();
 
   /**
-   * Returns the value of the '<em><b>Pvhm</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_hauteur_max}.
+   * Returns the value of the '<em><b>Prologue</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Pvhm</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Prologue</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pvhm</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Pvhm()
+   * @return the value of the '<em>Prologue</em>' containment reference.
+   * @see #setPrologue(Prologue)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Prologue()
    * @model containment="true"
    * @generated
    */
-  EList<Pourcent_vitesse_hauteur_max> getPvhm();
+  Prologue getPrologue();
 
   /**
-   * Returns the value of the '<em><b>Pvdm</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_deplacement_max}.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Model#getPrologue <em>Prologue</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pvdm</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pvdm</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Pvdm()
-   * @model containment="true"
+   * @param value the new value of the '<em>Prologue</em>' containment reference.
+   * @see #getPrologue()
    * @generated
    */
-  EList<Pourcent_vitesse_deplacement_max> getPvdm();
-
-  /**
-   * Returns the value of the '<em><b>Pvrm</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pvrm</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Pvrm</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Pvrm()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Pourcent_vitesse_rotation_max> getPvrm();
-
-  /**
-   * Returns the value of the '<em><b>Hm</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hm</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Hm</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Hm()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Hauteur_max> getHm();
-
-  /**
-   * Returns the value of the '<em><b>Em</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Em</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Em</em>' containment reference list.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getModel_Em()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Eloignement_max> getEm();
+  void setPrologue(Prologue value);
 
   /**
    * Returns the value of the '<em><b>M</b></em>' containment reference.
