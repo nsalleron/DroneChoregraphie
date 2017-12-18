@@ -8,7 +8,10 @@ import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Descendre;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibFactory;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionExterne;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.GDr;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Gauche;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.IntConstante;
@@ -136,6 +139,27 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * @generated
    */
   private EClass fonctionDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fonctionExterneEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fonctionCallEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fonctionRefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -630,9 +654,9 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFonctionDecl_Name()
+  public EReference getFonctionDecl_Body()
   {
-    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(0);
+    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -640,9 +664,49 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFonctionDecl_Body()
+  public EClass getFonctionExterne()
   {
-    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(1);
+    return fonctionExterneEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFonctionCall()
+  {
+    return fonctionCallEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFonctionCall_Func()
+  {
+    return (EReference)fonctionCallEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFonctionRef()
+  {
+    return fonctionRefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFonctionRef_Name()
+  {
+    return (EAttribute)fonctionRefEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -969,8 +1033,15 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
     statementEClass = createEClass(STATEMENT);
 
     fonctionDeclEClass = createEClass(FONCTION_DECL);
-    createEAttribute(fonctionDeclEClass, FONCTION_DECL__NAME);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
+
+    fonctionExterneEClass = createEClass(FONCTION_EXTERNE);
+
+    fonctionCallEClass = createEClass(FONCTION_CALL);
+    createEReference(fonctionCallEClass, FONCTION_CALL__FUNC);
+
+    fonctionRefEClass = createEClass(FONCTION_REF);
+    createEAttribute(fonctionRefEClass, FONCTION_REF__NAME);
 
     pourcentDeclEClass = createEClass(POURCENT_DECL);
     createEReference(pourcentDeclEClass, POURCENT_DECL__VAL);
@@ -1060,6 +1131,8 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
     rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
     rotationDroiteEClass.getESuperTypes().add(this.getStatement());
     rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
+    fonctionDeclEClass.getESuperTypes().add(this.getFonctionRef());
+    fonctionExterneEClass.getESuperTypes().add(this.getFonctionRef());
     pourcentDeclEClass.getESuperTypes().add(this.getVarDecl());
     intDeclEClass.getESuperTypes().add(this.getVarDecl());
     varDeclEClass.getESuperTypes().add(this.getStatement());
@@ -1115,8 +1188,15 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFonctionDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFonctionDecl_Body(), this.getStatement(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFonctionDecl_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fonctionExterneEClass, FonctionExterne.class, "FonctionExterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(fonctionCallEClass, FonctionCall.class, "FonctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFonctionCall_Func(), this.getFonctionRef(), null, "func", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fonctionRefEClass, FonctionRef.class, "FonctionRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFonctionRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcentDeclEClass, PourcentDecl.class, "PourcentDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPourcentDecl_Val(), this.getPourcentConst(), null, "val", null, 0, 1, PourcentDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

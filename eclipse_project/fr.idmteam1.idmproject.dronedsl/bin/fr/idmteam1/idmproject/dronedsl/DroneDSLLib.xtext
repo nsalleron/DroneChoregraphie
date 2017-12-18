@@ -83,8 +83,46 @@ Statement:
 ;
 	
 FonctionDecl:
-	'func' name=ID '('')' '{' body+=(Statement)*'\n''}'
+	'func' name=ID '('')' '{'
+	( 
+		(a+=Start)|
+		(b+=End)|(body+=(Statement|FonctionExterne|FonctionCall))
+	)*'\n'*
+	'}'
 ;
+
+FonctionExterne:
+	'extern' name=ID '('')''\n'*
+;
+
+FonctionCall:
+	func=[FonctionRef]'('')'
+;
+
+FonctionRef:
+	FonctionDecl|FonctionExterne
+;
+
+Start:
+	Decoller
+;
+	
+End:
+	Atterrir
+;
+
+Decoller:
+	'decoller''('')'
+;
+
+Atterrir:
+	'atterrir''('')'
+;
+
+
+
+
+
 
 PourcentDecl:
 	'Pourcent' name=ID '=' val=PourcentConst

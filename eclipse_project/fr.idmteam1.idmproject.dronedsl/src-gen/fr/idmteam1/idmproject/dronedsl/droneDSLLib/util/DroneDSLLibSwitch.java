@@ -179,6 +179,29 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
       {
         FonctionDecl fonctionDecl = (FonctionDecl)theEObject;
         T result = caseFonctionDecl(fonctionDecl);
+        if (result == null) result = caseFonctionRef(fonctionDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLLibPackage.FONCTION_EXTERNE:
+      {
+        FonctionExterne fonctionExterne = (FonctionExterne)theEObject;
+        T result = caseFonctionExterne(fonctionExterne);
+        if (result == null) result = caseFonctionRef(fonctionExterne);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLLibPackage.FONCTION_CALL:
+      {
+        FonctionCall fonctionCall = (FonctionCall)theEObject;
+        T result = caseFonctionCall(fonctionCall);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLLibPackage.FONCTION_REF:
+      {
+        FonctionRef fonctionRef = (FonctionRef)theEObject;
+        T result = caseFonctionRef(fonctionRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -508,6 +531,54 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFonctionDecl(FonctionDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Externe</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Externe</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionExterne(FonctionExterne object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Call</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Call</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionCall(FonctionCall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionRef(FonctionRef object)
   {
     return null;
   }

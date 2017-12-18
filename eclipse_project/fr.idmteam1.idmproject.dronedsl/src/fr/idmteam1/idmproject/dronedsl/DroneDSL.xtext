@@ -6,9 +6,7 @@ generate droneDSL "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSL"
 Model:
 	(
 		(imports+=Import)*'\n'*
-		
-		(externalFuncs+=FonctionExterne)*'\n'*
-			
+					
 		(pvhm+=Pourcent_vitesse_hauteur_max)'\n'*
 		(pvdm+=Pourcent_vitesse_deplacement_max)'\n'*
 		(pvrm+=Pourcent_vitesse_rotation_max)'\n'*	
@@ -22,13 +20,19 @@ Model:
 	
 	
 Main:
+	
+
 'main' '{'
+	(
 			(Start)'\n'*
 			(
 			 statements+=Statement		|
-			 fonctions+=FonctionCall
+			 fonctions+=(FonctionCall|FonctionExterne)
+			
 			)*'\n'*
 			(End)'\n'*
+		
+	)*
 		'}' '\n'*
 ;
 	
@@ -150,11 +154,16 @@ Statement:
 ;
 	
 FonctionDecl:
-	'func' name=ID '('')' '{' body+=(Statement)*'\n''}'
+	'func' name=ID '('')' '{'
+	( 
+		(a+=Start)|
+		(b+=End)|(body+=(Statement|FonctionExterne|FonctionCall))
+	)*'\n'*
+	'}'
 ;
 
 FonctionExterne:
-	'extern' 'func' name=ID '('')''\n'*
+	'extern' name=ID '('')''\n'*
 ;
 
 FonctionRef:

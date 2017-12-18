@@ -372,6 +372,15 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLPackage.PARALLELE4:
+      {
+        Parallele4 parallele4 = (Parallele4)theEObject;
+        T result = caseParallele4(parallele4);
+        if (result == null) result = caseParallele(parallele4);
+        if (result == null) result = caseStatement(parallele4);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -980,6 +989,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseParallele3(Parallele3 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parallele4</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parallele4</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParallele4(Parallele4 object)
   {
     return null;
   }

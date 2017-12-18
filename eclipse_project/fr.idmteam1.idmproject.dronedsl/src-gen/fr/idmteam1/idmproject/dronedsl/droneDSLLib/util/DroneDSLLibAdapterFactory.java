@@ -141,6 +141,21 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
         return createFonctionDeclAdapter();
       }
       @Override
+      public Adapter caseFonctionExterne(FonctionExterne object)
+      {
+        return createFonctionExterneAdapter();
+      }
+      @Override
+      public Adapter caseFonctionCall(FonctionCall object)
+      {
+        return createFonctionCallAdapter();
+      }
+      @Override
+      public Adapter caseFonctionRef(FonctionRef object)
+      {
+        return createFonctionRefAdapter();
+      }
+      @Override
       public Adapter casePourcentDecl(PourcentDecl object)
       {
         return createPourcentDeclAdapter();
@@ -428,6 +443,51 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFonctionDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionExterne <em>Fonction Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionExterne
+   * @generated
+   */
+  public Adapter createFonctionExterneAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall <em>Fonction Call</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall
+   * @generated
+   */
+  public Adapter createFonctionCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef <em>Fonction Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef
+   * @generated
+   */
+  public Adapter createFonctionRefAdapter()
   {
     return null;
   }

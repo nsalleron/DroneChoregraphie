@@ -8,7 +8,6 @@
       fileExtensions="main_drone" ecorePackage="DroneDSL.ecore#/">
     <genClasses ecoreClass="DroneDSL.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/externalFuncs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/pvhm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/pvdm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/pvrm"/>
@@ -79,6 +78,8 @@
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Statement"/>
     <genClasses ecoreClass="DroneDSL.ecore#//FonctionDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FonctionDecl/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FonctionDecl/b"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionDecl/body"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//FonctionExterne"/>
@@ -121,6 +122,10 @@
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Parallele3">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Parallele3/c"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSL.ecore#//Parallele4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Parallele4/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Parallele4/d"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

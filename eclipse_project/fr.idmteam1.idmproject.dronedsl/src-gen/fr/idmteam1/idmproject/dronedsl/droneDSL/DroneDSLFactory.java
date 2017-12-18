@@ -366,6 +366,15 @@ public interface DroneDSLFactory extends EFactory
   Parallele3 createParallele3();
 
   /**
+   * Returns a new object of class '<em>Parallele4</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parallele4</em>'.
+   * @generated
+   */
+  Parallele4 createParallele4();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

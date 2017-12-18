@@ -266,6 +266,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createParallele3Adapter();
       }
       @Override
+      public Adapter caseParallele4(Parallele4 object)
+      {
+        return createParallele4Adapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -853,6 +858,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createParallele3Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele4 <em>Parallele4</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele4
+   * @generated
+   */
+  public Adapter createParallele4Adapter()
   {
     return null;
   }

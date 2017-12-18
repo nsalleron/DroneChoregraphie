@@ -4,7 +4,6 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Statement;
 
@@ -15,6 +14,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -56,7 +56,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * @generated
    * @ordered
    */
-  protected EList<FonctionCall> fonctions;
+  protected EList<EObject> fonctions;
 
   /**
    * <!-- begin-user-doc -->
@@ -98,11 +98,11 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<FonctionCall> getFonctions()
+  public EList<EObject> getFonctions()
   {
     if (fonctions == null)
     {
-      fonctions = new EObjectContainmentEList<FonctionCall>(FonctionCall.class, this, DroneDSLPackage.MAIN__FONCTIONS);
+      fonctions = new EObjectContainmentEList<EObject>(EObject.class, this, DroneDSLPackage.MAIN__FONCTIONS);
     }
     return fonctions;
   }
@@ -160,7 +160,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
         return;
       case DroneDSLPackage.MAIN__FONCTIONS:
         getFonctions().clear();
-        getFonctions().addAll((Collection<? extends FonctionCall>)newValue);
+        getFonctions().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

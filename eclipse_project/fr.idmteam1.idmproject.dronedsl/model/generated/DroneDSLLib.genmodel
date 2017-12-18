@@ -49,8 +49,14 @@
     </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//Statement"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionDecl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionDecl/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//FonctionDecl/body"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionExterne"/>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//FonctionCall/func"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionRef/name"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentDecl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//PourcentDecl/val"/>

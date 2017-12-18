@@ -26,6 +26,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Monter;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele4;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pause;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentConst;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl;
@@ -323,6 +324,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
   private EClass parallele3EClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parallele4EClass = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -410,7 +418,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_ExternalFuncs()
+  public EReference getModel_Pvhm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
@@ -420,7 +428,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvhm()
+  public EReference getModel_Pvdm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(2);
   }
@@ -430,7 +438,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvdm()
+  public EReference getModel_Pvrm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(3);
   }
@@ -440,7 +448,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Pvrm()
+  public EReference getModel_Hm()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(4);
   }
@@ -450,7 +458,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Hm()
+  public EReference getModel_Em()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(5);
   }
@@ -460,7 +468,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Em()
+  public EReference getModel_M()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(6);
   }
@@ -470,19 +478,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_M()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getModel_Fonctions()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(8);
+    return (EReference)modelEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -940,9 +938,29 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getFonctionDecl_A()
+  {
+    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFonctionDecl_B()
+  {
+    return (EAttribute)fonctionDeclEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getFonctionDecl_Body()
   {
-    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(0);
+    return (EReference)fonctionDeclEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1250,6 +1268,36 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getParallele4()
+  {
+    return parallele4EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele4_C()
+  {
+    return (EReference)parallele4EClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParallele4_D()
+  {
+    return (EReference)parallele4EClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DroneDSLFactory getDroneDSLFactory()
   {
     return (DroneDSLFactory)getEFactoryInstance();
@@ -1277,7 +1325,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     // Create classes and their features
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__IMPORTS);
-    createEReference(modelEClass, MODEL__EXTERNAL_FUNCS);
     createEReference(modelEClass, MODEL__PVHM);
     createEReference(modelEClass, MODEL__PVDM);
     createEReference(modelEClass, MODEL__PVRM);
@@ -1349,6 +1396,8 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     statementEClass = createEClass(STATEMENT);
 
     fonctionDeclEClass = createEClass(FONCTION_DECL);
+    createEAttribute(fonctionDeclEClass, FONCTION_DECL__A);
+    createEAttribute(fonctionDeclEClass, FONCTION_DECL__B);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
 
     fonctionExterneEClass = createEClass(FONCTION_EXTERNE);
@@ -1398,6 +1447,10 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     parallele3EClass = createEClass(PARALLELE3);
     createEReference(parallele3EClass, PARALLELE3__C);
+
+    parallele4EClass = createEClass(PARALLELE4);
+    createEReference(parallele4EClass, PARALLELE4__C);
+    createEReference(parallele4EClass, PARALLELE4__D);
   }
 
   /**
@@ -1458,11 +1511,11 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     paralleleEClass.getESuperTypes().add(this.getStatement());
     parallele2EClass.getESuperTypes().add(this.getParallele());
     parallele3EClass.getESuperTypes().add(this.getParallele());
+    parallele4EClass.getESuperTypes().add(this.getParallele());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Imports(), this.getImport(), null, "imports", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_ExternalFuncs(), this.getFonctionExterne(), null, "externalFuncs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvhm(), this.getPourcent_vitesse_hauteur_max(), null, "pvhm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvdm(), this.getPourcent_vitesse_deplacement_max(), null, "pvdm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Pvrm(), this.getPourcent_vitesse_rotation_max(), null, "pvrm", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1473,7 +1526,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMain_Statements(), this.getStatement(), null, "statements", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMain_Fonctions(), this.getFonctionCall(), null, "fonctions", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Fonctions(), ecorePackage.getEObject(), null, "fonctions", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcentConstEClass, PourcentConst.class, "PourcentConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPourcentConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, PourcentConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1534,7 +1587,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFonctionDecl_Body(), this.getStatement(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFonctionDecl_A(), ecorePackage.getEString(), "a", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFonctionDecl_B(), ecorePackage.getEString(), "b", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFonctionDecl_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fonctionExterneEClass, FonctionExterne.class, "FonctionExterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1583,6 +1638,10 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     initEClass(parallele3EClass, Parallele3.class, "Parallele3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getParallele3_C(), ecorePackage.getEObject(), null, "c", null, 0, 1, Parallele3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parallele4EClass, Parallele4.class, "Parallele4", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParallele4_C(), ecorePackage.getEObject(), null, "c", null, 0, 1, Parallele4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParallele4_D(), ecorePackage.getEObject(), null, "d", null, 0, 1, Parallele4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -93,7 +93,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPourcentExp()
    * @generated
    */
-  int POURCENT_EXP = 16;
+  int POURCENT_EXP = 19;
 
   /**
    * The number of structural features of the '<em>Pourcent Exp</em>' class.
@@ -476,6 +476,34 @@ public interface DroneDSLLibPackage extends EPackage
   int ROTATION_DROITE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionRefImpl <em>Fonction Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionRefImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionRef()
+   * @generated
+   */
+  int FONCTION_REF = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_REF__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Fonction Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_REF_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl <em>Fonction Decl</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -492,7 +520,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL__NAME = 0;
+  int FONCTION_DECL__NAME = FONCTION_REF__NAME;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference list.
@@ -501,7 +529,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL__BODY = 1;
+  int FONCTION_DECL__BODY = FONCTION_REF_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Fonction Decl</em>' class.
@@ -510,7 +538,63 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONCTION_DECL_FEATURE_COUNT = 2;
+  int FONCTION_DECL_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionExterneImpl <em>Fonction Externe</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionExterneImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionExterne()
+   * @generated
+   */
+  int FONCTION_EXTERNE = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_EXTERNE__NAME = FONCTION_REF__NAME;
+
+  /**
+   * The number of structural features of the '<em>Fonction Externe</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_EXTERNE_FEATURE_COUNT = FONCTION_REF_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl <em>Fonction Call</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionCall()
+   * @generated
+   */
+  int FONCTION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>Func</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL__FUNC = 0;
+
+  /**
+   * The number of structural features of the '<em>Fonction Call</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.VarDeclImpl <em>Var Decl</em>}' class.
@@ -520,7 +604,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getVarDecl()
    * @generated
    */
-  int VAR_DECL = 15;
+  int VAR_DECL = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -548,7 +632,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPourcentDecl()
    * @generated
    */
-  int POURCENT_DECL = 13;
+  int POURCENT_DECL = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -585,7 +669,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getIntDecl()
    * @generated
    */
-  int INT_DECL = 14;
+  int INT_DECL = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -622,7 +706,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getIntExp()
    * @generated
    */
-  int INT_EXP = 20;
+  int INT_EXP = 23;
 
   /**
    * The number of structural features of the '<em>Int Exp</em>' class.
@@ -641,7 +725,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRefIntVar()
    * @generated
    */
-  int REF_INT_VAR = 17;
+  int REF_INT_VAR = 20;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -669,7 +753,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRefPourcentVar()
    * @generated
    */
-  int REF_POURCENT_VAR = 18;
+  int REF_POURCENT_VAR = 21;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -697,7 +781,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getIntConstante()
    * @generated
    */
-  int INT_CONSTANTE = 19;
+  int INT_CONSTANTE = 22;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -725,7 +809,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getMD()
    * @generated
    */
-  int MD = 21;
+  int MD = 24;
 
   /**
    * The number of structural features of the '<em>MD</em>' class.
@@ -744,7 +828,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getGDr()
    * @generated
    */
-  int GDR = 22;
+  int GDR = 25;
 
   /**
    * The number of structural features of the '<em>GDr</em>' class.
@@ -763,7 +847,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRGRD()
    * @generated
    */
-  int RGRD = 23;
+  int RGRD = 26;
 
   /**
    * The number of structural features of the '<em>RGRD</em>' class.
@@ -782,7 +866,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getAR()
    * @generated
    */
-  int AR = 24;
+  int AR = 27;
 
   /**
    * The number of structural features of the '<em>AR</em>' class.
@@ -801,7 +885,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele()
    * @generated
    */
-  int PARALLELE = 25;
+  int PARALLELE = 28;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -838,7 +922,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele2()
    * @generated
    */
-  int PARALLELE2 = 26;
+  int PARALLELE2 = 29;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -884,7 +968,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele3()
    * @generated
    */
-  int PARALLELE3 = 27;
+  int PARALLELE3 = 30;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1263,17 +1347,6 @@ public interface DroneDSLLibPackage extends EPackage
   EClass getFonctionDecl();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getName()
-   * @see #getFonctionDecl()
-   * @generated
-   */
-  EAttribute getFonctionDecl_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl#getBody <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1283,6 +1356,58 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    */
   EReference getFonctionDecl_Body();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionExterne <em>Fonction Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Externe</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionExterne
+   * @generated
+   */
+  EClass getFonctionExterne();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall <em>Fonction Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Call</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall
+   * @generated
+   */
+  EClass getFonctionCall();
+
+  /**
+   * Returns the meta object for the reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getFunc <em>Func</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Func</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getFunc()
+   * @see #getFonctionCall()
+   * @generated
+   */
+  EReference getFonctionCall_Func();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef <em>Fonction Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Ref</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef
+   * @generated
+   */
+  EClass getFonctionRef();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef#getName()
+   * @see #getFonctionRef()
+   * @generated
+   */
+  EAttribute getFonctionRef_Name();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.PourcentDecl <em>Pourcent Decl</em>}'.
@@ -1850,20 +1975,58 @@ public interface DroneDSLLibPackage extends EPackage
     EClass FONCTION_DECL = eINSTANCE.getFonctionDecl();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FONCTION_DECL__NAME = eINSTANCE.getFonctionDecl_Name();
-
-    /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference FONCTION_DECL__BODY = eINSTANCE.getFonctionDecl_Body();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionExterneImpl <em>Fonction Externe</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionExterneImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionExterne()
+     * @generated
+     */
+    EClass FONCTION_EXTERNE = eINSTANCE.getFonctionExterne();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl <em>Fonction Call</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionCall()
+     * @generated
+     */
+    EClass FONCTION_CALL = eINSTANCE.getFonctionCall();
+
+    /**
+     * The meta object literal for the '<em><b>Func</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FONCTION_CALL__FUNC = eINSTANCE.getFonctionCall_Func();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionRefImpl <em>Fonction Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionRefImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionRef()
+     * @generated
+     */
+    EClass FONCTION_REF = eINSTANCE.getFonctionRef();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONCTION_REF__NAME = eINSTANCE.getFonctionRef_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.PourcentDeclImpl <em>Pourcent Decl</em>}' class.

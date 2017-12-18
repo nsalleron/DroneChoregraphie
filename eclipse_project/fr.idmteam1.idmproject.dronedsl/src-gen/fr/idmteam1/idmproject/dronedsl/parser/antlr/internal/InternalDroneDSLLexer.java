@@ -735,10 +735,10 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_POURCENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4502:15: ( ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' ) '%' )
-            // InternalDroneDSL.g:4502:17: ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' ) '%'
+            // InternalDroneDSL.g:6786:15: ( ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' ) '%' )
+            // InternalDroneDSL.g:6786:17: ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' ) '%'
             {
-            // InternalDroneDSL.g:4502:17: ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' )
+            // InternalDroneDSL.g:6786:17: ( '1' .. '9' | '1' .. '9' '0' .. '9' | '100' )
             int alt1=3;
             int LA1_0 = input.LA(1);
 
@@ -812,14 +812,14 @@ public class InternalDroneDSLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalDroneDSL.g:4502:18: '1' .. '9'
+                    // InternalDroneDSL.g:6786:18: '1' .. '9'
                     {
                     matchRange('1','9'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:4502:27: '1' .. '9' '0' .. '9'
+                    // InternalDroneDSL.g:6786:27: '1' .. '9' '0' .. '9'
                     {
                     matchRange('1','9'); 
                     matchRange('0','9'); 
@@ -827,7 +827,7 @@ public class InternalDroneDSLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:4502:45: '100'
+                    // InternalDroneDSL.g:6786:45: '100'
                     {
                     match("100"); 
 
@@ -854,8 +854,8 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_INCLUDE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4504:14: ( RULE_ID '.lib_drone' )
-            // InternalDroneDSL.g:4504:16: RULE_ID '.lib_drone'
+            // InternalDroneDSL.g:6788:14: ( RULE_ID '.lib_drone' )
+            // InternalDroneDSL.g:6788:16: RULE_ID '.lib_drone'
             {
             mRULE_ID(); 
             match(".lib_drone"); 
@@ -876,10 +876,10 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4506:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalDroneDSL.g:4506:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDroneDSL.g:6790:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalDroneDSL.g:6790:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalDroneDSL.g:4506:11: ( '^' )?
+            // InternalDroneDSL.g:6790:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -888,7 +888,7 @@ public class InternalDroneDSLLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalDroneDSL.g:4506:11: '^'
+                    // InternalDroneDSL.g:6790:11: '^'
                     {
                     match('^'); 
 
@@ -906,7 +906,7 @@ public class InternalDroneDSLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalDroneDSL.g:4506:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDroneDSL.g:6790:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -955,10 +955,10 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4508:10: ( ( '0' .. '9' )+ )
-            // InternalDroneDSL.g:4508:12: ( '0' .. '9' )+
+            // InternalDroneDSL.g:6792:10: ( ( '0' .. '9' )+ )
+            // InternalDroneDSL.g:6792:12: ( '0' .. '9' )+
             {
-            // InternalDroneDSL.g:4508:12: ( '0' .. '9' )+
+            // InternalDroneDSL.g:6792:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -972,7 +972,7 @@ public class InternalDroneDSLLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalDroneDSL.g:4508:13: '0' .. '9'
+            	    // InternalDroneDSL.g:6792:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1004,10 +1004,10 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4510:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalDroneDSL.g:4510:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDroneDSL.g:6794:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalDroneDSL.g:6794:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalDroneDSL.g:4510:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDroneDSL.g:6794:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1025,10 +1025,10 @@ public class InternalDroneDSLLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalDroneDSL.g:4510:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalDroneDSL.g:6794:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalDroneDSL.g:4510:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalDroneDSL.g:6794:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1044,7 +1044,7 @@ public class InternalDroneDSLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalDroneDSL.g:4510:21: '\\\\' .
+                    	    // InternalDroneDSL.g:6794:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1052,7 +1052,7 @@ public class InternalDroneDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalDroneDSL.g:4510:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalDroneDSL.g:6794:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1077,10 +1077,10 @@ public class InternalDroneDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:4510:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalDroneDSL.g:6794:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalDroneDSL.g:4510:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalDroneDSL.g:6794:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1096,7 +1096,7 @@ public class InternalDroneDSLLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalDroneDSL.g:4510:54: '\\\\' .
+                    	    // InternalDroneDSL.g:6794:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1104,7 +1104,7 @@ public class InternalDroneDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalDroneDSL.g:4510:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalDroneDSL.g:6794:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1147,12 +1147,12 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4512:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalDroneDSL.g:4512:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalDroneDSL.g:6796:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalDroneDSL.g:6796:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalDroneDSL.g:4512:24: ( options {greedy=false; } : . )*
+            // InternalDroneDSL.g:6796:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1177,7 +1177,7 @@ public class InternalDroneDSLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalDroneDSL.g:4512:52: .
+            	    // InternalDroneDSL.g:6796:52: .
             	    {
             	    matchAny(); 
 
@@ -1207,12 +1207,12 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4514:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalDroneDSL.g:4514:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalDroneDSL.g:6798:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalDroneDSL.g:6798:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalDroneDSL.g:4514:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalDroneDSL.g:6798:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1225,7 +1225,7 @@ public class InternalDroneDSLLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalDroneDSL.g:4514:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalDroneDSL.g:6798:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1245,7 +1245,7 @@ public class InternalDroneDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalDroneDSL.g:4514:40: ( ( '\\r' )? '\\n' )?
+            // InternalDroneDSL.g:6798:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1254,9 +1254,9 @@ public class InternalDroneDSLLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalDroneDSL.g:4514:41: ( '\\r' )? '\\n'
+                    // InternalDroneDSL.g:6798:41: ( '\\r' )? '\\n'
                     {
-                    // InternalDroneDSL.g:4514:41: ( '\\r' )?
+                    // InternalDroneDSL.g:6798:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1265,7 +1265,7 @@ public class InternalDroneDSLLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalDroneDSL.g:4514:41: '\\r'
+                            // InternalDroneDSL.g:6798:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1297,10 +1297,10 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4516:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalDroneDSL.g:4516:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDroneDSL.g:6800:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalDroneDSL.g:6800:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalDroneDSL.g:4516:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDroneDSL.g:6800:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1354,8 +1354,8 @@ public class InternalDroneDSLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDroneDSL.g:4518:16: ( . )
-            // InternalDroneDSL.g:4518:18: .
+            // InternalDroneDSL.g:6802:16: ( . )
+            // InternalDroneDSL.g:6802:18: .
             {
             matchAny(); 
 

@@ -11,6 +11,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -20,19 +21,54 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class DroneDSLLibSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected DroneDSLLibGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_FonctionDecl_EndParserRuleCall_5_3_q;
+	protected AbstractElementAlias match_FonctionDecl_StartParserRuleCall_5_0_q;
+	protected AbstractElementAlias match_FonctionDecl___LineFeedKeyword_5_2_EndParserRuleCall_5_3_q_StartParserRuleCall_5_0_q__a;
+	protected AbstractElementAlias match_FonctionDecl___StartParserRuleCall_5_0_q_LineFeedKeyword_5_2_EndParserRuleCall_5_3_q__a;
+	protected AbstractElementAlias match_FonctionExterne_LineFeedKeyword_5_a;
 	protected AbstractElementAlias match_Model_LineFeedKeyword_1_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (DroneDSLLibGrammarAccess) access;
+		match_FonctionDecl_EndParserRuleCall_5_3_q = new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getEndParserRuleCall_5_3());
+		match_FonctionDecl_StartParserRuleCall_5_0_q = new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getStartParserRuleCall_5_0());
+		match_FonctionDecl___LineFeedKeyword_5_2_EndParserRuleCall_5_3_q_StartParserRuleCall_5_0_q__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_5_2()), new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getEndParserRuleCall_5_3()), new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getStartParserRuleCall_5_0()));
+		match_FonctionDecl___StartParserRuleCall_5_0_q_LineFeedKeyword_5_2_EndParserRuleCall_5_3_q__a = new GroupAlias(true, true, new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getStartParserRuleCall_5_0()), new TokenAlias(false, false, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_5_2()), new TokenAlias(false, true, grammarAccess.getFonctionDeclAccess().getEndParserRuleCall_5_3()));
+		match_FonctionExterne_LineFeedKeyword_5_a = new TokenAlias(true, true, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_5());
 		match_Model_LineFeedKeyword_1_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getEndRule())
+			return getEndToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getStartRule())
+			return getStartToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * End:
+	 * 	Atterrir
+	 * ;
+	 */
+	protected String getEndToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "atterrir()";
+	}
+	
+	/**
+	 * Start:
+	 * 	Decoller
+	 * ;
+	 */
+	protected String getStartToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "decoller()";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -40,12 +76,208 @@ public class DroneDSLLibSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Model_LineFeedKeyword_1_a.equals(syntax))
+			if (match_FonctionDecl_EndParserRuleCall_5_3_q.equals(syntax))
+				emit_FonctionDecl_EndParserRuleCall_5_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FonctionDecl_StartParserRuleCall_5_0_q.equals(syntax))
+				emit_FonctionDecl_StartParserRuleCall_5_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FonctionDecl___LineFeedKeyword_5_2_EndParserRuleCall_5_3_q_StartParserRuleCall_5_0_q__a.equals(syntax))
+				emit_FonctionDecl___LineFeedKeyword_5_2_EndParserRuleCall_5_3_q_StartParserRuleCall_5_0_q__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FonctionDecl___StartParserRuleCall_5_0_q_LineFeedKeyword_5_2_EndParserRuleCall_5_3_q__a.equals(syntax))
+				emit_FonctionDecl___StartParserRuleCall_5_0_q_LineFeedKeyword_5_2_EndParserRuleCall_5_3_q__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FonctionExterne_LineFeedKeyword_5_a.equals(syntax))
+				emit_FonctionExterne_LineFeedKeyword_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Model_LineFeedKeyword_1_a.equals(syntax))
 				emit_Model_LineFeedKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     End?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         body+=FonctionCall 
+	 *         '
+	 *         ' 
+	 *         (ambiguity) 
+	 *         (
+	 *             Start? 
+	 *             '
+	 *             ' 
+	 *             (ambiguity)
+	 *         )* 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         body+=FonctionExterne 
+	 *         '
+	 *         ' 
+	 *         (ambiguity) 
+	 *         (
+	 *             Start? 
+	 *             '
+	 *             ' 
+	 *             (ambiguity)
+	 *         )* 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         body+=Statement 
+	 *         '
+	 *         ' 
+	 *         (ambiguity) 
+	 *         (
+	 *             Start? 
+	 *             '
+	 *             ' 
+	 *             (ambiguity)
+	 *         )* 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 */
+	protected void emit_FonctionDecl_EndParserRuleCall_5_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     Start?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         name=ID 
+	 *         '(' 
+	 *         ')' 
+	 *         '{' 
+	 *         (ambiguity) 
+	 *         (
+	 *             '
+	 *             ' 
+	 *             End? 
+	 *             (ambiguity)
+	 *         )* 
+	 *         body+=FonctionCall
+	 *     )
+	 *     (
+	 *         name=ID 
+	 *         '(' 
+	 *         ')' 
+	 *         '{' 
+	 *         (ambiguity) 
+	 *         (
+	 *             '
+	 *             ' 
+	 *             End? 
+	 *             (ambiguity)
+	 *         )* 
+	 *         body+=FonctionExterne
+	 *     )
+	 *     (
+	 *         name=ID 
+	 *         '(' 
+	 *         ')' 
+	 *         '{' 
+	 *         (ambiguity) 
+	 *         (
+	 *             '
+	 *             ' 
+	 *             End? 
+	 *             (ambiguity)
+	 *         )* 
+	 *         body+=Statement
+	 *     )
+	 */
+	protected void emit_FonctionDecl_StartParserRuleCall_5_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (
+	  *         '
+	  *         ' 
+	  *         End? 
+	  *         Start?
+	  *     )*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     body+=FonctionCall (ambiguity) body+=FonctionCall
+	 *     body+=FonctionCall (ambiguity) body+=FonctionExterne
+	 *     body+=FonctionCall (ambiguity) body+=Statement
+	 *     body+=FonctionExterne (ambiguity) body+=FonctionCall
+	 *     body+=FonctionExterne (ambiguity) body+=FonctionExterne
+	 *     body+=FonctionExterne (ambiguity) body+=Statement
+	 *     body+=Statement (ambiguity) body+=FonctionCall
+	 *     body+=Statement (ambiguity) body+=FonctionExterne
+	 *     body+=Statement (ambiguity) body+=Statement
+	 *     name=ID '(' ')' '{' Start? (ambiguity) body+=FonctionCall
+	 *     name=ID '(' ')' '{' Start? (ambiguity) body+=FonctionExterne
+	 *     name=ID '(' ')' '{' Start? (ambiguity) body+=Statement
+	 */
+	protected void emit_FonctionDecl___LineFeedKeyword_5_2_EndParserRuleCall_5_3_q_StartParserRuleCall_5_0_q__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (
+	  *         Start? 
+	  *         '
+	  *         ' 
+	  *         End?
+	  *     )*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         body+=FonctionCall 
+	 *         '
+	 *         ' 
+	 *         End? 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         body+=FonctionExterne 
+	 *         '
+	 *         ' 
+	 *         End? 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 *     (
+	 *         body+=Statement 
+	 *         '
+	 *         ' 
+	 *         End? 
+	 *         (ambiguity) 
+	 *         '}' 
+	 *         (rule end)
+	 *     )
+	 *     name=ID '(' ')' '{' (ambiguity) '}' (rule end)
+	 */
+	protected void emit_FonctionDecl___StartParserRuleCall_5_0_q_LineFeedKeyword_5_2_EndParserRuleCall_5_3_q__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '
+	  *     '*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=ID '(' ')' (ambiguity) (rule end)
+	 */
+	protected void emit_FonctionExterne_LineFeedKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     '

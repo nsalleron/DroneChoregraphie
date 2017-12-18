@@ -104,22 +104,22 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getExternalFuncsFonctionExterneParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_2_0());
 				}
-				lv_externalFuncs_2_0=ruleFonctionExterne
+				lv_pvhm_2_0=rulePourcent_vitesse_hauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"externalFuncs",
-						lv_externalFuncs_2_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionExterne");
+						"pvhm",
+						lv_pvhm_2_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)*
+		)
 		(
 			otherlv_3='\n'
 			{
@@ -129,18 +129,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvhmPourcent_vitesse_hauteur_maxParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_4_0());
 				}
-				lv_pvhm_4_0=rulePourcent_vitesse_hauteur_max
+				lv_pvdm_4_0=rulePourcent_vitesse_deplacement_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvhm",
-						lv_pvhm_4_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_hauteur_max");
+						"pvdm",
+						lv_pvdm_4_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_deplacement_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -154,18 +154,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvdmPourcent_vitesse_deplacement_maxParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_6_0());
 				}
-				lv_pvdm_6_0=rulePourcent_vitesse_deplacement_max
+				lv_pvrm_6_0=rulePourcent_vitesse_rotation_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvdm",
-						lv_pvdm_6_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_deplacement_max");
+						"pvrm",
+						lv_pvrm_6_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_rotation_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -179,18 +179,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getPvrmPourcent_vitesse_rotation_maxParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_8_0());
 				}
-				lv_pvrm_8_0=rulePourcent_vitesse_rotation_max
+				lv_hm_8_0=ruleHauteur_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"pvrm",
-						lv_pvrm_8_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Pourcent_vitesse_rotation_max");
+						"hm",
+						lv_hm_8_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Hauteur_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -204,18 +204,18 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getHmHauteur_maxParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_10_0());
 				}
-				lv_hm_10_0=ruleHauteur_max
+				lv_em_10_0=ruleEloignement_max
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"hm",
-						lv_hm_10_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Hauteur_max");
+						"em",
+						lv_em_10_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Eloignement_max");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -229,34 +229,9 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getEmEloignement_maxParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getModelAccess().getMMainParserRuleCall_12_0());
 				}
-				lv_em_12_0=ruleEloignement_max
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getModelRule());
-					}
-					add(
-						$current,
-						"em",
-						lv_em_12_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Eloignement_max");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_13='\n'
-			{
-				newLeafNode(otherlv_13, grammarAccess.getModelAccess().getLineFeedKeyword_13());
-			}
-		)*
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelAccess().getMMainParserRuleCall_14_0());
-				}
-				lv_m_14_0=ruleMain
+				lv_m_12_0=ruleMain
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -264,7 +239,7 @@ ruleModel returns [EObject current=null]
 					set(
 						$current,
 						"m",
-						lv_m_14_0,
+						lv_m_12_0,
 						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Main");
 					afterParserOrEnumRuleCall();
 				}
@@ -273,9 +248,9 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_13_0());
 				}
-				lv_fonctions_15_0=ruleFonctionDecl
+				lv_fonctions_13_0=ruleFonctionDecl
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -283,16 +258,16 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"fonctions",
-						lv_fonctions_15_0,
+						lv_fonctions_13_0,
 						"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionDecl");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
 		(
-			otherlv_16='\n'
+			otherlv_14='\n'
 			{
-				newLeafNode(otherlv_16, grammarAccess.getModelAccess().getLineFeedKeyword_16());
+				newLeafNode(otherlv_14, grammarAccess.getModelAccess().getLineFeedKeyword_14());
 			}
 		)*
 	)
@@ -322,87 +297,107 @@ ruleMain returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getMainAccess().getLeftCurlyBracketKeyword_1());
 		}
-		{
-			newCompositeNode(grammarAccess.getMainAccess().getStartParserRuleCall_2());
-		}
-		ruleStart
-		{
-			afterParserOrEnumRuleCall();
-		}
 		(
-			otherlv_3='\n'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getMainAccess().getLineFeedKeyword_3());
+				newCompositeNode(grammarAccess.getMainAccess().getStartParserRuleCall_2_0());
 			}
-		)*
-		(
+			ruleStart
+			{
+				afterParserOrEnumRuleCall();
+			}
+			(
+				otherlv_3='\n'
+				{
+					newLeafNode(otherlv_3, grammarAccess.getMainAccess().getLineFeedKeyword_2_1());
+				}
+			)*
 			(
 				(
-					{
-						newCompositeNode(grammarAccess.getMainAccess().getStatementsStatementParserRuleCall_4_0_0());
-					}
-					lv_statements_4_0=ruleStatement
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMainRule());
+					(
+						{
+							newCompositeNode(grammarAccess.getMainAccess().getStatementsStatementParserRuleCall_2_2_0_0());
 						}
-						add(
-							$current,
-							"statements",
-							lv_statements_4_0,
-							"fr.idmteam1.idmproject.dronedsl.DroneDSL.Statement");
-						afterParserOrEnumRuleCall();
-					}
+						lv_statements_4_0=ruleStatement
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getMainRule());
+							}
+							add(
+								$current,
+								"statements",
+								lv_statements_4_0,
+								"fr.idmteam1.idmproject.dronedsl.DroneDSL.Statement");
+							afterParserOrEnumRuleCall();
+						}
+					)
 				)
-			)
-			    |
-			(
+				    |
 				(
-					{
-						newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionCallParserRuleCall_4_1_0());
-					}
-					lv_fonctions_5_0=ruleFonctionCall
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMainRule());
-						}
-						add(
-							$current,
-							"fonctions",
-							lv_fonctions_5_0,
-							"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionCall");
-						afterParserOrEnumRuleCall();
-					}
+					(
+						(
+							{
+								newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionCallParserRuleCall_2_2_1_0_0());
+							}
+							lv_fonctions_5_1=ruleFonctionCall
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMainRule());
+								}
+								add(
+									$current,
+									"fonctions",
+									lv_fonctions_5_1,
+									"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionCall");
+								afterParserOrEnumRuleCall();
+							}
+							    |
+							{
+								newCompositeNode(grammarAccess.getMainAccess().getFonctionsFonctionExterneParserRuleCall_2_2_1_0_1());
+							}
+							lv_fonctions_5_2=ruleFonctionExterne
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMainRule());
+								}
+								add(
+									$current,
+									"fonctions",
+									lv_fonctions_5_2,
+									"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionExterne");
+								afterParserOrEnumRuleCall();
+							}
+						)
+					)
 				)
-			)
-		)*
-		(
-			otherlv_6='\n'
+			)*
+			(
+				otherlv_6='\n'
+				{
+					newLeafNode(otherlv_6, grammarAccess.getMainAccess().getLineFeedKeyword_2_3());
+				}
+			)*
 			{
-				newLeafNode(otherlv_6, grammarAccess.getMainAccess().getLineFeedKeyword_5());
+				newCompositeNode(grammarAccess.getMainAccess().getEndParserRuleCall_2_4());
 			}
-		)*
-		{
-			newCompositeNode(grammarAccess.getMainAccess().getEndParserRuleCall_6());
-		}
-		ruleEnd
-		{
-			afterParserOrEnumRuleCall();
-		}
-		(
-			otherlv_8='\n'
+			ruleEnd
 			{
-				newLeafNode(otherlv_8, grammarAccess.getMainAccess().getLineFeedKeyword_7());
+				afterParserOrEnumRuleCall();
 			}
+			(
+				otherlv_8='\n'
+				{
+					newLeafNode(otherlv_8, grammarAccess.getMainAccess().getLineFeedKeyword_2_5());
+				}
+			)*
 		)*
 		otherlv_9='}'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getMainAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_9, grammarAccess.getMainAccess().getRightCurlyBracketKeyword_3());
 		}
 		(
 			otherlv_10='\n'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getMainAccess().getLineFeedKeyword_9());
+				newLeafNode(otherlv_10, grammarAccess.getMainAccess().getLineFeedKeyword_4());
 			}
 		)*
 	)
@@ -1653,30 +1648,108 @@ ruleFonctionDecl returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyStatementParserRuleCall_5_0());
-				}
-				lv_body_5_0=ruleStatement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getFonctionDeclAccess().getAStartParserRuleCall_5_0_0());
 					}
-					add(
-						$current,
-						"body",
-						lv_body_5_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.Statement");
-					afterParserOrEnumRuleCall();
-				}
+					lv_a_5_0=ruleStart
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+						}
+						add(
+							$current,
+							"a",
+							lv_a_5_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.Start");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBEndParserRuleCall_5_1_0());
+					}
+					lv_b_6_0=ruleEnd
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+						}
+						add(
+							$current,
+							"b",
+							lv_b_6_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.End");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyStatementParserRuleCall_5_2_0_0());
+						}
+						lv_body_7_1=ruleStatement
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+							}
+							add(
+								$current,
+								"body",
+								lv_body_7_1,
+								"fr.idmteam1.idmproject.dronedsl.DroneDSL.Statement");
+							afterParserOrEnumRuleCall();
+						}
+						    |
+						{
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionExterneParserRuleCall_5_2_0_1());
+						}
+						lv_body_7_2=ruleFonctionExterne
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+							}
+							add(
+								$current,
+								"body",
+								lv_body_7_2,
+								"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionExterne");
+							afterParserOrEnumRuleCall();
+						}
+						    |
+						{
+							newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionCallParserRuleCall_5_2_0_2());
+						}
+						lv_body_7_3=ruleFonctionCall
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+							}
+							add(
+								$current,
+								"body",
+								lv_body_7_3,
+								"fr.idmteam1.idmproject.dronedsl.DroneDSL.FonctionCall");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
 			)
 		)*
-		otherlv_6='\n'
+		(
+			otherlv_8='\n'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_6());
+			}
+		)*
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_6());
-		}
-		otherlv_7='}'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_9, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;
@@ -2286,6 +2359,15 @@ ruleParallele returns [EObject current=null]
 		this_Parallele3_1=ruleParallele3
 		{
 			$current = $this_Parallele3_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getParalleleAccess().getParallele4ParserRuleCall_2());
+		}
+		this_Parallele4_2=ruleParallele4
+		{
+			$current = $this_Parallele4_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -4491,6 +4573,2208 @@ ruleParallele3 returns [EObject current=null]
 							"c",
 							lv_c_119_0,
 							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleParallele4
+entryRuleParallele4 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getParallele4Rule()); }
+	iv_ruleParallele4=ruleParallele4
+	{ $current=$iv_ruleParallele4.current; }
+	EOF;
+
+// Rule Parallele4
+ruleParallele4 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_0_0_0());
+					}
+					lv_a_0_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_0_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_1='&'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getParallele4Access().getAmpersandKeyword_0_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_0_2_0());
+					}
+					lv_b_2_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_2_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_3='&'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getParallele4Access().getAmpersandKeyword_0_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_0_4_0());
+					}
+					lv_c_4_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_4_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_5='&'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getParallele4Access().getAmpersandKeyword_0_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_0_6_0());
+					}
+					lv_d_6_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_6_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_1_0_0());
+					}
+					lv_a_7_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_7_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_8='&'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getParallele4Access().getAmpersandKeyword_1_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_1_2_0());
+					}
+					lv_b_9_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_9_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_10='&'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getParallele4Access().getAmpersandKeyword_1_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_1_4_0());
+					}
+					lv_c_11_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_11_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_12='&'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getParallele4Access().getAmpersandKeyword_1_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_1_6_0());
+					}
+					lv_d_13_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_13_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_2_0_0());
+					}
+					lv_a_14_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_14_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_15='&'
+			{
+				newLeafNode(otherlv_15, grammarAccess.getParallele4Access().getAmpersandKeyword_2_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_2_2_0());
+					}
+					lv_b_16_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_16_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_17='&'
+			{
+				newLeafNode(otherlv_17, grammarAccess.getParallele4Access().getAmpersandKeyword_2_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_2_4_0());
+					}
+					lv_c_18_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_18_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_19='&'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getParallele4Access().getAmpersandKeyword_2_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_2_6_0());
+					}
+					lv_d_20_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_20_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_3_0_0());
+					}
+					lv_a_21_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_21_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_22='&'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getParallele4Access().getAmpersandKeyword_3_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_3_2_0());
+					}
+					lv_b_23_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_23_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_24='&'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getParallele4Access().getAmpersandKeyword_3_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_3_4_0());
+					}
+					lv_c_25_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_25_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_26='&'
+			{
+				newLeafNode(otherlv_26, grammarAccess.getParallele4Access().getAmpersandKeyword_3_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_3_6_0());
+					}
+					lv_d_27_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_27_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_4_0_0());
+					}
+					lv_a_28_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_28_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_29='&'
+			{
+				newLeafNode(otherlv_29, grammarAccess.getParallele4Access().getAmpersandKeyword_4_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_4_2_0());
+					}
+					lv_b_30_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_30_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_31='&'
+			{
+				newLeafNode(otherlv_31, grammarAccess.getParallele4Access().getAmpersandKeyword_4_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_4_4_0());
+					}
+					lv_c_32_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_32_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_33='&'
+			{
+				newLeafNode(otherlv_33, grammarAccess.getParallele4Access().getAmpersandKeyword_4_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_4_6_0());
+					}
+					lv_d_34_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_34_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_5_0_0());
+					}
+					lv_a_35_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_35_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_36='&'
+			{
+				newLeafNode(otherlv_36, grammarAccess.getParallele4Access().getAmpersandKeyword_5_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_5_2_0());
+					}
+					lv_b_37_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_37_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_38='&'
+			{
+				newLeafNode(otherlv_38, grammarAccess.getParallele4Access().getAmpersandKeyword_5_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_5_4_0());
+					}
+					lv_c_39_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_39_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_40='&'
+			{
+				newLeafNode(otherlv_40, grammarAccess.getParallele4Access().getAmpersandKeyword_5_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_5_6_0());
+					}
+					lv_d_41_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_41_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_6_0_0());
+					}
+					lv_a_42_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_42_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_43='&'
+			{
+				newLeafNode(otherlv_43, grammarAccess.getParallele4Access().getAmpersandKeyword_6_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_6_2_0());
+					}
+					lv_b_44_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_44_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_45='&'
+			{
+				newLeafNode(otherlv_45, grammarAccess.getParallele4Access().getAmpersandKeyword_6_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_6_4_0());
+					}
+					lv_c_46_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_46_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_47='&'
+			{
+				newLeafNode(otherlv_47, grammarAccess.getParallele4Access().getAmpersandKeyword_6_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_6_6_0());
+					}
+					lv_d_48_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_48_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_7_0_0());
+					}
+					lv_a_49_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_49_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_50='&'
+			{
+				newLeafNode(otherlv_50, grammarAccess.getParallele4Access().getAmpersandKeyword_7_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_7_2_0());
+					}
+					lv_b_51_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_51_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_52='&'
+			{
+				newLeafNode(otherlv_52, grammarAccess.getParallele4Access().getAmpersandKeyword_7_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_7_4_0());
+					}
+					lv_c_53_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_53_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_54='&'
+			{
+				newLeafNode(otherlv_54, grammarAccess.getParallele4Access().getAmpersandKeyword_7_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_7_6_0());
+					}
+					lv_d_55_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_55_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_8_0_0());
+					}
+					lv_a_56_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_56_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_57='&'
+			{
+				newLeafNode(otherlv_57, grammarAccess.getParallele4Access().getAmpersandKeyword_8_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_8_2_0());
+					}
+					lv_b_58_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_58_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_59='&'
+			{
+				newLeafNode(otherlv_59, grammarAccess.getParallele4Access().getAmpersandKeyword_8_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_8_4_0());
+					}
+					lv_c_60_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_60_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_61='&'
+			{
+				newLeafNode(otherlv_61, grammarAccess.getParallele4Access().getAmpersandKeyword_8_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_8_6_0());
+					}
+					lv_d_62_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_62_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_9_0_0());
+					}
+					lv_a_63_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_63_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_64='&'
+			{
+				newLeafNode(otherlv_64, grammarAccess.getParallele4Access().getAmpersandKeyword_9_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_9_2_0());
+					}
+					lv_b_65_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_65_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_66='&'
+			{
+				newLeafNode(otherlv_66, grammarAccess.getParallele4Access().getAmpersandKeyword_9_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_9_4_0());
+					}
+					lv_c_67_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_67_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_68='&'
+			{
+				newLeafNode(otherlv_68, grammarAccess.getParallele4Access().getAmpersandKeyword_9_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_9_6_0());
+					}
+					lv_d_69_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_69_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_10_0_0());
+					}
+					lv_a_70_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_70_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_71='&'
+			{
+				newLeafNode(otherlv_71, grammarAccess.getParallele4Access().getAmpersandKeyword_10_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_10_2_0());
+					}
+					lv_b_72_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_72_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_73='&'
+			{
+				newLeafNode(otherlv_73, grammarAccess.getParallele4Access().getAmpersandKeyword_10_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_10_4_0());
+					}
+					lv_c_74_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_74_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_75='&'
+			{
+				newLeafNode(otherlv_75, grammarAccess.getParallele4Access().getAmpersandKeyword_10_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_10_6_0());
+					}
+					lv_d_76_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_76_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_11_0_0());
+					}
+					lv_a_77_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_77_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_78='&'
+			{
+				newLeafNode(otherlv_78, grammarAccess.getParallele4Access().getAmpersandKeyword_11_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_11_2_0());
+					}
+					lv_b_79_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_79_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_80='&'
+			{
+				newLeafNode(otherlv_80, grammarAccess.getParallele4Access().getAmpersandKeyword_11_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_11_4_0());
+					}
+					lv_c_81_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_81_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_82='&'
+			{
+				newLeafNode(otherlv_82, grammarAccess.getParallele4Access().getAmpersandKeyword_11_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_11_6_0());
+					}
+					lv_d_83_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_83_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_12_0_0());
+					}
+					lv_a_84_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_84_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_85='&'
+			{
+				newLeafNode(otherlv_85, grammarAccess.getParallele4Access().getAmpersandKeyword_12_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_12_2_0());
+					}
+					lv_b_86_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_86_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_87='&'
+			{
+				newLeafNode(otherlv_87, grammarAccess.getParallele4Access().getAmpersandKeyword_12_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_12_4_0());
+					}
+					lv_c_88_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_88_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_89='&'
+			{
+				newLeafNode(otherlv_89, grammarAccess.getParallele4Access().getAmpersandKeyword_12_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_12_6_0());
+					}
+					lv_d_90_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_90_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_13_0_0());
+					}
+					lv_a_91_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_91_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_92='&'
+			{
+				newLeafNode(otherlv_92, grammarAccess.getParallele4Access().getAmpersandKeyword_13_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_13_2_0());
+					}
+					lv_b_93_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_93_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_94='&'
+			{
+				newLeafNode(otherlv_94, grammarAccess.getParallele4Access().getAmpersandKeyword_13_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_13_4_0());
+					}
+					lv_c_95_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_95_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_96='&'
+			{
+				newLeafNode(otherlv_96, grammarAccess.getParallele4Access().getAmpersandKeyword_13_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_13_6_0());
+					}
+					lv_d_97_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_97_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_14_0_0());
+					}
+					lv_a_98_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_98_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_99='&'
+			{
+				newLeafNode(otherlv_99, grammarAccess.getParallele4Access().getAmpersandKeyword_14_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_14_2_0());
+					}
+					lv_b_100_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_100_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_101='&'
+			{
+				newLeafNode(otherlv_101, grammarAccess.getParallele4Access().getAmpersandKeyword_14_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_14_4_0());
+					}
+					lv_c_102_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_102_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_103='&'
+			{
+				newLeafNode(otherlv_103, grammarAccess.getParallele4Access().getAmpersandKeyword_14_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_14_6_0());
+					}
+					lv_d_104_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_104_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_15_0_0());
+					}
+					lv_a_105_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_105_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_106='&'
+			{
+				newLeafNode(otherlv_106, grammarAccess.getParallele4Access().getAmpersandKeyword_15_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_15_2_0());
+					}
+					lv_b_107_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_107_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_108='&'
+			{
+				newLeafNode(otherlv_108, grammarAccess.getParallele4Access().getAmpersandKeyword_15_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_15_4_0());
+					}
+					lv_c_109_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_109_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_110='&'
+			{
+				newLeafNode(otherlv_110, grammarAccess.getParallele4Access().getAmpersandKeyword_15_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_15_6_0());
+					}
+					lv_d_111_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_111_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_16_0_0());
+					}
+					lv_a_112_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_112_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_113='&'
+			{
+				newLeafNode(otherlv_113, grammarAccess.getParallele4Access().getAmpersandKeyword_16_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_16_2_0());
+					}
+					lv_b_114_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_114_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_115='&'
+			{
+				newLeafNode(otherlv_115, grammarAccess.getParallele4Access().getAmpersandKeyword_16_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_16_4_0());
+					}
+					lv_c_116_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_116_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_117='&'
+			{
+				newLeafNode(otherlv_117, grammarAccess.getParallele4Access().getAmpersandKeyword_16_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_16_6_0());
+					}
+					lv_d_118_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_118_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_17_0_0());
+					}
+					lv_a_119_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_119_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_120='&'
+			{
+				newLeafNode(otherlv_120, grammarAccess.getParallele4Access().getAmpersandKeyword_17_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_17_2_0());
+					}
+					lv_b_121_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_121_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_122='&'
+			{
+				newLeafNode(otherlv_122, grammarAccess.getParallele4Access().getAmpersandKeyword_17_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_17_4_0());
+					}
+					lv_c_123_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_123_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_124='&'
+			{
+				newLeafNode(otherlv_124, grammarAccess.getParallele4Access().getAmpersandKeyword_17_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_17_6_0());
+					}
+					lv_d_125_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_125_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_18_0_0());
+					}
+					lv_a_126_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_126_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_127='&'
+			{
+				newLeafNode(otherlv_127, grammarAccess.getParallele4Access().getAmpersandKeyword_18_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_18_2_0());
+					}
+					lv_b_128_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_128_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_129='&'
+			{
+				newLeafNode(otherlv_129, grammarAccess.getParallele4Access().getAmpersandKeyword_18_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_18_4_0());
+					}
+					lv_c_130_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_130_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_131='&'
+			{
+				newLeafNode(otherlv_131, grammarAccess.getParallele4Access().getAmpersandKeyword_18_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_18_6_0());
+					}
+					lv_d_132_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_132_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_19_0_0());
+					}
+					lv_a_133_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_133_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_134='&'
+			{
+				newLeafNode(otherlv_134, grammarAccess.getParallele4Access().getAmpersandKeyword_19_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_19_2_0());
+					}
+					lv_b_135_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_135_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_136='&'
+			{
+				newLeafNode(otherlv_136, grammarAccess.getParallele4Access().getAmpersandKeyword_19_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_19_4_0());
+					}
+					lv_c_137_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_137_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_138='&'
+			{
+				newLeafNode(otherlv_138, grammarAccess.getParallele4Access().getAmpersandKeyword_19_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_19_6_0());
+					}
+					lv_d_139_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_139_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_20_0_0());
+					}
+					lv_a_140_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_140_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_141='&'
+			{
+				newLeafNode(otherlv_141, grammarAccess.getParallele4Access().getAmpersandKeyword_20_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_20_2_0());
+					}
+					lv_b_142_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_142_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_143='&'
+			{
+				newLeafNode(otherlv_143, grammarAccess.getParallele4Access().getAmpersandKeyword_20_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_20_4_0());
+					}
+					lv_c_144_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_144_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_145='&'
+			{
+				newLeafNode(otherlv_145, grammarAccess.getParallele4Access().getAmpersandKeyword_20_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_20_6_0());
+					}
+					lv_d_146_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_146_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_21_0_0());
+					}
+					lv_a_147_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_147_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_148='&'
+			{
+				newLeafNode(otherlv_148, grammarAccess.getParallele4Access().getAmpersandKeyword_21_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_21_2_0());
+					}
+					lv_b_149_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_149_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_150='&'
+			{
+				newLeafNode(otherlv_150, grammarAccess.getParallele4Access().getAmpersandKeyword_21_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_21_4_0());
+					}
+					lv_c_151_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_151_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_152='&'
+			{
+				newLeafNode(otherlv_152, grammarAccess.getParallele4Access().getAmpersandKeyword_21_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_21_6_0());
+					}
+					lv_d_153_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_153_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_22_0_0());
+					}
+					lv_a_154_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_154_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_155='&'
+			{
+				newLeafNode(otherlv_155, grammarAccess.getParallele4Access().getAmpersandKeyword_22_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_22_2_0());
+					}
+					lv_b_156_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_156_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_157='&'
+			{
+				newLeafNode(otherlv_157, grammarAccess.getParallele4Access().getAmpersandKeyword_22_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_22_4_0());
+					}
+					lv_c_158_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_158_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_159='&'
+			{
+				newLeafNode(otherlv_159, grammarAccess.getParallele4Access().getAmpersandKeyword_22_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_22_6_0());
+					}
+					lv_d_160_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_160_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_23_0_0());
+					}
+					lv_a_161_0=ruleRGRD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"a",
+							lv_a_161_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.RGRD");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_162='&'
+			{
+				newLeafNode(otherlv_162, grammarAccess.getParallele4Access().getAmpersandKeyword_23_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_23_2_0());
+					}
+					lv_b_163_0=ruleGDr
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"b",
+							lv_b_163_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.GDr");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_164='&'
+			{
+				newLeafNode(otherlv_164, grammarAccess.getParallele4Access().getAmpersandKeyword_23_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_23_4_0());
+					}
+					lv_c_165_0=ruleAR
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"c",
+							lv_c_165_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.AR");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_166='&'
+			{
+				newLeafNode(otherlv_166, grammarAccess.getParallele4Access().getAmpersandKeyword_23_5());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_23_6_0());
+					}
+					lv_d_167_0=ruleMD
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParallele4Rule());
+						}
+						set(
+							$current,
+							"d",
+							lv_d_167_0,
+							"fr.idmteam1.idmproject.dronedsl.DroneDSL.MD");
 						afterParserOrEnumRuleCall();
 					}
 				)

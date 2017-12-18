@@ -62,10 +62,16 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FonctionDecl">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" upperBound="-1" eType="#//Statement"
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionDecl" eSuperTypes="#//FonctionRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionExterne" eSuperTypes="#//FonctionRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionCall">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="func" eType="#//FonctionRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionRef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PourcentDecl" eSuperTypes="#//VarDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//PourcentConst"

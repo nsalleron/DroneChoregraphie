@@ -5,6 +5,8 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Fonction Decl</b></em>'.
@@ -14,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getA <em>A</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getB <em>B</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -24,8 +28,40 @@ import org.eclipse.emf.common.util.EList;
 public interface FonctionDecl extends FonctionRef
 {
   /**
+   * Returns the value of the '<em><b>A</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>A</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>A</em>' attribute list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionDecl_A()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getA();
+
+  /**
+   * Returns the value of the '<em><b>B</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>B</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>B</em>' attribute list.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionDecl_B()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getB();
+
+  /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.Statement}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Body</em>' containment reference list isn't clear,
@@ -37,6 +73,6 @@ public interface FonctionDecl extends FonctionRef
    * @model containment="true"
    * @generated
    */
-  EList<Statement> getBody();
+  EList<EObject> getBody();
 
 } // FonctionDecl

@@ -22,6 +22,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Monter;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele4;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Pause;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentConst;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.PourcentDecl;
@@ -109,6 +110,9 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case DroneDSLPackage.PARALLELE3:
 				sequence_Parallele3(context, (Parallele3) semanticObject); 
+				return; 
+			case DroneDSLPackage.PARALLELE4:
+				sequence_Parallele4(context, (Parallele4) semanticObject); 
 				return; 
 			case DroneDSLPackage.PAUSE:
 				sequence_Pause(context, (Pause) semanticObject); 
@@ -259,7 +263,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     FonctionRef returns FonctionDecl
 	 *
 	 * Constraint:
-	 *     (name=ID body+=Statement*)
+	 *     (name=ID (a+=Start | b+=End | body+=Statement | body+=FonctionExterne | body+=FonctionCall)*)
 	 */
 	protected void sequence_FonctionDecl(ISerializationContext context, FonctionDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -391,7 +395,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Main returns Main
 	 *
 	 * Constraint:
-	 *     (statements+=Statement | fonctions+=FonctionCall)+
+	 *     (statements+=Statement | fonctions+=FonctionCall | fonctions+=FonctionExterne)*
 	 */
 	protected void sequence_Main(ISerializationContext context, Main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -405,7 +409,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Constraint:
 	 *     (
 	 *         imports+=Import* 
-	 *         externalFuncs+=FonctionExterne* 
 	 *         pvhm+=Pourcent_vitesse_hauteur_max 
 	 *         pvdm+=Pourcent_vitesse_deplacement_max 
 	 *         pvrm+=Pourcent_vitesse_rotation_max 
@@ -505,6 +508,45 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     )
 	 */
 	protected void sequence_Parallele3(ISerializationContext context, Parallele3 semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns Parallele4
+	 *     Parallele returns Parallele4
+	 *     Parallele4 returns Parallele4
+	 *
+	 * Constraint:
+	 *     (
+	 *         (a=AR b=GDr c=MD d=RGRD) | 
+	 *         (a=AR b=GDr c=RGRD d=MD) | 
+	 *         (a=AR b=MD c=GDr d=RGRD) | 
+	 *         (a=AR b=MD c=RGRD d=GDr) | 
+	 *         (a=AR b=RGRD c=MD d=GDr) | 
+	 *         (a=AR b=RGRD c=GDr d=MD) | 
+	 *         (a=GDr b=AR c=MD d=RGRD) | 
+	 *         (a=GDr b=AR c=RGRD d=MD) | 
+	 *         (a=GDr b=MD c=AR d=RGRD) | 
+	 *         (a=GDr b=MD c=RGRD d=AR) | 
+	 *         (a=GDr b=RGRD c=AR d=MD) | 
+	 *         (a=GDr b=RGRD c=MD d=AR) | 
+	 *         (a=MD b=AR c=GDr d=RGRD) | 
+	 *         (a=MD b=AR c=RGRD d=GDr) | 
+	 *         (a=MD b=GDr c=AR d=RGRD) | 
+	 *         (a=MD b=GDr c=RGRD d=AR) | 
+	 *         (a=MD b=RGRD c=GDr d=AR) | 
+	 *         (a=MD b=RGRD c=AR d=GDr) | 
+	 *         (a=RGRD b=AR c=MD d=GDr) | 
+	 *         (a=RGRD b=AR c=GDr d=MD) | 
+	 *         (a=RGRD b=MD c=AR d=GDr) | 
+	 *         (a=RGRD b=MD c=GDr d=AR) | 
+	 *         (a=RGRD b=GDr c=MD d=AR) | 
+	 *         (a=RGRD b=GDr c=AR d=MD)
+	 *     )
+	 */
+	protected void sequence_Parallele4(ISerializationContext context, Parallele4 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

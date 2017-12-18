@@ -78,6 +78,9 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
       case DroneDSLLibPackage.ROTATION_DROITE: return createRotationDroite();
       case DroneDSLLibPackage.STATEMENT: return createStatement();
       case DroneDSLLibPackage.FONCTION_DECL: return createFonctionDecl();
+      case DroneDSLLibPackage.FONCTION_EXTERNE: return createFonctionExterne();
+      case DroneDSLLibPackage.FONCTION_CALL: return createFonctionCall();
+      case DroneDSLLibPackage.FONCTION_REF: return createFonctionRef();
       case DroneDSLLibPackage.POURCENT_DECL: return createPourcentDecl();
       case DroneDSLLibPackage.INT_DECL: return createIntDecl();
       case DroneDSLLibPackage.VAR_DECL: return createVarDecl();
@@ -239,6 +242,39 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
   {
     FonctionDeclImpl fonctionDecl = new FonctionDeclImpl();
     return fonctionDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionExterne createFonctionExterne()
+  {
+    FonctionExterneImpl fonctionExterne = new FonctionExterneImpl();
+    return fonctionExterne;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionCall createFonctionCall()
+  {
+    FonctionCallImpl fonctionCall = new FonctionCallImpl();
+    return fonctionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionRef createFonctionRef()
+  {
+    FonctionRefImpl fonctionRef = new FonctionRefImpl();
+    return fonctionRef;
   }
 
   /**

@@ -141,6 +141,33 @@ public interface DroneDSLLibFactory extends EFactory
   FonctionDecl createFonctionDecl();
 
   /**
+   * Returns a new object of class '<em>Fonction Externe</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Externe</em>'.
+   * @generated
+   */
+  FonctionExterne createFonctionExterne();
+
+  /**
+   * Returns a new object of class '<em>Fonction Call</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Call</em>'.
+   * @generated
+   */
+  FonctionCall createFonctionCall();
+
+  /**
+   * Returns a new object of class '<em>Fonction Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Ref</em>'.
+   * @generated
+   */
+  FonctionRef createFonctionRef();
+
+  /**
    * Returns a new object of class '<em>Pourcent Decl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

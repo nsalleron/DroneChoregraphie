@@ -32,6 +32,8 @@ public class DroneDSLLibParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
+					put(grammarAccess.getFonctionDeclAccess().getBodyAlternatives_5_1_0(), "rule__FonctionDecl__BodyAlternatives_5_1_0");
+					put(grammarAccess.getFonctionRefAccess().getAlternatives(), "rule__FonctionRef__Alternatives");
 					put(grammarAccess.getVarDeclAccess().getAlternatives(), "rule__VarDecl__Alternatives");
 					put(grammarAccess.getPourcentExpAccess().getAlternatives(), "rule__PourcentExp__Alternatives");
 					put(grammarAccess.getIntExpAccess().getAlternatives(), "rule__IntExp__Alternatives");
@@ -53,6 +55,11 @@ public class DroneDSLLibParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRotationGaucheAccess().getGroup(), "rule__RotationGauche__Group__0");
 					put(grammarAccess.getRotationDroiteAccess().getGroup(), "rule__RotationDroite__Group__0");
 					put(grammarAccess.getFonctionDeclAccess().getGroup(), "rule__FonctionDecl__Group__0");
+					put(grammarAccess.getFonctionDeclAccess().getGroup_5(), "rule__FonctionDecl__Group_5__0");
+					put(grammarAccess.getFonctionExterneAccess().getGroup(), "rule__FonctionExterne__Group__0");
+					put(grammarAccess.getFonctionCallAccess().getGroup(), "rule__FonctionCall__Group__0");
+					put(grammarAccess.getDecollerAccess().getGroup(), "rule__Decoller__Group__0");
+					put(grammarAccess.getAtterrirAccess().getGroup(), "rule__Atterrir__Group__0");
 					put(grammarAccess.getPourcentDeclAccess().getGroup(), "rule__PourcentDecl__Group__0");
 					put(grammarAccess.getIntDeclAccess().getGroup(), "rule__IntDecl__Group__0");
 					put(grammarAccess.getParallele2Access().getGroup_0(), "rule__Parallele2__Group_0__0");
@@ -111,7 +118,9 @@ public class DroneDSLLibParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRotationDroiteAccess().getDureeAssignment_2(), "rule__RotationDroite__DureeAssignment_2");
 					put(grammarAccess.getRotationDroiteAccess().getVitesse_rotationAssignment_4(), "rule__RotationDroite__Vitesse_rotationAssignment_4");
 					put(grammarAccess.getFonctionDeclAccess().getNameAssignment_1(), "rule__FonctionDecl__NameAssignment_1");
-					put(grammarAccess.getFonctionDeclAccess().getBodyAssignment_5(), "rule__FonctionDecl__BodyAssignment_5");
+					put(grammarAccess.getFonctionDeclAccess().getBodyAssignment_5_1(), "rule__FonctionDecl__BodyAssignment_5_1");
+					put(grammarAccess.getFonctionExterneAccess().getNameAssignment_2(), "rule__FonctionExterne__NameAssignment_2");
+					put(grammarAccess.getFonctionCallAccess().getFuncAssignment_0(), "rule__FonctionCall__FuncAssignment_0");
 					put(grammarAccess.getPourcentDeclAccess().getNameAssignment_1(), "rule__PourcentDecl__NameAssignment_1");
 					put(grammarAccess.getPourcentDeclAccess().getValAssignment_3(), "rule__PourcentDecl__ValAssignment_3");
 					put(grammarAccess.getIntDeclAccess().getNameAssignment_1(), "rule__IntDecl__NameAssignment_1");

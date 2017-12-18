@@ -103,6 +103,7 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.PARALLELE: return createParallele();
       case DroneDSLPackage.PARALLELE2: return createParallele2();
       case DroneDSLPackage.PARALLELE3: return createParallele3();
+      case DroneDSLPackage.PARALLELE4: return createParallele4();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -524,6 +525,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     Parallele3Impl parallele3 = new Parallele3Impl();
     return parallele3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parallele4 createParallele4()
+  {
+    Parallele4Impl parallele4 = new Parallele4Impl();
+    return parallele4;
   }
 
   /**

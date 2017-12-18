@@ -6,7 +6,6 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionExterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
@@ -40,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getExternalFuncs <em>External Funcs</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvhm <em>Pvhm</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvdm <em>Pvdm</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.ModelImpl#getPvrm <em>Pvrm</em>}</li>
@@ -63,16 +61,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @ordered
    */
   protected EList<Import> imports;
-
-  /**
-   * The cached value of the '{@link #getExternalFuncs() <em>External Funcs</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExternalFuncs()
-   * @generated
-   * @ordered
-   */
-  protected EList<FonctionExterne> externalFuncs;
 
   /**
    * The cached value of the '{@link #getPvhm() <em>Pvhm</em>}' containment reference list.
@@ -177,20 +165,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       imports = new EObjectContainmentEList<Import>(Import.class, this, DroneDSLPackage.MODEL__IMPORTS);
     }
     return imports;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<FonctionExterne> getExternalFuncs()
-  {
-    if (externalFuncs == null)
-    {
-      externalFuncs = new EObjectContainmentEList<FonctionExterne>(FonctionExterne.class, this, DroneDSLPackage.MODEL__EXTERNAL_FUNCS);
-    }
-    return externalFuncs;
   }
 
   /**
@@ -337,8 +311,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case DroneDSLPackage.MODEL__EXTERNAL_FUNCS:
-        return ((InternalEList<?>)getExternalFuncs()).basicRemove(otherEnd, msgs);
       case DroneDSLPackage.MODEL__PVHM:
         return ((InternalEList<?>)getPvhm()).basicRemove(otherEnd, msgs);
       case DroneDSLPackage.MODEL__PVDM:
@@ -369,8 +341,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return getImports();
-      case DroneDSLPackage.MODEL__EXTERNAL_FUNCS:
-        return getExternalFuncs();
       case DroneDSLPackage.MODEL__PVHM:
         return getPvhm();
       case DroneDSLPackage.MODEL__PVDM:
@@ -403,10 +373,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case DroneDSLPackage.MODEL__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
-        return;
-      case DroneDSLPackage.MODEL__EXTERNAL_FUNCS:
-        getExternalFuncs().clear();
-        getExternalFuncs().addAll((Collection<? extends FonctionExterne>)newValue);
         return;
       case DroneDSLPackage.MODEL__PVHM:
         getPvhm().clear();
@@ -452,9 +418,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case DroneDSLPackage.MODEL__IMPORTS:
         getImports().clear();
         return;
-      case DroneDSLPackage.MODEL__EXTERNAL_FUNCS:
-        getExternalFuncs().clear();
-        return;
       case DroneDSLPackage.MODEL__PVHM:
         getPvhm().clear();
         return;
@@ -492,8 +455,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DroneDSLPackage.MODEL__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case DroneDSLPackage.MODEL__EXTERNAL_FUNCS:
-        return externalFuncs != null && !externalFuncs.isEmpty();
       case DroneDSLPackage.MODEL__PVHM:
         return pvhm != null && !pvhm.isEmpty();
       case DroneDSLPackage.MODEL__PVDM:

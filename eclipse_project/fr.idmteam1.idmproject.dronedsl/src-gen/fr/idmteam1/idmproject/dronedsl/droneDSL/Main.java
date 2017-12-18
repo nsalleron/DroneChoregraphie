@@ -44,7 +44,7 @@ public interface Main extends EObject
 
   /**
    * Returns the value of the '<em><b>Fonctions</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Fonctions</em>' containment reference list isn't clear,
@@ -56,6 +56,6 @@ public interface Main extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<FonctionCall> getFonctions();
+  EList<EObject> getFonctions();
 
 } // Main
