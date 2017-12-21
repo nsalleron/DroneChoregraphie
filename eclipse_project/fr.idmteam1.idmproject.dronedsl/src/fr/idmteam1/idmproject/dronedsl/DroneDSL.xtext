@@ -5,10 +5,10 @@ generate droneDSL "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSL"
 
 Model:
 	(
-		(imports+=Import*)			
+		(imports+=Import)*			
 		(prologue=Prologue)
 		(m=Main)
-		(fonctions+=FonctionDecl*)
+		(fonctions+=FonctionDecl)*
 	);
 
 // Types
@@ -140,7 +140,7 @@ CommandeBasique:
 
 FonctionDecl:
 	'func' name=ID '()''{'
-		 body += VarDecl|CommandeBasique|Parallele|FonctionCall
+		 (body += VarDecl|CommandeBasique|Parallele|FonctionCall)*
 	'}'
 ;
 
@@ -153,7 +153,7 @@ FonctionCall:
 Main:
 	'main' '{'
 		decollage=Decoller 
-		mainbody+=VarDecl|CommandeBasique|Parallele|FonctionCall
+		(mainbody +=VarDecl|CommandeBasique|Parallele|FonctionCall)*
 		atterrissage=Atterrir
 	'}'
 ;
