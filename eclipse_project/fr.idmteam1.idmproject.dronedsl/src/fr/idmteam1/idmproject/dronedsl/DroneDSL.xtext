@@ -140,7 +140,7 @@ CommandeBasique:
 
 FonctionDecl:
 	'func' name=ID '()''{'
-		 (body += VarDecl|CommandeBasique|Parallele|FonctionCall)*
+		 body += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
 	'}'
 ;
 
@@ -153,7 +153,7 @@ FonctionCall:
 Main:
 	'main' '{'
 		decollage=Decoller 
-		(mainbody +=VarDecl|CommandeBasique|Parallele|FonctionCall)*
+		mainbody += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
 		atterrissage=Atterrir
 	'}'
 ;
