@@ -3,6 +3,15 @@
  */
 package fr.idmteam1.idmproject.dronedsl.validation
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Main
+import java.util.ArrayList
+import java.util.HashMap
+import java.util.List
+import java.util.Map.Entry
+import org.eclipse.xtext.validation.Check
 
 /**
  * This class contains custom validation rules. 
@@ -11,7 +20,7 @@ package fr.idmteam1.idmproject.dronedsl.validation
  */
 class DroneDSLValidator extends AbstractDroneDSLValidator {
 	
-//	public static val INVALID_NAME = 'invalidName'
+	public static val INVALID_NAME = 'invalidName'
 //
 //	@Check
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
@@ -21,5 +30,109 @@ class DroneDSLValidator extends AbstractDroneDSLValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
+
+	private static var inMain = false
+	private static var actualFunc = ""
+	private static var map = new HashMap
+	public static val CYCLE_ERR = 'Cycle'
 	
+	@Check
+	def checkMain(Main m) {
+		inMain = true
+	}
+	
+	@Check
+	def checkFinDeMain(FinDeMain fdm) {
+		inMain = false
+	}
+	
+	@Check
+	def checkFunctionDecl(FonctionDecl decl) {
+//		println(decl.name)
+		actualFunc =  decl.name
+		map.put(actualFunc, new ArrayList)
+	}
+	
+	@Check
+	def checkFunctionCall(FonctionCall call) {
+		if(!inMain){
+			(map.get(actualFunc) as List<Object>).add(call.ref.name)
+			printMap()
+			checkCycle()
+		}
+	}
+	
+	def printMap() {
+		var set = map.entrySet();
+		var iterator = set.iterator();
+		while(iterator.hasNext()) {
+			var mentry = iterator.next() as Entry<Object, Object>;
+			System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+			System.out.println(mentry.getValue());
+		}
+	}
+	
+	/**
+	 * Parcourt la map, pour chaque element de la liste de la clef en cours d'analyse (key)
+	 * on verifie le cycle via la fonction checkCycleProfond
+	 */
+	def checkCycle() {
+		var set = map.entrySet();
+		var iterator = set.iterator();
+		// Clef en cours d'analyse
+		var key = ""
+		
+		// Parcourt de la map
+		while(iterator.hasNext()) {
+			// Recuperer l'iterator
+			var mentry = iterator.next() as Entry<Object, Object>;
+			// Recuperer la clef en cours d'analyse
+			key = mentry.getKey() as String
+			// Recuperer la liste des fonctions qu'elle appelle
+			var funcCallList = mentry.getValue() as List<Object>
+			// cf ci-dessous
+			checkCycleProfond(key, funcCallList)
+		}
+	}
+	
+	/**
+	 * Alors la c'est chaud.
+	 * @param funcCallList c'est la liste des fonctions appelees par la fonction de nom key
+	 * 
+	 */
+	def checkCycleProfond(String key, List<Object> funcCallList) {
+		// fonction en cours d'analyse
+		var func = ""
+		
+		// Parcourt la liste des fonctions appelees par key
+		for(var i = 0; i < funcCallList.size; i++) {
+				// On recupere la fonction appelee
+				func = funcCallList.get(i) as String
+				// On recupere la liste des fonctions appelee par cette fonction
+				var list = map.get(func) as List<Object>
+				
+				// Parcourt de cette liste
+				for(var j = 0; j < list.size; j++) {
+					
+					// Si elle appelle la fonction key (recursion croisee) c'est mort
+					// @TODO : Faire error(...)
+					if((list.get(j) as String).equals(key as String)) {
+						println("ERREUR DE CYCLE")
+						// TODO
+						return
+					// Sinon il faut faire un appel recursif la complexite est ouf mais ca passe
+					} else {
+						// On recupere la fonctions appelee
+						var func2 = list.get(j) as String
+						// Evite de boucler sur soit meme
+						if(!func2.equals(key)) {
+							// Et c'est reparti
+							var list2 = map.get(func2) as List<Object>
+							checkCycleProfond(key, list2)
+						}
+					}
+			}	 
+		}
+	}
 }
