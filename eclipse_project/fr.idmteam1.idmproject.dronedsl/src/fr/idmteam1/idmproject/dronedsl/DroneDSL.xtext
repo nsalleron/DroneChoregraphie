@@ -144,6 +144,10 @@ FonctionDecl:
 	'}'
 ;
 
+FinDeMain:
+	accolade='}'
+;
+
 FonctionCall:
 	ref=[FonctionDecl]'()'
 ;
@@ -155,7 +159,7 @@ Main:
 		decollage=Decoller 
 		mainbody += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
 		atterrissage=Atterrir
-	'}'
+	fdm=FinDeMain
 ;
 
 
