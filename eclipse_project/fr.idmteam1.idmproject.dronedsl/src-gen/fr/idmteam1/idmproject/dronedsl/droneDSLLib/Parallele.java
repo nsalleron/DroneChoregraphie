@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Parallele extends Statement
+public interface Parallele extends Mouvement
 {
   /**
    * Returns the value of the '<em><b>A</b></em>' containment reference.

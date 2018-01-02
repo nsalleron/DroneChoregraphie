@@ -5,7 +5,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionRef;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl#getFunc <em>Func</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionCallImpl#getRef <em>Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class FonctionCallImpl extends MinimalEObjectImpl.Container implements FonctionCall
 {
   /**
-   * The cached value of the '{@link #getFunc() <em>Func</em>}' reference.
+   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFunc()
+   * @see #getRef()
    * @generated
    * @ordered
    */
-  protected FonctionRef func;
+  protected FonctionDecl ref;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,19 +66,19 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
    * <!-- end-user-doc -->
    * @generated
    */
-  public FonctionRef getFunc()
+  public FonctionDecl getRef()
   {
-    if (func != null && func.eIsProxy())
+    if (ref != null && ref.eIsProxy())
     {
-      InternalEObject oldFunc = (InternalEObject)func;
-      func = (FonctionRef)eResolveProxy(oldFunc);
-      if (func != oldFunc)
+      InternalEObject oldRef = (InternalEObject)ref;
+      ref = (FonctionDecl)eResolveProxy(oldRef);
+      if (ref != oldRef)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DroneDSLLibPackage.FONCTION_CALL__FUNC, oldFunc, func));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DroneDSLLibPackage.FONCTION_CALL__REF, oldRef, ref));
       }
     }
-    return func;
+    return ref;
   }
 
   /**
@@ -86,9 +86,9 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
    * <!-- end-user-doc -->
    * @generated
    */
-  public FonctionRef basicGetFunc()
+  public FonctionDecl basicGetRef()
   {
-    return func;
+    return ref;
   }
 
   /**
@@ -96,12 +96,12 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFunc(FonctionRef newFunc)
+  public void setRef(FonctionDecl newRef)
   {
-    FonctionRef oldFunc = func;
-    func = newFunc;
+    FonctionDecl oldRef = ref;
+    ref = newRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.FONCTION_CALL__FUNC, oldFunc, func));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.FONCTION_CALL__REF, oldRef, ref));
   }
 
   /**
@@ -114,9 +114,9 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_CALL__FUNC:
-        if (resolve) return getFunc();
-        return basicGetFunc();
+      case DroneDSLLibPackage.FONCTION_CALL__REF:
+        if (resolve) return getRef();
+        return basicGetRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -131,8 +131,8 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_CALL__FUNC:
-        setFunc((FonctionRef)newValue);
+      case DroneDSLLibPackage.FONCTION_CALL__REF:
+        setRef((FonctionDecl)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -148,8 +148,8 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_CALL__FUNC:
-        setFunc((FonctionRef)null);
+      case DroneDSLLibPackage.FONCTION_CALL__REF:
+        setRef((FonctionDecl)null);
         return;
     }
     super.eUnset(featureID);
@@ -165,8 +165,8 @@ public class FonctionCallImpl extends MinimalEObjectImpl.Container implements Fo
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_CALL__FUNC:
-        return func != null;
+      case DroneDSLLibPackage.FONCTION_CALL__REF:
+        return ref != null;
     }
     return super.eIsSet(featureID);
   }

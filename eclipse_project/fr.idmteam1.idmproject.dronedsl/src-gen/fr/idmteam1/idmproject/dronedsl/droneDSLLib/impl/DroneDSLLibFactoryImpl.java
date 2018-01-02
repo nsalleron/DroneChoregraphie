@@ -66,29 +66,30 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
     switch (eClass.getClassifierID())
     {
       case DroneDSLLibPackage.MODEL: return createModel();
+      case DroneDSLLibPackage.SECONDE_CONST: return createSecondeConst();
       case DroneDSLLibPackage.POURCENT_CONST: return createPourcentConst();
+      case DroneDSLLibPackage.SECONDE_DECL: return createSecondeDecl();
+      case DroneDSLLibPackage.POURCENT_DECL: return createPourcentDecl();
+      case DroneDSLLibPackage.VAR_DECL: return createVarDecl();
+      case DroneDSLLibPackage.REF_SECONDE_VAR: return createRefSecondeVar();
+      case DroneDSLLibPackage.REF_POURCENT_VAR: return createRefPourcentVar();
+      case DroneDSLLibPackage.POURCENT_EXP: return createPourcentExp();
+      case DroneDSLLibPackage.SECONDE_EXP: return createSecondeExp();
+      case DroneDSLLibPackage.DECOLLER: return createDecoller();
+      case DroneDSLLibPackage.ATTERRIR: return createAtterrir();
       case DroneDSLLibPackage.MONTER: return createMonter();
       case DroneDSLLibPackage.DESCENDRE: return createDescendre();
       case DroneDSLLibPackage.AVANCER: return createAvancer();
       case DroneDSLLibPackage.RECULER: return createReculer();
       case DroneDSLLibPackage.GAUCHE: return createGauche();
       case DroneDSLLibPackage.DROITE: return createDroite();
-      case DroneDSLLibPackage.PAUSE: return createPause();
       case DroneDSLLibPackage.ROTATION_GAUCHE: return createRotationGauche();
       case DroneDSLLibPackage.ROTATION_DROITE: return createRotationDroite();
-      case DroneDSLLibPackage.STATEMENT: return createStatement();
+      case DroneDSLLibPackage.PAUSE: return createPause();
+      case DroneDSLLibPackage.MOUVEMENT: return createMouvement();
+      case DroneDSLLibPackage.COMMANDE_BASIQUE: return createCommandeBasique();
       case DroneDSLLibPackage.FONCTION_DECL: return createFonctionDecl();
-      case DroneDSLLibPackage.FONCTION_EXTERNE: return createFonctionExterne();
       case DroneDSLLibPackage.FONCTION_CALL: return createFonctionCall();
-      case DroneDSLLibPackage.FONCTION_REF: return createFonctionRef();
-      case DroneDSLLibPackage.POURCENT_DECL: return createPourcentDecl();
-      case DroneDSLLibPackage.INT_DECL: return createIntDecl();
-      case DroneDSLLibPackage.VAR_DECL: return createVarDecl();
-      case DroneDSLLibPackage.POURCENT_EXP: return createPourcentExp();
-      case DroneDSLLibPackage.REF_INT_VAR: return createRefIntVar();
-      case DroneDSLLibPackage.REF_POURCENT_VAR: return createRefPourcentVar();
-      case DroneDSLLibPackage.INT_CONSTANTE: return createIntConstante();
-      case DroneDSLLibPackage.INT_EXP: return createIntExp();
       case DroneDSLLibPackage.MD: return createMD();
       case DroneDSLLibPackage.GDR: return createGDr();
       case DroneDSLLibPackage.RGRD: return createRGRD();
@@ -96,6 +97,7 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
       case DroneDSLLibPackage.PARALLELE: return createParallele();
       case DroneDSLLibPackage.PARALLELE2: return createParallele2();
       case DroneDSLLibPackage.PARALLELE3: return createParallele3();
+      case DroneDSLLibPackage.PARALLELE4: return createParallele4();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -117,10 +119,120 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
    * <!-- end-user-doc -->
    * @generated
    */
+  public SecondeConst createSecondeConst()
+  {
+    SecondeConstImpl secondeConst = new SecondeConstImpl();
+    return secondeConst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public PourcentConst createPourcentConst()
   {
     PourcentConstImpl pourcentConst = new PourcentConstImpl();
     return pourcentConst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecondeDecl createSecondeDecl()
+  {
+    SecondeDeclImpl secondeDecl = new SecondeDeclImpl();
+    return secondeDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentDecl createPourcentDecl()
+  {
+    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
+    return pourcentDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VarDecl createVarDecl()
+  {
+    VarDeclImpl varDecl = new VarDeclImpl();
+    return varDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefSecondeVar createRefSecondeVar()
+  {
+    RefSecondeVarImpl refSecondeVar = new RefSecondeVarImpl();
+    return refSecondeVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefPourcentVar createRefPourcentVar()
+  {
+    RefPourcentVarImpl refPourcentVar = new RefPourcentVarImpl();
+    return refPourcentVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PourcentExp createPourcentExp()
+  {
+    PourcentExpImpl pourcentExp = new PourcentExpImpl();
+    return pourcentExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecondeExp createSecondeExp()
+  {
+    SecondeExpImpl secondeExp = new SecondeExpImpl();
+    return secondeExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Decoller createDecoller()
+  {
+    DecollerImpl decoller = new DecollerImpl();
+    return decoller;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atterrir createAtterrir()
+  {
+    AtterrirImpl atterrir = new AtterrirImpl();
+    return atterrir;
   }
 
   /**
@@ -194,17 +306,6 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Pause createPause()
-  {
-    PauseImpl pause = new PauseImpl();
-    return pause;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public RotationGauche createRotationGauche()
   {
     RotationGaucheImpl rotationGauche = new RotationGaucheImpl();
@@ -227,10 +328,32 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Statement createStatement()
+  public Pause createPause()
   {
-    StatementImpl statement = new StatementImpl();
-    return statement;
+    PauseImpl pause = new PauseImpl();
+    return pause;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Mouvement createMouvement()
+  {
+    MouvementImpl mouvement = new MouvementImpl();
+    return mouvement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CommandeBasique createCommandeBasique()
+  {
+    CommandeBasiqueImpl commandeBasique = new CommandeBasiqueImpl();
+    return commandeBasique;
   }
 
   /**
@@ -249,120 +372,10 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
    * <!-- end-user-doc -->
    * @generated
    */
-  public FonctionExterne createFonctionExterne()
-  {
-    FonctionExterneImpl fonctionExterne = new FonctionExterneImpl();
-    return fonctionExterne;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public FonctionCall createFonctionCall()
   {
     FonctionCallImpl fonctionCall = new FonctionCallImpl();
     return fonctionCall;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FonctionRef createFonctionRef()
-  {
-    FonctionRefImpl fonctionRef = new FonctionRefImpl();
-    return fonctionRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PourcentDecl createPourcentDecl()
-  {
-    PourcentDeclImpl pourcentDecl = new PourcentDeclImpl();
-    return pourcentDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntDecl createIntDecl()
-  {
-    IntDeclImpl intDecl = new IntDeclImpl();
-    return intDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VarDecl createVarDecl()
-  {
-    VarDeclImpl varDecl = new VarDeclImpl();
-    return varDecl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PourcentExp createPourcentExp()
-  {
-    PourcentExpImpl pourcentExp = new PourcentExpImpl();
-    return pourcentExp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RefIntVar createRefIntVar()
-  {
-    RefIntVarImpl refIntVar = new RefIntVarImpl();
-    return refIntVar;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RefPourcentVar createRefPourcentVar()
-  {
-    RefPourcentVarImpl refPourcentVar = new RefPourcentVarImpl();
-    return refPourcentVar;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntConstante createIntConstante()
-  {
-    IntConstanteImpl intConstante = new IntConstanteImpl();
-    return intConstante;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntExp createIntExp()
-  {
-    IntExpImpl intExp = new IntExpImpl();
-    return intExp;
   }
 
   /**
@@ -440,6 +453,17 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
   {
     Parallele3Impl parallele3 = new Parallele3Impl();
     return parallele3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parallele4 createParallele4()
+  {
+    Parallele4Impl parallele4 = new Parallele4Impl();
+    return parallele4;
   }
 
   /**

@@ -1140,37 +1140,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMonterParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDescendreParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		///*MainBody:
-		//	d = Decoller
-		//	cmdbasiques += CommandeBasique |
-		//	declarations += VarDecl |
-		//	paralleles += Parallele |
-		//	fonctionCall += FonctionCall
-		//	
-		//	statements += (CommandeBasique|VarDecl|Parallele|FonctionCall)
-		//	a += Atterrir
-		//;
-		//	
-		//FonctionDecl:
-		//	'func' name=ID '('')' '{'
-		//	( 
-		//		(a+=Decoller)|
-		//		(b+=Atterrir)|(body+=(SECONDE|FonctionExterne|FonctionCall))
-		//	)*
-		//	'}'
-		//;
-		//
-		//FonctionExterne:
-		//	'extern' name=ID '('')'
-		//;
-		//
-		//FonctionRef:
-		//	FonctionDecl|FonctionExterne
-		//;
-		//
-		//FonctionCall:
-		//	func=[FonctionRef]'('')'
-		//;*/ // Paralleles
+		//// Paralleles
 		//MD:
 		//	Monter | Descendre;
 		@Override public ParserRule getRule() { return rule; }
@@ -4131,37 +4101,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getMainAccess().getRule();
 	}
 	
-	///*MainBody:
-	//	d = Decoller
-	//	cmdbasiques += CommandeBasique |
-	//	declarations += VarDecl |
-	//	paralleles += Parallele |
-	//	fonctionCall += FonctionCall
-	//	
-	//	statements += (CommandeBasique|VarDecl|Parallele|FonctionCall)
-	//	a += Atterrir
-	//;
-	//	
-	//FonctionDecl:
-	//	'func' name=ID '('')' '{'
-	//	( 
-	//		(a+=Decoller)|
-	//		(b+=Atterrir)|(body+=(SECONDE|FonctionExterne|FonctionCall))
-	//	)*
-	//	'}'
-	//;
-	//
-	//FonctionExterne:
-	//	'extern' name=ID '('')'
-	//;
-	//
-	//FonctionRef:
-	//	FonctionDecl|FonctionExterne
-	//;
-	//
-	//FonctionCall:
-	//	func=[FonctionRef]'('')'
-	//;*/ // Paralleles
+	//// Paralleles
 	//MD:
 	//	Monter | Descendre;
 	public MDElements getMDAccess() {

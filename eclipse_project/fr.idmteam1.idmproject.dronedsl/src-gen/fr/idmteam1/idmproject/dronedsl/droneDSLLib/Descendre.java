@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSLLib;
  * @model
  * @generated
  */
-public interface Descendre extends Statement, MD
+public interface Descendre extends Mouvement, CommandeBasique, MD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.
@@ -32,12 +32,12 @@ public interface Descendre extends Statement, MD
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Duree</em>' containment reference.
-   * @see #setDuree(IntExp)
+   * @see #setDuree(SecondeExp)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getDescendre_Duree()
    * @model containment="true"
    * @generated
    */
-  IntExp getDuree();
+  SecondeExp getDuree();
 
   /**
    * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Descendre#getDuree <em>Duree</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface Descendre extends Statement, MD
    * @see #getDuree()
    * @generated
    */
-  void setDuree(IntExp value);
+  void setDuree(SecondeExp value);
 
   /**
    * Returns the value of the '<em><b>Vitesse verticale</b></em>' containment reference.

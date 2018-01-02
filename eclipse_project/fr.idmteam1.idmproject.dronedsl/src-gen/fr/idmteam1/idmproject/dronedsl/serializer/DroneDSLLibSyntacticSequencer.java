@@ -11,8 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -20,16 +18,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class DroneDSLLibSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected DroneDSLLibGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_FonctionDecl_LineFeedKeyword_6_a;
-	protected AbstractElementAlias match_FonctionExterne_LineFeedKeyword_4_a;
-	protected AbstractElementAlias match_Model_LineFeedKeyword_1_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (DroneDSLLibGrammarAccess) access;
-		match_FonctionDecl_LineFeedKeyword_6_a = new TokenAlias(true, true, grammarAccess.getFonctionDeclAccess().getLineFeedKeyword_6());
-		match_FonctionExterne_LineFeedKeyword_4_a = new TokenAlias(true, true, grammarAccess.getFonctionExterneAccess().getLineFeedKeyword_4());
-		match_Model_LineFeedKeyword_1_a = new TokenAlias(true, true, grammarAccess.getModelAccess().getLineFeedKeyword_1());
 	}
 	
 	@Override
@@ -44,56 +36,8 @@ public class DroneDSLLibSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_FonctionDecl_LineFeedKeyword_6_a.equals(syntax))
-				emit_FonctionDecl_LineFeedKeyword_6_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_FonctionExterne_LineFeedKeyword_4_a.equals(syntax))
-				emit_FonctionExterne_LineFeedKeyword_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_LineFeedKeyword_1_a.equals(syntax))
-				emit_Model_LineFeedKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     a+=Start (ambiguity) '}' (rule end)
-	 *     b+=End (ambiguity) '}' (rule end)
-	 *     body+=FonctionCall (ambiguity) '}' (rule end)
-	 *     body+=FonctionExterne (ambiguity) '}' (rule end)
-	 *     body+=Statement (ambiguity) '}' (rule end)
-	 *     name=ID '(' ')' '{' (ambiguity) '}' (rule end)
-	 */
-	protected void emit_FonctionDecl_LineFeedKeyword_6_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=ID '(' ')' (ambiguity) (rule end)
-	 */
-	protected void emit_FonctionExterne_LineFeedKeyword_4_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '
-	  *     '*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 *     fonctions+=FonctionDecl (ambiguity) (rule end)
-	 */
-	protected void emit_Model_LineFeedKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

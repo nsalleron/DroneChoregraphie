@@ -166,40 +166,6 @@ Main:
 	fdm=FinDeMain
 ;
 
-
-
-/*MainBody:
-	d = Decoller
-	cmdbasiques += CommandeBasique |
-	declarations += VarDecl |
-	paralleles += Parallele |
-	fonctionCall += FonctionCall
-	
-	statements += (CommandeBasique|VarDecl|Parallele|FonctionCall)
-	a += Atterrir
-;
-	
-FonctionDecl:
-	'func' name=ID '('')' '{'
-	( 
-		(a+=Decoller)|
-		(b+=Atterrir)|(body+=(SECONDE|FonctionExterne|FonctionCall))
-	)*
-	'}'
-;
-
-FonctionExterne:
-	'extern' name=ID '('')'
-;
-
-FonctionRef:
-	FonctionDecl|FonctionExterne
-;
-
-FonctionCall:
-	func=[FonctionRef]'('')'
-;*/
-
 // Paralleles
 
 MD : 

@@ -9,8 +9,34 @@
     <genClasses ecoreClass="DroneDSLLib.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Model/fonctions"/>
     </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//SecondeConst">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//SecondeConst/val"/>
+    </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentConst">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//PourcentConst/val"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//SecondeDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//SecondeDecl/val"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//PourcentDecl/val"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//VarDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//VarDecl/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//RefSecondeVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RefSecondeVar/var"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//RefPourcentVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RefPourcentVar/var"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentExp"/>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//SecondeExp"/>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//Decoller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//Decoller/str"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//Atterrir">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//Atterrir/str"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//Monter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Monter/duree"/>
@@ -36,9 +62,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Droite/duree"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Droite/vitesse_deplacement"/>
     </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//Pause">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Pause/duree"/>
-    </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//RotationGauche">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RotationGauche/duree"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RotationGauche/vitesse_rotation"/>
@@ -47,39 +70,18 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RotationDroite/duree"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RotationDroite/vitesse_rotation"/>
     </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//Statement"/>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//Pause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Pause/duree"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//Mouvement"/>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//CommandeBasique"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionDecl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionDecl/a"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionDecl/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionDecl/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//FonctionDecl/body"/>
     </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionExterne"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionCall">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//FonctionCall/func"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//FonctionCall/ref"/>
     </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//FonctionRef">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//FonctionRef/name"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentDecl">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//PourcentDecl/val"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//IntDecl">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//IntDecl/val"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//VarDecl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//VarDecl/name"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//PourcentExp"/>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//RefIntVar">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RefIntVar/var"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//RefPourcentVar">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//RefPourcentVar/var"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//IntConstante">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//IntConstante/val"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//IntExp"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//MD"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//GDr"/>
     <genClasses ecoreClass="DroneDSLLib.ecore#//RGRD"/>
@@ -93,6 +95,10 @@
     </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//Parallele3">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Parallele3/c"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSLLib.ecore#//Parallele4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Parallele4/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Parallele4/d"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

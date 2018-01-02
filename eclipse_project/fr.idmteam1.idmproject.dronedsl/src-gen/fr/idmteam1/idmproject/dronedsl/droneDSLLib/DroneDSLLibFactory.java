@@ -33,6 +33,15 @@ public interface DroneDSLLibFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Seconde Const</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Seconde Const</em>'.
+   * @generated
+   */
+  SecondeConst createSecondeConst();
+
+  /**
    * Returns a new object of class '<em>Pourcent Const</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -40,6 +49,87 @@ public interface DroneDSLLibFactory extends EFactory
    * @generated
    */
   PourcentConst createPourcentConst();
+
+  /**
+   * Returns a new object of class '<em>Seconde Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Seconde Decl</em>'.
+   * @generated
+   */
+  SecondeDecl createSecondeDecl();
+
+  /**
+   * Returns a new object of class '<em>Pourcent Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent Decl</em>'.
+   * @generated
+   */
+  PourcentDecl createPourcentDecl();
+
+  /**
+   * Returns a new object of class '<em>Var Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Decl</em>'.
+   * @generated
+   */
+  VarDecl createVarDecl();
+
+  /**
+   * Returns a new object of class '<em>Ref Seconde Var</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ref Seconde Var</em>'.
+   * @generated
+   */
+  RefSecondeVar createRefSecondeVar();
+
+  /**
+   * Returns a new object of class '<em>Ref Pourcent Var</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ref Pourcent Var</em>'.
+   * @generated
+   */
+  RefPourcentVar createRefPourcentVar();
+
+  /**
+   * Returns a new object of class '<em>Pourcent Exp</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pourcent Exp</em>'.
+   * @generated
+   */
+  PourcentExp createPourcentExp();
+
+  /**
+   * Returns a new object of class '<em>Seconde Exp</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Seconde Exp</em>'.
+   * @generated
+   */
+  SecondeExp createSecondeExp();
+
+  /**
+   * Returns a new object of class '<em>Decoller</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decoller</em>'.
+   * @generated
+   */
+  Decoller createDecoller();
+
+  /**
+   * Returns a new object of class '<em>Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atterrir</em>'.
+   * @generated
+   */
+  Atterrir createAtterrir();
 
   /**
    * Returns a new object of class '<em>Monter</em>'.
@@ -96,15 +186,6 @@ public interface DroneDSLLibFactory extends EFactory
   Droite createDroite();
 
   /**
-   * Returns a new object of class '<em>Pause</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pause</em>'.
-   * @generated
-   */
-  Pause createPause();
-
-  /**
    * Returns a new object of class '<em>Rotation Gauche</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -123,13 +204,31 @@ public interface DroneDSLLibFactory extends EFactory
   RotationDroite createRotationDroite();
 
   /**
-   * Returns a new object of class '<em>Statement</em>'.
+   * Returns a new object of class '<em>Pause</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Statement</em>'.
+   * @return a new object of class '<em>Pause</em>'.
    * @generated
    */
-  Statement createStatement();
+  Pause createPause();
+
+  /**
+   * Returns a new object of class '<em>Mouvement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mouvement</em>'.
+   * @generated
+   */
+  Mouvement createMouvement();
+
+  /**
+   * Returns a new object of class '<em>Commande Basique</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Commande Basique</em>'.
+   * @generated
+   */
+  CommandeBasique createCommandeBasique();
 
   /**
    * Returns a new object of class '<em>Fonction Decl</em>'.
@@ -141,15 +240,6 @@ public interface DroneDSLLibFactory extends EFactory
   FonctionDecl createFonctionDecl();
 
   /**
-   * Returns a new object of class '<em>Fonction Externe</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fonction Externe</em>'.
-   * @generated
-   */
-  FonctionExterne createFonctionExterne();
-
-  /**
    * Returns a new object of class '<em>Fonction Call</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -157,87 +247,6 @@ public interface DroneDSLLibFactory extends EFactory
    * @generated
    */
   FonctionCall createFonctionCall();
-
-  /**
-   * Returns a new object of class '<em>Fonction Ref</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fonction Ref</em>'.
-   * @generated
-   */
-  FonctionRef createFonctionRef();
-
-  /**
-   * Returns a new object of class '<em>Pourcent Decl</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pourcent Decl</em>'.
-   * @generated
-   */
-  PourcentDecl createPourcentDecl();
-
-  /**
-   * Returns a new object of class '<em>Int Decl</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Decl</em>'.
-   * @generated
-   */
-  IntDecl createIntDecl();
-
-  /**
-   * Returns a new object of class '<em>Var Decl</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Decl</em>'.
-   * @generated
-   */
-  VarDecl createVarDecl();
-
-  /**
-   * Returns a new object of class '<em>Pourcent Exp</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pourcent Exp</em>'.
-   * @generated
-   */
-  PourcentExp createPourcentExp();
-
-  /**
-   * Returns a new object of class '<em>Ref Int Var</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Ref Int Var</em>'.
-   * @generated
-   */
-  RefIntVar createRefIntVar();
-
-  /**
-   * Returns a new object of class '<em>Ref Pourcent Var</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Ref Pourcent Var</em>'.
-   * @generated
-   */
-  RefPourcentVar createRefPourcentVar();
-
-  /**
-   * Returns a new object of class '<em>Int Constante</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Constante</em>'.
-   * @generated
-   */
-  IntConstante createIntConstante();
-
-  /**
-   * Returns a new object of class '<em>Int Exp</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Exp</em>'.
-   * @generated
-   */
-  IntExp createIntExp();
 
   /**
    * Returns a new object of class '<em>MD</em>'.
@@ -301,6 +310,15 @@ public interface DroneDSLLibFactory extends EFactory
    * @generated
    */
   Parallele3 createParallele3();
+
+  /**
+   * Returns a new object of class '<em>Parallele4</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parallele4</em>'.
+   * @generated
+   */
+  Parallele4 createParallele4();
 
   /**
    * Returns the package supported by this factory.

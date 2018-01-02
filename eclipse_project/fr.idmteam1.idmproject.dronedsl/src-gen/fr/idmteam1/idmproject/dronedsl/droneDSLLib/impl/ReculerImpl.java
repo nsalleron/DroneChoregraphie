@@ -4,9 +4,9 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.IntExp;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.PourcentExp;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Reculer;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.SecondeExp;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ReculerImpl extends StatementImpl implements Reculer
+public class ReculerImpl extends MouvementImpl implements Reculer
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.
@@ -40,7 +40,7 @@ public class ReculerImpl extends StatementImpl implements Reculer
    * @generated
    * @ordered
    */
-  protected IntExp duree;
+  protected SecondeExp duree;
 
   /**
    * The cached value of the '{@link #getVitesse_deplacement() <em>Vitesse deplacement</em>}' containment reference.
@@ -78,7 +78,7 @@ public class ReculerImpl extends StatementImpl implements Reculer
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntExp getDuree()
+  public SecondeExp getDuree()
   {
     return duree;
   }
@@ -88,9 +88,9 @@ public class ReculerImpl extends StatementImpl implements Reculer
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDuree(IntExp newDuree, NotificationChain msgs)
+  public NotificationChain basicSetDuree(SecondeExp newDuree, NotificationChain msgs)
   {
-    IntExp oldDuree = duree;
+    SecondeExp oldDuree = duree;
     duree = newDuree;
     if (eNotificationRequired())
     {
@@ -105,7 +105,7 @@ public class ReculerImpl extends StatementImpl implements Reculer
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDuree(IntExp newDuree)
+  public void setDuree(SecondeExp newDuree)
   {
     if (newDuree != duree)
     {
@@ -216,7 +216,7 @@ public class ReculerImpl extends StatementImpl implements Reculer
     switch (featureID)
     {
       case DroneDSLLibPackage.RECULER__DUREE:
-        setDuree((IntExp)newValue);
+        setDuree((SecondeExp)newValue);
         return;
       case DroneDSLLibPackage.RECULER__VITESSE_DEPLACEMENT:
         setVitesse_deplacement((PourcentExp)newValue);
@@ -236,7 +236,7 @@ public class ReculerImpl extends StatementImpl implements Reculer
     switch (featureID)
     {
       case DroneDSLLibPackage.RECULER__DUREE:
-        setDuree((IntExp)null);
+        setDuree((SecondeExp)null);
         return;
       case DroneDSLLibPackage.RECULER__VITESSE_DEPLACEMENT:
         setVitesse_deplacement((PourcentExp)null);

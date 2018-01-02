@@ -8,6 +8,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,7 +17,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -28,34 +31,33 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getA <em>A</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getB <em>B</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.FonctionDeclImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
+public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements FonctionDecl
 {
   /**
-   * The cached value of the '{@link #getA() <em>A</em>}' attribute list.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getA()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<String> a;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getB() <em>B</em>}' attribute list.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getB()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<String> b;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference list.
@@ -93,13 +95,9 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getA()
+  public String getName()
   {
-    if (a == null)
-    {
-      a = new EDataTypeEList<String>(String.class, this, DroneDSLLibPackage.FONCTION_DECL__A);
-    }
-    return a;
+    return name;
   }
 
   /**
@@ -107,13 +105,12 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getB()
+  public void setName(String newName)
   {
-    if (b == null)
-    {
-      b = new EDataTypeEList<String>(String.class, this, DroneDSLLibPackage.FONCTION_DECL__B);
-    }
-    return b;
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.FONCTION_DECL__NAME, oldName, name));
   }
 
   /**
@@ -156,10 +153,8 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_DECL__A:
-        return getA();
-      case DroneDSLLibPackage.FONCTION_DECL__B:
-        return getB();
+      case DroneDSLLibPackage.FONCTION_DECL__NAME:
+        return getName();
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         return getBody();
     }
@@ -177,13 +172,8 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_DECL__A:
-        getA().clear();
-        getA().addAll((Collection<? extends String>)newValue);
-        return;
-      case DroneDSLLibPackage.FONCTION_DECL__B:
-        getB().clear();
-        getB().addAll((Collection<? extends String>)newValue);
+      case DroneDSLLibPackage.FONCTION_DECL__NAME:
+        setName((String)newValue);
         return;
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         getBody().clear();
@@ -203,11 +193,8 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_DECL__A:
-        getA().clear();
-        return;
-      case DroneDSLLibPackage.FONCTION_DECL__B:
-        getB().clear();
+      case DroneDSLLibPackage.FONCTION_DECL__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         getBody().clear();
@@ -226,10 +213,8 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.FONCTION_DECL__A:
-        return a != null && !a.isEmpty();
-      case DroneDSLLibPackage.FONCTION_DECL__B:
-        return b != null && !b.isEmpty();
+      case DroneDSLLibPackage.FONCTION_DECL__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DroneDSLLibPackage.FONCTION_DECL__BODY:
         return body != null && !body.isEmpty();
     }
@@ -247,10 +232,8 @@ public class FonctionDeclImpl extends FonctionRefImpl implements FonctionDecl
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (a: ");
-    result.append(a);
-    result.append(", b: ");
-    result.append(b);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

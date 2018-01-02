@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getFunc <em>Func</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getRef <em>Ref</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getFonctionCall()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface FonctionCall extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Func</b></em>' reference.
+   * Returns the value of the '<em><b>Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Func</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Func</em>' reference.
-   * @see #setFunc(FonctionRef)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getFonctionCall_Func()
+   * @return the value of the '<em>Ref</em>' reference.
+   * @see #setRef(FonctionDecl)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getFonctionCall_Ref()
    * @model
    * @generated
    */
-  FonctionRef getFunc();
+  FonctionDecl getRef();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getFunc <em>Func</em>}' reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCall#getRef <em>Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Func</em>' reference.
-   * @see #getFunc()
+   * @param value the new value of the '<em>Ref</em>' reference.
+   * @see #getRef()
    * @generated
    */
-  void setFunc(FonctionRef value);
+  void setRef(FonctionDecl value);
 
 } // FonctionCall

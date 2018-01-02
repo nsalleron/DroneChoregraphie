@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ParalleleImpl extends StatementImpl implements Parallele
+public class ParalleleImpl extends MouvementImpl implements Parallele
 {
   /**
    * The cached value of the '{@link #getA() <em>A</em>}' containment reference.

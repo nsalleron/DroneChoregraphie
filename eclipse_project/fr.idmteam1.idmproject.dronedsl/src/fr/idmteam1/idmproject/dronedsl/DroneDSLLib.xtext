@@ -4,158 +4,121 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate droneDSLLib "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSLLib"
 
 Model:
-	(		
-		(fonctions+=FonctionDecl)*'\n'*
+	(
+		(fonctions+=FonctionDecl)*
 	);
-	
+
+// Types
+
+terminal SECONDE:
+	INT
+;
+
 terminal POURCENT returns ecore::EString:
 	 (('1'..'9')|('1'..'9')('0'..'9')|('100'..'100'))'%'
 ;
 
+// Variables
+
+SecondeConst:
+	val=SECONDE
+;
 PourcentConst:
 	val=POURCENT
 ;
 
-Monter:
-	'monter''('
-		duree=IntExp','
-		vitesse_verticale=PourcentExp
-		')'
+SecondeDecl:
+	'Seconde' name=ID '=' val=SecondeConst
 ;
-
-Descendre:
-	'descendre''('
-		duree=IntExp','
-		vitesse_verticale=PourcentExp
-		')'
-;
-
-Avancer:
-	'avancer''(' 
-		duree=IntExp','
-		vitesse_deplacement=PourcentExp
-		')'
-;
-
-Reculer:
-	'reculer''(' 
-		duree=IntExp','
-		vitesse_deplacement=PourcentExp
-		')'
-;
-
-Gauche:
-	'gauche''(' 
-		duree=IntExp','
-		vitesse_deplacement=PourcentExp
-		')'
-;
-
-Droite:
-	'droite''(' 
-		duree=IntExp','
-		vitesse_deplacement=PourcentExp
-		')'
-;
-
-Pause:
-	'droite''(' 
-		duree=IntExp
-		')'
-;
-
-RotationGauche:
-	'rotation_gauche''(' 
-		duree=IntExp','
-		vitesse_rotation=PourcentExp
-		')'
-;
-
-RotationDroite:
-	'rotation_droite''(' 
-		duree=IntExp','
-		vitesse_rotation=PourcentExp
-		')'
-;
-
-Statement:
-	Avancer|Descendre|RotationDroite|RotationGauche|Pause|Droite|Gauche|Reculer|Monter|Parallele|VarDecl
-;
-	
-FonctionDecl:
-	'func' name=ID '('')' '{'
-	( 
-		(a+=Start)|
-		(b+=End)|(body+=(Statement|FonctionExterne|FonctionCall))
-	)*'\n'*
-	'}'
-;
-
-FonctionExterne:
-	'extern' name=ID '('')''\n'*
-;
-
-FonctionCall:
-	func=[FonctionRef]'('')'
-;
-
-FonctionRef:
-	FonctionDecl|FonctionExterne
-;
-
-Start:
-	Decoller
-;
-	
-End:
-	Atterrir
-;
-
-Decoller:
-	'decoller''('')'
-;
-
-Atterrir:
-	'atterrir''('')'
-;
-
-
-
-
-
-
 PourcentDecl:
 	'Pourcent' name=ID '=' val=PourcentConst
 ;
-
-IntDecl:
-	'Seconde' name=ID '=' val=IntExp
+VarDecl:
+	PourcentDecl|SecondeDecl
 ;
 
-VarDecl:
-	PourcentDecl|IntDecl
+RefSecondeVar:
+	var=[SecondeDecl]
+;
+RefPourcentVar:
+	var=[PourcentDecl]
 ;
 
 PourcentExp:
 	PourcentConst|RefPourcentVar
 ;
-
-RefIntVar:
-	var=[IntDecl]
+SecondeExp:
+	SecondeConst|RefSecondeVar
 ;
 
-RefPourcentVar:
-	var=[PourcentDecl]
-;
-
-IntConstante:
-	val=INT
-;
-
-IntExp:
-	IntConstante|RefIntVar
-;
+// Commandes de base
 	
+Decoller:
+	str='decoller()'
+;
+
+Atterrir:
+	str='atterrir()'
+;
+
+Monter:
+	'monter('duree=SecondeExp ',' vitesse_verticale=PourcentExp')'
+;
+
+Descendre:
+	'descendre('duree=SecondeExp',' vitesse_verticale=PourcentExp')'
+;
+
+Avancer:
+	'avancer('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+;
+
+Reculer:
+	'reculer('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+;
+
+Gauche:
+	'gauche('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+;
+
+Droite:
+	'droite('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+;
+
+RotationGauche:
+	'rotation_gauche('duree=SecondeExp',' vitesse_rotation=PourcentExp')'
+;
+
+RotationDroite:
+	'rotation_droite('duree=SecondeExp',' vitesse_rotation=PourcentExp')'
+;
+
+Pause:
+	'droite('duree=SecondeExp')'
+;
+
+Mouvement:
+	Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Parallele
+;
+
+CommandeBasique:
+	Decoller|Atterrir|Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Pause
+;
+
+// Fonctions
+
+FonctionDecl:
+	'func' name=ID '()''{'
+		 body += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
+	'}'
+;
+
+FonctionCall:
+	ref=[FonctionDecl]'()'
+;
+
+// Paralleles
+
 MD : 
 	(Monter|Descendre)
 ;
@@ -173,7 +136,7 @@ AR:
 ;
 
 Parallele:
-	Parallele2|Parallele3
+	Parallele2|Parallele3|Parallele4
 ;
 
 Parallele2:
@@ -216,4 +179,32 @@ Parallele3:
 	(a=RGRD)'&' (b=MD) 		'&' (c=GDr)		|
 	(a=RGRD)'&' (b=GDr) 		'&' (c=MD)		|
 	(a=RGRD)'&' (b=GDr) 		'&' (c=AR)	
+;
+
+//Voici les 4 commandes 
+Parallele4:
+	(a=AR) 	'&' (b=GDr) 		'&' (c=MD)			'&' (d=RGRD) 	|
+	(a=AR) 	'&' (b=GDr) 		'&' (c =RGRD)		'&' (d=MD)		|
+	(a=AR) 	'&' (b=MD)  		'&' (c = GDr)		'&'	(d=RGRD)		|
+	(a=AR) 	'&' (b=MD)		'&' (c= RGRD) 		'&'	(d=GDr)		|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = MD) 		'&'	(d=GDr)		|
+	(a=AR) 	'&' (b=RGRD) 	'&' (c = GDr) 		'&'	(d=MD)		|
+	(a=GDr) '&' (b=AR) 		'&' (c=MD)			'&'	(d=RGRD)		|
+	(a=GDr) '&' (b=AR) 		'&' (c=RGRD)			'&'	(d=MD)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=AR)			'&' (d=RGRD)		|
+	(a=GDr) '&' (b=MD) 		'&' (c=RGRD)			'&'	(d=AR)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=AR)			'&'	(d=MD)		|
+	(a=GDr) '&' (b=RGRD) 	'&' (c=MD)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=GDr)			'&'	(d=RGRD)		|
+	(a=MD) 	'&' (b=AR) 		'&' (c=RGRD)			'&'	(d=GDr)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=AR)			'&'	(d=RGRD)		|
+	(a=MD) 	'&' (b=GDr) 		'&' (c=RGRD)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=GDr)			'&'	(d=AR)		|
+	(a=MD) 	'&' (b=RGRD) 	'&' (c=AR)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=MD)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=AR) 		'&' (c=GDr)			'&'	(d=MD)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=AR)			'&'	(d=GDr)		|
+	(a=RGRD)'&' (b=MD) 		'&' (c=GDr)			'&'	(d=AR)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=MD)			'&'	(d=AR)		|
+	(a=RGRD)'&' (b=GDr) 		'&' (c=AR)			'&'	(d=MD)		
 ;
