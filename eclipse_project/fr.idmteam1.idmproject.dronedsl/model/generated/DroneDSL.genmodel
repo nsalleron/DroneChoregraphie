@@ -60,6 +60,12 @@
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//PourcentExp"/>
     <genClasses ecoreClass="DroneDSL.ecore#//SecondeExp"/>
+    <genClasses ecoreClass="DroneDSL.ecore#//Decoller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//Decoller/str"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSL.ecore#//Atterrir">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//Atterrir/str"/>
+    </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Monter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Monter/duree"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Monter/vitesse_verticale"/>
@@ -95,18 +101,23 @@
     <genClasses ecoreClass="DroneDSL.ecore#//Pause">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Pause/duree"/>
     </genClasses>
+    <genClasses ecoreClass="DroneDSL.ecore#//Mouvement"/>
     <genClasses ecoreClass="DroneDSL.ecore#//CommandeBasique"/>
     <genClasses ecoreClass="DroneDSL.ecore#//FonctionDecl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FonctionDecl/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionDecl/body"/>
     </genClasses>
+    <genClasses ecoreClass="DroneDSL.ecore#//FinDeMain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FinDeMain/accolade"/>
+    </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//FonctionCall">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionCall/ref"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FonctionCall/atterrissage"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Main">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//Main/decollage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Main/decollage"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Main/mainbody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Main/atterrissage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Main/fdm"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//MD"/>
     <genClasses ecoreClass="DroneDSL.ecore#//GDr"/>

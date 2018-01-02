@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getDecollage <em>Decollage</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getMainbody <em>Mainbody</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getAtterrissage <em>Atterrissage</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getFdm <em>Fdm</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain()
@@ -27,34 +29,34 @@ import org.eclipse.emf.ecore.EObject;
 public interface Main extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Decollage</b></em>' attribute.
+   * Returns the value of the '<em><b>Decollage</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Decollage</em>' attribute isn't clear,
+   * If the meaning of the '<em>Decollage</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Decollage</em>' attribute.
-   * @see #setDecollage(String)
+   * @return the value of the '<em>Decollage</em>' containment reference.
+   * @see #setDecollage(Decoller)
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Decollage()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getDecollage();
+  Decoller getDecollage();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getDecollage <em>Decollage</em>}' attribute.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getDecollage <em>Decollage</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Decollage</em>' attribute.
+   * @param value the new value of the '<em>Decollage</em>' containment reference.
    * @see #getDecollage()
    * @generated
    */
-  void setDecollage(String value);
+  void setDecollage(Decoller value);
 
   /**
    * Returns the value of the '<em><b>Mainbody</b></em>' containment reference list.
-   * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Mainbody</em>' containment reference list isn't clear,
@@ -66,6 +68,58 @@ public interface Main extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<VarDecl> getMainbody();
+  EList<EObject> getMainbody();
+
+  /**
+   * Returns the value of the '<em><b>Atterrissage</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Atterrissage</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Atterrissage</em>' containment reference.
+   * @see #setAtterrissage(Atterrir)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Atterrissage()
+   * @model containment="true"
+   * @generated
+   */
+  Atterrir getAtterrissage();
+
+  /**
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getAtterrissage <em>Atterrissage</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Atterrissage</em>' containment reference.
+   * @see #getAtterrissage()
+   * @generated
+   */
+  void setAtterrissage(Atterrir value);
+
+  /**
+   * Returns the value of the '<em><b>Fdm</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Fdm</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Fdm</em>' containment reference.
+   * @see #setFdm(FinDeMain)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getMain_Fdm()
+   * @model containment="true"
+   * @generated
+   */
+  FinDeMain getFdm();
+
+  /**
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main#getFdm <em>Fdm</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Fdm</em>' containment reference.
+   * @see #getFdm()
+   * @generated
+   */
+  void setFdm(FinDeMain value);
 
 } // Main

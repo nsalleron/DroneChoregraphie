@@ -177,6 +177,24 @@ public interface DroneDSLFactory extends EFactory
   SecondeExp createSecondeExp();
 
   /**
+   * Returns a new object of class '<em>Decoller</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decoller</em>'.
+   * @generated
+   */
+  Decoller createDecoller();
+
+  /**
+   * Returns a new object of class '<em>Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atterrir</em>'.
+   * @generated
+   */
+  Atterrir createAtterrir();
+
+  /**
    * Returns a new object of class '<em>Monter</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -258,6 +276,15 @@ public interface DroneDSLFactory extends EFactory
   Pause createPause();
 
   /**
+   * Returns a new object of class '<em>Mouvement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mouvement</em>'.
+   * @generated
+   */
+  Mouvement createMouvement();
+
+  /**
    * Returns a new object of class '<em>Commande Basique</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -274,6 +301,15 @@ public interface DroneDSLFactory extends EFactory
    * @generated
    */
   FonctionDecl createFonctionDecl();
+
+  /**
+   * Returns a new object of class '<em>Fin De Main</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fin De Main</em>'.
+   * @generated
+   */
+  FinDeMain createFinDeMain();
 
   /**
    * Returns a new object of class '<em>Fonction Call</em>'.

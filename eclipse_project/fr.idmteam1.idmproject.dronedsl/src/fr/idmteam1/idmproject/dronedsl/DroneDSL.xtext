@@ -89,11 +89,11 @@ SecondeExp:
 // Commandes de base
 	
 Decoller:
-	'decoller()'
+	str='decoller()'
 ;
 
 Atterrir:
-	'atterrir()'
+	str='atterrir()'
 ;
 
 Monter:
@@ -132,8 +132,12 @@ Pause:
 	'droite('duree=SecondeExp')'
 ;
 
+Mouvement:
+	Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Parallele
+;
+
 CommandeBasique:
-	Decoller|Atterrir|Avancer|Monter|Descendre|Reculer|Gauche|Droite|RotationGauche|RotationDroite|Pause
+	Decoller|Atterrir|Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Pause
 ;
 
 // Fonctions

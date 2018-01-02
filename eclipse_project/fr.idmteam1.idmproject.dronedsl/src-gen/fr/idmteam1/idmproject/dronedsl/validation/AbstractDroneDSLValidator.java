@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.validation.AbstractDeclarativeValidator;
+import org.eclipse.xtext.validation.ComposedChecks;
 
+@ComposedChecks(validators = {DroneDSLValidator.class})
 public abstract class AbstractDroneDSLValidator extends AbstractDeclarativeValidator {
 	
 	@Override

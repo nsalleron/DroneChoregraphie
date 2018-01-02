@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface Avancer extends CommandeBasique, AR
+public interface Avancer extends Mouvement, CommandeBasique, AR
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

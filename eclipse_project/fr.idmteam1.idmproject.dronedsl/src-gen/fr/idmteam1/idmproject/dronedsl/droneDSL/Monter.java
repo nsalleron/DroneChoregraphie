@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface Monter extends CommandeBasique, MD
+public interface Monter extends Mouvement, CommandeBasique, MD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

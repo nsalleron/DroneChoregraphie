@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RotationGaucheImpl extends CommandeBasiqueImpl implements RotationGauche
+public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface RotationDroite extends CommandeBasique, RGRD
+public interface RotationDroite extends Mouvement, CommandeBasique, RGRD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

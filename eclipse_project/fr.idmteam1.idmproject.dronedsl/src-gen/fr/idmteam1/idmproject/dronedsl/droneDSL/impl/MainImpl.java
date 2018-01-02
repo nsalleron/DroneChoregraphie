@@ -3,9 +3,11 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl;
 
 import java.util.Collection;
 
@@ -15,6 +17,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -33,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getDecollage <em>Decollage</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getMainbody <em>Mainbody</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getAtterrissage <em>Atterrissage</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl#getFdm <em>Fdm</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,24 +45,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class MainImpl extends MinimalEObjectImpl.Container implements Main
 {
   /**
-   * The default value of the '{@link #getDecollage() <em>Decollage</em>}' attribute.
+   * The cached value of the '{@link #getDecollage() <em>Decollage</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getDecollage()
    * @generated
    * @ordered
    */
-  protected static final String DECOLLAGE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDecollage() <em>Decollage</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDecollage()
-   * @generated
-   * @ordered
-   */
-  protected String decollage = DECOLLAGE_EDEFAULT;
+  protected Decoller decollage;
 
   /**
    * The cached value of the '{@link #getMainbody() <em>Mainbody</em>}' containment reference list.
@@ -67,7 +62,27 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * @generated
    * @ordered
    */
-  protected EList<VarDecl> mainbody;
+  protected EList<EObject> mainbody;
+
+  /**
+   * The cached value of the '{@link #getAtterrissage() <em>Atterrissage</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtterrissage()
+   * @generated
+   * @ordered
+   */
+  protected Atterrir atterrissage;
+
+  /**
+   * The cached value of the '{@link #getFdm() <em>Fdm</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFdm()
+   * @generated
+   * @ordered
+   */
+  protected FinDeMain fdm;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,7 +110,7 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDecollage()
+  public Decoller getDecollage()
   {
     return decollage;
   }
@@ -105,12 +120,16 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDecollage(String newDecollage)
+  public NotificationChain basicSetDecollage(Decoller newDecollage, NotificationChain msgs)
   {
-    String oldDecollage = decollage;
+    Decoller oldDecollage = decollage;
     decollage = newDecollage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__DECOLLAGE, oldDecollage, decollage));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__DECOLLAGE, oldDecollage, newDecollage);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -118,13 +137,130 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<VarDecl> getMainbody()
+  public void setDecollage(Decoller newDecollage)
+  {
+    if (newDecollage != decollage)
+    {
+      NotificationChain msgs = null;
+      if (decollage != null)
+        msgs = ((InternalEObject)decollage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__DECOLLAGE, null, msgs);
+      if (newDecollage != null)
+        msgs = ((InternalEObject)newDecollage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__DECOLLAGE, null, msgs);
+      msgs = basicSetDecollage(newDecollage, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__DECOLLAGE, newDecollage, newDecollage));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<EObject> getMainbody()
   {
     if (mainbody == null)
     {
-      mainbody = new EObjectContainmentEList<VarDecl>(VarDecl.class, this, DroneDSLPackage.MAIN__MAINBODY);
+      mainbody = new EObjectContainmentEList<EObject>(EObject.class, this, DroneDSLPackage.MAIN__MAINBODY);
     }
     return mainbody;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atterrir getAtterrissage()
+  {
+    return atterrissage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAtterrissage(Atterrir newAtterrissage, NotificationChain msgs)
+  {
+    Atterrir oldAtterrissage = atterrissage;
+    atterrissage = newAtterrissage;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__ATTERRISSAGE, oldAtterrissage, newAtterrissage);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAtterrissage(Atterrir newAtterrissage)
+  {
+    if (newAtterrissage != atterrissage)
+    {
+      NotificationChain msgs = null;
+      if (atterrissage != null)
+        msgs = ((InternalEObject)atterrissage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__ATTERRISSAGE, null, msgs);
+      if (newAtterrissage != null)
+        msgs = ((InternalEObject)newAtterrissage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__ATTERRISSAGE, null, msgs);
+      msgs = basicSetAtterrissage(newAtterrissage, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__ATTERRISSAGE, newAtterrissage, newAtterrissage));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FinDeMain getFdm()
+  {
+    return fdm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFdm(FinDeMain newFdm, NotificationChain msgs)
+  {
+    FinDeMain oldFdm = fdm;
+    fdm = newFdm;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__FDM, oldFdm, newFdm);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFdm(FinDeMain newFdm)
+  {
+    if (newFdm != fdm)
+    {
+      NotificationChain msgs = null;
+      if (fdm != null)
+        msgs = ((InternalEObject)fdm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__FDM, null, msgs);
+      if (newFdm != null)
+        msgs = ((InternalEObject)newFdm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MAIN__FDM, null, msgs);
+      msgs = basicSetFdm(newFdm, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MAIN__FDM, newFdm, newFdm));
   }
 
   /**
@@ -137,8 +273,14 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
   {
     switch (featureID)
     {
+      case DroneDSLPackage.MAIN__DECOLLAGE:
+        return basicSetDecollage(null, msgs);
       case DroneDSLPackage.MAIN__MAINBODY:
         return ((InternalEList<?>)getMainbody()).basicRemove(otherEnd, msgs);
+      case DroneDSLPackage.MAIN__ATTERRISSAGE:
+        return basicSetAtterrissage(null, msgs);
+      case DroneDSLPackage.MAIN__FDM:
+        return basicSetFdm(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -157,6 +299,10 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
         return getDecollage();
       case DroneDSLPackage.MAIN__MAINBODY:
         return getMainbody();
+      case DroneDSLPackage.MAIN__ATTERRISSAGE:
+        return getAtterrissage();
+      case DroneDSLPackage.MAIN__FDM:
+        return getFdm();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -173,11 +319,17 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
     switch (featureID)
     {
       case DroneDSLPackage.MAIN__DECOLLAGE:
-        setDecollage((String)newValue);
+        setDecollage((Decoller)newValue);
         return;
       case DroneDSLPackage.MAIN__MAINBODY:
         getMainbody().clear();
-        getMainbody().addAll((Collection<? extends VarDecl>)newValue);
+        getMainbody().addAll((Collection<? extends EObject>)newValue);
+        return;
+      case DroneDSLPackage.MAIN__ATTERRISSAGE:
+        setAtterrissage((Atterrir)newValue);
+        return;
+      case DroneDSLPackage.MAIN__FDM:
+        setFdm((FinDeMain)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -194,10 +346,16 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
     switch (featureID)
     {
       case DroneDSLPackage.MAIN__DECOLLAGE:
-        setDecollage(DECOLLAGE_EDEFAULT);
+        setDecollage((Decoller)null);
         return;
       case DroneDSLPackage.MAIN__MAINBODY:
         getMainbody().clear();
+        return;
+      case DroneDSLPackage.MAIN__ATTERRISSAGE:
+        setAtterrissage((Atterrir)null);
+        return;
+      case DroneDSLPackage.MAIN__FDM:
+        setFdm((FinDeMain)null);
         return;
     }
     super.eUnset(featureID);
@@ -214,28 +372,15 @@ public class MainImpl extends MinimalEObjectImpl.Container implements Main
     switch (featureID)
     {
       case DroneDSLPackage.MAIN__DECOLLAGE:
-        return DECOLLAGE_EDEFAULT == null ? decollage != null : !DECOLLAGE_EDEFAULT.equals(decollage);
+        return decollage != null;
       case DroneDSLPackage.MAIN__MAINBODY:
         return mainbody != null && !mainbody.isEmpty();
+      case DroneDSLPackage.MAIN__ATTERRISSAGE:
+        return atterrissage != null;
+      case DroneDSLPackage.MAIN__FDM:
+        return fdm != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (decollage: ");
-    result.append(decollage);
-    result.append(')');
-    return result.toString();
   }
 
 } //MainImpl

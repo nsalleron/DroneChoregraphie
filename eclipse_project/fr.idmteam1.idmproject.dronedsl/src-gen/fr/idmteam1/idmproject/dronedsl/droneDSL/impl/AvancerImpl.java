@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AvancerImpl extends CommandeBasiqueImpl implements Avancer
+public class AvancerImpl extends MouvementImpl implements Avancer
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

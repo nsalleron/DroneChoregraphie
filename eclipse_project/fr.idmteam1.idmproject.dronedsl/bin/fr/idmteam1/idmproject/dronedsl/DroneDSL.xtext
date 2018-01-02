@@ -5,10 +5,10 @@ generate droneDSL "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSL"
 
 Model:
 	(
-		(imports+=Import*)			
+		(imports+=Import)*			
 		(prologue=Prologue)
 		(m=Main)
-		(fonctions+=FonctionDecl*)
+		(fonctions+=FonctionDecl)*
 	);
 
 // Types
@@ -89,11 +89,11 @@ SecondeExp:
 // Commandes de base
 	
 Decoller:
-	'decoller()'
+	str='decoller()'
 ;
 
 Atterrir:
-	'atterrir()'
+	str='atterrir()'
 ;
 
 Monter:
@@ -132,16 +132,24 @@ Pause:
 	'droite('duree=SecondeExp')'
 ;
 
+Mouvement:
+	Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Parallele
+;
+
 CommandeBasique:
-	Decoller|Atterrir|Avancer|Monter|Descendre|Reculer|Gauche|Droite|RotationGauche|RotationDroite|Pause
+	Decoller|Atterrir|Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Pause
 ;
 
 // Fonctions
 
 FonctionDecl:
 	'func' name=ID '()''{'
-		 body += VarDecl|CommandeBasique|Parallele|FonctionCall
+		 body += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
 	'}'
+;
+
+FinDeMain:
+	accolade='}'
 ;
 
 FonctionCall:
@@ -153,9 +161,9 @@ FonctionCall:
 Main:
 	'main' '{'
 		decollage=Decoller 
-		mainbody+=VarDecl|CommandeBasique|Parallele|FonctionCall
+		mainbody += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
 		atterrissage=Atterrir
-	'}'
+	fdm=FinDeMain
 ;
 
 

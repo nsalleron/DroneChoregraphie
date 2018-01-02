@@ -3,7 +3,26 @@
  */
 package fr.idmteam1.idmproject.dronedsl.validation;
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement;
 import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLValidator;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.validation.CheckType;
+import org.eclipse.xtext.xbase.lib.InputOutput;
 
 /**
  * This class contains custom validation rules.
@@ -12,4 +31,265 @@ import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLValidator;
  */
 @SuppressWarnings("all")
 public class DroneDSLValidator extends AbstractDroneDSLValidator {
+  public final static String CYCLE_ERR = "recursionDetected";
+  
+  public final static String CYCLE_MSG = "Erreur: recursion non autorisée";
+  
+  public final static String ALREADY_FLYING = "alreadyFlying";
+  
+  public final static String ALREADY_FLYING_MSG = "Erreur: le drone a déjà décollé";
+  
+  public final static String ALREADY_LANDING = "alreadyLanding";
+  
+  public final static String ALREADY_LANDING_MSG = "Erreur: le drone a déjà atterri";
+  
+  public final static String MOVEMENT_WHILE_ONLAND = "movementWhileNotFlying";
+  
+  public final static String MOVEMENT_WHILE_ONLAND_MSG = "Erreur: le drone ne peut pas effectué de mouvement lorsqu\'il n\'a pas décollé";
+  
+  private static boolean inMain = false;
+  
+  private static String actualFunc = "";
+  
+  private static HashMap<Object, Object> map = new HashMap<Object, Object>();
+  
+  private static boolean isFlying = false;
+  
+  private boolean cycleDetected = true;
+  
+  private Object cycleTestLock = new Object();
+  
+  @Check(CheckType.NORMAL)
+  public void validDecollageAtterrisageLogic(final Main m) {
+    synchronized (this.cycleTestLock) {
+      if (this.cycleDetected) {
+        return;
+      }
+      DroneDSLValidator.isFlying = false;
+      Decoller _decollage = m.getDecollage();
+      boolean _tripleNotEquals = (_decollage != null);
+      if (_tripleNotEquals) {
+        if (DroneDSLValidator.isFlying) {
+          this.error(DroneDSLValidator.ALREADY_FLYING_MSG, DroneDSLPackage.Literals.MAIN__DECOLLAGE, DroneDSLValidator.ALREADY_FLYING);
+          return;
+        } else {
+          DroneDSLValidator.isFlying = true;
+        }
+      }
+      Boolean _checkDecollageAtterrir = this.checkDecollageAtterrir(m.getMainbody());
+      if ((_checkDecollageAtterrir).booleanValue()) {
+        return;
+      }
+      Atterrir _atterrissage = m.getAtterrissage();
+      boolean _tripleNotEquals_1 = (_atterrissage != null);
+      if (_tripleNotEquals_1) {
+        if ((!DroneDSLValidator.isFlying)) {
+          this.error(DroneDSLValidator.ALREADY_LANDING_MSG, DroneDSLPackage.Literals.MAIN__ATTERRISSAGE, DroneDSLValidator.ALREADY_LANDING);
+          return;
+        } else {
+          DroneDSLValidator.isFlying = false;
+        }
+      }
+    }
+  }
+  
+  public Boolean checkDecollageAtterrir(final Collection<EObject> instructions) {
+    for (final EObject obj : instructions) {
+      if ((obj instanceof Decoller)) {
+        boolean _errorIfAlreadyDecolle = this.errorIfAlreadyDecolle(obj);
+        if (_errorIfAlreadyDecolle) {
+          return Boolean.valueOf(true);
+        }
+      } else {
+        if ((obj instanceof Atterrir)) {
+          boolean _errorIfAlreadyAtterri = this.errorIfAlreadyAtterri(obj);
+          if (_errorIfAlreadyAtterri) {
+            return Boolean.valueOf(true);
+          }
+        } else {
+          if ((obj instanceof Mouvement)) {
+            boolean _errorIfNotFlying = this.errorIfNotFlying(obj);
+            if (_errorIfNotFlying) {
+              return Boolean.valueOf(true);
+            }
+          } else {
+            if ((obj instanceof FonctionCall)) {
+              FonctionCall fonctionCall = FonctionCall.class.cast(obj);
+              FonctionDecl fonctionDecl = fonctionCall.getRef();
+              Boolean _checkDecollageAtterrir = this.checkDecollageAtterrir(fonctionDecl.getBody());
+              if ((_checkDecollageAtterrir).booleanValue()) {
+                return Boolean.valueOf(true);
+              }
+            }
+          }
+        }
+      }
+    }
+    return Boolean.valueOf(false);
+  }
+  
+  public boolean errorIfAlreadyDecolle(final EObject obj) {
+    if (DroneDSLValidator.isFlying) {
+      this.error(DroneDSLValidator.ALREADY_FLYING_MSG, obj, null, DroneDSLValidator.ALREADY_FLYING);
+      return true;
+    } else {
+      DroneDSLValidator.isFlying = true;
+    }
+    return false;
+  }
+  
+  public boolean errorIfAlreadyAtterri(final EObject obj) {
+    if ((!DroneDSLValidator.isFlying)) {
+      this.error(DroneDSLValidator.ALREADY_LANDING_MSG, obj, null, DroneDSLValidator.ALREADY_LANDING);
+      return true;
+    } else {
+      DroneDSLValidator.isFlying = false;
+    }
+    return false;
+  }
+  
+  public boolean errorIfNotFlying(final EObject obj) {
+    if ((!DroneDSLValidator.isFlying)) {
+      this.error(DroneDSLValidator.MOVEMENT_WHILE_ONLAND_MSG, obj, null, DroneDSLValidator.MOVEMENT_WHILE_ONLAND);
+      return true;
+    }
+    return false;
+  }
+  
+  @Check(CheckType.FAST)
+  public boolean checkMain(final Main m) {
+    return DroneDSLValidator.inMain = true;
+  }
+  
+  @Check(CheckType.FAST)
+  public boolean checkFinDeMain(final FinDeMain fdm) {
+    return DroneDSLValidator.inMain = false;
+  }
+  
+  @Check(CheckType.FAST)
+  public Object checkFunctionDecl(final FonctionDecl decl) {
+    Object _xblockexpression = null;
+    {
+      DroneDSLValidator.actualFunc = decl.getName();
+      ArrayList<Object> _arrayList = new ArrayList<Object>();
+      _xblockexpression = DroneDSLValidator.map.put(DroneDSLValidator.actualFunc, _arrayList);
+    }
+    return _xblockexpression;
+  }
+  
+  @Check(CheckType.FAST)
+  public Boolean validFunctionCall(final FonctionCall call) {
+    boolean _xsynchronizedexpression = false;
+    synchronized (this.cycleTestLock) {
+      boolean _xblockexpression = false;
+      {
+        this.cycleDetected = true;
+        boolean _xifexpression = false;
+        if ((!DroneDSLValidator.inMain)) {
+          boolean _xifexpression_1 = false;
+          boolean _equals = DroneDSLValidator.actualFunc.equals(call.getRef().getName());
+          boolean _not = (!_equals);
+          if (_not) {
+            boolean _xblockexpression_1 = false;
+            {
+              Object _get = DroneDSLValidator.map.get(DroneDSLValidator.actualFunc);
+              ((List<Object>) _get).add(call.getRef().getName());
+              this.printMap();
+              _xblockexpression_1 = this.cycleDetected = (this.checkCycle()).booleanValue();
+            }
+            _xifexpression_1 = _xblockexpression_1;
+          } else {
+            InputOutput.<String>println("ERREUR DE CYCLE");
+            this.cycleDetected = true;
+            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL__REF, DroneDSLValidator.CYCLE_ERR);
+          }
+          _xifexpression = _xifexpression_1;
+        }
+        _xblockexpression = _xifexpression;
+      }
+      _xsynchronizedexpression = _xblockexpression;
+    }
+    return Boolean.valueOf(_xsynchronizedexpression);
+  }
+  
+  public void printMap() {
+    Set<Map.Entry<Object, Object>> set = DroneDSLValidator.map.entrySet();
+    Iterator<Map.Entry<Object, Object>> iterator = set.iterator();
+    while (iterator.hasNext()) {
+      {
+        Map.Entry<Object, Object> _next = iterator.next();
+        Map.Entry<Object, Object> mentry = ((Map.Entry<Object, Object>) _next);
+        Object _key = mentry.getKey();
+        String _plus = ("key is: " + _key);
+        String _plus_1 = (_plus + " & Value is: ");
+        System.out.print(_plus_1);
+        System.out.println(mentry.getValue());
+      }
+    }
+  }
+  
+  /**
+   * Parcourt la map, pour chaque element de la liste de la clef en cours d'analyse (key)
+   * on verifie le cycle via la fonction checkCycleProfond
+   */
+  public Boolean checkCycle() {
+    Set<Map.Entry<Object, Object>> set = DroneDSLValidator.map.entrySet();
+    Iterator<Map.Entry<Object, Object>> iterator = set.iterator();
+    String key = "";
+    while (iterator.hasNext()) {
+      {
+        Map.Entry<Object, Object> _next = iterator.next();
+        Map.Entry<Object, Object> mentry = ((Map.Entry<Object, Object>) _next);
+        Object _key = mentry.getKey();
+        key = ((String) _key);
+        Object _value = mentry.getValue();
+        List<Object> funcCallList = ((List<Object>) _value);
+        Boolean _checkCycleProfond = this.checkCycleProfond(key, funcCallList);
+        if ((_checkCycleProfond).booleanValue()) {
+          return Boolean.valueOf(true);
+        }
+      }
+    }
+    return Boolean.valueOf(false);
+  }
+  
+  /**
+   * Alors la c'est chaud.
+   * @param funcCallList c'est la liste des fonctions appelees par la fonction de nom key
+   */
+  public Boolean checkCycleProfond(final String key, final List<Object> funcCallList) {
+    String func = "";
+    for (int i = 0; (i < funcCallList.size()); i++) {
+      {
+        Object _get = funcCallList.get(i);
+        func = ((String) _get);
+        Object _get_1 = DroneDSLValidator.map.get(func);
+        List<Object> list = ((List<Object>) _get_1);
+        for (int j = 0; (j < list.size()); j++) {
+          Object _get_2 = list.get(j);
+          boolean _equals = ((String) _get_2).equals(((String) key));
+          if (_equals) {
+            InputOutput.<String>println("ERREUR DE CYCLE");
+            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL__REF, DroneDSLValidator.CYCLE_ERR);
+            this.cycleDetected = true;
+            return Boolean.valueOf(true);
+          } else {
+            Object _get_3 = list.get(j);
+            String func2 = ((String) _get_3);
+            boolean _equals_1 = func2.equals(key);
+            boolean _not = (!_equals_1);
+            if (_not) {
+              Object _get_4 = DroneDSLValidator.map.get(func2);
+              List<Object> list2 = ((List<Object>) _get_4);
+              Boolean _checkCycleProfond = this.checkCycleProfond(key, list2);
+              if ((_checkCycleProfond).booleanValue()) {
+                return Boolean.valueOf(true);
+              }
+            }
+          }
+        }
+      }
+    }
+    return Boolean.valueOf(false);
+  }
 }

@@ -4,11 +4,14 @@
 package fr.idmteam1.idmproject.dronedsl.serializer;
 
 import com.google.inject.Inject;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Avancer;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Descendre;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Droite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
@@ -60,8 +63,14 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == DroneDSLPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case DroneDSLPackage.ATTERRIR:
+				sequence_Atterrir(context, (Atterrir) semanticObject); 
+				return; 
 			case DroneDSLPackage.AVANCER:
 				sequence_Avancer(context, (Avancer) semanticObject); 
+				return; 
+			case DroneDSLPackage.DECOLLER:
+				sequence_Decoller(context, (Decoller) semanticObject); 
 				return; 
 			case DroneDSLPackage.DESCENDRE:
 				sequence_Descendre(context, (Descendre) semanticObject); 
@@ -72,17 +81,12 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case DroneDSLPackage.ELOIGNEMENT_MAX:
 				sequence_Eloignement_max(context, (Eloignement_max) semanticObject); 
 				return; 
+			case DroneDSLPackage.FIN_DE_MAIN:
+				sequence_FinDeMain(context, (FinDeMain) semanticObject); 
+				return; 
 			case DroneDSLPackage.FONCTION_CALL:
-				if (rule == grammarAccess.getFonctionDeclRule()
-						|| rule == grammarAccess.getFonctionCallRule()) {
-					sequence_FonctionCall(context, (FonctionCall) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getMainRule()) {
-					sequence_FonctionCall_Main(context, (FonctionCall) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_FonctionCall(context, (FonctionCall) semanticObject); 
+				return; 
 			case DroneDSLPackage.FONCTION_DECL:
 				sequence_FonctionDecl(context, (FonctionDecl) semanticObject); 
 				return; 
@@ -162,10 +166,28 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Atterrir returns Atterrir
+	 *     CommandeBasique returns Atterrir
+	 *
+	 * Constraint:
+	 *     str='atterrir()'
+	 */
+	protected void sequence_Atterrir(ISerializationContext context, Atterrir semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.ATTERRIR__STR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ATTERRIR__STR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtterrirAccess().getStrAtterrirKeyword_0(), semanticObject.getStr());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Avancer returns Avancer
+	 *     Mouvement returns Avancer
 	 *     CommandeBasique returns Avancer
-	 *     FonctionDecl returns Avancer
-	 *     Main returns Avancer
 	 *     AR returns Avancer
 	 *
 	 * Constraint:
@@ -187,10 +209,28 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Decoller returns Decoller
+	 *     CommandeBasique returns Decoller
+	 *
+	 * Constraint:
+	 *     str='decoller()'
+	 */
+	protected void sequence_Decoller(ISerializationContext context, Decoller semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.DECOLLER__STR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.DECOLLER__STR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDecollerAccess().getStrDecollerKeyword_0(), semanticObject.getStr());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Descendre returns Descendre
+	 *     Mouvement returns Descendre
 	 *     CommandeBasique returns Descendre
-	 *     FonctionDecl returns Descendre
-	 *     Main returns Descendre
 	 *     MD returns Descendre
 	 *
 	 * Constraint:
@@ -213,9 +253,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Droite returns Droite
+	 *     Mouvement returns Droite
 	 *     CommandeBasique returns Droite
-	 *     FonctionDecl returns Droite
-	 *     Main returns Droite
 	 *     GDr returns Droite
 	 *
 	 * Constraint:
@@ -255,7 +294,24 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionDecl returns FonctionCall
+	 *     FinDeMain returns FinDeMain
+	 *
+	 * Constraint:
+	 *     accolade='}'
+	 */
+	protected void sequence_FinDeMain(ISerializationContext context, FinDeMain semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FIN_DE_MAIN__ACCOLADE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FIN_DE_MAIN__ACCOLADE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFinDeMainAccess().getAccoladeRightCurlyBracketKeyword_0(), semanticObject.getAccolade());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     FonctionCall returns FonctionCall
 	 *
 	 * Constraint:
@@ -274,31 +330,10 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Main returns FonctionCall
-	 *
-	 * Constraint:
-	 *     (ref=[FonctionDecl|ID] atterrissage=Atterrir)
-	 */
-	protected void sequence_FonctionCall_Main(ISerializationContext context, FonctionCall semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF));
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__ATTERRISSAGE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__ATTERRISSAGE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionCallAccess().getRefFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__REF, false));
-		feeder.accept(grammarAccess.getMainAccess().getAtterrissageAtterrirParserRuleCall_3_1_0(), semanticObject.getAtterrissage());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     FonctionDecl returns FonctionDecl
 	 *
 	 * Constraint:
-	 *     (name=ID body+=VarDecl)
+	 *     (name=ID (body+=VarDecl | body+=CommandeBasique | body+=Parallele | body+=FonctionCall)*)
 	 */
 	protected void sequence_FonctionDecl(ISerializationContext context, FonctionDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -308,9 +343,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Gauche returns Gauche
+	 *     Mouvement returns Gauche
 	 *     CommandeBasique returns Gauche
-	 *     FonctionDecl returns Gauche
-	 *     Main returns Gauche
 	 *     GDr returns Gauche
 	 *
 	 * Constraint:
@@ -371,7 +405,12 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Main returns Main
 	 *
 	 * Constraint:
-	 *     (decollage=Decoller mainbody+=VarDecl)
+	 *     (
+	 *         decollage=Decoller 
+	 *         (mainbody+=VarDecl | mainbody+=CommandeBasique | mainbody+=Parallele | mainbody+=FonctionCall)* 
+	 *         atterrissage=Atterrir 
+	 *         fdm=FinDeMain
+	 *     )
 	 */
 	protected void sequence_Main(ISerializationContext context, Main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -383,7 +422,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (imports+=Import prologue=Prologue m=Main fonctions+=FonctionDecl)
+	 *     (imports+=Import* prologue=Prologue m=Main fonctions+=FonctionDecl*)
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -393,9 +432,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Monter returns Monter
+	 *     Mouvement returns Monter
 	 *     CommandeBasique returns Monter
-	 *     FonctionDecl returns Monter
-	 *     Main returns Monter
 	 *     MD returns Monter
 	 *
 	 * Constraint:
@@ -417,8 +455,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionDecl returns Parallele2
-	 *     Main returns Parallele2
+	 *     Mouvement returns Parallele2
 	 *     Parallele returns Parallele2
 	 *     Parallele2 returns Parallele2
 	 *
@@ -445,8 +482,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionDecl returns Parallele3
-	 *     Main returns Parallele3
+	 *     Mouvement returns Parallele3
 	 *     Parallele returns Parallele3
 	 *     Parallele3 returns Parallele3
 	 *
@@ -485,8 +521,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionDecl returns Parallele4
-	 *     Main returns Parallele4
+	 *     Mouvement returns Parallele4
 	 *     Parallele returns Parallele4
 	 *     Parallele4 returns Parallele4
 	 *
@@ -527,8 +562,6 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Contexts:
 	 *     Pause returns Pause
 	 *     CommandeBasique returns Pause
-	 *     FonctionDecl returns Pause
-	 *     Main returns Pause
 	 *
 	 * Constraint:
 	 *     duree=SecondeExp
@@ -660,9 +693,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     Reculer returns Reculer
+	 *     Mouvement returns Reculer
 	 *     CommandeBasique returns Reculer
-	 *     FonctionDecl returns Reculer
-	 *     Main returns Reculer
 	 *     AR returns Reculer
 	 *
 	 * Constraint:
@@ -723,9 +755,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     RotationDroite returns RotationDroite
+	 *     Mouvement returns RotationDroite
 	 *     CommandeBasique returns RotationDroite
-	 *     FonctionDecl returns RotationDroite
-	 *     Main returns RotationDroite
 	 *     RGRD returns RotationDroite
 	 *
 	 * Constraint:
@@ -748,9 +779,8 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Contexts:
 	 *     RotationGauche returns RotationGauche
+	 *     Mouvement returns RotationGauche
 	 *     CommandeBasique returns RotationGauche
-	 *     FonctionDecl returns RotationGauche
-	 *     Main returns RotationGauche
 	 *     RGRD returns RotationGauche
 	 *
 	 * Constraint:

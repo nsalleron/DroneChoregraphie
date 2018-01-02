@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface Descendre extends CommandeBasique, MD
+public interface Descendre extends Mouvement, CommandeBasique, MD
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

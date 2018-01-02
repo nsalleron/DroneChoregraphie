@@ -82,6 +82,8 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.REF_POURCENT_VAR: return createRefPourcentVar();
       case DroneDSLPackage.POURCENT_EXP: return createPourcentExp();
       case DroneDSLPackage.SECONDE_EXP: return createSecondeExp();
+      case DroneDSLPackage.DECOLLER: return createDecoller();
+      case DroneDSLPackage.ATTERRIR: return createAtterrir();
       case DroneDSLPackage.MONTER: return createMonter();
       case DroneDSLPackage.DESCENDRE: return createDescendre();
       case DroneDSLPackage.AVANCER: return createAvancer();
@@ -91,8 +93,10 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.ROTATION_GAUCHE: return createRotationGauche();
       case DroneDSLPackage.ROTATION_DROITE: return createRotationDroite();
       case DroneDSLPackage.PAUSE: return createPause();
+      case DroneDSLPackage.MOUVEMENT: return createMouvement();
       case DroneDSLPackage.COMMANDE_BASIQUE: return createCommandeBasique();
       case DroneDSLPackage.FONCTION_DECL: return createFonctionDecl();
+      case DroneDSLPackage.FIN_DE_MAIN: return createFinDeMain();
       case DroneDSLPackage.FONCTION_CALL: return createFonctionCall();
       case DroneDSLPackage.MAIN: return createMain();
       case DroneDSLPackage.MD: return createMD();
@@ -300,6 +304,28 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Decoller createDecoller()
+  {
+    DecollerImpl decoller = new DecollerImpl();
+    return decoller;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atterrir createAtterrir()
+  {
+    AtterrirImpl atterrir = new AtterrirImpl();
+    return atterrir;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Monter createMonter()
   {
     MonterImpl monter = new MonterImpl();
@@ -399,6 +425,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Mouvement createMouvement()
+  {
+    MouvementImpl mouvement = new MouvementImpl();
+    return mouvement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public CommandeBasique createCommandeBasique()
   {
     CommandeBasiqueImpl commandeBasique = new CommandeBasiqueImpl();
@@ -414,6 +451,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     FonctionDeclImpl fonctionDecl = new FonctionDeclImpl();
     return fonctionDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FinDeMain createFinDeMain()
+  {
+    FinDeMainImpl finDeMain = new FinDeMainImpl();
+    return finDeMain;
   }
 
   /**

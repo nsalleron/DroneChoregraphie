@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GaucheImpl extends CommandeBasiqueImpl implements Gauche
+public class GaucheImpl extends MouvementImpl implements Gauche
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

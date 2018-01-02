@@ -198,14 +198,29 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLPackage.DECOLLER:
+      {
+        Decoller decoller = (Decoller)theEObject;
+        T result = caseDecoller(decoller);
+        if (result == null) result = caseCommandeBasique(decoller);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.ATTERRIR:
+      {
+        Atterrir atterrir = (Atterrir)theEObject;
+        T result = caseAtterrir(atterrir);
+        if (result == null) result = caseCommandeBasique(atterrir);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLPackage.MONTER:
       {
         Monter monter = (Monter)theEObject;
         T result = caseMonter(monter);
+        if (result == null) result = caseMouvement(monter);
         if (result == null) result = caseCommandeBasique(monter);
         if (result == null) result = caseMD(monter);
-        if (result == null) result = caseFonctionDecl(monter);
-        if (result == null) result = caseMain(monter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -213,10 +228,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Descendre descendre = (Descendre)theEObject;
         T result = caseDescendre(descendre);
+        if (result == null) result = caseMouvement(descendre);
         if (result == null) result = caseCommandeBasique(descendre);
         if (result == null) result = caseMD(descendre);
-        if (result == null) result = caseFonctionDecl(descendre);
-        if (result == null) result = caseMain(descendre);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -224,10 +238,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Avancer avancer = (Avancer)theEObject;
         T result = caseAvancer(avancer);
+        if (result == null) result = caseMouvement(avancer);
         if (result == null) result = caseCommandeBasique(avancer);
         if (result == null) result = caseAR(avancer);
-        if (result == null) result = caseFonctionDecl(avancer);
-        if (result == null) result = caseMain(avancer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -235,10 +248,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Reculer reculer = (Reculer)theEObject;
         T result = caseReculer(reculer);
+        if (result == null) result = caseMouvement(reculer);
         if (result == null) result = caseCommandeBasique(reculer);
         if (result == null) result = caseAR(reculer);
-        if (result == null) result = caseFonctionDecl(reculer);
-        if (result == null) result = caseMain(reculer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -246,10 +258,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Gauche gauche = (Gauche)theEObject;
         T result = caseGauche(gauche);
+        if (result == null) result = caseMouvement(gauche);
         if (result == null) result = caseCommandeBasique(gauche);
         if (result == null) result = caseGDr(gauche);
-        if (result == null) result = caseFonctionDecl(gauche);
-        if (result == null) result = caseMain(gauche);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -257,10 +268,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Droite droite = (Droite)theEObject;
         T result = caseDroite(droite);
+        if (result == null) result = caseMouvement(droite);
         if (result == null) result = caseCommandeBasique(droite);
         if (result == null) result = caseGDr(droite);
-        if (result == null) result = caseFonctionDecl(droite);
-        if (result == null) result = caseMain(droite);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -268,10 +278,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         RotationGauche rotationGauche = (RotationGauche)theEObject;
         T result = caseRotationGauche(rotationGauche);
+        if (result == null) result = caseMouvement(rotationGauche);
         if (result == null) result = caseCommandeBasique(rotationGauche);
         if (result == null) result = caseRGRD(rotationGauche);
-        if (result == null) result = caseFonctionDecl(rotationGauche);
-        if (result == null) result = caseMain(rotationGauche);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -279,10 +288,9 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         RotationDroite rotationDroite = (RotationDroite)theEObject;
         T result = caseRotationDroite(rotationDroite);
+        if (result == null) result = caseMouvement(rotationDroite);
         if (result == null) result = caseCommandeBasique(rotationDroite);
         if (result == null) result = caseRGRD(rotationDroite);
-        if (result == null) result = caseFonctionDecl(rotationDroite);
-        if (result == null) result = caseMain(rotationDroite);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -291,8 +299,13 @@ public class DroneDSLSwitch<T> extends Switch<T>
         Pause pause = (Pause)theEObject;
         T result = casePause(pause);
         if (result == null) result = caseCommandeBasique(pause);
-        if (result == null) result = caseFonctionDecl(pause);
-        if (result == null) result = caseMain(pause);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.MOUVEMENT:
+      {
+        Mouvement mouvement = (Mouvement)theEObject;
+        T result = caseMouvement(mouvement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -300,8 +313,6 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         CommandeBasique commandeBasique = (CommandeBasique)theEObject;
         T result = caseCommandeBasique(commandeBasique);
-        if (result == null) result = caseFonctionDecl(commandeBasique);
-        if (result == null) result = caseMain(commandeBasique);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -312,12 +323,17 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLPackage.FIN_DE_MAIN:
+      {
+        FinDeMain finDeMain = (FinDeMain)theEObject;
+        T result = caseFinDeMain(finDeMain);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLPackage.FONCTION_CALL:
       {
         FonctionCall fonctionCall = (FonctionCall)theEObject;
         T result = caseFonctionCall(fonctionCall);
-        if (result == null) result = caseFonctionDecl(fonctionCall);
-        if (result == null) result = caseMain(fonctionCall);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,8 +376,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Parallele parallele = (Parallele)theEObject;
         T result = caseParallele(parallele);
-        if (result == null) result = caseFonctionDecl(parallele);
-        if (result == null) result = caseMain(parallele);
+        if (result == null) result = caseMouvement(parallele);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -370,8 +385,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
         Parallele2 parallele2 = (Parallele2)theEObject;
         T result = caseParallele2(parallele2);
         if (result == null) result = caseParallele(parallele2);
-        if (result == null) result = caseFonctionDecl(parallele2);
-        if (result == null) result = caseMain(parallele2);
+        if (result == null) result = caseMouvement(parallele2);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -380,8 +394,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
         Parallele3 parallele3 = (Parallele3)theEObject;
         T result = caseParallele3(parallele3);
         if (result == null) result = caseParallele(parallele3);
-        if (result == null) result = caseFonctionDecl(parallele3);
-        if (result == null) result = caseMain(parallele3);
+        if (result == null) result = caseMouvement(parallele3);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -390,8 +403,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
         Parallele4 parallele4 = (Parallele4)theEObject;
         T result = caseParallele4(parallele4);
         if (result == null) result = caseParallele(parallele4);
-        if (result == null) result = caseFonctionDecl(parallele4);
-        if (result == null) result = caseMain(parallele4);
+        if (result == null) result = caseMouvement(parallele4);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -672,6 +684,38 @@ public class DroneDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Decoller</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Decoller</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecoller(Decoller object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atterrir</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtterrir(Atterrir object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Monter</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -816,6 +860,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Mouvement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mouvement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMouvement(Mouvement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Commande Basique</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -843,6 +903,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFonctionDecl(FonctionDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fin De Main</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fin De Main</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFinDeMain(FinDeMain object)
   {
     return null;
   }

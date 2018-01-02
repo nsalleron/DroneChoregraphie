@@ -11,9 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -21,44 +18,17 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected DroneDSLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_CommandeBasique_AtterrirParserRuleCall_1_or_DecollerParserRuleCall_0;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (DroneDSLGrammarAccess) access;
-		match_CommandeBasique_AtterrirParserRuleCall_1_or_DecollerParserRuleCall_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCommandeBasiqueAccess().getAtterrirParserRuleCall_1()), new TokenAlias(false, false, grammarAccess.getCommandeBasiqueAccess().getDecollerParserRuleCall_0()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getAtterrirRule())
-			return getAtterrirToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getDecollerRule())
-			return getDecollerToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * Atterrir:
-	 * 	'atterrir()'
-	 * ;
-	 */
-	protected String getAtterrirToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "atterrir()";
-	}
-	
-	/**
-	 * Decoller:
-	 * 	'decoller()'
-	 * ;
-	 */
-	protected String getDecollerToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "decoller()";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -66,21 +36,8 @@ public class DroneDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_CommandeBasique_AtterrirParserRuleCall_1_or_DecollerParserRuleCall_0.equals(syntax))
-				emit_CommandeBasique_AtterrirParserRuleCall_1_or_DecollerParserRuleCall_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     Atterrir | Decoller
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_CommandeBasique_AtterrirParserRuleCall_1_or_DecollerParserRuleCall_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

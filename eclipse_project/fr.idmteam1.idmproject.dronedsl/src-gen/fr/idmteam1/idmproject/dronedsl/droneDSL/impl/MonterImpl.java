@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MonterImpl extends CommandeBasiqueImpl implements Monter
+public class MonterImpl extends MouvementImpl implements Monter
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

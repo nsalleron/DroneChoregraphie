@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class DescendreImpl extends CommandeBasiqueImpl implements Descendre
+public class DescendreImpl extends MouvementImpl implements Descendre
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

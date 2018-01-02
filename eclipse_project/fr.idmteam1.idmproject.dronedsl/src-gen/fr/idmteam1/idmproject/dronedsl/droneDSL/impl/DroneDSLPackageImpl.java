@@ -3,13 +3,16 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Avancer;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.CommandeBasique;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Descendre;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Droite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLFactory;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.GDr;
@@ -19,6 +22,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Monter;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele2;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Parallele3;
@@ -180,6 +184,20 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass decollerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atterrirEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass monterEClass = null;
 
   /**
@@ -243,6 +261,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass mouvementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass commandeBasiqueEClass = null;
 
   /**
@@ -251,6 +276,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * @generated
    */
   private EClass fonctionDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass finDeMainEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -780,6 +812,46 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDecoller()
+  {
+    return decollerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecoller_Str()
+  {
+    return (EAttribute)decollerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtterrir()
+  {
+    return atterrirEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtterrir_Str()
+  {
+    return (EAttribute)atterrirEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMonter()
   {
     return monterEClass;
@@ -1040,6 +1112,16 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getMouvement()
+  {
+    return mouvementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getCommandeBasique()
   {
     return commandeBasiqueEClass;
@@ -1080,6 +1162,26 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getFinDeMain()
+  {
+    return finDeMainEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFinDeMain_Accolade()
+  {
+    return (EAttribute)finDeMainEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFonctionCall()
   {
     return fonctionCallEClass;
@@ -1100,16 +1202,6 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFonctionCall_Atterrissage()
-  {
-    return (EAttribute)fonctionCallEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getMain()
   {
     return mainEClass;
@@ -1120,9 +1212,9 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMain_Decollage()
+  public EReference getMain_Decollage()
   {
-    return (EAttribute)mainEClass.getEStructuralFeatures().get(0);
+    return (EReference)mainEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1133,6 +1225,26 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
   public EReference getMain_Mainbody()
   {
     return (EReference)mainEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMain_Atterrissage()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMain_Fdm()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1361,6 +1473,12 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     secondeExpEClass = createEClass(SECONDE_EXP);
 
+    decollerEClass = createEClass(DECOLLER);
+    createEAttribute(decollerEClass, DECOLLER__STR);
+
+    atterrirEClass = createEClass(ATTERRIR);
+    createEAttribute(atterrirEClass, ATTERRIR__STR);
+
     monterEClass = createEClass(MONTER);
     createEReference(monterEClass, MONTER__DUREE);
     createEReference(monterEClass, MONTER__VITESSE_VERTICALE);
@@ -1396,19 +1514,25 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     pauseEClass = createEClass(PAUSE);
     createEReference(pauseEClass, PAUSE__DUREE);
 
+    mouvementEClass = createEClass(MOUVEMENT);
+
     commandeBasiqueEClass = createEClass(COMMANDE_BASIQUE);
 
     fonctionDeclEClass = createEClass(FONCTION_DECL);
     createEAttribute(fonctionDeclEClass, FONCTION_DECL__NAME);
     createEReference(fonctionDeclEClass, FONCTION_DECL__BODY);
 
+    finDeMainEClass = createEClass(FIN_DE_MAIN);
+    createEAttribute(finDeMainEClass, FIN_DE_MAIN__ACCOLADE);
+
     fonctionCallEClass = createEClass(FONCTION_CALL);
     createEReference(fonctionCallEClass, FONCTION_CALL__REF);
-    createEAttribute(fonctionCallEClass, FONCTION_CALL__ATTERRISSAGE);
 
     mainEClass = createEClass(MAIN);
-    createEAttribute(mainEClass, MAIN__DECOLLAGE);
+    createEReference(mainEClass, MAIN__DECOLLAGE);
     createEReference(mainEClass, MAIN__MAINBODY);
+    createEReference(mainEClass, MAIN__ATTERRISSAGE);
+    createEReference(mainEClass, MAIN__FDM);
 
     mdEClass = createEClass(MD);
 
@@ -1468,29 +1592,34 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     pourcentDeclEClass.getESuperTypes().add(this.getVarDecl());
     refSecondeVarEClass.getESuperTypes().add(this.getSecondeExp());
     refPourcentVarEClass.getESuperTypes().add(this.getPourcentExp());
+    decollerEClass.getESuperTypes().add(this.getCommandeBasique());
+    atterrirEClass.getESuperTypes().add(this.getCommandeBasique());
+    monterEClass.getESuperTypes().add(this.getMouvement());
     monterEClass.getESuperTypes().add(this.getCommandeBasique());
     monterEClass.getESuperTypes().add(this.getMD());
+    descendreEClass.getESuperTypes().add(this.getMouvement());
     descendreEClass.getESuperTypes().add(this.getCommandeBasique());
     descendreEClass.getESuperTypes().add(this.getMD());
+    avancerEClass.getESuperTypes().add(this.getMouvement());
     avancerEClass.getESuperTypes().add(this.getCommandeBasique());
     avancerEClass.getESuperTypes().add(this.getAR());
+    reculerEClass.getESuperTypes().add(this.getMouvement());
     reculerEClass.getESuperTypes().add(this.getCommandeBasique());
     reculerEClass.getESuperTypes().add(this.getAR());
+    gaucheEClass.getESuperTypes().add(this.getMouvement());
     gaucheEClass.getESuperTypes().add(this.getCommandeBasique());
     gaucheEClass.getESuperTypes().add(this.getGDr());
+    droiteEClass.getESuperTypes().add(this.getMouvement());
     droiteEClass.getESuperTypes().add(this.getCommandeBasique());
     droiteEClass.getESuperTypes().add(this.getGDr());
+    rotationGaucheEClass.getESuperTypes().add(this.getMouvement());
     rotationGaucheEClass.getESuperTypes().add(this.getCommandeBasique());
     rotationGaucheEClass.getESuperTypes().add(this.getRGRD());
+    rotationDroiteEClass.getESuperTypes().add(this.getMouvement());
     rotationDroiteEClass.getESuperTypes().add(this.getCommandeBasique());
     rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
     pauseEClass.getESuperTypes().add(this.getCommandeBasique());
-    commandeBasiqueEClass.getESuperTypes().add(this.getFonctionDecl());
-    commandeBasiqueEClass.getESuperTypes().add(this.getMain());
-    fonctionCallEClass.getESuperTypes().add(this.getFonctionDecl());
-    fonctionCallEClass.getESuperTypes().add(this.getMain());
-    paralleleEClass.getESuperTypes().add(this.getFonctionDecl());
-    paralleleEClass.getESuperTypes().add(this.getMain());
+    paralleleEClass.getESuperTypes().add(this.getMouvement());
     parallele2EClass.getESuperTypes().add(this.getParallele());
     parallele3EClass.getESuperTypes().add(this.getParallele());
     parallele4EClass.getESuperTypes().add(this.getParallele());
@@ -1552,6 +1681,12 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
 
     initEClass(secondeExpEClass, SecondeExp.class, "SecondeExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(decollerEClass, Decoller.class, "Decoller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecoller_Str(), ecorePackage.getEString(), "str", null, 0, 1, Decoller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atterrirEClass, Atterrir.class, "Atterrir", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtterrir_Str(), ecorePackage.getEString(), "str", null, 0, 1, Atterrir.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(monterEClass, Monter.class, "Monter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMonter_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMonter_Vitesse_verticale(), this.getPourcentExp(), null, "vitesse_verticale", null, 0, 1, Monter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1587,19 +1722,25 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPause_Duree(), this.getSecondeExp(), null, "duree", null, 0, 1, Pause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(mouvementEClass, Mouvement.class, "Mouvement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(commandeBasiqueEClass, CommandeBasique.class, "CommandeBasique", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fonctionDeclEClass, FonctionDecl.class, "FonctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFonctionDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFonctionDecl_Body(), this.getVarDecl(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFonctionDecl_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, FonctionDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(finDeMainEClass, FinDeMain.class, "FinDeMain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFinDeMain_Accolade(), ecorePackage.getEString(), "accolade", null, 0, 1, FinDeMain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fonctionCallEClass, FonctionCall.class, "FonctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFonctionCall_Ref(), this.getFonctionDecl(), null, "ref", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFonctionCall_Atterrissage(), ecorePackage.getEString(), "atterrissage", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMain_Decollage(), ecorePackage.getEString(), "decollage", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMain_Mainbody(), this.getVarDecl(), null, "mainbody", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Decollage(), this.getDecoller(), null, "decollage", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Mainbody(), ecorePackage.getEObject(), null, "mainbody", null, 0, -1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Atterrissage(), this.getAtterrir(), null, "atterrissage", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMain_Fdm(), this.getFinDeMain(), null, "fdm", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mdEClass, fr.idmteam1.idmproject.dronedsl.droneDSL.MD.class, "MD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

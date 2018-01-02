@@ -21,7 +21,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface Gauche extends CommandeBasique, GDr
+public interface Gauche extends Mouvement, CommandeBasique, GDr
 {
   /**
    * Returns the value of the '<em><b>Duree</b></em>' containment reference.

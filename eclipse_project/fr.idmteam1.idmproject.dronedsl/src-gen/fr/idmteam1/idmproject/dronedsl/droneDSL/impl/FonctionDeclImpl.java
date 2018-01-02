@@ -5,7 +5,6 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.VarDecl;
 
 import java.util.Collection;
 
@@ -15,6 +14,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -67,7 +67,7 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
    * @generated
    * @ordered
    */
-  protected EList<VarDecl> body;
+  protected EList<EObject> body;
 
   /**
    * <!-- begin-user-doc -->
@@ -118,11 +118,11 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<VarDecl> getBody()
+  public EList<EObject> getBody()
   {
     if (body == null)
     {
-      body = new EObjectContainmentEList<VarDecl>(VarDecl.class, this, DroneDSLPackage.FONCTION_DECL__BODY);
+      body = new EObjectContainmentEList<EObject>(EObject.class, this, DroneDSLPackage.FONCTION_DECL__BODY);
     }
     return body;
   }
@@ -177,7 +177,7 @@ public class FonctionDeclImpl extends MinimalEObjectImpl.Container implements Fo
         return;
       case DroneDSLPackage.FONCTION_DECL__BODY:
         getBody().clear();
-        getBody().addAll((Collection<? extends VarDecl>)newValue);
+        getBody().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

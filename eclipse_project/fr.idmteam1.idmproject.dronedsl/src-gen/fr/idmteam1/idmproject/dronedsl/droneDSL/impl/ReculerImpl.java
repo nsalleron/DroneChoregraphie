@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ReculerImpl extends CommandeBasiqueImpl implements Reculer
+public class ReculerImpl extends MouvementImpl implements Reculer
 {
   /**
    * The cached value of the '{@link #getDuree() <em>Duree</em>}' containment reference.

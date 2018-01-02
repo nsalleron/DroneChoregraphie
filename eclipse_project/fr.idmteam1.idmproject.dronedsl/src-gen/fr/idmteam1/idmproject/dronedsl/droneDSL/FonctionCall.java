@@ -3,6 +3,7 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,14 +15,13 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getRef <em>Ref</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getAtterrissage <em>Atterrissage</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall()
  * @model
  * @generated
  */
-public interface FonctionCall extends FonctionDecl, Main
+public interface FonctionCall extends EObject
 {
   /**
    * Returns the value of the '<em><b>Ref</b></em>' reference.
@@ -48,31 +48,5 @@ public interface FonctionCall extends FonctionDecl, Main
    * @generated
    */
   void setRef(FonctionDecl value);
-
-  /**
-   * Returns the value of the '<em><b>Atterrissage</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Atterrissage</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Atterrissage</em>' attribute.
-   * @see #setAtterrissage(String)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getFonctionCall_Atterrissage()
-   * @model
-   * @generated
-   */
-  String getAtterrissage();
-
-  /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getAtterrissage <em>Atterrissage</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Atterrissage</em>' attribute.
-   * @see #getAtterrissage()
-   * @generated
-   */
-  void setAtterrissage(String value);
 
 } // FonctionCall

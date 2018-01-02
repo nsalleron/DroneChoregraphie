@@ -161,6 +161,16 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createSecondeExpAdapter();
       }
       @Override
+      public Adapter caseDecoller(Decoller object)
+      {
+        return createDecollerAdapter();
+      }
+      @Override
+      public Adapter caseAtterrir(Atterrir object)
+      {
+        return createAtterrirAdapter();
+      }
+      @Override
       public Adapter caseMonter(Monter object)
       {
         return createMonterAdapter();
@@ -206,6 +216,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createPauseAdapter();
       }
       @Override
+      public Adapter caseMouvement(Mouvement object)
+      {
+        return createMouvementAdapter();
+      }
+      @Override
       public Adapter caseCommandeBasique(CommandeBasique object)
       {
         return createCommandeBasiqueAdapter();
@@ -214,6 +229,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFonctionDecl(FonctionDecl object)
       {
         return createFonctionDeclAdapter();
+      }
+      @Override
+      public Adapter caseFinDeMain(FinDeMain object)
+      {
+        return createFinDeMainAdapter();
       }
       @Override
       public Adapter caseFonctionCall(FonctionCall object)
@@ -543,6 +563,36 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller <em>Decoller</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller
+   * @generated
+   */
+  public Adapter createDecollerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir <em>Atterrir</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir
+   * @generated
+   */
+  public Adapter createAtterrirAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Monter <em>Monter</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -678,6 +728,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement <em>Mouvement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement
+   * @generated
+   */
+  public Adapter createMouvementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.CommandeBasique <em>Commande Basique</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -703,6 +768,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFonctionDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain <em>Fin De Main</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain
+   * @generated
+   */
+  public Adapter createFinDeMainAdapter()
   {
     return null;
   }

@@ -3,6 +3,7 @@
  */
 package fr.idmteam1.idmproject.dronedsl.droneDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +15,6 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * @model
  * @generated
  */
-public interface CommandeBasique extends FonctionDecl, Main
+public interface CommandeBasique extends EObject
 {
 } // CommandeBasique
