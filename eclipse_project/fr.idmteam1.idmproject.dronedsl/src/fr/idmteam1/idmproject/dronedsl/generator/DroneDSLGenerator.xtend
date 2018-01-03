@@ -3,13 +3,13 @@
  */
 package fr.idmteam1.idmproject.dronedsl.generator
 
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Import
-import fr.idmteam1.idmproject.dronedsl.droneDSL.Model
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Import
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Model
 
 /**
  * Generates code from your model files on save.
@@ -18,8 +18,1019 @@ import org.eclipse.xtext.generator.IGeneratorContext
  */
 class DroneDSLGenerator extends AbstractGenerator {
 	
+	val stubFilesMap = newLinkedHashMap(
+		"fr/roboticiens/gen/body/BodyInstruction.java" -> contentBodyInstructionClass(),
+		"fr/roboticiens/gen/commandes/Atterrir.java" -> contentAtterrirClass(),
+		"fr/roboticiens/gen/commandes/Avancer.java" -> contentAvancerClass(),
+		"fr/roboticiens/gen/commandes/CommandeAvecDureeVitesse.java" -> contentCommandeAvecDureeVitesseClass(),
+		"fr/roboticiens/gen/commandes/CommandeBasique.java" -> contentCommandeBasiqueClass(),
+		"fr/roboticiens/gen/commandes/CommandeParallelisable.java" -> contentCommandeParallelisableClass(),
+		"fr/roboticiens/gen/commandes/Decoller.java" -> contentDecollerClass(),
+		"fr/roboticiens/gen/commandes/Descendre.java" -> contentDescendreClass(),
+		"fr/roboticiens/gen/commandes/Droite.java" -> contentDroiteClass(),
+		"fr/roboticiens/gen/commandes/Gauche.java" -> contentGaucheClass(),
+		"fr/roboticiens/gen/commandes/Monter.java" -> contentMonterClass(),
+		"fr/roboticiens/gen/commandes/Pause.java" -> contentPauseClass(),
+		"fr/roboticiens/gen/commandes/Reculer.java" -> contentReculerClass(),
+		"fr/roboticiens/gen/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
+		"fr/roboticiens/gen/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
+		"fr/roboticiens/gen/fonction/FonctionCall.java" -> contentFonctionCallClass(),
+		"fr/roboticiens/gen/fonction/FonctionDeclaration.java" -> contentFonctionDeclarationClass(),
+		"fr/roboticiens/gen/imports/Import.java" -> contentImportClass(),
+		"fr/roboticiens/gen/main/MainBloc.java" -> contentMainBlocClass(),
+		"fr/roboticiens/gen/paralleles/Parallele.java" -> contentParalleleClass(),
+		"fr/roboticiens/gen/prologue/Prologue.java" -> contentPrologueClass(),
+		"fr/roboticiens/gen/types/Pourcent.java" -> contentPourcentClass(),
+		"fr/roboticiens/gen/types/Seconde.java" -> contentSecondeClass(),
+		"fr/roboticiens/runtime/DroneRuntime.java" -> contentDroneRuntimeClass(),
+		"fr/roboticiens/runtime/DroneRuntimeExecutable.java" -> contentDroneRuntimeExecutableClass(),
+		"fr/roboticiens/runtime/DroneRuntimePrint.java" -> contentDroneRuntimePrintClass()
+	)
 	
-	var commandList = newArrayList('Decoller','Atterrir','Gauche','Droite','Avancer','Reculer','Monter','Descendre','RotationGauche','RotationDroite')
+	val mainFilePath = "fr/roboticiens/gen/Main.java"
+	
+	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		
+		if(!input.allContents.toIterable.filter(Model).empty) {
+			generateStubFiles(fsa)
+			
+			for (m : input.allContents.toIterable.filter(Model)) {
+				fsa.generateFile(mainFilePath, m.compile)
+			}
+		}
+	}
+	
+	def generateStubFiles(IFileSystemAccess2 fsa) {
+		var itr = stubFilesMap.entrySet().iterator();
+		while(itr.hasNext()) {
+			var entry = itr.next()
+			var filepath = entry.key
+			var content = entry.value
+			fsa.generateFile(filepath, content)
+		}
+	}
+	
+	def compile(Model e) 
+		''' 
+		import java.utils.*;
+		import basicCommands.*;        
+
+        «IF e.imports!== null»
+                 « FOR f:e.imports»
+         		 «f.compile»
+                 «ENDFOR»
+        «ENDIF»
+
+		public static class Main {
+
+            «FOR f : e.m.mainbody »
+       		«f.toString»
+            «ENDFOR»
+		}
+		
+        «IF e.fonctions!== null»
+    		« FOR f:e.fonctions»
+                     «f.compile»
+            «ENDFOR»
+       «ENDIF»
+        '''
+        
+    def compile(FonctionDecl e)
+    	'''
+		public static void «e.name»(){
+			//TODO
+			
+		}
+    	'''
+        
+    def compile(Import e) 
+        '''
+		import  «e.importURI».java;
+        '''
+	
+	def contentDroneRuntimePrintClass() {
+		'''
+		package fr.roboticiens.runtime;
+		
+		import fr.roboticiens.gen.commandes.Atterrir;
+		import fr.roboticiens.gen.commandes.Avancer;
+		import fr.roboticiens.gen.commandes.Decoller;
+		import fr.roboticiens.gen.commandes.Descendre;
+		import fr.roboticiens.gen.commandes.Droite;
+		import fr.roboticiens.gen.commandes.Gauche;
+		import fr.roboticiens.gen.commandes.Monter;
+		import fr.roboticiens.gen.commandes.Pause;
+		import fr.roboticiens.gen.commandes.Reculer;
+		import fr.roboticiens.gen.commandes.RotationDroite;
+		import fr.roboticiens.gen.commandes.RotationGauche;
+		import fr.roboticiens.gen.fonction.FonctionCall;
+		import fr.roboticiens.gen.main.MainBloc;
+		import fr.roboticiens.gen.paralleles.Parallele;
+		import fr.roboticiens.gen.prologue.Prologue;
+		
+		public class DroneRuntimePrint implements DroneRuntime {
+		
+			@Override
+			public void execPrologue(Prologue p) {
+				System.out.println("Execution de " + p);
+			}
+		
+			@Override
+			public void execMainBloc(MainBloc m) {
+				System.out.println("Execution de " + m);
+			}
+		
+			@Override
+			public void execDecoller(Decoller d) {
+				System.out.println("Execution de " + d);
+			}
+		
+			@Override
+			public void execAtterrir(Atterrir a) {
+				System.out.println("Execution de " + a);
+			}
+		
+			@Override
+			public void execAvancer(Avancer a) {
+				System.out.println("Execution de " + a);
+			}
+		
+			@Override
+			public void execReculer(Reculer r) {
+				System.out.println("Execution de " + r);
+			}
+		
+			@Override
+			public void execMonter(Monter m) {
+				System.out.println("Execution de " + m);
+			}
+		
+			@Override
+			public void execDescendre(Descendre d) {
+				System.out.println("Execution de " + d);
+			}
+		
+			@Override
+			public void execGauche(Gauche g) {
+				System.out.println("Execution de " + g);
+			}
+		
+			@Override
+			public void execDroite(Droite d) {
+				System.out.println("Execution de " + d);
+			}
+		
+			@Override
+			public void execRotationGauche(RotationGauche rg) {
+				System.out.println("Execution de " + rg);
+			}
+		
+			@Override
+			public void execRotationDroite(RotationDroite rd) {
+				System.out.println("Execution de " + rd);
+			}
+		
+			@Override
+			public void execPause(Pause p) {
+				System.out.println("Execution de " + p);
+			}
+		
+			@Override
+			public void execParallele(Parallele p) {
+				System.out.println("Execution de " + p);
+			}
+		
+			@Override
+			public void execFonctionCall(FonctionCall fc) {
+				System.out.println("Execution de " + fc);
+			}
+		
+		}
+		'''
+	}
+	
+	def contentDroneRuntimeExecutableClass() {
+		'''
+		package fr.roboticiens.runtime;
+		
+		public interface DroneRuntimeExecutable {
+			
+			public void execute(DroneRuntime droneRuntime);
+		
+		}
+		'''
+	}
+	
+	def contentDroneRuntimeClass() {
+		'''
+		package fr.roboticiens.runtime;
+		
+		import fr.roboticiens.gen.commandes.Atterrir;
+		import fr.roboticiens.gen.commandes.Avancer;
+		import fr.roboticiens.gen.commandes.Decoller;
+		import fr.roboticiens.gen.commandes.Descendre;
+		import fr.roboticiens.gen.commandes.Droite;
+		import fr.roboticiens.gen.commandes.Gauche;
+		import fr.roboticiens.gen.commandes.Monter;
+		import fr.roboticiens.gen.commandes.Pause;
+		import fr.roboticiens.gen.commandes.Reculer;
+		import fr.roboticiens.gen.commandes.RotationDroite;
+		import fr.roboticiens.gen.commandes.RotationGauche;
+		import fr.roboticiens.gen.fonction.FonctionCall;
+		import fr.roboticiens.gen.main.MainBloc;
+		import fr.roboticiens.gen.paralleles.Parallele;
+		import fr.roboticiens.gen.prologue.Prologue;
+		
+		public interface DroneRuntime {
+			
+			public void execPrologue(Prologue p);
+			
+			public void execMainBloc(MainBloc m);
+			
+			public void execDecoller(Decoller d);
+			public void execAtterrir(Atterrir a);
+			
+			public void execAvancer(Avancer a);
+			public void execReculer(Reculer r);
+			public void execMonter(Monter m);
+			public void execDescendre(Descendre d);
+			public void execGauche(Gauche g);
+			public void execDroite(Droite d);
+			public void execRotationGauche(RotationGauche rg);
+			public void execRotationDroite(RotationDroite rd);
+			public void execPause(Pause p);
+			
+			public void execParallele(Parallele p);
+			
+			public void execFonctionCall(FonctionCall fc);
+			
+		}
+		'''
+	}
+	
+	def contentSecondeClass() {
+		'''
+		package fr.roboticiens.gen.types;
+		
+		public class Seconde {
+			
+			private final int value;
+		
+			public Seconde(final int value) {
+				this.value = value;
+			}
+		
+			/**
+			 * @return the value
+			 */
+			public Integer getValue() {
+				return value;
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Seconde [value=" + value + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentPourcentClass() {
+		'''
+		package fr.roboticiens.gen.types;
+		
+		public class Pourcent {
+			
+			private final int value;
+		
+			public Pourcent(final int value) {
+				this.value = value;
+			}
+		
+			/**
+			 * @return the value
+			 */
+			public Integer getValue() {
+				return value;
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Pourcent [value=" + value + "]";
+			}
+		
+		}
+		'''
+	}
+	
+	def contentPrologueClass() {
+		'''
+		package fr.roboticiens.gen.prologue;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.runtime.DroneRuntime;
+		import fr.roboticiens.runtime.DroneRuntimeExecutable;
+		
+		public class Prologue implements DroneRuntimeExecutable {
+			
+			private final Pourcent vitesseVerticale;
+			private final Pourcent vitesseDeplacement;
+			private final Pourcent vitesseRotation;
+			private final int hauteurMax;
+			private final int eloignementMax;
+			
+			public Prologue(final Pourcent vitesseVerticale, final Pourcent vitesseDeplacement, 
+					final Pourcent vitesseRotation, final int hauteurMax, final int eloignementMax) {
+				
+				this.vitesseVerticale = vitesseVerticale;
+				this.vitesseDeplacement = vitesseDeplacement;
+				this.vitesseRotation = vitesseRotation;
+				this.hauteurMax = hauteurMax;
+				this.eloignementMax = eloignementMax;
+			}
+		
+			/**
+			 * @return the vitesseVerticale
+			 */
+			public Pourcent getVitesseVerticale() {
+				return vitesseVerticale;
+			}
+		
+			/**
+			 * @return the vitesseDeplacement
+			 */
+			public Pourcent getVitesseDeplacement() {
+				return vitesseDeplacement;
+			}
+		
+			/**
+			 * @return the vitesseRotation
+			 */
+			public Pourcent getVitesseRotation() {
+				return vitesseRotation;
+			}
+		
+			/**
+			 * @return the hauteurMax
+			 */
+			public int getHauteurMax() {
+				return hauteurMax;
+			}
+		
+			/**
+			 * @return the eloignementMax
+			 */
+			public int getEloignementMax() {
+				return eloignementMax;
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execPrologue(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Prologue [vitesseVerticale=" + vitesseVerticale + ", vitesseDeplacement=" + vitesseDeplacement + ", vitesseRotation=" + vitesseRotation + ", hauteurMax="
+						+ hauteurMax + ", eloignementMax=" + eloignementMax + "]";
+			}
+		}
+		'''
+	}
+	
+	def contentParalleleClass() {
+		'''
+		package fr.roboticiens.gen.paralleles;
+		
+		import java.util.HashSet;
+		import java.util.Set;
+		
+		import fr.roboticiens.gen.body.BodyInstruction;
+		import fr.roboticiens.gen.commandes.CommandeParallelisable;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Parallele implements BodyInstruction {
+			
+			private Set<CommandeParallelisable> commandes;
+			
+			public Parallele() {
+				this.commandes = new HashSet<CommandeParallelisable>();
+			}
+			
+			public boolean addCommande(final CommandeParallelisable cp) {
+				return commandes.add(cp);
+			}
+		
+			/**
+			 * @return the commandes
+			 */
+			public Set<CommandeParallelisable> getCommandes() {
+				return commandes;
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execParallele(this);
+			}
+		}
+		'''
+	}
+	
+	def contentMainBlocClass() {
+		'''
+		package fr.roboticiens.gen.main;
+		
+		import java.util.Set;
+		
+		import fr.roboticiens.gen.body.BodyInstruction;
+		import fr.roboticiens.gen.commandes.Atterrir;
+		import fr.roboticiens.gen.commandes.Decoller;
+		import fr.roboticiens.runtime.DroneRuntime;
+		import fr.roboticiens.runtime.DroneRuntimeExecutable;
+		
+		public class MainBloc implements DroneRuntimeExecutable {
+			
+			private final Decoller decoller;
+			private Set<BodyInstruction> body;
+			private final Atterrir atterrir;
+			
+			public MainBloc(final Decoller decoller, final Atterrir atterrir) {
+				this.decoller = decoller;
+				this.atterrir = atterrir;
+			}
+			
+			public boolean add(BodyInstruction inst) {
+				return body.add(inst);
+			}
+		
+			/**
+			 * @return the decoller
+			 */
+			public Decoller getDecoller() {
+				return decoller;
+			}
+			
+			/**
+			 * @return the body
+			 */
+			public Set<BodyInstruction> getBody() {
+				return body;
+			}
+		
+			/**
+			 * @return the atterrir
+			 */
+			public Atterrir getAtterrir() {
+				return atterrir;
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execMainBloc(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "MainBloc [decoller=" + decoller + ", body=" + body + ", atterrir=" + atterrir + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentImportClass() {
+		'''
+		package fr.roboticiens.gen.imports;
+		
+		public class Import {
+			
+			private final String filename;
+		
+			public Import(final String filename) {
+				super();
+				this.filename = filename;
+			}
+		
+			/**
+			 * @return the filename
+			 */
+			public String getFilename() {
+				return filename;
+			}
+			
+		}
+		'''
+	}
+	
+	def contentFonctionDeclarationClass() {
+		'''
+		package fr.roboticiens.gen.fonction;
+		
+		import java.util.HashSet;
+		import java.util.Set;
+		
+		import fr.roboticiens.gen.body.BodyInstruction;
+		
+		public class FonctionDeclaration {
+			
+			private final String name;
+			private Set<BodyInstruction> body;
+			
+			public FonctionDeclaration(final String name) {
+				this.name = name;
+				this.body = new HashSet<BodyInstruction>();
+			}
+			
+			public boolean add(final BodyInstruction inst) {
+				return body.add(inst);
+			}
+		
+			/**
+			 * @return the name
+			 */
+			public String getName() {
+				return name;
+			}
+			
+			/**
+			 * @return the body
+			 */
+			public Set<BodyInstruction> getBody() {
+				return body;
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "FonctionDeclaration [name=" + name + ", body=" + body + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentFonctionCallClass() {
+		'''
+		package fr.roboticiens.gen.fonction;
+		
+		import fr.roboticiens.gen.body.BodyInstruction;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class FonctionCall implements BodyInstruction {
+			
+			private final FonctionDeclaration reference;
+		
+			public FonctionCall(final FonctionDeclaration reference) {
+				this.reference = reference;
+			}
+		
+			/**
+			 * @return the reference
+			 */
+			public FonctionDeclaration getReference() {
+				return reference;
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execFonctionCall(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "FonctionCall [reference=" + reference.getName() + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentRotationGaucheClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class RotationGauche extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public RotationGauche(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execRotationGauche(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "RotationGauche [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+		
+		}
+		'''
+	}
+	
+	def contentRotationDroiteClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class RotationDroite extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public RotationDroite(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execRotationDroite(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "RotationDroite [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+		
+		}
+		'''
+	}
+	
+	def contentReculerClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Reculer extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Reculer(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execReculer(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Reculer [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+		
+		}
+		'''
+	}
+	
+	def contentPauseClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Pause implements CommandeBasique {
+			
+			protected final Seconde duree;
+			
+			public Pause(final Seconde duree) {
+				this.duree = duree;
+			}
+		
+			/**
+			 * @return the duree
+			 */
+			public Seconde getDuree() {
+				return duree;
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execPause(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Pause [duree=" + duree + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentMonterClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Monter extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Monter(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execMonter(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Monter [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentGaucheClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Gauche extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Gauche(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execGauche(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Gauche [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentDroiteClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Droite extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Droite(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execDroite(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Droite [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentDescendreClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Descendre extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Descendre(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execDescendre(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Descendre [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentDecollerClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Decoller implements CommandeBasique {
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execDecoller(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Decoller []";
+			}
+		
+		}
+		'''
+	}
+	
+	def contentCommandeParallelisableClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		public interface CommandeParallelisable {
+		
+		}
+		'''
+	}
+	
+	def contentCommandeBasiqueClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.body.BodyInstruction;
+		
+		public interface CommandeBasique extends BodyInstruction {
+		
+		}
+		'''
+	}
+	
+	def contentCommandeAvecDureeVitesseClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		
+		public abstract class CommandeAvecDureeVitesse {
+			
+			protected final Seconde duree;
+			protected final Pourcent vitesse;
+			
+			public CommandeAvecDureeVitesse(final Seconde duree, final Pourcent vitesse) {
+				this.duree = duree;
+				this.vitesse = vitesse;
+			}
+		
+			/**
+			 * @return the duree
+			 */
+			public Seconde getDuree() {
+				return duree;
+			}
+		
+			/**
+			 * @return the vitesse
+			 */
+			public Pourcent getVitesse() {
+				return vitesse;
+			}
+		
+		}
+		'''
+	}
+	
+	def contentAvancerClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Avancer extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
+		
+			public Avancer(final Seconde duree, final Pourcent vitesse) {
+				super(duree, vitesse);
+			}
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execAvancer(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Avancer [duree=" + duree + ", vitesse=" + vitesse + "]";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentAtterrirClass() {
+		'''
+		package fr.roboticiens.gen.commandes;
+		
+		import fr.roboticiens.runtime.DroneRuntime;
+		
+		public class Atterrir implements CommandeBasique {
+		
+			@Override
+			public void execute(DroneRuntime droneRuntime) {
+				droneRuntime.execAtterrir(this);
+			}
+		
+			/* (non-Javadoc)
+			 * @see java.lang.Object#toString()
+			 */
+			@Override
+			public String toString() {
+				return "Atterrir []";
+			}
+			
+		}
+		'''
+	}
+	
+	def contentBodyInstructionClass() {
+		'''
+		package fr.roboticiens.gen.body;
+		
+		import fr.roboticiens.runtime.DroneRuntimeExecutable;
+		
+		public interface BodyInstruction extends DroneRuntimeExecutable {
+		
+		}
+		'''
+	}
+	
+	
+	/*var commandList = newArrayList('Decoller','Atterrir','Gauche','Droite','Avancer','Reculer','Monter','Descendre','RotationGauche','RotationDroite')
 	
  	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
  		
@@ -52,8 +1063,7 @@ public static void "+e+"() implements Commandes{
  		
 
                 for (e : resource.allContents.toIterable.filter(Model)) {
-   			fsa.generateFile("Main.java",e.compile)
-   			
+   					fsa.generateFile("Main.java",e.compile)
                 }
         }
         
@@ -99,5 +1109,5 @@ public static void "+e+"() implements Commandes{
         		import  «e.importURI».java;
         '''
 
-	
+	*/
 }
