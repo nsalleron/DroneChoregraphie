@@ -3,11 +3,20 @@
  */
 package fr.idmteam1.idmproject.dronedsl.generator;
 
+import com.google.common.collect.Iterables;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
+import java.util.ArrayList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -16,44 +25,106 @@ import org.eclipse.xtext.generator.IGeneratorContext;
  */
 @SuppressWarnings("all")
 public class DroneDSLGenerator extends AbstractGenerator {
+  private ArrayList<String> commandList = CollectionLiterals.<String>newArrayList("Decoller", "Atterrir", "Gauche", "Droite", "Avancer", "Reculer", "Monter", "Descendre", "RotationGauche", "RotationDroite");
+  
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    fsa.generateFile("basicCommands/Commandes.java", 
+      "import java.lang.*;\npublic interface Commandes {\n                execute(Second a, Pourcent b)\n");
+    for (final String e : this.commandList) {
+      fsa.generateFile((("basicCommands/" + e) + ".java"), 
+        (("import Second.java;\nimport Pourcent.java;\nimport java.utils.*;\n                \npublic static void " + e) + "() implements Commandes{\n\n                @Override\n                public static void execute(Second a, Pourcent b){\n                                //TODO\n                }\n\n\n\n\n}"));
+    }
+    Iterable<Model> _filter = Iterables.<Model>filter(IteratorExtensions.<EObject>toIterable(resource.getAllContents()), Model.class);
+    for (final Model e_1 : _filter) {
+      fsa.generateFile("Main.java", this.compile(e_1));
+    }
   }
   
-  public void generateMainFile(final IFileSystemAccess2 fsa) {
-    fsa.generateFile("main.main_drone", this.mainContent());
-  }
-  
-  public CharSequence mainContent() {
+  public CharSequence compile(final Model e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("// generated mandatory constants");
     _builder.newLine();
-    _builder.append("define vitesse_hauteur_max 100%");
+    _builder.append("import java.utils.*;");
     _builder.newLine();
-    _builder.append("define vitesse_deplacement_max 100%");
-    _builder.newLine();
-    _builder.append("define vitesse_rotation_max 100%");
-    _builder.newLine();
-    _builder.append("define hauteur_max 3");
-    _builder.newLine();
-    _builder.append("define eloignement_max 4");
+    _builder.append("import basicCommands.*;        ");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("// generated pseudo DroneDSL main");
+    {
+      EList<Import> _imports = e.getImports();
+      boolean _tripleNotEquals = (_imports != null);
+      if (_tripleNotEquals) {
+        {
+          EList<Import> _imports_1 = e.getImports();
+          for(final Import f : _imports_1) {
+            CharSequence _compile = this.compile(f);
+            _builder.append(_compile);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
     _builder.newLine();
-    _builder.append("main {");
+    _builder.append("public static class Main{");
+    _builder.newLine();
+    _builder.newLine();
+    {
+      EList<EObject> _mainbody = e.getM().getMainbody();
+      for(final EObject f_1 : _mainbody) {
+        String _string = f_1.toString();
+        _builder.append(_string);
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("                ");
+    _builder.append("}");
+    _builder.newLine();
+    {
+      EList<FonctionDecl> _fonctions = e.getFonctions();
+      boolean _tripleNotEquals_1 = (_fonctions != null);
+      if (_tripleNotEquals_1) {
+        {
+          EList<FonctionDecl> _fonctions_1 = e.getFonctions();
+          for(final FonctionDecl f_2 : _fonctions_1) {
+            CharSequence _compile_1 = this.compile(f_2);
+            _builder.append(_compile_1);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    _builder.append("                ");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final FonctionDecl e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("public static void ");
+    String _name = e.getName();
+    _builder.append(_name);
+    _builder.append("(){");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("//TODO");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("decoller()");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("// TODO");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("atterrir()");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final Import e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("import  ");
+    String _importURI = e.getImportURI();
+    _builder.append(_importURI);
+    _builder.append(".java;");
+    _builder.newLineIfNotEmpty();
     return _builder;
   }
 }

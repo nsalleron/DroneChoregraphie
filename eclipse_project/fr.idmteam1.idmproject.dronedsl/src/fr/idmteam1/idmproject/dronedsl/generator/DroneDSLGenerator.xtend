@@ -3,6 +3,9 @@
  */
 package fr.idmteam1.idmproject.dronedsl.generator
 
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Import
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Model
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
@@ -14,35 +17,87 @@ import org.eclipse.xtext.generator.IGeneratorContext
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class DroneDSLGenerator extends AbstractGenerator {
+	
+	
+	var commandList = newArrayList('Decoller','Atterrir','Gauche','Droite','Avancer','Reculer','Monter','Descendre','RotationGauche','RotationDroite')
+	
+ 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+ 		
+ 		        fsa.generateFile("basicCommands/Commandes.java",
+ "import java.lang.*;
+public interface Commandes {
+                execute(Second a, Pourcent b)
+")
+ 		
+ 		
+ 		//Commands
+ 		for(e : commandList){
+ 			fsa.generateFile("basicCommands/"+e+".java",
+"import Second.java;
+import Pourcent.java;
+import java.utils.*;
+                
+public static void "+e+"() implements Commandes{
 
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
-//		generateMainFile(fsa)
-	}
-	
-	def generateMainFile(IFileSystemAccess2 fsa) {
-		fsa.generateFile('main.main_drone', mainContent())
-	}
-	
-	def mainContent() {
-		'''
-		// generated mandatory constants
-		define vitesse_hauteur_max 100%
-		define vitesse_deplacement_max 100%
-		define vitesse_rotation_max 100%
-		define hauteur_max 3
-		define eloignement_max 4
+                @Override
+                public static void execute(Second a, Pourcent b){
+                                //TODO
+                }
+
+
+
+
+}");
+ 		}
+ 		
+
+                for (e : resource.allContents.toIterable.filter(Model)) {
+   			fsa.generateFile("Main.java",e.compile)
+   			
+                }
+        }
+        
+        
+   
+   def compile(Model e) ''' 
 		
-		// generated pseudo DroneDSL main
-		main {
-			decoller()
-			// TODO
-			atterrir()
-		}
-		'''
-	}
+		import java.utils.*;
+		import basicCommands.*;        
+
+                «IF e.imports!== null»
+                         « FOR f:e.imports»
+                 		 «f.compile»
+                         «ENDFOR»
+                «ENDIF»
+
+		public static class Main{
+
+                «FOR f : e.m.mainbody »
+           		«f.toString»
+                «ENDFOR»
+                }
+                «IF e.fonctions!== null»
+                		« FOR f:e.fonctions»
+                                 «f.compile»
+                        «ENDFOR»
+           «ENDIF»
+                
+                
+        '''
+        
+        def compile(FonctionDecl e)'''
+        		public static void «e.name»(){
+        			//TODO
+        			
+        			
+        		}
+        '''
+
+        
+        
+        def compile(Import e) '''
+        		import  «e.importURI».java;
+        '''
+
+	
 }
