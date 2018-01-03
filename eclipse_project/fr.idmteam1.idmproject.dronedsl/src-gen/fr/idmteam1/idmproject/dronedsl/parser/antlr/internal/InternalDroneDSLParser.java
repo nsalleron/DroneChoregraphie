@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INCLUDE", "RULE_SECONDE", "RULE_POURCENT", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "'<'", "'>'", "'define'", "'vitesse_hauteur_max'", "'vitesse_deplacement_max'", "'vitesse_rotation_max'", "'hauteur_max'", "'eloignement_max'", "'Seconde'", "'='", "'Pourcent'", "'decoller()'", "'atterrir()'", "'monter('", "','", "')'", "'descendre('", "'avancer('", "'reculer('", "'gauche('", "'droite('", "'rotation_gauche('", "'rotation_droite('", "'func'", "'()'", "'{'", "'}'", "'main'", "'&'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INCLUDE", "RULE_SECONDE", "RULE_POURCENT", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "'<'", "'>'", "'define'", "'vitesse_hauteur_max'", "'vitesse_deplacement_max'", "'vitesse_rotation_max'", "'hauteur_max'", "'eloignement_max'", "'Seconde'", "'='", "'Pourcent'", "'decoller()'", "'atterrir()'", "'monter('", "','", "')'", "'descendre('", "'avancer('", "'reculer('", "'gauche('", "'droite('", "'rotation_gauche('", "'rotation_droite('", "'pause('", "'func'", "'()'", "'{'", "'}'", "'main'", "'&'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -59,6 +59,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     public static final int T__32=32;
     public static final int RULE_WS=12;
     public static final int RULE_ANY_OTHER=13;
+    public static final int T__44=44;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
@@ -281,7 +282,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==38) ) {
+                if ( (LA2_0==39) ) {
                     alt2=1;
                 }
 
@@ -2789,7 +2790,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMonter"
-    // InternalDroneDSL.g:1045:1: ruleMonter returns [EObject current=null] : (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1045:1: ruleMonter returns [EObject current=null] : (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleMonter() throws RecognitionException {
         EObject current = null;
 
@@ -2798,18 +2799,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_verticale_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1051:2: ( (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1052:2: (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1051:2: ( (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1052:2: (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1052:2: (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1053:3: otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1052:2: (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1053:3: otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,28,FOLLOW_14); 
 
@@ -2850,17 +2851,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getMonterAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1080:3: ( (lv_vitesse_verticale_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1081:4: (lv_vitesse_verticale_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1080:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1081:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1081:4: (lv_vitesse_verticale_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1082:5: lv_vitesse_verticale_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1081:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1082:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getMonterAccess().getVitesse_verticalePourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getMonterAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_verticale_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -2870,8 +2871,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_verticale",
-            						lv_vitesse_verticale_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -2944,7 +2945,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDescendre"
-    // InternalDroneDSL.g:1114:1: ruleDescendre returns [EObject current=null] : (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1114:1: ruleDescendre returns [EObject current=null] : (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleDescendre() throws RecognitionException {
         EObject current = null;
 
@@ -2953,18 +2954,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_verticale_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1120:2: ( (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1121:2: (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1120:2: ( (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1121:2: (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1121:2: (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1122:3: otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_verticale_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1121:2: (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1122:3: otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,31,FOLLOW_14); 
 
@@ -3005,17 +3006,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDescendreAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1149:3: ( (lv_vitesse_verticale_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1150:4: (lv_vitesse_verticale_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1149:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1150:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1150:4: (lv_vitesse_verticale_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1151:5: lv_vitesse_verticale_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1150:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1151:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getDescendreAccess().getVitesse_verticalePourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getDescendreAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_verticale_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3025,8 +3026,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_verticale",
-            						lv_vitesse_verticale_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3099,7 +3100,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAvancer"
-    // InternalDroneDSL.g:1183:1: ruleAvancer returns [EObject current=null] : (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1183:1: ruleAvancer returns [EObject current=null] : (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleAvancer() throws RecognitionException {
         EObject current = null;
 
@@ -3108,18 +3109,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_deplacement_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1189:2: ( (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1190:2: (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1189:2: ( (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1190:2: (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1190:2: (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1191:3: otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1190:2: (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1191:3: otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,32,FOLLOW_14); 
 
@@ -3160,17 +3161,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getAvancerAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1218:3: ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1219:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1218:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1219:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1219:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1220:5: lv_vitesse_deplacement_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1219:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1220:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getAvancerAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getAvancerAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_deplacement_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3180,8 +3181,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_deplacement",
-            						lv_vitesse_deplacement_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3254,7 +3255,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReculer"
-    // InternalDroneDSL.g:1252:1: ruleReculer returns [EObject current=null] : (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1252:1: ruleReculer returns [EObject current=null] : (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleReculer() throws RecognitionException {
         EObject current = null;
 
@@ -3263,18 +3264,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_deplacement_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1258:2: ( (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1259:2: (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1258:2: ( (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1259:2: (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1259:2: (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1260:3: otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1259:2: (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1260:3: otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,33,FOLLOW_14); 
 
@@ -3315,17 +3316,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getReculerAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1287:3: ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1288:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1287:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1288:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1288:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1289:5: lv_vitesse_deplacement_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1288:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1289:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getReculerAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getReculerAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_deplacement_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3335,8 +3336,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_deplacement",
-            						lv_vitesse_deplacement_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3409,7 +3410,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGauche"
-    // InternalDroneDSL.g:1321:1: ruleGauche returns [EObject current=null] : (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1321:1: ruleGauche returns [EObject current=null] : (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleGauche() throws RecognitionException {
         EObject current = null;
 
@@ -3418,18 +3419,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_deplacement_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1327:2: ( (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1328:2: (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1327:2: ( (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1328:2: (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1328:2: (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1329:3: otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1328:2: (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1329:3: otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,34,FOLLOW_14); 
 
@@ -3470,17 +3471,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getGaucheAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1356:3: ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1357:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1356:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1357:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1357:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1358:5: lv_vitesse_deplacement_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1357:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1358:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getGaucheAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getGaucheAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_deplacement_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3490,8 +3491,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_deplacement",
-            						lv_vitesse_deplacement_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3564,7 +3565,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDroite"
-    // InternalDroneDSL.g:1390:1: ruleDroite returns [EObject current=null] : (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1390:1: ruleDroite returns [EObject current=null] : (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleDroite() throws RecognitionException {
         EObject current = null;
 
@@ -3573,18 +3574,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_deplacement_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1396:2: ( (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1397:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1396:2: ( (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1397:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1397:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1398:3: otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1397:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1398:3: otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,35,FOLLOW_14); 
 
@@ -3625,17 +3626,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDroiteAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1425:3: ( (lv_vitesse_deplacement_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1426:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1425:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1426:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1426:4: (lv_vitesse_deplacement_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1427:5: lv_vitesse_deplacement_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1426:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1427:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getDroiteAccess().getVitesse_deplacementPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getDroiteAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_deplacement_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3645,8 +3646,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_deplacement",
-            						lv_vitesse_deplacement_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3719,7 +3720,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRotationGauche"
-    // InternalDroneDSL.g:1459:1: ruleRotationGauche returns [EObject current=null] : (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1459:1: ruleRotationGauche returns [EObject current=null] : (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleRotationGauche() throws RecognitionException {
         EObject current = null;
 
@@ -3728,18 +3729,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_rotation_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1465:2: ( (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1466:2: (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1465:2: ( (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1466:2: (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1466:2: (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1467:3: otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1466:2: (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1467:3: otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,36,FOLLOW_14); 
 
@@ -3780,17 +3781,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getRotationGaucheAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1494:3: ( (lv_vitesse_rotation_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1495:4: (lv_vitesse_rotation_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1494:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1495:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1495:4: (lv_vitesse_rotation_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1496:5: lv_vitesse_rotation_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1495:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1496:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getRotationGaucheAccess().getVitesse_rotationPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getRotationGaucheAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_rotation_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3800,8 +3801,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_rotation",
-            						lv_vitesse_rotation_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -3874,7 +3875,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRotationDroite"
-    // InternalDroneDSL.g:1528:1: ruleRotationDroite returns [EObject current=null] : (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
+    // InternalDroneDSL.g:1528:1: ruleRotationDroite returns [EObject current=null] : (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) ;
     public final EObject ruleRotationDroite() throws RecognitionException {
         EObject current = null;
 
@@ -3883,18 +3884,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         EObject lv_duree_1_0 = null;
 
-        EObject lv_vitesse_rotation_3_0 = null;
+        EObject lv_vitesse_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1534:2: ( (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
-            // InternalDroneDSL.g:1535:2: (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1534:2: ( (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' ) )
+            // InternalDroneDSL.g:1535:2: (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             {
-            // InternalDroneDSL.g:1535:2: (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')' )
-            // InternalDroneDSL.g:1536:3: otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_rotation_3_0= rulePourcentExp ) ) otherlv_4= ')'
+            // InternalDroneDSL.g:1535:2: (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
+            // InternalDroneDSL.g:1536:3: otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,37,FOLLOW_14); 
 
@@ -3935,17 +3936,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getRotationDroiteAccess().getCommaKeyword_2());
             		
-            // InternalDroneDSL.g:1563:3: ( (lv_vitesse_rotation_3_0= rulePourcentExp ) )
-            // InternalDroneDSL.g:1564:4: (lv_vitesse_rotation_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1563:3: ( (lv_vitesse_3_0= rulePourcentExp ) )
+            // InternalDroneDSL.g:1564:4: (lv_vitesse_3_0= rulePourcentExp )
             {
-            // InternalDroneDSL.g:1564:4: (lv_vitesse_rotation_3_0= rulePourcentExp )
-            // InternalDroneDSL.g:1565:5: lv_vitesse_rotation_3_0= rulePourcentExp
+            // InternalDroneDSL.g:1564:4: (lv_vitesse_3_0= rulePourcentExp )
+            // InternalDroneDSL.g:1565:5: lv_vitesse_3_0= rulePourcentExp
             {
 
-            					newCompositeNode(grammarAccess.getRotationDroiteAccess().getVitesse_rotationPourcentExpParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getRotationDroiteAccess().getVitessePourcentExpParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_22);
-            lv_vitesse_rotation_3_0=rulePourcentExp();
+            lv_vitesse_3_0=rulePourcentExp();
 
             state._fsp--;
 
@@ -3955,8 +3956,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_rotation",
-            						lv_vitesse_rotation_3_0,
+            						"vitesse",
+            						lv_vitesse_3_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentExp");
             					afterParserOrEnumRuleCall();
             				
@@ -4029,7 +4030,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePause"
-    // InternalDroneDSL.g:1597:1: rulePause returns [EObject current=null] : (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' ) ;
+    // InternalDroneDSL.g:1597:1: rulePause returns [EObject current=null] : (otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' ) ;
     public final EObject rulePause() throws RecognitionException {
         EObject current = null;
 
@@ -4042,15 +4043,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1603:2: ( (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' ) )
-            // InternalDroneDSL.g:1604:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' )
+            // InternalDroneDSL.g:1603:2: ( (otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' ) )
+            // InternalDroneDSL.g:1604:2: (otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' )
             {
-            // InternalDroneDSL.g:1604:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' )
-            // InternalDroneDSL.g:1605:3: otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')'
+            // InternalDroneDSL.g:1604:2: (otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' )
+            // InternalDroneDSL.g:1605:3: otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_14); 
+            otherlv_0=(Token)match(input,38,FOLLOW_14); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getPauseAccess().getDroiteKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getPauseAccess().getPauseKeyword_0());
             		
             // InternalDroneDSL.g:1609:3: ( (lv_duree_1_0= ruleSecondeExp ) )
             // InternalDroneDSL.g:1610:4: (lv_duree_1_0= ruleSecondeExp )
@@ -4109,8 +4110,136 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "rulePause"
 
 
+    // $ANTLR start "entryRuleDecollerAtterrir"
+    // InternalDroneDSL.g:1636:1: entryRuleDecollerAtterrir returns [EObject current=null] : iv_ruleDecollerAtterrir= ruleDecollerAtterrir EOF ;
+    public final EObject entryRuleDecollerAtterrir() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDecollerAtterrir = null;
+
+
+        try {
+            // InternalDroneDSL.g:1636:57: (iv_ruleDecollerAtterrir= ruleDecollerAtterrir EOF )
+            // InternalDroneDSL.g:1637:2: iv_ruleDecollerAtterrir= ruleDecollerAtterrir EOF
+            {
+             newCompositeNode(grammarAccess.getDecollerAtterrirRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleDecollerAtterrir=ruleDecollerAtterrir();
+
+            state._fsp--;
+
+             current =iv_ruleDecollerAtterrir; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleDecollerAtterrir"
+
+
+    // $ANTLR start "ruleDecollerAtterrir"
+    // InternalDroneDSL.g:1643:1: ruleDecollerAtterrir returns [EObject current=null] : (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir ) ;
+    public final EObject ruleDecollerAtterrir() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_Decoller_0 = null;
+
+        EObject this_Atterrir_1 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalDroneDSL.g:1649:2: ( (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir ) )
+            // InternalDroneDSL.g:1650:2: (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir )
+            {
+            // InternalDroneDSL.g:1650:2: (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==26) ) {
+                alt7=1;
+            }
+            else if ( (LA7_0==27) ) {
+                alt7=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 7, 0, input);
+
+                throw nvae;
+            }
+            switch (alt7) {
+                case 1 :
+                    // InternalDroneDSL.g:1651:3: this_Decoller_0= ruleDecoller
+                    {
+
+                    			newCompositeNode(grammarAccess.getDecollerAtterrirAccess().getDecollerParserRuleCall_0());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_Decoller_0=ruleDecoller();
+
+                    state._fsp--;
+
+
+                    			current = this_Decoller_0;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalDroneDSL.g:1660:3: this_Atterrir_1= ruleAtterrir
+                    {
+
+                    			newCompositeNode(grammarAccess.getDecollerAtterrirAccess().getAtterrirParserRuleCall_1());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_Atterrir_1=ruleAtterrir();
+
+                    state._fsp--;
+
+
+                    			current = this_Atterrir_1;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleDecollerAtterrir"
+
+
     // $ANTLR start "entryRuleCommandeBasique"
-    // InternalDroneDSL.g:1636:1: entryRuleCommandeBasique returns [EObject current=null] : iv_ruleCommandeBasique= ruleCommandeBasique EOF ;
+    // InternalDroneDSL.g:1672:1: entryRuleCommandeBasique returns [EObject current=null] : iv_ruleCommandeBasique= ruleCommandeBasique EOF ;
     public final EObject entryRuleCommandeBasique() throws RecognitionException {
         EObject current = null;
 
@@ -4118,8 +4247,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:1636:56: (iv_ruleCommandeBasique= ruleCommandeBasique EOF )
-            // InternalDroneDSL.g:1637:2: iv_ruleCommandeBasique= ruleCommandeBasique EOF
+            // InternalDroneDSL.g:1672:56: (iv_ruleCommandeBasique= ruleCommandeBasique EOF )
+            // InternalDroneDSL.g:1673:2: iv_ruleCommandeBasique= ruleCommandeBasique EOF
             {
              newCompositeNode(grammarAccess.getCommandeBasiqueRule()); 
             pushFollow(FOLLOW_1);
@@ -4146,237 +4275,249 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCommandeBasique"
-    // InternalDroneDSL.g:1643:1: ruleCommandeBasique returns [EObject current=null] : (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir | this_Avancer_2= ruleAvancer | this_Reculer_3= ruleReculer | this_Monter_4= ruleMonter | this_Descendre_5= ruleDescendre | this_Gauche_6= ruleGauche | this_Droite_7= ruleDroite | this_RotationGauche_8= ruleRotationGauche | this_RotationDroite_9= ruleRotationDroite | this_Pause_10= rulePause ) ;
+    // InternalDroneDSL.g:1679:1: ruleCommandeBasique returns [EObject current=null] : (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer | this_Monter_2= ruleMonter | this_Descendre_3= ruleDescendre | this_Gauche_4= ruleGauche | this_Droite_5= ruleDroite | this_RotationGauche_6= ruleRotationGauche | this_RotationDroite_7= ruleRotationDroite | this_Pause_8= rulePause ) ;
     public final EObject ruleCommandeBasique() throws RecognitionException {
         EObject current = null;
 
-        EObject this_Decoller_0 = null;
+        EObject this_Avancer_0 = null;
 
-        EObject this_Atterrir_1 = null;
+        EObject this_Reculer_1 = null;
 
-        EObject this_Avancer_2 = null;
+        EObject this_Monter_2 = null;
 
-        EObject this_Reculer_3 = null;
+        EObject this_Descendre_3 = null;
 
-        EObject this_Monter_4 = null;
+        EObject this_Gauche_4 = null;
 
-        EObject this_Descendre_5 = null;
+        EObject this_Droite_5 = null;
 
-        EObject this_Gauche_6 = null;
+        EObject this_RotationGauche_6 = null;
 
-        EObject this_Droite_7 = null;
+        EObject this_RotationDroite_7 = null;
 
-        EObject this_RotationGauche_8 = null;
-
-        EObject this_RotationDroite_9 = null;
-
-        EObject this_Pause_10 = null;
+        EObject this_Pause_8 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1649:2: ( (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir | this_Avancer_2= ruleAvancer | this_Reculer_3= ruleReculer | this_Monter_4= ruleMonter | this_Descendre_5= ruleDescendre | this_Gauche_6= ruleGauche | this_Droite_7= ruleDroite | this_RotationGauche_8= ruleRotationGauche | this_RotationDroite_9= ruleRotationDroite | this_Pause_10= rulePause ) )
-            // InternalDroneDSL.g:1650:2: (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir | this_Avancer_2= ruleAvancer | this_Reculer_3= ruleReculer | this_Monter_4= ruleMonter | this_Descendre_5= ruleDescendre | this_Gauche_6= ruleGauche | this_Droite_7= ruleDroite | this_RotationGauche_8= ruleRotationGauche | this_RotationDroite_9= ruleRotationDroite | this_Pause_10= rulePause )
+            // InternalDroneDSL.g:1685:2: ( (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer | this_Monter_2= ruleMonter | this_Descendre_3= ruleDescendre | this_Gauche_4= ruleGauche | this_Droite_5= ruleDroite | this_RotationGauche_6= ruleRotationGauche | this_RotationDroite_7= ruleRotationDroite | this_Pause_8= rulePause ) )
+            // InternalDroneDSL.g:1686:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer | this_Monter_2= ruleMonter | this_Descendre_3= ruleDescendre | this_Gauche_4= ruleGauche | this_Droite_5= ruleDroite | this_RotationGauche_6= ruleRotationGauche | this_RotationDroite_7= ruleRotationDroite | this_Pause_8= rulePause )
             {
-            // InternalDroneDSL.g:1650:2: (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir | this_Avancer_2= ruleAvancer | this_Reculer_3= ruleReculer | this_Monter_4= ruleMonter | this_Descendre_5= ruleDescendre | this_Gauche_6= ruleGauche | this_Droite_7= ruleDroite | this_RotationGauche_8= ruleRotationGauche | this_RotationDroite_9= ruleRotationDroite | this_Pause_10= rulePause )
-            int alt7=11;
-            alt7 = dfa7.predict(input);
-            switch (alt7) {
+            // InternalDroneDSL.g:1686:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer | this_Monter_2= ruleMonter | this_Descendre_3= ruleDescendre | this_Gauche_4= ruleGauche | this_Droite_5= ruleDroite | this_RotationGauche_6= ruleRotationGauche | this_RotationDroite_7= ruleRotationDroite | this_Pause_8= rulePause )
+            int alt8=9;
+            switch ( input.LA(1) ) {
+            case 32:
+                {
+                alt8=1;
+                }
+                break;
+            case 33:
+                {
+                alt8=2;
+                }
+                break;
+            case 28:
+                {
+                alt8=3;
+                }
+                break;
+            case 31:
+                {
+                alt8=4;
+                }
+                break;
+            case 34:
+                {
+                alt8=5;
+                }
+                break;
+            case 35:
+                {
+                alt8=6;
+                }
+                break;
+            case 36:
+                {
+                alt8=7;
+                }
+                break;
+            case 37:
+                {
+                alt8=8;
+                }
+                break;
+            case 38:
+                {
+                alt8=9;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 8, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt8) {
                 case 1 :
-                    // InternalDroneDSL.g:1651:3: this_Decoller_0= ruleDecoller
+                    // InternalDroneDSL.g:1687:3: this_Avancer_0= ruleAvancer
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getDecollerParserRuleCall_0());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getAvancerParserRuleCall_0());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Decoller_0=ruleDecoller();
+                    this_Avancer_0=ruleAvancer();
 
                     state._fsp--;
 
 
-                    			current = this_Decoller_0;
+                    			current = this_Avancer_0;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:1660:3: this_Atterrir_1= ruleAtterrir
+                    // InternalDroneDSL.g:1696:3: this_Reculer_1= ruleReculer
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getAtterrirParserRuleCall_1());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getReculerParserRuleCall_1());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Atterrir_1=ruleAtterrir();
+                    this_Reculer_1=ruleReculer();
 
                     state._fsp--;
 
 
-                    			current = this_Atterrir_1;
+                    			current = this_Reculer_1;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:1669:3: this_Avancer_2= ruleAvancer
+                    // InternalDroneDSL.g:1705:3: this_Monter_2= ruleMonter
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getAvancerParserRuleCall_2());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getMonterParserRuleCall_2());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Avancer_2=ruleAvancer();
+                    this_Monter_2=ruleMonter();
 
                     state._fsp--;
 
 
-                    			current = this_Avancer_2;
+                    			current = this_Monter_2;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 4 :
-                    // InternalDroneDSL.g:1678:3: this_Reculer_3= ruleReculer
+                    // InternalDroneDSL.g:1714:3: this_Descendre_3= ruleDescendre
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getReculerParserRuleCall_3());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getDescendreParserRuleCall_3());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Reculer_3=ruleReculer();
+                    this_Descendre_3=ruleDescendre();
 
                     state._fsp--;
 
 
-                    			current = this_Reculer_3;
+                    			current = this_Descendre_3;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 5 :
-                    // InternalDroneDSL.g:1687:3: this_Monter_4= ruleMonter
+                    // InternalDroneDSL.g:1723:3: this_Gauche_4= ruleGauche
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getMonterParserRuleCall_4());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getGaucheParserRuleCall_4());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Monter_4=ruleMonter();
+                    this_Gauche_4=ruleGauche();
 
                     state._fsp--;
 
 
-                    			current = this_Monter_4;
+                    			current = this_Gauche_4;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 6 :
-                    // InternalDroneDSL.g:1696:3: this_Descendre_5= ruleDescendre
+                    // InternalDroneDSL.g:1732:3: this_Droite_5= ruleDroite
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getDescendreParserRuleCall_5());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getDroiteParserRuleCall_5());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Descendre_5=ruleDescendre();
+                    this_Droite_5=ruleDroite();
 
                     state._fsp--;
 
 
-                    			current = this_Descendre_5;
+                    			current = this_Droite_5;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 7 :
-                    // InternalDroneDSL.g:1705:3: this_Gauche_6= ruleGauche
+                    // InternalDroneDSL.g:1741:3: this_RotationGauche_6= ruleRotationGauche
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getGaucheParserRuleCall_6());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getRotationGaucheParserRuleCall_6());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Gauche_6=ruleGauche();
+                    this_RotationGauche_6=ruleRotationGauche();
 
                     state._fsp--;
 
 
-                    			current = this_Gauche_6;
+                    			current = this_RotationGauche_6;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 8 :
-                    // InternalDroneDSL.g:1714:3: this_Droite_7= ruleDroite
+                    // InternalDroneDSL.g:1750:3: this_RotationDroite_7= ruleRotationDroite
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getDroiteParserRuleCall_7());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getRotationDroiteParserRuleCall_7());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Droite_7=ruleDroite();
+                    this_RotationDroite_7=ruleRotationDroite();
 
                     state._fsp--;
 
 
-                    			current = this_Droite_7;
+                    			current = this_RotationDroite_7;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 9 :
-                    // InternalDroneDSL.g:1723:3: this_RotationGauche_8= ruleRotationGauche
+                    // InternalDroneDSL.g:1759:3: this_Pause_8= rulePause
                     {
 
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getRotationGaucheParserRuleCall_8());
+                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getPauseParserRuleCall_8());
                     		
                     pushFollow(FOLLOW_2);
-                    this_RotationGauche_8=ruleRotationGauche();
+                    this_Pause_8=rulePause();
 
                     state._fsp--;
 
 
-                    			current = this_RotationGauche_8;
-                    			afterParserOrEnumRuleCall();
-                    		
-
-                    }
-                    break;
-                case 10 :
-                    // InternalDroneDSL.g:1732:3: this_RotationDroite_9= ruleRotationDroite
-                    {
-
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getRotationDroiteParserRuleCall_9());
-                    		
-                    pushFollow(FOLLOW_2);
-                    this_RotationDroite_9=ruleRotationDroite();
-
-                    state._fsp--;
-
-
-                    			current = this_RotationDroite_9;
-                    			afterParserOrEnumRuleCall();
-                    		
-
-                    }
-                    break;
-                case 11 :
-                    // InternalDroneDSL.g:1741:3: this_Pause_10= rulePause
-                    {
-
-                    			newCompositeNode(grammarAccess.getCommandeBasiqueAccess().getPauseParserRuleCall_10());
-                    		
-                    pushFollow(FOLLOW_2);
-                    this_Pause_10=rulePause();
-
-                    state._fsp--;
-
-
-                    			current = this_Pause_10;
+                    			current = this_Pause_8;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -4405,7 +4546,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFonctionDecl"
-    // InternalDroneDSL.g:1753:1: entryRuleFonctionDecl returns [EObject current=null] : iv_ruleFonctionDecl= ruleFonctionDecl EOF ;
+    // InternalDroneDSL.g:1771:1: entryRuleFonctionDecl returns [EObject current=null] : iv_ruleFonctionDecl= ruleFonctionDecl EOF ;
     public final EObject entryRuleFonctionDecl() throws RecognitionException {
         EObject current = null;
 
@@ -4413,8 +4554,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:1753:53: (iv_ruleFonctionDecl= ruleFonctionDecl EOF )
-            // InternalDroneDSL.g:1754:2: iv_ruleFonctionDecl= ruleFonctionDecl EOF
+            // InternalDroneDSL.g:1771:53: (iv_ruleFonctionDecl= ruleFonctionDecl EOF )
+            // InternalDroneDSL.g:1772:2: iv_ruleFonctionDecl= ruleFonctionDecl EOF
             {
              newCompositeNode(grammarAccess.getFonctionDeclRule()); 
             pushFollow(FOLLOW_1);
@@ -4441,7 +4582,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFonctionDecl"
-    // InternalDroneDSL.g:1760:1: ruleFonctionDecl returns [EObject current=null] : (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )* otherlv_5= '}' ) ;
+    // InternalDroneDSL.g:1778:1: ruleFonctionDecl returns [EObject current=null] : (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )* otherlv_5= '}' ) ;
     public final EObject ruleFonctionDecl() throws RecognitionException {
         EObject current = null;
 
@@ -4458,26 +4599,28 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
         EObject lv_body_4_4 = null;
 
+        EObject lv_body_4_5 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1766:2: ( (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )* otherlv_5= '}' ) )
-            // InternalDroneDSL.g:1767:2: (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )* otherlv_5= '}' )
+            // InternalDroneDSL.g:1784:2: ( (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )* otherlv_5= '}' ) )
+            // InternalDroneDSL.g:1785:2: (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )* otherlv_5= '}' )
             {
-            // InternalDroneDSL.g:1767:2: (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )* otherlv_5= '}' )
-            // InternalDroneDSL.g:1768:3: otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )* otherlv_5= '}'
+            // InternalDroneDSL.g:1785:2: (otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )* otherlv_5= '}' )
+            // InternalDroneDSL.g:1786:3: otherlv_0= 'func' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '()' otherlv_3= '{' ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )* otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_17); 
+            otherlv_0=(Token)match(input,39,FOLLOW_17); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFonctionDeclAccess().getFuncKeyword_0());
             		
-            // InternalDroneDSL.g:1772:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalDroneDSL.g:1773:4: (lv_name_1_0= RULE_ID )
+            // InternalDroneDSL.g:1790:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDroneDSL.g:1791:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalDroneDSL.g:1773:4: (lv_name_1_0= RULE_ID )
-            // InternalDroneDSL.g:1774:5: lv_name_1_0= RULE_ID
+            // InternalDroneDSL.g:1791:4: (lv_name_1_0= RULE_ID )
+            // InternalDroneDSL.g:1792:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_23); 
 
@@ -4499,38 +4642,38 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,39,FOLLOW_24); 
+            otherlv_2=(Token)match(input,40,FOLLOW_24); 
 
             			newLeafNode(otherlv_2, grammarAccess.getFonctionDeclAccess().getLeftParenthesisRightParenthesisKeyword_2());
             		
-            otherlv_3=(Token)match(input,40,FOLLOW_25); 
+            otherlv_3=(Token)match(input,41,FOLLOW_25); 
 
             			newLeafNode(otherlv_3, grammarAccess.getFonctionDeclAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalDroneDSL.g:1798:3: ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) ) )*
-            loop9:
+            // InternalDroneDSL.g:1816:3: ( ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) ) )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA9_0==RULE_ID||LA9_0==23||(LA9_0>=25 && LA9_0<=28)||(LA9_0>=31 && LA9_0<=37)) ) {
-                    alt9=1;
+                if ( (LA10_0==RULE_ID||LA10_0==23||(LA10_0>=25 && LA10_0<=28)||(LA10_0>=31 && LA10_0<=38)) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // InternalDroneDSL.g:1799:4: ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) )
+            	    // InternalDroneDSL.g:1817:4: ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) )
             	    {
-            	    // InternalDroneDSL.g:1799:4: ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall ) )
-            	    // InternalDroneDSL.g:1800:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall )
+            	    // InternalDroneDSL.g:1817:4: ( (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir ) )
+            	    // InternalDroneDSL.g:1818:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir )
             	    {
-            	    // InternalDroneDSL.g:1800:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall )
-            	    int alt8=4;
-            	    alt8 = dfa8.predict(input);
-            	    switch (alt8) {
+            	    // InternalDroneDSL.g:1818:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir )
+            	    int alt9=5;
+            	    alt9 = dfa9.predict(input);
+            	    switch (alt9) {
             	        case 1 :
-            	            // InternalDroneDSL.g:1801:6: lv_body_4_1= ruleVarDecl
+            	            // InternalDroneDSL.g:1819:6: lv_body_4_1= ruleVarDecl
             	            {
 
             	            						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyVarDeclParserRuleCall_4_0_0());
@@ -4555,7 +4698,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalDroneDSL.g:1817:6: lv_body_4_2= ruleCommandeBasique
+            	            // InternalDroneDSL.g:1835:6: lv_body_4_2= ruleCommandeBasique
             	            {
 
             	            						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyCommandeBasiqueParserRuleCall_4_0_1());
@@ -4580,7 +4723,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // InternalDroneDSL.g:1833:6: lv_body_4_3= ruleParallele
+            	            // InternalDroneDSL.g:1851:6: lv_body_4_3= ruleParallele
             	            {
 
             	            						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyParalleleParserRuleCall_4_0_2());
@@ -4605,7 +4748,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 4 :
-            	            // InternalDroneDSL.g:1849:6: lv_body_4_4= ruleFonctionCall
+            	            // InternalDroneDSL.g:1867:6: lv_body_4_4= ruleFonctionCall
             	            {
 
             	            						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyFonctionCallParserRuleCall_4_0_3());
@@ -4629,6 +4772,31 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             	            }
             	            break;
+            	        case 5 :
+            	            // InternalDroneDSL.g:1883:6: lv_body_4_5= ruleDecollerAtterrir
+            	            {
+
+            	            						newCompositeNode(grammarAccess.getFonctionDeclAccess().getBodyDecollerAtterrirParserRuleCall_4_0_4());
+            	            					
+            	            pushFollow(FOLLOW_25);
+            	            lv_body_4_5=ruleDecollerAtterrir();
+
+            	            state._fsp--;
+
+
+            	            						if (current==null) {
+            	            							current = createModelElementForParent(grammarAccess.getFonctionDeclRule());
+            	            						}
+            	            						add(
+            	            							current,
+            	            							"body",
+            	            							lv_body_4_5,
+            	            							"fr.idmteam1.idmproject.dronedsl.DroneDSL.DecollerAtterrir");
+            	            						afterParserOrEnumRuleCall();
+            	            					
+
+            	            }
+            	            break;
 
             	    }
 
@@ -4640,11 +4808,11 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,41,FOLLOW_2); 
+            otherlv_5=(Token)match(input,42,FOLLOW_2); 
 
             			newLeafNode(otherlv_5, grammarAccess.getFonctionDeclAccess().getRightCurlyBracketKeyword_5());
             		
@@ -4671,7 +4839,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFinDeMain"
-    // InternalDroneDSL.g:1875:1: entryRuleFinDeMain returns [EObject current=null] : iv_ruleFinDeMain= ruleFinDeMain EOF ;
+    // InternalDroneDSL.g:1909:1: entryRuleFinDeMain returns [EObject current=null] : iv_ruleFinDeMain= ruleFinDeMain EOF ;
     public final EObject entryRuleFinDeMain() throws RecognitionException {
         EObject current = null;
 
@@ -4679,8 +4847,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:1875:50: (iv_ruleFinDeMain= ruleFinDeMain EOF )
-            // InternalDroneDSL.g:1876:2: iv_ruleFinDeMain= ruleFinDeMain EOF
+            // InternalDroneDSL.g:1909:50: (iv_ruleFinDeMain= ruleFinDeMain EOF )
+            // InternalDroneDSL.g:1910:2: iv_ruleFinDeMain= ruleFinDeMain EOF
             {
              newCompositeNode(grammarAccess.getFinDeMainRule()); 
             pushFollow(FOLLOW_1);
@@ -4707,7 +4875,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFinDeMain"
-    // InternalDroneDSL.g:1882:1: ruleFinDeMain returns [EObject current=null] : ( (lv_accolade_0_0= '}' ) ) ;
+    // InternalDroneDSL.g:1916:1: ruleFinDeMain returns [EObject current=null] : ( (lv_accolade_0_0= '}' ) ) ;
     public final EObject ruleFinDeMain() throws RecognitionException {
         EObject current = null;
 
@@ -4717,16 +4885,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1888:2: ( ( (lv_accolade_0_0= '}' ) ) )
-            // InternalDroneDSL.g:1889:2: ( (lv_accolade_0_0= '}' ) )
+            // InternalDroneDSL.g:1922:2: ( ( (lv_accolade_0_0= '}' ) ) )
+            // InternalDroneDSL.g:1923:2: ( (lv_accolade_0_0= '}' ) )
             {
-            // InternalDroneDSL.g:1889:2: ( (lv_accolade_0_0= '}' ) )
-            // InternalDroneDSL.g:1890:3: (lv_accolade_0_0= '}' )
+            // InternalDroneDSL.g:1923:2: ( (lv_accolade_0_0= '}' ) )
+            // InternalDroneDSL.g:1924:3: (lv_accolade_0_0= '}' )
             {
-            // InternalDroneDSL.g:1890:3: (lv_accolade_0_0= '}' )
-            // InternalDroneDSL.g:1891:4: lv_accolade_0_0= '}'
+            // InternalDroneDSL.g:1924:3: (lv_accolade_0_0= '}' )
+            // InternalDroneDSL.g:1925:4: lv_accolade_0_0= '}'
             {
-            lv_accolade_0_0=(Token)match(input,41,FOLLOW_2); 
+            lv_accolade_0_0=(Token)match(input,42,FOLLOW_2); 
 
             				newLeafNode(lv_accolade_0_0, grammarAccess.getFinDeMainAccess().getAccoladeRightCurlyBracketKeyword_0());
             			
@@ -4762,7 +4930,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFonctionCall"
-    // InternalDroneDSL.g:1906:1: entryRuleFonctionCall returns [EObject current=null] : iv_ruleFonctionCall= ruleFonctionCall EOF ;
+    // InternalDroneDSL.g:1940:1: entryRuleFonctionCall returns [EObject current=null] : iv_ruleFonctionCall= ruleFonctionCall EOF ;
     public final EObject entryRuleFonctionCall() throws RecognitionException {
         EObject current = null;
 
@@ -4770,8 +4938,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:1906:53: (iv_ruleFonctionCall= ruleFonctionCall EOF )
-            // InternalDroneDSL.g:1907:2: iv_ruleFonctionCall= ruleFonctionCall EOF
+            // InternalDroneDSL.g:1940:53: (iv_ruleFonctionCall= ruleFonctionCall EOF )
+            // InternalDroneDSL.g:1941:2: iv_ruleFonctionCall= ruleFonctionCall EOF
             {
              newCompositeNode(grammarAccess.getFonctionCallRule()); 
             pushFollow(FOLLOW_1);
@@ -4798,7 +4966,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFonctionCall"
-    // InternalDroneDSL.g:1913:1: ruleFonctionCall returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' ) ;
+    // InternalDroneDSL.g:1947:1: ruleFonctionCall returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' ) ;
     public final EObject ruleFonctionCall() throws RecognitionException {
         EObject current = null;
 
@@ -4809,17 +4977,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1919:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' ) )
-            // InternalDroneDSL.g:1920:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' )
+            // InternalDroneDSL.g:1953:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' ) )
+            // InternalDroneDSL.g:1954:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' )
             {
-            // InternalDroneDSL.g:1920:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' )
-            // InternalDroneDSL.g:1921:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '()'
+            // InternalDroneDSL.g:1954:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '()' )
+            // InternalDroneDSL.g:1955:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '()'
             {
-            // InternalDroneDSL.g:1921:3: ( (otherlv_0= RULE_ID ) )
-            // InternalDroneDSL.g:1922:4: (otherlv_0= RULE_ID )
+            // InternalDroneDSL.g:1955:3: ( (otherlv_0= RULE_ID ) )
+            // InternalDroneDSL.g:1956:4: (otherlv_0= RULE_ID )
             {
-            // InternalDroneDSL.g:1922:4: (otherlv_0= RULE_ID )
-            // InternalDroneDSL.g:1923:5: otherlv_0= RULE_ID
+            // InternalDroneDSL.g:1956:4: (otherlv_0= RULE_ID )
+            // InternalDroneDSL.g:1957:5: otherlv_0= RULE_ID
             {
 
             					if (current==null) {
@@ -4836,7 +5004,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,39,FOLLOW_2); 
+            otherlv_1=(Token)match(input,40,FOLLOW_2); 
 
             			newLeafNode(otherlv_1, grammarAccess.getFonctionCallAccess().getLeftParenthesisRightParenthesisKeyword_1());
             		
@@ -4863,7 +5031,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMain"
-    // InternalDroneDSL.g:1942:1: entryRuleMain returns [EObject current=null] : iv_ruleMain= ruleMain EOF ;
+    // InternalDroneDSL.g:1976:1: entryRuleMain returns [EObject current=null] : iv_ruleMain= ruleMain EOF ;
     public final EObject entryRuleMain() throws RecognitionException {
         EObject current = null;
 
@@ -4871,8 +5039,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:1942:45: (iv_ruleMain= ruleMain EOF )
-            // InternalDroneDSL.g:1943:2: iv_ruleMain= ruleMain EOF
+            // InternalDroneDSL.g:1976:45: (iv_ruleMain= ruleMain EOF )
+            // InternalDroneDSL.g:1977:2: iv_ruleMain= ruleMain EOF
             {
              newCompositeNode(grammarAccess.getMainRule()); 
             pushFollow(FOLLOW_1);
@@ -4899,7 +5067,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMain"
-    // InternalDroneDSL.g:1949:1: ruleMain returns [EObject current=null] : (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) ) ;
+    // InternalDroneDSL.g:1983:1: ruleMain returns [EObject current=null] : (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) ) ;
     public final EObject ruleMain() throws RecognitionException {
         EObject current = null;
 
@@ -4915,6 +5083,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
         EObject lv_mainbody_3_4 = null;
 
+        EObject lv_mainbody_3_5 = null;
+
         EObject lv_atterrissage_4_0 = null;
 
         EObject lv_fdm_5_0 = null;
@@ -4924,25 +5094,25 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:1955:2: ( (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) ) )
-            // InternalDroneDSL.g:1956:2: (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) )
+            // InternalDroneDSL.g:1989:2: ( (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) ) )
+            // InternalDroneDSL.g:1990:2: (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) )
             {
-            // InternalDroneDSL.g:1956:2: (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) )
-            // InternalDroneDSL.g:1957:3: otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) )
+            // InternalDroneDSL.g:1990:2: (otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) ) )
+            // InternalDroneDSL.g:1991:3: otherlv_0= 'main' otherlv_1= '{' ( (lv_decollage_2_0= ruleDecoller ) ) ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )* ( (lv_atterrissage_4_0= ruleAtterrir ) ) ( (lv_fdm_5_0= ruleFinDeMain ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_24); 
+            otherlv_0=(Token)match(input,43,FOLLOW_24); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMainAccess().getMainKeyword_0());
             		
-            otherlv_1=(Token)match(input,40,FOLLOW_26); 
+            otherlv_1=(Token)match(input,41,FOLLOW_26); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMainAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalDroneDSL.g:1965:3: ( (lv_decollage_2_0= ruleDecoller ) )
-            // InternalDroneDSL.g:1966:4: (lv_decollage_2_0= ruleDecoller )
+            // InternalDroneDSL.g:1999:3: ( (lv_decollage_2_0= ruleDecoller ) )
+            // InternalDroneDSL.g:2000:4: (lv_decollage_2_0= ruleDecoller )
             {
-            // InternalDroneDSL.g:1966:4: (lv_decollage_2_0= ruleDecoller )
-            // InternalDroneDSL.g:1967:5: lv_decollage_2_0= ruleDecoller
+            // InternalDroneDSL.g:2000:4: (lv_decollage_2_0= ruleDecoller )
+            // InternalDroneDSL.g:2001:5: lv_decollage_2_0= ruleDecoller
             {
 
             					newCompositeNode(grammarAccess.getMainAccess().getDecollageDecollerParserRuleCall_2_0());
@@ -4969,39 +5139,39 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDroneDSL.g:1984:3: ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) ) )*
-            loop11:
+            // InternalDroneDSL.g:2018:3: ( ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) ) )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==27) ) {
-                    int LA11_1 = input.LA(2);
+                if ( (LA12_0==27) ) {
+                    int LA12_1 = input.LA(2);
 
-                    if ( (LA11_1==RULE_ID||LA11_1==23||(LA11_1>=25 && LA11_1<=28)||(LA11_1>=31 && LA11_1<=37)) ) {
-                        alt11=1;
+                    if ( (LA12_1==RULE_ID||LA12_1==23||(LA12_1>=25 && LA12_1<=28)||(LA12_1>=31 && LA12_1<=38)) ) {
+                        alt12=1;
                     }
 
 
                 }
-                else if ( (LA11_0==RULE_ID||LA11_0==23||(LA11_0>=25 && LA11_0<=26)||LA11_0==28||(LA11_0>=31 && LA11_0<=37)) ) {
-                    alt11=1;
+                else if ( (LA12_0==RULE_ID||LA12_0==23||(LA12_0>=25 && LA12_0<=26)||LA12_0==28||(LA12_0>=31 && LA12_0<=38)) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalDroneDSL.g:1985:4: ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) )
+            	    // InternalDroneDSL.g:2019:4: ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) )
             	    {
-            	    // InternalDroneDSL.g:1985:4: ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall ) )
-            	    // InternalDroneDSL.g:1986:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall )
+            	    // InternalDroneDSL.g:2019:4: ( (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir ) )
+            	    // InternalDroneDSL.g:2020:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir )
             	    {
-            	    // InternalDroneDSL.g:1986:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall )
-            	    int alt10=4;
-            	    alt10 = dfa10.predict(input);
-            	    switch (alt10) {
+            	    // InternalDroneDSL.g:2020:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir )
+            	    int alt11=5;
+            	    alt11 = dfa11.predict(input);
+            	    switch (alt11) {
             	        case 1 :
-            	            // InternalDroneDSL.g:1987:6: lv_mainbody_3_1= ruleVarDecl
+            	            // InternalDroneDSL.g:2021:6: lv_mainbody_3_1= ruleVarDecl
             	            {
 
             	            						newCompositeNode(grammarAccess.getMainAccess().getMainbodyVarDeclParserRuleCall_3_0_0());
@@ -5026,7 +5196,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalDroneDSL.g:2003:6: lv_mainbody_3_2= ruleCommandeBasique
+            	            // InternalDroneDSL.g:2037:6: lv_mainbody_3_2= ruleCommandeBasique
             	            {
 
             	            						newCompositeNode(grammarAccess.getMainAccess().getMainbodyCommandeBasiqueParserRuleCall_3_0_1());
@@ -5051,7 +5221,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // InternalDroneDSL.g:2019:6: lv_mainbody_3_3= ruleParallele
+            	            // InternalDroneDSL.g:2053:6: lv_mainbody_3_3= ruleParallele
             	            {
 
             	            						newCompositeNode(grammarAccess.getMainAccess().getMainbodyParalleleParserRuleCall_3_0_2());
@@ -5076,7 +5246,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 4 :
-            	            // InternalDroneDSL.g:2035:6: lv_mainbody_3_4= ruleFonctionCall
+            	            // InternalDroneDSL.g:2069:6: lv_mainbody_3_4= ruleFonctionCall
             	            {
 
             	            						newCompositeNode(grammarAccess.getMainAccess().getMainbodyFonctionCallParserRuleCall_3_0_3());
@@ -5100,6 +5270,31 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             	            }
             	            break;
+            	        case 5 :
+            	            // InternalDroneDSL.g:2085:6: lv_mainbody_3_5= ruleDecollerAtterrir
+            	            {
+
+            	            						newCompositeNode(grammarAccess.getMainAccess().getMainbodyDecollerAtterrirParserRuleCall_3_0_4());
+            	            					
+            	            pushFollow(FOLLOW_27);
+            	            lv_mainbody_3_5=ruleDecollerAtterrir();
+
+            	            state._fsp--;
+
+
+            	            						if (current==null) {
+            	            							current = createModelElementForParent(grammarAccess.getMainRule());
+            	            						}
+            	            						add(
+            	            							current,
+            	            							"mainbody",
+            	            							lv_mainbody_3_5,
+            	            							"fr.idmteam1.idmproject.dronedsl.DroneDSL.DecollerAtterrir");
+            	            						afterParserOrEnumRuleCall();
+            	            					
+
+            	            }
+            	            break;
 
             	    }
 
@@ -5111,15 +5306,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
-            // InternalDroneDSL.g:2053:3: ( (lv_atterrissage_4_0= ruleAtterrir ) )
-            // InternalDroneDSL.g:2054:4: (lv_atterrissage_4_0= ruleAtterrir )
+            // InternalDroneDSL.g:2103:3: ( (lv_atterrissage_4_0= ruleAtterrir ) )
+            // InternalDroneDSL.g:2104:4: (lv_atterrissage_4_0= ruleAtterrir )
             {
-            // InternalDroneDSL.g:2054:4: (lv_atterrissage_4_0= ruleAtterrir )
-            // InternalDroneDSL.g:2055:5: lv_atterrissage_4_0= ruleAtterrir
+            // InternalDroneDSL.g:2104:4: (lv_atterrissage_4_0= ruleAtterrir )
+            // InternalDroneDSL.g:2105:5: lv_atterrissage_4_0= ruleAtterrir
             {
 
             					newCompositeNode(grammarAccess.getMainAccess().getAtterrissageAtterrirParserRuleCall_4_0());
@@ -5146,11 +5341,11 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDroneDSL.g:2072:3: ( (lv_fdm_5_0= ruleFinDeMain ) )
-            // InternalDroneDSL.g:2073:4: (lv_fdm_5_0= ruleFinDeMain )
+            // InternalDroneDSL.g:2122:3: ( (lv_fdm_5_0= ruleFinDeMain ) )
+            // InternalDroneDSL.g:2123:4: (lv_fdm_5_0= ruleFinDeMain )
             {
-            // InternalDroneDSL.g:2073:4: (lv_fdm_5_0= ruleFinDeMain )
-            // InternalDroneDSL.g:2074:5: lv_fdm_5_0= ruleFinDeMain
+            // InternalDroneDSL.g:2123:4: (lv_fdm_5_0= ruleFinDeMain )
+            // InternalDroneDSL.g:2124:5: lv_fdm_5_0= ruleFinDeMain
             {
 
             					newCompositeNode(grammarAccess.getMainAccess().getFdmFinDeMainParserRuleCall_5_0());
@@ -5200,7 +5395,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMD"
-    // InternalDroneDSL.g:2095:1: entryRuleMD returns [EObject current=null] : iv_ruleMD= ruleMD EOF ;
+    // InternalDroneDSL.g:2145:1: entryRuleMD returns [EObject current=null] : iv_ruleMD= ruleMD EOF ;
     public final EObject entryRuleMD() throws RecognitionException {
         EObject current = null;
 
@@ -5208,8 +5403,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2095:43: (iv_ruleMD= ruleMD EOF )
-            // InternalDroneDSL.g:2096:2: iv_ruleMD= ruleMD EOF
+            // InternalDroneDSL.g:2145:43: (iv_ruleMD= ruleMD EOF )
+            // InternalDroneDSL.g:2146:2: iv_ruleMD= ruleMD EOF
             {
              newCompositeNode(grammarAccess.getMDRule()); 
             pushFollow(FOLLOW_1);
@@ -5236,7 +5431,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMD"
-    // InternalDroneDSL.g:2102:1: ruleMD returns [EObject current=null] : (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre ) ;
+    // InternalDroneDSL.g:2152:1: ruleMD returns [EObject current=null] : (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre ) ;
     public final EObject ruleMD() throws RecognitionException {
         EObject current = null;
 
@@ -5249,28 +5444,28 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2108:2: ( (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre ) )
-            // InternalDroneDSL.g:2109:2: (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre )
+            // InternalDroneDSL.g:2158:2: ( (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre ) )
+            // InternalDroneDSL.g:2159:2: (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre )
             {
-            // InternalDroneDSL.g:2109:2: (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalDroneDSL.g:2159:2: (this_Monter_0= ruleMonter | this_Descendre_1= ruleDescendre )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==28) ) {
-                alt12=1;
+            if ( (LA13_0==28) ) {
+                alt13=1;
             }
-            else if ( (LA12_0==31) ) {
-                alt12=2;
+            else if ( (LA13_0==31) ) {
+                alt13=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalDroneDSL.g:2110:3: this_Monter_0= ruleMonter
+                    // InternalDroneDSL.g:2160:3: this_Monter_0= ruleMonter
                     {
 
                     			newCompositeNode(grammarAccess.getMDAccess().getMonterParserRuleCall_0());
@@ -5288,7 +5483,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2119:3: this_Descendre_1= ruleDescendre
+                    // InternalDroneDSL.g:2169:3: this_Descendre_1= ruleDescendre
                     {
 
                     			newCompositeNode(grammarAccess.getMDAccess().getDescendreParserRuleCall_1());
@@ -5328,7 +5523,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGDr"
-    // InternalDroneDSL.g:2131:1: entryRuleGDr returns [EObject current=null] : iv_ruleGDr= ruleGDr EOF ;
+    // InternalDroneDSL.g:2181:1: entryRuleGDr returns [EObject current=null] : iv_ruleGDr= ruleGDr EOF ;
     public final EObject entryRuleGDr() throws RecognitionException {
         EObject current = null;
 
@@ -5336,8 +5531,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2131:44: (iv_ruleGDr= ruleGDr EOF )
-            // InternalDroneDSL.g:2132:2: iv_ruleGDr= ruleGDr EOF
+            // InternalDroneDSL.g:2181:44: (iv_ruleGDr= ruleGDr EOF )
+            // InternalDroneDSL.g:2182:2: iv_ruleGDr= ruleGDr EOF
             {
              newCompositeNode(grammarAccess.getGDrRule()); 
             pushFollow(FOLLOW_1);
@@ -5364,7 +5559,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGDr"
-    // InternalDroneDSL.g:2138:1: ruleGDr returns [EObject current=null] : (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite ) ;
+    // InternalDroneDSL.g:2188:1: ruleGDr returns [EObject current=null] : (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite ) ;
     public final EObject ruleGDr() throws RecognitionException {
         EObject current = null;
 
@@ -5377,28 +5572,28 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2144:2: ( (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite ) )
-            // InternalDroneDSL.g:2145:2: (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite )
+            // InternalDroneDSL.g:2194:2: ( (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite ) )
+            // InternalDroneDSL.g:2195:2: (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite )
             {
-            // InternalDroneDSL.g:2145:2: (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalDroneDSL.g:2195:2: (this_Gauche_0= ruleGauche | this_Droite_1= ruleDroite )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==34) ) {
-                alt13=1;
+            if ( (LA14_0==34) ) {
+                alt14=1;
             }
-            else if ( (LA13_0==35) ) {
-                alt13=2;
+            else if ( (LA14_0==35) ) {
+                alt14=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalDroneDSL.g:2146:3: this_Gauche_0= ruleGauche
+                    // InternalDroneDSL.g:2196:3: this_Gauche_0= ruleGauche
                     {
 
                     			newCompositeNode(grammarAccess.getGDrAccess().getGaucheParserRuleCall_0());
@@ -5416,7 +5611,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2155:3: this_Droite_1= ruleDroite
+                    // InternalDroneDSL.g:2205:3: this_Droite_1= ruleDroite
                     {
 
                     			newCompositeNode(grammarAccess.getGDrAccess().getDroiteParserRuleCall_1());
@@ -5456,7 +5651,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRGRD"
-    // InternalDroneDSL.g:2167:1: entryRuleRGRD returns [EObject current=null] : iv_ruleRGRD= ruleRGRD EOF ;
+    // InternalDroneDSL.g:2217:1: entryRuleRGRD returns [EObject current=null] : iv_ruleRGRD= ruleRGRD EOF ;
     public final EObject entryRuleRGRD() throws RecognitionException {
         EObject current = null;
 
@@ -5464,8 +5659,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2167:45: (iv_ruleRGRD= ruleRGRD EOF )
-            // InternalDroneDSL.g:2168:2: iv_ruleRGRD= ruleRGRD EOF
+            // InternalDroneDSL.g:2217:45: (iv_ruleRGRD= ruleRGRD EOF )
+            // InternalDroneDSL.g:2218:2: iv_ruleRGRD= ruleRGRD EOF
             {
              newCompositeNode(grammarAccess.getRGRDRule()); 
             pushFollow(FOLLOW_1);
@@ -5492,7 +5687,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRGRD"
-    // InternalDroneDSL.g:2174:1: ruleRGRD returns [EObject current=null] : (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite ) ;
+    // InternalDroneDSL.g:2224:1: ruleRGRD returns [EObject current=null] : (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite ) ;
     public final EObject ruleRGRD() throws RecognitionException {
         EObject current = null;
 
@@ -5505,28 +5700,28 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2180:2: ( (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite ) )
-            // InternalDroneDSL.g:2181:2: (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite )
+            // InternalDroneDSL.g:2230:2: ( (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite ) )
+            // InternalDroneDSL.g:2231:2: (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite )
             {
-            // InternalDroneDSL.g:2181:2: (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalDroneDSL.g:2231:2: (this_RotationGauche_0= ruleRotationGauche | this_RotationDroite_1= ruleRotationDroite )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==36) ) {
-                alt14=1;
+            if ( (LA15_0==36) ) {
+                alt15=1;
             }
-            else if ( (LA14_0==37) ) {
-                alt14=2;
+            else if ( (LA15_0==37) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalDroneDSL.g:2182:3: this_RotationGauche_0= ruleRotationGauche
+                    // InternalDroneDSL.g:2232:3: this_RotationGauche_0= ruleRotationGauche
                     {
 
                     			newCompositeNode(grammarAccess.getRGRDAccess().getRotationGaucheParserRuleCall_0());
@@ -5544,7 +5739,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2191:3: this_RotationDroite_1= ruleRotationDroite
+                    // InternalDroneDSL.g:2241:3: this_RotationDroite_1= ruleRotationDroite
                     {
 
                     			newCompositeNode(grammarAccess.getRGRDAccess().getRotationDroiteParserRuleCall_1());
@@ -5584,7 +5779,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAR"
-    // InternalDroneDSL.g:2203:1: entryRuleAR returns [EObject current=null] : iv_ruleAR= ruleAR EOF ;
+    // InternalDroneDSL.g:2253:1: entryRuleAR returns [EObject current=null] : iv_ruleAR= ruleAR EOF ;
     public final EObject entryRuleAR() throws RecognitionException {
         EObject current = null;
 
@@ -5592,8 +5787,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2203:43: (iv_ruleAR= ruleAR EOF )
-            // InternalDroneDSL.g:2204:2: iv_ruleAR= ruleAR EOF
+            // InternalDroneDSL.g:2253:43: (iv_ruleAR= ruleAR EOF )
+            // InternalDroneDSL.g:2254:2: iv_ruleAR= ruleAR EOF
             {
              newCompositeNode(grammarAccess.getARRule()); 
             pushFollow(FOLLOW_1);
@@ -5620,7 +5815,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAR"
-    // InternalDroneDSL.g:2210:1: ruleAR returns [EObject current=null] : (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer ) ;
+    // InternalDroneDSL.g:2260:1: ruleAR returns [EObject current=null] : (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer ) ;
     public final EObject ruleAR() throws RecognitionException {
         EObject current = null;
 
@@ -5633,28 +5828,28 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2216:2: ( (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer ) )
-            // InternalDroneDSL.g:2217:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer )
+            // InternalDroneDSL.g:2266:2: ( (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer ) )
+            // InternalDroneDSL.g:2267:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer )
             {
-            // InternalDroneDSL.g:2217:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalDroneDSL.g:2267:2: (this_Avancer_0= ruleAvancer | this_Reculer_1= ruleReculer )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==32) ) {
-                alt15=1;
+            if ( (LA16_0==32) ) {
+                alt16=1;
             }
-            else if ( (LA15_0==33) ) {
-                alt15=2;
+            else if ( (LA16_0==33) ) {
+                alt16=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalDroneDSL.g:2218:3: this_Avancer_0= ruleAvancer
+                    // InternalDroneDSL.g:2268:3: this_Avancer_0= ruleAvancer
                     {
 
                     			newCompositeNode(grammarAccess.getARAccess().getAvancerParserRuleCall_0());
@@ -5672,7 +5867,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2227:3: this_Reculer_1= ruleReculer
+                    // InternalDroneDSL.g:2277:3: this_Reculer_1= ruleReculer
                     {
 
                     			newCompositeNode(grammarAccess.getARAccess().getReculerParserRuleCall_1());
@@ -5712,7 +5907,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParallele"
-    // InternalDroneDSL.g:2239:1: entryRuleParallele returns [EObject current=null] : iv_ruleParallele= ruleParallele EOF ;
+    // InternalDroneDSL.g:2289:1: entryRuleParallele returns [EObject current=null] : iv_ruleParallele= ruleParallele EOF ;
     public final EObject entryRuleParallele() throws RecognitionException {
         EObject current = null;
 
@@ -5720,8 +5915,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2239:50: (iv_ruleParallele= ruleParallele EOF )
-            // InternalDroneDSL.g:2240:2: iv_ruleParallele= ruleParallele EOF
+            // InternalDroneDSL.g:2289:50: (iv_ruleParallele= ruleParallele EOF )
+            // InternalDroneDSL.g:2290:2: iv_ruleParallele= ruleParallele EOF
             {
              newCompositeNode(grammarAccess.getParalleleRule()); 
             pushFollow(FOLLOW_1);
@@ -5748,7 +5943,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParallele"
-    // InternalDroneDSL.g:2246:1: ruleParallele returns [EObject current=null] : (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 ) ;
+    // InternalDroneDSL.g:2296:1: ruleParallele returns [EObject current=null] : (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 ) ;
     public final EObject ruleParallele() throws RecognitionException {
         EObject current = null;
 
@@ -5763,15 +5958,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2252:2: ( (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 ) )
-            // InternalDroneDSL.g:2253:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )
+            // InternalDroneDSL.g:2302:2: ( (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 ) )
+            // InternalDroneDSL.g:2303:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )
             {
-            // InternalDroneDSL.g:2253:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )
-            int alt16=3;
-            alt16 = dfa16.predict(input);
-            switch (alt16) {
+            // InternalDroneDSL.g:2303:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )
+            int alt17=3;
+            alt17 = dfa17.predict(input);
+            switch (alt17) {
                 case 1 :
-                    // InternalDroneDSL.g:2254:3: this_Parallele2_0= ruleParallele2
+                    // InternalDroneDSL.g:2304:3: this_Parallele2_0= ruleParallele2
                     {
 
                     			newCompositeNode(grammarAccess.getParalleleAccess().getParallele2ParserRuleCall_0());
@@ -5789,7 +5984,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2263:3: this_Parallele3_1= ruleParallele3
+                    // InternalDroneDSL.g:2313:3: this_Parallele3_1= ruleParallele3
                     {
 
                     			newCompositeNode(grammarAccess.getParalleleAccess().getParallele3ParserRuleCall_1());
@@ -5807,7 +6002,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:2272:3: this_Parallele4_2= ruleParallele4
+                    // InternalDroneDSL.g:2322:3: this_Parallele4_2= ruleParallele4
                     {
 
                     			newCompositeNode(grammarAccess.getParalleleAccess().getParallele4ParserRuleCall_2());
@@ -5847,7 +6042,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParallele2"
-    // InternalDroneDSL.g:2284:1: entryRuleParallele2 returns [EObject current=null] : iv_ruleParallele2= ruleParallele2 EOF ;
+    // InternalDroneDSL.g:2334:1: entryRuleParallele2 returns [EObject current=null] : iv_ruleParallele2= ruleParallele2 EOF ;
     public final EObject entryRuleParallele2() throws RecognitionException {
         EObject current = null;
 
@@ -5855,8 +6050,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2284:51: (iv_ruleParallele2= ruleParallele2 EOF )
-            // InternalDroneDSL.g:2285:2: iv_ruleParallele2= ruleParallele2 EOF
+            // InternalDroneDSL.g:2334:51: (iv_ruleParallele2= ruleParallele2 EOF )
+            // InternalDroneDSL.g:2335:2: iv_ruleParallele2= ruleParallele2 EOF
             {
              newCompositeNode(grammarAccess.getParallele2Rule()); 
             pushFollow(FOLLOW_1);
@@ -5883,7 +6078,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParallele2"
-    // InternalDroneDSL.g:2291:1: ruleParallele2 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) ) ;
+    // InternalDroneDSL.g:2341:1: ruleParallele2 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) ) ;
     public final EObject ruleParallele2() throws RecognitionException {
         EObject current = null;
 
@@ -5952,24 +6147,24 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2297:2: ( ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) ) )
-            // InternalDroneDSL.g:2298:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )
+            // InternalDroneDSL.g:2347:2: ( ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) ) )
+            // InternalDroneDSL.g:2348:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )
             {
-            // InternalDroneDSL.g:2298:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )
-            int alt17=12;
-            alt17 = dfa17.predict(input);
-            switch (alt17) {
+            // InternalDroneDSL.g:2348:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )
+            int alt18=12;
+            alt18 = dfa18.predict(input);
+            switch (alt18) {
                 case 1 :
-                    // InternalDroneDSL.g:2299:3: ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2349:3: ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:2299:3: ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:2300:4: ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2349:3: ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2350:4: ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:2300:4: ( (lv_a_0_0= ruleMD ) )
-                    // InternalDroneDSL.g:2301:5: (lv_a_0_0= ruleMD )
+                    // InternalDroneDSL.g:2350:4: ( (lv_a_0_0= ruleMD ) )
+                    // InternalDroneDSL.g:2351:5: (lv_a_0_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2301:5: (lv_a_0_0= ruleMD )
-                    // InternalDroneDSL.g:2302:6: lv_a_0_0= ruleMD
+                    // InternalDroneDSL.g:2351:5: (lv_a_0_0= ruleMD )
+                    // InternalDroneDSL.g:2352:6: lv_a_0_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAMDParserRuleCall_0_0_0());
@@ -5996,15 +6191,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_1=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getParallele2Access().getAmpersandKeyword_0_1());
                     			
-                    // InternalDroneDSL.g:2323:4: ( (lv_t_2_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2324:5: (lv_t_2_0= ruleGDr )
+                    // InternalDroneDSL.g:2373:4: ( (lv_t_2_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2374:5: (lv_t_2_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2324:5: (lv_t_2_0= ruleGDr )
-                    // InternalDroneDSL.g:2325:6: lv_t_2_0= ruleGDr
+                    // InternalDroneDSL.g:2374:5: (lv_t_2_0= ruleGDr )
+                    // InternalDroneDSL.g:2375:6: lv_t_2_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTGDrParserRuleCall_0_2_0());
@@ -6038,16 +6233,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2344:3: ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2394:3: ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:2344:3: ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:2345:4: ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) )
+                    // InternalDroneDSL.g:2394:3: ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2395:4: ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:2345:4: ( (lv_a_3_0= ruleMD ) )
-                    // InternalDroneDSL.g:2346:5: (lv_a_3_0= ruleMD )
+                    // InternalDroneDSL.g:2395:4: ( (lv_a_3_0= ruleMD ) )
+                    // InternalDroneDSL.g:2396:5: (lv_a_3_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2346:5: (lv_a_3_0= ruleMD )
-                    // InternalDroneDSL.g:2347:6: lv_a_3_0= ruleMD
+                    // InternalDroneDSL.g:2396:5: (lv_a_3_0= ruleMD )
+                    // InternalDroneDSL.g:2397:6: lv_a_3_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAMDParserRuleCall_1_0_0());
@@ -6074,15 +6269,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_4=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getParallele2Access().getAmpersandKeyword_1_1());
                     			
-                    // InternalDroneDSL.g:2368:4: ( (lv_t_5_0= ruleAR ) )
-                    // InternalDroneDSL.g:2369:5: (lv_t_5_0= ruleAR )
+                    // InternalDroneDSL.g:2418:4: ( (lv_t_5_0= ruleAR ) )
+                    // InternalDroneDSL.g:2419:5: (lv_t_5_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2369:5: (lv_t_5_0= ruleAR )
-                    // InternalDroneDSL.g:2370:6: lv_t_5_0= ruleAR
+                    // InternalDroneDSL.g:2419:5: (lv_t_5_0= ruleAR )
+                    // InternalDroneDSL.g:2420:6: lv_t_5_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTARParserRuleCall_1_2_0());
@@ -6116,16 +6311,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:2389:3: ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2439:3: ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:2389:3: ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:2390:4: ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2439:3: ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2440:4: ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:2390:4: ( (lv_a_6_0= ruleMD ) )
-                    // InternalDroneDSL.g:2391:5: (lv_a_6_0= ruleMD )
+                    // InternalDroneDSL.g:2440:4: ( (lv_a_6_0= ruleMD ) )
+                    // InternalDroneDSL.g:2441:5: (lv_a_6_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2391:5: (lv_a_6_0= ruleMD )
-                    // InternalDroneDSL.g:2392:6: lv_a_6_0= ruleMD
+                    // InternalDroneDSL.g:2441:5: (lv_a_6_0= ruleMD )
+                    // InternalDroneDSL.g:2442:6: lv_a_6_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAMDParserRuleCall_2_0_0());
@@ -6152,15 +6347,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_7=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_7, grammarAccess.getParallele2Access().getAmpersandKeyword_2_1());
                     			
-                    // InternalDroneDSL.g:2413:4: ( (lv_t_8_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2414:5: (lv_t_8_0= ruleRGRD )
+                    // InternalDroneDSL.g:2463:4: ( (lv_t_8_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2464:5: (lv_t_8_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2414:5: (lv_t_8_0= ruleRGRD )
-                    // InternalDroneDSL.g:2415:6: lv_t_8_0= ruleRGRD
+                    // InternalDroneDSL.g:2464:5: (lv_t_8_0= ruleRGRD )
+                    // InternalDroneDSL.g:2465:6: lv_t_8_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTRGRDParserRuleCall_2_2_0());
@@ -6194,16 +6389,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDroneDSL.g:2434:3: ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2484:3: ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:2434:3: ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:2435:4: ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) )
+                    // InternalDroneDSL.g:2484:3: ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2485:4: ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:2435:4: ( (lv_t_9_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2436:5: (lv_t_9_0= ruleGDr )
+                    // InternalDroneDSL.g:2485:4: ( (lv_t_9_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2486:5: (lv_t_9_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2436:5: (lv_t_9_0= ruleGDr )
-                    // InternalDroneDSL.g:2437:6: lv_t_9_0= ruleGDr
+                    // InternalDroneDSL.g:2486:5: (lv_t_9_0= ruleGDr )
+                    // InternalDroneDSL.g:2487:6: lv_t_9_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTGDrParserRuleCall_3_0_0());
@@ -6230,15 +6425,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_10=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getParallele2Access().getAmpersandKeyword_3_1());
                     			
-                    // InternalDroneDSL.g:2458:4: ( (lv_b_11_0= ruleAR ) )
-                    // InternalDroneDSL.g:2459:5: (lv_b_11_0= ruleAR )
+                    // InternalDroneDSL.g:2508:4: ( (lv_b_11_0= ruleAR ) )
+                    // InternalDroneDSL.g:2509:5: (lv_b_11_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2459:5: (lv_b_11_0= ruleAR )
-                    // InternalDroneDSL.g:2460:6: lv_b_11_0= ruleAR
+                    // InternalDroneDSL.g:2509:5: (lv_b_11_0= ruleAR )
+                    // InternalDroneDSL.g:2510:6: lv_b_11_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getBARParserRuleCall_3_2_0());
@@ -6272,16 +6467,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalDroneDSL.g:2479:3: ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2529:3: ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:2479:3: ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:2480:4: ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) )
+                    // InternalDroneDSL.g:2529:3: ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2530:4: ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:2480:4: ( (lv_t_12_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2481:5: (lv_t_12_0= ruleGDr )
+                    // InternalDroneDSL.g:2530:4: ( (lv_t_12_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2531:5: (lv_t_12_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2481:5: (lv_t_12_0= ruleGDr )
-                    // InternalDroneDSL.g:2482:6: lv_t_12_0= ruleGDr
+                    // InternalDroneDSL.g:2531:5: (lv_t_12_0= ruleGDr )
+                    // InternalDroneDSL.g:2532:6: lv_t_12_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTGDrParserRuleCall_4_0_0());
@@ -6308,15 +6503,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_13=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_13, grammarAccess.getParallele2Access().getAmpersandKeyword_4_1());
                     			
-                    // InternalDroneDSL.g:2503:4: ( (lv_b_14_0= ruleMD ) )
-                    // InternalDroneDSL.g:2504:5: (lv_b_14_0= ruleMD )
+                    // InternalDroneDSL.g:2553:4: ( (lv_b_14_0= ruleMD ) )
+                    // InternalDroneDSL.g:2554:5: (lv_b_14_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2504:5: (lv_b_14_0= ruleMD )
-                    // InternalDroneDSL.g:2505:6: lv_b_14_0= ruleMD
+                    // InternalDroneDSL.g:2554:5: (lv_b_14_0= ruleMD )
+                    // InternalDroneDSL.g:2555:6: lv_b_14_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getBMDParserRuleCall_4_2_0());
@@ -6350,16 +6545,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalDroneDSL.g:2524:3: ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2574:3: ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:2524:3: ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:2525:4: ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2574:3: ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2575:4: ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:2525:4: ( (lv_t_15_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2526:5: (lv_t_15_0= ruleGDr )
+                    // InternalDroneDSL.g:2575:4: ( (lv_t_15_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2576:5: (lv_t_15_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2526:5: (lv_t_15_0= ruleGDr )
-                    // InternalDroneDSL.g:2527:6: lv_t_15_0= ruleGDr
+                    // InternalDroneDSL.g:2576:5: (lv_t_15_0= ruleGDr )
+                    // InternalDroneDSL.g:2577:6: lv_t_15_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTGDrParserRuleCall_5_0_0());
@@ -6386,15 +6581,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_16=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_16=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_16, grammarAccess.getParallele2Access().getAmpersandKeyword_5_1());
                     			
-                    // InternalDroneDSL.g:2548:4: ( (lv_b_17_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2549:5: (lv_b_17_0= ruleRGRD )
+                    // InternalDroneDSL.g:2598:4: ( (lv_b_17_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2599:5: (lv_b_17_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2549:5: (lv_b_17_0= ruleRGRD )
-                    // InternalDroneDSL.g:2550:6: lv_b_17_0= ruleRGRD
+                    // InternalDroneDSL.g:2599:5: (lv_b_17_0= ruleRGRD )
+                    // InternalDroneDSL.g:2600:6: lv_b_17_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getBRGRDParserRuleCall_5_2_0());
@@ -6428,16 +6623,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalDroneDSL.g:2569:3: ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2619:3: ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:2569:3: ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:2570:4: ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) )
+                    // InternalDroneDSL.g:2619:3: ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2620:4: ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:2570:4: ( (lv_t_18_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2571:5: (lv_t_18_0= ruleRGRD )
+                    // InternalDroneDSL.g:2620:4: ( (lv_t_18_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2621:5: (lv_t_18_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2571:5: (lv_t_18_0= ruleRGRD )
-                    // InternalDroneDSL.g:2572:6: lv_t_18_0= ruleRGRD
+                    // InternalDroneDSL.g:2621:5: (lv_t_18_0= ruleRGRD )
+                    // InternalDroneDSL.g:2622:6: lv_t_18_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTRGRDParserRuleCall_6_0_0());
@@ -6464,15 +6659,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_19=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_19=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_19, grammarAccess.getParallele2Access().getAmpersandKeyword_6_1());
                     			
-                    // InternalDroneDSL.g:2593:4: ( (lv_a_20_0= ruleMD ) )
-                    // InternalDroneDSL.g:2594:5: (lv_a_20_0= ruleMD )
+                    // InternalDroneDSL.g:2643:4: ( (lv_a_20_0= ruleMD ) )
+                    // InternalDroneDSL.g:2644:5: (lv_a_20_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2594:5: (lv_a_20_0= ruleMD )
-                    // InternalDroneDSL.g:2595:6: lv_a_20_0= ruleMD
+                    // InternalDroneDSL.g:2644:5: (lv_a_20_0= ruleMD )
+                    // InternalDroneDSL.g:2645:6: lv_a_20_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAMDParserRuleCall_6_2_0());
@@ -6506,16 +6701,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalDroneDSL.g:2614:3: ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2664:3: ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:2614:3: ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:2615:4: ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) )
+                    // InternalDroneDSL.g:2664:3: ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:2665:4: ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:2615:4: ( (lv_t_21_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2616:5: (lv_t_21_0= ruleRGRD )
+                    // InternalDroneDSL.g:2665:4: ( (lv_t_21_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2666:5: (lv_t_21_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2616:5: (lv_t_21_0= ruleRGRD )
-                    // InternalDroneDSL.g:2617:6: lv_t_21_0= ruleRGRD
+                    // InternalDroneDSL.g:2666:5: (lv_t_21_0= ruleRGRD )
+                    // InternalDroneDSL.g:2667:6: lv_t_21_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTRGRDParserRuleCall_7_0_0());
@@ -6542,15 +6737,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_22=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_22=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_22, grammarAccess.getParallele2Access().getAmpersandKeyword_7_1());
                     			
-                    // InternalDroneDSL.g:2638:4: ( (lv_a_23_0= ruleAR ) )
-                    // InternalDroneDSL.g:2639:5: (lv_a_23_0= ruleAR )
+                    // InternalDroneDSL.g:2688:4: ( (lv_a_23_0= ruleAR ) )
+                    // InternalDroneDSL.g:2689:5: (lv_a_23_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2639:5: (lv_a_23_0= ruleAR )
-                    // InternalDroneDSL.g:2640:6: lv_a_23_0= ruleAR
+                    // InternalDroneDSL.g:2689:5: (lv_a_23_0= ruleAR )
+                    // InternalDroneDSL.g:2690:6: lv_a_23_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAARParserRuleCall_7_2_0());
@@ -6584,16 +6779,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalDroneDSL.g:2659:3: ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2709:3: ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:2659:3: ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:2660:4: ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2709:3: ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2710:4: ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:2660:4: ( (lv_t_24_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2661:5: (lv_t_24_0= ruleRGRD )
+                    // InternalDroneDSL.g:2710:4: ( (lv_t_24_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2711:5: (lv_t_24_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2661:5: (lv_t_24_0= ruleRGRD )
-                    // InternalDroneDSL.g:2662:6: lv_t_24_0= ruleRGRD
+                    // InternalDroneDSL.g:2711:5: (lv_t_24_0= ruleRGRD )
+                    // InternalDroneDSL.g:2712:6: lv_t_24_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTRGRDParserRuleCall_8_0_0());
@@ -6620,15 +6815,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_25=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_25, grammarAccess.getParallele2Access().getAmpersandKeyword_8_1());
                     			
-                    // InternalDroneDSL.g:2683:4: ( (lv_a_26_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2684:5: (lv_a_26_0= ruleGDr )
+                    // InternalDroneDSL.g:2733:4: ( (lv_a_26_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2734:5: (lv_a_26_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2684:5: (lv_a_26_0= ruleGDr )
-                    // InternalDroneDSL.g:2685:6: lv_a_26_0= ruleGDr
+                    // InternalDroneDSL.g:2734:5: (lv_a_26_0= ruleGDr )
+                    // InternalDroneDSL.g:2735:6: lv_a_26_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAGDrParserRuleCall_8_2_0());
@@ -6662,16 +6857,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDroneDSL.g:2704:3: ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2754:3: ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:2704:3: ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:2705:4: ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) )
+                    // InternalDroneDSL.g:2754:3: ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2755:4: ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:2705:4: ( (lv_t_27_0= ruleAR ) )
-                    // InternalDroneDSL.g:2706:5: (lv_t_27_0= ruleAR )
+                    // InternalDroneDSL.g:2755:4: ( (lv_t_27_0= ruleAR ) )
+                    // InternalDroneDSL.g:2756:5: (lv_t_27_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2706:5: (lv_t_27_0= ruleAR )
-                    // InternalDroneDSL.g:2707:6: lv_t_27_0= ruleAR
+                    // InternalDroneDSL.g:2756:5: (lv_t_27_0= ruleAR )
+                    // InternalDroneDSL.g:2757:6: lv_t_27_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTARParserRuleCall_9_0_0());
@@ -6698,15 +6893,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_28=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_28=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_28, grammarAccess.getParallele2Access().getAmpersandKeyword_9_1());
                     			
-                    // InternalDroneDSL.g:2728:4: ( (lv_a_29_0= ruleMD ) )
-                    // InternalDroneDSL.g:2729:5: (lv_a_29_0= ruleMD )
+                    // InternalDroneDSL.g:2778:4: ( (lv_a_29_0= ruleMD ) )
+                    // InternalDroneDSL.g:2779:5: (lv_a_29_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2729:5: (lv_a_29_0= ruleMD )
-                    // InternalDroneDSL.g:2730:6: lv_a_29_0= ruleMD
+                    // InternalDroneDSL.g:2779:5: (lv_a_29_0= ruleMD )
+                    // InternalDroneDSL.g:2780:6: lv_a_29_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAMDParserRuleCall_9_2_0());
@@ -6740,16 +6935,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalDroneDSL.g:2749:3: ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2799:3: ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:2749:3: ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:2750:4: ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2799:3: ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2800:4: ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:2750:4: ( (lv_t_30_0= ruleAR ) )
-                    // InternalDroneDSL.g:2751:5: (lv_t_30_0= ruleAR )
+                    // InternalDroneDSL.g:2800:4: ( (lv_t_30_0= ruleAR ) )
+                    // InternalDroneDSL.g:2801:5: (lv_t_30_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2751:5: (lv_t_30_0= ruleAR )
-                    // InternalDroneDSL.g:2752:6: lv_t_30_0= ruleAR
+                    // InternalDroneDSL.g:2801:5: (lv_t_30_0= ruleAR )
+                    // InternalDroneDSL.g:2802:6: lv_t_30_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTARParserRuleCall_10_0_0());
@@ -6776,15 +6971,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_31=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_31, grammarAccess.getParallele2Access().getAmpersandKeyword_10_1());
                     			
-                    // InternalDroneDSL.g:2773:4: ( (lv_a_32_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2774:5: (lv_a_32_0= ruleRGRD )
+                    // InternalDroneDSL.g:2823:4: ( (lv_a_32_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2824:5: (lv_a_32_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2774:5: (lv_a_32_0= ruleRGRD )
-                    // InternalDroneDSL.g:2775:6: lv_a_32_0= ruleRGRD
+                    // InternalDroneDSL.g:2824:5: (lv_a_32_0= ruleRGRD )
+                    // InternalDroneDSL.g:2825:6: lv_a_32_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getARGRDParserRuleCall_10_2_0());
@@ -6818,16 +7013,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalDroneDSL.g:2794:3: ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2844:3: ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:2794:3: ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:2795:4: ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2844:3: ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:2845:4: ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:2795:4: ( (lv_t_33_0= ruleAR ) )
-                    // InternalDroneDSL.g:2796:5: (lv_t_33_0= ruleAR )
+                    // InternalDroneDSL.g:2845:4: ( (lv_t_33_0= ruleAR ) )
+                    // InternalDroneDSL.g:2846:5: (lv_t_33_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2796:5: (lv_t_33_0= ruleAR )
-                    // InternalDroneDSL.g:2797:6: lv_t_33_0= ruleAR
+                    // InternalDroneDSL.g:2846:5: (lv_t_33_0= ruleAR )
+                    // InternalDroneDSL.g:2847:6: lv_t_33_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getTARParserRuleCall_11_0_0());
@@ -6854,15 +7049,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_34=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_34=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_34, grammarAccess.getParallele2Access().getAmpersandKeyword_11_1());
                     			
-                    // InternalDroneDSL.g:2818:4: ( (lv_a_35_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2819:5: (lv_a_35_0= ruleGDr )
+                    // InternalDroneDSL.g:2868:4: ( (lv_a_35_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2869:5: (lv_a_35_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2819:5: (lv_a_35_0= ruleGDr )
-                    // InternalDroneDSL.g:2820:6: lv_a_35_0= ruleGDr
+                    // InternalDroneDSL.g:2869:5: (lv_a_35_0= ruleGDr )
+                    // InternalDroneDSL.g:2870:6: lv_a_35_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele2Access().getAGDrParserRuleCall_11_2_0());
@@ -6918,7 +7113,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParallele3"
-    // InternalDroneDSL.g:2842:1: entryRuleParallele3 returns [EObject current=null] : iv_ruleParallele3= ruleParallele3 EOF ;
+    // InternalDroneDSL.g:2892:1: entryRuleParallele3 returns [EObject current=null] : iv_ruleParallele3= ruleParallele3 EOF ;
     public final EObject entryRuleParallele3() throws RecognitionException {
         EObject current = null;
 
@@ -6926,8 +7121,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:2842:51: (iv_ruleParallele3= ruleParallele3 EOF )
-            // InternalDroneDSL.g:2843:2: iv_ruleParallele3= ruleParallele3 EOF
+            // InternalDroneDSL.g:2892:51: (iv_ruleParallele3= ruleParallele3 EOF )
+            // InternalDroneDSL.g:2893:2: iv_ruleParallele3= ruleParallele3 EOF
             {
              newCompositeNode(grammarAccess.getParallele3Rule()); 
             pushFollow(FOLLOW_1);
@@ -6954,7 +7149,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParallele3"
-    // InternalDroneDSL.g:2849:1: ruleParallele3 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) ) ;
+    // InternalDroneDSL.g:2899:1: ruleParallele3 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) ) ;
     public final EObject ruleParallele3() throws RecognitionException {
         EObject current = null;
 
@@ -7155,24 +7350,24 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:2855:2: ( ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) ) )
-            // InternalDroneDSL.g:2856:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )
+            // InternalDroneDSL.g:2905:2: ( ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) ) )
+            // InternalDroneDSL.g:2906:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )
             {
-            // InternalDroneDSL.g:2856:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )
-            int alt18=24;
-            alt18 = dfa18.predict(input);
-            switch (alt18) {
+            // InternalDroneDSL.g:2906:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )
+            int alt19=24;
+            alt19 = dfa19.predict(input);
+            switch (alt19) {
                 case 1 :
-                    // InternalDroneDSL.g:2857:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2907:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:2857:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:2858:4: ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) )
+                    // InternalDroneDSL.g:2907:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:2908:4: ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:2858:4: ( (lv_a_0_0= ruleAR ) )
-                    // InternalDroneDSL.g:2859:5: (lv_a_0_0= ruleAR )
+                    // InternalDroneDSL.g:2908:4: ( (lv_a_0_0= ruleAR ) )
+                    // InternalDroneDSL.g:2909:5: (lv_a_0_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2859:5: (lv_a_0_0= ruleAR )
-                    // InternalDroneDSL.g:2860:6: lv_a_0_0= ruleAR
+                    // InternalDroneDSL.g:2909:5: (lv_a_0_0= ruleAR )
+                    // InternalDroneDSL.g:2910:6: lv_a_0_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_0_0_0());
@@ -7199,15 +7394,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_1=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getParallele3Access().getAmpersandKeyword_0_1());
                     			
-                    // InternalDroneDSL.g:2881:4: ( (lv_b_2_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2882:5: (lv_b_2_0= ruleGDr )
+                    // InternalDroneDSL.g:2931:4: ( (lv_b_2_0= ruleGDr ) )
+                    // InternalDroneDSL.g:2932:5: (lv_b_2_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2882:5: (lv_b_2_0= ruleGDr )
-                    // InternalDroneDSL.g:2883:6: lv_b_2_0= ruleGDr
+                    // InternalDroneDSL.g:2932:5: (lv_b_2_0= ruleGDr )
+                    // InternalDroneDSL.g:2933:6: lv_b_2_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_0_2_0());
@@ -7234,15 +7429,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_3=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getParallele3Access().getAmpersandKeyword_0_3());
                     			
-                    // InternalDroneDSL.g:2904:4: ( (lv_c_4_0= ruleMD ) )
-                    // InternalDroneDSL.g:2905:5: (lv_c_4_0= ruleMD )
+                    // InternalDroneDSL.g:2954:4: ( (lv_c_4_0= ruleMD ) )
+                    // InternalDroneDSL.g:2955:5: (lv_c_4_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:2905:5: (lv_c_4_0= ruleMD )
-                    // InternalDroneDSL.g:2906:6: lv_c_4_0= ruleMD
+                    // InternalDroneDSL.g:2955:5: (lv_c_4_0= ruleMD )
+                    // InternalDroneDSL.g:2956:6: lv_c_4_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_0_4_0());
@@ -7276,16 +7471,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:2925:3: ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2975:3: ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:2925:3: ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:2926:4: ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:2975:3: ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:2976:4: ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:2926:4: ( (lv_a_5_0= ruleAR ) )
-                    // InternalDroneDSL.g:2927:5: (lv_a_5_0= ruleAR )
+                    // InternalDroneDSL.g:2976:4: ( (lv_a_5_0= ruleAR ) )
+                    // InternalDroneDSL.g:2977:5: (lv_a_5_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2927:5: (lv_a_5_0= ruleAR )
-                    // InternalDroneDSL.g:2928:6: lv_a_5_0= ruleAR
+                    // InternalDroneDSL.g:2977:5: (lv_a_5_0= ruleAR )
+                    // InternalDroneDSL.g:2978:6: lv_a_5_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_1_0_0());
@@ -7312,15 +7507,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_6=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getParallele3Access().getAmpersandKeyword_1_1());
                     			
-                    // InternalDroneDSL.g:2949:4: ( (lv_b_7_0= ruleGDr ) )
-                    // InternalDroneDSL.g:2950:5: (lv_b_7_0= ruleGDr )
+                    // InternalDroneDSL.g:2999:4: ( (lv_b_7_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3000:5: (lv_b_7_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:2950:5: (lv_b_7_0= ruleGDr )
-                    // InternalDroneDSL.g:2951:6: lv_b_7_0= ruleGDr
+                    // InternalDroneDSL.g:3000:5: (lv_b_7_0= ruleGDr )
+                    // InternalDroneDSL.g:3001:6: lv_b_7_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_1_2_0());
@@ -7347,15 +7542,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_8=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getParallele3Access().getAmpersandKeyword_1_3());
                     			
-                    // InternalDroneDSL.g:2972:4: ( (lv_c_9_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:2973:5: (lv_c_9_0= ruleRGRD )
+                    // InternalDroneDSL.g:3022:4: ( (lv_c_9_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3023:5: (lv_c_9_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:2973:5: (lv_c_9_0= ruleRGRD )
-                    // InternalDroneDSL.g:2974:6: lv_c_9_0= ruleRGRD
+                    // InternalDroneDSL.g:3023:5: (lv_c_9_0= ruleRGRD )
+                    // InternalDroneDSL.g:3024:6: lv_c_9_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_1_4_0());
@@ -7389,16 +7584,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:2993:3: ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3043:3: ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:2993:3: ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:2994:4: ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3043:3: ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3044:4: ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:2994:4: ( (lv_a_10_0= ruleAR ) )
-                    // InternalDroneDSL.g:2995:5: (lv_a_10_0= ruleAR )
+                    // InternalDroneDSL.g:3044:4: ( (lv_a_10_0= ruleAR ) )
+                    // InternalDroneDSL.g:3045:5: (lv_a_10_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:2995:5: (lv_a_10_0= ruleAR )
-                    // InternalDroneDSL.g:2996:6: lv_a_10_0= ruleAR
+                    // InternalDroneDSL.g:3045:5: (lv_a_10_0= ruleAR )
+                    // InternalDroneDSL.g:3046:6: lv_a_10_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_2_0_0());
@@ -7425,15 +7620,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_11=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_11, grammarAccess.getParallele3Access().getAmpersandKeyword_2_1());
                     			
-                    // InternalDroneDSL.g:3017:4: ( (lv_b_12_0= ruleMD ) )
-                    // InternalDroneDSL.g:3018:5: (lv_b_12_0= ruleMD )
+                    // InternalDroneDSL.g:3067:4: ( (lv_b_12_0= ruleMD ) )
+                    // InternalDroneDSL.g:3068:5: (lv_b_12_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3018:5: (lv_b_12_0= ruleMD )
-                    // InternalDroneDSL.g:3019:6: lv_b_12_0= ruleMD
+                    // InternalDroneDSL.g:3068:5: (lv_b_12_0= ruleMD )
+                    // InternalDroneDSL.g:3069:6: lv_b_12_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_2_2_0());
@@ -7460,15 +7655,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_13=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_13, grammarAccess.getParallele3Access().getAmpersandKeyword_2_3());
                     			
-                    // InternalDroneDSL.g:3040:4: ( (lv_c_14_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3041:5: (lv_c_14_0= ruleGDr )
+                    // InternalDroneDSL.g:3090:4: ( (lv_c_14_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3091:5: (lv_c_14_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3041:5: (lv_c_14_0= ruleGDr )
-                    // InternalDroneDSL.g:3042:6: lv_c_14_0= ruleGDr
+                    // InternalDroneDSL.g:3091:5: (lv_c_14_0= ruleGDr )
+                    // InternalDroneDSL.g:3092:6: lv_c_14_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_2_4_0());
@@ -7502,16 +7697,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDroneDSL.g:3061:3: ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3111:3: ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:3061:3: ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:3062:4: ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3111:3: ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3112:4: ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:3062:4: ( (lv_a_15_0= ruleAR ) )
-                    // InternalDroneDSL.g:3063:5: (lv_a_15_0= ruleAR )
+                    // InternalDroneDSL.g:3112:4: ( (lv_a_15_0= ruleAR ) )
+                    // InternalDroneDSL.g:3113:5: (lv_a_15_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3063:5: (lv_a_15_0= ruleAR )
-                    // InternalDroneDSL.g:3064:6: lv_a_15_0= ruleAR
+                    // InternalDroneDSL.g:3113:5: (lv_a_15_0= ruleAR )
+                    // InternalDroneDSL.g:3114:6: lv_a_15_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_3_0_0());
@@ -7538,15 +7733,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_16=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_16=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_16, grammarAccess.getParallele3Access().getAmpersandKeyword_3_1());
                     			
-                    // InternalDroneDSL.g:3085:4: ( (lv_b_17_0= ruleMD ) )
-                    // InternalDroneDSL.g:3086:5: (lv_b_17_0= ruleMD )
+                    // InternalDroneDSL.g:3135:4: ( (lv_b_17_0= ruleMD ) )
+                    // InternalDroneDSL.g:3136:5: (lv_b_17_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3086:5: (lv_b_17_0= ruleMD )
-                    // InternalDroneDSL.g:3087:6: lv_b_17_0= ruleMD
+                    // InternalDroneDSL.g:3136:5: (lv_b_17_0= ruleMD )
+                    // InternalDroneDSL.g:3137:6: lv_b_17_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_3_2_0());
@@ -7573,15 +7768,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_18=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_18=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_18, grammarAccess.getParallele3Access().getAmpersandKeyword_3_3());
                     			
-                    // InternalDroneDSL.g:3108:4: ( (lv_c_19_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3109:5: (lv_c_19_0= ruleRGRD )
+                    // InternalDroneDSL.g:3158:4: ( (lv_c_19_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3159:5: (lv_c_19_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3109:5: (lv_c_19_0= ruleRGRD )
-                    // InternalDroneDSL.g:3110:6: lv_c_19_0= ruleRGRD
+                    // InternalDroneDSL.g:3159:5: (lv_c_19_0= ruleRGRD )
+                    // InternalDroneDSL.g:3160:6: lv_c_19_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_3_4_0());
@@ -7615,16 +7810,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalDroneDSL.g:3129:3: ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3179:3: ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:3129:3: ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:3130:4: ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) )
+                    // InternalDroneDSL.g:3179:3: ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3180:4: ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:3130:4: ( (lv_a_20_0= ruleAR ) )
-                    // InternalDroneDSL.g:3131:5: (lv_a_20_0= ruleAR )
+                    // InternalDroneDSL.g:3180:4: ( (lv_a_20_0= ruleAR ) )
+                    // InternalDroneDSL.g:3181:5: (lv_a_20_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3131:5: (lv_a_20_0= ruleAR )
-                    // InternalDroneDSL.g:3132:6: lv_a_20_0= ruleAR
+                    // InternalDroneDSL.g:3181:5: (lv_a_20_0= ruleAR )
+                    // InternalDroneDSL.g:3182:6: lv_a_20_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_4_0_0());
@@ -7651,15 +7846,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_21=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_21, grammarAccess.getParallele3Access().getAmpersandKeyword_4_1());
                     			
-                    // InternalDroneDSL.g:3153:4: ( (lv_b_22_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3154:5: (lv_b_22_0= ruleRGRD )
+                    // InternalDroneDSL.g:3203:4: ( (lv_b_22_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3204:5: (lv_b_22_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3154:5: (lv_b_22_0= ruleRGRD )
-                    // InternalDroneDSL.g:3155:6: lv_b_22_0= ruleRGRD
+                    // InternalDroneDSL.g:3204:5: (lv_b_22_0= ruleRGRD )
+                    // InternalDroneDSL.g:3205:6: lv_b_22_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_4_2_0());
@@ -7686,15 +7881,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_23=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_23=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_23, grammarAccess.getParallele3Access().getAmpersandKeyword_4_3());
                     			
-                    // InternalDroneDSL.g:3176:4: ( (lv_c_24_0= ruleMD ) )
-                    // InternalDroneDSL.g:3177:5: (lv_c_24_0= ruleMD )
+                    // InternalDroneDSL.g:3226:4: ( (lv_c_24_0= ruleMD ) )
+                    // InternalDroneDSL.g:3227:5: (lv_c_24_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3177:5: (lv_c_24_0= ruleMD )
-                    // InternalDroneDSL.g:3178:6: lv_c_24_0= ruleMD
+                    // InternalDroneDSL.g:3227:5: (lv_c_24_0= ruleMD )
+                    // InternalDroneDSL.g:3228:6: lv_c_24_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_4_4_0());
@@ -7728,16 +7923,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalDroneDSL.g:3197:3: ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3247:3: ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:3197:3: ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:3198:4: ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3247:3: ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3248:4: ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:3198:4: ( (lv_a_25_0= ruleAR ) )
-                    // InternalDroneDSL.g:3199:5: (lv_a_25_0= ruleAR )
+                    // InternalDroneDSL.g:3248:4: ( (lv_a_25_0= ruleAR ) )
+                    // InternalDroneDSL.g:3249:5: (lv_a_25_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3199:5: (lv_a_25_0= ruleAR )
-                    // InternalDroneDSL.g:3200:6: lv_a_25_0= ruleAR
+                    // InternalDroneDSL.g:3249:5: (lv_a_25_0= ruleAR )
+                    // InternalDroneDSL.g:3250:6: lv_a_25_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAARParserRuleCall_5_0_0());
@@ -7764,15 +7959,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_26=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_26=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_26, grammarAccess.getParallele3Access().getAmpersandKeyword_5_1());
                     			
-                    // InternalDroneDSL.g:3221:4: ( (lv_b_27_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3222:5: (lv_b_27_0= ruleRGRD )
+                    // InternalDroneDSL.g:3271:4: ( (lv_b_27_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3272:5: (lv_b_27_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3222:5: (lv_b_27_0= ruleRGRD )
-                    // InternalDroneDSL.g:3223:6: lv_b_27_0= ruleRGRD
+                    // InternalDroneDSL.g:3272:5: (lv_b_27_0= ruleRGRD )
+                    // InternalDroneDSL.g:3273:6: lv_b_27_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_5_2_0());
@@ -7799,15 +7994,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_28=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_28=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_28, grammarAccess.getParallele3Access().getAmpersandKeyword_5_3());
                     			
-                    // InternalDroneDSL.g:3244:4: ( (lv_c_29_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3245:5: (lv_c_29_0= ruleGDr )
+                    // InternalDroneDSL.g:3294:4: ( (lv_c_29_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3295:5: (lv_c_29_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3245:5: (lv_c_29_0= ruleGDr )
-                    // InternalDroneDSL.g:3246:6: lv_c_29_0= ruleGDr
+                    // InternalDroneDSL.g:3295:5: (lv_c_29_0= ruleGDr )
+                    // InternalDroneDSL.g:3296:6: lv_c_29_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_5_4_0());
@@ -7841,16 +8036,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalDroneDSL.g:3265:3: ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3315:3: ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:3265:3: ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:3266:4: ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) )
+                    // InternalDroneDSL.g:3315:3: ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3316:4: ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:3266:4: ( (lv_a_30_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3267:5: (lv_a_30_0= ruleGDr )
+                    // InternalDroneDSL.g:3316:4: ( (lv_a_30_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3317:5: (lv_a_30_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3267:5: (lv_a_30_0= ruleGDr )
-                    // InternalDroneDSL.g:3268:6: lv_a_30_0= ruleGDr
+                    // InternalDroneDSL.g:3317:5: (lv_a_30_0= ruleGDr )
+                    // InternalDroneDSL.g:3318:6: lv_a_30_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_6_0_0());
@@ -7877,15 +8072,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_31=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_31, grammarAccess.getParallele3Access().getAmpersandKeyword_6_1());
                     			
-                    // InternalDroneDSL.g:3289:4: ( (lv_b_32_0= ruleAR ) )
-                    // InternalDroneDSL.g:3290:5: (lv_b_32_0= ruleAR )
+                    // InternalDroneDSL.g:3339:4: ( (lv_b_32_0= ruleAR ) )
+                    // InternalDroneDSL.g:3340:5: (lv_b_32_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3290:5: (lv_b_32_0= ruleAR )
-                    // InternalDroneDSL.g:3291:6: lv_b_32_0= ruleAR
+                    // InternalDroneDSL.g:3340:5: (lv_b_32_0= ruleAR )
+                    // InternalDroneDSL.g:3341:6: lv_b_32_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_6_2_0());
@@ -7912,15 +8107,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_33=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_33=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_33, grammarAccess.getParallele3Access().getAmpersandKeyword_6_3());
                     			
-                    // InternalDroneDSL.g:3312:4: ( (lv_c_34_0= ruleMD ) )
-                    // InternalDroneDSL.g:3313:5: (lv_c_34_0= ruleMD )
+                    // InternalDroneDSL.g:3362:4: ( (lv_c_34_0= ruleMD ) )
+                    // InternalDroneDSL.g:3363:5: (lv_c_34_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3313:5: (lv_c_34_0= ruleMD )
-                    // InternalDroneDSL.g:3314:6: lv_c_34_0= ruleMD
+                    // InternalDroneDSL.g:3363:5: (lv_c_34_0= ruleMD )
+                    // InternalDroneDSL.g:3364:6: lv_c_34_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_6_4_0());
@@ -7954,16 +8149,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalDroneDSL.g:3333:3: ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3383:3: ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:3333:3: ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:3334:4: ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3383:3: ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3384:4: ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:3334:4: ( (lv_a_35_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3335:5: (lv_a_35_0= ruleGDr )
+                    // InternalDroneDSL.g:3384:4: ( (lv_a_35_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3385:5: (lv_a_35_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3335:5: (lv_a_35_0= ruleGDr )
-                    // InternalDroneDSL.g:3336:6: lv_a_35_0= ruleGDr
+                    // InternalDroneDSL.g:3385:5: (lv_a_35_0= ruleGDr )
+                    // InternalDroneDSL.g:3386:6: lv_a_35_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_7_0_0());
@@ -7990,15 +8185,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_36=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_36=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_36, grammarAccess.getParallele3Access().getAmpersandKeyword_7_1());
                     			
-                    // InternalDroneDSL.g:3357:4: ( (lv_b_37_0= ruleAR ) )
-                    // InternalDroneDSL.g:3358:5: (lv_b_37_0= ruleAR )
+                    // InternalDroneDSL.g:3407:4: ( (lv_b_37_0= ruleAR ) )
+                    // InternalDroneDSL.g:3408:5: (lv_b_37_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3358:5: (lv_b_37_0= ruleAR )
-                    // InternalDroneDSL.g:3359:6: lv_b_37_0= ruleAR
+                    // InternalDroneDSL.g:3408:5: (lv_b_37_0= ruleAR )
+                    // InternalDroneDSL.g:3409:6: lv_b_37_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_7_2_0());
@@ -8025,15 +8220,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_38=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_38=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_38, grammarAccess.getParallele3Access().getAmpersandKeyword_7_3());
                     			
-                    // InternalDroneDSL.g:3380:4: ( (lv_c_39_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3381:5: (lv_c_39_0= ruleRGRD )
+                    // InternalDroneDSL.g:3430:4: ( (lv_c_39_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3431:5: (lv_c_39_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3381:5: (lv_c_39_0= ruleRGRD )
-                    // InternalDroneDSL.g:3382:6: lv_c_39_0= ruleRGRD
+                    // InternalDroneDSL.g:3431:5: (lv_c_39_0= ruleRGRD )
+                    // InternalDroneDSL.g:3432:6: lv_c_39_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_7_4_0());
@@ -8067,16 +8262,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalDroneDSL.g:3401:3: ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3451:3: ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:3401:3: ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:3402:4: ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) )
+                    // InternalDroneDSL.g:3451:3: ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3452:4: ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:3402:4: ( (lv_a_40_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3403:5: (lv_a_40_0= ruleGDr )
+                    // InternalDroneDSL.g:3452:4: ( (lv_a_40_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3453:5: (lv_a_40_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3403:5: (lv_a_40_0= ruleGDr )
-                    // InternalDroneDSL.g:3404:6: lv_a_40_0= ruleGDr
+                    // InternalDroneDSL.g:3453:5: (lv_a_40_0= ruleGDr )
+                    // InternalDroneDSL.g:3454:6: lv_a_40_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_8_0_0());
@@ -8103,15 +8298,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_41=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_41=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_41, grammarAccess.getParallele3Access().getAmpersandKeyword_8_1());
                     			
-                    // InternalDroneDSL.g:3425:4: ( (lv_b_42_0= ruleMD ) )
-                    // InternalDroneDSL.g:3426:5: (lv_b_42_0= ruleMD )
+                    // InternalDroneDSL.g:3475:4: ( (lv_b_42_0= ruleMD ) )
+                    // InternalDroneDSL.g:3476:5: (lv_b_42_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3426:5: (lv_b_42_0= ruleMD )
-                    // InternalDroneDSL.g:3427:6: lv_b_42_0= ruleMD
+                    // InternalDroneDSL.g:3476:5: (lv_b_42_0= ruleMD )
+                    // InternalDroneDSL.g:3477:6: lv_b_42_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_8_2_0());
@@ -8138,15 +8333,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_43=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_43=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_43, grammarAccess.getParallele3Access().getAmpersandKeyword_8_3());
                     			
-                    // InternalDroneDSL.g:3448:4: ( (lv_c_44_0= ruleAR ) )
-                    // InternalDroneDSL.g:3449:5: (lv_c_44_0= ruleAR )
+                    // InternalDroneDSL.g:3498:4: ( (lv_c_44_0= ruleAR ) )
+                    // InternalDroneDSL.g:3499:5: (lv_c_44_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3449:5: (lv_c_44_0= ruleAR )
-                    // InternalDroneDSL.g:3450:6: lv_c_44_0= ruleAR
+                    // InternalDroneDSL.g:3499:5: (lv_c_44_0= ruleAR )
+                    // InternalDroneDSL.g:3500:6: lv_c_44_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_8_4_0());
@@ -8180,16 +8375,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDroneDSL.g:3469:3: ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3519:3: ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:3469:3: ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:3470:4: ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3519:3: ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3520:4: ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:3470:4: ( (lv_a_45_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3471:5: (lv_a_45_0= ruleGDr )
+                    // InternalDroneDSL.g:3520:4: ( (lv_a_45_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3521:5: (lv_a_45_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3471:5: (lv_a_45_0= ruleGDr )
-                    // InternalDroneDSL.g:3472:6: lv_a_45_0= ruleGDr
+                    // InternalDroneDSL.g:3521:5: (lv_a_45_0= ruleGDr )
+                    // InternalDroneDSL.g:3522:6: lv_a_45_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_9_0_0());
@@ -8216,15 +8411,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_46=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_46=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_46, grammarAccess.getParallele3Access().getAmpersandKeyword_9_1());
                     			
-                    // InternalDroneDSL.g:3493:4: ( (lv_b_47_0= ruleMD ) )
-                    // InternalDroneDSL.g:3494:5: (lv_b_47_0= ruleMD )
+                    // InternalDroneDSL.g:3543:4: ( (lv_b_47_0= ruleMD ) )
+                    // InternalDroneDSL.g:3544:5: (lv_b_47_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3494:5: (lv_b_47_0= ruleMD )
-                    // InternalDroneDSL.g:3495:6: lv_b_47_0= ruleMD
+                    // InternalDroneDSL.g:3544:5: (lv_b_47_0= ruleMD )
+                    // InternalDroneDSL.g:3545:6: lv_b_47_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_9_2_0());
@@ -8251,15 +8446,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_48=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_48=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_48, grammarAccess.getParallele3Access().getAmpersandKeyword_9_3());
                     			
-                    // InternalDroneDSL.g:3516:4: ( (lv_c_49_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3517:5: (lv_c_49_0= ruleRGRD )
+                    // InternalDroneDSL.g:3566:4: ( (lv_c_49_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3567:5: (lv_c_49_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3517:5: (lv_c_49_0= ruleRGRD )
-                    // InternalDroneDSL.g:3518:6: lv_c_49_0= ruleRGRD
+                    // InternalDroneDSL.g:3567:5: (lv_c_49_0= ruleRGRD )
+                    // InternalDroneDSL.g:3568:6: lv_c_49_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_9_4_0());
@@ -8293,16 +8488,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalDroneDSL.g:3537:3: ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3587:3: ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:3537:3: ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:3538:4: ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) )
+                    // InternalDroneDSL.g:3587:3: ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3588:4: ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:3538:4: ( (lv_a_50_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3539:5: (lv_a_50_0= ruleGDr )
+                    // InternalDroneDSL.g:3588:4: ( (lv_a_50_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3589:5: (lv_a_50_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3539:5: (lv_a_50_0= ruleGDr )
-                    // InternalDroneDSL.g:3540:6: lv_a_50_0= ruleGDr
+                    // InternalDroneDSL.g:3589:5: (lv_a_50_0= ruleGDr )
+                    // InternalDroneDSL.g:3590:6: lv_a_50_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_10_0_0());
@@ -8329,15 +8524,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_51=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_51=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_51, grammarAccess.getParallele3Access().getAmpersandKeyword_10_1());
                     			
-                    // InternalDroneDSL.g:3561:4: ( (lv_b_52_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3562:5: (lv_b_52_0= ruleRGRD )
+                    // InternalDroneDSL.g:3611:4: ( (lv_b_52_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3612:5: (lv_b_52_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3562:5: (lv_b_52_0= ruleRGRD )
-                    // InternalDroneDSL.g:3563:6: lv_b_52_0= ruleRGRD
+                    // InternalDroneDSL.g:3612:5: (lv_b_52_0= ruleRGRD )
+                    // InternalDroneDSL.g:3613:6: lv_b_52_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_10_2_0());
@@ -8364,15 +8559,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_53=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_53=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_53, grammarAccess.getParallele3Access().getAmpersandKeyword_10_3());
                     			
-                    // InternalDroneDSL.g:3584:4: ( (lv_c_54_0= ruleAR ) )
-                    // InternalDroneDSL.g:3585:5: (lv_c_54_0= ruleAR )
+                    // InternalDroneDSL.g:3634:4: ( (lv_c_54_0= ruleAR ) )
+                    // InternalDroneDSL.g:3635:5: (lv_c_54_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3585:5: (lv_c_54_0= ruleAR )
-                    // InternalDroneDSL.g:3586:6: lv_c_54_0= ruleAR
+                    // InternalDroneDSL.g:3635:5: (lv_c_54_0= ruleAR )
+                    // InternalDroneDSL.g:3636:6: lv_c_54_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_10_4_0());
@@ -8406,16 +8601,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalDroneDSL.g:3605:3: ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3655:3: ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:3605:3: ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:3606:4: ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) )
+                    // InternalDroneDSL.g:3655:3: ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:3656:4: ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:3606:4: ( (lv_a_55_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3607:5: (lv_a_55_0= ruleGDr )
+                    // InternalDroneDSL.g:3656:4: ( (lv_a_55_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3657:5: (lv_a_55_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3607:5: (lv_a_55_0= ruleGDr )
-                    // InternalDroneDSL.g:3608:6: lv_a_55_0= ruleGDr
+                    // InternalDroneDSL.g:3657:5: (lv_a_55_0= ruleGDr )
+                    // InternalDroneDSL.g:3658:6: lv_a_55_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAGDrParserRuleCall_11_0_0());
@@ -8442,15 +8637,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_56=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_56=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_56, grammarAccess.getParallele3Access().getAmpersandKeyword_11_1());
                     			
-                    // InternalDroneDSL.g:3629:4: ( (lv_b_57_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3630:5: (lv_b_57_0= ruleRGRD )
+                    // InternalDroneDSL.g:3679:4: ( (lv_b_57_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3680:5: (lv_b_57_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3630:5: (lv_b_57_0= ruleRGRD )
-                    // InternalDroneDSL.g:3631:6: lv_b_57_0= ruleRGRD
+                    // InternalDroneDSL.g:3680:5: (lv_b_57_0= ruleRGRD )
+                    // InternalDroneDSL.g:3681:6: lv_b_57_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_11_2_0());
@@ -8477,15 +8672,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_58=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_58=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_58, grammarAccess.getParallele3Access().getAmpersandKeyword_11_3());
                     			
-                    // InternalDroneDSL.g:3652:4: ( (lv_c_59_0= ruleMD ) )
-                    // InternalDroneDSL.g:3653:5: (lv_c_59_0= ruleMD )
+                    // InternalDroneDSL.g:3702:4: ( (lv_c_59_0= ruleMD ) )
+                    // InternalDroneDSL.g:3703:5: (lv_c_59_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3653:5: (lv_c_59_0= ruleMD )
-                    // InternalDroneDSL.g:3654:6: lv_c_59_0= ruleMD
+                    // InternalDroneDSL.g:3703:5: (lv_c_59_0= ruleMD )
+                    // InternalDroneDSL.g:3704:6: lv_c_59_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_11_4_0());
@@ -8519,16 +8714,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalDroneDSL.g:3673:3: ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3723:3: ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:3673:3: ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:3674:4: ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3723:3: ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3724:4: ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:3674:4: ( (lv_a_60_0= ruleMD ) )
-                    // InternalDroneDSL.g:3675:5: (lv_a_60_0= ruleMD )
+                    // InternalDroneDSL.g:3724:4: ( (lv_a_60_0= ruleMD ) )
+                    // InternalDroneDSL.g:3725:5: (lv_a_60_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3675:5: (lv_a_60_0= ruleMD )
-                    // InternalDroneDSL.g:3676:6: lv_a_60_0= ruleMD
+                    // InternalDroneDSL.g:3725:5: (lv_a_60_0= ruleMD )
+                    // InternalDroneDSL.g:3726:6: lv_a_60_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_12_0_0());
@@ -8555,15 +8750,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_61=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_61=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_61, grammarAccess.getParallele3Access().getAmpersandKeyword_12_1());
                     			
-                    // InternalDroneDSL.g:3697:4: ( (lv_b_62_0= ruleAR ) )
-                    // InternalDroneDSL.g:3698:5: (lv_b_62_0= ruleAR )
+                    // InternalDroneDSL.g:3747:4: ( (lv_b_62_0= ruleAR ) )
+                    // InternalDroneDSL.g:3748:5: (lv_b_62_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3698:5: (lv_b_62_0= ruleAR )
-                    // InternalDroneDSL.g:3699:6: lv_b_62_0= ruleAR
+                    // InternalDroneDSL.g:3748:5: (lv_b_62_0= ruleAR )
+                    // InternalDroneDSL.g:3749:6: lv_b_62_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_12_2_0());
@@ -8590,15 +8785,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_63=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_63=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_63, grammarAccess.getParallele3Access().getAmpersandKeyword_12_3());
                     			
-                    // InternalDroneDSL.g:3720:4: ( (lv_c_64_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3721:5: (lv_c_64_0= ruleGDr )
+                    // InternalDroneDSL.g:3770:4: ( (lv_c_64_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3771:5: (lv_c_64_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3721:5: (lv_c_64_0= ruleGDr )
-                    // InternalDroneDSL.g:3722:6: lv_c_64_0= ruleGDr
+                    // InternalDroneDSL.g:3771:5: (lv_c_64_0= ruleGDr )
+                    // InternalDroneDSL.g:3772:6: lv_c_64_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_12_4_0());
@@ -8632,16 +8827,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalDroneDSL.g:3741:3: ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3791:3: ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:3741:3: ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:3742:4: ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3791:3: ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3792:4: ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:3742:4: ( (lv_a_65_0= ruleMD ) )
-                    // InternalDroneDSL.g:3743:5: (lv_a_65_0= ruleMD )
+                    // InternalDroneDSL.g:3792:4: ( (lv_a_65_0= ruleMD ) )
+                    // InternalDroneDSL.g:3793:5: (lv_a_65_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3743:5: (lv_a_65_0= ruleMD )
-                    // InternalDroneDSL.g:3744:6: lv_a_65_0= ruleMD
+                    // InternalDroneDSL.g:3793:5: (lv_a_65_0= ruleMD )
+                    // InternalDroneDSL.g:3794:6: lv_a_65_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_13_0_0());
@@ -8668,15 +8863,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_66=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_66=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_66, grammarAccess.getParallele3Access().getAmpersandKeyword_13_1());
                     			
-                    // InternalDroneDSL.g:3765:4: ( (lv_b_67_0= ruleAR ) )
-                    // InternalDroneDSL.g:3766:5: (lv_b_67_0= ruleAR )
+                    // InternalDroneDSL.g:3815:4: ( (lv_b_67_0= ruleAR ) )
+                    // InternalDroneDSL.g:3816:5: (lv_b_67_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3766:5: (lv_b_67_0= ruleAR )
-                    // InternalDroneDSL.g:3767:6: lv_b_67_0= ruleAR
+                    // InternalDroneDSL.g:3816:5: (lv_b_67_0= ruleAR )
+                    // InternalDroneDSL.g:3817:6: lv_b_67_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_13_2_0());
@@ -8703,15 +8898,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_68=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_68=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_68, grammarAccess.getParallele3Access().getAmpersandKeyword_13_3());
                     			
-                    // InternalDroneDSL.g:3788:4: ( (lv_c_69_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3789:5: (lv_c_69_0= ruleRGRD )
+                    // InternalDroneDSL.g:3838:4: ( (lv_c_69_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3839:5: (lv_c_69_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3789:5: (lv_c_69_0= ruleRGRD )
-                    // InternalDroneDSL.g:3790:6: lv_c_69_0= ruleRGRD
+                    // InternalDroneDSL.g:3839:5: (lv_c_69_0= ruleRGRD )
+                    // InternalDroneDSL.g:3840:6: lv_c_69_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_13_4_0());
@@ -8745,16 +8940,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalDroneDSL.g:3809:3: ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3859:3: ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:3809:3: ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:3810:4: ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) )
+                    // InternalDroneDSL.g:3859:3: ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:3860:4: ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:3810:4: ( (lv_a_70_0= ruleMD ) )
-                    // InternalDroneDSL.g:3811:5: (lv_a_70_0= ruleMD )
+                    // InternalDroneDSL.g:3860:4: ( (lv_a_70_0= ruleMD ) )
+                    // InternalDroneDSL.g:3861:5: (lv_a_70_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3811:5: (lv_a_70_0= ruleMD )
-                    // InternalDroneDSL.g:3812:6: lv_a_70_0= ruleMD
+                    // InternalDroneDSL.g:3861:5: (lv_a_70_0= ruleMD )
+                    // InternalDroneDSL.g:3862:6: lv_a_70_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_14_0_0());
@@ -8781,15 +8976,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_71=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_71=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_71, grammarAccess.getParallele3Access().getAmpersandKeyword_14_1());
                     			
-                    // InternalDroneDSL.g:3833:4: ( (lv_b_72_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3834:5: (lv_b_72_0= ruleGDr )
+                    // InternalDroneDSL.g:3883:4: ( (lv_b_72_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3884:5: (lv_b_72_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3834:5: (lv_b_72_0= ruleGDr )
-                    // InternalDroneDSL.g:3835:6: lv_b_72_0= ruleGDr
+                    // InternalDroneDSL.g:3884:5: (lv_b_72_0= ruleGDr )
+                    // InternalDroneDSL.g:3885:6: lv_b_72_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_14_2_0());
@@ -8816,15 +9011,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_73=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_73=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_73, grammarAccess.getParallele3Access().getAmpersandKeyword_14_3());
                     			
-                    // InternalDroneDSL.g:3856:4: ( (lv_c_74_0= ruleAR ) )
-                    // InternalDroneDSL.g:3857:5: (lv_c_74_0= ruleAR )
+                    // InternalDroneDSL.g:3906:4: ( (lv_c_74_0= ruleAR ) )
+                    // InternalDroneDSL.g:3907:5: (lv_c_74_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:3857:5: (lv_c_74_0= ruleAR )
-                    // InternalDroneDSL.g:3858:6: lv_c_74_0= ruleAR
+                    // InternalDroneDSL.g:3907:5: (lv_c_74_0= ruleAR )
+                    // InternalDroneDSL.g:3908:6: lv_c_74_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_14_4_0());
@@ -8858,16 +9053,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalDroneDSL.g:3877:3: ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3927:3: ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:3877:3: ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:3878:4: ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3927:3: ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:3928:4: ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:3878:4: ( (lv_a_75_0= ruleMD ) )
-                    // InternalDroneDSL.g:3879:5: (lv_a_75_0= ruleMD )
+                    // InternalDroneDSL.g:3928:4: ( (lv_a_75_0= ruleMD ) )
+                    // InternalDroneDSL.g:3929:5: (lv_a_75_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3879:5: (lv_a_75_0= ruleMD )
-                    // InternalDroneDSL.g:3880:6: lv_a_75_0= ruleMD
+                    // InternalDroneDSL.g:3929:5: (lv_a_75_0= ruleMD )
+                    // InternalDroneDSL.g:3930:6: lv_a_75_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_15_0_0());
@@ -8894,15 +9089,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_76=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_76=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_76, grammarAccess.getParallele3Access().getAmpersandKeyword_15_1());
                     			
-                    // InternalDroneDSL.g:3901:4: ( (lv_b_77_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3902:5: (lv_b_77_0= ruleGDr )
+                    // InternalDroneDSL.g:3951:4: ( (lv_b_77_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3952:5: (lv_b_77_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3902:5: (lv_b_77_0= ruleGDr )
-                    // InternalDroneDSL.g:3903:6: lv_b_77_0= ruleGDr
+                    // InternalDroneDSL.g:3952:5: (lv_b_77_0= ruleGDr )
+                    // InternalDroneDSL.g:3953:6: lv_b_77_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_15_2_0());
@@ -8929,15 +9124,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_78=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_78=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_78, grammarAccess.getParallele3Access().getAmpersandKeyword_15_3());
                     			
-                    // InternalDroneDSL.g:3924:4: ( (lv_c_79_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3925:5: (lv_c_79_0= ruleRGRD )
+                    // InternalDroneDSL.g:3974:4: ( (lv_c_79_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:3975:5: (lv_c_79_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3925:5: (lv_c_79_0= ruleRGRD )
-                    // InternalDroneDSL.g:3926:6: lv_c_79_0= ruleRGRD
+                    // InternalDroneDSL.g:3975:5: (lv_c_79_0= ruleRGRD )
+                    // InternalDroneDSL.g:3976:6: lv_c_79_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCRGRDParserRuleCall_15_4_0());
@@ -8971,16 +9166,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalDroneDSL.g:3945:3: ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3995:3: ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:3945:3: ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:3946:4: ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) )
+                    // InternalDroneDSL.g:3995:3: ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:3996:4: ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:3946:4: ( (lv_a_80_0= ruleMD ) )
-                    // InternalDroneDSL.g:3947:5: (lv_a_80_0= ruleMD )
+                    // InternalDroneDSL.g:3996:4: ( (lv_a_80_0= ruleMD ) )
+                    // InternalDroneDSL.g:3997:5: (lv_a_80_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:3947:5: (lv_a_80_0= ruleMD )
-                    // InternalDroneDSL.g:3948:6: lv_a_80_0= ruleMD
+                    // InternalDroneDSL.g:3997:5: (lv_a_80_0= ruleMD )
+                    // InternalDroneDSL.g:3998:6: lv_a_80_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_16_0_0());
@@ -9007,15 +9202,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_81=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_81=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_81, grammarAccess.getParallele3Access().getAmpersandKeyword_16_1());
                     			
-                    // InternalDroneDSL.g:3969:4: ( (lv_b_82_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:3970:5: (lv_b_82_0= ruleRGRD )
+                    // InternalDroneDSL.g:4019:4: ( (lv_b_82_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4020:5: (lv_b_82_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:3970:5: (lv_b_82_0= ruleRGRD )
-                    // InternalDroneDSL.g:3971:6: lv_b_82_0= ruleRGRD
+                    // InternalDroneDSL.g:4020:5: (lv_b_82_0= ruleRGRD )
+                    // InternalDroneDSL.g:4021:6: lv_b_82_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_16_2_0());
@@ -9042,15 +9237,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_83=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_83=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_83, grammarAccess.getParallele3Access().getAmpersandKeyword_16_3());
                     			
-                    // InternalDroneDSL.g:3992:4: ( (lv_c_84_0= ruleGDr ) )
-                    // InternalDroneDSL.g:3993:5: (lv_c_84_0= ruleGDr )
+                    // InternalDroneDSL.g:4042:4: ( (lv_c_84_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4043:5: (lv_c_84_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:3993:5: (lv_c_84_0= ruleGDr )
-                    // InternalDroneDSL.g:3994:6: lv_c_84_0= ruleGDr
+                    // InternalDroneDSL.g:4043:5: (lv_c_84_0= ruleGDr )
+                    // InternalDroneDSL.g:4044:6: lv_c_84_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_16_4_0());
@@ -9084,16 +9279,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalDroneDSL.g:4013:3: ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4063:3: ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:4013:3: ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:4014:4: ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) )
+                    // InternalDroneDSL.g:4063:3: ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4064:4: ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:4014:4: ( (lv_a_85_0= ruleMD ) )
-                    // InternalDroneDSL.g:4015:5: (lv_a_85_0= ruleMD )
+                    // InternalDroneDSL.g:4064:4: ( (lv_a_85_0= ruleMD ) )
+                    // InternalDroneDSL.g:4065:5: (lv_a_85_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4015:5: (lv_a_85_0= ruleMD )
-                    // InternalDroneDSL.g:4016:6: lv_a_85_0= ruleMD
+                    // InternalDroneDSL.g:4065:5: (lv_a_85_0= ruleMD )
+                    // InternalDroneDSL.g:4066:6: lv_a_85_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getAMDParserRuleCall_17_0_0());
@@ -9120,15 +9315,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_86=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_86=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_86, grammarAccess.getParallele3Access().getAmpersandKeyword_17_1());
                     			
-                    // InternalDroneDSL.g:4037:4: ( (lv_b_87_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4038:5: (lv_b_87_0= ruleRGRD )
+                    // InternalDroneDSL.g:4087:4: ( (lv_b_87_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4088:5: (lv_b_87_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4038:5: (lv_b_87_0= ruleRGRD )
-                    // InternalDroneDSL.g:4039:6: lv_b_87_0= ruleRGRD
+                    // InternalDroneDSL.g:4088:5: (lv_b_87_0= ruleRGRD )
+                    // InternalDroneDSL.g:4089:6: lv_b_87_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBRGRDParserRuleCall_17_2_0());
@@ -9155,15 +9350,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_88=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_88=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_88, grammarAccess.getParallele3Access().getAmpersandKeyword_17_3());
                     			
-                    // InternalDroneDSL.g:4060:4: ( (lv_c_89_0= ruleAR ) )
-                    // InternalDroneDSL.g:4061:5: (lv_c_89_0= ruleAR )
+                    // InternalDroneDSL.g:4110:4: ( (lv_c_89_0= ruleAR ) )
+                    // InternalDroneDSL.g:4111:5: (lv_c_89_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4061:5: (lv_c_89_0= ruleAR )
-                    // InternalDroneDSL.g:4062:6: lv_c_89_0= ruleAR
+                    // InternalDroneDSL.g:4111:5: (lv_c_89_0= ruleAR )
+                    // InternalDroneDSL.g:4112:6: lv_c_89_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_17_4_0());
@@ -9197,16 +9392,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalDroneDSL.g:4081:3: ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4131:3: ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:4081:3: ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:4082:4: ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) )
+                    // InternalDroneDSL.g:4131:3: ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4132:4: ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:4082:4: ( (lv_a_90_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4083:5: (lv_a_90_0= ruleRGRD )
+                    // InternalDroneDSL.g:4132:4: ( (lv_a_90_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4133:5: (lv_a_90_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4083:5: (lv_a_90_0= ruleRGRD )
-                    // InternalDroneDSL.g:4084:6: lv_a_90_0= ruleRGRD
+                    // InternalDroneDSL.g:4133:5: (lv_a_90_0= ruleRGRD )
+                    // InternalDroneDSL.g:4134:6: lv_a_90_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_18_0_0());
@@ -9233,15 +9428,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_91=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_91=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_91, grammarAccess.getParallele3Access().getAmpersandKeyword_18_1());
                     			
-                    // InternalDroneDSL.g:4105:4: ( (lv_b_92_0= ruleAR ) )
-                    // InternalDroneDSL.g:4106:5: (lv_b_92_0= ruleAR )
+                    // InternalDroneDSL.g:4155:4: ( (lv_b_92_0= ruleAR ) )
+                    // InternalDroneDSL.g:4156:5: (lv_b_92_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4106:5: (lv_b_92_0= ruleAR )
-                    // InternalDroneDSL.g:4107:6: lv_b_92_0= ruleAR
+                    // InternalDroneDSL.g:4156:5: (lv_b_92_0= ruleAR )
+                    // InternalDroneDSL.g:4157:6: lv_b_92_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_18_2_0());
@@ -9268,15 +9463,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_93=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_93=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_93, grammarAccess.getParallele3Access().getAmpersandKeyword_18_3());
                     			
-                    // InternalDroneDSL.g:4128:4: ( (lv_c_94_0= ruleMD ) )
-                    // InternalDroneDSL.g:4129:5: (lv_c_94_0= ruleMD )
+                    // InternalDroneDSL.g:4178:4: ( (lv_c_94_0= ruleMD ) )
+                    // InternalDroneDSL.g:4179:5: (lv_c_94_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4129:5: (lv_c_94_0= ruleMD )
-                    // InternalDroneDSL.g:4130:6: lv_c_94_0= ruleMD
+                    // InternalDroneDSL.g:4179:5: (lv_c_94_0= ruleMD )
+                    // InternalDroneDSL.g:4180:6: lv_c_94_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_18_4_0());
@@ -9310,16 +9505,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalDroneDSL.g:4149:3: ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4199:3: ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:4149:3: ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:4150:4: ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4199:3: ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4200:4: ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:4150:4: ( (lv_a_95_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4151:5: (lv_a_95_0= ruleRGRD )
+                    // InternalDroneDSL.g:4200:4: ( (lv_a_95_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4201:5: (lv_a_95_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4151:5: (lv_a_95_0= ruleRGRD )
-                    // InternalDroneDSL.g:4152:6: lv_a_95_0= ruleRGRD
+                    // InternalDroneDSL.g:4201:5: (lv_a_95_0= ruleRGRD )
+                    // InternalDroneDSL.g:4202:6: lv_a_95_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_19_0_0());
@@ -9346,15 +9541,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_96=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_96=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_96, grammarAccess.getParallele3Access().getAmpersandKeyword_19_1());
                     			
-                    // InternalDroneDSL.g:4173:4: ( (lv_b_97_0= ruleAR ) )
-                    // InternalDroneDSL.g:4174:5: (lv_b_97_0= ruleAR )
+                    // InternalDroneDSL.g:4223:4: ( (lv_b_97_0= ruleAR ) )
+                    // InternalDroneDSL.g:4224:5: (lv_b_97_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4174:5: (lv_b_97_0= ruleAR )
-                    // InternalDroneDSL.g:4175:6: lv_b_97_0= ruleAR
+                    // InternalDroneDSL.g:4224:5: (lv_b_97_0= ruleAR )
+                    // InternalDroneDSL.g:4225:6: lv_b_97_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBARParserRuleCall_19_2_0());
@@ -9381,15 +9576,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_98=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_98=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_98, grammarAccess.getParallele3Access().getAmpersandKeyword_19_3());
                     			
-                    // InternalDroneDSL.g:4196:4: ( (lv_c_99_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4197:5: (lv_c_99_0= ruleGDr )
+                    // InternalDroneDSL.g:4246:4: ( (lv_c_99_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4247:5: (lv_c_99_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4197:5: (lv_c_99_0= ruleGDr )
-                    // InternalDroneDSL.g:4198:6: lv_c_99_0= ruleGDr
+                    // InternalDroneDSL.g:4247:5: (lv_c_99_0= ruleGDr )
+                    // InternalDroneDSL.g:4248:6: lv_c_99_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_19_4_0());
@@ -9423,16 +9618,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalDroneDSL.g:4217:3: ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4267:3: ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:4217:3: ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:4218:4: ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) )
+                    // InternalDroneDSL.g:4267:3: ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4268:4: ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:4218:4: ( (lv_a_100_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4219:5: (lv_a_100_0= ruleRGRD )
+                    // InternalDroneDSL.g:4268:4: ( (lv_a_100_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4269:5: (lv_a_100_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4219:5: (lv_a_100_0= ruleRGRD )
-                    // InternalDroneDSL.g:4220:6: lv_a_100_0= ruleRGRD
+                    // InternalDroneDSL.g:4269:5: (lv_a_100_0= ruleRGRD )
+                    // InternalDroneDSL.g:4270:6: lv_a_100_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_20_0_0());
@@ -9459,15 +9654,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_101=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_101=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_101, grammarAccess.getParallele3Access().getAmpersandKeyword_20_1());
                     			
-                    // InternalDroneDSL.g:4241:4: ( (lv_b_102_0= ruleMD ) )
-                    // InternalDroneDSL.g:4242:5: (lv_b_102_0= ruleMD )
+                    // InternalDroneDSL.g:4291:4: ( (lv_b_102_0= ruleMD ) )
+                    // InternalDroneDSL.g:4292:5: (lv_b_102_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4242:5: (lv_b_102_0= ruleMD )
-                    // InternalDroneDSL.g:4243:6: lv_b_102_0= ruleMD
+                    // InternalDroneDSL.g:4292:5: (lv_b_102_0= ruleMD )
+                    // InternalDroneDSL.g:4293:6: lv_b_102_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_20_2_0());
@@ -9494,15 +9689,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_103=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_103=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_103, grammarAccess.getParallele3Access().getAmpersandKeyword_20_3());
                     			
-                    // InternalDroneDSL.g:4264:4: ( (lv_c_104_0= ruleAR ) )
-                    // InternalDroneDSL.g:4265:5: (lv_c_104_0= ruleAR )
+                    // InternalDroneDSL.g:4314:4: ( (lv_c_104_0= ruleAR ) )
+                    // InternalDroneDSL.g:4315:5: (lv_c_104_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4265:5: (lv_c_104_0= ruleAR )
-                    // InternalDroneDSL.g:4266:6: lv_c_104_0= ruleAR
+                    // InternalDroneDSL.g:4315:5: (lv_c_104_0= ruleAR )
+                    // InternalDroneDSL.g:4316:6: lv_c_104_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_20_4_0());
@@ -9536,16 +9731,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalDroneDSL.g:4285:3: ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4335:3: ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:4285:3: ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:4286:4: ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4335:3: ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4336:4: ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:4286:4: ( (lv_a_105_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4287:5: (lv_a_105_0= ruleRGRD )
+                    // InternalDroneDSL.g:4336:4: ( (lv_a_105_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4337:5: (lv_a_105_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4287:5: (lv_a_105_0= ruleRGRD )
-                    // InternalDroneDSL.g:4288:6: lv_a_105_0= ruleRGRD
+                    // InternalDroneDSL.g:4337:5: (lv_a_105_0= ruleRGRD )
+                    // InternalDroneDSL.g:4338:6: lv_a_105_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_21_0_0());
@@ -9572,15 +9767,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_106=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_106=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_106, grammarAccess.getParallele3Access().getAmpersandKeyword_21_1());
                     			
-                    // InternalDroneDSL.g:4309:4: ( (lv_b_107_0= ruleMD ) )
-                    // InternalDroneDSL.g:4310:5: (lv_b_107_0= ruleMD )
+                    // InternalDroneDSL.g:4359:4: ( (lv_b_107_0= ruleMD ) )
+                    // InternalDroneDSL.g:4360:5: (lv_b_107_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4310:5: (lv_b_107_0= ruleMD )
-                    // InternalDroneDSL.g:4311:6: lv_b_107_0= ruleMD
+                    // InternalDroneDSL.g:4360:5: (lv_b_107_0= ruleMD )
+                    // InternalDroneDSL.g:4361:6: lv_b_107_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBMDParserRuleCall_21_2_0());
@@ -9607,15 +9802,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_108=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_108=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_108, grammarAccess.getParallele3Access().getAmpersandKeyword_21_3());
                     			
-                    // InternalDroneDSL.g:4332:4: ( (lv_c_109_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4333:5: (lv_c_109_0= ruleGDr )
+                    // InternalDroneDSL.g:4382:4: ( (lv_c_109_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4383:5: (lv_c_109_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4333:5: (lv_c_109_0= ruleGDr )
-                    // InternalDroneDSL.g:4334:6: lv_c_109_0= ruleGDr
+                    // InternalDroneDSL.g:4383:5: (lv_c_109_0= ruleGDr )
+                    // InternalDroneDSL.g:4384:6: lv_c_109_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCGDrParserRuleCall_21_4_0());
@@ -9649,16 +9844,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalDroneDSL.g:4353:3: ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4403:3: ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:4353:3: ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:4354:4: ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) )
+                    // InternalDroneDSL.g:4403:3: ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4404:4: ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:4354:4: ( (lv_a_110_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4355:5: (lv_a_110_0= ruleRGRD )
+                    // InternalDroneDSL.g:4404:4: ( (lv_a_110_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4405:5: (lv_a_110_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4355:5: (lv_a_110_0= ruleRGRD )
-                    // InternalDroneDSL.g:4356:6: lv_a_110_0= ruleRGRD
+                    // InternalDroneDSL.g:4405:5: (lv_a_110_0= ruleRGRD )
+                    // InternalDroneDSL.g:4406:6: lv_a_110_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_22_0_0());
@@ -9685,15 +9880,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_111=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_111=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_111, grammarAccess.getParallele3Access().getAmpersandKeyword_22_1());
                     			
-                    // InternalDroneDSL.g:4377:4: ( (lv_b_112_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4378:5: (lv_b_112_0= ruleGDr )
+                    // InternalDroneDSL.g:4427:4: ( (lv_b_112_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4428:5: (lv_b_112_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4378:5: (lv_b_112_0= ruleGDr )
-                    // InternalDroneDSL.g:4379:6: lv_b_112_0= ruleGDr
+                    // InternalDroneDSL.g:4428:5: (lv_b_112_0= ruleGDr )
+                    // InternalDroneDSL.g:4429:6: lv_b_112_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_22_2_0());
@@ -9720,15 +9915,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_113=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_113=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_113, grammarAccess.getParallele3Access().getAmpersandKeyword_22_3());
                     			
-                    // InternalDroneDSL.g:4400:4: ( (lv_c_114_0= ruleMD ) )
-                    // InternalDroneDSL.g:4401:5: (lv_c_114_0= ruleMD )
+                    // InternalDroneDSL.g:4450:4: ( (lv_c_114_0= ruleMD ) )
+                    // InternalDroneDSL.g:4451:5: (lv_c_114_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4401:5: (lv_c_114_0= ruleMD )
-                    // InternalDroneDSL.g:4402:6: lv_c_114_0= ruleMD
+                    // InternalDroneDSL.g:4451:5: (lv_c_114_0= ruleMD )
+                    // InternalDroneDSL.g:4452:6: lv_c_114_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCMDParserRuleCall_22_4_0());
@@ -9762,16 +9957,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // InternalDroneDSL.g:4421:3: ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4471:3: ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:4421:3: ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:4422:4: ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) )
+                    // InternalDroneDSL.g:4471:3: ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:4472:4: ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:4422:4: ( (lv_a_115_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4423:5: (lv_a_115_0= ruleRGRD )
+                    // InternalDroneDSL.g:4472:4: ( (lv_a_115_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4473:5: (lv_a_115_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4423:5: (lv_a_115_0= ruleRGRD )
-                    // InternalDroneDSL.g:4424:6: lv_a_115_0= ruleRGRD
+                    // InternalDroneDSL.g:4473:5: (lv_a_115_0= ruleRGRD )
+                    // InternalDroneDSL.g:4474:6: lv_a_115_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getARGRDParserRuleCall_23_0_0());
@@ -9798,15 +9993,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_116=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_116=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_116, grammarAccess.getParallele3Access().getAmpersandKeyword_23_1());
                     			
-                    // InternalDroneDSL.g:4445:4: ( (lv_b_117_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4446:5: (lv_b_117_0= ruleGDr )
+                    // InternalDroneDSL.g:4495:4: ( (lv_b_117_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4496:5: (lv_b_117_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4446:5: (lv_b_117_0= ruleGDr )
-                    // InternalDroneDSL.g:4447:6: lv_b_117_0= ruleGDr
+                    // InternalDroneDSL.g:4496:5: (lv_b_117_0= ruleGDr )
+                    // InternalDroneDSL.g:4497:6: lv_b_117_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getBGDrParserRuleCall_23_2_0());
@@ -9833,15 +10028,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_118=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_118=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_118, grammarAccess.getParallele3Access().getAmpersandKeyword_23_3());
                     			
-                    // InternalDroneDSL.g:4468:4: ( (lv_c_119_0= ruleAR ) )
-                    // InternalDroneDSL.g:4469:5: (lv_c_119_0= ruleAR )
+                    // InternalDroneDSL.g:4518:4: ( (lv_c_119_0= ruleAR ) )
+                    // InternalDroneDSL.g:4519:5: (lv_c_119_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4469:5: (lv_c_119_0= ruleAR )
-                    // InternalDroneDSL.g:4470:6: lv_c_119_0= ruleAR
+                    // InternalDroneDSL.g:4519:5: (lv_c_119_0= ruleAR )
+                    // InternalDroneDSL.g:4520:6: lv_c_119_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele3Access().getCARParserRuleCall_23_4_0());
@@ -9897,7 +10092,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParallele4"
-    // InternalDroneDSL.g:4492:1: entryRuleParallele4 returns [EObject current=null] : iv_ruleParallele4= ruleParallele4 EOF ;
+    // InternalDroneDSL.g:4542:1: entryRuleParallele4 returns [EObject current=null] : iv_ruleParallele4= ruleParallele4 EOF ;
     public final EObject entryRuleParallele4() throws RecognitionException {
         EObject current = null;
 
@@ -9905,8 +10100,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDroneDSL.g:4492:51: (iv_ruleParallele4= ruleParallele4 EOF )
-            // InternalDroneDSL.g:4493:2: iv_ruleParallele4= ruleParallele4 EOF
+            // InternalDroneDSL.g:4542:51: (iv_ruleParallele4= ruleParallele4 EOF )
+            // InternalDroneDSL.g:4543:2: iv_ruleParallele4= ruleParallele4 EOF
             {
              newCompositeNode(grammarAccess.getParallele4Rule()); 
             pushFollow(FOLLOW_1);
@@ -9933,7 +10128,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParallele4"
-    // InternalDroneDSL.g:4499:1: ruleParallele4 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) ) ;
+    // InternalDroneDSL.g:4549:1: ruleParallele4 returns [EObject current=null] : ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) ) ;
     public final EObject ruleParallele4() throws RecognitionException {
         EObject current = null;
 
@@ -10206,24 +10401,24 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:4505:2: ( ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) ) )
-            // InternalDroneDSL.g:4506:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )
+            // InternalDroneDSL.g:4555:2: ( ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) ) )
+            // InternalDroneDSL.g:4556:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )
             {
-            // InternalDroneDSL.g:4506:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )
-            int alt19=24;
-            alt19 = dfa19.predict(input);
-            switch (alt19) {
+            // InternalDroneDSL.g:4556:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )
+            int alt20=24;
+            alt20 = dfa20.predict(input);
+            switch (alt20) {
                 case 1 :
-                    // InternalDroneDSL.g:4507:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:4557:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:4507:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:4508:4: ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4557:3: ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:4558:4: ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:4508:4: ( (lv_a_0_0= ruleAR ) )
-                    // InternalDroneDSL.g:4509:5: (lv_a_0_0= ruleAR )
+                    // InternalDroneDSL.g:4558:4: ( (lv_a_0_0= ruleAR ) )
+                    // InternalDroneDSL.g:4559:5: (lv_a_0_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4509:5: (lv_a_0_0= ruleAR )
-                    // InternalDroneDSL.g:4510:6: lv_a_0_0= ruleAR
+                    // InternalDroneDSL.g:4559:5: (lv_a_0_0= ruleAR )
+                    // InternalDroneDSL.g:4560:6: lv_a_0_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_0_0_0());
@@ -10250,15 +10445,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_1=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getParallele4Access().getAmpersandKeyword_0_1());
                     			
-                    // InternalDroneDSL.g:4531:4: ( (lv_b_2_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4532:5: (lv_b_2_0= ruleGDr )
+                    // InternalDroneDSL.g:4581:4: ( (lv_b_2_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4582:5: (lv_b_2_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4532:5: (lv_b_2_0= ruleGDr )
-                    // InternalDroneDSL.g:4533:6: lv_b_2_0= ruleGDr
+                    // InternalDroneDSL.g:4582:5: (lv_b_2_0= ruleGDr )
+                    // InternalDroneDSL.g:4583:6: lv_b_2_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_0_2_0());
@@ -10285,15 +10480,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_3=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getParallele4Access().getAmpersandKeyword_0_3());
                     			
-                    // InternalDroneDSL.g:4554:4: ( (lv_c_4_0= ruleMD ) )
-                    // InternalDroneDSL.g:4555:5: (lv_c_4_0= ruleMD )
+                    // InternalDroneDSL.g:4604:4: ( (lv_c_4_0= ruleMD ) )
+                    // InternalDroneDSL.g:4605:5: (lv_c_4_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4555:5: (lv_c_4_0= ruleMD )
-                    // InternalDroneDSL.g:4556:6: lv_c_4_0= ruleMD
+                    // InternalDroneDSL.g:4605:5: (lv_c_4_0= ruleMD )
+                    // InternalDroneDSL.g:4606:6: lv_c_4_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_0_4_0());
@@ -10320,15 +10515,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_5=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getParallele4Access().getAmpersandKeyword_0_5());
                     			
-                    // InternalDroneDSL.g:4577:4: ( (lv_d_6_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4578:5: (lv_d_6_0= ruleRGRD )
+                    // InternalDroneDSL.g:4627:4: ( (lv_d_6_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4628:5: (lv_d_6_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4578:5: (lv_d_6_0= ruleRGRD )
-                    // InternalDroneDSL.g:4579:6: lv_d_6_0= ruleRGRD
+                    // InternalDroneDSL.g:4628:5: (lv_d_6_0= ruleRGRD )
+                    // InternalDroneDSL.g:4629:6: lv_d_6_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_0_6_0());
@@ -10362,16 +10557,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDroneDSL.g:4598:3: ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4648:3: ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:4598:3: ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:4599:4: ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) )
+                    // InternalDroneDSL.g:4648:3: ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:4649:4: ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:4599:4: ( (lv_a_7_0= ruleAR ) )
-                    // InternalDroneDSL.g:4600:5: (lv_a_7_0= ruleAR )
+                    // InternalDroneDSL.g:4649:4: ( (lv_a_7_0= ruleAR ) )
+                    // InternalDroneDSL.g:4650:5: (lv_a_7_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4600:5: (lv_a_7_0= ruleAR )
-                    // InternalDroneDSL.g:4601:6: lv_a_7_0= ruleAR
+                    // InternalDroneDSL.g:4650:5: (lv_a_7_0= ruleAR )
+                    // InternalDroneDSL.g:4651:6: lv_a_7_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_1_0_0());
@@ -10398,15 +10593,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_8=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getParallele4Access().getAmpersandKeyword_1_1());
                     			
-                    // InternalDroneDSL.g:4622:4: ( (lv_b_9_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4623:5: (lv_b_9_0= ruleGDr )
+                    // InternalDroneDSL.g:4672:4: ( (lv_b_9_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4673:5: (lv_b_9_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4623:5: (lv_b_9_0= ruleGDr )
-                    // InternalDroneDSL.g:4624:6: lv_b_9_0= ruleGDr
+                    // InternalDroneDSL.g:4673:5: (lv_b_9_0= ruleGDr )
+                    // InternalDroneDSL.g:4674:6: lv_b_9_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_1_2_0());
@@ -10433,15 +10628,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_10=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getParallele4Access().getAmpersandKeyword_1_3());
                     			
-                    // InternalDroneDSL.g:4645:4: ( (lv_c_11_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4646:5: (lv_c_11_0= ruleRGRD )
+                    // InternalDroneDSL.g:4695:4: ( (lv_c_11_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4696:5: (lv_c_11_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4646:5: (lv_c_11_0= ruleRGRD )
-                    // InternalDroneDSL.g:4647:6: lv_c_11_0= ruleRGRD
+                    // InternalDroneDSL.g:4696:5: (lv_c_11_0= ruleRGRD )
+                    // InternalDroneDSL.g:4697:6: lv_c_11_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_1_4_0());
@@ -10468,15 +10663,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_12=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_12, grammarAccess.getParallele4Access().getAmpersandKeyword_1_5());
                     			
-                    // InternalDroneDSL.g:4668:4: ( (lv_d_13_0= ruleMD ) )
-                    // InternalDroneDSL.g:4669:5: (lv_d_13_0= ruleMD )
+                    // InternalDroneDSL.g:4718:4: ( (lv_d_13_0= ruleMD ) )
+                    // InternalDroneDSL.g:4719:5: (lv_d_13_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4669:5: (lv_d_13_0= ruleMD )
-                    // InternalDroneDSL.g:4670:6: lv_d_13_0= ruleMD
+                    // InternalDroneDSL.g:4719:5: (lv_d_13_0= ruleMD )
+                    // InternalDroneDSL.g:4720:6: lv_d_13_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_1_6_0());
@@ -10510,16 +10705,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDroneDSL.g:4689:3: ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:4739:3: ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:4689:3: ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:4690:4: ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4739:3: ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:4740:4: ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:4690:4: ( (lv_a_14_0= ruleAR ) )
-                    // InternalDroneDSL.g:4691:5: (lv_a_14_0= ruleAR )
+                    // InternalDroneDSL.g:4740:4: ( (lv_a_14_0= ruleAR ) )
+                    // InternalDroneDSL.g:4741:5: (lv_a_14_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4691:5: (lv_a_14_0= ruleAR )
-                    // InternalDroneDSL.g:4692:6: lv_a_14_0= ruleAR
+                    // InternalDroneDSL.g:4741:5: (lv_a_14_0= ruleAR )
+                    // InternalDroneDSL.g:4742:6: lv_a_14_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_2_0_0());
@@ -10546,15 +10741,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_15=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_15=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_15, grammarAccess.getParallele4Access().getAmpersandKeyword_2_1());
                     			
-                    // InternalDroneDSL.g:4713:4: ( (lv_b_16_0= ruleMD ) )
-                    // InternalDroneDSL.g:4714:5: (lv_b_16_0= ruleMD )
+                    // InternalDroneDSL.g:4763:4: ( (lv_b_16_0= ruleMD ) )
+                    // InternalDroneDSL.g:4764:5: (lv_b_16_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4714:5: (lv_b_16_0= ruleMD )
-                    // InternalDroneDSL.g:4715:6: lv_b_16_0= ruleMD
+                    // InternalDroneDSL.g:4764:5: (lv_b_16_0= ruleMD )
+                    // InternalDroneDSL.g:4765:6: lv_b_16_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_2_2_0());
@@ -10581,15 +10776,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_17=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_17, grammarAccess.getParallele4Access().getAmpersandKeyword_2_3());
                     			
-                    // InternalDroneDSL.g:4736:4: ( (lv_c_18_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4737:5: (lv_c_18_0= ruleGDr )
+                    // InternalDroneDSL.g:4786:4: ( (lv_c_18_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4787:5: (lv_c_18_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4737:5: (lv_c_18_0= ruleGDr )
-                    // InternalDroneDSL.g:4738:6: lv_c_18_0= ruleGDr
+                    // InternalDroneDSL.g:4787:5: (lv_c_18_0= ruleGDr )
+                    // InternalDroneDSL.g:4788:6: lv_c_18_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_2_4_0());
@@ -10616,15 +10811,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_19=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_19=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_19, grammarAccess.getParallele4Access().getAmpersandKeyword_2_5());
                     			
-                    // InternalDroneDSL.g:4759:4: ( (lv_d_20_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4760:5: (lv_d_20_0= ruleRGRD )
+                    // InternalDroneDSL.g:4809:4: ( (lv_d_20_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4810:5: (lv_d_20_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4760:5: (lv_d_20_0= ruleRGRD )
-                    // InternalDroneDSL.g:4761:6: lv_d_20_0= ruleRGRD
+                    // InternalDroneDSL.g:4810:5: (lv_d_20_0= ruleRGRD )
+                    // InternalDroneDSL.g:4811:6: lv_d_20_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_2_6_0());
@@ -10658,16 +10853,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDroneDSL.g:4780:3: ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4830:3: ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:4780:3: ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:4781:4: ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4830:3: ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4831:4: ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:4781:4: ( (lv_a_21_0= ruleAR ) )
-                    // InternalDroneDSL.g:4782:5: (lv_a_21_0= ruleAR )
+                    // InternalDroneDSL.g:4831:4: ( (lv_a_21_0= ruleAR ) )
+                    // InternalDroneDSL.g:4832:5: (lv_a_21_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4782:5: (lv_a_21_0= ruleAR )
-                    // InternalDroneDSL.g:4783:6: lv_a_21_0= ruleAR
+                    // InternalDroneDSL.g:4832:5: (lv_a_21_0= ruleAR )
+                    // InternalDroneDSL.g:4833:6: lv_a_21_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_3_0_0());
@@ -10694,15 +10889,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_22=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_22=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_22, grammarAccess.getParallele4Access().getAmpersandKeyword_3_1());
                     			
-                    // InternalDroneDSL.g:4804:4: ( (lv_b_23_0= ruleMD ) )
-                    // InternalDroneDSL.g:4805:5: (lv_b_23_0= ruleMD )
+                    // InternalDroneDSL.g:4854:4: ( (lv_b_23_0= ruleMD ) )
+                    // InternalDroneDSL.g:4855:5: (lv_b_23_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4805:5: (lv_b_23_0= ruleMD )
-                    // InternalDroneDSL.g:4806:6: lv_b_23_0= ruleMD
+                    // InternalDroneDSL.g:4855:5: (lv_b_23_0= ruleMD )
+                    // InternalDroneDSL.g:4856:6: lv_b_23_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_3_2_0());
@@ -10729,15 +10924,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_24=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_24=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_24, grammarAccess.getParallele4Access().getAmpersandKeyword_3_3());
                     			
-                    // InternalDroneDSL.g:4827:4: ( (lv_c_25_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4828:5: (lv_c_25_0= ruleRGRD )
+                    // InternalDroneDSL.g:4877:4: ( (lv_c_25_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4878:5: (lv_c_25_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4828:5: (lv_c_25_0= ruleRGRD )
-                    // InternalDroneDSL.g:4829:6: lv_c_25_0= ruleRGRD
+                    // InternalDroneDSL.g:4878:5: (lv_c_25_0= ruleRGRD )
+                    // InternalDroneDSL.g:4879:6: lv_c_25_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_3_4_0());
@@ -10764,15 +10959,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_26=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_26=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_26, grammarAccess.getParallele4Access().getAmpersandKeyword_3_5());
                     			
-                    // InternalDroneDSL.g:4850:4: ( (lv_d_27_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4851:5: (lv_d_27_0= ruleGDr )
+                    // InternalDroneDSL.g:4900:4: ( (lv_d_27_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4901:5: (lv_d_27_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4851:5: (lv_d_27_0= ruleGDr )
-                    // InternalDroneDSL.g:4852:6: lv_d_27_0= ruleGDr
+                    // InternalDroneDSL.g:4901:5: (lv_d_27_0= ruleGDr )
+                    // InternalDroneDSL.g:4902:6: lv_d_27_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_3_6_0());
@@ -10806,16 +11001,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalDroneDSL.g:4871:3: ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4921:3: ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:4871:3: ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:4872:4: ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4921:3: ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:4922:4: ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:4872:4: ( (lv_a_28_0= ruleAR ) )
-                    // InternalDroneDSL.g:4873:5: (lv_a_28_0= ruleAR )
+                    // InternalDroneDSL.g:4922:4: ( (lv_a_28_0= ruleAR ) )
+                    // InternalDroneDSL.g:4923:5: (lv_a_28_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4873:5: (lv_a_28_0= ruleAR )
-                    // InternalDroneDSL.g:4874:6: lv_a_28_0= ruleAR
+                    // InternalDroneDSL.g:4923:5: (lv_a_28_0= ruleAR )
+                    // InternalDroneDSL.g:4924:6: lv_a_28_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_4_0_0());
@@ -10842,15 +11037,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_29=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_29, grammarAccess.getParallele4Access().getAmpersandKeyword_4_1());
                     			
-                    // InternalDroneDSL.g:4895:4: ( (lv_b_30_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4896:5: (lv_b_30_0= ruleRGRD )
+                    // InternalDroneDSL.g:4945:4: ( (lv_b_30_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:4946:5: (lv_b_30_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4896:5: (lv_b_30_0= ruleRGRD )
-                    // InternalDroneDSL.g:4897:6: lv_b_30_0= ruleRGRD
+                    // InternalDroneDSL.g:4946:5: (lv_b_30_0= ruleRGRD )
+                    // InternalDroneDSL.g:4947:6: lv_b_30_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_4_2_0());
@@ -10877,15 +11072,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_31=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_31, grammarAccess.getParallele4Access().getAmpersandKeyword_4_3());
                     			
-                    // InternalDroneDSL.g:4918:4: ( (lv_c_32_0= ruleMD ) )
-                    // InternalDroneDSL.g:4919:5: (lv_c_32_0= ruleMD )
+                    // InternalDroneDSL.g:4968:4: ( (lv_c_32_0= ruleMD ) )
+                    // InternalDroneDSL.g:4969:5: (lv_c_32_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:4919:5: (lv_c_32_0= ruleMD )
-                    // InternalDroneDSL.g:4920:6: lv_c_32_0= ruleMD
+                    // InternalDroneDSL.g:4969:5: (lv_c_32_0= ruleMD )
+                    // InternalDroneDSL.g:4970:6: lv_c_32_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_4_4_0());
@@ -10912,15 +11107,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_33=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_33=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_33, grammarAccess.getParallele4Access().getAmpersandKeyword_4_5());
                     			
-                    // InternalDroneDSL.g:4941:4: ( (lv_d_34_0= ruleGDr ) )
-                    // InternalDroneDSL.g:4942:5: (lv_d_34_0= ruleGDr )
+                    // InternalDroneDSL.g:4991:4: ( (lv_d_34_0= ruleGDr ) )
+                    // InternalDroneDSL.g:4992:5: (lv_d_34_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:4942:5: (lv_d_34_0= ruleGDr )
-                    // InternalDroneDSL.g:4943:6: lv_d_34_0= ruleGDr
+                    // InternalDroneDSL.g:4992:5: (lv_d_34_0= ruleGDr )
+                    // InternalDroneDSL.g:4993:6: lv_d_34_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_4_6_0());
@@ -10954,16 +11149,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalDroneDSL.g:4962:3: ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5012:3: ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:4962:3: ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:4963:4: ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) )
+                    // InternalDroneDSL.g:5012:3: ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5013:4: ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:4963:4: ( (lv_a_35_0= ruleAR ) )
-                    // InternalDroneDSL.g:4964:5: (lv_a_35_0= ruleAR )
+                    // InternalDroneDSL.g:5013:4: ( (lv_a_35_0= ruleAR ) )
+                    // InternalDroneDSL.g:5014:5: (lv_a_35_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:4964:5: (lv_a_35_0= ruleAR )
-                    // InternalDroneDSL.g:4965:6: lv_a_35_0= ruleAR
+                    // InternalDroneDSL.g:5014:5: (lv_a_35_0= ruleAR )
+                    // InternalDroneDSL.g:5015:6: lv_a_35_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAARParserRuleCall_5_0_0());
@@ -10990,15 +11185,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_36=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_36=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_36, grammarAccess.getParallele4Access().getAmpersandKeyword_5_1());
                     			
-                    // InternalDroneDSL.g:4986:4: ( (lv_b_37_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:4987:5: (lv_b_37_0= ruleRGRD )
+                    // InternalDroneDSL.g:5036:4: ( (lv_b_37_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5037:5: (lv_b_37_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:4987:5: (lv_b_37_0= ruleRGRD )
-                    // InternalDroneDSL.g:4988:6: lv_b_37_0= ruleRGRD
+                    // InternalDroneDSL.g:5037:5: (lv_b_37_0= ruleRGRD )
+                    // InternalDroneDSL.g:5038:6: lv_b_37_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_5_2_0());
@@ -11025,15 +11220,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_38=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_38=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_38, grammarAccess.getParallele4Access().getAmpersandKeyword_5_3());
                     			
-                    // InternalDroneDSL.g:5009:4: ( (lv_c_39_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5010:5: (lv_c_39_0= ruleGDr )
+                    // InternalDroneDSL.g:5059:4: ( (lv_c_39_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5060:5: (lv_c_39_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5010:5: (lv_c_39_0= ruleGDr )
-                    // InternalDroneDSL.g:5011:6: lv_c_39_0= ruleGDr
+                    // InternalDroneDSL.g:5060:5: (lv_c_39_0= ruleGDr )
+                    // InternalDroneDSL.g:5061:6: lv_c_39_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_5_4_0());
@@ -11060,15 +11255,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_40=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_40=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_40, grammarAccess.getParallele4Access().getAmpersandKeyword_5_5());
                     			
-                    // InternalDroneDSL.g:5032:4: ( (lv_d_41_0= ruleMD ) )
-                    // InternalDroneDSL.g:5033:5: (lv_d_41_0= ruleMD )
+                    // InternalDroneDSL.g:5082:4: ( (lv_d_41_0= ruleMD ) )
+                    // InternalDroneDSL.g:5083:5: (lv_d_41_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5033:5: (lv_d_41_0= ruleMD )
-                    // InternalDroneDSL.g:5034:6: lv_d_41_0= ruleMD
+                    // InternalDroneDSL.g:5083:5: (lv_d_41_0= ruleMD )
+                    // InternalDroneDSL.g:5084:6: lv_d_41_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_5_6_0());
@@ -11102,16 +11297,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalDroneDSL.g:5053:3: ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5103:3: ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:5053:3: ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:5054:4: ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5103:3: ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5104:4: ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:5054:4: ( (lv_a_42_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5055:5: (lv_a_42_0= ruleGDr )
+                    // InternalDroneDSL.g:5104:4: ( (lv_a_42_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5105:5: (lv_a_42_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5055:5: (lv_a_42_0= ruleGDr )
-                    // InternalDroneDSL.g:5056:6: lv_a_42_0= ruleGDr
+                    // InternalDroneDSL.g:5105:5: (lv_a_42_0= ruleGDr )
+                    // InternalDroneDSL.g:5106:6: lv_a_42_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_6_0_0());
@@ -11138,15 +11333,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_43=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_43=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_43, grammarAccess.getParallele4Access().getAmpersandKeyword_6_1());
                     			
-                    // InternalDroneDSL.g:5077:4: ( (lv_b_44_0= ruleAR ) )
-                    // InternalDroneDSL.g:5078:5: (lv_b_44_0= ruleAR )
+                    // InternalDroneDSL.g:5127:4: ( (lv_b_44_0= ruleAR ) )
+                    // InternalDroneDSL.g:5128:5: (lv_b_44_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5078:5: (lv_b_44_0= ruleAR )
-                    // InternalDroneDSL.g:5079:6: lv_b_44_0= ruleAR
+                    // InternalDroneDSL.g:5128:5: (lv_b_44_0= ruleAR )
+                    // InternalDroneDSL.g:5129:6: lv_b_44_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_6_2_0());
@@ -11173,15 +11368,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_45=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_45=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_45, grammarAccess.getParallele4Access().getAmpersandKeyword_6_3());
                     			
-                    // InternalDroneDSL.g:5100:4: ( (lv_c_46_0= ruleMD ) )
-                    // InternalDroneDSL.g:5101:5: (lv_c_46_0= ruleMD )
+                    // InternalDroneDSL.g:5150:4: ( (lv_c_46_0= ruleMD ) )
+                    // InternalDroneDSL.g:5151:5: (lv_c_46_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5101:5: (lv_c_46_0= ruleMD )
-                    // InternalDroneDSL.g:5102:6: lv_c_46_0= ruleMD
+                    // InternalDroneDSL.g:5151:5: (lv_c_46_0= ruleMD )
+                    // InternalDroneDSL.g:5152:6: lv_c_46_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_6_4_0());
@@ -11208,15 +11403,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_47=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_47=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_47, grammarAccess.getParallele4Access().getAmpersandKeyword_6_5());
                     			
-                    // InternalDroneDSL.g:5123:4: ( (lv_d_48_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5124:5: (lv_d_48_0= ruleRGRD )
+                    // InternalDroneDSL.g:5173:4: ( (lv_d_48_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5174:5: (lv_d_48_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5124:5: (lv_d_48_0= ruleRGRD )
-                    // InternalDroneDSL.g:5125:6: lv_d_48_0= ruleRGRD
+                    // InternalDroneDSL.g:5174:5: (lv_d_48_0= ruleRGRD )
+                    // InternalDroneDSL.g:5175:6: lv_d_48_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_6_6_0());
@@ -11250,16 +11445,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalDroneDSL.g:5144:3: ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5194:3: ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:5144:3: ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:5145:4: ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) )
+                    // InternalDroneDSL.g:5194:3: ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5195:4: ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:5145:4: ( (lv_a_49_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5146:5: (lv_a_49_0= ruleGDr )
+                    // InternalDroneDSL.g:5195:4: ( (lv_a_49_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5196:5: (lv_a_49_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5146:5: (lv_a_49_0= ruleGDr )
-                    // InternalDroneDSL.g:5147:6: lv_a_49_0= ruleGDr
+                    // InternalDroneDSL.g:5196:5: (lv_a_49_0= ruleGDr )
+                    // InternalDroneDSL.g:5197:6: lv_a_49_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_7_0_0());
@@ -11286,15 +11481,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_50=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_50=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_50, grammarAccess.getParallele4Access().getAmpersandKeyword_7_1());
                     			
-                    // InternalDroneDSL.g:5168:4: ( (lv_b_51_0= ruleAR ) )
-                    // InternalDroneDSL.g:5169:5: (lv_b_51_0= ruleAR )
+                    // InternalDroneDSL.g:5218:4: ( (lv_b_51_0= ruleAR ) )
+                    // InternalDroneDSL.g:5219:5: (lv_b_51_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5169:5: (lv_b_51_0= ruleAR )
-                    // InternalDroneDSL.g:5170:6: lv_b_51_0= ruleAR
+                    // InternalDroneDSL.g:5219:5: (lv_b_51_0= ruleAR )
+                    // InternalDroneDSL.g:5220:6: lv_b_51_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_7_2_0());
@@ -11321,15 +11516,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_52=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_52=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_52, grammarAccess.getParallele4Access().getAmpersandKeyword_7_3());
                     			
-                    // InternalDroneDSL.g:5191:4: ( (lv_c_53_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5192:5: (lv_c_53_0= ruleRGRD )
+                    // InternalDroneDSL.g:5241:4: ( (lv_c_53_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5242:5: (lv_c_53_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5192:5: (lv_c_53_0= ruleRGRD )
-                    // InternalDroneDSL.g:5193:6: lv_c_53_0= ruleRGRD
+                    // InternalDroneDSL.g:5242:5: (lv_c_53_0= ruleRGRD )
+                    // InternalDroneDSL.g:5243:6: lv_c_53_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_7_4_0());
@@ -11356,15 +11551,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_54=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_54=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_54, grammarAccess.getParallele4Access().getAmpersandKeyword_7_5());
                     			
-                    // InternalDroneDSL.g:5214:4: ( (lv_d_55_0= ruleMD ) )
-                    // InternalDroneDSL.g:5215:5: (lv_d_55_0= ruleMD )
+                    // InternalDroneDSL.g:5264:4: ( (lv_d_55_0= ruleMD ) )
+                    // InternalDroneDSL.g:5265:5: (lv_d_55_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5215:5: (lv_d_55_0= ruleMD )
-                    // InternalDroneDSL.g:5216:6: lv_d_55_0= ruleMD
+                    // InternalDroneDSL.g:5265:5: (lv_d_55_0= ruleMD )
+                    // InternalDroneDSL.g:5266:6: lv_d_55_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_7_6_0());
@@ -11398,16 +11593,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalDroneDSL.g:5235:3: ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5285:3: ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:5235:3: ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:5236:4: ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5285:3: ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5286:4: ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:5236:4: ( (lv_a_56_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5237:5: (lv_a_56_0= ruleGDr )
+                    // InternalDroneDSL.g:5286:4: ( (lv_a_56_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5287:5: (lv_a_56_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5237:5: (lv_a_56_0= ruleGDr )
-                    // InternalDroneDSL.g:5238:6: lv_a_56_0= ruleGDr
+                    // InternalDroneDSL.g:5287:5: (lv_a_56_0= ruleGDr )
+                    // InternalDroneDSL.g:5288:6: lv_a_56_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_8_0_0());
@@ -11434,15 +11629,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_57=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_57=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_57, grammarAccess.getParallele4Access().getAmpersandKeyword_8_1());
                     			
-                    // InternalDroneDSL.g:5259:4: ( (lv_b_58_0= ruleMD ) )
-                    // InternalDroneDSL.g:5260:5: (lv_b_58_0= ruleMD )
+                    // InternalDroneDSL.g:5309:4: ( (lv_b_58_0= ruleMD ) )
+                    // InternalDroneDSL.g:5310:5: (lv_b_58_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5260:5: (lv_b_58_0= ruleMD )
-                    // InternalDroneDSL.g:5261:6: lv_b_58_0= ruleMD
+                    // InternalDroneDSL.g:5310:5: (lv_b_58_0= ruleMD )
+                    // InternalDroneDSL.g:5311:6: lv_b_58_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_8_2_0());
@@ -11469,15 +11664,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_59=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_59=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_59, grammarAccess.getParallele4Access().getAmpersandKeyword_8_3());
                     			
-                    // InternalDroneDSL.g:5282:4: ( (lv_c_60_0= ruleAR ) )
-                    // InternalDroneDSL.g:5283:5: (lv_c_60_0= ruleAR )
+                    // InternalDroneDSL.g:5332:4: ( (lv_c_60_0= ruleAR ) )
+                    // InternalDroneDSL.g:5333:5: (lv_c_60_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5283:5: (lv_c_60_0= ruleAR )
-                    // InternalDroneDSL.g:5284:6: lv_c_60_0= ruleAR
+                    // InternalDroneDSL.g:5333:5: (lv_c_60_0= ruleAR )
+                    // InternalDroneDSL.g:5334:6: lv_c_60_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_8_4_0());
@@ -11504,15 +11699,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_61=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_61=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_61, grammarAccess.getParallele4Access().getAmpersandKeyword_8_5());
                     			
-                    // InternalDroneDSL.g:5305:4: ( (lv_d_62_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5306:5: (lv_d_62_0= ruleRGRD )
+                    // InternalDroneDSL.g:5355:4: ( (lv_d_62_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5356:5: (lv_d_62_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5306:5: (lv_d_62_0= ruleRGRD )
-                    // InternalDroneDSL.g:5307:6: lv_d_62_0= ruleRGRD
+                    // InternalDroneDSL.g:5356:5: (lv_d_62_0= ruleRGRD )
+                    // InternalDroneDSL.g:5357:6: lv_d_62_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_8_6_0());
@@ -11546,16 +11741,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDroneDSL.g:5326:3: ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5376:3: ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:5326:3: ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:5327:4: ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) )
+                    // InternalDroneDSL.g:5376:3: ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5377:4: ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:5327:4: ( (lv_a_63_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5328:5: (lv_a_63_0= ruleGDr )
+                    // InternalDroneDSL.g:5377:4: ( (lv_a_63_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5378:5: (lv_a_63_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5328:5: (lv_a_63_0= ruleGDr )
-                    // InternalDroneDSL.g:5329:6: lv_a_63_0= ruleGDr
+                    // InternalDroneDSL.g:5378:5: (lv_a_63_0= ruleGDr )
+                    // InternalDroneDSL.g:5379:6: lv_a_63_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_9_0_0());
@@ -11582,15 +11777,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_64=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_64=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_64, grammarAccess.getParallele4Access().getAmpersandKeyword_9_1());
                     			
-                    // InternalDroneDSL.g:5350:4: ( (lv_b_65_0= ruleMD ) )
-                    // InternalDroneDSL.g:5351:5: (lv_b_65_0= ruleMD )
+                    // InternalDroneDSL.g:5400:4: ( (lv_b_65_0= ruleMD ) )
+                    // InternalDroneDSL.g:5401:5: (lv_b_65_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5351:5: (lv_b_65_0= ruleMD )
-                    // InternalDroneDSL.g:5352:6: lv_b_65_0= ruleMD
+                    // InternalDroneDSL.g:5401:5: (lv_b_65_0= ruleMD )
+                    // InternalDroneDSL.g:5402:6: lv_b_65_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_9_2_0());
@@ -11617,15 +11812,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_66=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_66=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_66, grammarAccess.getParallele4Access().getAmpersandKeyword_9_3());
                     			
-                    // InternalDroneDSL.g:5373:4: ( (lv_c_67_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5374:5: (lv_c_67_0= ruleRGRD )
+                    // InternalDroneDSL.g:5423:4: ( (lv_c_67_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5424:5: (lv_c_67_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5374:5: (lv_c_67_0= ruleRGRD )
-                    // InternalDroneDSL.g:5375:6: lv_c_67_0= ruleRGRD
+                    // InternalDroneDSL.g:5424:5: (lv_c_67_0= ruleRGRD )
+                    // InternalDroneDSL.g:5425:6: lv_c_67_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_9_4_0());
@@ -11652,15 +11847,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_68=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_68=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_68, grammarAccess.getParallele4Access().getAmpersandKeyword_9_5());
                     			
-                    // InternalDroneDSL.g:5396:4: ( (lv_d_69_0= ruleAR ) )
-                    // InternalDroneDSL.g:5397:5: (lv_d_69_0= ruleAR )
+                    // InternalDroneDSL.g:5446:4: ( (lv_d_69_0= ruleAR ) )
+                    // InternalDroneDSL.g:5447:5: (lv_d_69_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5397:5: (lv_d_69_0= ruleAR )
-                    // InternalDroneDSL.g:5398:6: lv_d_69_0= ruleAR
+                    // InternalDroneDSL.g:5447:5: (lv_d_69_0= ruleAR )
+                    // InternalDroneDSL.g:5448:6: lv_d_69_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_9_6_0());
@@ -11694,16 +11889,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalDroneDSL.g:5417:3: ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5467:3: ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:5417:3: ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:5418:4: ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) )
+                    // InternalDroneDSL.g:5467:3: ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:5468:4: ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:5418:4: ( (lv_a_70_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5419:5: (lv_a_70_0= ruleGDr )
+                    // InternalDroneDSL.g:5468:4: ( (lv_a_70_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5469:5: (lv_a_70_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5419:5: (lv_a_70_0= ruleGDr )
-                    // InternalDroneDSL.g:5420:6: lv_a_70_0= ruleGDr
+                    // InternalDroneDSL.g:5469:5: (lv_a_70_0= ruleGDr )
+                    // InternalDroneDSL.g:5470:6: lv_a_70_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_10_0_0());
@@ -11730,15 +11925,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_71=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_71=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_71, grammarAccess.getParallele4Access().getAmpersandKeyword_10_1());
                     			
-                    // InternalDroneDSL.g:5441:4: ( (lv_b_72_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5442:5: (lv_b_72_0= ruleRGRD )
+                    // InternalDroneDSL.g:5491:4: ( (lv_b_72_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5492:5: (lv_b_72_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5442:5: (lv_b_72_0= ruleRGRD )
-                    // InternalDroneDSL.g:5443:6: lv_b_72_0= ruleRGRD
+                    // InternalDroneDSL.g:5492:5: (lv_b_72_0= ruleRGRD )
+                    // InternalDroneDSL.g:5493:6: lv_b_72_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_10_2_0());
@@ -11765,15 +11960,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_73=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_73=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_73, grammarAccess.getParallele4Access().getAmpersandKeyword_10_3());
                     			
-                    // InternalDroneDSL.g:5464:4: ( (lv_c_74_0= ruleAR ) )
-                    // InternalDroneDSL.g:5465:5: (lv_c_74_0= ruleAR )
+                    // InternalDroneDSL.g:5514:4: ( (lv_c_74_0= ruleAR ) )
+                    // InternalDroneDSL.g:5515:5: (lv_c_74_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5465:5: (lv_c_74_0= ruleAR )
-                    // InternalDroneDSL.g:5466:6: lv_c_74_0= ruleAR
+                    // InternalDroneDSL.g:5515:5: (lv_c_74_0= ruleAR )
+                    // InternalDroneDSL.g:5516:6: lv_c_74_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_10_4_0());
@@ -11800,15 +11995,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_75=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_75=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_75, grammarAccess.getParallele4Access().getAmpersandKeyword_10_5());
                     			
-                    // InternalDroneDSL.g:5487:4: ( (lv_d_76_0= ruleMD ) )
-                    // InternalDroneDSL.g:5488:5: (lv_d_76_0= ruleMD )
+                    // InternalDroneDSL.g:5537:4: ( (lv_d_76_0= ruleMD ) )
+                    // InternalDroneDSL.g:5538:5: (lv_d_76_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5488:5: (lv_d_76_0= ruleMD )
-                    // InternalDroneDSL.g:5489:6: lv_d_76_0= ruleMD
+                    // InternalDroneDSL.g:5538:5: (lv_d_76_0= ruleMD )
+                    // InternalDroneDSL.g:5539:6: lv_d_76_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_10_6_0());
@@ -11842,16 +12037,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalDroneDSL.g:5508:3: ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5558:3: ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:5508:3: ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:5509:4: ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) )
+                    // InternalDroneDSL.g:5558:3: ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5559:4: ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:5509:4: ( (lv_a_77_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5510:5: (lv_a_77_0= ruleGDr )
+                    // InternalDroneDSL.g:5559:4: ( (lv_a_77_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5560:5: (lv_a_77_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5510:5: (lv_a_77_0= ruleGDr )
-                    // InternalDroneDSL.g:5511:6: lv_a_77_0= ruleGDr
+                    // InternalDroneDSL.g:5560:5: (lv_a_77_0= ruleGDr )
+                    // InternalDroneDSL.g:5561:6: lv_a_77_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAGDrParserRuleCall_11_0_0());
@@ -11878,15 +12073,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_78=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_78=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_78, grammarAccess.getParallele4Access().getAmpersandKeyword_11_1());
                     			
-                    // InternalDroneDSL.g:5532:4: ( (lv_b_79_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5533:5: (lv_b_79_0= ruleRGRD )
+                    // InternalDroneDSL.g:5582:4: ( (lv_b_79_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5583:5: (lv_b_79_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5533:5: (lv_b_79_0= ruleRGRD )
-                    // InternalDroneDSL.g:5534:6: lv_b_79_0= ruleRGRD
+                    // InternalDroneDSL.g:5583:5: (lv_b_79_0= ruleRGRD )
+                    // InternalDroneDSL.g:5584:6: lv_b_79_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_11_2_0());
@@ -11913,15 +12108,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_80=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_80=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_80, grammarAccess.getParallele4Access().getAmpersandKeyword_11_3());
                     			
-                    // InternalDroneDSL.g:5555:4: ( (lv_c_81_0= ruleMD ) )
-                    // InternalDroneDSL.g:5556:5: (lv_c_81_0= ruleMD )
+                    // InternalDroneDSL.g:5605:4: ( (lv_c_81_0= ruleMD ) )
+                    // InternalDroneDSL.g:5606:5: (lv_c_81_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5556:5: (lv_c_81_0= ruleMD )
-                    // InternalDroneDSL.g:5557:6: lv_c_81_0= ruleMD
+                    // InternalDroneDSL.g:5606:5: (lv_c_81_0= ruleMD )
+                    // InternalDroneDSL.g:5607:6: lv_c_81_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_11_4_0());
@@ -11948,15 +12143,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_82=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_82=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_82, grammarAccess.getParallele4Access().getAmpersandKeyword_11_5());
                     			
-                    // InternalDroneDSL.g:5578:4: ( (lv_d_83_0= ruleAR ) )
-                    // InternalDroneDSL.g:5579:5: (lv_d_83_0= ruleAR )
+                    // InternalDroneDSL.g:5628:4: ( (lv_d_83_0= ruleAR ) )
+                    // InternalDroneDSL.g:5629:5: (lv_d_83_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5579:5: (lv_d_83_0= ruleAR )
-                    // InternalDroneDSL.g:5580:6: lv_d_83_0= ruleAR
+                    // InternalDroneDSL.g:5629:5: (lv_d_83_0= ruleAR )
+                    // InternalDroneDSL.g:5630:6: lv_d_83_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_11_6_0());
@@ -11990,16 +12185,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalDroneDSL.g:5599:3: ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5649:3: ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:5599:3: ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:5600:4: ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5649:3: ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5650:4: ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:5600:4: ( (lv_a_84_0= ruleMD ) )
-                    // InternalDroneDSL.g:5601:5: (lv_a_84_0= ruleMD )
+                    // InternalDroneDSL.g:5650:4: ( (lv_a_84_0= ruleMD ) )
+                    // InternalDroneDSL.g:5651:5: (lv_a_84_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5601:5: (lv_a_84_0= ruleMD )
-                    // InternalDroneDSL.g:5602:6: lv_a_84_0= ruleMD
+                    // InternalDroneDSL.g:5651:5: (lv_a_84_0= ruleMD )
+                    // InternalDroneDSL.g:5652:6: lv_a_84_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_12_0_0());
@@ -12026,15 +12221,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_85=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_85=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_85, grammarAccess.getParallele4Access().getAmpersandKeyword_12_1());
                     			
-                    // InternalDroneDSL.g:5623:4: ( (lv_b_86_0= ruleAR ) )
-                    // InternalDroneDSL.g:5624:5: (lv_b_86_0= ruleAR )
+                    // InternalDroneDSL.g:5673:4: ( (lv_b_86_0= ruleAR ) )
+                    // InternalDroneDSL.g:5674:5: (lv_b_86_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5624:5: (lv_b_86_0= ruleAR )
-                    // InternalDroneDSL.g:5625:6: lv_b_86_0= ruleAR
+                    // InternalDroneDSL.g:5674:5: (lv_b_86_0= ruleAR )
+                    // InternalDroneDSL.g:5675:6: lv_b_86_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_12_2_0());
@@ -12061,15 +12256,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_87=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_87=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_87, grammarAccess.getParallele4Access().getAmpersandKeyword_12_3());
                     			
-                    // InternalDroneDSL.g:5646:4: ( (lv_c_88_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5647:5: (lv_c_88_0= ruleGDr )
+                    // InternalDroneDSL.g:5696:4: ( (lv_c_88_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5697:5: (lv_c_88_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5647:5: (lv_c_88_0= ruleGDr )
-                    // InternalDroneDSL.g:5648:6: lv_c_88_0= ruleGDr
+                    // InternalDroneDSL.g:5697:5: (lv_c_88_0= ruleGDr )
+                    // InternalDroneDSL.g:5698:6: lv_c_88_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_12_4_0());
@@ -12096,15 +12291,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_89=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_89=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_89, grammarAccess.getParallele4Access().getAmpersandKeyword_12_5());
                     			
-                    // InternalDroneDSL.g:5669:4: ( (lv_d_90_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5670:5: (lv_d_90_0= ruleRGRD )
+                    // InternalDroneDSL.g:5719:4: ( (lv_d_90_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5720:5: (lv_d_90_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5670:5: (lv_d_90_0= ruleRGRD )
-                    // InternalDroneDSL.g:5671:6: lv_d_90_0= ruleRGRD
+                    // InternalDroneDSL.g:5720:5: (lv_d_90_0= ruleRGRD )
+                    // InternalDroneDSL.g:5721:6: lv_d_90_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_12_6_0());
@@ -12138,16 +12333,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalDroneDSL.g:5690:3: ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:5740:3: ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:5690:3: ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:5691:4: ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5740:3: ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:5741:4: ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:5691:4: ( (lv_a_91_0= ruleMD ) )
-                    // InternalDroneDSL.g:5692:5: (lv_a_91_0= ruleMD )
+                    // InternalDroneDSL.g:5741:4: ( (lv_a_91_0= ruleMD ) )
+                    // InternalDroneDSL.g:5742:5: (lv_a_91_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5692:5: (lv_a_91_0= ruleMD )
-                    // InternalDroneDSL.g:5693:6: lv_a_91_0= ruleMD
+                    // InternalDroneDSL.g:5742:5: (lv_a_91_0= ruleMD )
+                    // InternalDroneDSL.g:5743:6: lv_a_91_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_13_0_0());
@@ -12174,15 +12369,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_92=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_92=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_92, grammarAccess.getParallele4Access().getAmpersandKeyword_13_1());
                     			
-                    // InternalDroneDSL.g:5714:4: ( (lv_b_93_0= ruleAR ) )
-                    // InternalDroneDSL.g:5715:5: (lv_b_93_0= ruleAR )
+                    // InternalDroneDSL.g:5764:4: ( (lv_b_93_0= ruleAR ) )
+                    // InternalDroneDSL.g:5765:5: (lv_b_93_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5715:5: (lv_b_93_0= ruleAR )
-                    // InternalDroneDSL.g:5716:6: lv_b_93_0= ruleAR
+                    // InternalDroneDSL.g:5765:5: (lv_b_93_0= ruleAR )
+                    // InternalDroneDSL.g:5766:6: lv_b_93_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_13_2_0());
@@ -12209,15 +12404,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_94=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_94=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_94, grammarAccess.getParallele4Access().getAmpersandKeyword_13_3());
                     			
-                    // InternalDroneDSL.g:5737:4: ( (lv_c_95_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5738:5: (lv_c_95_0= ruleRGRD )
+                    // InternalDroneDSL.g:5787:4: ( (lv_c_95_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5788:5: (lv_c_95_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5738:5: (lv_c_95_0= ruleRGRD )
-                    // InternalDroneDSL.g:5739:6: lv_c_95_0= ruleRGRD
+                    // InternalDroneDSL.g:5788:5: (lv_c_95_0= ruleRGRD )
+                    // InternalDroneDSL.g:5789:6: lv_c_95_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_13_4_0());
@@ -12244,15 +12439,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_96=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_96=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_96, grammarAccess.getParallele4Access().getAmpersandKeyword_13_5());
                     			
-                    // InternalDroneDSL.g:5760:4: ( (lv_d_97_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5761:5: (lv_d_97_0= ruleGDr )
+                    // InternalDroneDSL.g:5810:4: ( (lv_d_97_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5811:5: (lv_d_97_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5761:5: (lv_d_97_0= ruleGDr )
-                    // InternalDroneDSL.g:5762:6: lv_d_97_0= ruleGDr
+                    // InternalDroneDSL.g:5811:5: (lv_d_97_0= ruleGDr )
+                    // InternalDroneDSL.g:5812:6: lv_d_97_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_13_6_0());
@@ -12286,16 +12481,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalDroneDSL.g:5781:3: ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5831:3: ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) )
                     {
-                    // InternalDroneDSL.g:5781:3: ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) )
-                    // InternalDroneDSL.g:5782:4: ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5831:3: ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) )
+                    // InternalDroneDSL.g:5832:4: ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) )
                     {
-                    // InternalDroneDSL.g:5782:4: ( (lv_a_98_0= ruleMD ) )
-                    // InternalDroneDSL.g:5783:5: (lv_a_98_0= ruleMD )
+                    // InternalDroneDSL.g:5832:4: ( (lv_a_98_0= ruleMD ) )
+                    // InternalDroneDSL.g:5833:5: (lv_a_98_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5783:5: (lv_a_98_0= ruleMD )
-                    // InternalDroneDSL.g:5784:6: lv_a_98_0= ruleMD
+                    // InternalDroneDSL.g:5833:5: (lv_a_98_0= ruleMD )
+                    // InternalDroneDSL.g:5834:6: lv_a_98_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_14_0_0());
@@ -12322,15 +12517,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_99=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_99=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_99, grammarAccess.getParallele4Access().getAmpersandKeyword_14_1());
                     			
-                    // InternalDroneDSL.g:5805:4: ( (lv_b_100_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5806:5: (lv_b_100_0= ruleGDr )
+                    // InternalDroneDSL.g:5855:4: ( (lv_b_100_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5856:5: (lv_b_100_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5806:5: (lv_b_100_0= ruleGDr )
-                    // InternalDroneDSL.g:5807:6: lv_b_100_0= ruleGDr
+                    // InternalDroneDSL.g:5856:5: (lv_b_100_0= ruleGDr )
+                    // InternalDroneDSL.g:5857:6: lv_b_100_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_14_2_0());
@@ -12357,15 +12552,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_101=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_101=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_101, grammarAccess.getParallele4Access().getAmpersandKeyword_14_3());
                     			
-                    // InternalDroneDSL.g:5828:4: ( (lv_c_102_0= ruleAR ) )
-                    // InternalDroneDSL.g:5829:5: (lv_c_102_0= ruleAR )
+                    // InternalDroneDSL.g:5878:4: ( (lv_c_102_0= ruleAR ) )
+                    // InternalDroneDSL.g:5879:5: (lv_c_102_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5829:5: (lv_c_102_0= ruleAR )
-                    // InternalDroneDSL.g:5830:6: lv_c_102_0= ruleAR
+                    // InternalDroneDSL.g:5879:5: (lv_c_102_0= ruleAR )
+                    // InternalDroneDSL.g:5880:6: lv_c_102_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_14_4_0());
@@ -12392,15 +12587,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_103=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_103=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_103, grammarAccess.getParallele4Access().getAmpersandKeyword_14_5());
                     			
-                    // InternalDroneDSL.g:5851:4: ( (lv_d_104_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5852:5: (lv_d_104_0= ruleRGRD )
+                    // InternalDroneDSL.g:5901:4: ( (lv_d_104_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5902:5: (lv_d_104_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5852:5: (lv_d_104_0= ruleRGRD )
-                    // InternalDroneDSL.g:5853:6: lv_d_104_0= ruleRGRD
+                    // InternalDroneDSL.g:5902:5: (lv_d_104_0= ruleRGRD )
+                    // InternalDroneDSL.g:5903:6: lv_d_104_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDRGRDParserRuleCall_14_6_0());
@@ -12434,16 +12629,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalDroneDSL.g:5872:3: ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5922:3: ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:5872:3: ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:5873:4: ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) )
+                    // InternalDroneDSL.g:5922:3: ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:5923:4: ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:5873:4: ( (lv_a_105_0= ruleMD ) )
-                    // InternalDroneDSL.g:5874:5: (lv_a_105_0= ruleMD )
+                    // InternalDroneDSL.g:5923:4: ( (lv_a_105_0= ruleMD ) )
+                    // InternalDroneDSL.g:5924:5: (lv_a_105_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5874:5: (lv_a_105_0= ruleMD )
-                    // InternalDroneDSL.g:5875:6: lv_a_105_0= ruleMD
+                    // InternalDroneDSL.g:5924:5: (lv_a_105_0= ruleMD )
+                    // InternalDroneDSL.g:5925:6: lv_a_105_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_15_0_0());
@@ -12470,15 +12665,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_106=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_106=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_106, grammarAccess.getParallele4Access().getAmpersandKeyword_15_1());
                     			
-                    // InternalDroneDSL.g:5896:4: ( (lv_b_107_0= ruleGDr ) )
-                    // InternalDroneDSL.g:5897:5: (lv_b_107_0= ruleGDr )
+                    // InternalDroneDSL.g:5946:4: ( (lv_b_107_0= ruleGDr ) )
+                    // InternalDroneDSL.g:5947:5: (lv_b_107_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:5897:5: (lv_b_107_0= ruleGDr )
-                    // InternalDroneDSL.g:5898:6: lv_b_107_0= ruleGDr
+                    // InternalDroneDSL.g:5947:5: (lv_b_107_0= ruleGDr )
+                    // InternalDroneDSL.g:5948:6: lv_b_107_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_15_2_0());
@@ -12505,15 +12700,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_108=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_108=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_108, grammarAccess.getParallele4Access().getAmpersandKeyword_15_3());
                     			
-                    // InternalDroneDSL.g:5919:4: ( (lv_c_109_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5920:5: (lv_c_109_0= ruleRGRD )
+                    // InternalDroneDSL.g:5969:4: ( (lv_c_109_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:5970:5: (lv_c_109_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5920:5: (lv_c_109_0= ruleRGRD )
-                    // InternalDroneDSL.g:5921:6: lv_c_109_0= ruleRGRD
+                    // InternalDroneDSL.g:5970:5: (lv_c_109_0= ruleRGRD )
+                    // InternalDroneDSL.g:5971:6: lv_c_109_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCRGRDParserRuleCall_15_4_0());
@@ -12540,15 +12735,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_110=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_110=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_110, grammarAccess.getParallele4Access().getAmpersandKeyword_15_5());
                     			
-                    // InternalDroneDSL.g:5942:4: ( (lv_d_111_0= ruleAR ) )
-                    // InternalDroneDSL.g:5943:5: (lv_d_111_0= ruleAR )
+                    // InternalDroneDSL.g:5992:4: ( (lv_d_111_0= ruleAR ) )
+                    // InternalDroneDSL.g:5993:5: (lv_d_111_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:5943:5: (lv_d_111_0= ruleAR )
-                    // InternalDroneDSL.g:5944:6: lv_d_111_0= ruleAR
+                    // InternalDroneDSL.g:5993:5: (lv_d_111_0= ruleAR )
+                    // InternalDroneDSL.g:5994:6: lv_d_111_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_15_6_0());
@@ -12582,16 +12777,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalDroneDSL.g:5963:3: ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6013:3: ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:5963:3: ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:5964:4: ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) )
+                    // InternalDroneDSL.g:6013:3: ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6014:4: ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:5964:4: ( (lv_a_112_0= ruleMD ) )
-                    // InternalDroneDSL.g:5965:5: (lv_a_112_0= ruleMD )
+                    // InternalDroneDSL.g:6014:4: ( (lv_a_112_0= ruleMD ) )
+                    // InternalDroneDSL.g:6015:5: (lv_a_112_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:5965:5: (lv_a_112_0= ruleMD )
-                    // InternalDroneDSL.g:5966:6: lv_a_112_0= ruleMD
+                    // InternalDroneDSL.g:6015:5: (lv_a_112_0= ruleMD )
+                    // InternalDroneDSL.g:6016:6: lv_a_112_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_16_0_0());
@@ -12618,15 +12813,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_113=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_113=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_113, grammarAccess.getParallele4Access().getAmpersandKeyword_16_1());
                     			
-                    // InternalDroneDSL.g:5987:4: ( (lv_b_114_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:5988:5: (lv_b_114_0= ruleRGRD )
+                    // InternalDroneDSL.g:6037:4: ( (lv_b_114_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6038:5: (lv_b_114_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:5988:5: (lv_b_114_0= ruleRGRD )
-                    // InternalDroneDSL.g:5989:6: lv_b_114_0= ruleRGRD
+                    // InternalDroneDSL.g:6038:5: (lv_b_114_0= ruleRGRD )
+                    // InternalDroneDSL.g:6039:6: lv_b_114_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_16_2_0());
@@ -12653,15 +12848,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_115=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_115=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_115, grammarAccess.getParallele4Access().getAmpersandKeyword_16_3());
                     			
-                    // InternalDroneDSL.g:6010:4: ( (lv_c_116_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6011:5: (lv_c_116_0= ruleGDr )
+                    // InternalDroneDSL.g:6060:4: ( (lv_c_116_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6061:5: (lv_c_116_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6011:5: (lv_c_116_0= ruleGDr )
-                    // InternalDroneDSL.g:6012:6: lv_c_116_0= ruleGDr
+                    // InternalDroneDSL.g:6061:5: (lv_c_116_0= ruleGDr )
+                    // InternalDroneDSL.g:6062:6: lv_c_116_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_16_4_0());
@@ -12688,15 +12883,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_117=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_117=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_117, grammarAccess.getParallele4Access().getAmpersandKeyword_16_5());
                     			
-                    // InternalDroneDSL.g:6033:4: ( (lv_d_118_0= ruleAR ) )
-                    // InternalDroneDSL.g:6034:5: (lv_d_118_0= ruleAR )
+                    // InternalDroneDSL.g:6083:4: ( (lv_d_118_0= ruleAR ) )
+                    // InternalDroneDSL.g:6084:5: (lv_d_118_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6034:5: (lv_d_118_0= ruleAR )
-                    // InternalDroneDSL.g:6035:6: lv_d_118_0= ruleAR
+                    // InternalDroneDSL.g:6084:5: (lv_d_118_0= ruleAR )
+                    // InternalDroneDSL.g:6085:6: lv_d_118_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_16_6_0());
@@ -12730,16 +12925,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalDroneDSL.g:6054:3: ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6104:3: ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:6054:3: ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:6055:4: ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6104:3: ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6105:4: ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:6055:4: ( (lv_a_119_0= ruleMD ) )
-                    // InternalDroneDSL.g:6056:5: (lv_a_119_0= ruleMD )
+                    // InternalDroneDSL.g:6105:4: ( (lv_a_119_0= ruleMD ) )
+                    // InternalDroneDSL.g:6106:5: (lv_a_119_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6056:5: (lv_a_119_0= ruleMD )
-                    // InternalDroneDSL.g:6057:6: lv_a_119_0= ruleMD
+                    // InternalDroneDSL.g:6106:5: (lv_a_119_0= ruleMD )
+                    // InternalDroneDSL.g:6107:6: lv_a_119_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getAMDParserRuleCall_17_0_0());
@@ -12766,15 +12961,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_120=(Token)match(input,43,FOLLOW_32); 
+                    otherlv_120=(Token)match(input,44,FOLLOW_32); 
 
                     				newLeafNode(otherlv_120, grammarAccess.getParallele4Access().getAmpersandKeyword_17_1());
                     			
-                    // InternalDroneDSL.g:6078:4: ( (lv_b_121_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6079:5: (lv_b_121_0= ruleRGRD )
+                    // InternalDroneDSL.g:6128:4: ( (lv_b_121_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6129:5: (lv_b_121_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6079:5: (lv_b_121_0= ruleRGRD )
-                    // InternalDroneDSL.g:6080:6: lv_b_121_0= ruleRGRD
+                    // InternalDroneDSL.g:6129:5: (lv_b_121_0= ruleRGRD )
+                    // InternalDroneDSL.g:6130:6: lv_b_121_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBRGRDParserRuleCall_17_2_0());
@@ -12801,15 +12996,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_122=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_122=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_122, grammarAccess.getParallele4Access().getAmpersandKeyword_17_3());
                     			
-                    // InternalDroneDSL.g:6101:4: ( (lv_c_123_0= ruleAR ) )
-                    // InternalDroneDSL.g:6102:5: (lv_c_123_0= ruleAR )
+                    // InternalDroneDSL.g:6151:4: ( (lv_c_123_0= ruleAR ) )
+                    // InternalDroneDSL.g:6152:5: (lv_c_123_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6102:5: (lv_c_123_0= ruleAR )
-                    // InternalDroneDSL.g:6103:6: lv_c_123_0= ruleAR
+                    // InternalDroneDSL.g:6152:5: (lv_c_123_0= ruleAR )
+                    // InternalDroneDSL.g:6153:6: lv_c_123_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_17_4_0());
@@ -12836,15 +13031,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_124=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_124=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_124, grammarAccess.getParallele4Access().getAmpersandKeyword_17_5());
                     			
-                    // InternalDroneDSL.g:6124:4: ( (lv_d_125_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6125:5: (lv_d_125_0= ruleGDr )
+                    // InternalDroneDSL.g:6174:4: ( (lv_d_125_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6175:5: (lv_d_125_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6125:5: (lv_d_125_0= ruleGDr )
-                    // InternalDroneDSL.g:6126:6: lv_d_125_0= ruleGDr
+                    // InternalDroneDSL.g:6175:5: (lv_d_125_0= ruleGDr )
+                    // InternalDroneDSL.g:6176:6: lv_d_125_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_17_6_0());
@@ -12878,16 +13073,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalDroneDSL.g:6145:3: ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6195:3: ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:6145:3: ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:6146:4: ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6195:3: ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6196:4: ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:6146:4: ( (lv_a_126_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6147:5: (lv_a_126_0= ruleRGRD )
+                    // InternalDroneDSL.g:6196:4: ( (lv_a_126_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6197:5: (lv_a_126_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6147:5: (lv_a_126_0= ruleRGRD )
-                    // InternalDroneDSL.g:6148:6: lv_a_126_0= ruleRGRD
+                    // InternalDroneDSL.g:6197:5: (lv_a_126_0= ruleRGRD )
+                    // InternalDroneDSL.g:6198:6: lv_a_126_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_18_0_0());
@@ -12914,15 +13109,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_127=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_127=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_127, grammarAccess.getParallele4Access().getAmpersandKeyword_18_1());
                     			
-                    // InternalDroneDSL.g:6169:4: ( (lv_b_128_0= ruleAR ) )
-                    // InternalDroneDSL.g:6170:5: (lv_b_128_0= ruleAR )
+                    // InternalDroneDSL.g:6219:4: ( (lv_b_128_0= ruleAR ) )
+                    // InternalDroneDSL.g:6220:5: (lv_b_128_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6170:5: (lv_b_128_0= ruleAR )
-                    // InternalDroneDSL.g:6171:6: lv_b_128_0= ruleAR
+                    // InternalDroneDSL.g:6220:5: (lv_b_128_0= ruleAR )
+                    // InternalDroneDSL.g:6221:6: lv_b_128_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_18_2_0());
@@ -12949,15 +13144,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_129=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_129=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_129, grammarAccess.getParallele4Access().getAmpersandKeyword_18_3());
                     			
-                    // InternalDroneDSL.g:6192:4: ( (lv_c_130_0= ruleMD ) )
-                    // InternalDroneDSL.g:6193:5: (lv_c_130_0= ruleMD )
+                    // InternalDroneDSL.g:6242:4: ( (lv_c_130_0= ruleMD ) )
+                    // InternalDroneDSL.g:6243:5: (lv_c_130_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6193:5: (lv_c_130_0= ruleMD )
-                    // InternalDroneDSL.g:6194:6: lv_c_130_0= ruleMD
+                    // InternalDroneDSL.g:6243:5: (lv_c_130_0= ruleMD )
+                    // InternalDroneDSL.g:6244:6: lv_c_130_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_18_4_0());
@@ -12984,15 +13179,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_131=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_131=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_131, grammarAccess.getParallele4Access().getAmpersandKeyword_18_5());
                     			
-                    // InternalDroneDSL.g:6215:4: ( (lv_d_132_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6216:5: (lv_d_132_0= ruleGDr )
+                    // InternalDroneDSL.g:6265:4: ( (lv_d_132_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6266:5: (lv_d_132_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6216:5: (lv_d_132_0= ruleGDr )
-                    // InternalDroneDSL.g:6217:6: lv_d_132_0= ruleGDr
+                    // InternalDroneDSL.g:6266:5: (lv_d_132_0= ruleGDr )
+                    // InternalDroneDSL.g:6267:6: lv_d_132_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_18_6_0());
@@ -13026,16 +13221,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalDroneDSL.g:6236:3: ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:6286:3: ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:6236:3: ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:6237:4: ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) )
+                    // InternalDroneDSL.g:6286:3: ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:6287:4: ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:6237:4: ( (lv_a_133_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6238:5: (lv_a_133_0= ruleRGRD )
+                    // InternalDroneDSL.g:6287:4: ( (lv_a_133_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6288:5: (lv_a_133_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6238:5: (lv_a_133_0= ruleRGRD )
-                    // InternalDroneDSL.g:6239:6: lv_a_133_0= ruleRGRD
+                    // InternalDroneDSL.g:6288:5: (lv_a_133_0= ruleRGRD )
+                    // InternalDroneDSL.g:6289:6: lv_a_133_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_19_0_0());
@@ -13062,15 +13257,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_134=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_134=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_134, grammarAccess.getParallele4Access().getAmpersandKeyword_19_1());
                     			
-                    // InternalDroneDSL.g:6260:4: ( (lv_b_135_0= ruleAR ) )
-                    // InternalDroneDSL.g:6261:5: (lv_b_135_0= ruleAR )
+                    // InternalDroneDSL.g:6310:4: ( (lv_b_135_0= ruleAR ) )
+                    // InternalDroneDSL.g:6311:5: (lv_b_135_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6261:5: (lv_b_135_0= ruleAR )
-                    // InternalDroneDSL.g:6262:6: lv_b_135_0= ruleAR
+                    // InternalDroneDSL.g:6311:5: (lv_b_135_0= ruleAR )
+                    // InternalDroneDSL.g:6312:6: lv_b_135_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBARParserRuleCall_19_2_0());
@@ -13097,15 +13292,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_136=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_136=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_136, grammarAccess.getParallele4Access().getAmpersandKeyword_19_3());
                     			
-                    // InternalDroneDSL.g:6283:4: ( (lv_c_137_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6284:5: (lv_c_137_0= ruleGDr )
+                    // InternalDroneDSL.g:6333:4: ( (lv_c_137_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6334:5: (lv_c_137_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6284:5: (lv_c_137_0= ruleGDr )
-                    // InternalDroneDSL.g:6285:6: lv_c_137_0= ruleGDr
+                    // InternalDroneDSL.g:6334:5: (lv_c_137_0= ruleGDr )
+                    // InternalDroneDSL.g:6335:6: lv_c_137_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_19_4_0());
@@ -13132,15 +13327,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_138=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_138=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_138, grammarAccess.getParallele4Access().getAmpersandKeyword_19_5());
                     			
-                    // InternalDroneDSL.g:6306:4: ( (lv_d_139_0= ruleMD ) )
-                    // InternalDroneDSL.g:6307:5: (lv_d_139_0= ruleMD )
+                    // InternalDroneDSL.g:6356:4: ( (lv_d_139_0= ruleMD ) )
+                    // InternalDroneDSL.g:6357:5: (lv_d_139_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6307:5: (lv_d_139_0= ruleMD )
-                    // InternalDroneDSL.g:6308:6: lv_d_139_0= ruleMD
+                    // InternalDroneDSL.g:6357:5: (lv_d_139_0= ruleMD )
+                    // InternalDroneDSL.g:6358:6: lv_d_139_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_19_6_0());
@@ -13174,16 +13369,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalDroneDSL.g:6327:3: ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6377:3: ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) )
                     {
-                    // InternalDroneDSL.g:6327:3: ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) )
-                    // InternalDroneDSL.g:6328:4: ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6377:3: ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) )
+                    // InternalDroneDSL.g:6378:4: ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) )
                     {
-                    // InternalDroneDSL.g:6328:4: ( (lv_a_140_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6329:5: (lv_a_140_0= ruleRGRD )
+                    // InternalDroneDSL.g:6378:4: ( (lv_a_140_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6379:5: (lv_a_140_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6329:5: (lv_a_140_0= ruleRGRD )
-                    // InternalDroneDSL.g:6330:6: lv_a_140_0= ruleRGRD
+                    // InternalDroneDSL.g:6379:5: (lv_a_140_0= ruleRGRD )
+                    // InternalDroneDSL.g:6380:6: lv_a_140_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_20_0_0());
@@ -13210,15 +13405,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_141=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_141=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_141, grammarAccess.getParallele4Access().getAmpersandKeyword_20_1());
                     			
-                    // InternalDroneDSL.g:6351:4: ( (lv_b_142_0= ruleMD ) )
-                    // InternalDroneDSL.g:6352:5: (lv_b_142_0= ruleMD )
+                    // InternalDroneDSL.g:6401:4: ( (lv_b_142_0= ruleMD ) )
+                    // InternalDroneDSL.g:6402:5: (lv_b_142_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6352:5: (lv_b_142_0= ruleMD )
-                    // InternalDroneDSL.g:6353:6: lv_b_142_0= ruleMD
+                    // InternalDroneDSL.g:6402:5: (lv_b_142_0= ruleMD )
+                    // InternalDroneDSL.g:6403:6: lv_b_142_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_20_2_0());
@@ -13245,15 +13440,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_143=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_143=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_143, grammarAccess.getParallele4Access().getAmpersandKeyword_20_3());
                     			
-                    // InternalDroneDSL.g:6374:4: ( (lv_c_144_0= ruleAR ) )
-                    // InternalDroneDSL.g:6375:5: (lv_c_144_0= ruleAR )
+                    // InternalDroneDSL.g:6424:4: ( (lv_c_144_0= ruleAR ) )
+                    // InternalDroneDSL.g:6425:5: (lv_c_144_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6375:5: (lv_c_144_0= ruleAR )
-                    // InternalDroneDSL.g:6376:6: lv_c_144_0= ruleAR
+                    // InternalDroneDSL.g:6425:5: (lv_c_144_0= ruleAR )
+                    // InternalDroneDSL.g:6426:6: lv_c_144_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_20_4_0());
@@ -13280,15 +13475,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_145=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_145=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_145, grammarAccess.getParallele4Access().getAmpersandKeyword_20_5());
                     			
-                    // InternalDroneDSL.g:6397:4: ( (lv_d_146_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6398:5: (lv_d_146_0= ruleGDr )
+                    // InternalDroneDSL.g:6447:4: ( (lv_d_146_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6448:5: (lv_d_146_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6398:5: (lv_d_146_0= ruleGDr )
-                    // InternalDroneDSL.g:6399:6: lv_d_146_0= ruleGDr
+                    // InternalDroneDSL.g:6448:5: (lv_d_146_0= ruleGDr )
+                    // InternalDroneDSL.g:6449:6: lv_d_146_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDGDrParserRuleCall_20_6_0());
@@ -13322,16 +13517,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalDroneDSL.g:6418:3: ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6468:3: ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:6418:3: ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:6419:4: ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) )
+                    // InternalDroneDSL.g:6468:3: ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6469:4: ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:6419:4: ( (lv_a_147_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6420:5: (lv_a_147_0= ruleRGRD )
+                    // InternalDroneDSL.g:6469:4: ( (lv_a_147_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6470:5: (lv_a_147_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6420:5: (lv_a_147_0= ruleRGRD )
-                    // InternalDroneDSL.g:6421:6: lv_a_147_0= ruleRGRD
+                    // InternalDroneDSL.g:6470:5: (lv_a_147_0= ruleRGRD )
+                    // InternalDroneDSL.g:6471:6: lv_a_147_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_21_0_0());
@@ -13358,15 +13553,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_148=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_148=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_148, grammarAccess.getParallele4Access().getAmpersandKeyword_21_1());
                     			
-                    // InternalDroneDSL.g:6442:4: ( (lv_b_149_0= ruleMD ) )
-                    // InternalDroneDSL.g:6443:5: (lv_b_149_0= ruleMD )
+                    // InternalDroneDSL.g:6492:4: ( (lv_b_149_0= ruleMD ) )
+                    // InternalDroneDSL.g:6493:5: (lv_b_149_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6443:5: (lv_b_149_0= ruleMD )
-                    // InternalDroneDSL.g:6444:6: lv_b_149_0= ruleMD
+                    // InternalDroneDSL.g:6493:5: (lv_b_149_0= ruleMD )
+                    // InternalDroneDSL.g:6494:6: lv_b_149_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBMDParserRuleCall_21_2_0());
@@ -13393,15 +13588,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_150=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_150=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_150, grammarAccess.getParallele4Access().getAmpersandKeyword_21_3());
                     			
-                    // InternalDroneDSL.g:6465:4: ( (lv_c_151_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6466:5: (lv_c_151_0= ruleGDr )
+                    // InternalDroneDSL.g:6515:4: ( (lv_c_151_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6516:5: (lv_c_151_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6466:5: (lv_c_151_0= ruleGDr )
-                    // InternalDroneDSL.g:6467:6: lv_c_151_0= ruleGDr
+                    // InternalDroneDSL.g:6516:5: (lv_c_151_0= ruleGDr )
+                    // InternalDroneDSL.g:6517:6: lv_c_151_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCGDrParserRuleCall_21_4_0());
@@ -13428,15 +13623,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_152=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_152=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_152, grammarAccess.getParallele4Access().getAmpersandKeyword_21_5());
                     			
-                    // InternalDroneDSL.g:6488:4: ( (lv_d_153_0= ruleAR ) )
-                    // InternalDroneDSL.g:6489:5: (lv_d_153_0= ruleAR )
+                    // InternalDroneDSL.g:6538:4: ( (lv_d_153_0= ruleAR ) )
+                    // InternalDroneDSL.g:6539:5: (lv_d_153_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6489:5: (lv_d_153_0= ruleAR )
-                    // InternalDroneDSL.g:6490:6: lv_d_153_0= ruleAR
+                    // InternalDroneDSL.g:6539:5: (lv_d_153_0= ruleAR )
+                    // InternalDroneDSL.g:6540:6: lv_d_153_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_21_6_0());
@@ -13470,16 +13665,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalDroneDSL.g:6509:3: ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6559:3: ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) )
                     {
-                    // InternalDroneDSL.g:6509:3: ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) )
-                    // InternalDroneDSL.g:6510:4: ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) )
+                    // InternalDroneDSL.g:6559:3: ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) )
+                    // InternalDroneDSL.g:6560:4: ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) )
                     {
-                    // InternalDroneDSL.g:6510:4: ( (lv_a_154_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6511:5: (lv_a_154_0= ruleRGRD )
+                    // InternalDroneDSL.g:6560:4: ( (lv_a_154_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6561:5: (lv_a_154_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6511:5: (lv_a_154_0= ruleRGRD )
-                    // InternalDroneDSL.g:6512:6: lv_a_154_0= ruleRGRD
+                    // InternalDroneDSL.g:6561:5: (lv_a_154_0= ruleRGRD )
+                    // InternalDroneDSL.g:6562:6: lv_a_154_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_22_0_0());
@@ -13506,15 +13701,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_155=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_155=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_155, grammarAccess.getParallele4Access().getAmpersandKeyword_22_1());
                     			
-                    // InternalDroneDSL.g:6533:4: ( (lv_b_156_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6534:5: (lv_b_156_0= ruleGDr )
+                    // InternalDroneDSL.g:6583:4: ( (lv_b_156_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6584:5: (lv_b_156_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6534:5: (lv_b_156_0= ruleGDr )
-                    // InternalDroneDSL.g:6535:6: lv_b_156_0= ruleGDr
+                    // InternalDroneDSL.g:6584:5: (lv_b_156_0= ruleGDr )
+                    // InternalDroneDSL.g:6585:6: lv_b_156_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_22_2_0());
@@ -13541,15 +13736,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_157=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_157=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_157, grammarAccess.getParallele4Access().getAmpersandKeyword_22_3());
                     			
-                    // InternalDroneDSL.g:6556:4: ( (lv_c_158_0= ruleMD ) )
-                    // InternalDroneDSL.g:6557:5: (lv_c_158_0= ruleMD )
+                    // InternalDroneDSL.g:6606:4: ( (lv_c_158_0= ruleMD ) )
+                    // InternalDroneDSL.g:6607:5: (lv_c_158_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6557:5: (lv_c_158_0= ruleMD )
-                    // InternalDroneDSL.g:6558:6: lv_c_158_0= ruleMD
+                    // InternalDroneDSL.g:6607:5: (lv_c_158_0= ruleMD )
+                    // InternalDroneDSL.g:6608:6: lv_c_158_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCMDParserRuleCall_22_4_0());
@@ -13576,15 +13771,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_159=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_159=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_159, grammarAccess.getParallele4Access().getAmpersandKeyword_22_5());
                     			
-                    // InternalDroneDSL.g:6579:4: ( (lv_d_160_0= ruleAR ) )
-                    // InternalDroneDSL.g:6580:5: (lv_d_160_0= ruleAR )
+                    // InternalDroneDSL.g:6629:4: ( (lv_d_160_0= ruleAR ) )
+                    // InternalDroneDSL.g:6630:5: (lv_d_160_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6580:5: (lv_d_160_0= ruleAR )
-                    // InternalDroneDSL.g:6581:6: lv_d_160_0= ruleAR
+                    // InternalDroneDSL.g:6630:5: (lv_d_160_0= ruleAR )
+                    // InternalDroneDSL.g:6631:6: lv_d_160_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDARParserRuleCall_22_6_0());
@@ -13618,16 +13813,16 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // InternalDroneDSL.g:6600:3: ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:6650:3: ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) )
                     {
-                    // InternalDroneDSL.g:6600:3: ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) )
-                    // InternalDroneDSL.g:6601:4: ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) )
+                    // InternalDroneDSL.g:6650:3: ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) )
+                    // InternalDroneDSL.g:6651:4: ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) )
                     {
-                    // InternalDroneDSL.g:6601:4: ( (lv_a_161_0= ruleRGRD ) )
-                    // InternalDroneDSL.g:6602:5: (lv_a_161_0= ruleRGRD )
+                    // InternalDroneDSL.g:6651:4: ( (lv_a_161_0= ruleRGRD ) )
+                    // InternalDroneDSL.g:6652:5: (lv_a_161_0= ruleRGRD )
                     {
-                    // InternalDroneDSL.g:6602:5: (lv_a_161_0= ruleRGRD )
-                    // InternalDroneDSL.g:6603:6: lv_a_161_0= ruleRGRD
+                    // InternalDroneDSL.g:6652:5: (lv_a_161_0= ruleRGRD )
+                    // InternalDroneDSL.g:6653:6: lv_a_161_0= ruleRGRD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getARGRDParserRuleCall_23_0_0());
@@ -13654,15 +13849,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_162=(Token)match(input,43,FOLLOW_30); 
+                    otherlv_162=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_162, grammarAccess.getParallele4Access().getAmpersandKeyword_23_1());
                     			
-                    // InternalDroneDSL.g:6624:4: ( (lv_b_163_0= ruleGDr ) )
-                    // InternalDroneDSL.g:6625:5: (lv_b_163_0= ruleGDr )
+                    // InternalDroneDSL.g:6674:4: ( (lv_b_163_0= ruleGDr ) )
+                    // InternalDroneDSL.g:6675:5: (lv_b_163_0= ruleGDr )
                     {
-                    // InternalDroneDSL.g:6625:5: (lv_b_163_0= ruleGDr )
-                    // InternalDroneDSL.g:6626:6: lv_b_163_0= ruleGDr
+                    // InternalDroneDSL.g:6675:5: (lv_b_163_0= ruleGDr )
+                    // InternalDroneDSL.g:6676:6: lv_b_163_0= ruleGDr
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getBGDrParserRuleCall_23_2_0());
@@ -13689,15 +13884,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_164=(Token)match(input,43,FOLLOW_31); 
+                    otherlv_164=(Token)match(input,44,FOLLOW_31); 
 
                     				newLeafNode(otherlv_164, grammarAccess.getParallele4Access().getAmpersandKeyword_23_3());
                     			
-                    // InternalDroneDSL.g:6647:4: ( (lv_c_165_0= ruleAR ) )
-                    // InternalDroneDSL.g:6648:5: (lv_c_165_0= ruleAR )
+                    // InternalDroneDSL.g:6697:4: ( (lv_c_165_0= ruleAR ) )
+                    // InternalDroneDSL.g:6698:5: (lv_c_165_0= ruleAR )
                     {
-                    // InternalDroneDSL.g:6648:5: (lv_c_165_0= ruleAR )
-                    // InternalDroneDSL.g:6649:6: lv_c_165_0= ruleAR
+                    // InternalDroneDSL.g:6698:5: (lv_c_165_0= ruleAR )
+                    // InternalDroneDSL.g:6699:6: lv_c_165_0= ruleAR
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getCARParserRuleCall_23_4_0());
@@ -13724,15 +13919,15 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_166=(Token)match(input,43,FOLLOW_33); 
+                    otherlv_166=(Token)match(input,44,FOLLOW_33); 
 
                     				newLeafNode(otherlv_166, grammarAccess.getParallele4Access().getAmpersandKeyword_23_5());
                     			
-                    // InternalDroneDSL.g:6670:4: ( (lv_d_167_0= ruleMD ) )
-                    // InternalDroneDSL.g:6671:5: (lv_d_167_0= ruleMD )
+                    // InternalDroneDSL.g:6720:4: ( (lv_d_167_0= ruleMD ) )
+                    // InternalDroneDSL.g:6721:5: (lv_d_167_0= ruleMD )
                     {
-                    // InternalDroneDSL.g:6671:5: (lv_d_167_0= ruleMD )
-                    // InternalDroneDSL.g:6672:6: lv_d_167_0= ruleMD
+                    // InternalDroneDSL.g:6721:5: (lv_d_167_0= ruleMD )
+                    // InternalDroneDSL.g:6722:6: lv_d_167_0= ruleMD
                     {
 
                     						newCompositeNode(grammarAccess.getParallele4Access().getDMDParserRuleCall_23_6_0());
@@ -13789,33 +13984,79 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
-    protected DFA7 dfa7 = new DFA7(this);
-    protected DFA8 dfa8 = new DFA8(this);
-    protected DFA10 dfa10 = new DFA10(this);
-    protected DFA16 dfa16 = new DFA16(this);
+    protected DFA9 dfa9 = new DFA9(this);
+    protected DFA11 dfa11 = new DFA11(this);
     protected DFA17 dfa17 = new DFA17(this);
     protected DFA18 dfa18 = new DFA18(this);
     protected DFA19 dfa19 = new DFA19(this);
-    static final String dfa_1s = "\17\uffff";
-    static final String dfa_2s = "\1\32\7\uffff\1\5\2\uffff\2\35\2\uffff";
-    static final String dfa_3s = "\1\45\7\uffff\1\7\2\uffff\2\36\2\uffff";
-    static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\uffff\1\11\1\12\2\uffff\1\10\1\13";
-    static final String dfa_5s = "\17\uffff}>";
+    protected DFA20 dfa20 = new DFA20(this);
+    static final String dfa_1s = "\76\uffff";
+    static final String dfa_2s = "\1\7\1\uffff\10\5\3\uffff\20\35\10\6\20\36\10\7\1\uffff";
+    static final String dfa_3s = "\1\46\1\uffff\10\7\3\uffff\20\35\10\7\20\36\10\54\1\uffff";
+    static final String dfa_4s = "\1\uffff\1\1\10\uffff\1\2\1\4\1\5\60\uffff\1\3";
+    static final String dfa_5s = "\76\uffff}>";
     static final String[] dfa_6s = {
-            "\1\1\1\2\1\5\2\uffff\1\6\1\3\1\4\1\7\1\10\1\11\1\12",
+            "\1\13\17\uffff\1\1\1\uffff\1\1\2\14\1\4\2\uffff\1\5\1\2\1\3\1\6\1\7\1\10\1\11\1\12",
+            "",
+            "\1\15\1\uffff\1\16",
+            "\1\17\1\uffff\1\20",
+            "\1\21\1\uffff\1\22",
+            "\1\23\1\uffff\1\24",
+            "\1\25\1\uffff\1\26",
+            "\1\27\1\uffff\1\30",
+            "\1\31\1\uffff\1\32",
+            "\1\33\1\uffff\1\34",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\1\13\1\uffff\1\14",
-            "",
-            "",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "",
+            "\1\35",
+            "\1\35",
+            "\1\36",
+            "\1\36",
+            "\1\37",
+            "\1\37",
+            "\1\40",
+            "\1\40",
+            "\1\41",
+            "\1\41",
+            "\1\42",
+            "\1\42",
+            "\1\43",
+            "\1\43",
+            "\1\44",
+            "\1\44",
+            "\1\45\1\46",
+            "\1\47\1\50",
+            "\1\51\1\52",
+            "\1\53\1\54",
+            "\1\55\1\56",
+            "\1\57\1\60",
+            "\1\61\1\62",
+            "\1\63\1\64",
+            "\1\65",
+            "\1\65",
+            "\1\66",
+            "\1\66",
+            "\1\67",
+            "\1\67",
+            "\1\70",
+            "\1\70",
+            "\1\71",
+            "\1\71",
+            "\1\72",
+            "\1\72",
+            "\1\73",
+            "\1\73",
+            "\1\74",
+            "\1\74",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\3\uffff\1\12\1\uffff\1\75",
             ""
     };
 
@@ -13826,11 +14067,11 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
     static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
-    class DFA7 extends DFA {
+    class DFA9 extends DFA {
 
-        public DFA7(BaseRecognizer recognizer) {
+        public DFA9(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 7;
+            this.decisionNumber = 9;
             this.eot = dfa_1;
             this.eof = dfa_1;
             this.min = dfa_2;
@@ -13840,29 +14081,23 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             this.transition = dfa_6;
         }
         public String getDescription() {
-            return "1650:2: (this_Decoller_0= ruleDecoller | this_Atterrir_1= ruleAtterrir | this_Avancer_2= ruleAvancer | this_Reculer_3= ruleReculer | this_Monter_4= ruleMonter | this_Descendre_5= ruleDescendre | this_Gauche_6= ruleGauche | this_Droite_7= ruleDroite | this_RotationGauche_8= ruleRotationGauche | this_RotationDroite_9= ruleRotationDroite | this_Pause_10= rulePause )";
+            return "1818:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall | lv_body_4_5= ruleDecollerAtterrir )";
         }
     }
-    static final String dfa_7s = "\75\uffff";
-    static final String dfa_8s = "\1\7\2\uffff\10\5\1\uffff\20\35\10\6\20\36\10\7\1\uffff";
-    static final String dfa_9s = "\1\45\2\uffff\10\7\1\uffff\12\35\2\36\4\35\10\7\20\36\10\53\1\uffff";
-    static final String dfa_10s = "\1\uffff\1\1\1\2\10\uffff\1\4\60\uffff\1\3";
-    static final String dfa_11s = "\75\uffff}>";
-    static final String[] dfa_12s = {
-            "\1\13\17\uffff\1\1\1\uffff\1\1\2\2\1\5\2\uffff\1\6\1\3\1\4\1\7\1\10\1\11\1\12",
+    static final String[] dfa_7s = {
+            "\1\13\17\uffff\1\1\1\uffff\1\1\2\14\1\4\2\uffff\1\5\1\2\1\3\1\6\1\7\1\10\1\11\1\12",
+            "",
+            "\1\15\1\uffff\1\16",
+            "\1\17\1\uffff\1\20",
+            "\1\21\1\uffff\1\22",
+            "\1\23\1\uffff\1\24",
+            "\1\25\1\uffff\1\26",
+            "\1\27\1\uffff\1\30",
+            "\1\31\1\uffff\1\32",
+            "\1\33\1\uffff\1\34",
             "",
             "",
-            "\1\14\1\uffff\1\15",
-            "\1\16\1\uffff\1\17",
-            "\1\20\1\uffff\1\21",
-            "\1\22\1\uffff\1\23",
-            "\1\24\1\uffff\1\25",
-            "\1\26\1\uffff\1\27",
-            "\1\30\1\uffff\1\31",
-            "\1\32\1\uffff\1\33",
             "",
-            "\1\34",
-            "\1\34",
             "\1\35",
             "\1\35",
             "\1\36",
@@ -13871,22 +14106,22 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\37",
             "\1\40",
             "\1\40",
-            "\1\41\1\2",
-            "\1\41\1\2",
+            "\1\41",
+            "\1\41",
             "\1\42",
             "\1\42",
             "\1\43",
             "\1\43",
-            "\1\44\1\45",
-            "\1\46\1\47",
-            "\1\50\1\51",
-            "\1\52\1\53",
-            "\1\54\1\55",
-            "\1\56\1\57",
-            "\1\60\1\61",
-            "\1\62\1\63",
-            "\1\64",
-            "\1\64",
+            "\1\44",
+            "\1\44",
+            "\1\45\1\46",
+            "\1\47\1\50",
+            "\1\51\1\52",
+            "\1\53\1\54",
+            "\1\55\1\56",
+            "\1\57\1\60",
+            "\1\61\1\62",
+            "\1\63\1\64",
             "\1\65",
             "\1\65",
             "\1\66",
@@ -13901,130 +14136,44 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\72",
             "\1\73",
             "\1\73",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\3\uffff\1\2\1\uffff\1\74",
+            "\1\74",
+            "\1\74",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
+            "\1\12\17\uffff\1\12\1\uffff\4\12\2\uffff\10\12\5\uffff\1\75",
             ""
     };
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
-    static final short[] dfa_7 = DFA.unpackEncodedString(dfa_7s);
-    static final char[] dfa_8 = DFA.unpackEncodedStringToUnsignedChars(dfa_8s);
-    static final char[] dfa_9 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
-    static final short[] dfa_10 = DFA.unpackEncodedString(dfa_10s);
-    static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
-    static final short[][] dfa_12 = unpackEncodedStringArray(dfa_12s);
+    class DFA11 extends DFA {
 
-    class DFA8 extends DFA {
-
-        public DFA8(BaseRecognizer recognizer) {
+        public DFA11(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 8;
-            this.eot = dfa_7;
-            this.eof = dfa_7;
-            this.min = dfa_8;
-            this.max = dfa_9;
-            this.accept = dfa_10;
-            this.special = dfa_11;
-            this.transition = dfa_12;
+            this.decisionNumber = 11;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_7;
         }
         public String getDescription() {
-            return "1800:5: (lv_body_4_1= ruleVarDecl | lv_body_4_2= ruleCommandeBasique | lv_body_4_3= ruleParallele | lv_body_4_4= ruleFonctionCall )";
+            return "2020:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall | lv_mainbody_3_5= ruleDecollerAtterrir )";
         }
     }
-    static final String[] dfa_13s = {
-            "\1\13\17\uffff\1\1\1\uffff\1\1\2\2\1\5\2\uffff\1\6\1\3\1\4\1\7\1\10\1\11\1\12",
-            "",
-            "",
-            "\1\14\1\uffff\1\15",
-            "\1\16\1\uffff\1\17",
-            "\1\20\1\uffff\1\21",
-            "\1\22\1\uffff\1\23",
-            "\1\24\1\uffff\1\25",
-            "\1\26\1\uffff\1\27",
-            "\1\30\1\uffff\1\31",
-            "\1\32\1\uffff\1\33",
-            "",
-            "\1\34",
-            "\1\34",
-            "\1\35",
-            "\1\35",
-            "\1\36",
-            "\1\36",
-            "\1\37",
-            "\1\37",
-            "\1\40",
-            "\1\40",
-            "\1\41\1\2",
-            "\1\41\1\2",
-            "\1\42",
-            "\1\42",
-            "\1\43",
-            "\1\43",
-            "\1\44\1\45",
-            "\1\46\1\47",
-            "\1\50\1\51",
-            "\1\52\1\53",
-            "\1\54\1\55",
-            "\1\56\1\57",
-            "\1\60\1\61",
-            "\1\62\1\63",
-            "\1\64",
-            "\1\64",
-            "\1\65",
-            "\1\65",
-            "\1\66",
-            "\1\66",
-            "\1\67",
-            "\1\67",
-            "\1\70",
-            "\1\70",
-            "\1\71",
-            "\1\71",
-            "\1\72",
-            "\1\72",
-            "\1\73",
-            "\1\73",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            "\1\2\17\uffff\1\2\1\uffff\4\2\2\uffff\7\2\5\uffff\1\74",
-            ""
-    };
-    static final short[][] dfa_13 = unpackEncodedStringArray(dfa_13s);
-
-    class DFA10 extends DFA {
-
-        public DFA10(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 10;
-            this.eot = dfa_7;
-            this.eof = dfa_7;
-            this.min = dfa_8;
-            this.max = dfa_9;
-            this.accept = dfa_10;
-            this.special = dfa_11;
-            this.transition = dfa_13;
-        }
-        public String getDescription() {
-            return "1986:5: (lv_mainbody_3_1= ruleVarDecl | lv_mainbody_3_2= ruleCommandeBasique | lv_mainbody_3_3= ruleParallele | lv_mainbody_3_4= ruleFonctionCall )";
-        }
-    }
-    static final String dfa_14s = "\u0244\uffff";
-    static final String dfa_15s = "\u00cd\uffff\30\u00e6\u012d\uffff\60\u0243\2\uffff";
-    static final String dfa_16s = "\1\34\10\5\20\35\10\6\20\36\10\53\1\40\3\34\30\5\60\35\30\6\60\36\30\7\1\40\1\uffff\1\40\1\42\2\34\1\40\1\34\1\40\1\34\1\42\2\34\60\5\140\35\60\6\140\36\60\7\2\uffff";
-    static final String dfa_17s = "\1\45\10\7\20\35\10\7\20\36\10\53\2\45\1\43\1\45\30\7\60\35\30\7\60\36\30\53\1\43\1\uffff\2\45\1\41\2\45\2\43\1\41\1\45\1\43\1\45\60\7\140\35\60\7\140\36\60\53\2\uffff";
-    static final String dfa_18s = "\u00e6\uffff\1\1\u015b\uffff\1\3\1\2";
-    static final String dfa_19s = "\u0244\uffff}>";
-    static final String[] dfa_20s = {
+    static final String dfa_8s = "\u0244\uffff";
+    static final String dfa_9s = "\u00cd\uffff\30\u00e6\u012d\uffff\60\u0243\2\uffff";
+    static final String dfa_10s = "\1\34\10\5\20\35\10\6\20\36\10\54\1\40\3\34\30\5\60\35\30\6\60\36\30\7\1\42\1\uffff\2\40\1\34\1\40\2\34\1\40\2\34\1\42\1\34\60\5\140\35\60\6\140\36\60\7\2\uffff";
+    static final String dfa_11s = "\1\45\10\7\20\35\10\7\20\36\10\54\2\45\1\43\1\45\30\7\60\35\30\7\60\36\30\54\1\45\1\uffff\1\45\1\43\2\45\1\41\2\43\1\41\1\43\2\45\60\7\140\35\60\7\140\36\60\54\2\uffff";
+    static final String dfa_12s = "\u00e6\uffff\1\1\u015b\uffff\1\3\1\2";
+    static final String dfa_13s = "\u0244\uffff}>";
+    static final String[] dfa_14s = {
             "\1\1\2\uffff\1\2\1\7\1\10\1\3\1\4\1\5\1\6",
             "\1\11\1\uffff\1\12",
             "\1\13\1\uffff\1\14",
@@ -14082,10 +14231,10 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\73",
             "\1\74",
             "\1\74",
-            "\1\101\1\102\1\77\1\100\1\75\1\76",
-            "\1\107\2\uffff\1\110\1\105\1\106\2\uffff\1\103\1\104",
+            "\1\75\1\76\1\77\1\100\1\101\1\102",
+            "\1\105\2\uffff\1\106\1\103\1\104\2\uffff\1\107\1\110",
             "\1\113\2\uffff\1\114\1\111\1\112\1\115\1\116",
-            "\1\117\2\uffff\1\120\2\uffff\1\123\1\124\1\121\1\122",
+            "\1\121\2\uffff\1\122\2\uffff\1\123\1\124\1\117\1\120",
             "\1\125\1\uffff\1\126",
             "\1\127\1\uffff\1\130",
             "\1\131\1\uffff\1\132",
@@ -14230,43 +14379,43 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\u00e3",
             "\1\u00e4",
             "\1\u00e4",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e5",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e5",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e7",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e7",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e8",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e8",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e9",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e9",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ea",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ea",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00eb",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00eb",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ec",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ec",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ed",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ed",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ee",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ee",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ef",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ef",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f0",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f0",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f1",
-            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\7\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f1",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e5",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e5",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e7",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e7",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e8",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e8",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e9",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00e9",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ea",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ea",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00eb",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00eb",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ec",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ec",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ed",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ed",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ee",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ee",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ef",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00ef",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f0",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f0",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f1",
+            "\1\u00e6\17\uffff\1\u00e6\1\uffff\4\u00e6\2\uffff\10\u00e6\3\uffff\1\u00e6\1\uffff\1\u00f1",
             "\1\u00f4\1\u00f5\1\u00f2\1\u00f3",
             "",
             "\1\u00f6\1\u00f7\2\uffff\1\u00f8\1\u00f9",
             "\1\u00fa\1\u00fb\1\u00fc\1\u00fd",
-            "\1\u0100\2\uffff\1\u0101\1\u00fe\1\u00ff",
-            "\1\u0102\2\uffff\1\u0103\4\uffff\1\u0104\1\u0105",
-            "\1\u0106\1\u0107\2\uffff\1\u0108\1\u0109",
+            "\1\u00fe\2\uffff\1\u00ff\4\uffff\1\u0100\1\u0101",
+            "\1\u0102\1\u0103\2\uffff\1\u0104\1\u0105",
+            "\1\u0108\2\uffff\1\u0109\1\u0106\1\u0107",
             "\1\u010a\2\uffff\1\u010b\2\uffff\1\u010c\1\u010d",
-            "\1\u010e\1\u010f\1\u0110\1\u0111",
+            "\1\u0110\1\u0111\1\u010e\1\u010f",
             "\1\u0112\2\uffff\1\u0113\1\u0114\1\u0115",
-            "\1\u0116\1\u0117\1\u0118\1\u0119",
-            "\1\u011a\2\uffff\1\u011b\2\uffff\1\u011c\1\u011d",
-            "\1\u011e\2\uffff\1\u011f\4\uffff\1\u0120\1\u0121",
+            "\1\u0118\2\uffff\1\u0119\2\uffff\1\u0116\1\u0117",
+            "\1\u011a\1\u011b\1\u011c\1\u011d",
+            "\1\u0120\2\uffff\1\u0121\4\uffff\1\u011e\1\u011f",
             "\1\u0122\1\uffff\1\u0123",
             "\1\u0124\1\uffff\1\u0125",
             "\1\u0126\1\uffff\1\u0127",
@@ -14555,89 +14704,89 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\u0240",
             "\1\u0241",
             "\1\u0241",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
-            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\7\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
+            "\1\u0243\17\uffff\1\u0243\1\uffff\4\u0243\2\uffff\10\u0243\3\uffff\1\u0243\1\uffff\1\u0242",
             "",
             ""
     };
 
-    static final short[] dfa_14 = DFA.unpackEncodedString(dfa_14s);
-    static final short[] dfa_15 = DFA.unpackEncodedString(dfa_15s);
-    static final char[] dfa_16 = DFA.unpackEncodedStringToUnsignedChars(dfa_16s);
-    static final char[] dfa_17 = DFA.unpackEncodedStringToUnsignedChars(dfa_17s);
-    static final short[] dfa_18 = DFA.unpackEncodedString(dfa_18s);
-    static final short[] dfa_19 = DFA.unpackEncodedString(dfa_19s);
-    static final short[][] dfa_20 = unpackEncodedStringArray(dfa_20s);
+    static final short[] dfa_8 = DFA.unpackEncodedString(dfa_8s);
+    static final short[] dfa_9 = DFA.unpackEncodedString(dfa_9s);
+    static final char[] dfa_10 = DFA.unpackEncodedStringToUnsignedChars(dfa_10s);
+    static final char[] dfa_11 = DFA.unpackEncodedStringToUnsignedChars(dfa_11s);
+    static final short[] dfa_12 = DFA.unpackEncodedString(dfa_12s);
+    static final short[] dfa_13 = DFA.unpackEncodedString(dfa_13s);
+    static final short[][] dfa_14 = unpackEncodedStringArray(dfa_14s);
 
-    class DFA16 extends DFA {
+    class DFA17 extends DFA {
 
-        public DFA16(BaseRecognizer recognizer) {
+        public DFA17(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 16;
-            this.eot = dfa_14;
-            this.eof = dfa_15;
-            this.min = dfa_16;
-            this.max = dfa_17;
-            this.accept = dfa_18;
-            this.special = dfa_19;
-            this.transition = dfa_20;
+            this.decisionNumber = 17;
+            this.eot = dfa_8;
+            this.eof = dfa_9;
+            this.min = dfa_10;
+            this.max = dfa_11;
+            this.accept = dfa_12;
+            this.special = dfa_13;
+            this.transition = dfa_14;
         }
         public String getDescription() {
-            return "2253:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )";
+            return "2303:2: (this_Parallele2_0= ruleParallele2 | this_Parallele3_1= ruleParallele3 | this_Parallele4_2= ruleParallele4 )";
         }
     }
-    static final String dfa_21s = "\111\uffff";
-    static final String dfa_22s = "\1\34\10\5\20\35\10\6\20\36\10\53\1\40\3\34\14\uffff";
-    static final String dfa_23s = "\1\45\10\7\20\35\10\7\20\36\10\53\2\45\1\43\1\45\14\uffff";
-    static final String dfa_24s = "\75\uffff\1\1\1\3\1\2\1\5\1\4\1\6\1\7\1\11\1\10\1\13\1\12\1\14";
-    static final String dfa_25s = "\111\uffff}>";
-    static final String[] dfa_26s = {
+    static final String dfa_15s = "\111\uffff";
+    static final String dfa_16s = "\1\34\10\5\20\35\10\6\20\36\10\54\1\40\3\34\14\uffff";
+    static final String dfa_17s = "\1\45\10\7\20\35\10\7\20\36\10\54\2\45\1\43\1\45\14\uffff";
+    static final String dfa_18s = "\75\uffff\1\1\1\3\1\2\1\5\1\4\1\6\1\7\1\11\1\10\1\13\1\12\1\14";
+    static final String dfa_19s = "\111\uffff}>";
+    static final String[] dfa_20s = {
             "\1\1\2\uffff\1\2\1\7\1\10\1\3\1\4\1\5\1\6",
             "\1\11\1\uffff\1\12",
             "\1\13\1\uffff\1\14",
@@ -14713,36 +14862,36 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] dfa_21 = DFA.unpackEncodedString(dfa_21s);
-    static final char[] dfa_22 = DFA.unpackEncodedStringToUnsignedChars(dfa_22s);
-    static final char[] dfa_23 = DFA.unpackEncodedStringToUnsignedChars(dfa_23s);
-    static final short[] dfa_24 = DFA.unpackEncodedString(dfa_24s);
-    static final short[] dfa_25 = DFA.unpackEncodedString(dfa_25s);
-    static final short[][] dfa_26 = unpackEncodedStringArray(dfa_26s);
+    static final short[] dfa_15 = DFA.unpackEncodedString(dfa_15s);
+    static final char[] dfa_16 = DFA.unpackEncodedStringToUnsignedChars(dfa_16s);
+    static final char[] dfa_17 = DFA.unpackEncodedStringToUnsignedChars(dfa_17s);
+    static final short[] dfa_18 = DFA.unpackEncodedString(dfa_18s);
+    static final short[] dfa_19 = DFA.unpackEncodedString(dfa_19s);
+    static final short[][] dfa_20 = unpackEncodedStringArray(dfa_20s);
 
-    class DFA17 extends DFA {
+    class DFA18 extends DFA {
 
-        public DFA17(BaseRecognizer recognizer) {
+        public DFA18(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 17;
-            this.eot = dfa_21;
-            this.eof = dfa_21;
-            this.min = dfa_22;
-            this.max = dfa_23;
-            this.accept = dfa_24;
-            this.special = dfa_25;
-            this.transition = dfa_26;
+            this.decisionNumber = 18;
+            this.eot = dfa_15;
+            this.eof = dfa_15;
+            this.min = dfa_16;
+            this.max = dfa_17;
+            this.accept = dfa_18;
+            this.special = dfa_19;
+            this.transition = dfa_20;
         }
         public String getDescription() {
-            return "2298:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )";
+            return "2348:2: ( ( ( (lv_a_0_0= ruleMD ) ) otherlv_1= '&' ( (lv_t_2_0= ruleGDr ) ) ) | ( ( (lv_a_3_0= ruleMD ) ) otherlv_4= '&' ( (lv_t_5_0= ruleAR ) ) ) | ( ( (lv_a_6_0= ruleMD ) ) otherlv_7= '&' ( (lv_t_8_0= ruleRGRD ) ) ) | ( ( (lv_t_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_b_11_0= ruleAR ) ) ) | ( ( (lv_t_12_0= ruleGDr ) ) otherlv_13= '&' ( (lv_b_14_0= ruleMD ) ) ) | ( ( (lv_t_15_0= ruleGDr ) ) otherlv_16= '&' ( (lv_b_17_0= ruleRGRD ) ) ) | ( ( (lv_t_18_0= ruleRGRD ) ) otherlv_19= '&' ( (lv_a_20_0= ruleMD ) ) ) | ( ( (lv_t_21_0= ruleRGRD ) ) otherlv_22= '&' ( (lv_a_23_0= ruleAR ) ) ) | ( ( (lv_t_24_0= ruleRGRD ) ) otherlv_25= '&' ( (lv_a_26_0= ruleGDr ) ) ) | ( ( (lv_t_27_0= ruleAR ) ) otherlv_28= '&' ( (lv_a_29_0= ruleMD ) ) ) | ( ( (lv_t_30_0= ruleAR ) ) otherlv_31= '&' ( (lv_a_32_0= ruleRGRD ) ) ) | ( ( (lv_t_33_0= ruleAR ) ) otherlv_34= '&' ( (lv_a_35_0= ruleGDr ) ) ) )";
         }
     }
-    static final String dfa_27s = "\u0109\uffff";
-    static final String dfa_28s = "\1\34\10\5\20\35\10\6\20\36\10\53\2\34\1\40\1\34\30\5\60\35\30\6\60\36\30\53\1\42\4\34\2\40\1\42\1\40\2\34\1\40\30\uffff";
-    static final String dfa_29s = "\1\45\10\7\20\35\10\7\20\36\10\53\3\45\1\43\30\7\60\35\30\7\60\36\30\53\2\45\1\43\1\45\1\41\1\45\1\43\2\45\1\41\2\43\30\uffff";
-    static final String dfa_30s = "\u00f1\uffff\1\3\1\4\1\2\1\1\1\5\1\6\1\10\1\7\1\13\1\14\1\11\1\12\1\22\1\21\1\16\1\15\1\17\1\20\1\30\1\27\1\23\1\24\1\25\1\26";
-    static final String dfa_31s = "\u0109\uffff}>";
-    static final String[] dfa_32s = {
+    static final String dfa_21s = "\u0109\uffff";
+    static final String dfa_22s = "\1\34\10\5\20\35\10\6\20\36\10\54\2\34\1\40\1\34\30\5\60\35\30\6\60\36\30\54\1\42\4\34\2\40\1\42\1\40\2\34\1\40\30\uffff";
+    static final String dfa_23s = "\1\45\10\7\20\35\10\7\20\36\10\54\3\45\1\43\30\7\60\35\30\7\60\36\30\54\2\45\1\43\1\41\2\45\1\43\2\45\1\43\1\41\1\43\30\uffff";
+    static final String dfa_24s = "\u00f1\uffff\1\3\1\4\1\2\1\1\1\5\1\6\1\13\1\14\1\10\1\7\1\11\1\12\1\22\1\21\1\15\1\16\1\17\1\20\1\23\1\24\1\30\1\27\1\25\1\26";
+    static final String dfa_25s = "\u0109\uffff}>";
+    static final String[] dfa_26s = {
             "\1\5\2\uffff\1\6\1\1\1\2\1\3\1\4\1\7\1\10",
             "\1\11\1\uffff\1\12",
             "\1\13\1\uffff\1\14",
@@ -14801,9 +14950,9 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\74",
             "\1\74",
             "\1\75\2\uffff\1\76\2\uffff\1\77\1\100\1\101\1\102",
-            "\1\107\2\uffff\1\110\1\103\1\104\2\uffff\1\105\1\106",
+            "\1\107\2\uffff\1\110\1\105\1\106\2\uffff\1\103\1\104",
             "\1\113\1\114\1\115\1\116\1\111\1\112",
-            "\1\123\2\uffff\1\124\1\121\1\122\1\117\1\120",
+            "\1\123\2\uffff\1\124\1\117\1\120\1\121\1\122",
             "\1\125\1\uffff\1\126",
             "\1\127\1\uffff\1\130",
             "\1\131\1\uffff\1\132",
@@ -14975,14 +15124,14 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\2\u00f1\2\u00f2",
             "\1\u00f4\2\uffff\1\u00f4\4\uffff\2\u00f3",
             "\1\u00f5\2\uffff\1\u00f5\2\uffff\2\u00f6",
-            "\1\u00f8\2\uffff\1\u00f8\4\uffff\2\u00f7",
-            "\1\u00fa\2\uffff\1\u00fa\2\u00f9",
+            "\1\u00f8\2\uffff\1\u00f8\2\u00f7",
+            "\1\u00fa\2\uffff\1\u00fa\4\uffff\2\u00f9",
             "\2\u00fb\2\uffff\2\u00fc",
             "\2\u00fd\2\u00fe",
-            "\2\u0100\2\u00ff",
+            "\2\u00ff\2\u0100",
             "\2\u0101\2\uffff\2\u0102",
-            "\1\u0104\2\uffff\1\u0104\2\u0103",
-            "\1\u0105\2\uffff\1\u0105\2\uffff\2\u0106",
+            "\1\u0103\2\uffff\1\u0103\2\uffff\2\u0104",
+            "\1\u0106\2\uffff\1\u0106\2\u0105",
             "\2\u0107\2\u0108",
             "",
             "",
@@ -15010,34 +15159,34 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] dfa_27 = DFA.unpackEncodedString(dfa_27s);
-    static final char[] dfa_28 = DFA.unpackEncodedStringToUnsignedChars(dfa_28s);
-    static final char[] dfa_29 = DFA.unpackEncodedStringToUnsignedChars(dfa_29s);
-    static final short[] dfa_30 = DFA.unpackEncodedString(dfa_30s);
-    static final short[] dfa_31 = DFA.unpackEncodedString(dfa_31s);
-    static final short[][] dfa_32 = unpackEncodedStringArray(dfa_32s);
+    static final short[] dfa_21 = DFA.unpackEncodedString(dfa_21s);
+    static final char[] dfa_22 = DFA.unpackEncodedStringToUnsignedChars(dfa_22s);
+    static final char[] dfa_23 = DFA.unpackEncodedStringToUnsignedChars(dfa_23s);
+    static final short[] dfa_24 = DFA.unpackEncodedString(dfa_24s);
+    static final short[] dfa_25 = DFA.unpackEncodedString(dfa_25s);
+    static final short[][] dfa_26 = unpackEncodedStringArray(dfa_26s);
 
-    class DFA18 extends DFA {
+    class DFA19 extends DFA {
 
-        public DFA18(BaseRecognizer recognizer) {
+        public DFA19(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 18;
-            this.eot = dfa_27;
-            this.eof = dfa_27;
-            this.min = dfa_28;
-            this.max = dfa_29;
-            this.accept = dfa_30;
-            this.special = dfa_31;
-            this.transition = dfa_32;
+            this.decisionNumber = 19;
+            this.eot = dfa_21;
+            this.eof = dfa_21;
+            this.min = dfa_22;
+            this.max = dfa_23;
+            this.accept = dfa_24;
+            this.special = dfa_25;
+            this.transition = dfa_26;
         }
         public String getDescription() {
-            return "2856:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )";
+            return "2906:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) ) | ( ( (lv_a_5_0= ruleAR ) ) otherlv_6= '&' ( (lv_b_7_0= ruleGDr ) ) otherlv_8= '&' ( (lv_c_9_0= ruleRGRD ) ) ) | ( ( (lv_a_10_0= ruleAR ) ) otherlv_11= '&' ( (lv_b_12_0= ruleMD ) ) otherlv_13= '&' ( (lv_c_14_0= ruleGDr ) ) ) | ( ( (lv_a_15_0= ruleAR ) ) otherlv_16= '&' ( (lv_b_17_0= ruleMD ) ) otherlv_18= '&' ( (lv_c_19_0= ruleRGRD ) ) ) | ( ( (lv_a_20_0= ruleAR ) ) otherlv_21= '&' ( (lv_b_22_0= ruleRGRD ) ) otherlv_23= '&' ( (lv_c_24_0= ruleMD ) ) ) | ( ( (lv_a_25_0= ruleAR ) ) otherlv_26= '&' ( (lv_b_27_0= ruleRGRD ) ) otherlv_28= '&' ( (lv_c_29_0= ruleGDr ) ) ) | ( ( (lv_a_30_0= ruleGDr ) ) otherlv_31= '&' ( (lv_b_32_0= ruleAR ) ) otherlv_33= '&' ( (lv_c_34_0= ruleMD ) ) ) | ( ( (lv_a_35_0= ruleGDr ) ) otherlv_36= '&' ( (lv_b_37_0= ruleAR ) ) otherlv_38= '&' ( (lv_c_39_0= ruleRGRD ) ) ) | ( ( (lv_a_40_0= ruleGDr ) ) otherlv_41= '&' ( (lv_b_42_0= ruleMD ) ) otherlv_43= '&' ( (lv_c_44_0= ruleAR ) ) ) | ( ( (lv_a_45_0= ruleGDr ) ) otherlv_46= '&' ( (lv_b_47_0= ruleMD ) ) otherlv_48= '&' ( (lv_c_49_0= ruleRGRD ) ) ) | ( ( (lv_a_50_0= ruleGDr ) ) otherlv_51= '&' ( (lv_b_52_0= ruleRGRD ) ) otherlv_53= '&' ( (lv_c_54_0= ruleAR ) ) ) | ( ( (lv_a_55_0= ruleGDr ) ) otherlv_56= '&' ( (lv_b_57_0= ruleRGRD ) ) otherlv_58= '&' ( (lv_c_59_0= ruleMD ) ) ) | ( ( (lv_a_60_0= ruleMD ) ) otherlv_61= '&' ( (lv_b_62_0= ruleAR ) ) otherlv_63= '&' ( (lv_c_64_0= ruleGDr ) ) ) | ( ( (lv_a_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_b_67_0= ruleAR ) ) otherlv_68= '&' ( (lv_c_69_0= ruleRGRD ) ) ) | ( ( (lv_a_70_0= ruleMD ) ) otherlv_71= '&' ( (lv_b_72_0= ruleGDr ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) ) | ( ( (lv_a_75_0= ruleMD ) ) otherlv_76= '&' ( (lv_b_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_c_79_0= ruleRGRD ) ) ) | ( ( (lv_a_80_0= ruleMD ) ) otherlv_81= '&' ( (lv_b_82_0= ruleRGRD ) ) otherlv_83= '&' ( (lv_c_84_0= ruleGDr ) ) ) | ( ( (lv_a_85_0= ruleMD ) ) otherlv_86= '&' ( (lv_b_87_0= ruleRGRD ) ) otherlv_88= '&' ( (lv_c_89_0= ruleAR ) ) ) | ( ( (lv_a_90_0= ruleRGRD ) ) otherlv_91= '&' ( (lv_b_92_0= ruleAR ) ) otherlv_93= '&' ( (lv_c_94_0= ruleMD ) ) ) | ( ( (lv_a_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_b_97_0= ruleAR ) ) otherlv_98= '&' ( (lv_c_99_0= ruleGDr ) ) ) | ( ( (lv_a_100_0= ruleRGRD ) ) otherlv_101= '&' ( (lv_b_102_0= ruleMD ) ) otherlv_103= '&' ( (lv_c_104_0= ruleAR ) ) ) | ( ( (lv_a_105_0= ruleRGRD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleMD ) ) otherlv_108= '&' ( (lv_c_109_0= ruleGDr ) ) ) | ( ( (lv_a_110_0= ruleRGRD ) ) otherlv_111= '&' ( (lv_b_112_0= ruleGDr ) ) otherlv_113= '&' ( (lv_c_114_0= ruleMD ) ) ) | ( ( (lv_a_115_0= ruleRGRD ) ) otherlv_116= '&' ( (lv_b_117_0= ruleGDr ) ) otherlv_118= '&' ( (lv_c_119_0= ruleAR ) ) ) )";
         }
     }
-    static final String dfa_33s = "\1\34\10\5\20\35\10\6\20\36\10\53\2\34\1\40\1\34\30\5\60\35\30\6\60\36\30\53\2\34\1\42\1\34\1\40\1\34\1\42\3\40\2\34\30\uffff";
-    static final String dfa_34s = "\1\45\10\7\20\35\10\7\20\36\10\53\3\45\1\43\30\7\60\35\30\7\60\36\30\53\1\43\4\45\1\41\2\45\2\43\1\41\1\43\30\uffff";
-    static final String dfa_35s = "\u00f1\uffff\1\5\1\6\1\1\1\2\1\3\1\4\1\10\1\7\1\11\1\12\1\13\1\14\1\15\1\16\1\20\1\17\1\21\1\22\1\25\1\26\1\30\1\27\1\23\1\24";
-    static final String[] dfa_36s = {
+    static final String dfa_27s = "\1\34\10\5\20\35\10\6\20\36\10\54\2\34\1\40\1\34\30\5\60\35\30\6\60\36\30\54\1\34\1\42\2\34\1\40\1\34\2\40\1\42\2\34\1\40\30\uffff";
+    static final String dfa_28s = "\1\45\10\7\20\35\10\7\20\36\10\54\3\45\1\43\30\7\60\35\30\7\60\36\30\54\2\45\1\43\2\45\1\41\1\45\1\43\1\45\1\41\2\43\30\uffff";
+    static final String dfa_29s = "\u00f1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\10\1\7\1\11\1\12\1\13\1\14\1\20\1\17\1\21\1\22\1\15\1\16\1\30\1\27\1\23\1\24\1\25\1\26";
+    static final String[] dfa_30s = {
             "\1\5\2\uffff\1\6\1\1\1\2\1\3\1\4\1\7\1\10",
             "\1\11\1\uffff\1\12",
             "\1\13\1\uffff\1\14",
@@ -15095,10 +15244,10 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\73",
             "\1\74",
             "\1\74",
-            "\1\101\2\uffff\1\102\2\uffff\1\77\1\100\1\75\1\76",
+            "\1\77\2\uffff\1\100\2\uffff\1\75\1\76\1\101\1\102",
             "\1\105\2\uffff\1\106\1\103\1\104\2\uffff\1\107\1\110",
-            "\1\111\1\112\1\113\1\114\1\115\1\116",
-            "\1\117\2\uffff\1\120\1\123\1\124\1\121\1\122",
+            "\1\115\1\116\1\111\1\112\1\113\1\114",
+            "\1\123\2\uffff\1\124\1\121\1\122\1\117\1\120",
             "\1\125\1\uffff\1\126",
             "\1\127\1\uffff\1\130",
             "\1\131\1\uffff\1\132",
@@ -15267,18 +15416,18 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "\1\u00ef",
             "\1\u00f0",
             "\1\u00f0",
-            "\1\u00f1\2\uffff\1\u00f1\2\uffff\2\u00f2",
-            "\1\u00f3\2\uffff\1\u00f3\4\uffff\2\u00f4",
-            "\2\u00f5\2\u00f6",
+            "\1\u00f1\2\uffff\1\u00f1\4\uffff\2\u00f2",
+            "\2\u00f3\2\u00f4",
+            "\1\u00f5\2\uffff\1\u00f5\2\uffff\2\u00f6",
             "\1\u00f8\2\uffff\1\u00f8\4\uffff\2\u00f7",
             "\2\u00f9\2\uffff\2\u00fa",
             "\1\u00fc\2\uffff\1\u00fc\2\u00fb",
-            "\2\u00fd\2\u00fe",
-            "\2\u0100\2\uffff\2\u00ff",
-            "\2\u0102\2\u0101",
-            "\2\u0103\2\u0104",
-            "\1\u0106\2\uffff\1\u0106\2\u0105",
-            "\1\u0107\2\uffff\1\u0107\2\uffff\2\u0108",
+            "\2\u00fe\2\uffff\2\u00fd",
+            "\2\u0100\2\u00ff",
+            "\2\u0101\2\u0102",
+            "\1\u0104\2\uffff\1\u0104\2\u0103",
+            "\1\u0105\2\uffff\1\u0105\2\uffff\2\u0106",
+            "\2\u0107\2\u0108",
             "",
             "",
             "",
@@ -15304,26 +15453,26 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             "",
             ""
     };
-    static final char[] dfa_33 = DFA.unpackEncodedStringToUnsignedChars(dfa_33s);
-    static final char[] dfa_34 = DFA.unpackEncodedStringToUnsignedChars(dfa_34s);
-    static final short[] dfa_35 = DFA.unpackEncodedString(dfa_35s);
-    static final short[][] dfa_36 = unpackEncodedStringArray(dfa_36s);
+    static final char[] dfa_27 = DFA.unpackEncodedStringToUnsignedChars(dfa_27s);
+    static final char[] dfa_28 = DFA.unpackEncodedStringToUnsignedChars(dfa_28s);
+    static final short[] dfa_29 = DFA.unpackEncodedString(dfa_29s);
+    static final short[][] dfa_30 = unpackEncodedStringArray(dfa_30s);
 
-    class DFA19 extends DFA {
+    class DFA20 extends DFA {
 
-        public DFA19(BaseRecognizer recognizer) {
+        public DFA20(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 19;
-            this.eot = dfa_27;
-            this.eof = dfa_27;
-            this.min = dfa_33;
-            this.max = dfa_34;
-            this.accept = dfa_35;
-            this.special = dfa_31;
-            this.transition = dfa_36;
+            this.decisionNumber = 20;
+            this.eot = dfa_21;
+            this.eof = dfa_21;
+            this.min = dfa_27;
+            this.max = dfa_28;
+            this.accept = dfa_29;
+            this.special = dfa_25;
+            this.transition = dfa_30;
         }
         public String getDescription() {
-            return "4506:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )";
+            return "4556:2: ( ( ( (lv_a_0_0= ruleAR ) ) otherlv_1= '&' ( (lv_b_2_0= ruleGDr ) ) otherlv_3= '&' ( (lv_c_4_0= ruleMD ) ) otherlv_5= '&' ( (lv_d_6_0= ruleRGRD ) ) ) | ( ( (lv_a_7_0= ruleAR ) ) otherlv_8= '&' ( (lv_b_9_0= ruleGDr ) ) otherlv_10= '&' ( (lv_c_11_0= ruleRGRD ) ) otherlv_12= '&' ( (lv_d_13_0= ruleMD ) ) ) | ( ( (lv_a_14_0= ruleAR ) ) otherlv_15= '&' ( (lv_b_16_0= ruleMD ) ) otherlv_17= '&' ( (lv_c_18_0= ruleGDr ) ) otherlv_19= '&' ( (lv_d_20_0= ruleRGRD ) ) ) | ( ( (lv_a_21_0= ruleAR ) ) otherlv_22= '&' ( (lv_b_23_0= ruleMD ) ) otherlv_24= '&' ( (lv_c_25_0= ruleRGRD ) ) otherlv_26= '&' ( (lv_d_27_0= ruleGDr ) ) ) | ( ( (lv_a_28_0= ruleAR ) ) otherlv_29= '&' ( (lv_b_30_0= ruleRGRD ) ) otherlv_31= '&' ( (lv_c_32_0= ruleMD ) ) otherlv_33= '&' ( (lv_d_34_0= ruleGDr ) ) ) | ( ( (lv_a_35_0= ruleAR ) ) otherlv_36= '&' ( (lv_b_37_0= ruleRGRD ) ) otherlv_38= '&' ( (lv_c_39_0= ruleGDr ) ) otherlv_40= '&' ( (lv_d_41_0= ruleMD ) ) ) | ( ( (lv_a_42_0= ruleGDr ) ) otherlv_43= '&' ( (lv_b_44_0= ruleAR ) ) otherlv_45= '&' ( (lv_c_46_0= ruleMD ) ) otherlv_47= '&' ( (lv_d_48_0= ruleRGRD ) ) ) | ( ( (lv_a_49_0= ruleGDr ) ) otherlv_50= '&' ( (lv_b_51_0= ruleAR ) ) otherlv_52= '&' ( (lv_c_53_0= ruleRGRD ) ) otherlv_54= '&' ( (lv_d_55_0= ruleMD ) ) ) | ( ( (lv_a_56_0= ruleGDr ) ) otherlv_57= '&' ( (lv_b_58_0= ruleMD ) ) otherlv_59= '&' ( (lv_c_60_0= ruleAR ) ) otherlv_61= '&' ( (lv_d_62_0= ruleRGRD ) ) ) | ( ( (lv_a_63_0= ruleGDr ) ) otherlv_64= '&' ( (lv_b_65_0= ruleMD ) ) otherlv_66= '&' ( (lv_c_67_0= ruleRGRD ) ) otherlv_68= '&' ( (lv_d_69_0= ruleAR ) ) ) | ( ( (lv_a_70_0= ruleGDr ) ) otherlv_71= '&' ( (lv_b_72_0= ruleRGRD ) ) otherlv_73= '&' ( (lv_c_74_0= ruleAR ) ) otherlv_75= '&' ( (lv_d_76_0= ruleMD ) ) ) | ( ( (lv_a_77_0= ruleGDr ) ) otherlv_78= '&' ( (lv_b_79_0= ruleRGRD ) ) otherlv_80= '&' ( (lv_c_81_0= ruleMD ) ) otherlv_82= '&' ( (lv_d_83_0= ruleAR ) ) ) | ( ( (lv_a_84_0= ruleMD ) ) otherlv_85= '&' ( (lv_b_86_0= ruleAR ) ) otherlv_87= '&' ( (lv_c_88_0= ruleGDr ) ) otherlv_89= '&' ( (lv_d_90_0= ruleRGRD ) ) ) | ( ( (lv_a_91_0= ruleMD ) ) otherlv_92= '&' ( (lv_b_93_0= ruleAR ) ) otherlv_94= '&' ( (lv_c_95_0= ruleRGRD ) ) otherlv_96= '&' ( (lv_d_97_0= ruleGDr ) ) ) | ( ( (lv_a_98_0= ruleMD ) ) otherlv_99= '&' ( (lv_b_100_0= ruleGDr ) ) otherlv_101= '&' ( (lv_c_102_0= ruleAR ) ) otherlv_103= '&' ( (lv_d_104_0= ruleRGRD ) ) ) | ( ( (lv_a_105_0= ruleMD ) ) otherlv_106= '&' ( (lv_b_107_0= ruleGDr ) ) otherlv_108= '&' ( (lv_c_109_0= ruleRGRD ) ) otherlv_110= '&' ( (lv_d_111_0= ruleAR ) ) ) | ( ( (lv_a_112_0= ruleMD ) ) otherlv_113= '&' ( (lv_b_114_0= ruleRGRD ) ) otherlv_115= '&' ( (lv_c_116_0= ruleGDr ) ) otherlv_117= '&' ( (lv_d_118_0= ruleAR ) ) ) | ( ( (lv_a_119_0= ruleMD ) ) otherlv_120= '&' ( (lv_b_121_0= ruleRGRD ) ) otherlv_122= '&' ( (lv_c_123_0= ruleAR ) ) otherlv_124= '&' ( (lv_d_125_0= ruleGDr ) ) ) | ( ( (lv_a_126_0= ruleRGRD ) ) otherlv_127= '&' ( (lv_b_128_0= ruleAR ) ) otherlv_129= '&' ( (lv_c_130_0= ruleMD ) ) otherlv_131= '&' ( (lv_d_132_0= ruleGDr ) ) ) | ( ( (lv_a_133_0= ruleRGRD ) ) otherlv_134= '&' ( (lv_b_135_0= ruleAR ) ) otherlv_136= '&' ( (lv_c_137_0= ruleGDr ) ) otherlv_138= '&' ( (lv_d_139_0= ruleMD ) ) ) | ( ( (lv_a_140_0= ruleRGRD ) ) otherlv_141= '&' ( (lv_b_142_0= ruleMD ) ) otherlv_143= '&' ( (lv_c_144_0= ruleAR ) ) otherlv_145= '&' ( (lv_d_146_0= ruleGDr ) ) ) | ( ( (lv_a_147_0= ruleRGRD ) ) otherlv_148= '&' ( (lv_b_149_0= ruleMD ) ) otherlv_150= '&' ( (lv_c_151_0= ruleGDr ) ) otherlv_152= '&' ( (lv_d_153_0= ruleAR ) ) ) | ( ( (lv_a_154_0= ruleRGRD ) ) otherlv_155= '&' ( (lv_b_156_0= ruleGDr ) ) otherlv_157= '&' ( (lv_c_158_0= ruleMD ) ) otherlv_159= '&' ( (lv_d_160_0= ruleAR ) ) ) | ( ( (lv_a_161_0= ruleRGRD ) ) otherlv_162= '&' ( (lv_b_163_0= ruleGDr ) ) otherlv_164= '&' ( (lv_c_165_0= ruleAR ) ) otherlv_166= '&' ( (lv_d_167_0= ruleMD ) ) ) )";
         }
     }
  
@@ -15331,8 +15480,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000008000000002L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
@@ -15350,13 +15499,13 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00000000000000C0L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000023F9E800080L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000047F9E800080L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000003F9E800080L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000007F9E800080L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000C00000000L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000300000000L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000003000000000L});

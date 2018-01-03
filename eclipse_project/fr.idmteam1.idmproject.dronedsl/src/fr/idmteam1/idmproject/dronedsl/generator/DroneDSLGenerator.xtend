@@ -82,10 +82,11 @@ class DroneDSLGenerator extends AbstractGenerator {
         «ENDIF»
 
 		public static class Main {
-
+			«e.m.decollage.toString»
             «FOR f : e.m.mainbody »
        		«f.toString»
             «ENDFOR»
+            «e.m.atterrissage.toString»
 		}
 		
         «IF e.fonctions!== null»
@@ -98,7 +99,9 @@ class DroneDSLGenerator extends AbstractGenerator {
     def compile(FonctionDecl e)
     	'''
 		public static void «e.name»(){
-			//TODO
+			« FOR f:e.body»
+			         «f.toString»
+			«ENDFOR»
 			
 		}
     	'''

@@ -190,5 +190,10 @@ public class PourcentDeclImpl extends VarDeclImpl implements PourcentDecl
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString()
+  {
+    return "int p_"+this.name+" = " + this.val.getVal().split("\\%")[0];
+  }
 
-} //PourcentDeclImpl
+} //ModifiedPourcentDeclImpl toString added

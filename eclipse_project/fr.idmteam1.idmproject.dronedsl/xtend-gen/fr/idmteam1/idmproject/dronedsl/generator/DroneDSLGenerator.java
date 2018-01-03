@@ -108,15 +108,22 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("public static class Main {");
     _builder.newLine();
-    _builder.newLine();
+    _builder.append("\t");
+    String _string = e.getM().getDecollage().toString();
+    _builder.append(_string, "\t");
+    _builder.newLineIfNotEmpty();
     {
       EList<EObject> _mainbody = e.getM().getMainbody();
       for(final EObject f_1 : _mainbody) {
-        String _string = f_1.toString();
-        _builder.append(_string);
+        String _string_1 = f_1.toString();
+        _builder.append(_string_1);
         _builder.newLineIfNotEmpty();
       }
     }
+    _builder.append("            ");
+    String _string_2 = e.getM().getAtterrissage().toString();
+    _builder.append(_string_2, "            ");
+    _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -144,9 +151,15 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.append(_name);
     _builder.append("(){");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("//TODO");
-    _builder.newLine();
+    {
+      EList<EObject> _body = e.getBody();
+      for(final EObject f : _body) {
+        _builder.append("\t");
+        String _string = f.toString();
+        _builder.append(_string, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t");
     _builder.newLine();
     _builder.append("}");

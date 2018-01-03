@@ -14,7 +14,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getVitesse_rotation <em>Vitesse rotation</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRotationDroite()
@@ -50,29 +50,29 @@ public interface RotationDroite extends Mouvement, CommandeBasique, RGRD
   void setDuree(SecondeExp value);
 
   /**
-   * Returns the value of the '<em><b>Vitesse rotation</b></em>' containment reference.
+   * Returns the value of the '<em><b>Vitesse</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vitesse rotation</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Vitesse</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vitesse rotation</em>' containment reference.
-   * @see #setVitesse_rotation(PourcentExp)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRotationDroite_Vitesse_rotation()
+   * @return the value of the '<em>Vitesse</em>' containment reference.
+   * @see #setVitesse(PourcentExp)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getRotationDroite_Vitesse()
    * @model containment="true"
    * @generated
    */
-  PourcentExp getVitesse_rotation();
+  PourcentExp getVitesse();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getVitesse_rotation <em>Vitesse rotation</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.RotationDroite#getVitesse <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vitesse rotation</em>' containment reference.
-   * @see #getVitesse_rotation()
+   * @param value the new value of the '<em>Vitesse</em>' containment reference.
+   * @see #getVitesse()
    * @generated
    */
-  void setVitesse_rotation(PourcentExp value);
+  void setVitesse(PourcentExp value);
 
 } // RotationDroite

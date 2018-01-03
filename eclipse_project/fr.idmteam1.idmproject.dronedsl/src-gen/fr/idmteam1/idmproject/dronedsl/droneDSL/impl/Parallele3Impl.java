@@ -190,5 +190,19 @@ public class Parallele3Impl extends ParalleleImpl implements Parallele3
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+	  
+	  String a = super.a.toString().split("\\.")[0];
+	  String b = super.b.toString().split("\\.")[0];
+	  String c = this.c.toString().split("\\.")[0];
+    String name = Integer.toString(this.hashCode());
+    
+	  return "\tParallele p3_"+name+" = new Parallele();\n"
+	  		+ "			  p3_"+name+".addCommande("+a+");\n"
+	  		+ "			  p3_"+name+".addCommande("+b+");\n"
+	  		+ "			  p3_"+name+".addCommande("+c+");\n"
+	  		+ "\tp3_"+name+".execute(runtime);";
+  }
 
-} //Parallele3Impl
+} //ModifiedParallele3Impl toString added

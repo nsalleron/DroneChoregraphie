@@ -202,7 +202,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Decoller decoller = (Decoller)theEObject;
         T result = caseDecoller(decoller);
-        if (result == null) result = caseCommandeBasique(decoller);
+        if (result == null) result = caseDecollerAtterrir(decoller);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -210,7 +210,7 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Atterrir atterrir = (Atterrir)theEObject;
         T result = caseAtterrir(atterrir);
-        if (result == null) result = caseCommandeBasique(atterrir);
+        if (result == null) result = caseDecollerAtterrir(atterrir);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -306,6 +306,13 @@ public class DroneDSLSwitch<T> extends Switch<T>
       {
         Mouvement mouvement = (Mouvement)theEObject;
         T result = caseMouvement(mouvement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.DECOLLER_ATTERRIR:
+      {
+        DecollerAtterrir decollerAtterrir = (DecollerAtterrir)theEObject;
+        T result = caseDecollerAtterrir(decollerAtterrir);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -871,6 +878,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMouvement(Mouvement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Decoller Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Decoller Atterrir</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecollerAtterrir(DecollerAtterrir object)
   {
     return null;
   }

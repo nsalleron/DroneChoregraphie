@@ -221,6 +221,11 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createMouvementAdapter();
       }
       @Override
+      public Adapter caseDecollerAtterrir(DecollerAtterrir object)
+      {
+        return createDecollerAtterrirAdapter();
+      }
+      @Override
       public Adapter caseCommandeBasique(CommandeBasique object)
       {
         return createCommandeBasiqueAdapter();
@@ -738,6 +743,21 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMouvementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.DecollerAtterrir <em>Decoller Atterrir</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DecollerAtterrir
+   * @generated
+   */
+  public Adapter createDecollerAtterrirAdapter()
   {
     return null;
   }

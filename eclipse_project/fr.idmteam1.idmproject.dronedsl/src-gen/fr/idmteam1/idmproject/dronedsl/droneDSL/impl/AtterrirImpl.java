@@ -6,47 +6,17 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Atterrir</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.AtterrirImpl#getStr <em>Str</em>}</li>
- * </ul>
  *
  * @generated
  */
-public class AtterrirImpl extends CommandeBasiqueImpl implements Atterrir
+public class AtterrirImpl extends DecollerAtterrirImpl implements Atterrir
 {
-  /**
-   * The default value of the '{@link #getStr() <em>Str</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStr()
-   * @generated
-   * @ordered
-   */
-  protected static final String STR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getStr() <em>Str</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStr()
-   * @generated
-   * @ordered
-   */
-  protected String str = STR_EDEFAULT;
-
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -56,122 +26,9 @@ public class AtterrirImpl extends CommandeBasiqueImpl implements Atterrir
   {
     super();
   }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
-  protected EClass eStaticClass()
-  {
-    return DroneDSLPackage.Literals.ATTERRIR;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getStr()
-  {
-    return str;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStr(String newStr)
-  {
-    String oldStr = str;
-    str = newStr;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.ATTERRIR__STR, oldStr, str));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
-    switch (featureID)
-    {
-      case DroneDSLPackage.ATTERRIR__STR:
-        return getStr();
+    public String toString() {
+  	  return "new Atterrir().execute(runtime)";
     }
-    return super.eGet(featureID, resolve, coreType);
-  }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
-    switch (featureID)
-    {
-      case DroneDSLPackage.ATTERRIR__STR:
-        setStr((String)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eUnset(int featureID)
-  {
-    switch (featureID)
-    {
-      case DroneDSLPackage.ATTERRIR__STR:
-        setStr(STR_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
-    switch (featureID)
-    {
-      case DroneDSLPackage.ATTERRIR__STR:
-        return STR_EDEFAULT == null ? str != null : !STR_EDEFAULT.equals(str);
-    }
-    return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (str: ");
-    result.append(str);
-    result.append(')');
-    return result.toString();
-  }
-
-} //AtterrirImpl
+} //ModifiedAtterrirImpl toString added

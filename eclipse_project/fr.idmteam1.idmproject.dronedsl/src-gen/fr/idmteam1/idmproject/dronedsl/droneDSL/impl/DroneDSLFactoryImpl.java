@@ -94,6 +94,7 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.ROTATION_DROITE: return createRotationDroite();
       case DroneDSLPackage.PAUSE: return createPause();
       case DroneDSLPackage.MOUVEMENT: return createMouvement();
+      case DroneDSLPackage.DECOLLER_ATTERRIR: return createDecollerAtterrir();
       case DroneDSLPackage.COMMANDE_BASIQUE: return createCommandeBasique();
       case DroneDSLPackage.FONCTION_DECL: return createFonctionDecl();
       case DroneDSLPackage.FIN_DE_MAIN: return createFinDeMain();
@@ -429,6 +430,17 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     MouvementImpl mouvement = new MouvementImpl();
     return mouvement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecollerAtterrir createDecollerAtterrir()
+  {
+    DecollerAtterrirImpl decollerAtterrir = new DecollerAtterrirImpl();
+    return decollerAtterrir;
   }
 
   /**

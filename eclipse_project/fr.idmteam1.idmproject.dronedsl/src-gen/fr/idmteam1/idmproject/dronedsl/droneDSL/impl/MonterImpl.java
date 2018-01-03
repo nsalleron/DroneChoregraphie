@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MonterImpl#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MonterImpl#getVitesse_verticale <em>Vitesse verticale</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MonterImpl#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,14 +43,14 @@ public class MonterImpl extends MouvementImpl implements Monter
   protected SecondeExp duree;
 
   /**
-   * The cached value of the '{@link #getVitesse_verticale() <em>Vitesse verticale</em>}' containment reference.
+   * The cached value of the '{@link #getVitesse() <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVitesse_verticale()
+   * @see #getVitesse()
    * @generated
    * @ordered
    */
-  protected PourcentExp vitesse_verticale;
+  protected PourcentExp vitesse;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +126,9 @@ public class MonterImpl extends MouvementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public PourcentExp getVitesse_verticale()
+  public PourcentExp getVitesse()
   {
-    return vitesse_verticale;
+    return vitesse;
   }
 
   /**
@@ -136,13 +136,13 @@ public class MonterImpl extends MouvementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_verticale(PourcentExp newVitesse_verticale, NotificationChain msgs)
+  public NotificationChain basicSetVitesse(PourcentExp newVitesse, NotificationChain msgs)
   {
-    PourcentExp oldVitesse_verticale = vitesse_verticale;
-    vitesse_verticale = newVitesse_verticale;
+    PourcentExp oldVitesse = vitesse;
+    vitesse = newVitesse;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MONTER__VITESSE_VERTICALE, oldVitesse_verticale, newVitesse_verticale);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MONTER__VITESSE, oldVitesse, newVitesse);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -153,20 +153,20 @@ public class MonterImpl extends MouvementImpl implements Monter
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_verticale(PourcentExp newVitesse_verticale)
+  public void setVitesse(PourcentExp newVitesse)
   {
-    if (newVitesse_verticale != vitesse_verticale)
+    if (newVitesse != vitesse)
     {
       NotificationChain msgs = null;
-      if (vitesse_verticale != null)
-        msgs = ((InternalEObject)vitesse_verticale).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MONTER__VITESSE_VERTICALE, null, msgs);
-      if (newVitesse_verticale != null)
-        msgs = ((InternalEObject)newVitesse_verticale).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MONTER__VITESSE_VERTICALE, null, msgs);
-      msgs = basicSetVitesse_verticale(newVitesse_verticale, msgs);
+      if (vitesse != null)
+        msgs = ((InternalEObject)vitesse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MONTER__VITESSE, null, msgs);
+      if (newVitesse != null)
+        msgs = ((InternalEObject)newVitesse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.MONTER__VITESSE, null, msgs);
+      msgs = basicSetVitesse(newVitesse, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MONTER__VITESSE_VERTICALE, newVitesse_verticale, newVitesse_verticale));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.MONTER__VITESSE, newVitesse, newVitesse));
   }
 
   /**
@@ -181,8 +181,8 @@ public class MonterImpl extends MouvementImpl implements Monter
     {
       case DroneDSLPackage.MONTER__DUREE:
         return basicSetDuree(null, msgs);
-      case DroneDSLPackage.MONTER__VITESSE_VERTICALE:
-        return basicSetVitesse_verticale(null, msgs);
+      case DroneDSLPackage.MONTER__VITESSE:
+        return basicSetVitesse(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,8 +199,8 @@ public class MonterImpl extends MouvementImpl implements Monter
     {
       case DroneDSLPackage.MONTER__DUREE:
         return getDuree();
-      case DroneDSLPackage.MONTER__VITESSE_VERTICALE:
-        return getVitesse_verticale();
+      case DroneDSLPackage.MONTER__VITESSE:
+        return getVitesse();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -218,8 +218,8 @@ public class MonterImpl extends MouvementImpl implements Monter
       case DroneDSLPackage.MONTER__DUREE:
         setDuree((SecondeExp)newValue);
         return;
-      case DroneDSLPackage.MONTER__VITESSE_VERTICALE:
-        setVitesse_verticale((PourcentExp)newValue);
+      case DroneDSLPackage.MONTER__VITESSE:
+        setVitesse((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,8 +238,8 @@ public class MonterImpl extends MouvementImpl implements Monter
       case DroneDSLPackage.MONTER__DUREE:
         setDuree((SecondeExp)null);
         return;
-      case DroneDSLPackage.MONTER__VITESSE_VERTICALE:
-        setVitesse_verticale((PourcentExp)null);
+      case DroneDSLPackage.MONTER__VITESSE:
+        setVitesse((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,10 +257,14 @@ public class MonterImpl extends MouvementImpl implements Monter
     {
       case DroneDSLPackage.MONTER__DUREE:
         return duree != null;
-      case DroneDSLPackage.MONTER__VITESSE_VERTICALE:
-        return vitesse_verticale != null;
+      case DroneDSLPackage.MONTER__VITESSE:
+        return vitesse != null;
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Monter("+this.duree+","+this.vitesse+").execute(runtime)";
+    }
 
-} //MonterImpl
+} //ModifiedMonterImpl toString added

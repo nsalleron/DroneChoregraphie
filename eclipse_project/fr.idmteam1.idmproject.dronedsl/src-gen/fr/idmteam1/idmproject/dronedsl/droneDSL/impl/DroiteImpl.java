@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroiteImpl#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroiteImpl#getVitesse_deplacement <em>Vitesse deplacement</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroiteImpl#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,14 +43,14 @@ public class DroiteImpl extends MouvementImpl implements Droite
   protected SecondeExp duree;
 
   /**
-   * The cached value of the '{@link #getVitesse_deplacement() <em>Vitesse deplacement</em>}' containment reference.
+   * The cached value of the '{@link #getVitesse() <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVitesse_deplacement()
+   * @see #getVitesse()
    * @generated
    * @ordered
    */
-  protected PourcentExp vitesse_deplacement;
+  protected PourcentExp vitesse;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +126,9 @@ public class DroiteImpl extends MouvementImpl implements Droite
    * <!-- end-user-doc -->
    * @generated
    */
-  public PourcentExp getVitesse_deplacement()
+  public PourcentExp getVitesse()
   {
-    return vitesse_deplacement;
+    return vitesse;
   }
 
   /**
@@ -136,13 +136,13 @@ public class DroiteImpl extends MouvementImpl implements Droite
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_deplacement(PourcentExp newVitesse_deplacement, NotificationChain msgs)
+  public NotificationChain basicSetVitesse(PourcentExp newVitesse, NotificationChain msgs)
   {
-    PourcentExp oldVitesse_deplacement = vitesse_deplacement;
-    vitesse_deplacement = newVitesse_deplacement;
+    PourcentExp oldVitesse = vitesse;
+    vitesse = newVitesse;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT, oldVitesse_deplacement, newVitesse_deplacement);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.DROITE__VITESSE, oldVitesse, newVitesse);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -153,20 +153,20 @@ public class DroiteImpl extends MouvementImpl implements Droite
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_deplacement(PourcentExp newVitesse_deplacement)
+  public void setVitesse(PourcentExp newVitesse)
   {
-    if (newVitesse_deplacement != vitesse_deplacement)
+    if (newVitesse != vitesse)
     {
       NotificationChain msgs = null;
-      if (vitesse_deplacement != null)
-        msgs = ((InternalEObject)vitesse_deplacement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT, null, msgs);
-      if (newVitesse_deplacement != null)
-        msgs = ((InternalEObject)newVitesse_deplacement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT, null, msgs);
-      msgs = basicSetVitesse_deplacement(newVitesse_deplacement, msgs);
+      if (vitesse != null)
+        msgs = ((InternalEObject)vitesse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.DROITE__VITESSE, null, msgs);
+      if (newVitesse != null)
+        msgs = ((InternalEObject)newVitesse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.DROITE__VITESSE, null, msgs);
+      msgs = basicSetVitesse(newVitesse, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT, newVitesse_deplacement, newVitesse_deplacement));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.DROITE__VITESSE, newVitesse, newVitesse));
   }
 
   /**
@@ -181,8 +181,8 @@ public class DroiteImpl extends MouvementImpl implements Droite
     {
       case DroneDSLPackage.DROITE__DUREE:
         return basicSetDuree(null, msgs);
-      case DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT:
-        return basicSetVitesse_deplacement(null, msgs);
+      case DroneDSLPackage.DROITE__VITESSE:
+        return basicSetVitesse(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,8 +199,8 @@ public class DroiteImpl extends MouvementImpl implements Droite
     {
       case DroneDSLPackage.DROITE__DUREE:
         return getDuree();
-      case DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT:
-        return getVitesse_deplacement();
+      case DroneDSLPackage.DROITE__VITESSE:
+        return getVitesse();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -218,8 +218,8 @@ public class DroiteImpl extends MouvementImpl implements Droite
       case DroneDSLPackage.DROITE__DUREE:
         setDuree((SecondeExp)newValue);
         return;
-      case DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((PourcentExp)newValue);
+      case DroneDSLPackage.DROITE__VITESSE:
+        setVitesse((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,8 +238,8 @@ public class DroiteImpl extends MouvementImpl implements Droite
       case DroneDSLPackage.DROITE__DUREE:
         setDuree((SecondeExp)null);
         return;
-      case DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT:
-        setVitesse_deplacement((PourcentExp)null);
+      case DroneDSLPackage.DROITE__VITESSE:
+        setVitesse((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,10 +257,14 @@ public class DroiteImpl extends MouvementImpl implements Droite
     {
       case DroneDSLPackage.DROITE__DUREE:
         return duree != null;
-      case DroneDSLPackage.DROITE__VITESSE_DEPLACEMENT:
-        return vitesse_deplacement != null;
+      case DroneDSLPackage.DROITE__VITESSE:
+        return vitesse != null;
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Droite("+this.duree+","+this.vitesse+").execute(runtime)";
+    }
 
-} //DroiteImpl
+} //ModifiedDroiteImpl toString added

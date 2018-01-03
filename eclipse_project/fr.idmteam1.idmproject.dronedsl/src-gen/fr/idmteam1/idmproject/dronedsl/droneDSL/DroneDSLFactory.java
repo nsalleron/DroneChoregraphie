@@ -285,6 +285,15 @@ public interface DroneDSLFactory extends EFactory
   Mouvement createMouvement();
 
   /**
+   * Returns a new object of class '<em>Decoller Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decoller Atterrir</em>'.
+   * @generated
+   */
+  DecollerAtterrir createDecollerAtterrir();
+
+  /**
    * Returns a new object of class '<em>Commande Basique</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

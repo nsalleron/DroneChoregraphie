@@ -33,7 +33,7 @@ head -n $(( $(wc -l PourcentDeclImpl.java | awk '{print $1}') - 2 )) PourcentDec
 echo "  @Override
   public String toString()
   {
-    return \"int \"+this.name+\" = \" + this.val.getVal().split(\"\\\%\")[0];
+    return \"int p_\"+this.name+\" = \" + this.val.getVal().split(\"\\\%\")[0];
   }
 
 } //ModifiedPourcentDeclImpl toString added" >> PourcentDeclImpl_tmp.java
@@ -44,7 +44,7 @@ head -n $(( $(wc -l SecondeDeclImpl.java | awk '{print $1}') - 2 )) SecondeDeclI
 echo "  @Override
   public String toString()
   {
-    return \"int \"+this.name+\" = \" +this.val.getVal();
+    return \"int s_\"+this.name+\" = \" +this.val.getVal();
   }
 
 } //ModifiedSecondeDeclImpl toString added" >> SecondeDeclImpl_tmp.java
@@ -83,7 +83,7 @@ mv RefPourcentVarImpl_tmp.java RefPourcentVarImpl.java
 
 
 ## Case of landing AtterrirImpl.java
-head -n $(( $(wc -l AtterrirImpl.java | awk '{print $1}') - 2 )) AtterrirImpl.java > "AtterrirImpl_tmp.java"
+head -n $(( $(wc -l AtterrirImpl.java | awk '{print $1}') - 13 )) AtterrirImpl.java > "AtterrirImpl_tmp.java"
   
 echo  "  @Override
     public String toString() {
@@ -98,7 +98,7 @@ echo "done for AtterrirImpl.java"
 
 
 ## Case of takeoff  DecollerImpl.java
-head -n $(( $(wc -l DecollerImpl.java | awk '{print $1}') - 2 )) DecollerImpl.java > "DecollerImpl_tmp.java"
+head -n $(( $(wc -l DecollerImpl.java | awk '{print $1}') - 13 )) DecollerImpl.java > "DecollerImpl_tmp.java"
   
 echo  "  @Override
   public String toString() {
@@ -131,21 +131,32 @@ echo "done for PauseImpl.java"
 
 head -n $(( $(wc -l Parallele2Impl.java | awk '{print $1}') - 2 )) Parallele2Impl.java > "Parallele2Impl_tmp.java"
 
-echo "
-  @Override
+echo "  @Override
   public String toString() {
 	  
-	  String a = super.a.toString().split(\"\\\.\")[0];
-	  String b = super.b.toString().split(\"\\\.\")[0];
-	  return \"Parallele p = new Parallele();\\n\"
-	  		+ \"			  p.addCommande(\"+a+\");\\n\"
-	  		+ \"			  p.addCommande(\"+b+\");\\n\"
-	  		+ \"p.execute(runtime);\";
+	  //Cas particulier, pas logique du tout.
+	  String a= \"\", b = \"\";
+	  if (this.a != null) 
+		  a = this.a.toString().split(\"\\\.\")[0];
+	  else
+		  a = this.t.toString().split(\"\\\.\")[0];
+	  if (this.b != null)
+		  b = this.b.toString().split(\"\\\.\")[0];
+	  else
+		  b = this.t.toString().split(\"\\\.\")[0];
+
+	  String name = Integer.toString(this.hashCode());
+  
+	  return \"\\tParallele p2_\"+name+\" = new Parallele();\\n\"
+	  		+ \"			  p2_\"+name+\".addCommande(\"+a+\");\\n\"
+	  		+ \"			  p2_\"+name+\".addCommande(\"+b+\");\\n\"
+	  		+ \"\\tp2_\"+name+\".execute(runtime);\";
   }
 
-} //ModifiedParallele2Impl toString added" >> "Parallele2Impl_tmp.java"
+} //ModifiedParallele2Impl toString added " >> "Parallele2Impl_tmp.java"
 mv "Parallele2Impl_tmp.java" "Parallele2Impl.java"
   
+
 echo "done for Parallele2Impl.java"
 
 
@@ -162,16 +173,18 @@ echo "  @Override
 	  String a = super.a.toString().split(\"\\\.\")[0];
 	  String b = super.b.toString().split(\"\\\.\")[0];
 	  String c = this.c.toString().split(\"\\\.\")[0];
-	  return \"Parallele p = new Parallele();\\n\"
-	  		+ \"			  p.addCommande(\"+a+\");\\n\"
-	  		+ \"			  p.addCommande(\"+b+\");\\n\"
-	  		+ \"			  p.addCommande(\"+c+\");\\n\"
-	  		+ \"p.execute(runtime);\";
+    String name = Integer.toString(this.hashCode());
+    
+	  return \"\\tParallele p3_\"+name+\" = new Parallele();\\n\"
+	  		+ \"			  p3_\"+name+\".addCommande(\"+a+\");\\n\"
+	  		+ \"			  p3_\"+name+\".addCommande(\"+b+\");\\n\"
+	  		+ \"			  p3_\"+name+\".addCommande(\"+c+\");\\n\"
+	  		+ \"\\tp3_\"+name+\".execute(runtime);\";
   }
 
 } //ModifiedParallele3Impl toString added" >> "Parallele3Impl_tmp.java"
 mv "Parallele3Impl_tmp.java" "Parallele3Impl.java"
-  
+
 echo "done for Parallele3Impl.java"
 
 
@@ -190,17 +203,19 @@ echo "  @Override
   	  String b = super.b.toString().split(\"\\\.\")[0];
   	  String c = this.c.toString().split(\"\\\.\")[0];
       String d = this.d.toString().split(\"\\\.\")[0];
-  	  return \"Parallele p = new Parallele();\\n\"
-  	  		+ \"			  p.addCommande(\"+a+\");\\n\"
-  	  		+ \"			  p.addCommande(\"+b+\");\\n\"
-  	  		+ \"			  p.addCommande(\"+c+\");\\n\"
-          + \"			  p.addCommande(\"+d+\");\\n\"
-  	  		+ \"p.execute(runtime);\";
+      String name = Integer.toString(this.hashCode());
+
+  	  return \"\\tParallele p4_\"+name+\" = new Parallele();\\n\"
+  	  		+ \"			  p4_\"+name+\".addCommande(\"+a+\");\\n\"
+  	  		+ \"			  p4_\"+name+\".addCommande(\"+b+\");\\n\"
+  	  		+ \"			  p4_\"+name+\".addCommande(\"+c+\");\\n\"
+          + \"			  p4_\"+name+\".addCommande(\"+d+\");\\n\"
+  	  		+ \"\\tp4_\"+name+\".execute(runtime);\";
     }
 
 } //ModifiedParallele4Impl toString added" >> "Parallele4Impl_tmp.java"
 mv "Parallele4Impl_tmp.java" "Parallele4Impl.java"
-  
+
 echo "done for Parallele4Impl.java"
 
 
@@ -219,7 +234,7 @@ do
   
   echo  "  @Override
     public String toString() {
-  	  return \"new $nameClass(\"+this.duree+\",\"+this.vitesse+\").execute(runtime)\";
+  	  return \"\\tnew $nameClass(\"+this.duree+\",\"+this.vitesse+\").execute(runtime)\";
     }
 
 } //Modified$nameClass$impl toString added" >> "{$nameClass}{$Impl}{$tmp}"
