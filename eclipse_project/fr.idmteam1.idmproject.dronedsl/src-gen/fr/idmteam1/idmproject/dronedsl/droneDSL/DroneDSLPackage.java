@@ -123,13 +123,13 @@ public interface DroneDSLPackage extends EPackage
   int IMPORT = 1;
 
   /**
-   * The feature id for the '<em><b>Import URI</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IMPORT__IMPORT_URI = 0;
+  int IMPORT__NAME = 0;
 
   /**
    * The number of structural features of the '<em>Import</em>' class.
@@ -1118,22 +1118,78 @@ public interface DroneDSLPackage extends EPackage
   int FONCTION_CALL = 33;
 
   /**
-   * The feature id for the '<em><b>Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FONCTION_CALL__REF = 0;
-
-  /**
    * The number of structural features of the '<em>Fonction Call</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FONCTION_CALL_FEATURE_COUNT = 1;
+  int FONCTION_CALL_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallInterneImpl <em>Fonction Call Interne</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallInterneImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionCallInterne()
+   * @generated
+   */
+  int FONCTION_CALL_INTERNE = 34;
+
+  /**
+   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_INTERNE__REF = FONCTION_CALL_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Fonction Call Interne</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_INTERNE_FEATURE_COUNT = FONCTION_CALL_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallExterneImpl <em>Fonction Call Externe</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallExterneImpl
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionCallExterne()
+   * @generated
+   */
+  int FONCTION_CALL_EXTERNE = 35;
+
+  /**
+   * The feature id for the '<em><b>File</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_EXTERNE__FILE = FONCTION_CALL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_EXTERNE__NAME = FONCTION_CALL_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Fonction Call Externe</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONCTION_CALL_EXTERNE_FEATURE_COUNT = FONCTION_CALL_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl <em>Main</em>}' class.
@@ -1143,7 +1199,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getMain()
    * @generated
    */
-  int MAIN = 34;
+  int MAIN = 36;
 
   /**
    * The feature id for the '<em><b>Decollage</b></em>' containment reference.
@@ -1198,7 +1254,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getMD()
    * @generated
    */
-  int MD = 35;
+  int MD = 37;
 
   /**
    * The number of structural features of the '<em>MD</em>' class.
@@ -1217,7 +1273,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getGDr()
    * @generated
    */
-  int GDR = 36;
+  int GDR = 38;
 
   /**
    * The number of structural features of the '<em>GDr</em>' class.
@@ -1236,7 +1292,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getRGRD()
    * @generated
    */
-  int RGRD = 37;
+  int RGRD = 39;
 
   /**
    * The number of structural features of the '<em>RGRD</em>' class.
@@ -1255,7 +1311,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getAR()
    * @generated
    */
-  int AR = 38;
+  int AR = 40;
 
   /**
    * The number of structural features of the '<em>AR</em>' class.
@@ -1274,7 +1330,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele()
    * @generated
    */
-  int PARALLELE = 39;
+  int PARALLELE = 41;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1311,7 +1367,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele2()
    * @generated
    */
-  int PARALLELE2 = 40;
+  int PARALLELE2 = 42;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1357,7 +1413,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele3()
    * @generated
    */
-  int PARALLELE3 = 41;
+  int PARALLELE3 = 43;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1403,7 +1459,7 @@ public interface DroneDSLPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getParallele4()
    * @generated
    */
-  int PARALLELE4 = 42;
+  int PARALLELE4 = 44;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1516,15 +1572,15 @@ public interface DroneDSLPackage extends EPackage
   EClass getImport();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getImportURI <em>Import URI</em>}'.
+   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Import URI</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getImportURI()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getName()
    * @see #getImport()
    * @generated
    */
-  EAttribute getImport_ImportURI();
+  EAttribute getImport_Name();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_hauteur_max <em>Pourcent vitesse hauteur max</em>}'.
@@ -2265,15 +2321,57 @@ public interface DroneDSLPackage extends EPackage
   EClass getFonctionCall();
 
   /**
-   * Returns the meta object for the reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getRef <em>Ref</em>}'.
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne <em>Fonction Call Interne</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Call Interne</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne
+   * @generated
+   */
+  EClass getFonctionCallInterne();
+
+  /**
+   * Returns the meta object for the reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne#getRef <em>Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Ref</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall#getRef()
-   * @see #getFonctionCall()
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne#getRef()
+   * @see #getFonctionCallInterne()
    * @generated
    */
-  EReference getFonctionCall_Ref();
+  EReference getFonctionCallInterne_Ref();
+
+  /**
+   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne <em>Fonction Call Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fonction Call Externe</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne
+   * @generated
+   */
+  EClass getFonctionCallExterne();
+
+  /**
+   * Returns the meta object for the reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne#getFile <em>File</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>File</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne#getFile()
+   * @see #getFonctionCallExterne()
+   * @generated
+   */
+  EReference getFonctionCallExterne_File();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne#getName()
+   * @see #getFonctionCallExterne()
+   * @generated
+   */
+  EAttribute getFonctionCallExterne_Name();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Main <em>Main</em>}'.
@@ -2551,12 +2649,12 @@ public interface DroneDSLPackage extends EPackage
     EClass IMPORT = eINSTANCE.getImport();
 
     /**
-     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
+    EAttribute IMPORT__NAME = eINSTANCE.getImport_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Pourcent_vitesse_hauteur_maxImpl <em>Pourcent vitesse hauteur max</em>}' class.
@@ -3183,12 +3281,48 @@ public interface DroneDSLPackage extends EPackage
     EClass FONCTION_CALL = eINSTANCE.getFonctionCall();
 
     /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallInterneImpl <em>Fonction Call Interne</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallInterneImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionCallInterne()
+     * @generated
+     */
+    EClass FONCTION_CALL_INTERNE = eINSTANCE.getFonctionCallInterne();
+
+    /**
      * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FONCTION_CALL__REF = eINSTANCE.getFonctionCall_Ref();
+    EReference FONCTION_CALL_INTERNE__REF = eINSTANCE.getFonctionCallInterne_Ref();
+
+    /**
+     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallExterneImpl <em>Fonction Call Externe</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.FonctionCallExterneImpl
+     * @see fr.idmteam1.idmproject.dronedsl.droneDSL.impl.DroneDSLPackageImpl#getFonctionCallExterne()
+     * @generated
+     */
+    EClass FONCTION_CALL_EXTERNE = eINSTANCE.getFonctionCallExterne();
+
+    /**
+     * The meta object literal for the '<em><b>File</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FONCTION_CALL_EXTERNE__FILE = eINSTANCE.getFonctionCallExterne_File();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONCTION_CALL_EXTERNE__NAME = eINSTANCE.getFonctionCallExterne_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.MainImpl <em>Main</em>}' class.

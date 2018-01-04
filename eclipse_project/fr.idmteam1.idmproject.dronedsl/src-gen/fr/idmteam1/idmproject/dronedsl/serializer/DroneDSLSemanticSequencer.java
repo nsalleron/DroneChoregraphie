@@ -12,7 +12,8 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Droite;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max;
@@ -84,8 +85,11 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case DroneDSLPackage.FIN_DE_MAIN:
 				sequence_FinDeMain(context, (FinDeMain) semanticObject); 
 				return; 
-			case DroneDSLPackage.FONCTION_CALL:
-				sequence_FonctionCall(context, (FonctionCall) semanticObject); 
+			case DroneDSLPackage.FONCTION_CALL_EXTERNE:
+				sequence_FonctionCallExterne(context, (FonctionCallExterne) semanticObject); 
+				return; 
+			case DroneDSLPackage.FONCTION_CALL_INTERNE:
+				sequence_FonctionCallInterne(context, (FonctionCallInterne) semanticObject); 
 				return; 
 			case DroneDSLPackage.FONCTION_DECL:
 				sequence_FonctionDecl(context, (FonctionDecl) semanticObject); 
@@ -312,18 +316,41 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     FonctionCall returns FonctionCall
+	 *     FonctionCall returns FonctionCallExterne
+	 *     FonctionCallExterne returns FonctionCallExterne
+	 *
+	 * Constraint:
+	 *     (file=[Import|ID] name=ID)
+	 */
+	protected void sequence_FonctionCallExterne(ISerializationContext context, FonctionCallExterne semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_EXTERNE__FILE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_EXTERNE__FILE));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_EXTERNE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_EXTERNE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFonctionCallExterneAccess().getFileImportIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL_EXTERNE__FILE, false));
+		feeder.accept(grammarAccess.getFonctionCallExterneAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FonctionCall returns FonctionCallInterne
+	 *     FonctionCallInterne returns FonctionCallInterne
 	 *
 	 * Constraint:
 	 *     ref=[FonctionDecl|ID]
 	 */
-	protected void sequence_FonctionCall(ISerializationContext context, FonctionCall semanticObject) {
+	protected void sequence_FonctionCallInterne(ISerializationContext context, FonctionCallInterne semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL__REF));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_INTERNE__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.FONCTION_CALL_INTERNE__REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFonctionCallAccess().getRefFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL__REF, false));
+		feeder.accept(grammarAccess.getFonctionCallInterneAccess().getRefFonctionDeclIDTerminalRuleCall_0_0_1(), semanticObject.eGet(DroneDSLPackage.Literals.FONCTION_CALL_INTERNE__REF, false));
 		feeder.finish();
 	}
 	
@@ -387,15 +414,15 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Import returns Import
 	 *
 	 * Constraint:
-	 *     importURI=INCLUDE
+	 *     name=ID
 	 */
 	protected void sequence_Import(ISerializationContext context, Import semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.IMPORT__IMPORT_URI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.IMPORT__IMPORT_URI));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.IMPORT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.IMPORT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getImportAccess().getImportURIINCLUDETerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getImportAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

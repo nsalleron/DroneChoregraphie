@@ -344,6 +344,22 @@ public class DroneDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLPackage.FONCTION_CALL_INTERNE:
+      {
+        FonctionCallInterne fonctionCallInterne = (FonctionCallInterne)theEObject;
+        T result = caseFonctionCallInterne(fonctionCallInterne);
+        if (result == null) result = caseFonctionCall(fonctionCallInterne);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLPackage.FONCTION_CALL_EXTERNE:
+      {
+        FonctionCallExterne fonctionCallExterne = (FonctionCallExterne)theEObject;
+        T result = caseFonctionCallExterne(fonctionCallExterne);
+        if (result == null) result = caseFonctionCall(fonctionCallExterne);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLPackage.MAIN:
       {
         Main main = (Main)theEObject;
@@ -958,6 +974,38 @@ public class DroneDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFonctionCall(FonctionCall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Call Interne</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Call Interne</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionCallInterne(FonctionCallInterne object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Call Externe</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Call Externe</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionCallExterne(FonctionCallExterne object)
   {
     return null;
   }

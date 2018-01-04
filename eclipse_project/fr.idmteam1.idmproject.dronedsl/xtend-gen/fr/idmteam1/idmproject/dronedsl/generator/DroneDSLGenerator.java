@@ -86,11 +86,6 @@ public class DroneDSLGenerator extends AbstractGenerator {
   
   public CharSequence compile(final Model e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import java.utils.*;");
-    _builder.newLine();
-    _builder.append("import basicCommands.*;        ");
-    _builder.newLine();
-    _builder.newLine();
     {
       EList<Import> _imports = e.getImports();
       boolean _tripleNotEquals = (_imports != null);
@@ -109,8 +104,16 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.append("public static class Main {");
     _builder.newLine();
     _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static void main(String[] args) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("DroneRuntime runtime = new DroneRuntimePrint();");
+    _builder.newLine();
+    _builder.append("\t\t");
     String _string = e.getM().getDecollage().toString();
-    _builder.append(_string, "\t");
+    _builder.append(_string, "\t\t");
     _builder.newLineIfNotEmpty();
     {
       EList<EObject> _mainbody = e.getM().getMainbody();
@@ -120,12 +123,15 @@ public class DroneDSLGenerator extends AbstractGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("            ");
+    _builder.append("\t\t");
     String _string_2 = e.getM().getAtterrissage().toString();
-    _builder.append(_string_2, "            ");
+    _builder.append(_string_2, "\t\t");
+    _builder.append("\t");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
+    _builder.append("\t");
     _builder.newLine();
     {
       EList<FonctionDecl> _fonctions = e.getFonctions();
@@ -141,6 +147,11 @@ public class DroneDSLGenerator extends AbstractGenerator {
         }
       }
     }
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.newLine();
     return _builder;
   }
   
@@ -149,7 +160,7 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.append("public static void ");
     String _name = e.getName();
     _builder.append(_name);
-    _builder.append("(){");
+    _builder.append("() {");
     _builder.newLineIfNotEmpty();
     {
       EList<EObject> _body = e.getBody();
@@ -170,8 +181,7 @@ public class DroneDSLGenerator extends AbstractGenerator {
   public CharSequence compile(final Import e) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("import  ");
-    String _importURI = e.getImportURI();
-    _builder.append(_importURI);
+    _builder.append(e);
     _builder.append(".java;");
     _builder.newLineIfNotEmpty();
     return _builder;

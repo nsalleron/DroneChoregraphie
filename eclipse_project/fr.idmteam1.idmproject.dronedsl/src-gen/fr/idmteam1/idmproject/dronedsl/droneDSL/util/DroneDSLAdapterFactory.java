@@ -246,6 +246,16 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
         return createFonctionCallAdapter();
       }
       @Override
+      public Adapter caseFonctionCallInterne(FonctionCallInterne object)
+      {
+        return createFonctionCallInterneAdapter();
+      }
+      @Override
+      public Adapter caseFonctionCallExterne(FonctionCallExterne object)
+      {
+        return createFonctionCallExterneAdapter();
+      }
+      @Override
       public Adapter caseMain(Main object)
       {
         return createMainAdapter();
@@ -818,6 +828,36 @@ public class DroneDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFonctionCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne <em>Fonction Call Interne</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne
+   * @generated
+   */
+  public Adapter createFonctionCallInterneAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne <em>Fonction Call Externe</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne
+   * @generated
+   */
+  public Adapter createFonctionCallExterneAdapter()
   {
     return null;
   }

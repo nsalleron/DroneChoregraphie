@@ -32,7 +32,7 @@ Workflow {
 		language = StandardLanguage {
 			name = "fr.idmteam1.idmproject.dronedsl.DroneDSL"
 			fileExtensions = "main_drone"
-
+			
 			serializer = {
 				generateStub = false
 			}

@@ -66,6 +66,7 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
     switch (eClass.getClassifierID())
     {
       case DroneDSLLibPackage.MODEL: return createModel();
+      case DroneDSLLibPackage.LIB_NAME: return createLibName();
       case DroneDSLLibPackage.SECONDE_CONST: return createSecondeConst();
       case DroneDSLLibPackage.POURCENT_CONST: return createPourcentConst();
       case DroneDSLLibPackage.SECONDE_DECL: return createSecondeDecl();
@@ -87,9 +88,11 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
       case DroneDSLLibPackage.ROTATION_DROITE: return createRotationDroite();
       case DroneDSLLibPackage.PAUSE: return createPause();
       case DroneDSLLibPackage.MOUVEMENT: return createMouvement();
+      case DroneDSLLibPackage.DECOLLER_ATTERRIR: return createDecollerAtterrir();
       case DroneDSLLibPackage.COMMANDE_BASIQUE: return createCommandeBasique();
       case DroneDSLLibPackage.FONCTION_DECL: return createFonctionDecl();
       case DroneDSLLibPackage.FONCTION_CALL: return createFonctionCall();
+      case DroneDSLLibPackage.FONCTION_CALL_INTERNE: return createFonctionCallInterne();
       case DroneDSLLibPackage.MD: return createMD();
       case DroneDSLLibPackage.GDR: return createGDr();
       case DroneDSLLibPackage.RGRD: return createRGRD();
@@ -112,6 +115,17 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LibName createLibName()
+  {
+    LibNameImpl libName = new LibNameImpl();
+    return libName;
   }
 
   /**
@@ -350,6 +364,17 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
    * <!-- end-user-doc -->
    * @generated
    */
+  public DecollerAtterrir createDecollerAtterrir()
+  {
+    DecollerAtterrirImpl decollerAtterrir = new DecollerAtterrirImpl();
+    return decollerAtterrir;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public CommandeBasique createCommandeBasique()
   {
     CommandeBasiqueImpl commandeBasique = new CommandeBasiqueImpl();
@@ -376,6 +401,17 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
   {
     FonctionCallImpl fonctionCall = new FonctionCallImpl();
     return fonctionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionCallInterne createFonctionCallInterne()
+  {
+    FonctionCallInterneImpl fonctionCallInterne = new FonctionCallInterneImpl();
+    return fonctionCallInterne;
   }
 
   /**

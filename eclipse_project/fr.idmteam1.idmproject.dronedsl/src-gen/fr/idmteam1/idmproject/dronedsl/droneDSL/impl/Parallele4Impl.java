@@ -261,21 +261,5 @@ public class Parallele4Impl extends ParalleleImpl implements Parallele4
     }
     return super.eIsSet(featureID);
   }
-  @Override
-   public String toString() {
- 	  
-  	  String a = super.a.toString().split("\\.")[0];
-  	  String b = super.b.toString().split("\\.")[0];
-  	  String c = this.c.toString().split("\\.")[0];
-      String d = this.d.toString().split("\\.")[0];
-      String name = Integer.toString(this.hashCode());
 
-  	  return "\tParallele p4_"+name+" = new Parallele();\n"
-  	  		+ "			  p4_"+name+".addCommande("+a+");\n"
-  	  		+ "			  p4_"+name+".addCommande("+b+");\n"
-  	  		+ "			  p4_"+name+".addCommande("+c+");\n"
-          + "			  p4_"+name+".addCommande("+d+");\n"
-  	  		+ "\tp4_"+name+".execute(runtime);";
-    }
-
-} //ModifiedParallele4Impl toString added
+} //Parallele4Impl

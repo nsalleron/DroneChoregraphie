@@ -262,9 +262,5 @@ public class RotationDroiteImpl extends MouvementImpl implements RotationDroite
     }
     return super.eIsSet(featureID);
   }
-  @Override
-    public String toString() {
-  	  return "\tnew RotationDroite("+this.duree+","+this.vitesse+").execute(runtime)";
-    }
 
-} //ModifiedRotationDroiteImpl toString added
+} //RotationDroiteImpl

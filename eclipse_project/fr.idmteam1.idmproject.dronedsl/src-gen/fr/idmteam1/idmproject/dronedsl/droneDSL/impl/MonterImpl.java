@@ -262,9 +262,5 @@ public class MonterImpl extends MouvementImpl implements Monter
     }
     return super.eIsSet(featureID);
   }
-  @Override
-    public String toString() {
-  	  return "\tnew Monter("+this.duree+","+this.vitesse+").execute(runtime)";
-    }
 
-} //ModifiedMonterImpl toString added
+} //MonterImpl

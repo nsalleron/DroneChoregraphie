@@ -14,7 +14,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSLLib;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite#getVitesse_deplacement <em>Vitesse deplacement</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getDroite()
@@ -50,29 +50,29 @@ public interface Droite extends Mouvement, CommandeBasique, GDr
   void setDuree(SecondeExp value);
 
   /**
-   * Returns the value of the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * Returns the value of the '<em><b>Vitesse</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vitesse deplacement</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Vitesse</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #setVitesse_deplacement(PourcentExp)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getDroite_Vitesse_deplacement()
+   * @return the value of the '<em>Vitesse</em>' containment reference.
+   * @see #setVitesse(PourcentExp)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getDroite_Vitesse()
    * @model containment="true"
    * @generated
    */
-  PourcentExp getVitesse_deplacement();
+  PourcentExp getVitesse();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite#getVitesse_deplacement <em>Vitesse deplacement</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Droite#getVitesse <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #getVitesse_deplacement()
+   * @param value the new value of the '<em>Vitesse</em>' containment reference.
+   * @see #getVitesse()
    * @generated
    */
-  void setVitesse_deplacement(PourcentExp value);
+  void setVitesse(PourcentExp value);
 
 } // Droite

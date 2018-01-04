@@ -3,7 +3,21 @@
  */
 package fr.idmteam1.idmproject.dronedsl.validation;
 
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName;
 import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLLibValidator;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.validation.CheckType;
+import org.eclipse.xtext.xbase.lib.InputOutput;
 
 /**
  * This class contains custom validation rules.
@@ -12,4 +26,161 @@ import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLLibValidator;
  */
 @SuppressWarnings("all")
 public class DroneDSLLibValidator extends AbstractDroneDSLLibValidator {
+  public final static String CYCLE_ERR = "recursionDetected";
+  
+  public final static String CYCLE_MSG = "Erreur: recursion non autorisée";
+  
+  public final static String LIBNAME_ERR = "libNameNotMatching";
+  
+  public final static String LIBNAME_MSG = "Erreur: le nom de la lib et le nom de fichier doivent être identiques";
+  
+  private static boolean inMain = false;
+  
+  private static String actualFunc = "";
+  
+  private static HashMap<Object, Object> map = new HashMap<Object, Object>();
+  
+  private boolean cycleDetected = true;
+  
+  private Object cycleTestLock = new Object();
+  
+  @Check(CheckType.FAST)
+  public void checkLibName(final LibName libName) {
+    final String fileName = EcoreUtil2.getNormalizedURI(libName.eResource()).trimFileExtension().lastSegment();
+    boolean _equals = fileName.equals(libName.getName());
+    boolean _not = (!_equals);
+    if (_not) {
+      String _name = libName.getName();
+      String _plus = ((("filename and lib name are different: filename: " + fileName) + " libname: ") + _name);
+      InputOutput.<String>println(_plus);
+      this.error(DroneDSLLibValidator.LIBNAME_MSG, DroneDSLLibPackage.Literals.LIB_NAME__NAME, DroneDSLLibValidator.LIBNAME_ERR);
+    }
+  }
+  
+  @Check(CheckType.FAST)
+  public Object checkFunctionDecl(final FonctionDecl decl) {
+    Object _xblockexpression = null;
+    {
+      DroneDSLLibValidator.actualFunc = decl.getName();
+      ArrayList<Object> _arrayList = new ArrayList<Object>();
+      _xblockexpression = DroneDSLLibValidator.map.put(DroneDSLLibValidator.actualFunc, _arrayList);
+    }
+    return _xblockexpression;
+  }
+  
+  @Check(CheckType.FAST)
+  public Boolean validFunctionCall(final FonctionCallInterne call) {
+    boolean _xsynchronizedexpression = false;
+    synchronized (this.cycleTestLock) {
+      boolean _xblockexpression = false;
+      {
+        this.cycleDetected = true;
+        boolean _xifexpression = false;
+        if ((!DroneDSLLibValidator.inMain)) {
+          boolean _xifexpression_1 = false;
+          boolean _equals = DroneDSLLibValidator.actualFunc.equals(call.getRef().getName());
+          boolean _not = (!_equals);
+          if (_not) {
+            boolean _xblockexpression_1 = false;
+            {
+              Object _get = DroneDSLLibValidator.map.get(DroneDSLLibValidator.actualFunc);
+              ((List<Object>) _get).add(call.getRef().getName());
+              this.printMap();
+              _xblockexpression_1 = this.cycleDetected = (this.checkCycle()).booleanValue();
+            }
+            _xifexpression_1 = _xblockexpression_1;
+          } else {
+            InputOutput.<String>println("ERREUR DE CYCLE");
+            this.cycleDetected = true;
+            this.error(DroneDSLLibValidator.CYCLE_MSG, DroneDSLLibPackage.Literals.FONCTION_CALL_INTERNE__REF, DroneDSLLibValidator.CYCLE_ERR);
+          }
+          _xifexpression = _xifexpression_1;
+        }
+        _xblockexpression = _xifexpression;
+      }
+      _xsynchronizedexpression = _xblockexpression;
+    }
+    return Boolean.valueOf(_xsynchronizedexpression);
+  }
+  
+  public void printMap() {
+    Set<Map.Entry<Object, Object>> set = DroneDSLLibValidator.map.entrySet();
+    Iterator<Map.Entry<Object, Object>> iterator = set.iterator();
+    while (iterator.hasNext()) {
+      {
+        Map.Entry<Object, Object> _next = iterator.next();
+        Map.Entry<Object, Object> mentry = ((Map.Entry<Object, Object>) _next);
+        Object _key = mentry.getKey();
+        String _plus = ("key is: " + _key);
+        String _plus_1 = (_plus + " & Value is: ");
+        System.out.print(_plus_1);
+        System.out.println(mentry.getValue());
+      }
+    }
+  }
+  
+  /**
+   * Parcourt la map, pour chaque element de la liste de la clef en cours d'analyse (key)
+   * on verifie le cycle via la fonction checkCycleProfond
+   */
+  public Boolean checkCycle() {
+    Set<Map.Entry<Object, Object>> set = DroneDSLLibValidator.map.entrySet();
+    Iterator<Map.Entry<Object, Object>> iterator = set.iterator();
+    String key = "";
+    while (iterator.hasNext()) {
+      {
+        Map.Entry<Object, Object> _next = iterator.next();
+        Map.Entry<Object, Object> mentry = ((Map.Entry<Object, Object>) _next);
+        Object _key = mentry.getKey();
+        key = ((String) _key);
+        Object _value = mentry.getValue();
+        List<Object> funcCallList = ((List<Object>) _value);
+        Boolean _checkCycleProfond = this.checkCycleProfond(key, funcCallList);
+        if ((_checkCycleProfond).booleanValue()) {
+          return Boolean.valueOf(true);
+        }
+      }
+    }
+    return Boolean.valueOf(false);
+  }
+  
+  /**
+   * Alors la c'est chaud.
+   * @param funcCallList c'est la liste des fonctions appelees par la fonction de nom key
+   */
+  public Boolean checkCycleProfond(final String key, final List<Object> funcCallList) {
+    String func = "";
+    for (int i = 0; (i < funcCallList.size()); i++) {
+      {
+        Object _get = funcCallList.get(i);
+        func = ((String) _get);
+        Object _get_1 = DroneDSLLibValidator.map.get(func);
+        List<Object> list = ((List<Object>) _get_1);
+        for (int j = 0; (j < list.size()); j++) {
+          Object _get_2 = list.get(j);
+          boolean _equals = ((String) _get_2).equals(((String) key));
+          if (_equals) {
+            InputOutput.<String>println("ERREUR DE CYCLE");
+            this.error(DroneDSLLibValidator.CYCLE_MSG, DroneDSLLibPackage.Literals.FONCTION_CALL_INTERNE__REF, DroneDSLLibValidator.CYCLE_ERR);
+            this.cycleDetected = true;
+            return Boolean.valueOf(true);
+          } else {
+            Object _get_3 = list.get(j);
+            String func2 = ((String) _get_3);
+            boolean _equals_1 = func2.equals(key);
+            boolean _not = (!_equals_1);
+            if (_not) {
+              Object _get_4 = DroneDSLLibValidator.map.get(func2);
+              List<Object> list2 = ((List<Object>) _get_4);
+              Boolean _checkCycleProfond = this.checkCycleProfond(key, list2);
+              if ((_checkCycleProfond).booleanValue()) {
+                return Boolean.valueOf(true);
+              }
+            }
+          }
+        }
+      }
+    }
+    return Boolean.valueOf(false);
+  }
 }

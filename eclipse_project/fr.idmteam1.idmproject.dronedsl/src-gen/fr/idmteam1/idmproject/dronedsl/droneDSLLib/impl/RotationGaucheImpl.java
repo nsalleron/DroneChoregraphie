@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.RotationGaucheImpl#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.RotationGaucheImpl#getVitesse_rotation <em>Vitesse rotation</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.RotationGaucheImpl#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,14 +43,14 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
   protected SecondeExp duree;
 
   /**
-   * The cached value of the '{@link #getVitesse_rotation() <em>Vitesse rotation</em>}' containment reference.
+   * The cached value of the '{@link #getVitesse() <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVitesse_rotation()
+   * @see #getVitesse()
    * @generated
    * @ordered
    */
-  protected PourcentExp vitesse_rotation;
+  protected PourcentExp vitesse;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +126,9 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public PourcentExp getVitesse_rotation()
+  public PourcentExp getVitesse()
   {
-    return vitesse_rotation;
+    return vitesse;
   }
 
   /**
@@ -136,13 +136,13 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVitesse_rotation(PourcentExp newVitesse_rotation, NotificationChain msgs)
+  public NotificationChain basicSetVitesse(PourcentExp newVitesse, NotificationChain msgs)
   {
-    PourcentExp oldVitesse_rotation = vitesse_rotation;
-    vitesse_rotation = newVitesse_rotation;
+    PourcentExp oldVitesse = vitesse;
+    vitesse = newVitesse;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION, oldVitesse_rotation, newVitesse_rotation);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE, oldVitesse, newVitesse);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -153,20 +153,20 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVitesse_rotation(PourcentExp newVitesse_rotation)
+  public void setVitesse(PourcentExp newVitesse)
   {
-    if (newVitesse_rotation != vitesse_rotation)
+    if (newVitesse != vitesse)
     {
       NotificationChain msgs = null;
-      if (vitesse_rotation != null)
-        msgs = ((InternalEObject)vitesse_rotation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION, null, msgs);
-      if (newVitesse_rotation != null)
-        msgs = ((InternalEObject)newVitesse_rotation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION, null, msgs);
-      msgs = basicSetVitesse_rotation(newVitesse_rotation, msgs);
+      if (vitesse != null)
+        msgs = ((InternalEObject)vitesse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE, null, msgs);
+      if (newVitesse != null)
+        msgs = ((InternalEObject)newVitesse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE, null, msgs);
+      msgs = basicSetVitesse(newVitesse, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION, newVitesse_rotation, newVitesse_rotation));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE, newVitesse, newVitesse));
   }
 
   /**
@@ -181,8 +181,8 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
     {
       case DroneDSLLibPackage.ROTATION_GAUCHE__DUREE:
         return basicSetDuree(null, msgs);
-      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION:
-        return basicSetVitesse_rotation(null, msgs);
+      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE:
+        return basicSetVitesse(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,8 +199,8 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
     {
       case DroneDSLLibPackage.ROTATION_GAUCHE__DUREE:
         return getDuree();
-      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION:
-        return getVitesse_rotation();
+      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE:
+        return getVitesse();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -218,8 +218,8 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
       case DroneDSLLibPackage.ROTATION_GAUCHE__DUREE:
         setDuree((SecondeExp)newValue);
         return;
-      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION:
-        setVitesse_rotation((PourcentExp)newValue);
+      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE:
+        setVitesse((PourcentExp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,8 +238,8 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
       case DroneDSLLibPackage.ROTATION_GAUCHE__DUREE:
         setDuree((SecondeExp)null);
         return;
-      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION:
-        setVitesse_rotation((PourcentExp)null);
+      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE:
+        setVitesse((PourcentExp)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,8 +257,8 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
     {
       case DroneDSLLibPackage.ROTATION_GAUCHE__DUREE:
         return duree != null;
-      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE_ROTATION:
-        return vitesse_rotation != null;
+      case DroneDSLLibPackage.ROTATION_GAUCHE__VITESSE:
+        return vitesse != null;
     }
     return super.eIsSet(featureID);
   }

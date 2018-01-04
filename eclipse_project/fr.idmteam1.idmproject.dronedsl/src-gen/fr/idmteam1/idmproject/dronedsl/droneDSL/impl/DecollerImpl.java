@@ -26,9 +26,16 @@ public class DecollerImpl extends DecollerAtterrirImpl implements Decoller
   {
     super();
   }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
-  public String toString() {
-  	  return "new Decoller().execute(runtime)";
+  protected EClass eStaticClass()
+  {
+    return DroneDSLPackage.Literals.DECOLLER;
   }
 
-} //ModifiedDecollerImpl toString added
+} //DecollerImpl

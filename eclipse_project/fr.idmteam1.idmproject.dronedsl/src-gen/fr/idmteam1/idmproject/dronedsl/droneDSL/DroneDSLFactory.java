@@ -330,6 +330,24 @@ public interface DroneDSLFactory extends EFactory
   FonctionCall createFonctionCall();
 
   /**
+   * Returns a new object of class '<em>Fonction Call Interne</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Call Interne</em>'.
+   * @generated
+   */
+  FonctionCallInterne createFonctionCallInterne();
+
+  /**
+   * Returns a new object of class '<em>Fonction Call Externe</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Call Externe</em>'.
+   * @generated
+   */
+  FonctionCallExterne createFonctionCallExterne();
+
+  /**
    * Returns a new object of class '<em>Main</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

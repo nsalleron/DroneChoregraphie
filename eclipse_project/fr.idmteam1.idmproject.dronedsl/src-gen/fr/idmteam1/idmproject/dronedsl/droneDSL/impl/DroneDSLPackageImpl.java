@@ -15,6 +15,8 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallExterne;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.GDr;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Gauche;
@@ -304,6 +306,20 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass fonctionCallInterneEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fonctionCallExterneEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass mainEClass = null;
 
   /**
@@ -490,7 +506,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImport_ImportURI()
+  public EAttribute getImport_Name()
   {
     return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
@@ -1200,9 +1216,49 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFonctionCall_Ref()
+  public EClass getFonctionCallInterne()
   {
-    return (EReference)fonctionCallEClass.getEStructuralFeatures().get(0);
+    return fonctionCallInterneEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFonctionCallInterne_Ref()
+  {
+    return (EReference)fonctionCallInterneEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFonctionCallExterne()
+  {
+    return fonctionCallExterneEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFonctionCallExterne_File()
+  {
+    return (EReference)fonctionCallExterneEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFonctionCallExterne_Name()
+  {
+    return (EAttribute)fonctionCallExterneEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1432,7 +1488,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     createEReference(modelEClass, MODEL__FONCTIONS);
 
     importEClass = createEClass(IMPORT);
-    createEAttribute(importEClass, IMPORT__IMPORT_URI);
+    createEAttribute(importEClass, IMPORT__NAME);
 
     pourcent_vitesse_hauteur_maxEClass = createEClass(POURCENT_VITESSE_HAUTEUR_MAX);
     createEReference(pourcent_vitesse_hauteur_maxEClass, POURCENT_VITESSE_HAUTEUR_MAX__VITESSE_VERTICALE);
@@ -1535,7 +1591,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     createEAttribute(finDeMainEClass, FIN_DE_MAIN__ACCOLADE);
 
     fonctionCallEClass = createEClass(FONCTION_CALL);
-    createEReference(fonctionCallEClass, FONCTION_CALL__REF);
+
+    fonctionCallInterneEClass = createEClass(FONCTION_CALL_INTERNE);
+    createEReference(fonctionCallInterneEClass, FONCTION_CALL_INTERNE__REF);
+
+    fonctionCallExterneEClass = createEClass(FONCTION_CALL_EXTERNE);
+    createEReference(fonctionCallExterneEClass, FONCTION_CALL_EXTERNE__FILE);
+    createEAttribute(fonctionCallExterneEClass, FONCTION_CALL_EXTERNE__NAME);
 
     mainEClass = createEClass(MAIN);
     createEReference(mainEClass, MAIN__DECOLLAGE);
@@ -1628,6 +1690,8 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     rotationDroiteEClass.getESuperTypes().add(this.getCommandeBasique());
     rotationDroiteEClass.getESuperTypes().add(this.getRGRD());
     pauseEClass.getESuperTypes().add(this.getCommandeBasique());
+    fonctionCallInterneEClass.getESuperTypes().add(this.getFonctionCall());
+    fonctionCallExterneEClass.getESuperTypes().add(this.getFonctionCall());
     paralleleEClass.getESuperTypes().add(this.getMouvement());
     parallele2EClass.getESuperTypes().add(this.getParallele());
     parallele3EClass.getESuperTypes().add(this.getParallele());
@@ -1641,7 +1705,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEReference(getModel_Fonctions(), this.getFonctionDecl(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImport_Name(), ecorePackage.getEString(), "name", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcent_vitesse_hauteur_maxEClass, Pourcent_vitesse_hauteur_max.class, "Pourcent_vitesse_hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPourcent_vitesse_hauteur_max_Vitesse_verticale(), this.getPourcentConst(), null, "vitesse_verticale", null, 0, 1, Pourcent_vitesse_hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1744,7 +1808,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEAttribute(getFinDeMain_Accolade(), ecorePackage.getEString(), "accolade", null, 0, 1, FinDeMain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fonctionCallEClass, FonctionCall.class, "FonctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFonctionCall_Ref(), this.getFonctionDecl(), null, "ref", null, 0, 1, FonctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fonctionCallInterneEClass, FonctionCallInterne.class, "FonctionCallInterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFonctionCallInterne_Ref(), this.getFonctionDecl(), null, "ref", null, 0, 1, FonctionCallInterne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fonctionCallExterneEClass, FonctionCallExterne.class, "FonctionCallExterne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFonctionCallExterne_File(), this.getImport(), null, "file", null, 0, 1, FonctionCallExterne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFonctionCallExterne_Name(), ecorePackage.getEString(), "name", null, 0, 1, FonctionCallExterne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMain_Decollage(), this.getDecoller(), null, "decollage", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

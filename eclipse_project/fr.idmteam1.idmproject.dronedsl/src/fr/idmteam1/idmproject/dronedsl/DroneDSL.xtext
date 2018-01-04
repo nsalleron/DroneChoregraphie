@@ -23,12 +23,17 @@ terminal POURCENT returns ecore::EString:
 
 // Imports
 
-terminal INCLUDE: 
+Import:
+	'import' '<' name=ID '.lib_drone''>' 
+;
+
+/*terminal INCLUDE: 
 	ID('.lib_drone')
 ;
+
 Import:
     'import' '<'importURI=INCLUDE'>'
-;
+;*/
 
 //Prologue
 
@@ -157,7 +162,15 @@ FinDeMain:
 ;
 
 FonctionCall:
+	FonctionCallInterne|FonctionCallExterne
+;
+
+FonctionCallInterne:
 	ref=[FonctionDecl]'()'
+;
+
+FonctionCallExterne:
+	file=[Import]'.' name=ID '()'
 ;
 
 // Main

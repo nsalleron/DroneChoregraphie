@@ -165,7 +165,13 @@ public class SecondeConstImpl extends SecondeExpImpl implements SecondeConst
   @Override
   public String toString()
   {
-    return this.val;
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (val: ");
+    result.append(val);
+    result.append(')');
+    return result.toString();
   }
 
-} //ModifiedSecondeConstImpl toString added
+} //SecondeConstImpl

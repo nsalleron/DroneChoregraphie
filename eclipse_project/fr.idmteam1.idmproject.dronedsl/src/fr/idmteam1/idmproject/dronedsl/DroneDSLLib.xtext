@@ -5,6 +5,7 @@ generate droneDSLLib "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSLLib"
 
 Model:
 	(
+		(lib=LibName)
 		(fonctions+=FonctionDecl)*
 	);
 
@@ -16,6 +17,12 @@ terminal SECONDE:
 
 terminal POURCENT returns ecore::EString:
 	 (('1'..'9')|('1'..'9')('0'..'9')|('100'..'100'))'%'
+;
+
+// Lib
+
+LibName:
+	'lib:' name=ID
 ;
 
 // Variables
@@ -62,58 +69,66 @@ Atterrir:
 ;
 
 Monter:
-	'monter('duree=SecondeExp ',' vitesse_verticale=PourcentExp')'
+	'monter('duree=SecondeExp ',' vitesse=PourcentExp')'
 ;
 
 Descendre:
-	'descendre('duree=SecondeExp',' vitesse_verticale=PourcentExp')'
+	'descendre('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 Avancer:
-	'avancer('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+	'avancer('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 Reculer:
-	'reculer('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+	'reculer('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 Gauche:
-	'gauche('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+	'gauche('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 Droite:
-	'droite('duree=SecondeExp',' vitesse_deplacement=PourcentExp')'
+	'droite('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 RotationGauche:
-	'rotation_gauche('duree=SecondeExp',' vitesse_rotation=PourcentExp')'
+	'rotation_gauche('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 RotationDroite:
-	'rotation_droite('duree=SecondeExp',' vitesse_rotation=PourcentExp')'
+	'rotation_droite('duree=SecondeExp',' vitesse=PourcentExp')'
 ;
 
 Pause:
-	'droite('duree=SecondeExp')'
+	'pause('duree=SecondeExp')'
 ;
 
 Mouvement:
 	Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Parallele
 ;
 
+DecollerAtterrir:
+	Decoller|Atterrir
+;
+
 CommandeBasique:
-	Decoller|Atterrir|Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Pause
+	Avancer|Reculer|Monter|Descendre|Gauche|Droite|RotationGauche|RotationDroite|Pause
 ;
 
 // Fonctions
 
 FonctionDecl:
 	'func' name=ID '()''{'
-		 body += (VarDecl|CommandeBasique|Parallele|FonctionCall)*
+		 body += (VarDecl|CommandeBasique|Parallele|FonctionCall|DecollerAtterrir)*
 	'}'
 ;
 
 FonctionCall:
+	FonctionCallInterne
+;
+
+FonctionCallInterne:
 	ref=[FonctionDecl]'()'
 ;
 

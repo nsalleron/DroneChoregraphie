@@ -81,6 +81,11 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseLibName(LibName object)
+      {
+        return createLibNameAdapter();
+      }
+      @Override
       public Adapter caseSecondeConst(SecondeConst object)
       {
         return createSecondeConstAdapter();
@@ -186,6 +191,11 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
         return createMouvementAdapter();
       }
       @Override
+      public Adapter caseDecollerAtterrir(DecollerAtterrir object)
+      {
+        return createDecollerAtterrirAdapter();
+      }
+      @Override
       public Adapter caseCommandeBasique(CommandeBasique object)
       {
         return createCommandeBasiqueAdapter();
@@ -199,6 +209,11 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFonctionCall(FonctionCall object)
       {
         return createFonctionCallAdapter();
+      }
+      @Override
+      public Adapter caseFonctionCallInterne(FonctionCallInterne object)
+      {
+        return createFonctionCallInterneAdapter();
       }
       @Override
       public Adapter caseMD(MD object)
@@ -273,6 +288,21 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName <em>Lib Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName
+   * @generated
+   */
+  public Adapter createLibNameAdapter()
   {
     return null;
   }
@@ -593,6 +623,21 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.DecollerAtterrir <em>Decoller Atterrir</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DecollerAtterrir
+   * @generated
+   */
+  public Adapter createDecollerAtterrirAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.CommandeBasique <em>Commande Basique</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -633,6 +678,21 @@ public class DroneDSLLibAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFonctionCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne <em>Fonction Call Interne</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne
+   * @generated
+   */
+  public Adapter createFonctionCallInterneAdapter()
   {
     return null;
   }

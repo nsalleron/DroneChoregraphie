@@ -13,7 +13,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Model/fonctions"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//Import/importURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//Import/name"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Pourcent_vitesse_hauteur_max">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Pourcent_vitesse_hauteur_max/vitesse_verticale"/>
@@ -109,8 +109,13 @@
     <genClasses ecoreClass="DroneDSL.ecore#//FinDeMain">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FinDeMain/accolade"/>
     </genClasses>
-    <genClasses ecoreClass="DroneDSL.ecore#//FonctionCall">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionCall/ref"/>
+    <genClasses ecoreClass="DroneDSL.ecore#//FonctionCall"/>
+    <genClasses ecoreClass="DroneDSL.ecore#//FonctionCallInterne">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionCallInterne/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="DroneDSL.ecore#//FonctionCallExterne">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//FonctionCallExterne/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSL.ecore#//FonctionCallExterne/name"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Main">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Main/decollage"/>

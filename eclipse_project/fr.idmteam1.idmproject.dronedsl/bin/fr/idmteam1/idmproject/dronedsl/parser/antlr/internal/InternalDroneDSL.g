@@ -181,9 +181,9 @@ ruleImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_importURI_2_0=RULE_INCLUDE
+				lv_name_2_0=RULE_ID
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getImportAccess().getImportURIINCLUDETerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getImportAccess().getNameIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -191,15 +191,19 @@ ruleImport returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"importURI",
-						lv_importURI_2_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.INCLUDE");
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		otherlv_3='>'
+		otherlv_3='.lib_drone'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getImportAccess().getGreaterThanSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getImportAccess().getLib_droneKeyword_3());
+		}
+		otherlv_4='>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getImportAccess().getGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -1952,22 +1956,116 @@ ruleFonctionCall returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		{
+			newCompositeNode(grammarAccess.getFonctionCallAccess().getFonctionCallInterneParserRuleCall_0());
+		}
+		this_FonctionCallInterne_0=ruleFonctionCallInterne
+		{
+			$current = $this_FonctionCallInterne_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getFonctionCallAccess().getFonctionCallExterneParserRuleCall_1());
+		}
+		this_FonctionCallExterne_1=ruleFonctionCallExterne
+		{
+			$current = $this_FonctionCallExterne_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleFonctionCallInterne
+entryRuleFonctionCallInterne returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFonctionCallInterneRule()); }
+	iv_ruleFonctionCallInterne=ruleFonctionCallInterne
+	{ $current=$iv_ruleFonctionCallInterne.current; }
+	EOF;
+
+// Rule FonctionCallInterne
+ruleFonctionCallInterne returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
 		(
 			(
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getFonctionCallRule());
+						$current = createModelElement(grammarAccess.getFonctionCallInterneRule());
 					}
 				}
 				otherlv_0=RULE_ID
 				{
-					newLeafNode(otherlv_0, grammarAccess.getFonctionCallAccess().getRefFonctionDeclCrossReference_0_0());
+					newLeafNode(otherlv_0, grammarAccess.getFonctionCallInterneAccess().getRefFonctionDeclCrossReference_0_0());
 				}
 			)
 		)
 		otherlv_1='()'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getFonctionCallAccess().getLeftParenthesisRightParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getFonctionCallInterneAccess().getLeftParenthesisRightParenthesisKeyword_1());
+		}
+	)
+;
+
+// Entry rule entryRuleFonctionCallExterne
+entryRuleFonctionCallExterne returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFonctionCallExterneRule()); }
+	iv_ruleFonctionCallExterne=ruleFonctionCallExterne
+	{ $current=$iv_ruleFonctionCallExterne.current; }
+	EOF;
+
+// Rule FonctionCallExterne
+ruleFonctionCallExterne returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFonctionCallExterneRule());
+					}
+				}
+				otherlv_0=RULE_ID
+				{
+					newLeafNode(otherlv_0, grammarAccess.getFonctionCallExterneAccess().getFileImportCrossReference_0_0());
+				}
+			)
+		)
+		otherlv_1='.'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getFonctionCallExterneAccess().getFullStopKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getFonctionCallExterneAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFonctionCallExterneRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_3='()'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getFonctionCallExterneAccess().getLeftParenthesisRightParenthesisKeyword_3());
 		}
 	)
 ;
@@ -6743,8 +6841,6 @@ ruleParallele4 returns [EObject current=null]
 RULE_SECONDE : RULE_INT;
 
 RULE_POURCENT : ('1'..'9'|'1'..'9' '0'..'9'|'100'..'100') '%';
-
-RULE_INCLUDE : RULE_ID '.lib_drone';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

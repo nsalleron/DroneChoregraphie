@@ -262,9 +262,5 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
     }
     return super.eIsSet(featureID);
   }
-  @Override
-    public String toString() {
-  	  return "\tnew RotationGauche("+this.duree+","+this.vitesse+").execute(runtime)";
-    }
 
-} //ModifiedRotationGaucheImpl toString added
+} //RotationGaucheImpl

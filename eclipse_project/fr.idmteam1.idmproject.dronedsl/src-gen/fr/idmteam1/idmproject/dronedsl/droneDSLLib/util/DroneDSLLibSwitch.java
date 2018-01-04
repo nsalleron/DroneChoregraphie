@@ -80,6 +80,13 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLLibPackage.LIB_NAME:
+      {
+        LibName libName = (LibName)theEObject;
+        T result = caseLibName(libName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLLibPackage.SECONDE_CONST:
       {
         SecondeConst secondeConst = (SecondeConst)theEObject;
@@ -153,7 +160,7 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
       {
         Decoller decoller = (Decoller)theEObject;
         T result = caseDecoller(decoller);
-        if (result == null) result = caseCommandeBasique(decoller);
+        if (result == null) result = caseDecollerAtterrir(decoller);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -161,7 +168,7 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
       {
         Atterrir atterrir = (Atterrir)theEObject;
         T result = caseAtterrir(atterrir);
-        if (result == null) result = caseCommandeBasique(atterrir);
+        if (result == null) result = caseDecollerAtterrir(atterrir);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -260,6 +267,13 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DroneDSLLibPackage.DECOLLER_ATTERRIR:
+      {
+        DecollerAtterrir decollerAtterrir = (DecollerAtterrir)theEObject;
+        T result = caseDecollerAtterrir(decollerAtterrir);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DroneDSLLibPackage.COMMANDE_BASIQUE:
       {
         CommandeBasique commandeBasique = (CommandeBasique)theEObject;
@@ -278,6 +292,14 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
       {
         FonctionCall fonctionCall = (FonctionCall)theEObject;
         T result = caseFonctionCall(fonctionCall);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DroneDSLLibPackage.FONCTION_CALL_INTERNE:
+      {
+        FonctionCallInterne fonctionCallInterne = (FonctionCallInterne)theEObject;
+        T result = caseFonctionCallInterne(fonctionCallInterne);
+        if (result == null) result = caseFonctionCall(fonctionCallInterne);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,6 +382,22 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModel(Model object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Lib Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Lib Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLibName(LibName object)
   {
     return null;
   }
@@ -701,6 +739,22 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Decoller Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Decoller Atterrir</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecollerAtterrir(DecollerAtterrir object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Commande Basique</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -744,6 +798,22 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFonctionCall(FonctionCall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fonction Call Interne</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fonction Call Interne</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFonctionCallInterne(FonctionCallInterne object)
   {
     return null;
   }

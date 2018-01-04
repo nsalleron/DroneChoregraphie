@@ -99,6 +99,8 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
       case DroneDSLPackage.FONCTION_DECL: return createFonctionDecl();
       case DroneDSLPackage.FIN_DE_MAIN: return createFinDeMain();
       case DroneDSLPackage.FONCTION_CALL: return createFonctionCall();
+      case DroneDSLPackage.FONCTION_CALL_INTERNE: return createFonctionCallInterne();
+      case DroneDSLPackage.FONCTION_CALL_EXTERNE: return createFonctionCallExterne();
       case DroneDSLPackage.MAIN: return createMain();
       case DroneDSLPackage.MD: return createMD();
       case DroneDSLPackage.GDR: return createGDr();
@@ -485,6 +487,28 @@ public class DroneDSLFactoryImpl extends EFactoryImpl implements DroneDSLFactory
   {
     FonctionCallImpl fonctionCall = new FonctionCallImpl();
     return fonctionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionCallInterne createFonctionCallInterne()
+  {
+    FonctionCallInterneImpl fonctionCallInterne = new FonctionCallInterneImpl();
+    return fonctionCallInterne;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FonctionCallExterne createFonctionCallExterne()
+  {
+    FonctionCallExterneImpl fonctionCallExterne = new FonctionCallExterneImpl();
+    return fonctionCallExterne;
   }
 
   /**

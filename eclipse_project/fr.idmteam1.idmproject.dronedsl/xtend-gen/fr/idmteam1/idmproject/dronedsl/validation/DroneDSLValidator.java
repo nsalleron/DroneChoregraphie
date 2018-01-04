@@ -7,7 +7,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.Atterrir;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCall;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement;
@@ -113,9 +113,9 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
               return Boolean.valueOf(true);
             }
           } else {
-            if ((obj instanceof FonctionCall)) {
-              FonctionCall fonctionCall = FonctionCall.class.cast(obj);
-              FonctionDecl fonctionDecl = fonctionCall.getRef();
+            if ((obj instanceof FonctionCallInterne)) {
+              FonctionCallInterne fonctionCallInterne = FonctionCallInterne.class.cast(obj);
+              FonctionDecl fonctionDecl = fonctionCallInterne.getRef();
               Boolean _checkDecollageAtterrir = this.checkDecollageAtterrir(fonctionDecl.getBody());
               if ((_checkDecollageAtterrir).booleanValue()) {
                 return Boolean.valueOf(true);
@@ -178,7 +178,7 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
   }
   
   @Check(CheckType.FAST)
-  public Boolean validFunctionCall(final FonctionCall call) {
+  public Boolean validFunctionCall(final FonctionCallInterne call) {
     boolean _xsynchronizedexpression = false;
     synchronized (this.cycleTestLock) {
       boolean _xblockexpression = false;
@@ -201,7 +201,7 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
           } else {
             InputOutput.<String>println("ERREUR DE CYCLE");
             this.cycleDetected = true;
-            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL__REF, DroneDSLValidator.CYCLE_ERR);
+            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL_INTERNE__REF, DroneDSLValidator.CYCLE_ERR);
           }
           _xifexpression = _xifexpression_1;
         }
@@ -270,7 +270,7 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
           boolean _equals = ((String) _get_2).equals(((String) key));
           if (_equals) {
             InputOutput.<String>println("ERREUR DE CYCLE");
-            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL__REF, DroneDSLValidator.CYCLE_ERR);
+            this.error(DroneDSLValidator.CYCLE_MSG, DroneDSLPackage.Literals.FONCTION_CALL_INTERNE__REF, DroneDSLValidator.CYCLE_ERR);
             this.cycleDetected = true;
             return Boolean.valueOf(true);
           } else {

@@ -38,6 +38,7 @@ public class DroneDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecollerAtterrirAccess().getAlternatives(), "rule__DecollerAtterrir__Alternatives");
 					put(grammarAccess.getCommandeBasiqueAccess().getAlternatives(), "rule__CommandeBasique__Alternatives");
 					put(grammarAccess.getFonctionDeclAccess().getBodyAlternatives_4_0(), "rule__FonctionDecl__BodyAlternatives_4_0");
+					put(grammarAccess.getFonctionCallAccess().getAlternatives(), "rule__FonctionCall__Alternatives");
 					put(grammarAccess.getMainAccess().getMainbodyAlternatives_3_0(), "rule__Main__MainbodyAlternatives_3_0");
 					put(grammarAccess.getMDAccess().getAlternatives(), "rule__MD__Alternatives");
 					put(grammarAccess.getGDrAccess().getAlternatives(), "rule__GDr__Alternatives");
@@ -66,7 +67,8 @@ public class DroneDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRotationDroiteAccess().getGroup(), "rule__RotationDroite__Group__0");
 					put(grammarAccess.getPauseAccess().getGroup(), "rule__Pause__Group__0");
 					put(grammarAccess.getFonctionDeclAccess().getGroup(), "rule__FonctionDecl__Group__0");
-					put(grammarAccess.getFonctionCallAccess().getGroup(), "rule__FonctionCall__Group__0");
+					put(grammarAccess.getFonctionCallInterneAccess().getGroup(), "rule__FonctionCallInterne__Group__0");
+					put(grammarAccess.getFonctionCallExterneAccess().getGroup(), "rule__FonctionCallExterne__Group__0");
 					put(grammarAccess.getMainAccess().getGroup(), "rule__Main__Group__0");
 					put(grammarAccess.getParallele2Access().getGroup_0(), "rule__Parallele2__Group_0__0");
 					put(grammarAccess.getParallele2Access().getGroup_1(), "rule__Parallele2__Group_1__0");
@@ -132,7 +134,7 @@ public class DroneDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getPrologueAssignment_1(), "rule__Model__PrologueAssignment_1");
 					put(grammarAccess.getModelAccess().getMAssignment_2(), "rule__Model__MAssignment_2");
 					put(grammarAccess.getModelAccess().getFonctionsAssignment_3(), "rule__Model__FonctionsAssignment_3");
-					put(grammarAccess.getImportAccess().getImportURIAssignment_2(), "rule__Import__ImportURIAssignment_2");
+					put(grammarAccess.getImportAccess().getNameAssignment_2(), "rule__Import__NameAssignment_2");
 					put(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticaleAssignment_2(), "rule__Pourcent_vitesse_hauteur_max__Vitesse_verticaleAssignment_2");
 					put(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementAssignment_2(), "rule__Pourcent_vitesse_deplacement_max__Vitesse_deplacementAssignment_2");
 					put(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2(), "rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2");
@@ -173,7 +175,9 @@ public class DroneDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFonctionDeclAccess().getNameAssignment_1(), "rule__FonctionDecl__NameAssignment_1");
 					put(grammarAccess.getFonctionDeclAccess().getBodyAssignment_4(), "rule__FonctionDecl__BodyAssignment_4");
 					put(grammarAccess.getFinDeMainAccess().getAccoladeAssignment(), "rule__FinDeMain__AccoladeAssignment");
-					put(grammarAccess.getFonctionCallAccess().getRefAssignment_0(), "rule__FonctionCall__RefAssignment_0");
+					put(grammarAccess.getFonctionCallInterneAccess().getRefAssignment_0(), "rule__FonctionCallInterne__RefAssignment_0");
+					put(grammarAccess.getFonctionCallExterneAccess().getFileAssignment_0(), "rule__FonctionCallExterne__FileAssignment_0");
+					put(grammarAccess.getFonctionCallExterneAccess().getNameAssignment_2(), "rule__FonctionCallExterne__NameAssignment_2");
 					put(grammarAccess.getMainAccess().getDecollageAssignment_2(), "rule__Main__DecollageAssignment_2");
 					put(grammarAccess.getMainAccess().getMainbodyAssignment_3(), "rule__Main__MainbodyAssignment_3");
 					put(grammarAccess.getMainAccess().getAtterrissageAssignment_4(), "rule__Main__AtterrissageAssignment_4");

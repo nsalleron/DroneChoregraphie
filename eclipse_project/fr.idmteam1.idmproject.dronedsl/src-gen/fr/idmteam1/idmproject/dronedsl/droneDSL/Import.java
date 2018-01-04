@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getImport()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Import extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Import URI</em>' attribute.
-   * @see #setImportURI(String)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getImport_ImportURI()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getImport_Name()
    * @model
    * @generated
    */
-  String getImportURI();
+  String getName();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getImportURI <em>Import URI</em>}' attribute.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Import#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Import URI</em>' attribute.
-   * @see #getImportURI()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setImportURI(String value);
+  void setName(String value);
 
 } // Import

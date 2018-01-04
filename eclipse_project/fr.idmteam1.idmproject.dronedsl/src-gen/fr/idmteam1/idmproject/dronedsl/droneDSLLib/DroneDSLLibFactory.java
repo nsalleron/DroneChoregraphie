@@ -33,6 +33,15 @@ public interface DroneDSLLibFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Lib Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Lib Name</em>'.
+   * @generated
+   */
+  LibName createLibName();
+
+  /**
    * Returns a new object of class '<em>Seconde Const</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -222,6 +231,15 @@ public interface DroneDSLLibFactory extends EFactory
   Mouvement createMouvement();
 
   /**
+   * Returns a new object of class '<em>Decoller Atterrir</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decoller Atterrir</em>'.
+   * @generated
+   */
+  DecollerAtterrir createDecollerAtterrir();
+
+  /**
    * Returns a new object of class '<em>Commande Basique</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -247,6 +265,15 @@ public interface DroneDSLLibFactory extends EFactory
    * @generated
    */
   FonctionCall createFonctionCall();
+
+  /**
+   * Returns a new object of class '<em>Fonction Call Interne</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fonction Call Interne</em>'.
+   * @generated
+   */
+  FonctionCallInterne createFonctionCallInterne();
 
   /**
    * Returns a new object of class '<em>MD</em>'.

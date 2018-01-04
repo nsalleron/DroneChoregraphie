@@ -190,9 +190,5 @@ public class PauseImpl extends CommandeBasiqueImpl implements Pause
     }
     return super.eIsSet(featureID);
   }
-  @Override
-  public String toString() {
-      return "new Pause("+this.duree+").execute(runtime)";
-  }
 
-} //ModifiedPauseImpl toString added
+} //PauseImpl

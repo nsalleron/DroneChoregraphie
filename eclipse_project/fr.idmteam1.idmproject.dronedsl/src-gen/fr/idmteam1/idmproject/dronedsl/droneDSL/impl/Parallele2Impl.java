@@ -190,26 +190,5 @@ public class Parallele2Impl extends ParalleleImpl implements Parallele2
     }
     return super.eIsSet(featureID);
   }
-  @Override
-  public String toString() {
-	  
-	  //Cas particulier, pas logique du tout.
-	  String a= "", b = "";
-	  if (this.a != null) 
-		  a = this.a.toString().split("\\.")[0];
-	  else
-		  a = this.t.toString().split("\\.")[0];
-	  if (this.b != null)
-		  b = this.b.toString().split("\\.")[0];
-	  else
-		  b = this.t.toString().split("\\.")[0];
 
-	  String name = Integer.toString(this.hashCode());
-  
-	  return "\tParallele p2_"+name+" = new Parallele();\n"
-	  		+ "			  p2_"+name+".addCommande("+a+");\n"
-	  		+ "			  p2_"+name+".addCommande("+b+");\n"
-	  		+ "\tp2_"+name+".execute(runtime);";
-  }
-
-} //ModifiedParallele2Impl toString added 
+} //Parallele2Impl

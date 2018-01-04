@@ -14,7 +14,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSLLib;
  * </p>
  * <ul>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter#getDuree <em>Duree</em>}</li>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter#getVitesse_verticale <em>Vitesse verticale</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter#getVitesse <em>Vitesse</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getMonter()
@@ -50,29 +50,29 @@ public interface Monter extends Mouvement, CommandeBasique, MD
   void setDuree(SecondeExp value);
 
   /**
-   * Returns the value of the '<em><b>Vitesse verticale</b></em>' containment reference.
+   * Returns the value of the '<em><b>Vitesse</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vitesse verticale</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Vitesse</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vitesse verticale</em>' containment reference.
-   * @see #setVitesse_verticale(PourcentExp)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getMonter_Vitesse_verticale()
+   * @return the value of the '<em>Vitesse</em>' containment reference.
+   * @see #setVitesse(PourcentExp)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getMonter_Vitesse()
    * @model containment="true"
    * @generated
    */
-  PourcentExp getVitesse_verticale();
+  PourcentExp getVitesse();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter#getVitesse_verticale <em>Vitesse verticale</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter#getVitesse <em>Vitesse</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vitesse verticale</em>' containment reference.
-   * @see #getVitesse_verticale()
+   * @param value the new value of the '<em>Vitesse</em>' containment reference.
+   * @see #getVitesse()
    * @generated
    */
-  void setVitesse_verticale(PourcentExp value);
+  void setVitesse(PourcentExp value);
 
 } // Monter
