@@ -72,16 +72,6 @@ echo "  @Override
 } //ModifiedRefPourcentVarImpll toString added" >> RefPourcentVarImpl_tmp.java
 mv RefPourcentVarImpl_tmp.java RefPourcentVarImpl.java
 
-
-
-
-
-
-
-
-
-
-
 ## Case of landing AtterrirImpl.java
 head -n $(( $(wc -l AtterrirImpl.java | awk '{print $1}') - 13 )) AtterrirImpl.java > "AtterrirImpl_tmp.java"
   
@@ -94,8 +84,6 @@ echo  "  @Override
 mv "AtterrirImpl_tmp.java" "AtterrirImpl.java"
   
 echo "done for AtterrirImpl.java"
-
-
 
 ## Case of takeoff  DecollerImpl.java
 head -n $(( $(wc -l DecollerImpl.java | awk '{print $1}') - 13 )) DecollerImpl.java > "DecollerImpl_tmp.java"
@@ -123,7 +111,18 @@ mv "PauseImpl_tmp.java" "PauseImpl.java"
   
 echo "done for PauseImpl.java"
 
+## Case for import
+head -n $(( $(wc -l ImportImpl.java | awk '{print $1}') - 13 )) ImportImpl.java  > ImportImpl_tmp.java 
+echo "  @Override
+  public String toString()
+  {
+    return name;
+  }
 
+} //ImportImpl toString added" >> ImportImpl_tmp.java
+mv ImportImpl_tmp.java ImportImpl.java 
+
+echo "done for ImportImpl.java"
 
 ##Particular case for "Parallele2Impl.java" "Parallele3Impl.java" "Parallele4Impl.java" and "ParalleleImpl.java"
 
@@ -147,10 +146,10 @@ echo "  @Override
 
 	  String name = Integer.toString(this.hashCode());
   
-	  return \"\\tParallele p2_\"+name+\" = new Parallele();\\n\"
+	  return \"		Parallele p2_\"+name+\" = new Parallele();\\n\"
 	  		+ \"			  p2_\"+name+\".addCommande(\"+a+\");\\n\"
 	  		+ \"			  p2_\"+name+\".addCommande(\"+b+\");\\n\"
-	  		+ \"\\tp2_\"+name+\".execute(runtime);\";
+	  		+ \"		p2_\"+name+\".execute(runtime);\";
   }
 
 } //ModifiedParallele2Impl toString added " >> "Parallele2Impl_tmp.java"
@@ -158,10 +157,6 @@ mv "Parallele2Impl_tmp.java" "Parallele2Impl.java"
   
 
 echo "done for Parallele2Impl.java"
-
-
-
-
 
 ## Case for Parallele3Impl
 
@@ -175,23 +170,17 @@ echo "  @Override
 	  String c = this.c.toString().split(\"\\\.\")[0];
     String name = Integer.toString(this.hashCode());
     
-	  return \"\\tParallele p3_\"+name+\" = new Parallele();\\n\"
+	  return \"		Parallele p3_\"+name+\" = new Parallele();\\n\"
 	  		+ \"			  p3_\"+name+\".addCommande(\"+a+\");\\n\"
 	  		+ \"			  p3_\"+name+\".addCommande(\"+b+\");\\n\"
 	  		+ \"			  p3_\"+name+\".addCommande(\"+c+\");\\n\"
-	  		+ \"\\tp3_\"+name+\".execute(runtime);\";
+	  		+ \"		p3_\"+name+\".execute(runtime);\";
   }
 
 } //ModifiedParallele3Impl toString added" >> "Parallele3Impl_tmp.java"
 mv "Parallele3Impl_tmp.java" "Parallele3Impl.java"
 
 echo "done for Parallele3Impl.java"
-
-
-
-
-
-
 
 ## Case for Parallele4Impl
 head -n $(( $(wc -l Parallele4Impl.java | awk '{print $1}') - 2 )) Parallele4Impl.java > "Parallele4Impl_tmp.java"
@@ -205,12 +194,12 @@ echo "  @Override
       String d = this.d.toString().split(\"\\\.\")[0];
       String name = Integer.toString(this.hashCode());
 
-  	  return \"\\tParallele p4_\"+name+\" = new Parallele();\\n\"
+  	  return \"		Parallele p4_\"+name+\" = new Parallele();\\n\"
   	  		+ \"			  p4_\"+name+\".addCommande(\"+a+\");\\n\"
   	  		+ \"			  p4_\"+name+\".addCommande(\"+b+\");\\n\"
   	  		+ \"			  p4_\"+name+\".addCommande(\"+c+\");\\n\"
           + \"			  p4_\"+name+\".addCommande(\"+d+\");\\n\"
-  	  		+ \"\\tp4_\"+name+\".execute(runtime);\";
+  	  		+ \"		p4_\"+name+\".execute(runtime);\";
     }
 
 } //ModifiedParallele4Impl toString added" >> "Parallele4Impl_tmp.java"
@@ -234,35 +223,118 @@ do
   
   echo  "  @Override
     public String toString() {
-  	  return \"\\tnew $nameClass(new Seconde(\"+this.duree+\"),new Pourcent(\"+this.vitesse+\")).execute(runtime);\";
+  	  return \"		new $nameClass(new Seconde(\"+this.duree+\"),new Pourcent(\"+this.vitesse+\")).execute(runtime);\";
     }
 
 } //Modified$nameClass$impl toString added" >> "{$nameClass}{$Impl}{$tmp}"
   mv "{$nameClass}{$Impl}{$tmp}" "$filename"
   
   echo "done for $nameClass"
-  
-  
-  
 done
 
 
 
 
+###### Special case of Prologue
+
+
+## Array of file
+declare -a arrayPrologue=( "Pourcent_vitesse_deplacement_maxImpl.java" "Pourcent_vitesse_rotation_maxImpl.java" )
+
+impl="Impl"
+tmp="_tmp.java"
+java=".java"
+## now loop through the above array
+for filename in "${arrayPrologue[@]}"
+do
+                  
+  nameClass=${filename: : -9}
+  head -n $(( $(wc -l $filename | awk '{print $1}') - 2 )) $filename  > "{$nameClass}{$Impl}{$tmp}"
+  
+  echo  "  @Override
+    public String toString() {
+  	  return this.vitesse_deplacement.getVal().split(\"\\\%\")[0];
+    }
+
+} //Modified$nameClass$impl toString added" >> "{$nameClass}{$Impl}{$tmp}"
+  mv "{$nameClass}{$Impl}{$tmp}" "$filename"
+  
+  echo "done for $nameClass"  
+done
+
+## Case of Pourcent_vitesse_hauteur_maxImpl.java
+head -n $(( $(wc -l Pourcent_vitesse_hauteur_maxImpl.java | awk '{print $1}') - 2 )) Pourcent_vitesse_hauteur_maxImpl.java > "Pourcent_vitesse_hauteur_maxImpl_tmp.java"
+  
+echo  "  @Override
+  public String toString() {
+      return this.vitesse_verticale.toString();
+  }
+
+} //ModifiedPourcent_vitesse_hauteur_maxImpl toString added" >> "Pourcent_vitesse_hauteur_maxImpl_tmp.java"
+mv "Pourcent_vitesse_hauteur_maxImpl_tmp.java" "Pourcent_vitesse_hauteur_maxImpl.java"
+echo "done for Pourcent_vitesse_hauteur_maxImpl.java"
+
+## Case of Hauteur_maxImpl.java
+head -n $(( $(wc -l Hauteur_maxImpl.java | awk '{print $1}') - 2 )) Hauteur_maxImpl.java > "Hauteur_maxImpl_tmp.java"
+  
+echo  "  @Override
+  public String toString() {
+      return this.hauteur_max.toString();
+  }
+
+} //ModifiedHauteur_maxImpl toString added" >> "Hauteur_maxImpl_tmp.java"
+mv "Hauteur_maxImpl_tmp.java" "Hauteur_maxImpl.java"
+echo "done for Hauteur_maxImpl.java"
+
+
+## Case of Eloignement_maxImpl.java
+head -n $(( $(wc -l Eloignement_maxImpl.java | awk '{print $1}') - 2 )) Eloignement_maxImpl.java > "Eloignement_maxImpl_tmp.java"
+  
+echo  "  @Override
+  public String toString() {
+      return this.hauteur_max.toString();
+  }
+
+} //ModifiedEloignement_maxImpl toString added" >> "Eloignement_maxImpl_tmp.java"
+mv "Eloignement_maxImpl_tmp.java" "Eloignement_maxImpl.java"
+echo "done for Eloignement_maxImpl.java"
+
+## Case of PrologueImpl.java
+head -n $(( $(wc -l PrologueImpl.java | awk '{print $1}') - 2 )) PrologueImpl.java > "PrologueImpl_tmp.java"
+  
+echo  "  @Override
+  public String toString() {
+      return \"static Prologue prologue_\"+this.hashCode()+\" = new Prologue(new Pourcent(\"
+              +this.vitesse_verticale+\"),new Pourcent(\"
+      			  +this.vitesse_deplacement+\"), new Pourcent(\"
+      			  +this.vitesse_rotation+\"), \"
+      			  +this.hauteur+\",\"
+      			  +this.eloignement+\");\";
+  }
+
+} //ModifiedPrologueImpl toString added" >> "PrologueImpl_tmp.java"
+mv "PrologueImpl_tmp.java" "PrologueImpl.java"
+
+
+echo "done for PrologueImpl.java"
 
 
 
+###### Case of function Call
+
+## case of FonctionCallInterneImpl.java
 
 
+head -n $(( $(wc -l FonctionCallInterneImpl.java | awk '{print $1}') - 2 )) FonctionCallInterneImpl.java > "FonctionCallInterneImpl_tmp.java"
+  
+echo  "  @Override
+  public String toString() {
+      return \"		\"+this.ref.getName()+\"();\";
+  }
 
-
-
-
-
-
-
-
-
+} //ModifiedFonctionCallInterneImpl toString added" >> "FonctionCallInterneImpl_tmp.java"
+mv "FonctionCallInterneImpl_tmp.java" "FonctionCallInterneImpl.java"
+echo "done for FonctionCallInterneImpl.java"
 
 
 

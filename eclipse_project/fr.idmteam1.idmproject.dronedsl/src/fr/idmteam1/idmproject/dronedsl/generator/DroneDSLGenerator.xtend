@@ -74,12 +74,14 @@ class DroneDSLGenerator extends AbstractGenerator {
 		''' 
 		package fr.roboticiens;
 		
-		import fr.roboticiens.runtime.DroneRuntime;
-		import fr.roboticiens.runtime.DroneRuntimePrint;
+		import fr.roboticiens.body.*;
 		import fr.roboticiens.commandes.*;
+		import fr.roboticiens.fonction.*;
+		import fr.roboticiens.imports.*;
 		import fr.roboticiens.paralleles.*;
-		import fr.roboticiens.types.Pourcent;
-		import fr.roboticiens.types.Seconde;
+		import fr.roboticiens.prologue.*;
+		import fr.roboticiens.runtime.*;
+		import fr.roboticiens.types.*;
 		
         «IF e.imports!== null»
              « FOR f:e.imports»
@@ -87,9 +89,15 @@ class DroneDSLGenerator extends AbstractGenerator {
              «ENDFOR»
         «ENDIF»
 
+
 		public class Main {
 			static DroneRuntime runtime = new DroneRuntimePrint();
+			«IF e.prologue!== null»
+			                     « e.prologue.toString»
+			«ENDIF»
 			public static void main(String[] args) {
+				
+				runtime.execPrologue(prologue_« e.prologue.hashCode»);
 				«e.m.decollage.toString»
 	           	«FOR f : e.m.mainbody »
 		       		«f.toString»
@@ -108,18 +116,15 @@ class DroneDSLGenerator extends AbstractGenerator {
         '''
         
     def compile(FonctionDecl e)
-    	'''
-		public static void «e.name»() {
-			« FOR f:e.body»
-			         «f.toString»
-			«ENDFOR»
-			
-		}
-    	'''
+    	'''	public static void «e.name»() {
+		« FOR f:e.body»
+	«f.toString»
+		«ENDFOR»
+	}'''
         
     def compile(Import e) 
         '''
-		import  «e».java;
+		import  «e.toString».java;
         '''
 	
 	def contentDroneRuntimePrintClass() {
