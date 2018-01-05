@@ -87,7 +87,7 @@ head -n $(( $(wc -l AtterrirImpl.java | awk '{print $1}') - 13 )) AtterrirImpl.j
   
 echo  "  @Override
     public String toString() {
-  	  return \"new Atterrir().execute(runtime)\";
+  	  return \"new Atterrir().execute(runtime);\";
     }
 
 } //ModifiedAtterrirImpl toString added" >> "AtterrirImpl_tmp.java"
@@ -102,7 +102,7 @@ head -n $(( $(wc -l DecollerImpl.java | awk '{print $1}') - 13 )) DecollerImpl.j
   
 echo  "  @Override
   public String toString() {
-  	  return \"new Decoller().execute(runtime)\";
+  	  return \"new Decoller().execute(runtime);\";
   }
 
 } //ModifiedDecollerImpl toString added" >> "DecollerImpl_tmp.java"
@@ -115,7 +115,7 @@ head -n $(( $(wc -l PauseImpl.java | awk '{print $1}') - 2 )) PauseImpl.java > "
   
 echo  "  @Override
   public String toString() {
-      return \"new Pause(\"+this.duree+\").execute(runtime)\";
+      return \"new Pause(new Seconde(\"+this.duree+\")).execute(runtime);\";
   }
 
 } //ModifiedPauseImpl toString added" >> "PauseImpl_tmp.java"
@@ -234,7 +234,7 @@ do
   
   echo  "  @Override
     public String toString() {
-  	  return \"\\tnew $nameClass(\"+this.duree+\",\"+this.vitesse+\").execute(runtime)\";
+  	  return \"\\tnew $nameClass(new Seconde(\"+this.duree+\"),new Pourcent(\"+this.vitesse+\")).execute(runtime);\";
     }
 
 } //Modified$nameClass$impl toString added" >> "{$nameClass}{$Impl}{$tmp}"

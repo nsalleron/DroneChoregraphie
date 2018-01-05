@@ -262,5 +262,9 @@ public class DescendreImpl extends MouvementImpl implements Descendre
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Descendre(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //DescendreImpl
+} //ModifiedDescendreImpl toString added

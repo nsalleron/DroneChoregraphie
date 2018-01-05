@@ -26,16 +26,9 @@ public class AtterrirImpl extends DecollerAtterrirImpl implements Atterrir
   {
     super();
   }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
-  protected EClass eStaticClass()
-  {
-    return DroneDSLPackage.Literals.ATTERRIR;
-  }
+    public String toString() {
+  	  return "new Atterrir().execute(runtime);";
+    }
 
-} //AtterrirImpl
+} //ModifiedAtterrirImpl toString added

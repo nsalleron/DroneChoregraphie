@@ -165,13 +165,7 @@ public class PourcentConstImpl extends PourcentExpImpl implements PourcentConst
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (val: ");
-    result.append(val);
-    result.append(')');
-    return result.toString();
+    return this.val.split("\\%")[0];
   }
 
-} //PourcentConstImpl
+} //ModifiedPourcentConstImpl toString added

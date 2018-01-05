@@ -262,5 +262,9 @@ public class MonterImpl extends MouvementImpl implements Monter
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Monter(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //MonterImpl
+} //ModifiedMonterImpl toString added

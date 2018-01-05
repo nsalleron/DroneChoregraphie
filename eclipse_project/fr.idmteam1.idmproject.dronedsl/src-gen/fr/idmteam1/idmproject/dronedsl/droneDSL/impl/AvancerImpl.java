@@ -262,5 +262,9 @@ public class AvancerImpl extends MouvementImpl implements Avancer
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Avancer(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //AvancerImpl
+} //ModifiedAvancerImpl toString added

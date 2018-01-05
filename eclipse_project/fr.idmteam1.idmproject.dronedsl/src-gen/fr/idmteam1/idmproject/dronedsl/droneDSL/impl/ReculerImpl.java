@@ -262,5 +262,9 @@ public class ReculerImpl extends MouvementImpl implements Reculer
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Reculer(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //ReculerImpl
+} //ModifiedReculerImpl toString added

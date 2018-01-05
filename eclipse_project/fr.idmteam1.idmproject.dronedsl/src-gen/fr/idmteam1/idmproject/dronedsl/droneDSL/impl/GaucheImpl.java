@@ -262,5 +262,9 @@ public class GaucheImpl extends MouvementImpl implements Gauche
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew Gauche(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //GaucheImpl
+} //ModifiedGaucheImpl toString added

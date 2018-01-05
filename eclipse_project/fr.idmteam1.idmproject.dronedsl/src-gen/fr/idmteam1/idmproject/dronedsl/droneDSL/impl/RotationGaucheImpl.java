@@ -262,5 +262,9 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "\tnew RotationGauche(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+    }
 
-} //RotationGaucheImpl
+} //ModifiedRotationGaucheImpl toString added
