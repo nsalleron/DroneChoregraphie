@@ -165,7 +165,7 @@ public class PourcentConstImpl extends PourcentExpImpl implements PourcentConst
   @Override
   public String toString()
   {
-    return "new Pourcent(" + this.val.split("\\%")[0] + ");";
+    return "new Pourcent(" + this.val.split("\\%")[0] + ")";
   }
 
 } //ModifiedPourcentConstImpl toString added

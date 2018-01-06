@@ -193,7 +193,7 @@ public class PourcentDeclImpl extends VarDeclImpl implements PourcentDecl
   @Override
   public String toString()
   {
-    return "Pourcent p_"+this.name+" = " + this.val;
+    return "Pourcent p_"+this.name+" = " + this.val + ";";
   }
 
 } //ModifiedPourcentDeclImpl toString added

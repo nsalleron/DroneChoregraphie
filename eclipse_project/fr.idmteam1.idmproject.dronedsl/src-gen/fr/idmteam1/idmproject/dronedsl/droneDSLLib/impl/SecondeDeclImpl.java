@@ -193,7 +193,7 @@ public class SecondeDeclImpl extends VarDeclImpl implements SecondeDecl
   @Override
   public String toString()
   {
-    return "Seconde s_"+this.name+" = " + this.val;
+    return "Seconde s_"+this.name+" = " + this.val + ";";
   }
 
 } //ModifiedSecondeDeclImpl toString added

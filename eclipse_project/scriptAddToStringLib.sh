@@ -8,7 +8,7 @@ head -n $(( $(wc -l PourcentConstImpl.java | awk '{print $1}') - 13 )) PourcentC
 echo "  @Override
   public String toString()
   {
-    return \"new Pourcent(\" + this.val.split(\"\\\%\")[0] + \");\";
+    return \"new Pourcent(\" + this.val.split(\"\\\%\")[0] + \")\";
   }
 
 } //ModifiedPourcentConstImpl toString added" >> PourcentConstImpl_tmp.java
@@ -19,7 +19,7 @@ head -n $(( $(wc -l SecondeConstImpl.java | awk '{print $1}') - 13 )) SecondeCon
 echo "  @Override
   public String toString()
   {
-    return \"new Seconde(\" + this.val + \");\";
+    return \"new Seconde(\" + this.val + \")\";
   }
 
 } //ModifiedSecondeConstImpl toString added" >> SecondeConstImpl_tmp.java
@@ -33,7 +33,7 @@ head -n $(( $(wc -l PourcentDeclImpl.java | awk '{print $1}') - 2 )) PourcentDec
 echo "  @Override
   public String toString()
   {
-    return \"Pourcent p_\"+this.name+\" = \" + this.val;
+    return \"Pourcent p_\"+this.name+\" = \" + this.val + \";\";
   }
 
 } //ModifiedPourcentDeclImpl toString added" >> PourcentDeclImpl_tmp.java
@@ -44,7 +44,7 @@ head -n $(( $(wc -l SecondeDeclImpl.java | awk '{print $1}') - 2 )) SecondeDeclI
 echo "  @Override
   public String toString()
   {
-    return \"Seconde s_\"+this.name+\" = \" + this.val;
+    return \"Seconde s_\"+this.name+\" = \" + this.val + \";\";
   }
 
 } //ModifiedSecondeDeclImpl toString added" >> SecondeDeclImpl_tmp.java

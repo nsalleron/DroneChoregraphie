@@ -165,7 +165,7 @@ public class SecondeConstImpl extends SecondeExpImpl implements SecondeConst
   @Override
   public String toString()
   {
-    return "new Seconde(" + this.val + ");";
+    return "new Seconde(" + this.val + ")";
   }
 
 } //ModifiedSecondeConstImpl toString added
