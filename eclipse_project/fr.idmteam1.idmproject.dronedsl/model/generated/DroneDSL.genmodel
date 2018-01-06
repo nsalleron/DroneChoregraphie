@@ -22,13 +22,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Pourcent_vitesse_deplacement_max/vitesse_deplacement"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Pourcent_vitesse_rotation_max">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Pourcent_vitesse_rotation_max/vitesse_deplacement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Pourcent_vitesse_rotation_max/vitesse_rotation"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Hauteur_max">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Hauteur_max/hauteur_max"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Eloignement_max">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Eloignement_max/hauteur_max"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Eloignement_max/eloignement_max"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSL.ecore#//Prologue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSL.ecore#//Prologue/vitesse_verticale"/>

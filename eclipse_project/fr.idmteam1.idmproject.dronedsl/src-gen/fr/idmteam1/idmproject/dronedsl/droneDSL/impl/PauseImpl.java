@@ -192,7 +192,7 @@ public class PauseImpl extends CommandeBasiqueImpl implements Pause
   }
   @Override
   public String toString() {
-      return "new Pause(new Seconde("+this.duree+")).execute(runtime);";
+      return "new Pause("+this.duree+").execute(runtime);";
   }
 
 } //ModifiedPauseImpl toString added

@@ -9,6 +9,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement;
 import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLValidator;
@@ -19,7 +20,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.validation.CheckType;
 import org.eclipse.xtext.xbase.lib.InputOutput;
@@ -47,6 +50,10 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
   
   public final static String MOVEMENT_WHILE_ONLAND_MSG = "Erreur: le drone ne peut pas effectué de mouvement lorsqu\'il n\'a pas décollé";
   
+  public final static String LIB_NOT_FOUND = "libNotFound";
+  
+  public final static String LIB_NOT_FOUND_MSG = "Erreur: fichier de librairie introuvable";
+  
   private static boolean inMain = false;
   
   private static String actualFunc = "";
@@ -58,6 +65,30 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
   private boolean cycleDetected = true;
   
   private Object cycleTestLock = new Object();
+  
+  @Check(CheckType.FAST)
+  public void validImport(final Import i) {
+    URI directory = i.eResource().getURI().trimSegments(1);
+    String _fileString = directory.toFileString();
+    String _plus = ("directory: " + _fileString);
+    InputOutput.<String>println(_plus);
+    URI lib = directory.appendSegment(i.getName()).appendFileExtension("lib_drone");
+    String _fileString_1 = lib.toFileString();
+    String _plus_1 = ("lib: " + _fileString_1);
+    InputOutput.<String>println(_plus_1);
+    boolean exists = EcoreUtil2.isValidUri(i.eResource(), lib);
+    if ((!exists)) {
+      String _fileString_2 = lib.toFileString();
+      String _plus_2 = (_fileString_2 + " not found");
+      InputOutput.<String>println(_plus_2);
+      this.error(DroneDSLValidator.LIB_NOT_FOUND_MSG, DroneDSLPackage.Literals.IMPORT__NAME, DroneDSLValidator.LIB_NOT_FOUND);
+      return;
+    } else {
+      String _fileString_3 = lib.toFileString();
+      String _plus_3 = (_fileString_3 + " found");
+      InputOutput.<String>println(_plus_3);
+    }
+  }
   
   @Check(CheckType.NORMAL)
   public void validDecollageAtterrisageLogic(final Main m) {

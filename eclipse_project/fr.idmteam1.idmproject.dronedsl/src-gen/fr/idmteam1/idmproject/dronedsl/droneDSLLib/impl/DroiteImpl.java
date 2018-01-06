@@ -262,5 +262,9 @@ public class DroiteImpl extends MouvementImpl implements Droite
     }
     return super.eIsSet(featureID);
   }
+  @Override
+    public String toString() {
+  	  return "		new Droite("+this.duree+", "+this.vitesse+").execute(runtime);";
+    }
 
-} //DroiteImpl
+} //ModifiedDroiteImpl toString added

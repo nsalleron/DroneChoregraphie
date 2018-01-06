@@ -264,7 +264,7 @@ public class ReculerImpl extends MouvementImpl implements Reculer
   }
   @Override
     public String toString() {
-  	  return "\tnew Reculer(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Reculer("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedReculerImpl toString added

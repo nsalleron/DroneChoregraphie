@@ -193,7 +193,7 @@ public class PourcentDeclImpl extends VarDeclImpl implements PourcentDecl
   @Override
   public String toString()
   {
-    return "int p_"+this.name+" = " + this.val.getVal().split("\\%")[0];
+    return "Pourcent p_"+this.name+" = " + this.val + ";";
   }
 
 } //ModifiedPourcentDeclImpl toString added

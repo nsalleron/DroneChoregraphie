@@ -169,5 +169,10 @@ public class RefPourcentVarImpl extends PourcentExpImpl implements RefPourcentVa
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString()
+  {
+    return "p_"+this.var.getName();
+  }
 
-} //RefPourcentVarImpl
+} //ModifiedRefPourcentVarImpll toString added

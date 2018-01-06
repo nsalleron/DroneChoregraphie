@@ -264,7 +264,7 @@ public class MonterImpl extends MouvementImpl implements Monter
   }
   @Override
     public String toString() {
-  	  return "\tnew Monter(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Monter("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedMonterImpl toString added

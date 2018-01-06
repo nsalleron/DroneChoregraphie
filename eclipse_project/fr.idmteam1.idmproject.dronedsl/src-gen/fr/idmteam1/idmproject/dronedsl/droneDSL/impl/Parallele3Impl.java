@@ -198,11 +198,11 @@ public class Parallele3Impl extends ParalleleImpl implements Parallele3
 	  String c = this.c.toString().split("\\.")[0];
     String name = Integer.toString(this.hashCode());
     
-	  return "\tParallele p3_"+name+" = new Parallele();\n"
+	  return "		Parallele p3_"+name+" = new Parallele();\n"
 	  		+ "			  p3_"+name+".addCommande("+a+");\n"
 	  		+ "			  p3_"+name+".addCommande("+b+");\n"
 	  		+ "			  p3_"+name+".addCommande("+c+");\n"
-	  		+ "\tp3_"+name+".execute(runtime);";
+	  		+ "		p3_"+name+".execute(runtime);";
   }
 
 } //ModifiedParallele3Impl toString added

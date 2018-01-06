@@ -191,5 +191,9 @@ public class Pourcent_vitesse_hauteur_maxImpl extends MinimalEObjectImpl.Contain
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+      return this.vitesse_verticale.toString();
+  }
 
-} //Pourcent_vitesse_hauteur_maxImpl
+} //ModifiedPourcent_vitesse_hauteur_maxImpl toString added

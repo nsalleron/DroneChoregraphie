@@ -283,15 +283,15 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Eloignement_max returns Eloignement_max
 	 *
 	 * Constraint:
-	 *     hauteur_max=SecondeExp
+	 *     eloignement_max=SecondeConst
 	 */
 	protected void sequence_Eloignement_max(ISerializationContext context, Eloignement_max semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.ELOIGNEMENT_MAX__HAUTEUR_MAX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ELOIGNEMENT_MAX__HAUTEUR_MAX));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
+		feeder.accept(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0(), semanticObject.getEloignement_max());
 		feeder.finish();
 	}
 	
@@ -396,7 +396,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Hauteur_max returns Hauteur_max
 	 *
 	 * Constraint:
-	 *     hauteur_max=SecondeExp
+	 *     hauteur_max=SecondeConst
 	 */
 	protected void sequence_Hauteur_max(ISerializationContext context, Hauteur_max semanticObject) {
 		if (errorAcceptor != null) {
@@ -404,7 +404,7 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.HAUTEUR_MAX__HAUTEUR_MAX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0(), semanticObject.getHauteur_max());
+		feeder.accept(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0(), semanticObject.getHauteur_max());
 		feeder.finish();
 	}
 	
@@ -686,15 +686,15 @@ public class DroneDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Pourcent_vitesse_rotation_max returns Pourcent_vitesse_rotation_max
 	 *
 	 * Constraint:
-	 *     vitesse_deplacement=PourcentConst
+	 *     vitesse_rotation=PourcentConst
 	 */
 	protected void sequence_Pourcent_vitesse_rotation_max(ISerializationContext context, Pourcent_vitesse_rotation_max semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT));
+			if (transientValues.isValueTransient(semanticObject, DroneDSLPackage.Literals.POURCENT_VITESSE_ROTATION_MAX__VITESSE_ROTATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLPackage.Literals.POURCENT_VITESSE_ROTATION_MAX__VITESSE_ROTATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0(), semanticObject.getVitesse_deplacement());
+		feeder.accept(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0(), semanticObject.getVitesse_rotation());
 		feeder.finish();
 	}
 	

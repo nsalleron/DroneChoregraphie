@@ -170,14 +170,14 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDefineKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cVitesse_rotation_maxKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cVitesse_deplacementAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cVitesse_deplacementPourcentConstParserRuleCall_2_0 = (RuleCall)cVitesse_deplacementAssignment_2.eContents().get(0);
+		private final Assignment cVitesse_rotationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVitesse_rotationPourcentConstParserRuleCall_2_0 = (RuleCall)cVitesse_rotationAssignment_2.eContents().get(0);
 		
 		//Pourcent_vitesse_rotation_max:
-		//	'define' 'vitesse_rotation_max' vitesse_deplacement=PourcentConst;
+		//	'define' 'vitesse_rotation_max' vitesse_rotation=PourcentConst;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'define' 'vitesse_rotation_max' vitesse_deplacement=PourcentConst
+		//'define' 'vitesse_rotation_max' vitesse_rotation=PourcentConst
 		public Group getGroup() { return cGroup; }
 		
 		//'define'
@@ -186,11 +186,11 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'vitesse_rotation_max'
 		public Keyword getVitesse_rotation_maxKeyword_1() { return cVitesse_rotation_maxKeyword_1; }
 		
-		//vitesse_deplacement=PourcentConst
-		public Assignment getVitesse_deplacementAssignment_2() { return cVitesse_deplacementAssignment_2; }
+		//vitesse_rotation=PourcentConst
+		public Assignment getVitesse_rotationAssignment_2() { return cVitesse_rotationAssignment_2; }
 		
 		//PourcentConst
-		public RuleCall getVitesse_deplacementPourcentConstParserRuleCall_2_0() { return cVitesse_deplacementPourcentConstParserRuleCall_2_0; }
+		public RuleCall getVitesse_rotationPourcentConstParserRuleCall_2_0() { return cVitesse_rotationPourcentConstParserRuleCall_2_0; }
 	}
 	public class Hauteur_maxElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Hauteur_max");
@@ -198,13 +198,13 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDefineKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cHauteur_maxKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cHauteur_maxAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cHauteur_maxSecondeExpParserRuleCall_2_0 = (RuleCall)cHauteur_maxAssignment_2.eContents().get(0);
+		private final RuleCall cHauteur_maxSecondeConstParserRuleCall_2_0 = (RuleCall)cHauteur_maxAssignment_2.eContents().get(0);
 		
 		//Hauteur_max:
-		//	'define' 'hauteur_max' hauteur_max=SecondeExp;
+		//	'define' 'hauteur_max' hauteur_max=SecondeConst;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'define' 'hauteur_max' hauteur_max=SecondeExp
+		//'define' 'hauteur_max' hauteur_max=SecondeConst
 		public Group getGroup() { return cGroup; }
 		
 		//'define'
@@ -213,25 +213,25 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'hauteur_max'
 		public Keyword getHauteur_maxKeyword_1() { return cHauteur_maxKeyword_1; }
 		
-		//hauteur_max=SecondeExp
+		//hauteur_max=SecondeConst
 		public Assignment getHauteur_maxAssignment_2() { return cHauteur_maxAssignment_2; }
 		
-		//SecondeExp
-		public RuleCall getHauteur_maxSecondeExpParserRuleCall_2_0() { return cHauteur_maxSecondeExpParserRuleCall_2_0; }
+		//SecondeConst
+		public RuleCall getHauteur_maxSecondeConstParserRuleCall_2_0() { return cHauteur_maxSecondeConstParserRuleCall_2_0; }
 	}
 	public class Eloignement_maxElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Eloignement_max");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDefineKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cEloignement_maxKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cHauteur_maxAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cHauteur_maxSecondeExpParserRuleCall_2_0 = (RuleCall)cHauteur_maxAssignment_2.eContents().get(0);
+		private final Assignment cEloignement_maxAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEloignement_maxSecondeConstParserRuleCall_2_0 = (RuleCall)cEloignement_maxAssignment_2.eContents().get(0);
 		
 		//Eloignement_max:
-		//	'define' 'eloignement_max' hauteur_max=SecondeExp;
+		//	'define' 'eloignement_max' eloignement_max=SecondeConst;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'define' 'eloignement_max' hauteur_max=SecondeExp
+		//'define' 'eloignement_max' eloignement_max=SecondeConst
 		public Group getGroup() { return cGroup; }
 		
 		//'define'
@@ -240,11 +240,11 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'eloignement_max'
 		public Keyword getEloignement_maxKeyword_1() { return cEloignement_maxKeyword_1; }
 		
-		//hauteur_max=SecondeExp
-		public Assignment getHauteur_maxAssignment_2() { return cHauteur_maxAssignment_2; }
+		//eloignement_max=SecondeConst
+		public Assignment getEloignement_maxAssignment_2() { return cEloignement_maxAssignment_2; }
 		
-		//SecondeExp
-		public RuleCall getHauteur_maxSecondeExpParserRuleCall_2_0() { return cHauteur_maxSecondeExpParserRuleCall_2_0; }
+		//SecondeConst
+		public RuleCall getEloignement_maxSecondeConstParserRuleCall_2_0() { return cEloignement_maxSecondeConstParserRuleCall_2_0; }
 	}
 	public class PrologueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSL.Prologue");
@@ -3882,7 +3882,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Pourcent_vitesse_rotation_max:
-	//	'define' 'vitesse_rotation_max' vitesse_deplacement=PourcentConst;
+	//	'define' 'vitesse_rotation_max' vitesse_rotation=PourcentConst;
 	public Pourcent_vitesse_rotation_maxElements getPourcent_vitesse_rotation_maxAccess() {
 		return pPourcent_vitesse_rotation_max;
 	}
@@ -3892,7 +3892,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Hauteur_max:
-	//	'define' 'hauteur_max' hauteur_max=SecondeExp;
+	//	'define' 'hauteur_max' hauteur_max=SecondeConst;
 	public Hauteur_maxElements getHauteur_maxAccess() {
 		return pHauteur_max;
 	}
@@ -3902,7 +3902,7 @@ public class DroneDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Eloignement_max:
-	//	'define' 'eloignement_max' hauteur_max=SecondeExp;
+	//	'define' 'eloignement_max' eloignement_max=SecondeConst;
 	public Eloignement_maxElements getEloignement_maxAccess() {
 		return pEloignement_max;
 	}

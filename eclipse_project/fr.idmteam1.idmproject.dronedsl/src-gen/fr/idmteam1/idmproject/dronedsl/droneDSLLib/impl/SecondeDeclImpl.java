@@ -190,5 +190,10 @@ public class SecondeDeclImpl extends VarDeclImpl implements SecondeDecl
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString()
+  {
+    return "Seconde s_"+this.name+" = " + this.val;
+  }
 
-} //SecondeDeclImpl
+} //ModifiedSecondeDeclImpl toString added

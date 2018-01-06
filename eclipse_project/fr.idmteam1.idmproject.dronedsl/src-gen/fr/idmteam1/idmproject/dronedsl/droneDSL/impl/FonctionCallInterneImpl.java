@@ -169,5 +169,9 @@ public class FonctionCallInterneImpl extends FonctionCallImpl implements Fonctio
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+      return "		"+this.ref.getName()+"();";
+  }
 
-} //FonctionCallInterneImpl
+} //ModifiedFonctionCallInterneImpl toString added

@@ -35,14 +35,14 @@ class DroneDSLLibValidator extends AbstractDroneDSLLibValidator {
 	private var cycleDetected = true
 	private Object cycleTestLock = new Object()
 	
-	@Check(CheckType.FAST)
+	/*@Check(CheckType.FAST)
 	def checkLibName(LibName libName) {
 		val fileName = libName.eResource.normalizedURI.trimFileExtension.lastSegment
 		if(!fileName.equals(libName.name)) {
 			println("filename and lib name are different: filename: " + fileName + " libname: " + libName.name)
 			error(LIBNAME_MSG, DroneDSLLibPackage.Literals.LIB_NAME__NAME, LIBNAME_ERR)
 		}
-	}
+	}*/
 	
 	@Check(CheckType.FAST)
 	def checkFunctionDecl(FonctionDecl decl) {

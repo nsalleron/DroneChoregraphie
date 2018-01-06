@@ -479,5 +479,14 @@ public class PrologueImpl extends MinimalEObjectImpl.Container implements Prolog
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+      return "static Prologue prologue_"+this.hashCode()+" = new Prologue("
+              +this.vitesse_verticale.getVitesse_verticale()+", "
+      			  +this.vitesse_deplacement.getVitesse_deplacement()+", "
+      			  +this.vitesse_rotation.getVitesse_rotation()+", "
+      			  +this.hauteur+", "
+      			  +this.eloignement+");";
+  }
 
-} //PrologueImpl
+} //ModifiedPrologueImpl toString added

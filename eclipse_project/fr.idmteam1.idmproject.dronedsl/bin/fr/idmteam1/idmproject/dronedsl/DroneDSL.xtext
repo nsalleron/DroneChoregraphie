@@ -44,13 +44,13 @@ Pourcent_vitesse_deplacement_max:
 	'define' 'vitesse_deplacement_max' vitesse_deplacement=PourcentConst
 ;
 Pourcent_vitesse_rotation_max:
-	'define' 'vitesse_rotation_max' vitesse_deplacement=PourcentConst
+	'define' 'vitesse_rotation_max' vitesse_rotation=PourcentConst
 ;
 Hauteur_max:
-	'define' 'hauteur_max' hauteur_max=SecondeExp
+	'define' 'hauteur_max' hauteur_max=SecondeConst
 ;
 Eloignement_max:
-	'define' 'eloignement_max' hauteur_max=SecondeExp
+	'define' 'eloignement_max' eloignement_max=SecondeConst
 ;
 
 Prologue:

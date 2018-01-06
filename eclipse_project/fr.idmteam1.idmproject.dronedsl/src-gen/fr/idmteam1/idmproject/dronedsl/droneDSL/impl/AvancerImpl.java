@@ -264,7 +264,7 @@ public class AvancerImpl extends MouvementImpl implements Avancer
   }
   @Override
     public String toString() {
-  	  return "\tnew Avancer(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Avancer("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedAvancerImpl toString added

@@ -7773,31 +7773,31 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Pourcent_vitesse_rotation_max__Group__2__Impl"
-    // InternalDroneDSL.g:2366:1: rule__Pourcent_vitesse_rotation_max__Group__2__Impl : ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 ) ) ;
+    // InternalDroneDSL.g:2366:1: rule__Pourcent_vitesse_rotation_max__Group__2__Impl : ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 ) ) ;
     public final void rule__Pourcent_vitesse_rotation_max__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDroneDSL.g:2370:1: ( ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 ) ) )
-            // InternalDroneDSL.g:2371:1: ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 ) )
+            // InternalDroneDSL.g:2370:1: ( ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 ) ) )
+            // InternalDroneDSL.g:2371:1: ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 ) )
             {
-            // InternalDroneDSL.g:2371:1: ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 ) )
-            // InternalDroneDSL.g:2372:2: ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 )
+            // InternalDroneDSL.g:2371:1: ( ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 ) )
+            // InternalDroneDSL.g:2372:2: ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 )
             {
-             before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2()); 
-            // InternalDroneDSL.g:2373:2: ( rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 )
-            // InternalDroneDSL.g:2373:3: rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2
+             before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationAssignment_2()); 
+            // InternalDroneDSL.g:2373:2: ( rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 )
+            // InternalDroneDSL.g:2373:3: rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2();
+            rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2()); 
+             after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationAssignment_2()); 
 
             }
 
@@ -8233,31 +8233,31 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Eloignement_max__Group__2__Impl"
-    // InternalDroneDSL.g:2528:1: rule__Eloignement_max__Group__2__Impl : ( ( rule__Eloignement_max__Hauteur_maxAssignment_2 ) ) ;
+    // InternalDroneDSL.g:2528:1: rule__Eloignement_max__Group__2__Impl : ( ( rule__Eloignement_max__Eloignement_maxAssignment_2 ) ) ;
     public final void rule__Eloignement_max__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDroneDSL.g:2532:1: ( ( ( rule__Eloignement_max__Hauteur_maxAssignment_2 ) ) )
-            // InternalDroneDSL.g:2533:1: ( ( rule__Eloignement_max__Hauteur_maxAssignment_2 ) )
+            // InternalDroneDSL.g:2532:1: ( ( ( rule__Eloignement_max__Eloignement_maxAssignment_2 ) ) )
+            // InternalDroneDSL.g:2533:1: ( ( rule__Eloignement_max__Eloignement_maxAssignment_2 ) )
             {
-            // InternalDroneDSL.g:2533:1: ( ( rule__Eloignement_max__Hauteur_maxAssignment_2 ) )
-            // InternalDroneDSL.g:2534:2: ( rule__Eloignement_max__Hauteur_maxAssignment_2 )
+            // InternalDroneDSL.g:2533:1: ( ( rule__Eloignement_max__Eloignement_maxAssignment_2 ) )
+            // InternalDroneDSL.g:2534:2: ( rule__Eloignement_max__Eloignement_maxAssignment_2 )
             {
-             before(grammarAccess.getEloignement_maxAccess().getHauteur_maxAssignment_2()); 
-            // InternalDroneDSL.g:2535:2: ( rule__Eloignement_max__Hauteur_maxAssignment_2 )
-            // InternalDroneDSL.g:2535:3: rule__Eloignement_max__Hauteur_maxAssignment_2
+             before(grammarAccess.getEloignement_maxAccess().getEloignement_maxAssignment_2()); 
+            // InternalDroneDSL.g:2535:2: ( rule__Eloignement_max__Eloignement_maxAssignment_2 )
+            // InternalDroneDSL.g:2535:3: rule__Eloignement_max__Eloignement_maxAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Eloignement_max__Hauteur_maxAssignment_2();
+            rule__Eloignement_max__Eloignement_maxAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEloignement_maxAccess().getHauteur_maxAssignment_2()); 
+             after(grammarAccess.getEloignement_maxAccess().getEloignement_maxAssignment_2()); 
 
             }
 
@@ -8449,7 +8449,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:2602:1: ( rule__SecondeDecl__Group__2__Impl rule__SecondeDecl__Group__3 )
             // InternalDroneDSL.g:2603:2: rule__SecondeDecl__Group__2__Impl rule__SecondeDecl__Group__3
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_17);
             rule__SecondeDecl__Group__2__Impl();
 
             state._fsp--;
@@ -8919,7 +8919,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:2764:1: ( rule__Monter__Group__0__Impl rule__Monter__Group__1 )
             // InternalDroneDSL.g:2765:2: rule__Monter__Group__0__Impl rule__Monter__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Monter__Group__0__Impl();
 
             state._fsp--;
@@ -9309,7 +9309,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:2899:1: ( rule__Descendre__Group__0__Impl rule__Descendre__Group__1 )
             // InternalDroneDSL.g:2900:2: rule__Descendre__Group__0__Impl rule__Descendre__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Descendre__Group__0__Impl();
 
             state._fsp--;
@@ -9699,7 +9699,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3034:1: ( rule__Avancer__Group__0__Impl rule__Avancer__Group__1 )
             // InternalDroneDSL.g:3035:2: rule__Avancer__Group__0__Impl rule__Avancer__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Avancer__Group__0__Impl();
 
             state._fsp--;
@@ -10089,7 +10089,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3169:1: ( rule__Reculer__Group__0__Impl rule__Reculer__Group__1 )
             // InternalDroneDSL.g:3170:2: rule__Reculer__Group__0__Impl rule__Reculer__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Reculer__Group__0__Impl();
 
             state._fsp--;
@@ -10479,7 +10479,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3304:1: ( rule__Gauche__Group__0__Impl rule__Gauche__Group__1 )
             // InternalDroneDSL.g:3305:2: rule__Gauche__Group__0__Impl rule__Gauche__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Gauche__Group__0__Impl();
 
             state._fsp--;
@@ -10869,7 +10869,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3439:1: ( rule__Droite__Group__0__Impl rule__Droite__Group__1 )
             // InternalDroneDSL.g:3440:2: rule__Droite__Group__0__Impl rule__Droite__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Droite__Group__0__Impl();
 
             state._fsp--;
@@ -11259,7 +11259,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3574:1: ( rule__RotationGauche__Group__0__Impl rule__RotationGauche__Group__1 )
             // InternalDroneDSL.g:3575:2: rule__RotationGauche__Group__0__Impl rule__RotationGauche__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__RotationGauche__Group__0__Impl();
 
             state._fsp--;
@@ -11649,7 +11649,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3709:1: ( rule__RotationDroite__Group__0__Impl rule__RotationDroite__Group__1 )
             // InternalDroneDSL.g:3710:2: rule__RotationDroite__Group__0__Impl rule__RotationDroite__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__RotationDroite__Group__0__Impl();
 
             state._fsp--;
@@ -12039,7 +12039,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:3844:1: ( rule__Pause__Group__0__Impl rule__Pause__Group__1 )
             // InternalDroneDSL.g:3845:2: rule__Pause__Group__0__Impl rule__Pause__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_20);
             rule__Pause__Group__0__Impl();
 
             state._fsp--;
@@ -40518,9 +40518,9 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Pourcent_vitesse_deplacement_max__Vitesse_deplacementAssignment_2"
 
 
-    // $ANTLR start "rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2"
-    // InternalDroneDSL.g:13424:1: rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2 : ( rulePourcentConst ) ;
-    public final void rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2"
+    // InternalDroneDSL.g:13424:1: rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2 : ( rulePourcentConst ) ;
+    public final void rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -40531,13 +40531,13 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
             // InternalDroneDSL.g:13429:2: ( rulePourcentConst )
             // InternalDroneDSL.g:13430:3: rulePourcentConst
             {
-             before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0()); 
+             before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             rulePourcentConst();
 
             state._fsp--;
 
-             after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0()); 
+             after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0()); 
 
             }
 
@@ -40556,29 +40556,29 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2"
+    // $ANTLR end "rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2"
 
 
     // $ANTLR start "rule__Hauteur_max__Hauteur_maxAssignment_2"
-    // InternalDroneDSL.g:13439:1: rule__Hauteur_max__Hauteur_maxAssignment_2 : ( ruleSecondeExp ) ;
+    // InternalDroneDSL.g:13439:1: rule__Hauteur_max__Hauteur_maxAssignment_2 : ( ruleSecondeConst ) ;
     public final void rule__Hauteur_max__Hauteur_maxAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDroneDSL.g:13443:1: ( ( ruleSecondeExp ) )
-            // InternalDroneDSL.g:13444:2: ( ruleSecondeExp )
+            // InternalDroneDSL.g:13443:1: ( ( ruleSecondeConst ) )
+            // InternalDroneDSL.g:13444:2: ( ruleSecondeConst )
             {
-            // InternalDroneDSL.g:13444:2: ( ruleSecondeExp )
-            // InternalDroneDSL.g:13445:3: ruleSecondeExp
+            // InternalDroneDSL.g:13444:2: ( ruleSecondeConst )
+            // InternalDroneDSL.g:13445:3: ruleSecondeConst
             {
-             before(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); 
+             before(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleSecondeExp();
+            ruleSecondeConst();
 
             state._fsp--;
 
-             after(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); 
+             after(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0()); 
 
             }
 
@@ -40600,26 +40600,26 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Hauteur_max__Hauteur_maxAssignment_2"
 
 
-    // $ANTLR start "rule__Eloignement_max__Hauteur_maxAssignment_2"
-    // InternalDroneDSL.g:13454:1: rule__Eloignement_max__Hauteur_maxAssignment_2 : ( ruleSecondeExp ) ;
-    public final void rule__Eloignement_max__Hauteur_maxAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Eloignement_max__Eloignement_maxAssignment_2"
+    // InternalDroneDSL.g:13454:1: rule__Eloignement_max__Eloignement_maxAssignment_2 : ( ruleSecondeConst ) ;
+    public final void rule__Eloignement_max__Eloignement_maxAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDroneDSL.g:13458:1: ( ( ruleSecondeExp ) )
-            // InternalDroneDSL.g:13459:2: ( ruleSecondeExp )
+            // InternalDroneDSL.g:13458:1: ( ( ruleSecondeConst ) )
+            // InternalDroneDSL.g:13459:2: ( ruleSecondeConst )
             {
-            // InternalDroneDSL.g:13459:2: ( ruleSecondeExp )
-            // InternalDroneDSL.g:13460:3: ruleSecondeExp
+            // InternalDroneDSL.g:13459:2: ( ruleSecondeConst )
+            // InternalDroneDSL.g:13460:3: ruleSecondeConst
             {
-             before(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); 
+             before(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleSecondeExp();
+            ruleSecondeConst();
 
             state._fsp--;
 
-             after(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); 
+             after(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0()); 
 
             }
 
@@ -40638,7 +40638,7 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Eloignement_max__Hauteur_maxAssignment_2"
+    // $ANTLR end "rule__Eloignement_max__Eloignement_maxAssignment_2"
 
 
     // $ANTLR start "rule__Prologue__Vitesse_verticaleAssignment_0"
@@ -51762,10 +51762,10 @@ public class InternalDroneDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000050L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000010000000L});

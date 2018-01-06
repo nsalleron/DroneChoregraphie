@@ -7,6 +7,7 @@ import com.google.common.collect.Iterables;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -89,17 +90,21 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.append("package fr.roboticiens;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.runtime.DroneRuntimePrint;");
+    _builder.append("import fr.roboticiens.body.*;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.commandes.*;");
     _builder.newLine();
+    _builder.append("import fr.roboticiens.fonction.*;");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.imports.*;");
+    _builder.newLine();
     _builder.append("import fr.roboticiens.paralleles.*;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.types.Pourcent;");
+    _builder.append("import fr.roboticiens.prologue.*;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.types.Seconde;");
+    _builder.append("import fr.roboticiens.runtime.*;");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.types.*;");
     _builder.newLine();
     _builder.newLine();
     {
@@ -117,29 +122,48 @@ public class DroneDSLGenerator extends AbstractGenerator {
       }
     }
     _builder.newLine();
+    _builder.newLine();
     _builder.append("public class Main {");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("static DroneRuntime runtime = new DroneRuntimePrint();");
     _builder.newLine();
+    {
+      Prologue _prologue = e.getPrologue();
+      boolean _tripleNotEquals_1 = (_prologue != null);
+      if (_tripleNotEquals_1) {
+        _builder.append("\t");
+        String _string = e.getPrologue().toString();
+        _builder.append(_string, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t");
     _builder.append("public static void main(String[] args) {");
     _builder.newLine();
     _builder.append("\t\t");
-    String _string = e.getM().getDecollage().toString();
-    _builder.append(_string, "\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("runtime.execPrologue(prologue_");
+    int _hashCode = e.getPrologue().hashCode();
+    _builder.append(_hashCode, "\t\t");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    String _string_1 = e.getM().getDecollage().toString();
+    _builder.append(_string_1, "\t\t");
     _builder.newLineIfNotEmpty();
     {
       EList<EObject> _mainbody = e.getM().getMainbody();
       for(final EObject f_1 : _mainbody) {
-        String _string_1 = f_1.toString();
-        _builder.append(_string_1);
+        String _string_2 = f_1.toString();
+        _builder.append(_string_2);
         _builder.newLineIfNotEmpty();
       }
     }
     _builder.append("\t\t");
-    String _string_2 = e.getM().getAtterrissage().toString();
-    _builder.append(_string_2, "\t\t");
+    String _string_3 = e.getM().getAtterrissage().toString();
+    _builder.append(_string_3, "\t\t");
     _builder.append("\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -149,8 +173,8 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.newLine();
     {
       EList<FonctionDecl> _fonctions = e.getFonctions();
-      boolean _tripleNotEquals_1 = (_fonctions != null);
-      if (_tripleNotEquals_1) {
+      boolean _tripleNotEquals_2 = (_fonctions != null);
+      if (_tripleNotEquals_2) {
         {
           EList<FonctionDecl> _fonctions_1 = e.getFonctions();
           for(final FonctionDecl f_2 : _fonctions_1) {
@@ -171,31 +195,30 @@ public class DroneDSLGenerator extends AbstractGenerator {
   
   public CharSequence compile(final FonctionDecl e) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("\t");
     _builder.append("public static void ");
     String _name = e.getName();
-    _builder.append(_name);
+    _builder.append(_name, "\t");
     _builder.append("() {");
     _builder.newLineIfNotEmpty();
     {
       EList<EObject> _body = e.getBody();
       for(final EObject f : _body) {
-        _builder.append("\t");
         String _string = f.toString();
-        _builder.append(_string, "\t");
+        _builder.append(_string);
         _builder.newLineIfNotEmpty();
       }
     }
     _builder.append("\t");
-    _builder.newLine();
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compile(final Import e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import  ");
-    _builder.append(e);
+    _builder.append("import ");
+    String _string = e.toString();
+    _builder.append(_string);
     _builder.append(".java;");
     _builder.newLineIfNotEmpty();
     return _builder;

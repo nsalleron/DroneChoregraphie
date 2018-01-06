@@ -566,7 +566,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPourcent_vitesse_rotation_max_Vitesse_deplacement()
+  public EReference getPourcent_vitesse_rotation_max_Vitesse_rotation()
   {
     return (EReference)pourcent_vitesse_rotation_maxEClass.getEStructuralFeatures().get(0);
   }
@@ -606,7 +606,7 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEloignement_max_Hauteur_max()
+  public EReference getEloignement_max_Eloignement_max()
   {
     return (EReference)eloignement_maxEClass.getEStructuralFeatures().get(0);
   }
@@ -1497,13 +1497,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     createEReference(pourcent_vitesse_deplacement_maxEClass, POURCENT_VITESSE_DEPLACEMENT_MAX__VITESSE_DEPLACEMENT);
 
     pourcent_vitesse_rotation_maxEClass = createEClass(POURCENT_VITESSE_ROTATION_MAX);
-    createEReference(pourcent_vitesse_rotation_maxEClass, POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT);
+    createEReference(pourcent_vitesse_rotation_maxEClass, POURCENT_VITESSE_ROTATION_MAX__VITESSE_ROTATION);
 
     hauteur_maxEClass = createEClass(HAUTEUR_MAX);
     createEReference(hauteur_maxEClass, HAUTEUR_MAX__HAUTEUR_MAX);
 
     eloignement_maxEClass = createEClass(ELOIGNEMENT_MAX);
-    createEReference(eloignement_maxEClass, ELOIGNEMENT_MAX__HAUTEUR_MAX);
+    createEReference(eloignement_maxEClass, ELOIGNEMENT_MAX__ELOIGNEMENT_MAX);
 
     prologueEClass = createEClass(PROLOGUE);
     createEReference(prologueEClass, PROLOGUE__VITESSE_VERTICALE);
@@ -1714,13 +1714,13 @@ public class DroneDSLPackageImpl extends EPackageImpl implements DroneDSLPackage
     initEReference(getPourcent_vitesse_deplacement_max_Vitesse_deplacement(), this.getPourcentConst(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_deplacement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pourcent_vitesse_rotation_maxEClass, Pourcent_vitesse_rotation_max.class, "Pourcent_vitesse_rotation_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPourcent_vitesse_rotation_max_Vitesse_deplacement(), this.getPourcentConst(), null, "vitesse_deplacement", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPourcent_vitesse_rotation_max_Vitesse_rotation(), this.getPourcentConst(), null, "vitesse_rotation", null, 0, 1, Pourcent_vitesse_rotation_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hauteur_maxEClass, Hauteur_max.class, "Hauteur_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHauteur_max_Hauteur_max(), this.getSecondeExp(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHauteur_max_Hauteur_max(), this.getSecondeConst(), null, "hauteur_max", null, 0, 1, Hauteur_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eloignement_maxEClass, Eloignement_max.class, "Eloignement_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEloignement_max_Hauteur_max(), this.getSecondeExp(), null, "hauteur_max", null, 0, 1, Eloignement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEloignement_max_Eloignement_max(), this.getSecondeConst(), null, "eloignement_max", null, 0, 1, Eloignement_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(prologueEClass, Prologue.class, "Prologue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPrologue_Vitesse_verticale(), this.getPourcent_vitesse_hauteur_max(), null, "vitesse_verticale", null, 0, 1, Prologue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -206,10 +206,10 @@ public class Parallele2Impl extends ParalleleImpl implements Parallele2
 
 	  String name = Integer.toString(this.hashCode());
   
-	  return "\tParallele p2_"+name+" = new Parallele();\n"
+	  return "		Parallele p2_"+name+" = new Parallele();\n"
 	  		+ "			  p2_"+name+".addCommande("+a+");\n"
 	  		+ "			  p2_"+name+".addCommande("+b+");\n"
-	  		+ "\tp2_"+name+".execute(runtime);";
+	  		+ "		p2_"+name+".execute(runtime);";
   }
 
 } //ModifiedParallele2Impl toString added 

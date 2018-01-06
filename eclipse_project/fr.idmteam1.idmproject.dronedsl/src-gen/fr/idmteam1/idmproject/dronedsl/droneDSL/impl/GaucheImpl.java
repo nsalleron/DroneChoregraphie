@@ -264,7 +264,7 @@ public class GaucheImpl extends MouvementImpl implements Gauche
   }
   @Override
     public String toString() {
-  	  return "\tnew Gauche(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Gauche("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedGaucheImpl toString added

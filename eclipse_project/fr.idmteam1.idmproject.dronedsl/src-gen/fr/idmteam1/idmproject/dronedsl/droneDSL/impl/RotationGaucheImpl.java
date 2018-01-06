@@ -264,7 +264,7 @@ public class RotationGaucheImpl extends MouvementImpl implements RotationGauche
   }
   @Override
     public String toString() {
-  	  return "\tnew RotationGauche(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new RotationGauche("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedRotationGaucheImpl toString added

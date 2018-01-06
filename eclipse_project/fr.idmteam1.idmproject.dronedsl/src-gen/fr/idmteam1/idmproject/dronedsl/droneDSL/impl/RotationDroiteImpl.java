@@ -264,7 +264,7 @@ public class RotationDroiteImpl extends MouvementImpl implements RotationDroite
   }
   @Override
     public String toString() {
-  	  return "\tnew RotationDroite(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new RotationDroite("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedRotationDroiteImpl toString added

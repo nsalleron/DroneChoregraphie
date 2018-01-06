@@ -169,5 +169,10 @@ public class RefSecondeVarImpl extends SecondeExpImpl implements RefSecondeVar
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString()
+  {
+    return "s_"+this.var.getName();
+  }
 
-} //RefSecondeVarImpl
+} //ModifiedRefSecondeVarImpll toString added

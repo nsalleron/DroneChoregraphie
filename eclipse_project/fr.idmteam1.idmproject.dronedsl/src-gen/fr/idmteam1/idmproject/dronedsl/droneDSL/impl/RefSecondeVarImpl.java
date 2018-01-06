@@ -172,7 +172,7 @@ public class RefSecondeVarImpl extends SecondeExpImpl implements RefSecondeVar
   @Override
   public String toString()
   {
-    return this.var.getVal().getVal();
+    return "s_"+this.var.getName();
   }
 
 } //ModifiedRefSecondeVarImpll toString added

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getHauteur_max <em>Hauteur max</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getEloignement_max <em>Eloignement max</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getEloignement_max()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Eloignement_max extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Hauteur max</b></em>' containment reference.
+   * Returns the value of the '<em><b>Eloignement max</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Hauteur max</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Eloignement max</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Hauteur max</em>' containment reference.
-   * @see #setHauteur_max(SecondeExp)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getEloignement_max_Hauteur_max()
+   * @return the value of the '<em>Eloignement max</em>' containment reference.
+   * @see #setEloignement_max(SecondeConst)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getEloignement_max_Eloignement_max()
    * @model containment="true"
    * @generated
    */
-  SecondeExp getHauteur_max();
+  SecondeConst getEloignement_max();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getHauteur_max <em>Hauteur max</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getEloignement_max <em>Eloignement max</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Hauteur max</em>' containment reference.
-   * @see #getHauteur_max()
+   * @param value the new value of the '<em>Eloignement max</em>' containment reference.
+   * @see #getEloignement_max()
    * @generated
    */
-  void setHauteur_max(SecondeExp value);
+  void setEloignement_max(SecondeConst value);
 
 } // Eloignement_max

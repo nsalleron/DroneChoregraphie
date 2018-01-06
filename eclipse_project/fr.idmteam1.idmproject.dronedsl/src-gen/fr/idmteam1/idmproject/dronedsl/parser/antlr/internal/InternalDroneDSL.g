@@ -327,17 +327,17 @@ rulePourcent_vitesse_rotation_max returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0());
 				}
-				lv_vitesse_deplacement_2_0=rulePourcentConst
+				lv_vitesse_rotation_2_0=rulePourcentConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPourcent_vitesse_rotation_maxRule());
 					}
 					set(
 						$current,
-						"vitesse_deplacement",
-						lv_vitesse_deplacement_2_0,
+						"vitesse_rotation",
+						lv_vitesse_rotation_2_0,
 						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentConst");
 					afterParserOrEnumRuleCall();
 				}
@@ -373,9 +373,9 @@ ruleHauteur_max returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0());
 				}
-				lv_hauteur_max_2_0=ruleSecondeExp
+				lv_hauteur_max_2_0=ruleSecondeConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getHauteur_maxRule());
@@ -384,7 +384,7 @@ ruleHauteur_max returns [EObject current=null]
 						$current,
 						"hauteur_max",
 						lv_hauteur_max_2_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeExp");
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeConst");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -419,18 +419,18 @@ ruleEloignement_max returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0());
 				}
-				lv_hauteur_max_2_0=ruleSecondeExp
+				lv_eloignement_max_2_0=ruleSecondeConst
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getEloignement_maxRule());
 					}
 					set(
 						$current,
-						"hauteur_max",
-						lv_hauteur_max_2_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeExp");
+						"eloignement_max",
+						lv_eloignement_max_2_0,
+						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeConst");
 					afterParserOrEnumRuleCall();
 				}
 			)

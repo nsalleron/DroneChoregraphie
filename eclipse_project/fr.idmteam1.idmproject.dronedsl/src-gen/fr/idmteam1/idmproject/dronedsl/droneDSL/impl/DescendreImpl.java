@@ -264,7 +264,7 @@ public class DescendreImpl extends MouvementImpl implements Descendre
   }
   @Override
     public String toString() {
-  	  return "\tnew Descendre(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Descendre("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedDescendreImpl toString added

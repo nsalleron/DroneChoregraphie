@@ -124,7 +124,7 @@ class DroneDSLGenerator extends AbstractGenerator {
         
     def compile(Import e) 
         '''
-		import  «e.toString».java;
+		import «e.toString».java;
         '''
 	
 	def contentDroneRuntimePrintClass() {

@@ -207,13 +207,13 @@ public interface DroneDSLPackage extends EPackage
   int POURCENT_VITESSE_ROTATION_MAX = 4;
 
   /**
-   * The feature id for the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * The feature id for the '<em><b>Vitesse rotation</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT = 0;
+  int POURCENT_VITESSE_ROTATION_MAX__VITESSE_ROTATION = 0;
 
   /**
    * The number of structural features of the '<em>Pourcent vitesse rotation max</em>' class.
@@ -263,13 +263,13 @@ public interface DroneDSLPackage extends EPackage
   int ELOIGNEMENT_MAX = 6;
 
   /**
-   * The feature id for the '<em><b>Hauteur max</b></em>' containment reference.
+   * The feature id for the '<em><b>Eloignement max</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ELOIGNEMENT_MAX__HAUTEUR_MAX = 0;
+  int ELOIGNEMENT_MAX__ELOIGNEMENT_MAX = 0;
 
   /**
    * The number of structural features of the '<em>Eloignement max</em>' class.
@@ -1635,15 +1635,15 @@ public interface DroneDSLPackage extends EPackage
   EClass getPourcent_vitesse_rotation_max();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_deplacement <em>Vitesse deplacement</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_rotation <em>Vitesse rotation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Vitesse deplacement</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_deplacement()
+   * @return the meta object for the containment reference '<em>Vitesse rotation</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_rotation()
    * @see #getPourcent_vitesse_rotation_max()
    * @generated
    */
-  EReference getPourcent_vitesse_rotation_max_Vitesse_deplacement();
+  EReference getPourcent_vitesse_rotation_max_Vitesse_rotation();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Hauteur_max <em>Hauteur max</em>}'.
@@ -1677,15 +1677,15 @@ public interface DroneDSLPackage extends EPackage
   EClass getEloignement_max();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getHauteur_max <em>Hauteur max</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getEloignement_max <em>Eloignement max</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Hauteur max</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getHauteur_max()
+   * @return the meta object for the containment reference '<em>Eloignement max</em>'.
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max#getEloignement_max()
    * @see #getEloignement_max()
    * @generated
    */
-  EReference getEloignement_max_Hauteur_max();
+  EReference getEloignement_max_Eloignement_max();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue <em>Prologue</em>}'.
@@ -2703,12 +2703,12 @@ public interface DroneDSLPackage extends EPackage
     EClass POURCENT_VITESSE_ROTATION_MAX = eINSTANCE.getPourcent_vitesse_rotation_max();
 
     /**
-     * The meta object literal for the '<em><b>Vitesse deplacement</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Vitesse rotation</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference POURCENT_VITESSE_ROTATION_MAX__VITESSE_DEPLACEMENT = eINSTANCE.getPourcent_vitesse_rotation_max_Vitesse_deplacement();
+    EReference POURCENT_VITESSE_ROTATION_MAX__VITESSE_ROTATION = eINSTANCE.getPourcent_vitesse_rotation_max_Vitesse_rotation();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Hauteur_maxImpl <em>Hauteur max</em>}' class.
@@ -2739,12 +2739,12 @@ public interface DroneDSLPackage extends EPackage
     EClass ELOIGNEMENT_MAX = eINSTANCE.getEloignement_max();
 
     /**
-     * The meta object literal for the '<em><b>Hauteur max</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Eloignement max</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ELOIGNEMENT_MAX__HAUTEUR_MAX = eINSTANCE.getEloignement_max_Hauteur_max();
+    EReference ELOIGNEMENT_MAX__ELOIGNEMENT_MAX = eINSTANCE.getEloignement_max_Eloignement_max();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.PrologueImpl <em>Prologue</em>}' class.

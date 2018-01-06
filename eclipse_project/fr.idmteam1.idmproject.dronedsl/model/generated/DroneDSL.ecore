@@ -23,15 +23,15 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pourcent_vitesse_rotation_max">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_deplacement" eType="#//PourcentConst"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vitesse_rotation" eType="#//PourcentConst"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hauteur_max">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//SecondeExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//SecondeConst"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Eloignement_max">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hauteur_max" eType="#//SecondeExp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eloignement_max" eType="#//SecondeConst"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prologue">

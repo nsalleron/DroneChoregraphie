@@ -137,9 +137,9 @@ public class DroneDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImportAccess().getNameAssignment_2(), "rule__Import__NameAssignment_2");
 					put(grammarAccess.getPourcent_vitesse_hauteur_maxAccess().getVitesse_verticaleAssignment_2(), "rule__Pourcent_vitesse_hauteur_max__Vitesse_verticaleAssignment_2");
 					put(grammarAccess.getPourcent_vitesse_deplacement_maxAccess().getVitesse_deplacementAssignment_2(), "rule__Pourcent_vitesse_deplacement_max__Vitesse_deplacementAssignment_2");
-					put(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2(), "rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2");
+					put(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationAssignment_2(), "rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2");
 					put(grammarAccess.getHauteur_maxAccess().getHauteur_maxAssignment_2(), "rule__Hauteur_max__Hauteur_maxAssignment_2");
-					put(grammarAccess.getEloignement_maxAccess().getHauteur_maxAssignment_2(), "rule__Eloignement_max__Hauteur_maxAssignment_2");
+					put(grammarAccess.getEloignement_maxAccess().getEloignement_maxAssignment_2(), "rule__Eloignement_max__Eloignement_maxAssignment_2");
 					put(grammarAccess.getPrologueAccess().getVitesse_verticaleAssignment_0(), "rule__Prologue__Vitesse_verticaleAssignment_0");
 					put(grammarAccess.getPrologueAccess().getVitesse_deplacementAssignment_1(), "rule__Prologue__Vitesse_deplacementAssignment_1");
 					put(grammarAccess.getPrologueAccess().getVitesse_rotationAssignment_2(), "rule__Prologue__Vitesse_rotationAssignment_2");

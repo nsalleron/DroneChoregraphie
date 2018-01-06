@@ -2369,9 +2369,9 @@ rule__Pourcent_vitesse_rotation_max__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2()); }
-	(rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2)
-	{ after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementAssignment_2()); }
+	{ before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationAssignment_2()); }
+	(rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2)
+	{ after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationAssignment_2()); }
 )
 ;
 finally {
@@ -2531,9 +2531,9 @@ rule__Eloignement_max__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getEloignement_maxAccess().getHauteur_maxAssignment_2()); }
-	(rule__Eloignement_max__Hauteur_maxAssignment_2)
-	{ after(grammarAccess.getEloignement_maxAccess().getHauteur_maxAssignment_2()); }
+	{ before(grammarAccess.getEloignement_maxAccess().getEloignement_maxAssignment_2()); }
+	(rule__Eloignement_max__Eloignement_maxAssignment_2)
+	{ after(grammarAccess.getEloignement_maxAccess().getEloignement_maxAssignment_2()); }
 )
 ;
 finally {
@@ -13421,15 +13421,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Pourcent_vitesse_rotation_max__Vitesse_deplacementAssignment_2
+rule__Pourcent_vitesse_rotation_max__Vitesse_rotationAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0()); }
+		{ before(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0()); }
 		rulePourcentConst
-		{ after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0()); }
+		{ after(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -13442,24 +13442,24 @@ rule__Hauteur_max__Hauteur_maxAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); }
-		ruleSecondeExp
-		{ after(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); }
+		{ before(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0()); }
+		ruleSecondeConst
+		{ after(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Eloignement_max__Hauteur_maxAssignment_2
+rule__Eloignement_max__Eloignement_maxAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); }
-		ruleSecondeExp
-		{ after(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0()); }
+		{ before(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0()); }
+		ruleSecondeConst
+		{ after(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0()); }
 	)
 ;
 finally {

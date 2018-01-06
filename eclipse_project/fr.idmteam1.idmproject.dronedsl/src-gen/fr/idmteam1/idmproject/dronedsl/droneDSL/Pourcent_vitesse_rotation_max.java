@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_deplacement <em>Vitesse deplacement</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_rotation <em>Vitesse rotation</em>}</li>
  * </ul>
  *
  * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getPourcent_vitesse_rotation_max()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Pourcent_vitesse_rotation_max extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Vitesse deplacement</b></em>' containment reference.
+   * Returns the value of the '<em><b>Vitesse rotation</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vitesse deplacement</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Vitesse rotation</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #setVitesse_deplacement(PourcentConst)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getPourcent_vitesse_rotation_max_Vitesse_deplacement()
+   * @return the value of the '<em>Vitesse rotation</em>' containment reference.
+   * @see #setVitesse_rotation(PourcentConst)
+   * @see fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage#getPourcent_vitesse_rotation_max_Vitesse_rotation()
    * @model containment="true"
    * @generated
    */
-  PourcentConst getVitesse_deplacement();
+  PourcentConst getVitesse_rotation();
 
   /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_deplacement <em>Vitesse deplacement</em>}' containment reference.
+   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSL.Pourcent_vitesse_rotation_max#getVitesse_rotation <em>Vitesse rotation</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vitesse deplacement</em>' containment reference.
-   * @see #getVitesse_deplacement()
+   * @param value the new value of the '<em>Vitesse rotation</em>' containment reference.
+   * @see #getVitesse_rotation()
    * @generated
    */
-  void setVitesse_deplacement(PourcentConst value);
+  void setVitesse_rotation(PourcentConst value);
 
 } // Pourcent_vitesse_rotation_max

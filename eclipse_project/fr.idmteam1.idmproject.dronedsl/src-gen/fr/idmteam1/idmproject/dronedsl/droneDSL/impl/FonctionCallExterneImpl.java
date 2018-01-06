@@ -230,15 +230,8 @@ public class FonctionCallExterneImpl extends FonctionCallImpl implements Fonctio
    * @generated
    */
   @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
+  public String toString() {
+      return "   " + this.file + "." + this.name + "();";
   }
 
-} //FonctionCallExterneImpl
+} //ModifiedFonctionCallExterneImpl toString added

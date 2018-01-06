@@ -172,7 +172,7 @@ public class RefPourcentVarImpl extends PourcentExpImpl implements RefPourcentVa
   @Override
   public String toString()
   {
-    return this.var.getVal().getVal().split("\\%")[0];
+    return "p_"+this.var.getName();
   }
 
 } //ModifiedRefPourcentVarImpll toString added

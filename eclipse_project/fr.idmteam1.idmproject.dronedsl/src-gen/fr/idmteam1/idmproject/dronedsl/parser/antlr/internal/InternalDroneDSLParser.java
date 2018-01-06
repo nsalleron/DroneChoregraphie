@@ -740,24 +740,24 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePourcent_vitesse_rotation_max"
-    // InternalDroneDSL.g:311:1: rulePourcent_vitesse_rotation_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) ) ) ;
+    // InternalDroneDSL.g:311:1: rulePourcent_vitesse_rotation_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_rotation_2_0= rulePourcentConst ) ) ) ;
     public final EObject rulePourcent_vitesse_rotation_max() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        EObject lv_vitesse_deplacement_2_0 = null;
+        EObject lv_vitesse_rotation_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:317:2: ( (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) ) ) )
-            // InternalDroneDSL.g:318:2: (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) ) )
+            // InternalDroneDSL.g:317:2: ( (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_rotation_2_0= rulePourcentConst ) ) ) )
+            // InternalDroneDSL.g:318:2: (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_rotation_2_0= rulePourcentConst ) ) )
             {
-            // InternalDroneDSL.g:318:2: (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) ) )
-            // InternalDroneDSL.g:319:3: otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) )
+            // InternalDroneDSL.g:318:2: (otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_rotation_2_0= rulePourcentConst ) ) )
+            // InternalDroneDSL.g:319:3: otherlv_0= 'define' otherlv_1= 'vitesse_rotation_max' ( (lv_vitesse_rotation_2_0= rulePourcentConst ) )
             {
             otherlv_0=(Token)match(input,17,FOLLOW_13); 
 
@@ -767,17 +767,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotation_maxKeyword_1());
             		
-            // InternalDroneDSL.g:327:3: ( (lv_vitesse_deplacement_2_0= rulePourcentConst ) )
-            // InternalDroneDSL.g:328:4: (lv_vitesse_deplacement_2_0= rulePourcentConst )
+            // InternalDroneDSL.g:327:3: ( (lv_vitesse_rotation_2_0= rulePourcentConst ) )
+            // InternalDroneDSL.g:328:4: (lv_vitesse_rotation_2_0= rulePourcentConst )
             {
-            // InternalDroneDSL.g:328:4: (lv_vitesse_deplacement_2_0= rulePourcentConst )
-            // InternalDroneDSL.g:329:5: lv_vitesse_deplacement_2_0= rulePourcentConst
+            // InternalDroneDSL.g:328:4: (lv_vitesse_rotation_2_0= rulePourcentConst )
+            // InternalDroneDSL.g:329:5: lv_vitesse_rotation_2_0= rulePourcentConst
             {
 
-            					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_deplacementPourcentConstParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getPourcent_vitesse_rotation_maxAccess().getVitesse_rotationPourcentConstParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            lv_vitesse_deplacement_2_0=rulePourcentConst();
+            lv_vitesse_rotation_2_0=rulePourcentConst();
 
             state._fsp--;
 
@@ -787,8 +787,8 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"vitesse_deplacement",
-            						lv_vitesse_deplacement_2_0,
+            						"vitesse_rotation",
+            						lv_vitesse_rotation_2_0,
             						"fr.idmteam1.idmproject.dronedsl.DroneDSL.PourcentConst");
             					afterParserOrEnumRuleCall();
             				
@@ -857,7 +857,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHauteur_max"
-    // InternalDroneDSL.g:357:1: ruleHauteur_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) ) ;
+    // InternalDroneDSL.g:357:1: ruleHauteur_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeConst ) ) ) ;
     public final EObject ruleHauteur_max() throws RecognitionException {
         EObject current = null;
 
@@ -870,11 +870,11 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:363:2: ( (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) ) )
-            // InternalDroneDSL.g:364:2: (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) )
+            // InternalDroneDSL.g:363:2: ( (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeConst ) ) ) )
+            // InternalDroneDSL.g:364:2: (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeConst ) ) )
             {
-            // InternalDroneDSL.g:364:2: (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) )
-            // InternalDroneDSL.g:365:3: otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) )
+            // InternalDroneDSL.g:364:2: (otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeConst ) ) )
+            // InternalDroneDSL.g:365:3: otherlv_0= 'define' otherlv_1= 'hauteur_max' ( (lv_hauteur_max_2_0= ruleSecondeConst ) )
             {
             otherlv_0=(Token)match(input,17,FOLLOW_14); 
 
@@ -884,17 +884,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getHauteur_maxAccess().getHauteur_maxKeyword_1());
             		
-            // InternalDroneDSL.g:373:3: ( (lv_hauteur_max_2_0= ruleSecondeExp ) )
-            // InternalDroneDSL.g:374:4: (lv_hauteur_max_2_0= ruleSecondeExp )
+            // InternalDroneDSL.g:373:3: ( (lv_hauteur_max_2_0= ruleSecondeConst ) )
+            // InternalDroneDSL.g:374:4: (lv_hauteur_max_2_0= ruleSecondeConst )
             {
-            // InternalDroneDSL.g:374:4: (lv_hauteur_max_2_0= ruleSecondeExp )
-            // InternalDroneDSL.g:375:5: lv_hauteur_max_2_0= ruleSecondeExp
+            // InternalDroneDSL.g:374:4: (lv_hauteur_max_2_0= ruleSecondeConst )
+            // InternalDroneDSL.g:375:5: lv_hauteur_max_2_0= ruleSecondeConst
             {
 
-            					newCompositeNode(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getHauteur_maxAccess().getHauteur_maxSecondeConstParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            lv_hauteur_max_2_0=ruleSecondeExp();
+            lv_hauteur_max_2_0=ruleSecondeConst();
 
             state._fsp--;
 
@@ -906,7 +906,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             						current,
             						"hauteur_max",
             						lv_hauteur_max_2_0,
-            						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeExp");
+            						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeConst");
             					afterParserOrEnumRuleCall();
             				
 
@@ -974,24 +974,24 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEloignement_max"
-    // InternalDroneDSL.g:403:1: ruleEloignement_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) ) ;
+    // InternalDroneDSL.g:403:1: ruleEloignement_max returns [EObject current=null] : (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_eloignement_max_2_0= ruleSecondeConst ) ) ) ;
     public final EObject ruleEloignement_max() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        EObject lv_hauteur_max_2_0 = null;
+        EObject lv_eloignement_max_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDroneDSL.g:409:2: ( (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) ) )
-            // InternalDroneDSL.g:410:2: (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) )
+            // InternalDroneDSL.g:409:2: ( (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_eloignement_max_2_0= ruleSecondeConst ) ) ) )
+            // InternalDroneDSL.g:410:2: (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_eloignement_max_2_0= ruleSecondeConst ) ) )
             {
-            // InternalDroneDSL.g:410:2: (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) ) )
-            // InternalDroneDSL.g:411:3: otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_hauteur_max_2_0= ruleSecondeExp ) )
+            // InternalDroneDSL.g:410:2: (otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_eloignement_max_2_0= ruleSecondeConst ) ) )
+            // InternalDroneDSL.g:411:3: otherlv_0= 'define' otherlv_1= 'eloignement_max' ( (lv_eloignement_max_2_0= ruleSecondeConst ) )
             {
             otherlv_0=(Token)match(input,17,FOLLOW_16); 
 
@@ -1001,17 +1001,17 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getEloignement_maxAccess().getEloignement_maxKeyword_1());
             		
-            // InternalDroneDSL.g:419:3: ( (lv_hauteur_max_2_0= ruleSecondeExp ) )
-            // InternalDroneDSL.g:420:4: (lv_hauteur_max_2_0= ruleSecondeExp )
+            // InternalDroneDSL.g:419:3: ( (lv_eloignement_max_2_0= ruleSecondeConst ) )
+            // InternalDroneDSL.g:420:4: (lv_eloignement_max_2_0= ruleSecondeConst )
             {
-            // InternalDroneDSL.g:420:4: (lv_hauteur_max_2_0= ruleSecondeExp )
-            // InternalDroneDSL.g:421:5: lv_hauteur_max_2_0= ruleSecondeExp
+            // InternalDroneDSL.g:420:4: (lv_eloignement_max_2_0= ruleSecondeConst )
+            // InternalDroneDSL.g:421:5: lv_eloignement_max_2_0= ruleSecondeConst
             {
 
-            					newCompositeNode(grammarAccess.getEloignement_maxAccess().getHauteur_maxSecondeExpParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getEloignement_maxAccess().getEloignement_maxSecondeConstParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            lv_hauteur_max_2_0=ruleSecondeExp();
+            lv_eloignement_max_2_0=ruleSecondeConst();
 
             state._fsp--;
 
@@ -1021,9 +1021,9 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"hauteur_max",
-            						lv_hauteur_max_2_0,
-            						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeExp");
+            						"eloignement_max",
+            						lv_eloignement_max_2_0,
+            						"fr.idmteam1.idmproject.dronedsl.DroneDSL.SecondeConst");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1812,7 +1812,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,24,FOLLOW_19); 
+            otherlv_2=(Token)match(input,24,FOLLOW_15); 
 
             			newLeafNode(otherlv_2, grammarAccess.getSecondeDeclAccess().getEqualsSignKeyword_2());
             		
@@ -2818,7 +2818,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1056:2: (otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1057:3: otherlv_0= 'monter(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_15); 
+            otherlv_0=(Token)match(input,28,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMonterAccess().getMonterKeyword_0());
             		
@@ -2973,7 +2973,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1125:2: (otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1126:3: otherlv_0= 'descendre(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_15); 
+            otherlv_0=(Token)match(input,31,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDescendreAccess().getDescendreKeyword_0());
             		
@@ -3128,7 +3128,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1194:2: (otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1195:3: otherlv_0= 'avancer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_15); 
+            otherlv_0=(Token)match(input,32,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAvancerAccess().getAvancerKeyword_0());
             		
@@ -3283,7 +3283,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1263:2: (otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1264:3: otherlv_0= 'reculer(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_15); 
+            otherlv_0=(Token)match(input,33,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getReculerAccess().getReculerKeyword_0());
             		
@@ -3438,7 +3438,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1332:2: (otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1333:3: otherlv_0= 'gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_15); 
+            otherlv_0=(Token)match(input,34,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGaucheAccess().getGaucheKeyword_0());
             		
@@ -3593,7 +3593,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1401:2: (otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1402:3: otherlv_0= 'droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_15); 
+            otherlv_0=(Token)match(input,35,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDroiteAccess().getDroiteKeyword_0());
             		
@@ -3748,7 +3748,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1470:2: (otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1471:3: otherlv_0= 'rotation_gauche(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_15); 
+            otherlv_0=(Token)match(input,36,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRotationGaucheAccess().getRotation_gaucheKeyword_0());
             		
@@ -3903,7 +3903,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1539:2: (otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')' )
             // InternalDroneDSL.g:1540:3: otherlv_0= 'rotation_droite(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ',' ( (lv_vitesse_3_0= rulePourcentExp ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,37,FOLLOW_15); 
+            otherlv_0=(Token)match(input,37,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRotationDroiteAccess().getRotation_droiteKeyword_0());
             		
@@ -4055,7 +4055,7 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
             // InternalDroneDSL.g:1608:2: (otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')' )
             // InternalDroneDSL.g:1609:3: otherlv_0= 'pause(' ( (lv_duree_1_0= ruleSecondeExp ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_15); 
+            otherlv_0=(Token)match(input,38,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPauseAccess().getPauseKeyword_0());
             		
@@ -15768,11 +15768,11 @@ public class InternalDroneDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000020002L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000050L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000040000000L});

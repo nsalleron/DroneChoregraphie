@@ -5,7 +5,7 @@ package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Eloignement_max;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeExp;
+import fr.idmteam1.idmproject.dronedsl.droneDSL.SecondeConst;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Eloignement_maxImpl#getHauteur_max <em>Hauteur max</em>}</li>
+ *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSL.impl.Eloignement_maxImpl#getEloignement_max <em>Eloignement max</em>}</li>
  * </ul>
  *
  * @generated
@@ -32,14 +32,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements Eloignement_max
 {
   /**
-   * The cached value of the '{@link #getHauteur_max() <em>Hauteur max</em>}' containment reference.
+   * The cached value of the '{@link #getEloignement_max() <em>Eloignement max</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHauteur_max()
+   * @see #getEloignement_max()
    * @generated
    * @ordered
    */
-  protected SecondeExp hauteur_max;
+  protected SecondeConst eloignement_max;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,9 +67,9 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public SecondeExp getHauteur_max()
+  public SecondeConst getEloignement_max()
   {
-    return hauteur_max;
+    return eloignement_max;
   }
 
   /**
@@ -77,13 +77,13 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetHauteur_max(SecondeExp newHauteur_max, NotificationChain msgs)
+  public NotificationChain basicSetEloignement_max(SecondeConst newEloignement_max, NotificationChain msgs)
   {
-    SecondeExp oldHauteur_max = hauteur_max;
-    hauteur_max = newHauteur_max;
+    SecondeConst oldEloignement_max = eloignement_max;
+    eloignement_max = newEloignement_max;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX, oldHauteur_max, newHauteur_max);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX, oldEloignement_max, newEloignement_max);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -94,20 +94,20 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setHauteur_max(SecondeExp newHauteur_max)
+  public void setEloignement_max(SecondeConst newEloignement_max)
   {
-    if (newHauteur_max != hauteur_max)
+    if (newEloignement_max != eloignement_max)
     {
       NotificationChain msgs = null;
-      if (hauteur_max != null)
-        msgs = ((InternalEObject)hauteur_max).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX, null, msgs);
-      if (newHauteur_max != null)
-        msgs = ((InternalEObject)newHauteur_max).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX, null, msgs);
-      msgs = basicSetHauteur_max(newHauteur_max, msgs);
+      if (eloignement_max != null)
+        msgs = ((InternalEObject)eloignement_max).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX, null, msgs);
+      if (newEloignement_max != null)
+        msgs = ((InternalEObject)newEloignement_max).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX, null, msgs);
+      msgs = basicSetEloignement_max(newEloignement_max, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX, newHauteur_max, newHauteur_max));
+      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX, newEloignement_max, newEloignement_max));
   }
 
   /**
@@ -120,8 +120,8 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX:
-        return basicSetHauteur_max(null, msgs);
+      case DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX:
+        return basicSetEloignement_max(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -136,8 +136,8 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX:
-        return getHauteur_max();
+      case DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX:
+        return getEloignement_max();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,8 +152,8 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX:
-        setHauteur_max((SecondeExp)newValue);
+      case DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX:
+        setEloignement_max((SecondeConst)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,8 +169,8 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX:
-        setHauteur_max((SecondeExp)null);
+      case DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX:
+        setEloignement_max((SecondeConst)null);
         return;
     }
     super.eUnset(featureID);
@@ -186,10 +186,14 @@ public class Eloignement_maxImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case DroneDSLPackage.ELOIGNEMENT_MAX__HAUTEUR_MAX:
-        return hauteur_max != null;
+      case DroneDSLPackage.ELOIGNEMENT_MAX__ELOIGNEMENT_MAX:
+        return eloignement_max != null;
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+      return this.eloignement_max.getVal();
+  }
 
-} //Eloignement_maxImpl
+} //ModifiedEloignement_maxImpl toString added

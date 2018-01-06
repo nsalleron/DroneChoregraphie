@@ -9,6 +9,7 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FinDeMain
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionCallInterne
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
+import fr.idmteam1.idmproject.dronedsl.droneDSL.Import
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Main
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Mouvement
 import java.util.ArrayList
@@ -19,6 +20,13 @@ import java.util.Map.Entry
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.validation.Check
 import org.eclipse.xtext.validation.CheckType
+
+import static extension org.eclipse.xtext.EcoreUtil2.*
+import org.eclipse.emf.common.util.URI
+import java.nio.file.Path
+import java.nio.file.Paths
+import java.nio.file.Files
+import java.io.File
 
 /**
  * This class contains custom validation rules. 
@@ -36,14 +44,32 @@ class DroneDSLValidator extends AbstractDroneDSLValidator {
 	public static val ALREADY_LANDING_MSG = "Erreur: le drone a déjà atterri"
 	public static val MOVEMENT_WHILE_ONLAND = "movementWhileNotFlying"
 	public static val MOVEMENT_WHILE_ONLAND_MSG = "Erreur: le drone ne peut pas effectué de mouvement lorsqu'il n'a pas décollé"
-
+	public static val LIB_NOT_FOUND = "libNotFound"
+	public static val LIB_NOT_FOUND_MSG = "Erreur: fichier de librairie introuvable"
+	
 	private static var inMain = false
 	private static var actualFunc = ""
 	private static var map = new HashMap
 	private static var isFlying = false
 	
 	private var cycleDetected = true
-	private Object cycleTestLock = new Object()	
+	private Object cycleTestLock = new Object()
+	
+	@Check(CheckType.FAST)
+	def validImport(Import i) {
+		var directory = i.eResource.URI.trimSegments(1)
+		println("directory: " + directory.toFileString)
+		var lib = directory.appendSegment(i.name).appendFileExtension("lib_drone")
+		println("lib: " + lib.toFileString)
+		var exists = i.eResource.isValidUri(lib)
+		if(!exists) {
+			println(lib.toFileString + " not found")
+			error(LIB_NOT_FOUND_MSG, DroneDSLPackage.Literals.IMPORT__NAME, LIB_NOT_FOUND)
+			return
+		} else {
+			println(lib.toFileString + " found")
+		}
+	}
 	
 	@Check(CheckType.NORMAL)
 	def validDecollageAtterrisageLogic(Main m) {

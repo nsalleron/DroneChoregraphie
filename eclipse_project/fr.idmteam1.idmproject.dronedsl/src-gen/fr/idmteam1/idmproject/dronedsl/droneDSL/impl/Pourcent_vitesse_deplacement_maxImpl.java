@@ -191,5 +191,9 @@ public class Pourcent_vitesse_deplacement_maxImpl extends MinimalEObjectImpl.Con
     }
     return super.eIsSet(featureID);
   }
+  @Override
+  public String toString() {
+      return this.vitesse_deplacement.toString();
+  }
 
-} //Pourcent_vitesse_deplacement_maxImpl
+} //ModifiedPourcent_vitesse_deplacement_maxImpl toString added

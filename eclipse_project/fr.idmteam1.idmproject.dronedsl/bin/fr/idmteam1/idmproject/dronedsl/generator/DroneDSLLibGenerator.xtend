@@ -18,35 +18,35 @@ import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl
 class DroneDSLLibGenerator extends AbstractGenerator {
 
 	val stubFilesMap = newLinkedHashMap(
-		"fr/roboticiens/gen/body/BodyInstruction.java" -> contentBodyInstructionClass(),
-		"fr/roboticiens/gen/commandes/Atterrir.java" -> contentAtterrirClass(),
-		"fr/roboticiens/gen/commandes/Avancer.java" -> contentAvancerClass(),
-		"fr/roboticiens/gen/commandes/CommandeAvecDureeVitesse.java" -> contentCommandeAvecDureeVitesseClass(),
-		"fr/roboticiens/gen/commandes/CommandeBasique.java" -> contentCommandeBasiqueClass(),
-		"fr/roboticiens/gen/commandes/CommandeParallelisable.java" -> contentCommandeParallelisableClass(),
-		"fr/roboticiens/gen/commandes/Decoller.java" -> contentDecollerClass(),
-		"fr/roboticiens/gen/commandes/Descendre.java" -> contentDescendreClass(),
-		"fr/roboticiens/gen/commandes/Droite.java" -> contentDroiteClass(),
-		"fr/roboticiens/gen/commandes/Gauche.java" -> contentGaucheClass(),
-		"fr/roboticiens/gen/commandes/Monter.java" -> contentMonterClass(),
-		"fr/roboticiens/gen/commandes/Pause.java" -> contentPauseClass(),
-		"fr/roboticiens/gen/commandes/Reculer.java" -> contentReculerClass(),
-		"fr/roboticiens/gen/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
-		"fr/roboticiens/gen/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
-		"fr/roboticiens/gen/fonction/FonctionCall.java" -> contentFonctionCallClass(),
-		"fr/roboticiens/gen/fonction/FonctionDeclaration.java" -> contentFonctionDeclarationClass(),
-		"fr/roboticiens/gen/imports/Import.java" -> contentImportClass(),
-		"fr/roboticiens/gen/main/MainBloc.java" -> contentMainBlocClass(),
-		"fr/roboticiens/gen/paralleles/Parallele.java" -> contentParalleleClass(),
-		"fr/roboticiens/gen/prologue/Prologue.java" -> contentPrologueClass(),
-		"fr/roboticiens/gen/types/Pourcent.java" -> contentPourcentClass(),
-		"fr/roboticiens/gen/types/Seconde.java" -> contentSecondeClass(),
+		"fr/roboticiens/body/BodyInstruction.java" -> contentBodyInstructionClass(),
+		"fr/roboticiens/commandes/Atterrir.java" -> contentAtterrirClass(),
+		"fr/roboticiens/commandes/Avancer.java" -> contentAvancerClass(),
+		"fr/roboticiens/commandes/CommandeAvecDureeVitesse.java" -> contentCommandeAvecDureeVitesseClass(),
+		"fr/roboticiens/commandes/CommandeBasique.java" -> contentCommandeBasiqueClass(),
+		"fr/roboticiens/commandes/CommandeParallelisable.java" -> contentCommandeParallelisableClass(),
+		"fr/roboticiens/commandes/Decoller.java" -> contentDecollerClass(),
+		"fr/roboticiens/commandes/Descendre.java" -> contentDescendreClass(),
+		"fr/roboticiens/commandes/Droite.java" -> contentDroiteClass(),
+		"fr/roboticiens/commandes/Gauche.java" -> contentGaucheClass(),
+		"fr/roboticiens/commandes/Monter.java" -> contentMonterClass(),
+		"fr/roboticiens/commandes/Pause.java" -> contentPauseClass(),
+		"fr/roboticiens/commandes/Reculer.java" -> contentReculerClass(),
+		"fr/roboticiens/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
+		"fr/roboticiens/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
+		"fr/roboticiens/fonction/FonctionCall.java" -> contentFonctionCallClass(),
+		"fr/roboticiens/fonction/FonctionDeclaration.java" -> contentFonctionDeclarationClass(),
+		"fr/roboticiens/imports/Import.java" -> contentImportClass(),
+		"fr/roboticiens/main/MainBloc.java" -> contentMainBlocClass(),
+		"fr/roboticiens/paralleles/Parallele.java" -> contentParalleleClass(),
+		"fr/roboticiens/prologue/Prologue.java" -> contentPrologueClass(),
+		"fr/roboticiens/types/Pourcent.java" -> contentPourcentClass(),
+		"fr/roboticiens/types/Seconde.java" -> contentSecondeClass(),
 		"fr/roboticiens/runtime/DroneRuntime.java" -> contentDroneRuntimeClass(),
 		"fr/roboticiens/runtime/DroneRuntimeExecutable.java" -> contentDroneRuntimeExecutableClass(),
 		"fr/roboticiens/runtime/DroneRuntimePrint.java" -> contentDroneRuntimePrintClass()
 	)
 	
-	val packagePath = "fr/roboticiens/gen/"
+	val packagePath = "fr/roboticiens/"
 	
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 
@@ -73,6 +73,15 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def compile(Model e) 
 		''' 
+		package fr.roboticiens;
+				
+		import fr.roboticiens.body.*;
+		import fr.roboticiens.commandes.*;
+		import fr.roboticiens.fonction.*;
+		import fr.roboticiens.paralleles.*;
+		import fr.roboticiens.runtime.*;
+		import fr.roboticiens.types.*;
+				
 		public static class «e.lib.name.toFirstUpper» {
 			
 			«IF e.fonctions!== null»

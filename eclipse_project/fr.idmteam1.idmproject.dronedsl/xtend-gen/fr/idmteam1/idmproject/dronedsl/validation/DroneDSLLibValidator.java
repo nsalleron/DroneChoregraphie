@@ -6,7 +6,6 @@ package fr.idmteam1.idmproject.dronedsl.validation;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName;
 import fr.idmteam1.idmproject.dronedsl.validation.AbstractDroneDSLLibValidator;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +13,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.validation.CheckType;
 import org.eclipse.xtext.xbase.lib.InputOutput;
@@ -44,19 +42,16 @@ public class DroneDSLLibValidator extends AbstractDroneDSLLibValidator {
   
   private Object cycleTestLock = new Object();
   
-  @Check(CheckType.FAST)
-  public void checkLibName(final LibName libName) {
-    final String fileName = EcoreUtil2.getNormalizedURI(libName.eResource()).trimFileExtension().lastSegment();
-    boolean _equals = fileName.equals(libName.getName());
-    boolean _not = (!_equals);
-    if (_not) {
-      String _name = libName.getName();
-      String _plus = ((("filename and lib name are different: filename: " + fileName) + " libname: ") + _name);
-      InputOutput.<String>println(_plus);
-      this.error(DroneDSLLibValidator.LIBNAME_MSG, DroneDSLLibPackage.Literals.LIB_NAME__NAME, DroneDSLLibValidator.LIBNAME_ERR);
-    }
-  }
-  
+  /**
+   * @Check(CheckType.FAST)
+   * def checkLibName(LibName libName) {
+   * val fileName = libName.eResource.normalizedURI.trimFileExtension.lastSegment
+   * if(!fileName.equals(libName.name)) {
+   * println("filename and lib name are different: filename: " + fileName + " libname: " + libName.name)
+   * error(LIBNAME_MSG, DroneDSLLibPackage.Literals.LIB_NAME__NAME, LIBNAME_ERR)
+   * }
+   * }
+   */
   @Check(CheckType.FAST)
   public Object checkFunctionDecl(final FonctionDecl decl) {
     Object _xblockexpression = null;

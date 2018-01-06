@@ -166,13 +166,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
+    return name.substring(0, 1).toUpperCase() + name.substring(1);
   }
 
-} //ImportImpl
+} //ImportImpl toString added

@@ -264,7 +264,7 @@ public class DroiteImpl extends MouvementImpl implements Droite
   }
   @Override
     public String toString() {
-  	  return "\tnew Droite(new Seconde("+this.duree+"),new Pourcent("+this.vitesse+")).execute(runtime);";
+  	  return "		new Droite("+this.duree+", "+this.vitesse+").execute(runtime);";
     }
 
 } //ModifiedDroiteImpl toString added
