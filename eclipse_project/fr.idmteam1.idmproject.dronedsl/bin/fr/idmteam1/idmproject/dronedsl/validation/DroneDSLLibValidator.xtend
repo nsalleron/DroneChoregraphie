@@ -13,9 +13,6 @@ import java.util.Map.Entry
 import org.eclipse.xtext.validation.Check
 import org.eclipse.xtext.validation.CheckType
 
-import static extension org.eclipse.xtext.EcoreUtil2.*
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName
-
 /**
  * This class contains custom validation rules. 
  *

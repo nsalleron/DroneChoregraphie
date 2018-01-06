@@ -69,24 +69,12 @@ public class DroneDSLValidator extends AbstractDroneDSLValidator {
   @Check(CheckType.FAST)
   public void validImport(final Import i) {
     URI directory = i.eResource().getURI().trimSegments(1);
-    String _fileString = directory.toFileString();
-    String _plus = ("directory: " + _fileString);
-    InputOutput.<String>println(_plus);
     URI lib = directory.appendSegment(i.getName()).appendFileExtension("lib_drone");
-    String _fileString_1 = lib.toFileString();
-    String _plus_1 = ("lib: " + _fileString_1);
-    InputOutput.<String>println(_plus_1);
     boolean exists = EcoreUtil2.isValidUri(i.eResource(), lib);
     if ((!exists)) {
-      String _fileString_2 = lib.toFileString();
-      String _plus_2 = (_fileString_2 + " not found");
-      InputOutput.<String>println(_plus_2);
       this.error(DroneDSLValidator.LIB_NOT_FOUND_MSG, DroneDSLPackage.Literals.IMPORT__NAME, DroneDSLValidator.LIB_NOT_FOUND);
       return;
     } else {
-      String _fileString_3 = lib.toFileString();
-      String _plus_3 = (_fileString_3 + " found");
-      InputOutput.<String>println(_plus_3);
     }
   }
   

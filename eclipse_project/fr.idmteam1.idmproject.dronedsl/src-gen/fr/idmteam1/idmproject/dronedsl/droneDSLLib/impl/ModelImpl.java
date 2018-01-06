@@ -5,12 +5,10 @@ package fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -18,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.ModelImpl#getLib <em>Lib</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.ModelImpl#getFonctions <em>Fonctions</em>}</li>
  * </ul>
  *
@@ -40,16 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
-  /**
-   * The cached value of the '{@link #getLib() <em>Lib</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLib()
-   * @generated
-   * @ordered
-   */
-  protected LibName lib;
-
   /**
    * The cached value of the '{@link #getFonctions() <em>Fonctions</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -86,54 +72,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public LibName getLib()
-  {
-    return lib;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLib(LibName newLib, NotificationChain msgs)
-  {
-    LibName oldLib = lib;
-    lib = newLib;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.MODEL__LIB, oldLib, newLib);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLib(LibName newLib)
-  {
-    if (newLib != lib)
-    {
-      NotificationChain msgs = null;
-      if (lib != null)
-        msgs = ((InternalEObject)lib).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.MODEL__LIB, null, msgs);
-      if (newLib != null)
-        msgs = ((InternalEObject)newLib).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DroneDSLLibPackage.MODEL__LIB, null, msgs);
-      msgs = basicSetLib(newLib, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DroneDSLLibPackage.MODEL__LIB, newLib, newLib));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<FonctionDecl> getFonctions()
   {
     if (fonctions == null)
@@ -153,8 +91,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.MODEL__LIB:
-        return basicSetLib(null, msgs);
       case DroneDSLLibPackage.MODEL__FONCTIONS:
         return ((InternalEList<?>)getFonctions()).basicRemove(otherEnd, msgs);
     }
@@ -171,8 +107,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.MODEL__LIB:
-        return getLib();
       case DroneDSLLibPackage.MODEL__FONCTIONS:
         return getFonctions();
     }
@@ -190,9 +124,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.MODEL__LIB:
-        setLib((LibName)newValue);
-        return;
       case DroneDSLLibPackage.MODEL__FONCTIONS:
         getFonctions().clear();
         getFonctions().addAll((Collection<? extends FonctionDecl>)newValue);
@@ -211,9 +142,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.MODEL__LIB:
-        setLib((LibName)null);
-        return;
       case DroneDSLLibPackage.MODEL__FONCTIONS:
         getFonctions().clear();
         return;
@@ -231,8 +159,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DroneDSLLibPackage.MODEL__LIB:
-        return lib != null;
       case DroneDSLLibPackage.MODEL__FONCTIONS:
         return fonctions != null && !fonctions.isEmpty();
     }

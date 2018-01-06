@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getLib <em>Lib</em>}</li>
  *   <li>{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getFonctions <em>Fonctions</em>}</li>
  * </ul>
  *
@@ -26,32 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Model extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Lib</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Lib</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Lib</em>' containment reference.
-   * @see #setLib(LibName)
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage#getModel_Lib()
-   * @model containment="true"
-   * @generated
-   */
-  LibName getLib();
-
-  /**
-   * Sets the value of the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getLib <em>Lib</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lib</em>' containment reference.
-   * @see #getLib()
-   * @generated
-   */
-  void setLib(LibName value);
-
   /**
    * Returns the value of the '<em><b>Fonctions</b></em>' containment reference list.
    * The list contents are of type {@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl}.

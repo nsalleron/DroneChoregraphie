@@ -80,13 +80,6 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DroneDSLLibPackage.LIB_NAME:
-      {
-        LibName libName = (LibName)theEObject;
-        T result = caseLibName(libName);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case DroneDSLLibPackage.SECONDE_CONST:
       {
         SecondeConst secondeConst = (SecondeConst)theEObject;
@@ -382,22 +375,6 @@ public class DroneDSLLibSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModel(Model object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Lib Name</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Lib Name</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLibName(LibName object)
   {
     return null;
   }

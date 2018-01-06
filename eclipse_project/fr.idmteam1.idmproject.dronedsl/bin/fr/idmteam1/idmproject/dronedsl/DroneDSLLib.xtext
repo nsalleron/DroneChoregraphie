@@ -5,7 +5,6 @@ generate droneDSLLib "http://www.idmteam1.fr/idmproject/dronedsl/DroneDSLLib"
 
 Model:
 	(
-		(lib=LibName)
 		(fonctions+=FonctionDecl)*
 	);
 
@@ -17,12 +16,6 @@ terminal SECONDE:
 
 terminal POURCENT returns ecore::EString:
 	 (('1'..'9')|('1'..'9')('0'..'9')|('100'..'100'))'%'
-;
-
-// Lib
-
-LibName:
-	'lib:' name=ID
 ;
 
 // Variables

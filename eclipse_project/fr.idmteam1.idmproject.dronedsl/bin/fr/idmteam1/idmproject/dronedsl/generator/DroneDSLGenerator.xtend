@@ -34,10 +34,7 @@ class DroneDSLGenerator extends AbstractGenerator {
 		"fr/roboticiens/commandes/Reculer.java" -> contentReculerClass(),
 		"fr/roboticiens/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
 		"fr/roboticiens/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
-		"fr/roboticiens/fonction/FonctionCall.java" -> contentFonctionCallClass(),
-		"fr/roboticiens/fonction/FonctionDeclaration.java" -> contentFonctionDeclarationClass(),
 		"fr/roboticiens/imports/Import.java" -> contentImportClass(),
-		"fr/roboticiens/main/MainBloc.java" -> contentMainBlocClass(),
 		"fr/roboticiens/paralleles/Parallele.java" -> contentParalleleClass(),
 		"fr/roboticiens/prologue/Prologue.java" -> contentPrologueClass(),
 		"fr/roboticiens/types/Pourcent.java" -> contentPourcentClass(),
@@ -70,26 +67,25 @@ class DroneDSLGenerator extends AbstractGenerator {
 		}
 	}
 	
+	/*
+	    «IF e.imports!== null»
+             « FOR f:e.imports»
+         		 «f.compile»
+             «ENDFOR»
+        «ENDIF»
+	 */
+	
 	def compile(Model e) 
 		''' 
 		package fr.roboticiens;
 		
-		import fr.roboticiens.body.*;
 		import fr.roboticiens.commandes.*;
-		import fr.roboticiens.fonction.*;
-		import fr.roboticiens.imports.*;
+		//import fr.roboticiens.imports.*;
 		import fr.roboticiens.paralleles.*;
 		import fr.roboticiens.prologue.*;
 		import fr.roboticiens.runtime.*;
 		import fr.roboticiens.types.*;
 		
-        «IF e.imports!== null»
-             « FOR f:e.imports»
-         		 «f.compile»
-             «ENDFOR»
-        «ENDIF»
-
-
 		public class Main {
 			static DroneRuntime runtime = new DroneRuntimePrint();
 			«IF e.prologue!== null»
@@ -116,7 +112,7 @@ class DroneDSLGenerator extends AbstractGenerator {
         '''
         
     def compile(FonctionDecl e)
-    	'''	public static void «e.name»() {
+    	'''	public static void «e.name»(DroneRuntime runtime) {
 		« FOR f:e.body»
 	«f.toString»
 		«ENDFOR»
@@ -142,8 +138,6 @@ class DroneDSLGenerator extends AbstractGenerator {
 		import fr.roboticiens.commandes.Reculer;
 		import fr.roboticiens.commandes.RotationDroite;
 		import fr.roboticiens.commandes.RotationGauche;
-		import fr.roboticiens.fonction.FonctionCall;
-		import fr.roboticiens.main.MainBloc;
 		import fr.roboticiens.paralleles.Parallele;
 		import fr.roboticiens.prologue.Prologue;
 		
@@ -152,11 +146,6 @@ class DroneDSLGenerator extends AbstractGenerator {
 			@Override
 			public void execPrologue(Prologue p) {
 				System.out.println("Execution de " + p);
-			}
-		
-			@Override
-			public void execMainBloc(MainBloc m) {
-				System.out.println("Execution de " + m);
 			}
 		
 			@Override
@@ -219,11 +208,6 @@ class DroneDSLGenerator extends AbstractGenerator {
 				System.out.println("Execution de " + p);
 			}
 		
-			@Override
-			public void execFonctionCall(FonctionCall fc) {
-				System.out.println("Execution de " + fc);
-			}
-		
 		}
 		'''
 	}
@@ -255,16 +239,12 @@ class DroneDSLGenerator extends AbstractGenerator {
 		import fr.roboticiens.commandes.Reculer;
 		import fr.roboticiens.commandes.RotationDroite;
 		import fr.roboticiens.commandes.RotationGauche;
-		import fr.roboticiens.fonction.FonctionCall;
-		import fr.roboticiens.main.MainBloc;
 		import fr.roboticiens.paralleles.Parallele;
 		import fr.roboticiens.prologue.Prologue;
 		
 		public interface DroneRuntime {
 			
 			public void execPrologue(Prologue p);
-			
-			public void execMainBloc(MainBloc m);
 			
 			public void execDecoller(Decoller d);
 			public void execAtterrir(Atterrir a);
@@ -280,8 +260,6 @@ class DroneDSLGenerator extends AbstractGenerator {
 			public void execPause(Pause p);
 			
 			public void execParallele(Parallele p);
-			
-			public void execFonctionCall(FonctionCall fc);
 			
 		}
 		'''
@@ -464,77 +442,13 @@ class DroneDSLGenerator extends AbstractGenerator {
 		
 			@Override
 			public String toString() {
-				String tmp = "Execution parallèle de : ";
+				String tmp = "Parallele" + commandes.size() + " [\n";
 				for (CommandeParallelisable e : commandes) {
-					tmp += e.toString() + " ";
+					tmp += "\t" + e.toString() + "\n";
 				}
+				tmp += "]";
 				return tmp;
 			}
-		}
-		'''
-	}
-	
-	def contentMainBlocClass() {
-		'''
-		package fr.roboticiens.main;
-		
-		import java.util.Set;
-		
-		import fr.roboticiens.body.BodyInstruction;
-		import fr.roboticiens.commandes.Atterrir;
-		import fr.roboticiens.commandes.Decoller;
-		import fr.roboticiens.runtime.DroneRuntime;
-		import fr.roboticiens.runtime.DroneRuntimeExecutable;
-		
-		public class MainBloc implements DroneRuntimeExecutable {
-			
-			private final Decoller decoller;
-			private Set<BodyInstruction> body;
-			private final Atterrir atterrir;
-			
-			public MainBloc(final Decoller decoller, final Atterrir atterrir) {
-				this.decoller = decoller;
-				this.atterrir = atterrir;
-			}
-			
-			public boolean add(BodyInstruction inst) {
-				return body.add(inst);
-			}
-		
-			/**
-			 * @return the decoller
-			 */
-			public Decoller getDecoller() {
-				return decoller;
-			}
-			
-			/**
-			 * @return the body
-			 */
-			public Set<BodyInstruction> getBody() {
-				return body;
-			}
-		
-			/**
-			 * @return the atterrir
-			 */
-			public Atterrir getAtterrir() {
-				return atterrir;
-			}
-		
-			@Override
-			public void execute(DroneRuntime droneRuntime) {
-				droneRuntime.execMainBloc(this);
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
-			@Override
-			public String toString() {
-				return "MainBloc [decoller=" + decoller + ", body=" + body + ", atterrir=" + atterrir + "]";
-			}
-			
 		}
 		'''
 	}
@@ -557,94 +471,6 @@ class DroneDSLGenerator extends AbstractGenerator {
 			 */
 			public String getFilename() {
 				return filename;
-			}
-			
-		}
-		'''
-	}
-	
-	def contentFonctionDeclarationClass() {
-		'''
-		package fr.roboticiens.fonction;
-		
-		import java.util.HashSet;
-		import java.util.Set;
-		
-		import fr.roboticiens.body.BodyInstruction;
-		
-		public class FonctionDeclaration {
-			
-			private final String name;
-			private Set<BodyInstruction> body;
-			
-			public FonctionDeclaration(final String name) {
-				this.name = name;
-				this.body = new HashSet<BodyInstruction>();
-			}
-			
-			public boolean add(final BodyInstruction inst) {
-				return body.add(inst);
-			}
-		
-			/**
-			 * @return the name
-			 */
-			public String getName() {
-				return name;
-			}
-			
-			/**
-			 * @return the body
-			 */
-			public Set<BodyInstruction> getBody() {
-				return body;
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
-			@Override
-			public String toString() {
-				return "FonctionDeclaration [name=" + name + ", body=" + body + "]";
-			}
-			
-		}
-		'''
-	}
-	
-	def contentFonctionCallClass() {
-		'''
-		package fr.roboticiens.fonction;
-		
-		import fr.roboticiens.body.BodyInstruction;
-		import fr.roboticiens.runtime.DroneRuntime;
-		
-		public class FonctionCall implements BodyInstruction {
-			
-			private final FonctionDeclaration reference;
-		
-			public FonctionCall(final FonctionDeclaration reference) {
-				this.reference = reference;
-			}
-		
-			/**
-			 * @return the reference
-			 */
-			public FonctionDeclaration getReference() {
-				return reference;
-			}
-		
-			@Override
-			public void execute(DroneRuntime droneRuntime) {
-				droneRuntime.execFonctionCall(this);
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
-			@Override
-			public String toString() {
-				return "FonctionCall [reference=" + reference.getName() + "]";
 			}
 			
 		}

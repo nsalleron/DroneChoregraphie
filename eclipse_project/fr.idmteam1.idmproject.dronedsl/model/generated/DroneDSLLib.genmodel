@@ -7,11 +7,7 @@
   <genPackages prefix="DroneDSLLib" basePackage="fr.idmteam1.idmproject.dronedsl"
       disposableProviderFactory="true" fileExtensions="lib_drone" ecorePackage="DroneDSLLib.ecore#/">
     <genClasses ecoreClass="DroneDSLLib.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Model/lib"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DroneDSLLib.ecore#//Model/fonctions"/>
-    </genClasses>
-    <genClasses ecoreClass="DroneDSLLib.ecore#//LibName">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//LibName/name"/>
     </genClasses>
     <genClasses ecoreClass="DroneDSLLib.ecore#//SecondeConst">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DroneDSLLib.ecore#//SecondeConst/val"/>

@@ -4,9 +4,6 @@
 package fr.idmteam1.idmproject.dronedsl.droneDSL.impl;
 
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Decoller;
-import fr.idmteam1.idmproject.dronedsl.droneDSL.DroneDSLPackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +23,7 @@ public class DecollerImpl extends DecollerAtterrirImpl implements Decoller
   {
     super();
   }
+  
   @Override
   public String toString() {
   	  return "new Decoller().execute(runtime);";

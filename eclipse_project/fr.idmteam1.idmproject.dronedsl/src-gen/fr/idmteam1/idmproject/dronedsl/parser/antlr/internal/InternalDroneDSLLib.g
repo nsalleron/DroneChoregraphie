@@ -77,85 +77,23 @@ ruleModel returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelAccess().getLibLibNameParserRuleCall_0_0());
+			{
+				newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_0());
+			}
+			lv_fonctions_0_0=ruleFonctionDecl
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getModelRule());
 				}
-				lv_lib_0_0=ruleLibName
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getModelRule());
-					}
-					set(
-						$current,
-						"lib",
-						lv_lib_0_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.LibName");
-					afterParserOrEnumRuleCall();
-				}
-			)
+				add(
+					$current,
+					"fonctions",
+					lv_fonctions_0_0,
+					"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionDecl");
+				afterParserOrEnumRuleCall();
+			}
 		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_1_0());
-				}
-				lv_fonctions_1_0=ruleFonctionDecl
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getModelRule());
-					}
-					add(
-						$current,
-						"fonctions",
-						lv_fonctions_1_0,
-						"fr.idmteam1.idmproject.dronedsl.DroneDSLLib.FonctionDecl");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)*
-	)
-;
-
-// Entry rule entryRuleLibName
-entryRuleLibName returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getLibNameRule()); }
-	iv_ruleLibName=ruleLibName
-	{ $current=$iv_ruleLibName.current; }
-	EOF;
-
-// Rule LibName
-ruleLibName returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='lib:'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getLibNameAccess().getLibKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getLibNameAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getLibNameRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-	)
+	)*
 ;
 
 // Entry rule entryRuleSecondeConst

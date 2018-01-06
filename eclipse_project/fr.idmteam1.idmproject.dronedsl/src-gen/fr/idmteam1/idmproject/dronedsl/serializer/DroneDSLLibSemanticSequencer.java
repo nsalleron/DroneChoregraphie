@@ -13,7 +13,6 @@ import fr.idmteam1.idmproject.dronedsl.droneDSLLib.DroneDSLLibPackage;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Gauche;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Parallele2;
@@ -78,9 +77,6 @@ public class DroneDSLLibSemanticSequencer extends AbstractDelegatingSemanticSequ
 				return; 
 			case DroneDSLLibPackage.GAUCHE:
 				sequence_Gauche(context, (Gauche) semanticObject); 
-				return; 
-			case DroneDSLLibPackage.LIB_NAME:
-				sequence_LibName(context, (LibName) semanticObject); 
 				return; 
 			case DroneDSLLibPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -299,28 +295,10 @@ public class DroneDSLLibSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
-	 *     LibName returns LibName
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_LibName(ISerializationContext context, LibName semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DroneDSLLibPackage.Literals.LIB_NAME__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DroneDSLLibPackage.Literals.LIB_NAME__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLibNameAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (lib=LibName fonctions+=FonctionDecl*)
+	 *     fonctions+=FonctionDecl+
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

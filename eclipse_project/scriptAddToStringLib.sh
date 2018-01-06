@@ -229,7 +229,7 @@ head -n $(( $(wc -l FonctionCallInterneImpl.java | awk '{print $1}') - 2 )) Fonc
   
 echo  "  @Override
   public String toString() {
-      return \"		\"+this.ref.getName()+\"();\";
+      return \"		\"+this.ref.getName()+\"(runtime);\";
   }
 
 } //ModifiedFonctionCallInterneImpl toString added" >> "FonctionCallInterneImpl_tmp.java"

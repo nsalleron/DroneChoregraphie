@@ -45,10 +45,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     Pair.<String, CharSequence>of("fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/fonction/FonctionCall.java", this.contentFonctionCallClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/fonction/FonctionDeclaration.java", this.contentFonctionDeclarationClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/imports/Import.java", this.contentImportClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/main/MainBloc.java", this.contentMainBlocClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
     Pair.<String, CharSequence>of("fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
@@ -68,7 +65,8 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
       Iterable<Model> _filter = Iterables.<Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), Model.class);
       for (final Model m : _filter) {
         {
-          final String capitalizedFileName = StringExtensions.toFirstUpper(m.getLib().getName());
+          final String libName = input.getURI().trimFileExtension().lastSegment();
+          final String capitalizedFileName = StringExtensions.toFirstUpper(libName);
           final String filename = ((this.packagePath + capitalizedFileName) + ".java");
           fsa.generateFile(filename, this.compile(m));
         }
@@ -94,11 +92,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.body.*;");
-    _builder.newLine();
     _builder.append("import fr.roboticiens.commandes.*;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.fonction.*;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.paralleles.*;");
     _builder.newLine();
@@ -108,8 +102,8 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.newLine();
-    _builder.append("public static class ");
-    String _firstUpper = StringExtensions.toFirstUpper(e.getLib().getName());
+    _builder.append("public class ");
+    String _firstUpper = StringExtensions.toFirstUpper(e.eResource().getURI().trimFileExtension().lastSegment());
     _builder.append(_firstUpper);
     _builder.append(" {");
     _builder.newLineIfNotEmpty();
@@ -141,7 +135,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("public static void ");
     String _name = e.getName();
     _builder.append(_name);
-    _builder.append("() {");
+    _builder.append("(DroneRuntime runtime) {");
     _builder.newLineIfNotEmpty();
     {
       EList<EObject> _body = e.getBody();
@@ -164,35 +158,31 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("package fr.roboticiens.runtime;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Atterrir;");
+    _builder.append("import fr.roboticiens.commandes.Atterrir;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Avancer;");
+    _builder.append("import fr.roboticiens.commandes.Avancer;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Decoller;");
+    _builder.append("import fr.roboticiens.commandes.Decoller;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Descendre;");
+    _builder.append("import fr.roboticiens.commandes.Descendre;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Droite;");
+    _builder.append("import fr.roboticiens.commandes.Droite;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Gauche;");
+    _builder.append("import fr.roboticiens.commandes.Gauche;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Monter;");
+    _builder.append("import fr.roboticiens.commandes.Monter;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Pause;");
+    _builder.append("import fr.roboticiens.commandes.Pause;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Reculer;");
+    _builder.append("import fr.roboticiens.commandes.Reculer;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.RotationDroite;");
+    _builder.append("import fr.roboticiens.commandes.RotationDroite;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.RotationGauche;");
+    _builder.append("import fr.roboticiens.commandes.RotationGauche;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.fonction.FonctionCall;");
+    _builder.append("import fr.roboticiens.paralleles.Parallele;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.main.MainBloc;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.paralleles.Parallele;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.prologue.Prologue;");
+    _builder.append("import fr.roboticiens.prologue.Prologue;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class DroneRuntimePrint implements DroneRuntime {");
@@ -206,19 +196,6 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("System.out.println(\"Execution de \" + p);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execMainBloc(MainBloc m) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("System.out.println(\"Execution de \" + m);");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
@@ -380,19 +357,6 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execFonctionCall(FonctionCall fc) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("System.out.println(\"Execution de \" + fc);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     return _builder;
@@ -421,35 +385,31 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("package fr.roboticiens.runtime;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Atterrir;");
+    _builder.append("import fr.roboticiens.commandes.Atterrir;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Avancer;");
+    _builder.append("import fr.roboticiens.commandes.Avancer;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Decoller;");
+    _builder.append("import fr.roboticiens.commandes.Decoller;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Descendre;");
+    _builder.append("import fr.roboticiens.commandes.Descendre;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Droite;");
+    _builder.append("import fr.roboticiens.commandes.Droite;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Gauche;");
+    _builder.append("import fr.roboticiens.commandes.Gauche;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Monter;");
+    _builder.append("import fr.roboticiens.commandes.Monter;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Pause;");
+    _builder.append("import fr.roboticiens.commandes.Pause;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Reculer;");
+    _builder.append("import fr.roboticiens.commandes.Reculer;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.RotationDroite;");
+    _builder.append("import fr.roboticiens.commandes.RotationDroite;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.RotationGauche;");
+    _builder.append("import fr.roboticiens.commandes.RotationGauche;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.fonction.FonctionCall;");
+    _builder.append("import fr.roboticiens.paralleles.Parallele;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.main.MainBloc;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.paralleles.Parallele;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.prologue.Prologue;");
+    _builder.append("import fr.roboticiens.prologue.Prologue;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public interface DroneRuntime {");
@@ -458,11 +418,6 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public void execPrologue(Prologue p);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execMainBloc(MainBloc m);");
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
@@ -508,11 +463,6 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execFonctionCall(FonctionCall fc);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     return _builder;
@@ -520,7 +470,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentSecondeClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.types;");
+    _builder.append("package fr.roboticiens.types;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class Seconde {");
@@ -590,7 +540,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentPourcentClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.types;");
+    _builder.append("package fr.roboticiens.types;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class Pourcent {");
@@ -659,10 +609,10 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentPrologueClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.prologue;");
+    _builder.append("package fr.roboticiens.prologue;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -856,7 +806,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentParalleleClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.paralleles;");
+    _builder.append("package fr.roboticiens.paralleles;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import java.util.HashSet;");
@@ -864,9 +814,9 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("import java.util.Set;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.body.BodyInstruction;");
+    _builder.append("import fr.roboticiens.body.BodyInstruction;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.CommandeParallelisable;");
+    _builder.append("import fr.roboticiens.commandes.CommandeParallelisable;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -932,148 +882,6 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence contentMainBlocClass() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.main;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import java.util.Set;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.body.BodyInstruction;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Atterrir;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.commandes.Decoller;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.runtime.DroneRuntimeExecutable;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("public class MainBloc implements DroneRuntimeExecutable {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private final Decoller decoller;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private Set<BodyInstruction> body;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private final Atterrir atterrir;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public MainBloc(final Decoller decoller, final Atterrir atterrir) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("this.decoller = decoller;");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("this.atterrir = atterrir;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public boolean add(BodyInstruction inst) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return body.add(inst);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the decoller");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public Decoller getDecoller() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return decoller;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the body");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public Set<BodyInstruction> getBody() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return body;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the atterrir");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public Atterrir getAtterrir() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return atterrir;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execute(DroneRuntime droneRuntime) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("droneRuntime.execMainBloc(this);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/* (non-Javadoc)");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @see java.lang.Object#toString()");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("@Override");
@@ -1082,12 +890,25 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     _builder.append("public String toString() {");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("return \"MainBloc [decoller=\" + decoller + \", body=\" + body + \", atterrir=\" + atterrir + \"]\";");
+    _builder.append("String tmp = \"Parallele\" + commandes.size() + \" [\\n\";");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("for (CommandeParallelisable e : commandes) {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("tmp += \"\\t\" + e.toString() + \"\\n\";");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("tmp += \"]\";");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return tmp;");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
@@ -1096,7 +917,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentImportClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.imports;");
+    _builder.append("package fr.roboticiens.imports;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class Import {");
@@ -1145,218 +966,14 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
     return _builder;
   }
   
-  public CharSequence contentFonctionDeclarationClass() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.fonction;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import java.util.HashSet;");
-    _builder.newLine();
-    _builder.append("import java.util.Set;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.body.BodyInstruction;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("public class FonctionDeclaration {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private final String name;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private Set<BodyInstruction> body;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public FonctionDeclaration(final String name) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("this.name = name;");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("this.body = new HashSet<BodyInstruction>();");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public boolean add(final BodyInstruction inst) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return body.add(inst);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the name");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public String getName() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return name;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the body");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public Set<BodyInstruction> getBody() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return body;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/* (non-Javadoc)");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @see java.lang.Object#toString()");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public String toString() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return \"FonctionDeclaration [name=\" + name + \", body=\" + body + \"]\";");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence contentFonctionCallClass() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.fonction;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.body.BodyInstruction;");
-    _builder.newLine();
-    _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("public class FonctionCall implements BodyInstruction {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("private final FonctionDeclaration reference;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public FonctionCall(final FonctionDeclaration reference) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("this.reference = reference;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @return the reference");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public FonctionDeclaration getReference() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return reference;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public void execute(DroneRuntime droneRuntime) {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("droneRuntime.execFonctionCall(this);");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("/* (non-Javadoc)");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("* @see java.lang.Object#toString()");
-    _builder.newLine();
-    _builder.append("\t ");
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("@Override");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public String toString() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return \"FonctionCall [reference=\" + reference.getName() + \"]\";");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
   public CharSequence contentRotationGaucheClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1416,12 +1033,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentRotationDroiteClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1481,12 +1098,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentReculerClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1546,10 +1163,10 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentPauseClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1635,12 +1252,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentMonterClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1701,12 +1318,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentGaucheClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1767,12 +1384,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentDroiteClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1833,12 +1450,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentDescendreClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -1899,7 +1516,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentDecollerClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
@@ -1950,7 +1567,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentCommandeParallelisableClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public interface CommandeParallelisable {");
@@ -1963,10 +1580,10 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentCommandeBasiqueClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.body.BodyInstruction;");
+    _builder.append("import fr.roboticiens.body.BodyInstruction;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public interface CommandeBasique extends BodyInstruction {");
@@ -1979,12 +1596,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentCommandeAvecDureeVitesseClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public abstract class CommandeAvecDureeVitesse {");
@@ -2057,12 +1674,12 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentAvancerClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Pourcent;");
+    _builder.append("import fr.roboticiens.types.Pourcent;");
     _builder.newLine();
-    _builder.append("import fr.roboticiens.gen.types.Seconde;");
+    _builder.append("import fr.roboticiens.types.Seconde;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
     _builder.newLine();
@@ -2123,7 +1740,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentAtterrirClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.commandes;");
+    _builder.append("package fr.roboticiens.commandes;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntime;");
@@ -2175,7 +1792,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   public CharSequence contentBodyInstructionClass() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("package fr.roboticiens.gen.body;");
+    _builder.append("package fr.roboticiens.body;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import fr.roboticiens.runtime.DroneRuntimeExecutable;");

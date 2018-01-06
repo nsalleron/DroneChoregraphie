@@ -58,16 +58,16 @@ class DroneDSLValidator extends AbstractDroneDSLValidator {
 	@Check(CheckType.FAST)
 	def validImport(Import i) {
 		var directory = i.eResource.URI.trimSegments(1)
-		println("directory: " + directory.toFileString)
+		//println("directory: " + directory.toFileString)
 		var lib = directory.appendSegment(i.name).appendFileExtension("lib_drone")
-		println("lib: " + lib.toFileString)
+		//println("lib: " + lib.toFileString)
 		var exists = i.eResource.isValidUri(lib)
 		if(!exists) {
-			println(lib.toFileString + " not found")
+			//println(lib.toFileString + " not found")
 			error(LIB_NOT_FOUND_MSG, DroneDSLPackage.Literals.IMPORT__NAME, LIB_NOT_FOUND)
 			return
 		} else {
-			println(lib.toFileString + " found")
+			//println(lib.toFileString + " found")
 		}
 	}
 	

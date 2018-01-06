@@ -33,10 +33,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 		"fr/roboticiens/commandes/Reculer.java" -> contentReculerClass(),
 		"fr/roboticiens/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
 		"fr/roboticiens/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
-		"fr/roboticiens/fonction/FonctionCall.java" -> contentFonctionCallClass(),
-		"fr/roboticiens/fonction/FonctionDeclaration.java" -> contentFonctionDeclarationClass(),
 		"fr/roboticiens/imports/Import.java" -> contentImportClass(),
-		"fr/roboticiens/main/MainBloc.java" -> contentMainBlocClass(),
 		"fr/roboticiens/paralleles/Parallele.java" -> contentParalleleClass(),
 		"fr/roboticiens/prologue/Prologue.java" -> contentPrologueClass(),
 		"fr/roboticiens/types/Pourcent.java" -> contentPourcentClass(),
@@ -54,7 +51,8 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 			generateStubFiles(fsa)
 			
 			for (m : input.allContents.toIterable.filter(Model)) {
-				val capitalizedFileName = m.lib.name.toFirstUpper
+				val libName = input.URI.trimFileExtension.lastSegment
+				val capitalizedFileName = libName.toFirstUpper
 				val filename = packagePath + capitalizedFileName + ".java"
 				fsa.generateFile(filename, m.compile)
 			}
@@ -75,14 +73,12 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 		''' 
 		package fr.roboticiens;
 				
-		import fr.roboticiens.body.*;
 		import fr.roboticiens.commandes.*;
-		import fr.roboticiens.fonction.*;
 		import fr.roboticiens.paralleles.*;
 		import fr.roboticiens.runtime.*;
 		import fr.roboticiens.types.*;
 				
-		public static class «e.lib.name.toFirstUpper» {
+		public class «e.eResource.URI.trimFileExtension.lastSegment.toFirstUpper» {
 			
 			«IF e.fonctions!== null»
     			« FOR f:e.fonctions»
@@ -95,7 +91,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
         
     def compile(FonctionDecl e)
     	'''
-		public static void «e.name»() {
+		public static void «e.name»(DroneRuntime runtime) {
 			« FOR f:e.body»
 			         «f.toString»
 			«ENDFOR»
@@ -107,32 +103,25 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 		'''
 		package fr.roboticiens.runtime;
 		
-		import fr.roboticiens.gen.commandes.Atterrir;
-		import fr.roboticiens.gen.commandes.Avancer;
-		import fr.roboticiens.gen.commandes.Decoller;
-		import fr.roboticiens.gen.commandes.Descendre;
-		import fr.roboticiens.gen.commandes.Droite;
-		import fr.roboticiens.gen.commandes.Gauche;
-		import fr.roboticiens.gen.commandes.Monter;
-		import fr.roboticiens.gen.commandes.Pause;
-		import fr.roboticiens.gen.commandes.Reculer;
-		import fr.roboticiens.gen.commandes.RotationDroite;
-		import fr.roboticiens.gen.commandes.RotationGauche;
-		import fr.roboticiens.gen.fonction.FonctionCall;
-		import fr.roboticiens.gen.main.MainBloc;
-		import fr.roboticiens.gen.paralleles.Parallele;
-		import fr.roboticiens.gen.prologue.Prologue;
+		import fr.roboticiens.commandes.Atterrir;
+		import fr.roboticiens.commandes.Avancer;
+		import fr.roboticiens.commandes.Decoller;
+		import fr.roboticiens.commandes.Descendre;
+		import fr.roboticiens.commandes.Droite;
+		import fr.roboticiens.commandes.Gauche;
+		import fr.roboticiens.commandes.Monter;
+		import fr.roboticiens.commandes.Pause;
+		import fr.roboticiens.commandes.Reculer;
+		import fr.roboticiens.commandes.RotationDroite;
+		import fr.roboticiens.commandes.RotationGauche;
+		import fr.roboticiens.paralleles.Parallele;
+		import fr.roboticiens.prologue.Prologue;
 		
 		public class DroneRuntimePrint implements DroneRuntime {
 		
 			@Override
 			public void execPrologue(Prologue p) {
 				System.out.println("Execution de " + p);
-			}
-		
-			@Override
-			public void execMainBloc(MainBloc m) {
-				System.out.println("Execution de " + m);
 			}
 		
 			@Override
@@ -195,11 +184,6 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 				System.out.println("Execution de " + p);
 			}
 		
-			@Override
-			public void execFonctionCall(FonctionCall fc) {
-				System.out.println("Execution de " + fc);
-			}
-		
 		}
 		'''
 	}
@@ -220,27 +204,23 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 		'''
 		package fr.roboticiens.runtime;
 		
-		import fr.roboticiens.gen.commandes.Atterrir;
-		import fr.roboticiens.gen.commandes.Avancer;
-		import fr.roboticiens.gen.commandes.Decoller;
-		import fr.roboticiens.gen.commandes.Descendre;
-		import fr.roboticiens.gen.commandes.Droite;
-		import fr.roboticiens.gen.commandes.Gauche;
-		import fr.roboticiens.gen.commandes.Monter;
-		import fr.roboticiens.gen.commandes.Pause;
-		import fr.roboticiens.gen.commandes.Reculer;
-		import fr.roboticiens.gen.commandes.RotationDroite;
-		import fr.roboticiens.gen.commandes.RotationGauche;
-		import fr.roboticiens.gen.fonction.FonctionCall;
-		import fr.roboticiens.gen.main.MainBloc;
-		import fr.roboticiens.gen.paralleles.Parallele;
-		import fr.roboticiens.gen.prologue.Prologue;
+		import fr.roboticiens.commandes.Atterrir;
+		import fr.roboticiens.commandes.Avancer;
+		import fr.roboticiens.commandes.Decoller;
+		import fr.roboticiens.commandes.Descendre;
+		import fr.roboticiens.commandes.Droite;
+		import fr.roboticiens.commandes.Gauche;
+		import fr.roboticiens.commandes.Monter;
+		import fr.roboticiens.commandes.Pause;
+		import fr.roboticiens.commandes.Reculer;
+		import fr.roboticiens.commandes.RotationDroite;
+		import fr.roboticiens.commandes.RotationGauche;
+		import fr.roboticiens.paralleles.Parallele;
+		import fr.roboticiens.prologue.Prologue;
 		
 		public interface DroneRuntime {
 			
 			public void execPrologue(Prologue p);
-			
-			public void execMainBloc(MainBloc m);
 			
 			public void execDecoller(Decoller d);
 			public void execAtterrir(Atterrir a);
@@ -257,15 +237,13 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 			
 			public void execParallele(Parallele p);
 			
-			public void execFonctionCall(FonctionCall fc);
-			
 		}
 		'''
 	}
 	
 	def contentSecondeClass() {
 		'''
-		package fr.roboticiens.gen.types;
+		package fr.roboticiens.types;
 		
 		public class Seconde {
 			
@@ -296,7 +274,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentPourcentClass() {
 		'''
-		package fr.roboticiens.gen.types;
+		package fr.roboticiens.types;
 		
 		public class Pourcent {
 			
@@ -327,9 +305,9 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentPrologueClass() {
 		'''
-		package fr.roboticiens.gen.prologue;
+		package fr.roboticiens.prologue;
 		
-		import fr.roboticiens.gen.types.Pourcent;
+		import fr.roboticiens.types.Pourcent;
 		import fr.roboticiens.runtime.DroneRuntime;
 		import fr.roboticiens.runtime.DroneRuntimeExecutable;
 		
@@ -405,13 +383,13 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentParalleleClass() {
 		'''
-		package fr.roboticiens.gen.paralleles;
+		package fr.roboticiens.paralleles;
 		
 		import java.util.HashSet;
 		import java.util.Set;
 		
-		import fr.roboticiens.gen.body.BodyInstruction;
-		import fr.roboticiens.gen.commandes.CommandeParallelisable;
+		import fr.roboticiens.body.BodyInstruction;
+		import fr.roboticiens.commandes.CommandeParallelisable;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Parallele implements BodyInstruction {
@@ -437,78 +415,23 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 			public void execute(DroneRuntime droneRuntime) {
 				droneRuntime.execParallele(this);
 			}
-		}
-		'''
-	}
-	
-	def contentMainBlocClass() {
-		'''
-		package fr.roboticiens.gen.main;
 		
-		import java.util.Set;
-		
-		import fr.roboticiens.gen.body.BodyInstruction;
-		import fr.roboticiens.gen.commandes.Atterrir;
-		import fr.roboticiens.gen.commandes.Decoller;
-		import fr.roboticiens.runtime.DroneRuntime;
-		import fr.roboticiens.runtime.DroneRuntimeExecutable;
-		
-		public class MainBloc implements DroneRuntimeExecutable {
-			
-			private final Decoller decoller;
-			private Set<BodyInstruction> body;
-			private final Atterrir atterrir;
-			
-			public MainBloc(final Decoller decoller, final Atterrir atterrir) {
-				this.decoller = decoller;
-				this.atterrir = atterrir;
-			}
-			
-			public boolean add(BodyInstruction inst) {
-				return body.add(inst);
-			}
-		
-			/**
-			 * @return the decoller
-			 */
-			public Decoller getDecoller() {
-				return decoller;
-			}
-			
-			/**
-			 * @return the body
-			 */
-			public Set<BodyInstruction> getBody() {
-				return body;
-			}
-		
-			/**
-			 * @return the atterrir
-			 */
-			public Atterrir getAtterrir() {
-				return atterrir;
-			}
-		
-			@Override
-			public void execute(DroneRuntime droneRuntime) {
-				droneRuntime.execMainBloc(this);
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
 			@Override
 			public String toString() {
-				return "MainBloc [decoller=" + decoller + ", body=" + body + ", atterrir=" + atterrir + "]";
+				String tmp = "Parallele" + commandes.size() + " [\n";
+				for (CommandeParallelisable e : commandes) {
+					tmp += "\t" + e.toString() + "\n";
+				}
+				tmp += "]";
+				return tmp;
 			}
-			
 		}
 		'''
 	}
 	
 	def contentImportClass() {
 		'''
-		package fr.roboticiens.gen.imports;
+		package fr.roboticiens.imports;
 		
 		public class Import {
 			
@@ -530,100 +453,12 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 		'''
 	}
 	
-	def contentFonctionDeclarationClass() {
-		'''
-		package fr.roboticiens.gen.fonction;
-		
-		import java.util.HashSet;
-		import java.util.Set;
-		
-		import fr.roboticiens.gen.body.BodyInstruction;
-		
-		public class FonctionDeclaration {
-			
-			private final String name;
-			private Set<BodyInstruction> body;
-			
-			public FonctionDeclaration(final String name) {
-				this.name = name;
-				this.body = new HashSet<BodyInstruction>();
-			}
-			
-			public boolean add(final BodyInstruction inst) {
-				return body.add(inst);
-			}
-		
-			/**
-			 * @return the name
-			 */
-			public String getName() {
-				return name;
-			}
-			
-			/**
-			 * @return the body
-			 */
-			public Set<BodyInstruction> getBody() {
-				return body;
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
-			@Override
-			public String toString() {
-				return "FonctionDeclaration [name=" + name + ", body=" + body + "]";
-			}
-			
-		}
-		'''
-	}
-	
-	def contentFonctionCallClass() {
-		'''
-		package fr.roboticiens.gen.fonction;
-		
-		import fr.roboticiens.gen.body.BodyInstruction;
-		import fr.roboticiens.runtime.DroneRuntime;
-		
-		public class FonctionCall implements BodyInstruction {
-			
-			private final FonctionDeclaration reference;
-		
-			public FonctionCall(final FonctionDeclaration reference) {
-				this.reference = reference;
-			}
-		
-			/**
-			 * @return the reference
-			 */
-			public FonctionDeclaration getReference() {
-				return reference;
-			}
-		
-			@Override
-			public void execute(DroneRuntime droneRuntime) {
-				droneRuntime.execFonctionCall(this);
-			}
-		
-			/* (non-Javadoc)
-			 * @see java.lang.Object#toString()
-			 */
-			@Override
-			public String toString() {
-				return "FonctionCall [reference=" + reference.getName() + "]";
-			}
-			
-		}
-		'''
-	}
-	
 	def contentRotationGaucheClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class RotationGauche extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -651,10 +486,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentRotationDroiteClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class RotationDroite extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -682,10 +517,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentReculerClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Reculer extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -713,9 +548,9 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentPauseClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Pause implements CommandeBasique {
@@ -752,10 +587,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentMonterClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Monter extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -783,10 +618,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentGaucheClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Gauche extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -814,10 +649,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentDroiteClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Droite extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -845,10 +680,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentDescendreClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Descendre extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -876,7 +711,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentDecollerClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
 		import fr.roboticiens.runtime.DroneRuntime;
 		
@@ -901,7 +736,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentCommandeParallelisableClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
 		public interface CommandeParallelisable {
 		
@@ -911,9 +746,9 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentCommandeBasiqueClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.body.BodyInstruction;
+		import fr.roboticiens.body.BodyInstruction;
 		
 		public interface CommandeBasique extends BodyInstruction {
 		
@@ -923,10 +758,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentCommandeAvecDureeVitesseClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		
 		public abstract class CommandeAvecDureeVitesse {
 			
@@ -958,10 +793,10 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentAvancerClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
-		import fr.roboticiens.gen.types.Pourcent;
-		import fr.roboticiens.gen.types.Seconde;
+		import fr.roboticiens.types.Pourcent;
+		import fr.roboticiens.types.Seconde;
 		import fr.roboticiens.runtime.DroneRuntime;
 		
 		public class Avancer extends CommandeAvecDureeVitesse implements CommandeBasique, CommandeParallelisable {
@@ -989,7 +824,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentAtterrirClass() {
 		'''
-		package fr.roboticiens.gen.commandes;
+		package fr.roboticiens.commandes;
 		
 		import fr.roboticiens.runtime.DroneRuntime;
 		
@@ -1014,7 +849,7 @@ class DroneDSLLibGenerator extends AbstractGenerator {
 	
 	def contentBodyInstructionClass() {
 		'''
-		package fr.roboticiens.gen.body;
+		package fr.roboticiens.body;
 		
 		import fr.roboticiens.runtime.DroneRuntimeExecutable;
 		

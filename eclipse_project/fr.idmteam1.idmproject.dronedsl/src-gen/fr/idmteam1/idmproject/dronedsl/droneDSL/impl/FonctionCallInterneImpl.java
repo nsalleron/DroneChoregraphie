@@ -171,7 +171,7 @@ public class FonctionCallInterneImpl extends FonctionCallImpl implements Fonctio
   }
   @Override
   public String toString() {
-      return "		"+this.ref.getName()+"();";
+      return "		"+this.ref.getName()+"(runtime);";
   }
 
 } //ModifiedFonctionCallInterneImpl toString added

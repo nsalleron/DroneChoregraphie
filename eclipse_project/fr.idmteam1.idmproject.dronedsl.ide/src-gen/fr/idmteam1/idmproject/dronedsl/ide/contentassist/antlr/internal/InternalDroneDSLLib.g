@@ -65,34 +65,9 @@ ruleModel
 	}
 	:
 	(
-		{ before(grammarAccess.getModelAccess().getGroup()); }
-		(rule__Model__Group__0)
-		{ after(grammarAccess.getModelAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleLibName
-entryRuleLibName
-:
-{ before(grammarAccess.getLibNameRule()); }
-	 ruleLibName
-{ after(grammarAccess.getLibNameRule()); } 
-	 EOF 
-;
-
-// Rule LibName
-ruleLibName 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getLibNameAccess().getGroup()); }
-		(rule__LibName__Group__0)
-		{ after(grammarAccess.getLibNameAccess().getGroup()); }
+		{ before(grammarAccess.getModelAccess().getFonctionsAssignment()); }
+		(rule__Model__FonctionsAssignment)*
+		{ after(grammarAccess.getModelAccess().getFonctionsAssignment()); }
 	)
 ;
 finally {
@@ -1607,114 +1582,6 @@ rule__Parallele4__Alternatives
 finally {
 	restoreStackSize(stackSize);
 }
-
-rule__Model__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Model__Group__0__Impl
-	rule__Model__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Model__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getModelAccess().getLibAssignment_0()); }
-	(rule__Model__LibAssignment_0)
-	{ after(grammarAccess.getModelAccess().getLibAssignment_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Model__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Model__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Model__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getModelAccess().getFonctionsAssignment_1()); }
-	(rule__Model__FonctionsAssignment_1)*
-	{ after(grammarAccess.getModelAccess().getFonctionsAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__LibName__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__LibName__Group__0__Impl
-	rule__LibName__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LibName__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getLibNameAccess().getLibKeyword_0()); }
-	'lib:'
-	{ after(grammarAccess.getLibNameAccess().getLibKeyword_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LibName__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__LibName__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LibName__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getLibNameAccess().getNameAssignment_1()); }
-	(rule__LibName__NameAssignment_1)
-	{ after(grammarAccess.getLibNameAccess().getNameAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 
 rule__SecondeDecl__Group__0
 	@init {
@@ -12057,45 +11924,15 @@ finally {
 }
 
 
-rule__Model__LibAssignment_0
+rule__Model__FonctionsAssignment
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getModelAccess().getLibLibNameParserRuleCall_0_0()); }
-		ruleLibName
-		{ after(grammarAccess.getModelAccess().getLibLibNameParserRuleCall_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Model__FonctionsAssignment_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_1_0()); }
+		{ before(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_0()); }
 		ruleFonctionDecl
-		{ after(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LibName__NameAssignment_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getLibNameAccess().getNameIDTerminalRuleCall_1_0()); }
-		RULE_ID
-		{ after(grammarAccess.getLibNameAccess().getNameIDTerminalRuleCall_1_0()); }
+		{ after(grammarAccess.getModelAccess().getFonctionsFonctionDeclParserRuleCall_0()); }
 	)
 ;
 finally {

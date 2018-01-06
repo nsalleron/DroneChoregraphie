@@ -66,7 +66,6 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
     switch (eClass.getClassifierID())
     {
       case DroneDSLLibPackage.MODEL: return createModel();
-      case DroneDSLLibPackage.LIB_NAME: return createLibName();
       case DroneDSLLibPackage.SECONDE_CONST: return createSecondeConst();
       case DroneDSLLibPackage.POURCENT_CONST: return createPourcentConst();
       case DroneDSLLibPackage.SECONDE_DECL: return createSecondeDecl();
@@ -115,17 +114,6 @@ public class DroneDSLLibFactoryImpl extends EFactoryImpl implements DroneDSLLibF
   {
     ModelImpl model = new ModelImpl();
     return model;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LibName createLibName()
-  {
-    LibNameImpl libName = new LibNameImpl();
-    return libName;
   }
 
   /**

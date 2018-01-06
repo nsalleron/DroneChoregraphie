@@ -25,54 +25,18 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.Model");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cLibAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cLibLibNameParserRuleCall_0_0 = (RuleCall)cLibAssignment_0.eContents().get(0);
-		private final Assignment cFonctionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFonctionsFonctionDeclParserRuleCall_1_0 = (RuleCall)cFonctionsAssignment_1.eContents().get(0);
+		private final Assignment cFonctionsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cFonctionsFonctionDeclParserRuleCall_0 = (RuleCall)cFonctionsAssignment.eContents().get(0);
 		
 		//Model:
-		//	lib=LibName fonctions+=FonctionDecl*;
+		//	fonctions+=FonctionDecl*;
 		@Override public ParserRule getRule() { return rule; }
-		
-		//lib=LibName fonctions+=FonctionDecl*
-		public Group getGroup() { return cGroup; }
-		
-		//lib=LibName
-		public Assignment getLibAssignment_0() { return cLibAssignment_0; }
-		
-		//LibName
-		public RuleCall getLibLibNameParserRuleCall_0_0() { return cLibLibNameParserRuleCall_0_0; }
 		
 		//fonctions+=FonctionDecl*
-		public Assignment getFonctionsAssignment_1() { return cFonctionsAssignment_1; }
+		public Assignment getFonctionsAssignment() { return cFonctionsAssignment; }
 		
 		//FonctionDecl
-		public RuleCall getFonctionsFonctionDeclParserRuleCall_1_0() { return cFonctionsFonctionDeclParserRuleCall_1_0; }
-	}
-	public class LibNameElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.LibName");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLibKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		
-		//// Lib
-		//LibName:
-		//	'lib:' name=ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'lib:' name=ID
-		public Group getGroup() { return cGroup; }
-		
-		//'lib:'
-		public Keyword getLibKeyword_0() { return cLibKeyword_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getFonctionsFonctionDeclParserRuleCall_0() { return cFonctionsFonctionDeclParserRuleCall_0; }
 	}
 	public class SecondeConstElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.SecondeConst");
@@ -3326,7 +3290,6 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 	private final ModelElements pModel;
 	private final TerminalRule tSECONDE;
 	private final TerminalRule tPOURCENT;
-	private final LibNameElements pLibName;
 	private final SecondeConstElements pSecondeConst;
 	private final PourcentConstElements pPourcentConst;
 	private final SecondeDeclElements pSecondeDecl;
@@ -3374,7 +3337,6 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 		this.pModel = new ModelElements();
 		this.tSECONDE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.SECONDE");
 		this.tPOURCENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "fr.idmteam1.idmproject.dronedsl.DroneDSLLib.POURCENT");
-		this.pLibName = new LibNameElements();
 		this.pSecondeConst = new SecondeConstElements();
 		this.pPourcentConst = new PourcentConstElements();
 		this.pSecondeDecl = new SecondeDeclElements();
@@ -3439,7 +3401,7 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	lib=LibName fonctions+=FonctionDecl*;
+	//	fonctions+=FonctionDecl*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -3458,17 +3420,6 @@ public class DroneDSLLibGrammarAccess extends AbstractGrammarElementFinder {
 	//	('1'..'9' | '1'..'9' '0'..'9' | '100'..'100') '%';
 	public TerminalRule getPOURCENTRule() {
 		return tPOURCENT;
-	}
-	
-	//// Lib
-	//LibName:
-	//	'lib:' name=ID;
-	public LibNameElements getLibNameAccess() {
-		return pLibName;
-	}
-	
-	public ParserRule getLibNameRule() {
-		return getLibNameAccess().getRule();
 	}
 	
 	//// Variables

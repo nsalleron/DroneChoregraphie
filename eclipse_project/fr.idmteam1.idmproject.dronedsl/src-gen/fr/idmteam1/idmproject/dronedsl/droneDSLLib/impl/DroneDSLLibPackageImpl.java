@@ -17,7 +17,6 @@ import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionCallInterne;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.GDr;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Gauche;
-import fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Monter;
 import fr.idmteam1.idmproject.dronedsl.droneDSLLib.Mouvement;
@@ -60,13 +59,6 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * @generated
    */
   private EClass modelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass libNameEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -384,39 +376,9 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Lib()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getModel_Fonctions()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLibName()
-  {
-    return libNameEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLibName_Name()
-  {
-    return (EAttribute)libNameEClass.getEStructuralFeatures().get(0);
+    return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1130,11 +1092,7 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__LIB);
     createEReference(modelEClass, MODEL__FONCTIONS);
-
-    libNameEClass = createEClass(LIB_NAME);
-    createEAttribute(libNameEClass, LIB_NAME__NAME);
 
     secondeConstEClass = createEClass(SECONDE_CONST);
     createEAttribute(secondeConstEClass, SECONDE_CONST__VAL);
@@ -1309,11 +1267,7 @@ public class DroneDSLLibPackageImpl extends EPackageImpl implements DroneDSLLibP
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Lib(), this.getLibName(), null, "lib", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Fonctions(), this.getFonctionDecl(), null, "fonctions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(libNameEClass, LibName.class, "LibName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLibName_Name(), ecorePackage.getEString(), "name", null, 0, 1, LibName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(secondeConstEClass, SecondeConst.class, "SecondeConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSecondeConst_Val(), ecorePackage.getEString(), "val", null, 0, 1, SecondeConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -68,22 +68,13 @@ public interface DroneDSLLibPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Lib</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MODEL__LIB = 0;
-
-  /**
    * The feature id for the '<em><b>Fonctions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__FONCTIONS = 1;
+  int MODEL__FONCTIONS = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -92,35 +83,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.LibNameImpl <em>Lib Name</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.LibNameImpl
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getLibName()
-   * @generated
-   */
-  int LIB_NAME = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIB_NAME__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Lib Name</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIB_NAME_FEATURE_COUNT = 1;
+  int MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.SecondeExpImpl <em>Seconde Exp</em>}' class.
@@ -130,7 +93,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getSecondeExp()
    * @generated
    */
-  int SECONDE_EXP = 10;
+  int SECONDE_EXP = 9;
 
   /**
    * The number of structural features of the '<em>Seconde Exp</em>' class.
@@ -149,7 +112,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getSecondeConst()
    * @generated
    */
-  int SECONDE_CONST = 2;
+  int SECONDE_CONST = 1;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -177,7 +140,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPourcentExp()
    * @generated
    */
-  int POURCENT_EXP = 9;
+  int POURCENT_EXP = 8;
 
   /**
    * The number of structural features of the '<em>Pourcent Exp</em>' class.
@@ -196,7 +159,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPourcentConst()
    * @generated
    */
-  int POURCENT_CONST = 3;
+  int POURCENT_CONST = 2;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -224,7 +187,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getVarDecl()
    * @generated
    */
-  int VAR_DECL = 6;
+  int VAR_DECL = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -252,7 +215,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getSecondeDecl()
    * @generated
    */
-  int SECONDE_DECL = 4;
+  int SECONDE_DECL = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -289,7 +252,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPourcentDecl()
    * @generated
    */
-  int POURCENT_DECL = 5;
+  int POURCENT_DECL = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -326,7 +289,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRefSecondeVar()
    * @generated
    */
-  int REF_SECONDE_VAR = 7;
+  int REF_SECONDE_VAR = 6;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -354,7 +317,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRefPourcentVar()
    * @generated
    */
-  int REF_POURCENT_VAR = 8;
+  int REF_POURCENT_VAR = 7;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -382,7 +345,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getDecollerAtterrir()
    * @generated
    */
-  int DECOLLER_ATTERRIR = 23;
+  int DECOLLER_ATTERRIR = 22;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' attribute.
@@ -410,7 +373,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getDecoller()
    * @generated
    */
-  int DECOLLER = 11;
+  int DECOLLER = 10;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' attribute.
@@ -438,7 +401,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getAtterrir()
    * @generated
    */
-  int ATTERRIR = 12;
+  int ATTERRIR = 11;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' attribute.
@@ -466,7 +429,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getMouvement()
    * @generated
    */
-  int MOUVEMENT = 22;
+  int MOUVEMENT = 21;
 
   /**
    * The number of structural features of the '<em>Mouvement</em>' class.
@@ -485,7 +448,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getMonter()
    * @generated
    */
-  int MONTER = 13;
+  int MONTER = 12;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -522,7 +485,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getDescendre()
    * @generated
    */
-  int DESCENDRE = 14;
+  int DESCENDRE = 13;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -559,7 +522,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getAvancer()
    * @generated
    */
-  int AVANCER = 15;
+  int AVANCER = 14;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -596,7 +559,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getReculer()
    * @generated
    */
-  int RECULER = 16;
+  int RECULER = 15;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -633,7 +596,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getGauche()
    * @generated
    */
-  int GAUCHE = 17;
+  int GAUCHE = 16;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -670,7 +633,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getDroite()
    * @generated
    */
-  int DROITE = 18;
+  int DROITE = 17;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -707,7 +670,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRotationGauche()
    * @generated
    */
-  int ROTATION_GAUCHE = 19;
+  int ROTATION_GAUCHE = 18;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -744,7 +707,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRotationDroite()
    * @generated
    */
-  int ROTATION_DROITE = 20;
+  int ROTATION_DROITE = 19;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -781,7 +744,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getCommandeBasique()
    * @generated
    */
-  int COMMANDE_BASIQUE = 24;
+  int COMMANDE_BASIQUE = 23;
 
   /**
    * The number of structural features of the '<em>Commande Basique</em>' class.
@@ -800,7 +763,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getPause()
    * @generated
    */
-  int PAUSE = 21;
+  int PAUSE = 20;
 
   /**
    * The feature id for the '<em><b>Duree</b></em>' containment reference.
@@ -828,7 +791,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionDecl()
    * @generated
    */
-  int FONCTION_DECL = 25;
+  int FONCTION_DECL = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -865,7 +828,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionCall()
    * @generated
    */
-  int FONCTION_CALL = 26;
+  int FONCTION_CALL = 25;
 
   /**
    * The number of structural features of the '<em>Fonction Call</em>' class.
@@ -884,7 +847,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getFonctionCallInterne()
    * @generated
    */
-  int FONCTION_CALL_INTERNE = 27;
+  int FONCTION_CALL_INTERNE = 26;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -912,7 +875,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getMD()
    * @generated
    */
-  int MD = 28;
+  int MD = 27;
 
   /**
    * The number of structural features of the '<em>MD</em>' class.
@@ -931,7 +894,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getGDr()
    * @generated
    */
-  int GDR = 29;
+  int GDR = 28;
 
   /**
    * The number of structural features of the '<em>GDr</em>' class.
@@ -950,7 +913,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getRGRD()
    * @generated
    */
-  int RGRD = 30;
+  int RGRD = 29;
 
   /**
    * The number of structural features of the '<em>RGRD</em>' class.
@@ -969,7 +932,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getAR()
    * @generated
    */
-  int AR = 31;
+  int AR = 30;
 
   /**
    * The number of structural features of the '<em>AR</em>' class.
@@ -988,7 +951,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele()
    * @generated
    */
-  int PARALLELE = 32;
+  int PARALLELE = 31;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1025,7 +988,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele2()
    * @generated
    */
-  int PARALLELE2 = 33;
+  int PARALLELE2 = 32;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1071,7 +1034,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele3()
    * @generated
    */
-  int PARALLELE3 = 34;
+  int PARALLELE3 = 33;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1117,7 +1080,7 @@ public interface DroneDSLLibPackage extends EPackage
    * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getParallele4()
    * @generated
    */
-  int PARALLELE4 = 35;
+  int PARALLELE4 = 34;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -1176,17 +1139,6 @@ public interface DroneDSLLibPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getLib <em>Lib</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Lib</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getLib()
-   * @see #getModel()
-   * @generated
-   */
-  EReference getModel_Lib();
-
-  /**
    * Returns the meta object for the containment reference list '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model#getFonctions <em>Fonctions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1196,27 +1148,6 @@ public interface DroneDSLLibPackage extends EPackage
    * @generated
    */
   EReference getModel_Fonctions();
-
-  /**
-   * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName <em>Lib Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lib Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName
-   * @generated
-   */
-  EClass getLibName();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.LibName#getName()
-   * @see #getLibName()
-   * @generated
-   */
-  EAttribute getLibName_Name();
 
   /**
    * Returns the meta object for class '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.SecondeConst <em>Seconde Const</em>}'.
@@ -1966,38 +1897,12 @@ public interface DroneDSLLibPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Lib</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MODEL__LIB = eINSTANCE.getModel_Lib();
-
-    /**
      * The meta object literal for the '<em><b>Fonctions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference MODEL__FONCTIONS = eINSTANCE.getModel_Fonctions();
-
-    /**
-     * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.LibNameImpl <em>Lib Name</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.LibNameImpl
-     * @see fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.DroneDSLLibPackageImpl#getLibName()
-     * @generated
-     */
-    EClass LIB_NAME = eINSTANCE.getLibName();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LIB_NAME__NAME = eINSTANCE.getLibName_Name();
 
     /**
      * The meta object literal for the '{@link fr.idmteam1.idmproject.dronedsl.droneDSLLib.impl.SecondeConstImpl <em>Seconde Const</em>}' class.

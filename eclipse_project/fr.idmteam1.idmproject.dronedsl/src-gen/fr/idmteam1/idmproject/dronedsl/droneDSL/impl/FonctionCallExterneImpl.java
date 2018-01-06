@@ -231,7 +231,7 @@ public class FonctionCallExterneImpl extends FonctionCallImpl implements Fonctio
    */
   @Override
   public String toString() {
-      return "   " + this.file + "." + this.name + "();";
+      return "   " + this.file + "." + this.name + "(runtime);";
   }
 
 } //ModifiedFonctionCallExterneImpl toString added

@@ -46,8 +46,6 @@ public class DroneDSLLibParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParallele2Access().getAlternatives(), "rule__Parallele2__Alternatives");
 					put(grammarAccess.getParallele3Access().getAlternatives(), "rule__Parallele3__Alternatives");
 					put(grammarAccess.getParallele4Access().getAlternatives(), "rule__Parallele4__Alternatives");
-					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
-					put(grammarAccess.getLibNameAccess().getGroup(), "rule__LibName__Group__0");
 					put(grammarAccess.getSecondeDeclAccess().getGroup(), "rule__SecondeDecl__Group__0");
 					put(grammarAccess.getPourcentDeclAccess().getGroup(), "rule__PourcentDecl__Group__0");
 					put(grammarAccess.getMonterAccess().getGroup(), "rule__Monter__Group__0");
@@ -121,9 +119,7 @@ public class DroneDSLLibParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParallele4Access().getGroup_21(), "rule__Parallele4__Group_21__0");
 					put(grammarAccess.getParallele4Access().getGroup_22(), "rule__Parallele4__Group_22__0");
 					put(grammarAccess.getParallele4Access().getGroup_23(), "rule__Parallele4__Group_23__0");
-					put(grammarAccess.getModelAccess().getLibAssignment_0(), "rule__Model__LibAssignment_0");
-					put(grammarAccess.getModelAccess().getFonctionsAssignment_1(), "rule__Model__FonctionsAssignment_1");
-					put(grammarAccess.getLibNameAccess().getNameAssignment_1(), "rule__LibName__NameAssignment_1");
+					put(grammarAccess.getModelAccess().getFonctionsAssignment(), "rule__Model__FonctionsAssignment");
 					put(grammarAccess.getSecondeConstAccess().getValAssignment(), "rule__SecondeConst__ValAssignment");
 					put(grammarAccess.getPourcentConstAccess().getValAssignment(), "rule__PourcentConst__ValAssignment");
 					put(grammarAccess.getSecondeDeclAccess().getNameAssignment_1(), "rule__SecondeDecl__NameAssignment_1");

@@ -3,13 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="droneDSLLib" nsURI="http://www.idmteam1.fr/idmproject/dronedsl/DroneDSLLib"
     nsPrefix="droneDSLLib">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lib" eType="#//LibName"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fonctions" upperBound="-1"
         eType="#//FonctionDecl" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LibName">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecondeConst" eSuperTypes="#//SecondeExp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
