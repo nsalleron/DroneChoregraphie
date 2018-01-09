@@ -10,41 +10,45 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import
+import org.eclipse.xtext.generator.IOutputConfigurationProvider
+import org.eclipse.xtext.generator.OutputConfiguration
+import org.eclipse.xtext.generator.IFileSystemAccess
+import java.util.HashSet
 
 /**
  * Generates code from your model files on save.
  * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
-class DroneDSLGenerator extends AbstractGenerator {
+class DroneDSLGenerator extends AbstractGenerator implements IOutputConfigurationProvider {
 	
 	val stubFilesMap = newLinkedHashMap(
-		"fr/roboticiens/body/BodyInstruction.java" -> contentBodyInstructionClass(),
-		"fr/roboticiens/commandes/Atterrir.java" -> contentAtterrirClass(),
-		"fr/roboticiens/commandes/Avancer.java" -> contentAvancerClass(),
-		"fr/roboticiens/commandes/CommandeAvecDureeVitesse.java" -> contentCommandeAvecDureeVitesseClass(),
-		"fr/roboticiens/commandes/CommandeBasique.java" -> contentCommandeBasiqueClass(),
-		"fr/roboticiens/commandes/CommandeParallelisable.java" -> contentCommandeParallelisableClass(),
-		"fr/roboticiens/commandes/Decoller.java" -> contentDecollerClass(),
-		"fr/roboticiens/commandes/Descendre.java" -> contentDescendreClass(),
-		"fr/roboticiens/commandes/Droite.java" -> contentDroiteClass(),
-		"fr/roboticiens/commandes/Gauche.java" -> contentGaucheClass(),
-		"fr/roboticiens/commandes/Monter.java" -> contentMonterClass(),
-		"fr/roboticiens/commandes/Pause.java" -> contentPauseClass(),
-		"fr/roboticiens/commandes/Reculer.java" -> contentReculerClass(),
-		"fr/roboticiens/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
-		"fr/roboticiens/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
-		"fr/roboticiens/imports/Import.java" -> contentImportClass(),
-		"fr/roboticiens/paralleles/Parallele.java" -> contentParalleleClass(),
-		"fr/roboticiens/prologue/Prologue.java" -> contentPrologueClass(),
-		"fr/roboticiens/types/Pourcent.java" -> contentPourcentClass(),
-		"fr/roboticiens/types/Seconde.java" -> contentSecondeClass(),
-		"fr/roboticiens/runtime/DroneRuntime.java" -> contentDroneRuntimeClass(),
-		"fr/roboticiens/runtime/DroneRuntimeExecutable.java" -> contentDroneRuntimeExecutableClass(),
-		"fr/roboticiens/runtime/DroneRuntimePrint.java" -> contentDroneRuntimePrintClass()
+		"../src/fr/roboticiens/body/BodyInstruction.java" -> contentBodyInstructionClass(),
+		"../src/fr/roboticiens/commandes/Atterrir.java" -> contentAtterrirClass(),
+		"../src/fr/roboticiens/commandes/Avancer.java" -> contentAvancerClass(),
+		"../src/fr/roboticiens/commandes/CommandeAvecDureeVitesse.java" -> contentCommandeAvecDureeVitesseClass(),
+		"../src/fr/roboticiens/commandes/CommandeBasique.java" -> contentCommandeBasiqueClass(),
+		"../src/fr/roboticiens/commandes/CommandeParallelisable.java" -> contentCommandeParallelisableClass(),
+		"../src/fr/roboticiens/commandes/Decoller.java" -> contentDecollerClass(),
+		"../src/fr/roboticiens/commandes/Descendre.java" -> contentDescendreClass(),
+		"../src/fr/roboticiens/commandes/Droite.java" -> contentDroiteClass(),
+		"../src/fr/roboticiens/commandes/Gauche.java" -> contentGaucheClass(),
+		"../src/fr/roboticiens/commandes/Monter.java" -> contentMonterClass(),
+		"../src/fr/roboticiens/commandes/Pause.java" -> contentPauseClass(),
+		"../src/fr/roboticiens/commandes/Reculer.java" -> contentReculerClass(),
+		"../src/fr/roboticiens/commandes/RotationDroite.java" -> contentRotationDroiteClass(),
+		"../src/fr/roboticiens/commandes/RotationGauche.java" -> contentRotationGaucheClass(),
+		"../src/fr/roboticiens/imports/Import.java" -> contentImportClass(),
+		"../src/fr/roboticiens/paralleles/Parallele.java" -> contentParalleleClass(),
+		"../src/fr/roboticiens/prologue/Prologue.java" -> contentPrologueClass(),
+		"../src/fr/roboticiens/types/Pourcent.java" -> contentPourcentClass(),
+		"../src/fr/roboticiens/types/Seconde.java" -> contentSecondeClass(),
+		"../src/fr/roboticiens/runtime/DroneRuntime.java" -> contentDroneRuntimeClass(),
+		"../src/fr/roboticiens/runtime/DroneRuntimeExecutable.java" -> contentDroneRuntimeExecutableClass(),
+		"../src/fr/roboticiens/runtime/DroneRuntimePrint.java" -> contentDroneRuntimePrintClass()
 	)
 	
-	val mainFilePath = "fr/roboticiens/Main.java"
+	val mainFilePath = "../src/fr/roboticiens/Main.java"
 	
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 
@@ -55,6 +59,7 @@ class DroneDSLGenerator extends AbstractGenerator {
 				fsa.generateFile(mainFilePath, m.compile)
 			}
 		}
+		fsa.deleteFile("../src-gen/")
 	}
 	
 	def generateStubFiles(IFileSystemAccess2 fsa) {
@@ -881,6 +886,20 @@ class DroneDSLGenerator extends AbstractGenerator {
 		
 		}
 		'''
+	}
+	override getOutputConfigurations() {
+		
+		// NON FONCTIONNEL
+		var OutputConfiguration defaultOutput = new OutputConfiguration(IFileSystemAccess.DEFAULT_OUTPUT)
+		defaultOutput.setDescription("Output Folder")
+		defaultOutput.setOutputDirectory("./srcTEST")
+		defaultOutput.setOverrideExistingResources(true)
+		defaultOutput.setCreateOutputDirectory(false)
+		defaultOutput.setCleanUpDerivedResources(true)
+		defaultOutput.setSetDerivedProperty(true)
+		var HashSet<OutputConfiguration> configurations = new HashSet<OutputConfiguration>()
+		configurations.add(defaultOutput)
+		return configurations
 	}
 	
 }
