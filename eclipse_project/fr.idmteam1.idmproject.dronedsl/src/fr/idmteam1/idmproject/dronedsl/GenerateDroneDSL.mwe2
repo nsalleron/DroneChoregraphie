@@ -12,7 +12,13 @@ Workflow {
 			project = StandardProjectConfig {
 				baseName = "fr.idmteam1.idmproject.dronedsl"
 				rootPath = rootPath
+				runtime = {
+					enabled = true
+				}
 				runtimeTest = {
+					enabled = true
+				}
+				genericIde = {
 					enabled = true
 				}
 				eclipsePlugin = {
@@ -39,6 +45,9 @@ Workflow {
 			validator = {
 				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 				composedCheck = "fr.idmteam1.idmproject.dronedsl.validation.DroneDSLValidator"
+			}
+			newProjectWizardForEclipse = {
+  				generate = true
 			}
 		}
 		language = StandardLanguage {

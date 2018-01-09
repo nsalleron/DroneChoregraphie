@@ -85,7 +85,6 @@ class DroneDSLGenerator extends AbstractGenerator implements IOutputConfiguratio
 		package fr.roboticiens;
 		
 		import fr.roboticiens.commandes.*;
-		//import fr.roboticiens.imports.*;
 		import fr.roboticiens.paralleles.*;
 		import fr.roboticiens.prologue.*;
 		import fr.roboticiens.runtime.*;

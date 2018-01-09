@@ -30,31 +30,31 @@ import org.eclipse.xtext.xbase.lib.StringExtensions;
 @SuppressWarnings("all")
 public class DroneDSLLibGenerator extends AbstractGenerator {
   private final LinkedHashMap<String, CharSequence> stubFilesMap = CollectionLiterals.<String, CharSequence>newLinkedHashMap(
-    Pair.<String, CharSequence>of("fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeAvecDureeVitesse.java", this.contentCommandeAvecDureeVitesseClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeBasique.java", this.contentCommandeBasiqueClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeParallelisable.java", this.contentCommandeParallelisableClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Decoller.java", this.contentDecollerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Descendre.java", this.contentDescendreClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Droite.java", this.contentDroiteClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Gauche.java", this.contentGaucheClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Monter.java", this.contentMonterClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Pause.java", this.contentPauseClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/imports/Import.java", this.contentImportClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/types/Seconde.java", this.contentSecondeClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntime.java", this.contentDroneRuntimeClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntimePrint.java", this.contentDroneRuntimePrintClass()));
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeAvecDureeVitesse.java", this.contentCommandeAvecDureeVitesseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeBasique.java", this.contentCommandeBasiqueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeParallelisable.java", this.contentCommandeParallelisableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Decoller.java", this.contentDecollerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Descendre.java", this.contentDescendreClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Droite.java", this.contentDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Gauche.java", this.contentGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Monter.java", this.contentMonterClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Pause.java", this.contentPauseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/imports/Import.java", this.contentImportClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Seconde.java", this.contentSecondeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntime.java", this.contentDroneRuntimeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimePrint.java", this.contentDroneRuntimePrintClass()));
   
-  private final String packagePath = "fr/roboticiens/";
+  private final String packagePath = "../src/fr/roboticiens/";
   
   @Override
   public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {

@@ -14,6 +14,7 @@ import fr.idmteam1.idmproject.dronedsl.ui.labeling.DroneDSLDescriptionLabelProvi
 import fr.idmteam1.idmproject.dronedsl.ui.labeling.DroneDSLLabelProvider;
 import fr.idmteam1.idmproject.dronedsl.ui.outline.DroneDSLOutlineTreeProvider;
 import fr.idmteam1.idmproject.dronedsl.ui.quickfix.DroneDSLQuickfixProvider;
+import fr.idmteam1.idmproject.dronedsl.ui.wizard.DroneDSLProjectCreator;
 import org.eclipse.compare.IViewerCreator;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -76,6 +77,7 @@ import org.eclipse.xtext.ui.refactoring.ui.IRenameSupport;
 import org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferences;
 import org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider;
 import org.eclipse.xtext.ui.shared.Access;
+import org.eclipse.xtext.ui.wizard.IProjectCreator;
 
 /**
  * Manual modifications go to {@link DroneDSLUiModule}.
@@ -281,6 +283,11 @@ public abstract class AbstractDroneDSLUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.xtext.generator.ui.compare.CompareFragment2
 	public void configureCompareViewerTitle(Binder binder) {
 		binder.bind(String.class).annotatedWith(Names.named(UIBindings.COMPARE_VIEWER_TITLE)).toInstance("DroneDSL Compare");
+	}
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.projectWizard.SimpleProjectWizardFragment2
+	public Class<? extends IProjectCreator> bindIProjectCreator() {
+		return DroneDSLProjectCreator.class;
 	}
 	
 }

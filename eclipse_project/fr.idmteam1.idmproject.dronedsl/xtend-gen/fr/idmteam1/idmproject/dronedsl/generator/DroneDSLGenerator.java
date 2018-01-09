@@ -8,16 +8,21 @@ import fr.idmteam1.idmproject.dronedsl.droneDSL.FonctionDecl;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Import;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Model;
 import fr.idmteam1.idmproject.dronedsl.droneDSL.Prologue;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
+import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.generator.IOutputConfigurationProvider;
+import org.eclipse.xtext.generator.OutputConfiguration;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
@@ -29,33 +34,33 @@ import org.eclipse.xtext.xbase.lib.Pair;
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 @SuppressWarnings("all")
-public class DroneDSLGenerator extends AbstractGenerator {
+public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfigurationProvider {
   private final LinkedHashMap<String, CharSequence> stubFilesMap = CollectionLiterals.<String, CharSequence>newLinkedHashMap(
-    Pair.<String, CharSequence>of("fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeAvecDureeVitesse.java", this.contentCommandeAvecDureeVitesseClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeBasique.java", this.contentCommandeBasiqueClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/CommandeParallelisable.java", this.contentCommandeParallelisableClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Decoller.java", this.contentDecollerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Descendre.java", this.contentDescendreClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Droite.java", this.contentDroiteClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Gauche.java", this.contentGaucheClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Monter.java", this.contentMonterClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Pause.java", this.contentPauseClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/imports/Import.java", this.contentImportClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/types/Seconde.java", this.contentSecondeClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntime.java", this.contentDroneRuntimeClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
-    Pair.<String, CharSequence>of("fr/roboticiens/runtime/DroneRuntimePrint.java", this.contentDroneRuntimePrintClass()));
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeAvecDureeVitesse.java", this.contentCommandeAvecDureeVitesseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeBasique.java", this.contentCommandeBasiqueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeParallelisable.java", this.contentCommandeParallelisableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Decoller.java", this.contentDecollerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Descendre.java", this.contentDescendreClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Droite.java", this.contentDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Gauche.java", this.contentGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Monter.java", this.contentMonterClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Pause.java", this.contentPauseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/imports/Import.java", this.contentImportClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Seconde.java", this.contentSecondeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntime.java", this.contentDroneRuntimeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimePrint.java", this.contentDroneRuntimePrintClass()));
   
-  private final String mainFilePath = "fr/roboticiens/Main.java";
+  private final String mainFilePath = "../src/fr/roboticiens/Main.java";
   
   @Override
   public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
@@ -68,6 +73,7 @@ public class DroneDSLGenerator extends AbstractGenerator {
         fsa.generateFile(this.mainFilePath, this.compile(m));
       }
     }
+    fsa.deleteFile("../src-gen/");
   }
   
   public void generateStubFiles(final IFileSystemAccess2 fsa) {
@@ -95,8 +101,6 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("import fr.roboticiens.commandes.*;");
-    _builder.newLine();
-    _builder.append("//import fr.roboticiens.imports.*;");
     _builder.newLine();
     _builder.append("import fr.roboticiens.paralleles.*;");
     _builder.newLine();
@@ -1859,5 +1863,19 @@ public class DroneDSLGenerator extends AbstractGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
+  }
+  
+  @Override
+  public Set<OutputConfiguration> getOutputConfigurations() {
+    OutputConfiguration defaultOutput = new OutputConfiguration(IFileSystemAccess.DEFAULT_OUTPUT);
+    defaultOutput.setDescription("Output Folder");
+    defaultOutput.setOutputDirectory("./srcTEST");
+    defaultOutput.setOverrideExistingResources(true);
+    defaultOutput.setCreateOutputDirectory(false);
+    defaultOutput.setCleanUpDerivedResources(true);
+    defaultOutput.setSetDerivedProperty(true);
+    HashSet<OutputConfiguration> configurations = new HashSet<OutputConfiguration>();
+    configurations.add(defaultOutput);
+    return configurations;
   }
 }

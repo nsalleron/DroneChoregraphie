@@ -408,6 +408,16 @@
 		</fileTypes>
 	</extension>
 	<extension
+		point="org.eclipse.ui.newWizards">
+		<wizard
+			category="org.eclipse.xtext.projectwiz"
+			class="fr.idmteam1.idmproject.dronedsl.ui.DroneDSLExecutableExtensionFactory:fr.idmteam1.idmproject.dronedsl.ui.wizard.DroneDSLNewProjectWizard"
+			id="fr.idmteam1.idmproject.dronedsl.ui.wizard.DroneDSLNewProjectWizard"
+			name="DroneDSL Project"
+				project="true">
+		</wizard>
+	</extension>
+	<extension
 		point="org.eclipse.ui.editors">
 		<editor
 			class="fr.idmteam1.idmproject.dronedsl.ui.DroneDSLLibExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
