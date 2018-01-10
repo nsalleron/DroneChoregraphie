@@ -1,0 +1,372 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage[none]{hyphenat}
+\usepackage[linktocpage=true]{hyperref}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{vmargin}
+\usepackage{verbatim}
+\usepackage{color}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1 cm}{1 cm}{1.5 cm}
+
+\title{Rapport de la tranche 2}							
+\author{Nicolas SALLERON\\ Yoann GHIGOFF\\ Kévin VU-SAINTONGE \\ Axel ARCHAMBAULT}							
+\date{11 Janvier 2018}									
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.20]{UPMC_Sorbonne_Universites_svg.png}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE Universite Pierre et Marie-Curie}\\[2.0 cm]	% University Name
+	\textsc{\LARGE IDM}\\[0.5 cm]			
+	\textsc{\large Les Roboticiens}\\[0.5 cm]				% Course Name
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Auteurs:}\\
+			\theauthor
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+			\emph{Numéros étudiant:} \\
+			3504018\\3506454\\3202944\\3300807									% Your Student Number
+		\end{flushright}
+	\end{minipage}\\[5 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\contentsname}{Sommaire}
+    \tableofcontents
+    \newpage
+
+    \section{Introduction}
+        La tranche 1 consistait à créer un langage spécifique à la création de chorégraphie pour les drones et à construire un éditeur de texte permettant l'édition et la complétion du langage.
+        
+        La tranche 2 quant-à elle consiste à transformer la chorégraphie écrite par l'utilisateur en un programme qui sera capable de faire exécuter des commandes au drone.
+    
+    \section{Explication du fonctionnement de la solution}
+        Pour générer un code capable de faire exécuter des commandes au drone, il nous a fallu tout d'abord choisir le langage cible. Trois langages étaient disponibles : JAVA, C ou Objective-C.
+        
+        Notre choix s'est porté sur le JAVA pour sa simplicité d'écriture et sa comptabilité native avec Eclipse.
+        
+        Une fois le choix du langage cible décidé, nous avons dû concevoir un système qui interprète et compile la chorégraphie écrite par l'utilisateur pour ensuite générer des classes JAVA associées à cette dernière.
+        
+        L'une des plus importante est la classe Main, elle contient la méthode main qui correspond à la chorégraphie écrite par l'utilisateur (voir la Figure 1 ci-dessous).
+        
+        Le système générera d'abord les variables du prologue nécessaires à l'exécution de la chorégraphie (hauteur maximale, vitesse maximale...) qui ont été renseignées par l'utilisateur au début de sa chorégraphie.
+        
+        Ensuite le système créera une méthode main qui instanciera en nos classes JAVA en fonction des instructions renseignées par l'utilisateur dans le main qu'il aura écrit.
+        
+        De plus, chaque commande sera exécutée par la runtime qui exécutera les commandes spécifiques à une API du drone.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.50]{ClasseGen.png}
+        \caption{Classe Main}
+        \end{figure}
+    
+    \newpage
+    \section{Notice d'utilisation}
+    \subsection{Lancement de l'environnement de développement}
+        Pour commencer, l'utilisateur devra choisir la distribution autonome du produit en fonction du système d'exploitation qu'il utilise pour le démarrer.
+        En effet, la distribution est compatible pour les trois OS suivants : MacOS, Linux, Windows.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.75]{01.png}
+        \caption{Versions de la distribution}
+        \end{figure}
+        
+        \newpage
+        L'utilisateur devra dézipper l'archive qu'il aura choisi.
+        
+        Une fois terminé, il aura les fichiers suivants :
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.75]{02.png}
+        \caption{Fichiers extraits}
+        \end{figure}
+        
+        Il lui suffira de lancer DroneDSLEditor pour pouvoir créer une chorégraphie.
+        Au lancement de l'application il devra spécifier un répertoire pour stocker ses chorégraphies.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.50]{03.png}
+        \caption{Répertoire de sauvegarde}
+        \end{figure}
+        
+        \newpage
+        Puis il créera un nouveau projet pour qu'il puisse éditer une chorégraphie.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.40]{04.png}
+        \caption{Nouveau projet}
+        \end{figure}
+    
+        Il devra choisir un projet Xtext nommé DroneDSL Project.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.40]{05.png}
+        \caption{Nouveau projet}
+        \end{figure}
+        
+        Ensuite l'utilisateur doit nommer son projet.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.40]{06.png}
+        \caption{Nom du projet}
+        \end{figure}
+        
+        \newpage
+        Il crée sa chorégraphie en spécifiant tout d'abord 5 constantes de vol. Cela permet au programme d'adapter les instructions. \\
+        Il définit ainsi la vitesse maximale d'élévation, la vitesse maximale de déplacement, la vitesse maximale de rotation, l'altitude maximale et la distance d'éloignement maximale du drone. \\
+        Puis il doit définir le corps main qui représente le point d'entrée du programme. Ce qui est contenu dans le bloc d'instruction suivant ce mot clef sera les instructions exécutées par le drone. Enfin il peut faire appel à des fonctions définies par l'utilisateur soit dans le fichier contenant le bloc main, soit dans un fichier .lib\_drone situé dans le même dossier que le main.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.60]{07.png}
+        \caption{Exemple de projet}
+        \end{figure}
+        
+        \newpage
+        Une fois sa chorégraphie sauvegardée, le programme va générer des classes JAVA qui sont nécessaires pour exécuter la chorégraphie.
+        
+        \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.40]{09.png}
+        \caption{Structure du projet}
+        \end{figure}
+        
+        Ainsi dans le dossier src du projet on retrouve le fichier main.main\_drone qui représente la chorégraphie définie par l'utilisateur. De plus, les différents packages regroupent les différentes instructions.
+        \subsection{Langage de conception de chorégraphie}
+        		\subsubsection{Prologue}
+			Pour fonctionner, l'utilisateur doit définir 5 constantes de vol.
+			Cela permet au programme d'adapter la vitesse des mouvements en fonction de ces dernières.
+			Il doit les définir comme ceci au début du fichier \newline
+
+			\begin{figure}[h!]
+  			      \begin{center}
+  			          \begin{verbatim}
+   			             define vitesse_hauteur_max 50%
+   			             define vitesse_deplacement_max 10%
+   			             define vitesse_rotation_max 20%
+   			             define hauteur_max 20
+   			             define eloignement_max 30
+   			         \end{verbatim}
+   			     \end{center}
+    			    \caption{Exemple de define}
+    			    \label{Exemple de define}
+   			 \end{figure}
+
+			\paragraph{}\textbf{define vitesse\_hauteur\_max 100\%: } \\
+				Cette constante permet de définir la vitesse maximale d'élévation du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
+				La valeur de cette constante doit être comprise entre 1 et 100\%.
+			\paragraph{}\textbf{define vitesse\_deplacement\_max 100\%:}\\
+				Cette constante permet de définir la vitesse maximale de déplacement sur le plan horizontal du drone pour la chorégraphie par rapport à sa vitesse maximale possible. \newline
+				La valeur de cette constante doit être comprise entre 1 et 100\%.
+			\paragraph{}\textbf{define vitesse\_rotation\_max 100\% :}\\
+				Cette constante permet de définir la vitesse maximale de rotation du drone pour la chorégraphie par rapport à sa vitesse maximale. \newline
+				La valeur de cette constante doit être comprise entre 1 et 100\%.
+			\paragraph{}\textbf{define hauteur\_max 150 :}\\
+				Cette constante permet de limiter l'altitude maximale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la hauteur maximale. \newline
+				La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la hauteur maximale possible du drone.
+			\paragraph{}\textbf{define eloignement\_max 3000:}\\
+				Cette constante permet de contrôler la distance horizontale du drone en vol. Lorsque le drone est sur le point de dépasser cette limite, il se stabilise automatiquement à la distance maximale horizontale. \newline
+				La valeur de cette constante doit être un entier positif qui ne doit pas être supérieure à la distance maximale horizontale possible du drone.
+
+        \subsubsection{Les types}
+      	\paragraph{}Type "Pourcent":\\
+		Déclaration : Pourcent a = 10\%\\
+		C'est le type utilisé pour en paramètre des commandes de déplacement (monter, descendre, gauche, droite, avancer, reculer, rotation\_gauche, rotation\_droite).\\
+		La valeur doit être comprise entre 1 et 100
+	\paragraph{}Type "Seconde": \\ 
+		Déclaration : Seconde b = 10\\
+		C'est le type utilisé pour en paramètre des commandes de déplacement (monter, descendre, gauche, droite, avancer, reculer, rotation\_gauche, rotation\_droite).\\
+	\subsubsection{Décollage}
+		\quad Syntaxe: \textbf{decoller()}\bigbreak
+			Cette commande permet à un drone de décoller. Elle devra obligatoirement être la première commande exécutée dans le bloc main et ne peut pas être à nouveau exécutée si le drone n'a pas atterri.\\
+			Il est uniquement possible de décoller si le drone est au sol. 
+	\subsubsection{Attérrissage}
+
+		\quad Syntaxe: \textbf{atterrir()}\bigbreak
+			Cette commande permet à un drone d'atterrir. Elle devra obligatoirement être la dernière commande exécutée dans le bloc main et ne peut pas être à nouveau exécutée si le drone n'a pas décoller. \\
+			Il est uniquement possible d'atterrir si le drone est en vol.
+
+	\subsubsection{Les commandes de mouvements}
+
+		\quad Syntaxe: \textbf{monter(durée: Seconde, vitesse\_verticale: Pourcent)} \bigbreak
+			Cette commande permet à un drone de monter en altitude. \\
+			Elle ne peut être exécutée que si le drone est en vol. \\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone s'élève. \\
+			Le paramètre \textbf{vitesse\_vertical} est un type Pourcent. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur dans le prologue. \\
+
+		\newpage
+		\quad Syntaxe: \textbf{descendre(durée: Seconde, vitesse\_verticale: Pourcent)} \bigbreak
+			Cette commande permet à un drone de descendre en altitude. \\
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone s'élève. \\
+			Le paramètre \textbf{vitesse\_vertical} est un type Pourcent. Il indique la vitesse d'élévation du drone par rapport à la vitesse verticale maximum définie par l'utilisateur dans le prologue. \\
+
+		
+		\quad Syntaxe: \textbf{avancer(durée: Seconde, vitesse\_deplacement: Pourcent)}  \bigbreak
+			Cette commande permet à un drone de se déplacer sur un axe horizontal dans la direction vers laquelle sa face avant est tournée. \\
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone avance. \\
+			Le paramètre \textbf{vitesse\_deplacement} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur dans le prologue.  \\
+
+
+		\quad Syntaxe: \textbf{reculer(durée: Seconde, vitesse\_deplacement: Pourcent))}  \bigbreak
+			Cette commande permet à un drone de se déplacer sur un axe horizontal dans la direction opposée à celle vers laquelle est tournée sa face avant. \\
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone recule. \\
+			Le paramètre \textbf{vitesse\_deplacement} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur dans le prologue.  \\
+
+
+		\quad Syntaxe: \textbf{gauche(durée: Seconde, vitesse\_deplacement: Pourcent))}  \bigbreak
+			Cette commande permet à un drone de se déplacer sur un axe horizontal dans la direction à gauche de celle vers laquelle est tournée sa face avant.  \\
+			Elle ne peut être exécutée que si le drone est en vol. \\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone se déplace. \\
+			Le paramètre \textbf{vitesse\_deplacement} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur dans le prologue.  \\
+
+		\quad Syntaxe: \textbf{droite(durée: Seconde, vitesse\_deplacement: Pourcent))}  \bigbreak
+			Cette commande permet à un drone de se déplacer sur un axe horizontal dans la direction à droite de celle vers laquelle est tournée sa face avant. \\
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone se déplace. \\
+			Le paramètre \textbf{vitesse\_deplacement} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse horizontale maximum définie par l'utilisateur dans le prologue.  \\
+
+		\quad Syntaxe: \textbf{rotation\_gauche(durée: Seconde, vitesse\_rotation: Pourcent)}  \bigbreak
+			Cette commande permet à un drone de tourner sur lui même dans le sens inverse des aiguilles d'une montre. \\
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone doit pivoter.\\
+			Le paramètre \textbf{vitesse\_rotation} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximum définie par l'utilisateur dans le prologue.  \\
+
+
+		\quad Syntaxe: \textbf{rotation\_droite(durée: Seconde, vitesse\_rotation: Pourcent)}  \bigbreak
+			Cette commande permet à un drone de tourner sur lui même dans le sens des aiguilles d'une montre.\\ 
+			Elle ne peut être exécutée que si le drone est en vol.\\
+			Le paramètre \textbf{durée} est le temps en type Seconde durant lequel le drone doit pivoter.\\
+			Le paramètre \textbf{vitesse\_rotation} est un type Pourcent. Il indique la vitesse de déplacement du drone par rapport à la vitesse de rotation maximum définie par l'utilisateur dans le prologue.  \\
+
+	\subsubsection{La commande pause}
+		\quad Syntaxe: \textbf{pause(durée: Seconde)}  \bigbreak
+			Cette commande permet à un drone de s'arrêter en position stationnaire pendant une certaine durée, soit en vol ou au sol. \\
+			Le paramètre \textbf{durée} donnera le temps en secondes durant lequel le drone doit se stabiliser. \\
+	
+\subsection{Les fonctions}
+Le langage permet de définir des fonctions, ces dernières sont une suite d'instructions séquentielles qu'exécutera le drone.\\
+Les fonctions ont un nom qui permet de les identifier.
+Il n'est pas possible de paralléliser deux fonctions.\\
+La définition d'une fonction est de la forme suivante :
+
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{verbatim}
+            func nomDeLaFonction() {
+                Mettre une instruction par ligne
+            }
+            \end{verbatim}
+        \end{center}
+        \caption{Exemple de definition de fonction}
+        \label{Exemple de definition de fonction}
+    \end{figure}
+    
+Il n'est pas possible de réaliser des récursions de fonction. 
+	\subsubsection{Fonctions locales}
+	
+	Les fonctions locales sont des fonctions définies dans le même fichier que le bloc main (fichier d'extension .main\_drone). \\
+	L'appel d'une fonction locale se fait sans précision du nom du fichier dans lequel elle est définie.
+	
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{verbatim}
+            main {
+                decoller()
+                gauche(1,10%)
+                maFonction()
+                reculer(1,20%)
+                atterrir()
+            }
+                
+            func maFonction() {
+                monter(2,10%) & droite(1,15%)
+                avancer(2,20%)
+                droite(2,15%)
+            }
+            
+            \end{verbatim}
+        \end{center}
+        \caption{Exemple d'appel d'une fonction locale}
+        \label{Exemple d'appel d'une fonction locale}
+    \end{figure}
+
+	
+	\subsubsection{Bibliothèque de fonction}
+
+	Il est possible d'utiliser des fonctions définies dans d'autres fichiers .lib\_drone, ces fichiers doivent être dans le même répertoire que le fichier appelant ses fonctions.\\
+	L'inclusion d'une bibliothèque se fait en définissant via l'instruction \textbf{import} suivi du nom du fichier suivi de l'extension ".lib\_drone".\\
+	L'appel d'une fonction définie dans une bibliothèque se fait en précisant le nom du fichier contenant sa définition.\\
+	
+	  \begin{figure}[h!]
+       		 \begin{center}
+        		    \begin{verbatim}
+		             /* import du fichier contenant la fonction maFonction() */
+		             import <maLib.lib_drone>	
+		             /* Instructions de prologue */
+		             main {
+		                decoller()
+		                maLib.maFonction()
+		                atterrir()
+		             }
+        		    \end{verbatim}
+        		\end{center}
+   	 \end{figure}
+	
+	Fichier maLib.lib\_drone : \\
+   	\begin{figure}[h!]
+       		 \begin{center}
+            		\begin{verbatim}
+		             func maFonction() {
+		                monter(2,10%) & droite(1,15%)
+		                avancer(2,20%)
+		                droite(2,15%)
+		             }
+           		 \end{verbatim}
+        		\end{center}
+   	 \end{figure}
+  
+	
+        
+\end{document}
