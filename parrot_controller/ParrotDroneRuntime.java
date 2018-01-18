@@ -265,15 +265,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 		Set<CommandeParallelisable> commandes = p.getCommandes();
 		
 		try {
-			
-			for (CommandeParallelisable commande : commandes) {
-				if(commande instanceof CommandeAvecDureeVitesse) {
-					CommandeAvecDureeVitesse cmdDureeVitesse = CommandeAvecDureeVitesse.class.cast(commande);
-					writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse().getValue(), false);
-				}
-			}
-			bwOutput.flush();
-			
+				
 			for (Iterator<CommandeParallelisable> cmdItr = commandes.iterator(); cmdItr.hasNext();) {
 				CommandeParallelisable commande = cmdItr.next();
 				if(commande instanceof CommandeAvecDureeVitesse) {
@@ -296,6 +288,14 @@ public class ParrotDroneRuntime implements DroneRuntime {
 					}));	
 				}
 			}
+
+			for (CommandeParallelisable commande : commandes) {
+				if(commande instanceof CommandeAvecDureeVitesse) {
+					CommandeAvecDureeVitesse cmdDureeVitesse = CommandeAvecDureeVitesse.class.cast(commande);
+					writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse().getValue(), false);
+				}
+			}
+			bwOutput.flush();
 			
 			for (Thread t : threads) {
 				t.start();
