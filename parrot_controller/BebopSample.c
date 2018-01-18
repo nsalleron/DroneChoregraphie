@@ -53,7 +53,6 @@
 #include <libARDiscovery/ARDiscovery.h>
 
 #include "BebopSample.h"
-#include "ihm.h"
 
 /*****************************************
  *
@@ -72,7 +71,27 @@
 #define FIFO_DIR_PATTERN "/tmp/arsdk_XXXXXX"
 #define FIFO_NAME "arsdk_fifo"
 
-#define IHM
+#define DECOLLER_INPUT_CODE 1
+#define ATTERRIR_INPUT_CODE 2
+#define AVANCER_INPUT_CODE 3
+#define RECULER_INPUT_CODE 4
+#define MONTER_INPUT_CODE 5
+#define DESCENDRE_INPUT_CODE 6
+#define GAUCHE_INPUT_CODE 7
+#define DROITE_INPUT_CODE 8
+#define ROTATION_GAUCHE_INPUT_CODE 9
+#define ROTATION_DROITE_INPUT_CODE 10
+  
+#define ELOIGNEMENT_MAX_CODE 11
+#define HAUTEUR_MAX_CODE 12
+#define VIT_DEPLACEMENT_MAX_CODE 13
+#define VIT_HAUTEUR_MAX_CODE 14
+#define VIT_ROTATION_MAX_CODE 15
+#define QUIT 16
+
+#define MAX_INPUT_LINE_SIZE 1024
+#define MAX_COMMAND_NAME_SIZE 3
+
 /*****************************************
  *
  *             private header:
@@ -91,12 +110,11 @@ static char fifo_name[128] = "";
 
 int gIHMRun = 1;
 char gErrorStr[ERROR_STR_LENGTH];
-IHM_t *ihm = NULL;
 
 FILE *videoOut = NULL;
 int frameNb = 0;
 ARSAL_Sem_t stateSem;
-int isBebop2 = 0;
+int isBebop2 = 1;
 
 static void signal_handler(int signal)
 {
@@ -111,7 +129,13 @@ int main (int argc, char *argv[])
     ARCONTROLLER_Device_t *deviceController = NULL;
     eARCONTROLLER_ERROR error = ARCONTROLLER_OK;
     eARCONTROLLER_DEVICE_STATE deviceState = ARCONTROLLER_DEVICE_STATE_MAX;
-    pid_t child = 0;
+    
+    /* Custom implementation */
+    int command_code = 0;
+    int res = 0;
+    int quit = 0;
+    int pourcent_vitesse = 0;
+    char input_line_buffer[MAX_INPUT_LINE_SIZE+1];
 
     /* Set signal handlers */
     struct sigaction sig_action = {
@@ -133,7 +157,6 @@ int main (int argc, char *argv[])
         return 1;
     }
 
-
     if (mkdtemp(fifo_dir) == NULL)
     {
         ARSAL_PRINT(ARSAL_PRINT_ERROR, "ERROR", "Mkdtemp failed.");
@@ -148,72 +171,12 @@ int main (int argc, char *argv[])
     }
 
     ARSAL_Sem_Init (&(stateSem), 0, 0);
-
-    ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "Select your Bebop : Bebop (1) ; Bebop2 (2)");
-    char answer = '1';
-    scanf(" %c", &answer);
-    if (answer == '2')
-    {
-        isBebop2 = 1;
-    }
-
-    if(isBebop2)
-    {
-        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "-- Bebop 2 Sample --");
-    }
-    else
-    {
-        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "-- Bebop Sample --");
-    }
-
-    if (!failed)
-    {
-        if (DISPLAY_WITH_MPLAYER)
-        {
-            // fork the process to launch mplayer
-            if ((child = fork()) == 0)
-            {
-                execlp("xterm", "xterm", "-e", "mplayer", "-demuxer",  "h264es", fifo_name, "-benchmark", "-really-quiet", NULL);
-                ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Missing mplayer, you will not see the video. Please install mplayer and xterm.");
-                return -1;
-            }
-        }
-
-        if (DISPLAY_WITH_MPLAYER)
-        {
-            videoOut = fopen(fifo_name, "w");
-        }
-    }
-
-#ifdef IHM
-    ihm = IHM_New (&onInputEvent);
-    if (ihm != NULL)
-    {
-        gErrorStr[0] = '\0';
-        ARSAL_Print_SetCallback (customPrintCallback); //use a custom callback to print, for not disturb ncurses IHM
-
-        if(isBebop2)
-        {
-            IHM_PrintHeader (ihm, "-- Bebop 2 Sample --");
-        }
-        else
-        {
-            IHM_PrintHeader (ihm, "-- Bebop Sample --");
-        }
-    }
-    else
-    {
-        ARSAL_PRINT (ARSAL_PRINT_ERROR, TAG, "Creation of IHM failed.");
-        failed = 1;
-    }
-#endif
-
+   
     // create a discovery device
     if (!failed)
     {
         ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "- init discovey device ... ");
         eARDISCOVERY_ERROR errorDiscovery = ARDISCOVERY_OK;
-
         device = ARDISCOVERY_Device_New (&errorDiscovery);
 
         if (errorDiscovery == ARDISCOVERY_OK)
@@ -221,15 +184,8 @@ int main (int argc, char *argv[])
             ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "    - ARDISCOVERY_Device_InitWifi ...");
             // create a Bebop drone discovery device (ARDISCOVERY_PRODUCT_ARDRONE)
 
-            if(isBebop2)
-            {
-                errorDiscovery = ARDISCOVERY_Device_InitWifi (device, ARDISCOVERY_PRODUCT_BEBOP_2, "bebop2", BEBOP_IP_ADDRESS, BEBOP_DISCOVERY_PORT);
-            }
-            else
-            {
-                errorDiscovery = ARDISCOVERY_Device_InitWifi (device, ARDISCOVERY_PRODUCT_ARDRONE, "bebop", BEBOP_IP_ADDRESS, BEBOP_DISCOVERY_PORT);
-            }
-
+            errorDiscovery = ARDISCOVERY_Device_InitWifi (device, ARDISCOVERY_PRODUCT_BEBOP_2, "bebop2", BEBOP_IP_ADDRESS, BEBOP_DISCOVERY_PORT);
+            
             if (errorDiscovery != ARDISCOVERY_OK)
             {
                 failed = 1;
@@ -252,10 +208,6 @@ int main (int argc, char *argv[])
         {
             ARSAL_PRINT (ARSAL_PRINT_ERROR, TAG, "Creation of deviceController failed.");
             failed = 1;
-        }
-        else
-        {
-            IHM_setCustomData(ihm, deviceController);
         }
     }
 
@@ -289,22 +241,8 @@ int main (int argc, char *argv[])
         }
     }
 
-    // add the frame received callback to be informed when a streaming frame has been received from the device
     if (!failed)
     {
-        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "- set Video callback ... ");
-        error = ARCONTROLLER_Device_SetVideoStreamCallbacks (deviceController, decoderConfigCallback, didReceiveFrameCallback, NULL , NULL);
-
-        if (error != ARCONTROLLER_OK)
-        {
-            failed = 1;
-            ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "- error: %s", ARCONTROLLER_Error_ToString(error));
-        }
-    }
-
-    if (!failed)
-    {
-        IHM_PrintInfo(ihm, "Connecting ...");
         ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "Connecting ...");
         error = ARCONTROLLER_Device_Start (deviceController);
 
@@ -330,11 +268,11 @@ int main (int argc, char *argv[])
         }
     }
 
-    // send the command that tells to the Bebop to begin its streaming
+    // send the command that tells to the Bebop to disable streaming
     if (!failed)
     {
         ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "- send StreamingVideoEnable ... ");
-        error = deviceController->aRDrone3->sendMediaStreamingVideoEnable (deviceController->aRDrone3, 1);
+        error = deviceController->aRDrone3->sendMediaStreamingVideoEnable (deviceController->aRDrone3, 0);  //disable
         if (error != ARCONTROLLER_OK)
         {
             ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "- error :%s", ARCONTROLLER_Error_ToString(error));
@@ -342,28 +280,103 @@ int main (int argc, char *argv[])
         }
     }
 
+    
     if (!failed)
     {
-        IHM_PrintInfo(ihm, "Running ... ('t' to takeoff ; Spacebar to land ; 'e' for emergency ; Arrow keys and ('r','f','d','g') to move ; 'q' to quit)");
+      ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "LANCEMENT DE L'ECOUTE SUR STDIN");
+        while(!quit) {
+            /* Récupération de la commande en entrée */
+            if(fgets(input_line_buffer, MAX_INPUT_LINE_SIZE, stdin) == NULL) {
+                ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Input error (fgets): %s\n", strerror(errno));
+            }
 
-#ifdef IHM
-        while (gIHMRun)
-        {
-            usleep(50);
+            res = sscanf(input_line_buffer, "%d %d", &command_code, &pourcent_vitesse);
+            if (res > 3 || res < 1) {
+                ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Input error (sscanf): %s\n", strerror(errno));
+            }
+          
+            switch(command_code)
+            {
+              case ELOIGNEMENT_MAX_CODE:
+                handle_eloignement(pourcent_vitesse,deviceController);
+                break;
+                
+              case HAUTEUR_MAX_CODE:
+                handle_hauteur(pourcent_vitesse,deviceController);
+                break;
+                
+              case VIT_DEPLACEMENT_MAX_CODE:
+                handle_vit_deplacement(pourcent_vitesse,deviceController);
+                break;
+                
+              case VIT_HAUTEUR_MAX_CODE:
+                handle_vit_hauteur(pourcent_vitesse,deviceController);
+                break;
+                
+              case VIT_ROTATION_MAX_CODE:
+                handle_vit_rotation(pourcent_vitesse,deviceController);
+                break;
+                
+              case DECOLLER_INPUT_CODE:
+                handle_decoller(deviceController);
+                break;
+
+              case ATTERRIR_INPUT_CODE:
+                handle_atterrir(deviceController);
+                break;
+
+              case AVANCER_INPUT_CODE:
+                handle_avancer(pourcent_vitesse,deviceController);
+                break;
+
+              case RECULER_INPUT_CODE:
+                handle_reculer(pourcent_vitesse,deviceController);
+                break;
+
+              case MONTER_INPUT_CODE:
+                handle_monter(pourcent_vitesse,deviceController);
+                break;
+
+              case DESCENDRE_INPUT_CODE:
+                handle_descendre(pourcent_vitesse,deviceController);
+                break;
+
+              case GAUCHE_INPUT_CODE:
+                handle_gauche(pourcent_vitesse,deviceController);
+                break;
+
+              case DROITE_INPUT_CODE:
+                handle_droite(pourcent_vitesse,deviceController);
+                break;
+
+              case ROTATION_GAUCHE_INPUT_CODE:
+                handle_rotation_gauche(pourcent_vitesse,deviceController);
+                break;
+
+              case ROTATION_DROITE_INPUT_CODE:
+                handle_rotation_droite(pourcent_vitesse,deviceController);
+                break;
+                
+              case QUIT:
+                quit = 1;
+                break;
+
+              default:
+                fprintf(stderr, "Unknown command code: %d\n", command_code);
+              	break;
+            }
+            fflush(stdout);
+
         }
-#else
-        int i = 20;
-        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "- sleep 20 ... ");
-        while (gIHMRun && i--)
-            sleep(1);
-#endif
+        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "FIN DE L'EXECUTION");
+
     }
+    
+      
 
-#ifdef IHM
-    IHM_Delete (&ihm);
-#endif
 
-    // we are here because of a disconnection or user has quit IHM, so safely delete everything
+
+    // we are here because of a disconnection, so safely delete everything
     if (deviceController != NULL)
     {
 
@@ -371,7 +384,6 @@ int main (int argc, char *argv[])
         deviceState = ARCONTROLLER_Device_GetState (deviceController, &error);
         if ((error == ARCONTROLLER_OK) && (deviceState != ARCONTROLLER_DEVICE_STATE_STOPPED))
         {
-            IHM_PrintInfo(ihm, "Disconnecting ...");
             ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "Disconnecting ...");
 
             error = ARCONTROLLER_Device_Stop (deviceController);
@@ -383,20 +395,8 @@ int main (int argc, char *argv[])
             }
         }
 
-        IHM_PrintInfo(ihm, "");
         ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "ARCONTROLLER_Device_Delete ...");
         ARCONTROLLER_Device_Delete (&deviceController);
-
-        if (DISPLAY_WITH_MPLAYER)
-        {
-            fflush (videoOut);
-            fclose (videoOut);
-
-            if (child > 0)
-            {
-                kill(child, SIGKILL);
-            }
-        }
     }
 
     ARSAL_Sem_Destroy (&(stateSem));
@@ -414,6 +414,114 @@ int main (int argc, char *argv[])
  *             private implementation:
  *
  ****************************************/
+
+void handle_decoller(void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendPilotingLanding(deviceController->aRDrone3);
+  printf("Received decoller() from stdin\n");
+}
+
+void handle_atterrir(void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendPilotingTakeOff(deviceController->aRDrone3);
+  printf("Received atterrir() from stdin\n");
+}
+
+void handle_avancer(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, pourcent_vitesse);
+  deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
+  printf("Received avancer(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_reculer(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, -pourcent_vitesse);
+  deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
+  printf("Received reculer(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_monter(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, pourcent_vitesse);
+  printf("Received monter(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_descendre(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, -pourcent_vitesse);
+  printf("Received descendre(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_gauche(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, -pourcent_vitesse);
+  deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
+  printf("Received gauche(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_droite(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, pourcent_vitesse);
+  deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
+  printf("Received droite(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_rotation_gauche(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, -pourcent_vitesse);
+  printf("Received rotation_gauche(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_rotation_droite(int pourcent_vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, pourcent_vitesse);
+  printf("Received rotation_droite(%d) from stdin\n", pourcent_vitesse);
+}
+
+void handle_eloignement(int distance,void *customData) 
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendPilotingSettingsMaxDistance(deviceController->aRDrone3, (float)distance);
+  printf("Received eloigment_max(%d) from stdin\n", distance);
+}
+
+void handle_hauteur(int distance,void *customData) 
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+   deviceController->aRDrone3->sendPilotingSettingsMaxAltitude(deviceController->aRDrone3, (float)distance);
+   printf("Received hauteur_max(%d) from stdin\n", distance);
+}
+
+void handle_vit_deplacement(int vitesse,void *customData)
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendPilotingSettingsMaxTilt(deviceController->aRDrone3, (float)vitesse);
+  printf("Received vitesse_deplacement(%d) from stdin\n", vitesse);
+}
+
+void handle_vit_hauteur(int vitesse,void *customData) 
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendSpeedSettingsMaxVerticalSpeed(deviceController->aRDrone3, (float)vitesse);
+  printf("Received vitesse_hauteur(%d) from stdin\n", vitesse);
+}
+void handle_vit_rotation(int vitesse,void *customData) 
+{
+  ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
+  deviceController->aRDrone3->sendSpeedSettingsMaxRotationSpeed(deviceController->aRDrone3, (float)vitesse);
+  printf("Received vitesse_rotation(%d) from stdin\n", vitesse);
+}
 
 // called when the state of the device controller has changed
 void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR error, void *customData)
@@ -529,168 +637,17 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
 void batteryStateChanged (uint8_t percent)
 {
     // callback of changing of battery level
-
-    if (ihm != NULL)
-    {
-        IHM_PrintBattery (ihm, percent);
-    }
 }
 
 eARCONTROLLER_ERROR decoderConfigCallback (ARCONTROLLER_Stream_Codec_t codec, void *customData)
 {
-    if (videoOut != NULL)
-    {
-        if (codec.type == ARCONTROLLER_STREAM_CODEC_TYPE_H264)
-        {
-            if (DISPLAY_WITH_MPLAYER)
-            {
-                fwrite(codec.parameters.h264parameters.spsBuffer, codec.parameters.h264parameters.spsSize, 1, videoOut);
-                fwrite(codec.parameters.h264parameters.ppsBuffer, codec.parameters.h264parameters.ppsSize, 1, videoOut);
-
-                fflush (videoOut);
-            }
-        }
-
-    }
-    else
-    {
-        ARSAL_PRINT(ARSAL_PRINT_WARNING, TAG, "videoOut is NULL.");
-    }
-
     return ARCONTROLLER_OK;
 }
 
 
 eARCONTROLLER_ERROR didReceiveFrameCallback (ARCONTROLLER_Frame_t *frame, void *customData)
 {
-    if (videoOut != NULL)
-    {
-        if (frame != NULL)
-        {
-            if (DISPLAY_WITH_MPLAYER)
-            {
-                fwrite(frame->data, frame->used, 1, videoOut);
-
-                fflush (videoOut);
-            }
-        }
-        else
-        {
-            ARSAL_PRINT(ARSAL_PRINT_WARNING, TAG, "frame is NULL.");
-        }
-    }
-    else
-    {
-        ARSAL_PRINT(ARSAL_PRINT_WARNING, TAG, "videoOut is NULL.");
-    }
-
     return ARCONTROLLER_OK;
-}
-
-
-// IHM callbacks:
-
-void onInputEvent (eIHM_INPUT_EVENT event, void *customData)
-{
-    // Manage IHM input events
-    ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
-    eARCONTROLLER_ERROR error = ARCONTROLLER_OK;
-
-    switch (event)
-    {
-    case IHM_INPUT_EVENT_EXIT:
-        IHM_PrintInfo(ihm, "IHM_INPUT_EVENT_EXIT ...");
-        gIHMRun = 0;
-        break;
-    case IHM_INPUT_EVENT_EMERGENCY:
-        if(deviceController != NULL)
-        {
-            // send a Emergency command to the drone
-            error = deviceController->aRDrone3->sendPilotingEmergency(deviceController->aRDrone3);
-        }
-        break;
-    case IHM_INPUT_EVENT_LAND:
-        if(deviceController != NULL)
-        {
-            // send a takeoff command to the drone
-            error = deviceController->aRDrone3->sendPilotingLanding(deviceController->aRDrone3);
-        }
-        break;
-    case IHM_INPUT_EVENT_TAKEOFF:
-        if(deviceController != NULL)
-        {
-            // send a landing command to the drone
-            error = deviceController->aRDrone3->sendPilotingTakeOff(deviceController->aRDrone3);
-        }
-        break;
-    case IHM_INPUT_EVENT_UP:
-        if(deviceController != NULL)
-        {
-            // set the flag and speed value of the piloting command
-            error = deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, 50);
-        }
-        break;
-    case IHM_INPUT_EVENT_DOWN:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, -50);
-        }
-        break;
-    case IHM_INPUT_EVENT_RIGHT:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, 50);
-        }
-        break;
-    case IHM_INPUT_EVENT_LEFT:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, -50);
-        }
-        break;
-    case IHM_INPUT_EVENT_FORWARD:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, 50);
-            error = deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-        }
-        break;
-    case IHM_INPUT_EVENT_BACK:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, -50);
-            error = deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-        }
-        break;
-    case IHM_INPUT_EVENT_ROLL_LEFT:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, -50);
-            error = deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-        }
-        break;
-    case IHM_INPUT_EVENT_ROLL_RIGHT:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, 50);
-            error = deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-        }
-        break;
-    case IHM_INPUT_EVENT_NONE:
-        if(deviceController != NULL)
-        {
-            error = deviceController->aRDrone3->setPilotingPCMD(deviceController->aRDrone3, 0, 0, 0, 0, 0, 0);
-        }
-        break;
-    default:
-        break;
-    }
-
-    // This should be improved, here it just displays that one error occured
-    if (error != ARCONTROLLER_OK)
-    {
-        IHM_PrintInfo(ihm, "Error sending an event");
-    }
 }
 
 int customPrintCallback (eARSAL_PRINT_LEVEL level, const char *tag, const char *format, va_list va)

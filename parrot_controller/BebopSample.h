@@ -32,8 +32,6 @@
 #ifndef _BEBOP_SAMPLE_H_
 #define _BEBOP_SAMPLE_H_
 
-#include <ihm.h>
-
 // called when the state of the device controller has changed
 void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR error, void *customData);
 
@@ -48,9 +46,23 @@ eARCONTROLLER_ERROR didReceiveFrameCallback (ARCONTROLLER_Frame_t *frame, void *
 
 eARCONTROLLER_ERROR decoderConfigCallback (ARCONTROLLER_Stream_Codec_t codec, void *customData);
 
-/* IHM callbacks: */
-void onInputEvent (eIHM_INPUT_EVENT event, void *customData);
-
 int customPrintCallback (eARSAL_PRINT_LEVEL level, const char *tag, const char *format, va_list va);
+
+void handle_decoller(void *customData);
+void handle_atterrir(void *customData);
+void handle_avancer(int pourcent_vitesse,void *customData);
+void handle_reculer(int pourcent_vitesse,void *customData);
+void handle_monter(int pourcent_vitesse,void *customData);
+void handle_descendre(int pourcent_vitesse,void *customData);
+void handle_gauche(int pourcent_vitesse,void *customData);
+void handle_droite(int pourcent_vitesse,void *customData);
+void handle_rotation_gauche(int pourcent_vitesse,void *customData);
+void handle_rotation_droite(int pourcent_vitesse,void *customData);
+void handle_eloignement(int distance,void *customData) ;
+void handle_hauteur(int distance,void *customData) ;
+void handle_vit_deplacement(int vitesse,void *customData);
+void handle_vit_hauteur(int vitesse,void *customData);
+void handle_vit_rotation(int vitesse,void *customData);
+
 
 #endif /* BEBOP_SAMPLE_H */
