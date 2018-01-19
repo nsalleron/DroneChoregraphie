@@ -2,18 +2,18 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_addr.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_buffer.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_conn.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_ctx.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_decoder.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_encoder.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_log.c.o
-[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_loop.c.o
-[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_msg.c.o
-[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_prot.c.o
-[ 11] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_timer.c.o
-[ 12] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_addr.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_buffer.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_conn.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_ctx.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_decoder.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_encoder.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_log.c.o
+[  8] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_loop.c.o
+[  9] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_msg.c.o
+[ 10] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_prot.c.o
+[ 11] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp/obj/src/pomp_timer.c.o
+[ 12] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
 [ 13] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

@@ -1,5 +1,5 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libmux/obj/src/mux_channel.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_channel.c \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libmux/obj/src/mux_channel.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_channel.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -93,7 +93,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/ioccom.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/filio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/sockio.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_priv.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_priv.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
@@ -145,10 +145,10 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libpomp/include/libpomp.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libpomp/include/libpomp.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/include/libmux.h /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_log.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_channel.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/include/libmux.h /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_log.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_channel.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h
@@ -339,7 +339,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/sockio.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_priv.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_priv.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
@@ -443,17 +443,17 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libpomp/include/libpomp.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libpomp/include/libpomp.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/include/libmux.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/include/libmux.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_log.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_log.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libmux/src/mux_channel.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libmux/src/mux_channel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
 

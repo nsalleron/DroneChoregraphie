@@ -2,16 +2,16 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_DataDownloader.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Downloader.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Manager.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_MediasDownloader.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_MediasQueue.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Uploader.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/gen/Sources/ARDATATRANSFER_Error.c.o
-[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libardiscovery.dylib
-[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarutils.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_DataDownloader.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Downloader.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Manager.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_MediasDownloader.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_MediasQueue.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/Sources/ARDATATRANSFER_Uploader.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDataTransfer/obj/gen/Sources/ARDATATRANSFER_Error.c.o
+[  8] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[  9] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libardiscovery.dylib
+[ 10] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarutils.dylib
 [ 11] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

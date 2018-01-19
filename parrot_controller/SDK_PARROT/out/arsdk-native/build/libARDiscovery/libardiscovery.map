@@ -2,22 +2,22 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Connection.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Discovery.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Device.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_MuxDiscovery.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/Wifi/ARDISCOVERY_DEVICE_Wifi.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/BLE/ARDISCOVERY_DEVICE_Ble.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/Usb/ARDISCOVERY_DEVICE_Usb.c.o
-[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/gen/Sources/ARDISCOVERY_Error.c.o
-[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_BonjourDiscovery.m.o
-[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[ 11] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetworkal.dylib
-[ 12] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarcommands.dylib
-[ 13] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
-[ 14] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Connection.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Discovery.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_Device.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_MuxDiscovery.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/Wifi/ARDISCOVERY_DEVICE_Wifi.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/BLE/ARDISCOVERY_DEVICE_Ble.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/Usb/ARDISCOVERY_DEVICE_Usb.c.o
+[  8] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/gen/Sources/ARDISCOVERY_Error.c.o
+[  9] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_BonjourDiscovery.m.o
+[ 10] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[ 11] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetworkal.dylib
+[ 12] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarcommands.dylib
+[ 13] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
+[ 14] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
 [ 15] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks//Foundation.framework/Foundation.tbd
-[ 16] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libjson-c.dylib
+[ 16] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libjson-c.dylib
 [ 17] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 [ 18] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libobjc.A.tbd
 # Sections:

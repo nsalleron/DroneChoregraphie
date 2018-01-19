@@ -2,13 +2,13 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/ARNETWORKAL_Manager.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/Wifi/ARNETWORKAL_WifiNetwork.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/Mux/ARNETWORKAL_MuxNetwork.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/gen/Sources/ARNETWORKAL_Error.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/ARNETWORKAL_Manager.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/Wifi/ARNETWORKAL_WifiNetwork.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/Sources/Mux/ARNETWORKAL_MuxNetwork.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetworkAL/obj/gen/Sources/ARNETWORKAL_Error.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
 [  8] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

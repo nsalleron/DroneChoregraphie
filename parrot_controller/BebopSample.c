@@ -97,6 +97,11 @@
 #define VIT_ROTATION_MAX_CODE 15
 #define QUIT 16
 
+#define  STATE_STARTED "STARTED"
+#define  STATE_FLYING "FLYING"
+#define  STATE_LANDED "LANDED"
+#define  STATE_STOPPED "STOPPED"
+
 #define MAX_INPUT_LINE_SIZE 1024
 #define MAX_COMMAND_NAME_SIZE 3
 
@@ -291,7 +296,7 @@ int main (int argc, char *argv[])
     
     if (!failed)
     {
-      ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "LANCEMENT DE L'ECOUTE SUR STDIN");
+        ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "LANCEMENT DE L'ECOUTE SUR STDIN");
         while(!quit) {
             /* Récupération de la commande en entrée */
             if(fgets(input_line_buffer, MAX_INPUT_LINE_SIZE, stdin) == NULL) {
@@ -535,18 +540,23 @@ void handle_vit_rotation(int vitesse,void *customData)
 void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR error, void *customData)
 {
     ARSAL_PRINT(ARSAL_PRINT_INFO, TAG, "    - stateChanged newState: %d .....", newState);
-
+    
     switch (newState)
     {
     case ARCONTROLLER_DEVICE_STATE_STOPPED:
         ARSAL_Sem_Post (&(stateSem));
         //stop
         gIHMRun = 0;
-
         break;
 
     case ARCONTROLLER_DEVICE_STATE_RUNNING:
         ARSAL_Sem_Post (&(stateSem));
+        break;
+        
+    case ARCONTROLLER_DEVICE_STATE_STARTING:
+        break;
+        
+    case ARCONTROLLER_DEVICE_STATE_STOPPING:
         break;
 
     default:
@@ -637,6 +647,36 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
     case ARCONTROLLER_DICTIONARY_KEY_COMMON_COMMONSTATE_SENSORSSTATESLISTCHANGED:
         cmdSensorStateListChangedRcv(deviceController, elementDictionary);
         break;
+        
+    case ARCONTROLLER_DICTIONARY_KEY_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED:
+        if( elementDictionary != NULL){
+            ARCONTROLLER_DICTIONARY_ARG_t *arg = NULL;
+            ARCONTROLLER_DICTIONARY_ELEMENT_t *element = NULL;
+            // get the command received in the device controller
+            HASH_FIND_STR (elementDictionary, ARCONTROLLER_DICTIONARY_SINGLE_KEY, element);
+            if (element != NULL)
+            {
+              // get the value
+              HASH_FIND_STR (element->arguments, ARCONTROLLER_DICTIONARY_KEY_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE, arg);
+
+              if (arg != NULL)
+              {
+                  eARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE flyingState = arg->value.I32;
+
+                  if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_HOVERING){
+                      printf("FLYING\n");
+                  }else if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_FLYING){
+                      printf("FLYING\n");
+                  }else{
+                      
+                  }
+                  
+                  fflush(stdout);
+                  
+              }
+          }
+        }
+        break;
     default:
         break;
     }
@@ -645,6 +685,7 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
 void batteryStateChanged (uint8_t percent)
 {
     // callback of changing of battery level
+    printf("--> Battery: %d",percent);
 }
 
 eARCONTROLLER_ERROR decoderConfigCallback (ARCONTROLLER_Stream_Codec_t codec, void *customData)

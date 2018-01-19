@@ -2,10 +2,10 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp_base64.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp_log.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp_base64.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libsdp/obj/src/sdp_log.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
 [  5] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

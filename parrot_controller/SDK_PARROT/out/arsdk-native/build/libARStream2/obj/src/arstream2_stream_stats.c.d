@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_stats.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats.c \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_stats.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats.c \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -69,7 +69,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
@@ -79,7 +79,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/time.h \
@@ -102,10 +102,10 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats_internal.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_rtp.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats_internal.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_rtp.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
@@ -133,11 +133,11 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sa_family_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_rtcp.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_h264.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Mutex.h
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_rtcp.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_h264.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Mutex.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
@@ -275,7 +275,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
 
@@ -295,7 +295,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h:
 
@@ -341,13 +341,13 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats_internal.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_stream_stats_internal.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_rtp.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_rtp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h:
 
@@ -403,8 +403,8 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_rtcp.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_rtcp.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARStream2/src/arstream2_h264.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARStream2/src/arstream2_h264.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Mutex.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Mutex.h:

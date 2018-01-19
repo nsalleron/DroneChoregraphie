@@ -2,13 +2,13 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Buffers.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_NetworkHeaders.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Reader.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Sender.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream/obj/gen/Sources/ARSTREAM_Error.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetwork.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Buffers.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_NetworkHeaders.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Reader.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream/obj/Sources/ARSTREAM_Sender.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream/obj/gen/Sources/ARSTREAM_Error.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetwork.dylib
 [  8] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

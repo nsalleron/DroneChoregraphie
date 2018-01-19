@@ -1,5 +1,5 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/fdutils.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/src/fdutils.c \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/fdutils.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/src/fdutils.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -73,7 +73,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/fdutils.h
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/fdutils.h
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
@@ -221,4 +221,4 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/fdutils.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/fdutils.h:

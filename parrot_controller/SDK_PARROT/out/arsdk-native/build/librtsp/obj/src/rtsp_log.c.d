@@ -1,5 +1,5 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp_log.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/librtsp/src/rtsp_log.c /Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp_log.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/librtsp/src/rtsp_log.c /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -70,7 +70,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 

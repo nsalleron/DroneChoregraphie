@@ -2,26 +2,26 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/gen/Sources/arstream2_error.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter_error.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_parser.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_sei.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_writer.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264.c.o
-[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_receiver.c.o
-[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_sender.c.o
-[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp.c.o
-[ 11] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_h264.c.o
-[ 12] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtcp.c.o
-[ 13] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_recorder.c.o
-[ 14] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_stats.c.o
-[ 15] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_sender.c.o
-[ 16] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_receiver.c.o
-[ 17] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[ 18] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
-[ 19] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
-[ 20] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarmedia.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/gen/Sources/arstream2_error.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter_error.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_parser.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_sei.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_writer.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264.c.o
+[  8] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_receiver.c.o
+[  9] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_sender.c.o
+[ 10] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp.c.o
+[ 11] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_h264.c.o
+[ 12] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtcp.c.o
+[ 13] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_recorder.c.o
+[ 14] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_stats.c.o
+[ 15] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_sender.c.o
+[ 16] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_receiver.c.o
+[ 17] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[ 18] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
+[ 19] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
+[ 20] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarmedia.dylib
 [ 21] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

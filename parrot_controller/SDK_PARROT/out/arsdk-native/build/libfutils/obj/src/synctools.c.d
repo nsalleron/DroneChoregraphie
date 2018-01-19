@@ -1,5 +1,5 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/synctools.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/src/synctools.c \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/synctools.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/src/synctools.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
@@ -57,8 +57,8 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/synctools.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/synctools.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
@@ -215,9 +215,9 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/synctools.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/synctools.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include/ulog.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 

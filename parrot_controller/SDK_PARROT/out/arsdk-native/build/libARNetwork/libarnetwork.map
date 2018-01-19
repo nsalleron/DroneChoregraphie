@@ -2,15 +2,15 @@
 # Arch: x86_64
 # Object files:
 [  0] linker synthesized
-[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_IOBuffer.c.o
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_IOBufferParam.c.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Manager.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Receiver.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_RingBuffer.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Sender.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/gen/Sources/ARNETWORK_Error.c.o
-[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
-[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetworkal.dylib
+[  1] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_IOBuffer.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_IOBufferParam.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Manager.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Receiver.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_RingBuffer.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/Sources/ARNETWORK_Sender.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/obj/gen/Sources/ARNETWORK_Error.c.o
+[  8] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[  9] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarnetworkal.dylib
 [ 10] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

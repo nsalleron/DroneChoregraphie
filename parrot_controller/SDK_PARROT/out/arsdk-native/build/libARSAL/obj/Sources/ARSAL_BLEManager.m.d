@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_BLEManager.m.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Sources/ARSAL_BLEManager.m \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_BLEManager.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_BLEManager.m.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Sources/ARSAL_BLEManager.m \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_BLEManager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
@@ -792,18 +792,18 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBDescriptor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBUUID.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBATTRequest.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Print.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Time.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Print.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval64.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Mutex.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Sem.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Error.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Singleton.h
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Mutex.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Sem.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Error.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Singleton.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_BLEManager.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_BLEManager.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:
 
@@ -2387,22 +2387,22 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBATTRequest.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Print.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Print.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Time.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval64.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Mutex.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Mutex.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Sem.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Sem.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Error.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Error.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Singleton.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Singleton.h:

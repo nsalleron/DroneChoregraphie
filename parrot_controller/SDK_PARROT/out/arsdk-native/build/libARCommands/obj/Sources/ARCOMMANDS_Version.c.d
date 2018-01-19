@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARCommands/obj/Sources/ARCOMMANDS_Version.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARCommands/Sources/ARCOMMANDS_Version.c \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARCommands/Sources/../Includes/libARCommands/ARCOMMANDS_Version.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARCommands/obj/Sources/ARCOMMANDS_Version.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARCommands/Sources/ARCOMMANDS_Version.c \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARCommands/Sources/../Includes/libARCommands/ARCOMMANDS_Version.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -21,7 +21,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARCommands/Sources/../Includes/libARCommands/ARCOMMANDS_Version.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARCommands/Sources/../Includes/libARCommands/ARCOMMANDS_Version.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 

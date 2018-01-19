@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARController/obj/gen/Sources/ARCONTROLLER_DICTIONARY_Key.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARController/gen/Sources/ARCONTROLLER_DICTIONARY_Key.c \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARController/obj/gen/Sources/ARCONTROLLER_DICTIONARY_Key.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARController/gen/Sources/ARCONTROLLER_DICTIONARY_Key.c \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -20,9 +20,9 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARController/gen/Includes/libARController/ARCONTROLLER_DICTIONARY_Key.h
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARController/gen/Includes/libARController/ARCONTROLLER_DICTIONARY_Key.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
@@ -62,4 +62,4 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARController/gen/Includes/libARController/ARCONTROLLER_DICTIONARY_Key.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARController/gen/Includes/libARController/ARCONTROLLER_DICTIONARY_Key.h:

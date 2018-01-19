@@ -51,6 +51,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	public static final int VIT_DEPLACEMENT_MAX_CODE = 13;
 	public static final int VIT_HAUTEUR_MAX_CODE = 14;
 	public static final int VIT_ROTATION_MAX_CODE = 15;
+	public static final int QUIT = 16;
 	
 	public static final String STATE_STARTED = "STARTED";
 	public static final String STATE_FLYING = "FLYING";
@@ -153,15 +154,15 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	public void execPrologue(Prologue p) {
 		try {
 			// enregistrement des pourcentages de vitesse pour les utiliser avec le paramËtre de vitesse des mouvements
-			this.ratioVitesseDeplacement = p.getVitesseDeplacement().getValue() / 100;
-			this.ratioVitesseHauteur = p.getVitesseVerticale().getValue() / 100;
-			this.ratioVitesseRotation = p.getVitesseRotation().getValue() / 100;
+			this.ratioVitesseDeplacement = (int)((p.getVitesseVerticale().getValue() / 100) * 35); //35 Max
+			this.ratioVitesseHauteur = (int)((p.getVitesseVerticale().getValue() / 100) * 6);	//6 mètres Max
+			this.ratioVitesseRotation = (int)((p.getVitesseRotation().getValue() / 100) * 200);	//200 Max
 			
 			writeToSubProcessStdin(ELOIGNEMENT_MAX_CODE, p.getEloignementMax(), true);
 			writeToSubProcessStdin(HAUTEUR_MAX_CODE, p.getHauteurMax(), true);
-			writeToSubProcessStdin(VIT_DEPLACEMENT_MAX_CODE, p.getVitesseDeplacement().getValue(), true);
-			writeToSubProcessStdin(VIT_HAUTEUR_MAX_CODE, p.getVitesseVerticale().getValue(), true);
-			writeToSubProcessStdin(VIT_ROTATION_MAX_CODE, p.getVitesseRotation().getValue(), true);
+			writeToSubProcessStdin(VIT_DEPLACEMENT_MAX_CODE, this.ratioVitesseDeplacement, true);
+			writeToSubProcessStdin(VIT_HAUTEUR_MAX_CODE, this.ratioVitesseHauteur, true);
+			writeToSubProcessStdin(VIT_ROTATION_MAX_CODE, this.ratioVitesseRotation, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 			process.destroy();
@@ -205,7 +206,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execAvancer(Avancer a) {
 		try {
-			writeToSubProcessStdin(AVANCER_INPUT_CODE, adaptVitesse(a.getVitesse(), ratioVitesseDeplacement), true);
+			writeToSubProcessStdin(AVANCER_INPUT_CODE, a.getVitesse(), true);
 			Thread.sleep(a.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(AVANCER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -218,7 +219,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execReculer(Reculer r) {
 		try {
-			writeToSubProcessStdin(RECULER_INPUT_CODE, adaptVitesse(r.getVitesse(), ratioVitesseDeplacement), true);
+			writeToSubProcessStdin(RECULER_INPUT_CODE, r.getVitesse() , true);
 			Thread.sleep(r.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(RECULER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -231,7 +232,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execMonter(Monter m) {
 		try {
-			writeToSubProcessStdin(MONTER_INPUT_CODE, adaptVitesse(m.getVitesse(), ratioVitesseHauteur), true);
+			writeToSubProcessStdin(MONTER_INPUT_CODE, m.getVitesse(), true);
 			Thread.sleep(m.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(MONTER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -244,7 +245,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execDescendre(Descendre d) {
 		try {
-			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, adaptVitesse(d.getVitesse(), ratioVitesseHauteur), true);
+			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, d.getVitesse(), true);
 			Thread.sleep(d.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -257,7 +258,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execGauche(Gauche g) {
 		try {
-			writeToSubProcessStdin(GAUCHE_INPUT_CODE, adaptVitesse(g.getVitesse(), ratioVitesseDeplacement), true);
+			writeToSubProcessStdin(GAUCHE_INPUT_CODE, g.getVitesse(), true);
 			Thread.sleep(g.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(GAUCHE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -270,7 +271,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execDroite(Droite d) {
 		try {
-			writeToSubProcessStdin(DROITE_INPUT_CODE, adaptVitesse(d.getVitesse(), ratioVitesseDeplacement), true);
+			writeToSubProcessStdin(DROITE_INPUT_CODE, d.getVitesse(), true);
 			Thread.sleep(d.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(DROITE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -283,7 +284,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execRotationGauche(RotationGauche rg) {
 		try {
-			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, adaptVitesse(rg.getVitesse(), ratioVitesseRotation), true);
+			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, rg.getVitesse(), true);
 			Thread.sleep(rg.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -296,7 +297,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execRotationDroite(RotationDroite rd) {
 		try {
-			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, adaptVitesse(rd.getVitesse(), ratioVitesseRotation), true);
+			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, rd.getVitesse(), true);
 			Thread.sleep(rd.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -314,6 +315,16 @@ public class ParrotDroneRuntime implements DroneRuntime {
 			e.printStackTrace();
 			process.destroy();
 			System.exit(-1);
+		}
+	}
+	
+	@Override
+	public void execQuit() {
+		try {
+			writeToSubProcessStdin(QUIT, 0, true);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -352,13 +363,13 @@ public class ParrotDroneRuntime implements DroneRuntime {
 				if(commande instanceof CommandeAvecDureeVitesse) {
 					CommandeAvecDureeVitesse cmdDureeVitesse = CommandeAvecDureeVitesse.class.cast(commande);
 					if(isMouvementHorizontal(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), adaptVitesse(cmdDureeVitesse.getVitesse(), ratioVitesseDeplacement), false);
+						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
 					}
 					else if (isMouvementVertical(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), adaptVitesse(cmdDureeVitesse.getVitesse(), ratioVitesseHauteur), false);
+						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
 					}
 					else if (isRotation(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), adaptVitesse(cmdDureeVitesse.getVitesse(), ratioVitesseRotation), false);
+						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
 					}
 				}
 			}
@@ -379,9 +390,6 @@ public class ParrotDroneRuntime implements DroneRuntime {
 		}
 	}
 	
-	private static int adaptVitesse(Pourcent vitesse, double ratio) {
-		return (int) Math.ceil(vitesse.getValue() * ratio);
-	}
 	
 	private void writeToSubProcessStdin(int code, int value, boolean flush) throws IOException {
 		StringBuilder sb = new StringBuilder();

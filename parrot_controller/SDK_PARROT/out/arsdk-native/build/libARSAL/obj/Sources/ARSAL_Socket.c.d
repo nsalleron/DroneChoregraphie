@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_Socket.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Sources/ARSAL_Socket.c \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_Socket.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Sources/ARSAL_Socket.c \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -84,7 +84,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Socket.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Socket.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h \
@@ -122,7 +122,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/uio.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
@@ -290,7 +290,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Socket.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_Socket.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h:
 

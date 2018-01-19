@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARCommands/obj/gen/Sources/ARCOMMANDS_ReadWrite.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.c \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARCommands/obj/gen/Sources/ARCOMMANDS_ReadWrite.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.c \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -20,7 +20,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
@@ -77,13 +77,13 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Endianness.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Endianness.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/architecture/byte_order.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/i386/OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_os_inline.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
@@ -123,7 +123,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARCommands/gen/Sources/ARCOMMANDS_ReadWrite.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h:
 
@@ -237,7 +237,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Endianness.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Endianness.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/architecture/byte_order.h:
 

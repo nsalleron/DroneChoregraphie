@@ -1,13 +1,13 @@
-TARGET_GLOBAL_C_INCLUDES := /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/x86_64-apple-darwin /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include
+TARGET_GLOBAL_C_INCLUDES := /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/x86_64-apple-darwin /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include
 TARGET_GLOBAL_ASFLAGS := 
 TARGET_GLOBAL_OBJCFLAGS := -fobjc-arc
-TARGET_GLOBAL_VALAFLAGS := --vapidir=/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging-host/usr/share/vala-0.20/vapi --vapidir=/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/share/vala/vapi --target-glib=2.36
+TARGET_GLOBAL_VALAFLAGS := --vapidir=/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging-host/usr/share/vala-0.20/vapi --vapidir=/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/share/vala/vapi --target-glib=2.36
 TARGET_GLOBAL_PCHFLAGS := -x c++-header
 TARGET_GLOBAL_LDLIBS := 
 PRIVATE_GLOBAL_CFLAGS := -std=gnu99 -pipe -O2 -g -ffunction-sections -DALCHEMY_BUILD -m64 -fPIC -msse -msse2 -mssse3 -arch x86_64 -mmacosx-version-min=10.10 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Qunused-arguments
 PRIVATE_GLOBAL_CXXFLAGS := 
-PRIVATE_GLOBAL_LDFLAGS := -O2 -m64 -lc++ -arch x86_64 -mmacosx-version-min=10.10 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -L/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/lib -L/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib
-PRIVATE_C_INCLUDES := /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libpomp /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libpomp /Users/nicolassalleron/Desktop/SDK_PARROT/packages/ulog/libulog/include /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libpomp/include
+PRIVATE_GLOBAL_LDFLAGS := -O2 -m64 -lc++ -arch x86_64 -mmacosx-version-min=10.10 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -L/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/lib -L/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/lib
+PRIVATE_C_INCLUDES := /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libpomp /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libpomp /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/ulog/libulog/include /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libpomp/include
 PRIVATE_ASFLAGS := 
 PRIVATE_CFLAGS := -fvisibility=hidden -DPOMP_API_EXPORTS -DBUILD_LIBULOG
 PRIVATE_CXXFLAGS := 

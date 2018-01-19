@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_CentralManager.m.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Sources/ARSAL_CentralManager.m \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARSAL/obj/Sources/ARSAL_CentralManager.m.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Sources/ARSAL_CentralManager.m \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CoreBluetooth.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBCentralManager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBDefines.h \
@@ -793,7 +793,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBUUID.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBATTRequest.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Includes/libARSAL/ARSAL_CentralManager.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CoreBluetooth.h:
 

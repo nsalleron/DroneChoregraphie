@@ -3,12 +3,12 @@
 # Object files:
 [  0] linker synthesized
 [  1] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libc++.tbd
-[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog.cpp.o
-[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write.c.o
-[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_read.c.o
-[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_android.c.o
-[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_bin.c.o
-[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_raw.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog.cpp.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_read.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_android.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_bin.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libulog/obj/ulog_write_raw.c.o
 [  8] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
 # Sections:
 # Address	Size    	Segment	Section

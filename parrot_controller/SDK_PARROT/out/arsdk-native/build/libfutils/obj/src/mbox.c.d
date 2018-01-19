@@ -1,5 +1,5 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/mbox.c.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/src/mbox.c \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/mbox.c.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/src/mbox.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -107,8 +107,8 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/fdutils.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/mbox.h
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/fdutils.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/mbox.h
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
@@ -324,6 +324,6 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/fdutils.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/fdutils.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libfutils/include/futils/mbox.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libfutils/include/futils/mbox.h:

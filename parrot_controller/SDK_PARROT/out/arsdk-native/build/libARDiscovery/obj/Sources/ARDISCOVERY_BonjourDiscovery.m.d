@@ -1,6 +1,6 @@
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_BonjourDiscovery.m.o: \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Sources/ARDISCOVERY_BonjourDiscovery.m \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARDiscovery/obj/Sources/ARDISCOVERY_BonjourDiscovery.m.o: \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Sources/ARDISCOVERY_BonjourDiscovery.m \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -89,7 +89,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
@@ -102,7 +102,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
@@ -118,9 +118,9 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h \
   /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_BonjourDiscovery.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_BonjourDiscovery.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
@@ -807,36 +807,36 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBDescriptor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBUUID.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBATTRequest.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_CentralManager.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Device.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/bits.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/debug.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/linkhash.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_inttypes.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_config.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/arraylist.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_util.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_tokener.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object_iterator.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_c_version.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Manager.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Error.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Frame.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Socket.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_IOBufferParam.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_Error.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Error.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Connection.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Discovery.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_NetworkConfiguration.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Generator.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Types.h \
-  /Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_MuxDiscovery.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_CentralManager.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Device.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/bits.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/debug.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/linkhash.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_inttypes.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_config.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/arraylist.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_util.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_tokener.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object_iterator.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_c_version.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Manager.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Error.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Frame.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Socket.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_IOBufferParam.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_Error.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Error.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Connection.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Discovery.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_NetworkConfiguration.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Generator.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Types.h \
+  /Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_MuxDiscovery.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netdb.h
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h:
 
@@ -1014,7 +1014,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Print.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
 
@@ -1040,7 +1040,7 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Time.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/inttypes.h:
 
@@ -1072,11 +1072,11 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARSAL/Config/darwin/config.h:
 
 /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include/stdarg.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_BonjourDiscovery.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_BonjourDiscovery.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:
 
@@ -2450,58 +2450,58 @@
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBATTRequest.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_CentralManager.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_CentralManager.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Device.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Device.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/bits.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/bits.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/debug.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/debug.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/linkhash.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/linkhash.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_inttypes.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_inttypes.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_config.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_config.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/arraylist.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/arraylist.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_util.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_util.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_tokener.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_tokener.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object_iterator.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_object_iterator.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_c_version.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/json-c/json_c_version.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Manager.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Manager.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Error.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Error.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Frame.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetworkAL/ARNETWORKAL_Frame.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Socket.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARSAL/ARSAL_Socket.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_IOBufferParam.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_IOBufferParam.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_Error.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARNetwork/ARNETWORK_Error.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Error.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Error.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Connection.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Connection.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Discovery.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_Discovery.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_NetworkConfiguration.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_NetworkConfiguration.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Generator.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Generator.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Types.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/out/arsdk-native/staging/usr/include/libARCommands/ARCOMMANDS_Types.h:
 
-/Users/nicolassalleron/Desktop/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_MuxDiscovery.h:
+/Users/nicolassalleron/Desktop/IDMProject/parrot_controller/SDK_PARROT/packages/libARDiscovery/Includes/libARDiscovery/ARDISCOVERY_MuxDiscovery.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netdb.h:
