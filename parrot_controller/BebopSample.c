@@ -687,7 +687,8 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
 void batteryStateChanged (uint8_t percent)
 {
     // callback of changing of battery level
-    printf("--> Battery: %d",percent);
+    printf("--> Battery: %d\n",percent);
+    fflush(stdout);
 }
 
 eARCONTROLLER_ERROR decoderConfigCallback (ARCONTROLLER_Stream_Codec_t codec, void *customData)

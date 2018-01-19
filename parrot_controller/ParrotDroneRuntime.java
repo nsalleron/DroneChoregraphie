@@ -34,7 +34,7 @@ import fr.roboticiens.paralleles.Parallele;
 import fr.roboticiens.prologue.Prologue;
 import fr.roboticiens.types.Pourcent;
 
-public class ParrotDroneRuntime implements DroneRuntime {
+public class DroneRuntimePrint implements DroneRuntime {
 
 	public static final int DECOLLER_INPUT_CODE = 1;
 	public static final int ATTERRIR_INPUT_CODE = 2;
@@ -85,7 +85,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	private final Condition hasStarted = lockState.newCondition();
 	private final Condition hasStopped = lockState.newCondition();
 	
-	public ParrotDroneRuntime(final String parrotExecutablePath) {
+	public  DroneRuntimePrint(final String parrotExecutablePath) {
 		 try {
 			 this.processBuilder = new ProcessBuilder(parrotExecutablePath);
 			 this.processBuilder.redirectError(Redirect.INHERIT);
@@ -104,12 +104,12 @@ public class ParrotDroneRuntime implements DroneRuntime {
 					String line = null;
 					try {
 						while((line = brInput.readLine()) != null) {
-							
+							System.out.println("INPUT : " +line);
 							if(line.equals(STATE_STARTED)) {
 								droneState = DroneState.STARTED;
 								lockState.lock();
 								try {
-									hasStarted.notifyAll();
+									hasStarted.signalAll();
 								} finally {
 									lockState.unlock();
 								}
@@ -117,7 +117,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 								droneState = DroneState.FLYING;
 								lockState.lock();
 								try {
-									hasTakenOff.notifyAll();
+									hasTakenOff.signalAll();
 								} finally {
 									lockState.unlock();
 								}
@@ -125,7 +125,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 								droneState = DroneState.LANDED;
 								lockState.lock();
 								try {
-									hasLanded.notifyAll();
+									hasLanded.signalAll();
 								} finally {
 									lockState.unlock();
 								}
@@ -133,7 +133,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 								droneState = DroneState.STOPPED;
 								lockState.lock();
 								try {
-									hasStopped.notifyAll();
+									hasStopped.signalAll();
 								} finally {
 									lockState.unlock();
 								}
@@ -160,9 +160,10 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	public void execPrologue(Prologue p) {
 		try {
 			// enregistrement des pourcentages de vitesse pour les utiliser avec le paramètre de vitesse des mouvements
-			int vitesseDeplacementMax = (int) Math.ceil((p.getVitesseDeplacement().getValue() / 100) * ANGLE_ROLL_PICH_MAX); //35 Max
-			int vitesseVerticaleMax = (int) Math.ceil((p.getVitesseVerticale().getValue() / 100) * VITESSE_VERTICAL_MAX);	//6 metres Max
-			int vitesseRotationMax = (int) Math.ceil((p.getVitesseRotation().getValue() / 100) * ANGLE_ROTATION_MAX);	//200 Max
+
+			int vitesseDeplacementMax = (int) Math.ceil((p.getVitesseDeplacement().getValue() / 100.0) * ANGLE_ROLL_PICH_MAX); //35 Max
+			int vitesseVerticaleMax = (int) Math.ceil((p.getVitesseVerticale().getValue() / 100.0) * VITESSE_VERTICAL_MAX);	//6 metres Max
+			int vitesseRotationMax = (int) Math.ceil((p.getVitesseRotation().getValue() / 100.0) * ANGLE_ROTATION_MAX);	//200 Max
 			
 			writeToSubProcessStdin(ELOIGNEMENT_MAX_CODE, p.getEloignementMax(), true);
 			writeToSubProcessStdin(HAUTEUR_MAX_CODE, p.getHauteurMax(), true);
@@ -347,6 +348,9 @@ public class ParrotDroneRuntime implements DroneRuntime {
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(-1);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			System.exit(-1);;
 		} finally {
 			lockState.unlock();
 		}
@@ -442,5 +446,4 @@ public class ParrotDroneRuntime implements DroneRuntime {
 			return 0;
 		}
 	}
-
 }
