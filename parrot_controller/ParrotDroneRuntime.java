@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -58,6 +59,10 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	public static final String STATE_LANDED = "LANDED";
 	public static final String STATE_STOPPED = "STOPPED";
 	
+	private static final int ANGLE_ROLL_PICH_MAX = 35; // degre
+	private static final int VITESSE_VERTICAL_MAX = 6; // m/s
+	private static final int ANGLE_ROTATION_MAX = 200; // degre
+	
 	public enum DroneState {
 		STARTED, FLYING, LANDED, STOPPED
 	}
@@ -73,15 +78,12 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	
 	private Thread printerThread;
 	
-	private double ratioVitesseDeplacement = 1.0;
-	private double ratioVitesseHauteur = 1.0;
-	private double ratioVitesseRotation = 1.0;
-	
 	private DroneState droneState = DroneState.STOPPED;
 	private final Lock lockState = new ReentrantLock();
 	private final Condition hasTakenOff = lockState.newCondition();
 	private final Condition hasLanded = lockState.newCondition();
 	private final Condition hasStarted = lockState.newCondition();
+	private final Condition hasStopped = lockState.newCondition();
 	
 	public ParrotDroneRuntime(final String parrotExecutablePath) {
 		 try {
@@ -129,15 +131,19 @@ public class ParrotDroneRuntime implements DroneRuntime {
 								}
 							} else if(line.equals(STATE_STOPPED)) {
 								droneState = DroneState.STOPPED;
+								lockState.lock();
+								try {
+									hasStopped.notifyAll();
+								} finally {
+									lockState.unlock();
+								}
 							} else {
 								System.out.println(line);
 							}
 						} // fin while(readLine)
 						
 					} catch (IOException e) {
-						e.printStackTrace();
-						process.destroy();
-						System.exit(-1);
+						return;
 					}
 				}
 			 });
@@ -153,16 +159,16 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execPrologue(Prologue p) {
 		try {
-			// enregistrement des pourcentages de vitesse pour les utiliser avec le paramËtre de vitesse des mouvements
-			this.ratioVitesseDeplacement = (int)((p.getVitesseVerticale().getValue() / 100) * 35); //35 Max
-			this.ratioVitesseHauteur = (int)((p.getVitesseVerticale().getValue() / 100) * 6);	//6 mètres Max
-			this.ratioVitesseRotation = (int)((p.getVitesseRotation().getValue() / 100) * 200);	//200 Max
+			// enregistrement des pourcentages de vitesse pour les utiliser avec le param√®tre de vitesse des mouvements
+			int vitesseDeplacementMax = (int) Math.ceil((p.getVitesseDeplacement().getValue() / 100) * ANGLE_ROLL_PICH_MAX); //35 Max
+			int vitesseVerticaleMax = (int) Math.ceil((p.getVitesseVerticale().getValue() / 100) * VITESSE_VERTICAL_MAX);	//6 metres Max
+			int vitesseRotationMax = (int) Math.ceil((p.getVitesseRotation().getValue() / 100) * ANGLE_ROTATION_MAX);	//200 Max
 			
 			writeToSubProcessStdin(ELOIGNEMENT_MAX_CODE, p.getEloignementMax(), true);
 			writeToSubProcessStdin(HAUTEUR_MAX_CODE, p.getHauteurMax(), true);
-			writeToSubProcessStdin(VIT_DEPLACEMENT_MAX_CODE, this.ratioVitesseDeplacement, true);
-			writeToSubProcessStdin(VIT_HAUTEUR_MAX_CODE, this.ratioVitesseHauteur, true);
-			writeToSubProcessStdin(VIT_ROTATION_MAX_CODE, this.ratioVitesseRotation, true);
+			writeToSubProcessStdin(VIT_DEPLACEMENT_MAX_CODE, vitesseDeplacementMax, true);
+			writeToSubProcessStdin(VIT_HAUTEUR_MAX_CODE, vitesseVerticaleMax, true);
+			writeToSubProcessStdin(VIT_ROTATION_MAX_CODE, vitesseRotationMax, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 			process.destroy();
@@ -173,6 +179,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execDecoller(Decoller d) {
 		try {
+			lockState.lock();
 			while(droneState == DroneState.STOPPED) {
 				hasStarted.await();
 			}
@@ -185,12 +192,15 @@ public class ParrotDroneRuntime implements DroneRuntime {
 			e.printStackTrace();
 			process.destroy();
 			System.exit(-1);
+		} finally {
+			lockState.unlock();
 		}
 	}
 
 	@Override
 	public void execAtterrir(Atterrir a) {
 		try {
+			lockState.lock();
 			writeToSubProcessStdin(ATTERRIR_INPUT_CODE, 0, true);
 			// attendre que le drone reponde qu'il a bien atterri
 			while(droneState != DroneState.LANDED) {
@@ -200,13 +210,15 @@ public class ParrotDroneRuntime implements DroneRuntime {
 			e.printStackTrace();
 			process.destroy();
 			System.exit(-1);
+		} finally {
+			lockState.unlock();
 		}
 	}
 
 	@Override
 	public void execAvancer(Avancer a) {
 		try {
-			writeToSubProcessStdin(AVANCER_INPUT_CODE, a.getVitesse(), true);
+			writeToSubProcessStdin(AVANCER_INPUT_CODE, a.getVitesse().getValue(), true);
 			Thread.sleep(a.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(AVANCER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -219,7 +231,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execReculer(Reculer r) {
 		try {
-			writeToSubProcessStdin(RECULER_INPUT_CODE, r.getVitesse() , true);
+			writeToSubProcessStdin(RECULER_INPUT_CODE, r.getVitesse().getValue() , true);
 			Thread.sleep(r.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(RECULER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -232,7 +244,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execMonter(Monter m) {
 		try {
-			writeToSubProcessStdin(MONTER_INPUT_CODE, m.getVitesse(), true);
+			writeToSubProcessStdin(MONTER_INPUT_CODE, m.getVitesse().getValue(), true);
 			Thread.sleep(m.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(MONTER_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -245,7 +257,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execDescendre(Descendre d) {
 		try {
-			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, d.getVitesse(), true);
+			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, d.getVitesse().getValue(), true);
 			Thread.sleep(d.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(DESCENDRE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -258,7 +270,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execGauche(Gauche g) {
 		try {
-			writeToSubProcessStdin(GAUCHE_INPUT_CODE, g.getVitesse(), true);
+			writeToSubProcessStdin(GAUCHE_INPUT_CODE, g.getVitesse().getValue(), true);
 			Thread.sleep(g.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(GAUCHE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -271,7 +283,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execDroite(Droite d) {
 		try {
-			writeToSubProcessStdin(DROITE_INPUT_CODE, d.getVitesse(), true);
+			writeToSubProcessStdin(DROITE_INPUT_CODE, d.getVitesse().getValue(), true);
 			Thread.sleep(d.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(DROITE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -284,7 +296,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execRotationGauche(RotationGauche rg) {
 		try {
-			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, rg.getVitesse(), true);
+			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, rg.getVitesse().getValue(), true);
 			Thread.sleep(rg.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(ROTATION_GAUCHE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -297,7 +309,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execRotationDroite(RotationDroite rd) {
 		try {
-			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, rd.getVitesse(), true);
+			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, rd.getVitesse().getValue(), true);
 			Thread.sleep(rd.getDuree().getValue() * 1000);
 			writeToSubProcessStdin(ROTATION_DROITE_INPUT_CODE, 0, true);
 		} catch (Exception e) {
@@ -321,10 +333,22 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	@Override
 	public void execQuit() {
 		try {
+			lockState.lock();
 			writeToSubProcessStdin(QUIT, 0, true);
+			while(droneState != DroneState.STOPPED) {
+				hasStopped.await();
+			}
+			boolean terminated = process.waitFor(10, TimeUnit.SECONDS);
+			printerThread.interrupt();
+			if(!terminated) {
+				process.destroy();
+			}
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.exit(-1);
+		} finally {
+			lockState.unlock();
 		}
 	}
 
@@ -362,15 +386,7 @@ public class ParrotDroneRuntime implements DroneRuntime {
 			for (CommandeParallelisable commande : commandes) {
 				if(commande instanceof CommandeAvecDureeVitesse) {
 					CommandeAvecDureeVitesse cmdDureeVitesse = CommandeAvecDureeVitesse.class.cast(commande);
-					if(isMouvementHorizontal(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
-					}
-					else if (isMouvementVertical(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
-					}
-					else if (isRotation(commande)) {
-						writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse(), false);
-					}
+					writeToSubProcessStdin(objToCommandeCode(commande), cmdDureeVitesse.getVitesse().getValue(), false);
 				}
 			}
 			bwOutput.flush();
@@ -425,19 +441,6 @@ public class ParrotDroneRuntime implements DroneRuntime {
 		} else {
 			return 0;
 		}
-	}
-	
-	private static boolean isMouvementHorizontal(CommandeParallelisable commande) {
-		return commande instanceof Avancer || commande instanceof Reculer
-				|| commande instanceof Gauche || commande instanceof Droite;
-	}
-	
-	private static boolean isMouvementVertical(CommandeParallelisable commande) {
-		return commande instanceof Monter || commande instanceof Descendre;
-	}
-	
-	private static boolean isRotation(CommandeParallelisable commande) {
-		return commande instanceof RotationGauche || commande instanceof RotationDroite;
 	}
 
 }

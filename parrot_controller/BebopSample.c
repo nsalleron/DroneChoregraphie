@@ -547,10 +547,14 @@ void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR erro
         ARSAL_Sem_Post (&(stateSem));
         //stop
         gIHMRun = 0;
+        fprintf(stdout, "%s\n", STATE_STOPPED);
+        fflush(stdout);
         break;
 
     case ARCONTROLLER_DEVICE_STATE_RUNNING:
         ARSAL_Sem_Post (&(stateSem));
+        fprintf(stdout, "%s\n", STATE_STARTED);
+        fflush(stdout);
         break;
         
     case ARCONTROLLER_DEVICE_STATE_STARTING:
@@ -649,7 +653,7 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
         break;
         
     case ARCONTROLLER_DICTIONARY_KEY_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED:
-        if( elementDictionary != NULL){
+        if( elementDictionary != NULL) {
             ARCONTROLLER_DICTIONARY_ARG_t *arg = NULL;
             ARCONTROLLER_DICTIONARY_ELEMENT_t *element = NULL;
             // get the command received in the device controller
@@ -663,16 +667,14 @@ void commandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICT
               {
                   eARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE flyingState = arg->value.I32;
 
-                  if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_HOVERING){
-                      printf("FLYING\n");
-                  }else if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_FLYING){
-                      printf("FLYING\n");
-                  }else{
-                      
+                  if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_HOVERING) {
+                      fprintf(stdout, "%s\n", STATE_FLYING);
+                  } else if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_FLYING) {
+                      fprintf(stdout, "%s\n", STATE_FLYING);
+                  } else if(flyingState == ARCOMMANDS_ARDRONE3_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_LANDED) {
+                      fprintf(stdout, "%s\n", STATE_LANDED);
                   }
-                  
                   fflush(stdout);
-                  
               }
           }
         }
