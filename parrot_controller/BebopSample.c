@@ -35,6 +35,14 @@
  * @date 15/01/2015
  */
 
+
+/*****************************************
+ *
+ * Pour compiler le placer dans : 
+ * SDK_PARROT/packages/Samples/Unix/BebopSample/
+ *
+ *****************************************/
+
 /*****************************************
  *
  *             include file :
@@ -418,15 +426,15 @@ int main (int argc, char *argv[])
 void handle_decoller(void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
-  deviceController->aRDrone3->sendPilotingLanding(deviceController->aRDrone3);
-  printf("Received decoller() from stdin\n");
+  deviceController->aRDrone3->sendPilotingTakeOff(deviceController->aRDrone3);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received decoller() from stdin\n");
 }
 
 void handle_atterrir(void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
-  deviceController->aRDrone3->sendPilotingTakeOff(deviceController->aRDrone3);
-  printf("Received atterrir() from stdin\n");
+  deviceController->aRDrone3->sendPilotingLanding(deviceController->aRDrone3);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received atterrir() from stdin\n");
 }
 
 void handle_avancer(int pourcent_vitesse,void *customData)
@@ -434,7 +442,7 @@ void handle_avancer(int pourcent_vitesse,void *customData)
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, pourcent_vitesse);
   deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-  printf("Received avancer(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received avancer(%d) from stdin\n", pourcent_vitesse);
 }
 
 void handle_reculer(int pourcent_vitesse,void *customData)
@@ -442,21 +450,21 @@ void handle_reculer(int pourcent_vitesse,void *customData)
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDPitch(deviceController->aRDrone3, -pourcent_vitesse);
   deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-  printf("Received reculer(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received reculer(%d) from stdin\n", -pourcent_vitesse);
 }
 
 void handle_monter(int pourcent_vitesse,void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, pourcent_vitesse);
-  printf("Received monter(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received monter(%d) from stdin\n", pourcent_vitesse);
 }
 
 void handle_descendre(int pourcent_vitesse,void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDGaz(deviceController->aRDrone3, -pourcent_vitesse);
-  printf("Received descendre(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received descendre(%d) from stdin\n", -pourcent_vitesse);
 }
 
 void handle_gauche(int pourcent_vitesse,void *customData)
@@ -464,7 +472,7 @@ void handle_gauche(int pourcent_vitesse,void *customData)
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, -pourcent_vitesse);
   deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-  printf("Received gauche(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received gauche(%d) from stdin\n", -pourcent_vitesse);
 }
 
 void handle_droite(int pourcent_vitesse,void *customData)
@@ -472,55 +480,55 @@ void handle_droite(int pourcent_vitesse,void *customData)
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDRoll(deviceController->aRDrone3, pourcent_vitesse);
   deviceController->aRDrone3->setPilotingPCMDFlag(deviceController->aRDrone3, 1);
-  printf("Received droite(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received droite(%d) from stdin\n", pourcent_vitesse);
 }
 
 void handle_rotation_gauche(int pourcent_vitesse,void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, -pourcent_vitesse);
-  printf("Received rotation_gauche(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received rotation_gauche(%d) from stdin\n", -pourcent_vitesse);
 }
 
 void handle_rotation_droite(int pourcent_vitesse,void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->setPilotingPCMDYaw(deviceController->aRDrone3, pourcent_vitesse);
-  printf("Received rotation_droite(%d) from stdin\n", pourcent_vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received rotation_droite(%d) from stdin\n", pourcent_vitesse);
 }
 
 void handle_eloignement(int distance,void *customData) 
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->sendPilotingSettingsMaxDistance(deviceController->aRDrone3, (float)distance);
-  printf("Received eloigment_max(%d) from stdin\n", distance);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received eloigment_max(%d) from stdin\n", distance);
 }
 
 void handle_hauteur(int distance,void *customData) 
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
    deviceController->aRDrone3->sendPilotingSettingsMaxAltitude(deviceController->aRDrone3, (float)distance);
-   printf("Received hauteur_max(%d) from stdin\n", distance);
+   ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received hauteur_max(%d) from stdin\n", distance);
 }
 
 void handle_vit_deplacement(int vitesse,void *customData)
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->sendPilotingSettingsMaxTilt(deviceController->aRDrone3, (float)vitesse);
-  printf("Received vitesse_deplacement(%d) from stdin\n", vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received vitesse_deplacement(%d) from stdin\n", vitesse);
 }
 
 void handle_vit_hauteur(int vitesse,void *customData) 
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->sendSpeedSettingsMaxVerticalSpeed(deviceController->aRDrone3, (float)vitesse);
-  printf("Received vitesse_hauteur(%d) from stdin\n", vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received vitesse_hauteur(%d) from stdin\n", vitesse);
 }
 void handle_vit_rotation(int vitesse,void *customData) 
 {
   ARCONTROLLER_Device_t *deviceController = (ARCONTROLLER_Device_t *)customData;
   deviceController->aRDrone3->sendSpeedSettingsMaxRotationSpeed(deviceController->aRDrone3, (float)vitesse);
-  printf("Received vitesse_rotation(%d) from stdin\n", vitesse);
+  ARSAL_PRINT(ARSAL_PRINT_ERROR, TAG, "Received vitesse_rotation(%d) from stdin\n", vitesse);
 }
 
 // called when the state of the device controller has changed
@@ -657,7 +665,7 @@ int customPrintCallback (eARSAL_PRINT_LEVEL level, const char *tag, const char *
     if ((level == ARSAL_PRINT_ERROR) && (strcmp(TAG, tag) == 0))
     {
         // Save the last Error
-        vsnprintf(gErrorStr, (ERROR_STR_LENGTH - 1), format, va);
+        vsnprintf(gErrorStr, (ERROR_STR_LENGTH - 1), (char*)format, va);
         gErrorStr[ERROR_STR_LENGTH - 1] = '\0';
     }
 

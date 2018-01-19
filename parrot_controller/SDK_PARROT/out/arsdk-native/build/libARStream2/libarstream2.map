@@ -1,0 +1,1614 @@
+# Path: out/arsdk-native/build/libARStream2/libarstream2.dylib
+# Arch: x86_64
+# Object files:
+[  0] linker synthesized
+[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/gen/Sources/arstream2_error.c.o
+[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter.c.o
+[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_filter_error.c.o
+[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_parser.c.o
+[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_sei.c.o
+[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264_writer.c.o
+[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_h264.c.o
+[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_receiver.c.o
+[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_sender.c.o
+[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp.c.o
+[ 11] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtp_h264.c.o
+[ 12] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_rtcp.c.o
+[ 13] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_recorder.c.o
+[ 14] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_stats.c.o
+[ 15] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_sender.c.o
+[ 16] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARStream2/obj/src/arstream2_stream_receiver.c.o
+[ 17] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[ 18] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
+[ 19] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
+[ 20] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarmedia.dylib
+[ 21] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+# Sections:
+# Address	Size    	Segment	Section
+0x000008E0	0x0003CCC4	__TEXT	__text
+0x0003D5A4	0x0000020A	__TEXT	__stubs
+0x0003D7B0	0x00000376	__TEXT	__stub_helper
+0x0003DB26	0x0000809D	__TEXT	__cstring
+0x00045BD0	0x00000198	__TEXT	__const
+0x00045D68	0x00000290	__TEXT	__unwind_info
+0x00046000	0x00000010	__DATA	__nl_symbol_ptr
+0x00046010	0x00000008	__DATA	__got
+0x00046018	0x000002B8	__DATA	__la_symbol_ptr
+0x000462D0	0x000002B0	__DATA	__const
+# Symbols:
+# Address	Size    	File  Name
+0x000008E0	0x00000025	[  1] _ARSTREAM2_Error_ToString
+0x00000910	0x000000C0	[  2] _ARSTREAM2_H264Filter_ResetAu
+0x000009D0	0x00001570	[  2] _ARSTREAM2_H264Filter_ProcessAu
+0x00001F40	0x000000D0	[  2] _ARSTREAM2_H264Filter_GetSpsPps
+0x00002010	0x00000070	[  2] _ARSTREAM2_H264Filter_GetVideoParams
+0x00002080	0x00000210	[  2] _ARSTREAM2_H264Filter_Init
+0x00002290	0x0000007A	[  2] _ARSTREAM2_H264Filter_Free
+0x00002310	0x000005C0	[  3] _ARSTREAM2_H264FilterError_GenerateGrayIdrFrame
+0x000028D0	0x00000520	[  3] _ARSTREAM2_H264FilterError_HandleMissingSlices
+0x00002DF0	0x000003FC	[  3] _ARSTREAM2_H264FilterError_HandleMissingEndOfFrame
+0x000031F0	0x000002D0	[  4] _ARSTREAM2_H264Parser_ParseNalu
+0x000034C0	0x00000220	[  4] _readBits
+0x000036E0	0x000002D0	[  4] _ARSTREAM2_H264Parser_ReadNextNalu_file
+0x000039B0	0x00000150	[  4] _ARSTREAM2_H264Parser_StartcodeMatch_file
+0x00003B00	0x00000270	[  4] _ARSTREAM2_H264Parser_ReadNextNalu_buffer
+0x00003D70	0x00000090	[  4] _ARSTREAM2_H264Parser_SetupNalu_buffer
+0x00003E00	0x00000050	[  4] _ARSTREAM2_H264Parser_GetLastNaluType
+0x00003E50	0x000000D0	[  4] _ARSTREAM2_H264Parser_GetSliceInfo
+0x00003F20	0x00000050	[  4] _ARSTREAM2_H264Parser_GetUserDataSeiCount
+0x00003F70	0x00000090	[  4] _ARSTREAM2_H264Parser_GetRecoveryPointSei
+0x00004000	0x000000D0	[  4] _ARSTREAM2_H264Parser_GetUserDataSei
+0x000040D0	0x00000090	[  4] _ARSTREAM2_H264Parser_GetSpsPpsContext
+0x00004160	0x00000080	[  4] _ARSTREAM2_H264Parser_GetSliceContext
+0x000041E0	0x000000E0	[  4] _ARSTREAM2_H264Parser_Init
+0x000042C0	0x00000100	[  4] _ARSTREAM2_H264Parser_Free
+0x000043C0	0x00002770	[  4] _ARSTREAM2_H264Parser_ParseSlice
+0x00006B30	0x00001DE0	[  4] _ARSTREAM2_H264Parser_ParseSei
+0x00008910	0x00002F90	[  4] _ARSTREAM2_H264Parser_ParseSps
+0x0000B8A0	0x00001790	[  4] _ARSTREAM2_H264Parser_ParsePps
+0x0000D030	0x00000150	[  4] _ARSTREAM2_H264Parser_ParseAud
+0x0000D180	0x00000040	[  4] _ARSTREAM2_H264Parser_ParseFillerData
+0x0000D1C0	0x00000260	[  4] _moreRbspData
+0x0000D420	0x000001C0	[  4] _ARSTREAM2_H264Parser_ParseScalingList
+0x0000D5E0	0x000006C5	[  4] _ARSTREAM2_H264Parser_ParseHrdParams
+0x0000DCB0	0x00000190	[  5] _ARSTREAM2_H264Sei_SerializeUserDataParrotStreamingV1
+0x0000DE40	0x000001B0	[  5] _ARSTREAM2_H264Sei_DeserializeUserDataParrotStreamingV1
+0x0000DFF0	0x00000050	[  5] _ARSTREAM2_H264Sei_IsUserDataParrotStreamingV1
+0x0000E040	0x00000060	[  5] _ARSTREAM2_H264Sei_SerializeUserDataParrotStreamingV2
+0x0000E0A0	0x00000070	[  5] _ARSTREAM2_H264Sei_DeserializeUserDataParrotStreamingV2
+0x0000E110	0x00000045	[  5] _ARSTREAM2_H264Sei_IsUserDataParrotStreamingV2
+0x0000E160	0x00002EC0	[  6] _ARSTREAM2_H264Writer_WriteSeiNalu
+0x00011020	0x000041E0	[  6] _ARSTREAM2_H264Writer_WriteSeiPayload_pictureTiming
+0x00015200	0x00000870	[  6] _ARSTREAM2_H264Writer_RewriteNonRefPSliceNalu
+0x00015A70	0x000074F0	[  6] _ARSTREAM2_H264Writer_WriteSliceHeader
+0x0001CF60	0x00000F70	[  6] _ARSTREAM2_H264Writer_WriteSkippedPSliceNalu
+0x0001DED0	0x00001180	[  6] _ARSTREAM2_H264Writer_WriteGrayISliceNalu
+0x0001F050	0x00000080	[  6] _ARSTREAM2_H264Writer_SetSpsPpsContext
+0x0001F0D0	0x00000060	[  6] _ARSTREAM2_H264Writer_Init
+0x0001F130	0x00000020	[  6] _ARSTREAM2_H264Writer_Free
+0x0001F150	0x00000C14	[  6] _writeBits_expGolomb_se
+0x0001FD70	0x00000090	[  7] _ARSTREAM2_H264_NaluReset
+0x0001FE00	0x00000080	[  7] _ARSTREAM2_H264_NaluCopy
+0x0001FE80	0x00000080	[  7] _ARSTREAM2_H264_AuReset
+0x0001FF00	0x00000090	[  7] _ARSTREAM2_H264_AuCopy
+0x0001FF90	0x00000210	[  7] _ARSTREAM2_H264_NaluFifoInit
+0x000201A0	0x00000090	[  7] _ARSTREAM2_H264_NaluFifoFree
+0x00020230	0x000000D0	[  7] _ARSTREAM2_H264_NaluFifoPopFreeItem
+0x00020300	0x000000A0	[  7] _ARSTREAM2_H264_NaluFifoPushFreeItem
+0x000203A0	0x000000F0	[  7] _ARSTREAM2_H264_NaluFifoEnqueueItem
+0x00020490	0x000000D0	[  7] _ARSTREAM2_H264_NaluFifoDequeueItem
+0x00020560	0x00000110	[  7] _ARSTREAM2_H264_NaluFifoFlush
+0x00020670	0x00000560	[  7] _ARSTREAM2_H264_AuFifoInit
+0x00020BD0	0x000001A0	[  7] _ARSTREAM2_H264_AuNaluFifoInit
+0x00020D70	0x00000230	[  7] _ARSTREAM2_H264_AuFifoFree
+0x00020FA0	0x00000060	[  7] _ARSTREAM2_H264_AuNaluFifoFree
+0x00021000	0x000000E0	[  7] _ARSTREAM2_H264_AuFifoAddQueue
+0x000210E0	0x000000E0	[  7] _ARSTREAM2_H264_AuFifoRemoveQueue
+0x000211C0	0x000000D0	[  7] _ARSTREAM2_H264_AuFifoGetBuffer
+0x00021290	0x00000060	[  7] _ARSTREAM2_H264_AuFifoBufferAddRef
+0x000212F0	0x000000D0	[  7] _ARSTREAM2_H264_AuFifoUnrefBuffer
+0x000213C0	0x000000D0	[  7] _ARSTREAM2_H264_AuFifoPopFreeItem
+0x00021490	0x00000170	[  7] _ARSTREAM2_H264_AuFifoPushFreeItem
+0x00021600	0x00000100	[  7] _ARSTREAM2_H264_AuNaluFifoFlush
+0x00021700	0x000000B0	[  7] _ARSTREAM2_H264_AuFifoEnqueueItem
+0x000217B0	0x000000D0	[  7] _ARSTREAM2_H264_AuFifoDequeueItem
+0x00021880	0x00000110	[  7] _ARSTREAM2_H264_AuFifoFlushQueue
+0x00021990	0x00000210	[  7] _ARSTREAM2_H264_AuFifoFlush
+0x00021BA0	0x000000B0	[  7] _ARSTREAM2_H264_AuNaluFifoPopFreeItem
+0x00021C50	0x00000080	[  7] _ARSTREAM2_H264_AuNaluFifoPushFreeItem
+0x00021CD0	0x000000B0	[  7] _ARSTREAM2_H264_AuEnqueueNalu
+0x00021D80	0x00000080	[  7] _ARSTREAM2_H264_AuEnqueueNaluBefore
+0x00021E00	0x000000B0	[  7] _ARSTREAM2_H264_AuDequeueNalu
+0x00021EB0	0x00000310	[  7] _ARSTREAM2_H264_AuFifoDuplicateItem
+0x000221C0	0x00000140	[  7] _ARSTREAM2_H264_AuCheckSizeRealloc
+0x00022300	0x000000A9	[  7] _ARSTREAM2_H264_AuMbStatusCheckSizeRealloc
+0x000223B0	0x000000C0	[  8] _ARSTREAM2_RtpReceiver_Stop
+0x00022470	0x00000A70	[  8] _ARSTREAM2_RtpReceiver_New
+0x00022EE0	0x00000430	[  8] _ARSTREAM2_RtpReceiver_StreamSocketSetup
+0x00023310	0x00000160	[  8] _ARSTREAM2_RtpReceiver_NetRecvMmsg
+0x00023470	0x00000060	[  8] _ARSTREAM2_RtpReceiver_StreamSocketTeardown
+0x000234D0	0x00000600	[  8] _ARSTREAM2_RtpReceiver_ControlSocketSetup
+0x00023AD0	0x00000080	[  8] _ARSTREAM2_RtpReceiver_NetSendControlData
+0x00023B50	0x000000F0	[  8] _ARSTREAM2_RtpReceiver_NetReadControlData
+0x00023C40	0x00000060	[  8] _ARSTREAM2_RtpReceiver_ControlSocketTeardown
+0x00023CA0	0x000000E0	[  8] _ARSTREAM2_RtpReceiver_StreamMuxSetup
+0x00023D80	0x000001E0	[  8] _ARSTREAM2_RtpReceiver_MuxRecvMmsg
+0x00023F60	0x00000050	[  8] _ARSTREAM2_RtpReceiver_StreamMuxTeardown
+0x00023FB0	0x000000E0	[  8] _ARSTREAM2_RtpReceiver_ControlMuxSetup
+0x00024090	0x00000080	[  8] _ARSTREAM2_RtpReceiver_MuxSendControlData
+0x00024110	0x00000090	[  8] _ARSTREAM2_RtpReceiver_MuxReadControlData
+0x000241A0	0x00000050	[  8] _ARSTREAM2_RtpReceiver_ControlMuxTeardown
+0x000241F0	0x00000170	[  8] _ARSTREAM2_RtpReceiver_Delete
+0x00024360	0x00000110	[  8] _ARSTREAM2_RtpReceiver_GetSelectParams
+0x00024470	0x000002A0	[  8] _ARSTREAM2_RtpReceiver_ProcessRtp
+0x00024710	0x000007E0	[  8] _ARSTREAM2_RtpReceiver_ProcessRtcp
+0x00024EF0	0x00000040	[  8] _ARSTREAM2_RtpReceiver_ProcessEnd
+0x00024F30	0x00000040	[  8] _ARSTREAM2_RtpReceiver_UpdateVideoStats
+0x00024F70	0x000000E0	[  8] _ARSTREAM2_RtpReceiver_GetSdesItem
+0x00025050	0x000001B0	[  8] _ARSTREAM2_RtpReceiver_SetSdesItem
+0x00025200	0x000000B0	[  8] _ARSTREAM2_RtpReceiver_GetPeerSdesItem
+0x000252B0	0x0000036A	[  8] _ARSTREAM2_RtpReceiver_GetMonitoring
+0x00025620	0x000012C0	[  9] _ARSTREAM2_RtpSender_New
+0x000268E0	0x000001C0	[  9] _ARSTREAM2_RtpSender_UpdateMonitoring
+0x00026AA0	0x00000150	[  9] _ARSTREAM2_RtpSender_Delete
+0x00026BF0	0x00000070	[  9] _ARSTREAM2_RtpSender_FlushNaluQueue
+0x00026C60	0x000000F0	[  9] _ARSTREAM2_RtpSender_GetSelectParams
+0x00026D50	0x00000810	[  9] _ARSTREAM2_RtpSender_ProcessRtp
+0x00027560	0x000001F0	[  9] _ARSTREAM2_RtpSender_RtpStatsCallback
+0x00027750	0x00000550	[  9] _ARSTREAM2_RtpSender_ProcessRtcp
+0x00027CA0	0x000000B0	[  9] _ARSTREAM2_RtpSender_ProcessEnd
+0x00027D50	0x00000030	[  9] _ARSTREAM2_RtpSender_GetDynamicConfig
+0x00027D80	0x000000B0	[  9] _ARSTREAM2_RtpSender_SetDynamicConfig
+0x00027E30	0x00000150	[  9] _ARSTREAM2_RtpSender_SetSocketSendBufferSize
+0x00027F80	0x000000E0	[  9] _ARSTREAM2_RtpSender_GetSdesItem
+0x00028060	0x000001B0	[  9] _ARSTREAM2_RtpSender_SetSdesItem
+0x00028210	0x000000B0	[  9] _ARSTREAM2_RtpSender_GetPeerSdesItem
+0x000282C0	0x000004EC	[  9] _ARSTREAM2_RtpSender_GetMonitoring
+0x000287B0	0x00000090	[ 10] _ARSTREAM2_RTP_PacketReset
+0x00028840	0x00000090	[ 10] _ARSTREAM2_RTP_PacketCopy
+0x000288D0	0x00000430	[ 10] _ARSTREAM2_RTP_PacketFifoInit
+0x00028D00	0x00000100	[ 10] _ARSTREAM2_RTP_PacketFifoFree
+0x00028E00	0x00000080	[ 10] _ARSTREAM2_RTP_PacketFifoAddQueue
+0x00028E80	0x00000090	[ 10] _ARSTREAM2_RTP_PacketFifoRemoveQueue
+0x00028F10	0x000000A0	[ 10] _ARSTREAM2_RTP_PacketFifoGetBuffer
+0x00028FB0	0x00000040	[ 10] _ARSTREAM2_RTP_PacketFifoBufferAddRef
+0x00028FF0	0x000000B0	[ 10] _ARSTREAM2_RTP_PacketFifoUnrefBuffer
+0x000290A0	0x000000A0	[ 10] _ARSTREAM2_RTP_PacketFifoPopFreeItem
+0x00029140	0x00000080	[ 10] _ARSTREAM2_RTP_PacketFifoPushFreeItem
+0x000291C0	0x00000080	[ 10] _ARSTREAM2_RTP_PacketFifoEnqueueItem
+0x00029240	0x000000F0	[ 10] _ARSTREAM2_RTP_PacketFifoEnqueueItemOrderedByPriority
+0x00029330	0x000000E0	[ 10] _ARSTREAM2_RTP_PacketFifoEnqueueItemOrderedBySeqNum
+0x00029410	0x000000B0	[ 10] _ARSTREAM2_RTP_PacketFifoDequeueItem
+0x000294C0	0x00000050	[ 10] _ARSTREAM2_RTP_PacketFifoPeekItem
+0x00029510	0x00000150	[ 10] _ARSTREAM2_RTP_PacketFifoDuplicateItem
+0x00029660	0x000000E0	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoFillMsgVec
+0x00029740	0x000002A0	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoCleanFromMsgVec
+0x000299E0	0x000001F0	[ 10] _ARSTREAM2_RTP_Sender_FinishPacket
+0x00029BD0	0x00000290	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoCleanFromTimeout
+0x00029E60	0x00000250	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoRandomDrop
+0x0002A0B0	0x00000220	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoFlushQueue
+0x0002A2D0	0x00000240	[ 10] _ARSTREAM2_RTP_Sender_PacketFifoFlush
+0x0002A510	0x000001C0	[ 10] _ARSTREAM2_RTP_Sender_GeneratePacket
+0x0002A6D0	0x00000160	[ 10] _ARSTREAM2_RTP_Receiver_PacketFifoFillMsgVec
+0x0002A830	0x000001D0	[ 10] _ARSTREAM2_RTP_Receiver_PacketFifoFlush
+0x0002AA00	0x00000D40	[ 10] _ARSTREAM2_RTP_Receiver_PacketFifoAddFromMsgVec
+0x0002B740	0x000001A6	[ 10] _ARSTREAM2_RTP_Receiver_PacketFifoFlushQueue
+0x0002B8F0	0x00000FE0	[ 11] _ARSTREAM2_RTPH264_Sender_NaluFifoToPacketFifo
+0x0002C8D0	0x000000E0	[ 11] _ARSTREAM2_RTPH264_FifoDequeueNalu
+0x0002C9B0	0x00000110	[ 11] _ARSTREAM2_RTPH264_Sender_FinishStapAPacket
+0x0002CAC0	0x00000190	[ 11] _ARSTREAM2_RTPH264_Sender_NaluDrop
+0x0002CC50	0x00000120	[ 11] _ARSTREAM2_RTPH264_Sender_FifoFlush
+0x0002CD70	0x000013D1	[ 11] _ARSTREAM2_RTPH264_Receiver_PacketFifoToAuFifo
+0x0002E150	0x00000140	[ 12] _ARSTREAM2_RTCP_GetPacketType
+0x0002E290	0x000002F0	[ 12] _ARSTREAM2_RTCP_Sender_ProcessReceiverReport
+0x0002E580	0x00000140	[ 12] _ARSTREAM2_RTCP_Sender_GenerateSenderReport
+0x0002E6C0	0x00000300	[ 12] _ARSTREAM2_RTCP_Receiver_ProcessSenderReport
+0x0002E9C0	0x00000220	[ 12] _ARSTREAM2_RTCP_Receiver_GenerateReceiverReport
+0x0002EBE0	0x00000350	[ 12] _ARSTREAM2_RTCP_GenerateSourceDescription
+0x0002EF30	0x000005B0	[ 12] _ARSTREAM2_RTCP_ProcessSourceDescription
+0x0002F4E0	0x00000070	[ 12] _ARSTREAM2_RTCP_LossReportReset
+0x0002F550	0x000001D0	[ 12] _ARSTREAM2_RTCP_LossReportSet
+0x0002F720	0x000005B0	[ 12] _ARSTREAM2_RTCP_GenerateExtendedReport
+0x0002FCD0	0x00000770	[ 12] _ARSTREAM2_RTCP_ProcessExtendedReport
+0x00030440	0x00000190	[ 12] _ARSTREAM2_RTCP_GetApplicationPacketSubtype
+0x000305D0	0x000000B0	[ 12] _ARSTREAM2_RTCP_GenerateApplicationClockDelta
+0x00030680	0x000004E0	[ 12] _ARSTREAM2_RTCP_ProcessApplicationClockDelta
+0x00030B60	0x000002D0	[ 12] _ARSTREAM2_RTCP_GenerateApplicationVideoStats
+0x00030E30	0x00000450	[ 12] _ARSTREAM2_RTCP_ProcessApplicationVideoStats
+0x00031280	0x000002F0	[ 12] _ARSTREAM2_RTCP_Sender_GenerateCompoundPacket
+0x00031570	0x00000410	[ 12] _ARSTREAM2_RTCP_Receiver_GenerateCompoundPacket
+0x00031980	0x00000320	[ 12] _ARSTREAM2_RTCP_Sender_ProcessCompoundPacket
+0x00031CA0	0x00000206	[ 12] _ARSTREAM2_RTCP_Receiver_ProcessCompoundPacket
+0x00031EB0	0x000004F0	[ 13] _ARSTREAM2_StreamRecorder_Init
+0x000323A0	0x00000110	[ 13] _ARSTREAM2_StreamRecorder_Free
+0x000324B0	0x00000090	[ 13] _ARSTREAM2_StreamRecorder_Stop
+0x00032540	0x00000380	[ 13] _ARSTREAM2_StreamRecorder_SetUntimedMetadata
+0x000328C0	0x0000085A	[ 13] _ARSTREAM2_StreamRecorder_RunThread
+0x00033120	0x000002D0	[ 14] _ARSTREAM2_StreamStats_VideoStatsFileOpen
+0x000333F0	0x00000030	[ 14] _ARSTREAM2_StreamStats_VideoStatsFileClose
+0x00033420	0x000001B0	[ 14] _ARSTREAM2_StreamStats_VideoStatsFileWrite
+0x000335D0	0x000002F0	[ 14] _ARSTREAM2_StreamStats_RtpStatsFileOpen
+0x000338C0	0x00000030	[ 14] _ARSTREAM2_StreamStats_RtpStatsFileClose
+0x000338F0	0x000003F0	[ 14] _ARSTREAM2_StreamStats_RtpStatsFileWrite
+0x00033CE0	0x00000220	[ 14] _ARSTREAM2_StreamStats_RtpLossFileOpen
+0x00033F00	0x00000030	[ 14] _ARSTREAM2_StreamStats_RtpLossFileClose
+0x00033F30	0x00000171	[ 14] _ARSTREAM2_StreamStats_RtpLossFileWrite
+0x000340B0	0x000008B0	[ 15] _ARSTREAM2_StreamSender_Init
+0x00034960	0x00000260	[ 15] _ARSTREAM2_StreamSender_RtpStatsCallback
+0x00034BC0	0x000002B0	[ 15] _ARSTREAM2_StreamSender_VideoStatsCallback
+0x00034E70	0x000000C0	[ 15] _ARSTREAM2_StreamSender_Stop
+0x00034F30	0x000001D0	[ 15] _ARSTREAM2_StreamSender_Free
+0x00035100	0x00000020	[ 15] _ARSTREAM2_StreamSender_SendNewNalu
+0x00035120	0x000002B0	[ 15] _ARSTREAM2_StreamSender_SendNNewNalu
+0x000353D0	0x00000040	[ 15] _ARSTREAM2_StreamSender_FlushNaluQueue
+0x00035410	0x00000660	[ 15] _ARSTREAM2_StreamSender_RunThread
+0x00035A70	0x000001F0	[ 15] _ARSTREAM2_StreamSender_GetDynamicConfig
+0x00035C60	0x00000230	[ 15] _ARSTREAM2_StreamSender_SetDynamicConfig
+0x00035E90	0x00000550	[ 15] _ARSTREAM2_StreamSender_GetUntimedMetadata
+0x000363E0	0x000009F0	[ 15] _ARSTREAM2_StreamSender_SetUntimedMetadata
+0x00036DD0	0x000003E0	[ 15] _ARSTREAM2_StreamSender_GetPeerUntimedMetadata
+0x000371B0	0x00000065	[ 15] _ARSTREAM2_StreamSender_GetMonitoring
+0x00037220	0x00001270	[ 16] _ARSTREAM2_StreamReceiver_Init
+0x00038490	0x000007C0	[ 16] _ARSTREAM2_StreamReceiver_RtpReceiverAuCallback
+0x00038C50	0x000000B0	[ 16] _ARSTREAM2_StreamReceiver_RtpReceiverStatsCallback
+0x00038D00	0x00000230	[ 16] _ARSTREAM2_StreamReceiver_H264FilterSpsPpsCallback
+0x00038F30	0x000003C0	[ 16] _ARSTREAM2_StreamReceiver_Free
+0x000392F0	0x000001B0	[ 16] _ARSTREAM2_StreamReceiver_StreamRecorderFree
+0x000394A0	0x000009D0	[ 16] _ARSTREAM2_StreamReceiver_RunAppOutputThread
+0x00039E70	0x000008F0	[ 16] _ARSTREAM2_StreamReceiver_RunNetworkThread
+0x0003A760	0x000002E0	[ 16] _ARSTREAM2_StreamReceiver_StartAppOutput
+0x0003AA40	0x00000170	[ 16] _ARSTREAM2_StreamReceiver_StopAppOutput
+0x0003ABB0	0x00000110	[ 16] _ARSTREAM2_StreamReceiver_Stop
+0x0003ACC0	0x00000230	[ 16] _ARSTREAM2_StreamReceiver_StreamRecorderStop
+0x0003AEF0	0x00000130	[ 16] _ARSTREAM2_StreamReceiver_GetSpsPps
+0x0003B020	0x00000590	[ 16] _ARSTREAM2_StreamReceiver_GetUntimedMetadata
+0x0003B5B0	0x00000A80	[ 16] _ARSTREAM2_StreamReceiver_SetUntimedMetadata
+0x0003C030	0x00000420	[ 16] _ARSTREAM2_StreamReceiver_GetPeerUntimedMetadata
+0x0003C450	0x000005C0	[ 16] _ARSTREAM2_StreamReceiver_StartResender
+0x0003CA10	0x00000330	[ 16] _ARSTREAM2_StreamReceiver_StopResender
+0x0003CD40	0x00000150	[ 16] _ARSTREAM2_StreamReceiver_StartRecorder
+0x0003CE90	0x000002E0	[ 16] _ARSTREAM2_StreamReceiver_StreamRecorderInit
+0x0003D170	0x00000120	[ 16] _ARSTREAM2_StreamReceiver_StopRecorder
+0x0003D290	0x00000190	[ 16] _ARSTREAM2_StreamReceiver_AppOutputAuEnqueue
+0x0003D420	0x00000184	[ 16] _ARSTREAM2_StreamReceiver_RecorderAuEnqueue
+0x0003D5A4	0x00000006	[ 20] _ARMEDIA_Error_ToString
+0x0003D5AA	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_AddFrame
+0x0003D5B0	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_Finish
+0x0003D5B6	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_New
+0x0003D5BC	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_SetAvcParameterSets
+0x0003D5C2	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_SetMetadataInfo
+0x0003D5C8	0x00000006	[ 20] _ARMEDIA_VideoEncapsuler_SetUntimedMetadata
+0x0003D5CE	0x00000006	[ 17] _ARSAL_Cond_Destroy
+0x0003D5D4	0x00000006	[ 17] _ARSAL_Cond_Init
+0x0003D5DA	0x00000006	[ 17] _ARSAL_Cond_Signal
+0x0003D5E0	0x00000006	[ 17] _ARSAL_Cond_Timedwait
+0x0003D5E6	0x00000006	[ 17] _ARSAL_Cond_Wait
+0x0003D5EC	0x00000006	[ 17] _ARSAL_Mutex_Destroy
+0x0003D5F2	0x00000006	[ 17] _ARSAL_Mutex_Init
+0x0003D5F8	0x00000006	[ 17] _ARSAL_Mutex_Lock
+0x0003D5FE	0x00000006	[ 17] _ARSAL_Mutex_Unlock
+0x0003D604	0x00000006	[ 17] _ARSAL_Print_PrintRawEx
+0x0003D60A	0x00000006	[ 17] _ARSAL_Socket_Setsockopt
+0x0003D610	0x00000006	[ 17] _ARSAL_Thread_Create
+0x0003D616	0x00000006	[ 17] _ARSAL_Thread_Destroy
+0x0003D61C	0x00000006	[ 17] _ARSAL_Thread_Join
+0x0003D622	0x00000006	[ 17] _ARSAL_Time_GetTime
+0x0003D628	0x00000006	[ 21] ___bzero
+0x0003D62E	0x00000006	[ 21] ___error
+0x0003D634	0x00000006	[ 21] ___memcpy_chk
+0x0003D63A	0x00000006	[ 21] ___snprintf_chk
+0x0003D640	0x00000006	[ 21] ___stack_chk_fail
+0x0003D646	0x00000006	[ 21] _access
+0x0003D64C	0x00000006	[ 21] _atoi
+0x0003D652	0x00000006	[ 21] _bind
+0x0003D658	0x00000006	[ 21] _ceil
+0x0003D65E	0x00000006	[ 21] _close
+0x0003D664	0x00000006	[ 21] _fclose
+0x0003D66A	0x00000006	[ 21] _fcntl
+0x0003D670	0x00000006	[ 21] _fflush
+0x0003D676	0x00000006	[ 21] _fileno
+0x0003D67C	0x00000006	[ 21] _fopen
+0x0003D682	0x00000006	[ 21] _fprintf
+0x0003D688	0x00000006	[ 21] _fputc
+0x0003D68E	0x00000006	[ 21] _fread
+0x0003D694	0x00000006	[ 21] _free
+0x0003D69A	0x00000006	[ 21] _fseeko
+0x0003D6A0	0x00000006	[ 21] _fsync
+0x0003D6A6	0x00000006	[ 21] _ftello
+0x0003D6AC	0x00000006	[ 21] _fwrite
+0x0003D6B2	0x00000006	[ 21] _getsockopt
+0x0003D6B8	0x00000006	[ 21] _inet_pton
+0x0003D6BE	0x00000006	[ 21] _localtime_r
+0x0003D6C4	0x00000006	[ 21] _log
+0x0003D6CA	0x00000006	[ 21] _malloc
+0x0003D6D0	0x00000006	[ 21] _memcpy
+0x0003D6D6	0x00000006	[ 21] _memset
+0x0003D6DC	0x00000006	[ 18] _mux_channel_alloc_queue
+0x0003D6E2	0x00000006	[ 18] _mux_channel_close
+0x0003D6E8	0x00000006	[ 18] _mux_channel_open
+0x0003D6EE	0x00000006	[ 18] _mux_encode
+0x0003D6F4	0x00000006	[ 18] _mux_queue_get_buf
+0x0003D6FA	0x00000006	[ 18] _mux_queue_try_get_buf
+0x0003D700	0x00000006	[ 18] _mux_ref
+0x0003D706	0x00000006	[ 18] _mux_unref
+0x0003D70C	0x00000006	[ 21] _pipe
+0x0003D712	0x00000006	[ 19] _pomp_buffer_get_cdata
+0x0003D718	0x00000006	[ 19] _pomp_buffer_new_with_data
+0x0003D71E	0x00000006	[ 19] _pomp_buffer_unref
+0x0003D724	0x00000006	[ 21] _rand
+0x0003D72A	0x00000006	[ 21] _read
+0x0003D730	0x00000006	[ 21] _realloc
+0x0003D736	0x00000006	[ 21] _recv
+0x0003D73C	0x00000006	[ 21] _recvfrom
+0x0003D742	0x00000006	[ 21] _recvmsg
+0x0003D748	0x00000006	[ 21] _roundf
+0x0003D74E	0x00000006	[ 21] _select$1050
+0x0003D754	0x00000006	[ 21] _sendmsg
+0x0003D75A	0x00000006	[ 21] _sendto
+0x0003D760	0x00000006	[ 21] _setsockopt
+0x0003D766	0x00000006	[ 21] _socket
+0x0003D76C	0x00000006	[ 21] _srand
+0x0003D772	0x00000006	[ 21] _sscanf
+0x0003D778	0x00000006	[ 21] _strcasecmp
+0x0003D77E	0x00000006	[ 21] _strdup
+0x0003D784	0x00000006	[ 21] _strerror
+0x0003D78A	0x00000006	[ 21] _strftime
+0x0003D790	0x00000006	[ 21] _strlen
+0x0003D796	0x00000006	[ 21] _strncmp
+0x0003D79C	0x00000006	[ 21] _strndup
+0x0003D7A2	0x00000006	[ 21] _time
+0x0003D7A8	0x00000006	[ 21] _write
+0x0003D7B0	0x00000010	[  0] helper helper
+0x0003D7C0	0x0000000A	[ 17] _ARSAL_Cond_Destroy
+0x0003D7CA	0x0000000A	[ 17] _ARSAL_Cond_Init
+0x0003D7D4	0x0000000A	[ 17] _ARSAL_Cond_Signal
+0x0003D7DE	0x0000000A	[ 17] _ARSAL_Cond_Timedwait
+0x0003D7E8	0x0000000A	[ 17] _ARSAL_Cond_Wait
+0x0003D7F2	0x0000000A	[ 17] _ARSAL_Mutex_Destroy
+0x0003D7FC	0x0000000A	[ 17] _ARSAL_Mutex_Init
+0x0003D806	0x0000000A	[ 17] _ARSAL_Mutex_Lock
+0x0003D810	0x0000000A	[ 17] _ARSAL_Mutex_Unlock
+0x0003D81A	0x0000000A	[ 17] _ARSAL_Print_PrintRawEx
+0x0003D824	0x0000000A	[ 17] _ARSAL_Socket_Setsockopt
+0x0003D82E	0x0000000A	[ 17] _ARSAL_Thread_Create
+0x0003D838	0x0000000A	[ 17] _ARSAL_Thread_Destroy
+0x0003D842	0x0000000A	[ 17] _ARSAL_Thread_Join
+0x0003D84C	0x0000000A	[ 17] _ARSAL_Time_GetTime
+0x0003D856	0x0000000A	[ 18] _mux_channel_alloc_queue
+0x0003D860	0x0000000A	[ 18] _mux_channel_close
+0x0003D86A	0x0000000A	[ 18] _mux_channel_open
+0x0003D874	0x0000000A	[ 18] _mux_encode
+0x0003D87E	0x0000000A	[ 18] _mux_queue_get_buf
+0x0003D888	0x0000000A	[ 18] _mux_queue_try_get_buf
+0x0003D892	0x0000000A	[ 18] _mux_ref
+0x0003D89C	0x0000000A	[ 18] _mux_unref
+0x0003D8A6	0x0000000A	[ 19] _pomp_buffer_get_cdata
+0x0003D8B0	0x0000000A	[ 19] _pomp_buffer_new_with_data
+0x0003D8BA	0x0000000A	[ 19] _pomp_buffer_unref
+0x0003D8C4	0x0000000A	[ 20] _ARMEDIA_Error_ToString
+0x0003D8CE	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_AddFrame
+0x0003D8D8	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_Finish
+0x0003D8E2	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_New
+0x0003D8EC	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_SetAvcParameterSets
+0x0003D8F6	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_SetMetadataInfo
+0x0003D900	0x0000000A	[ 20] _ARMEDIA_VideoEncapsuler_SetUntimedMetadata
+0x0003D90A	0x0000000A	[ 21] ___bzero
+0x0003D914	0x0000000A	[ 21] ___error
+0x0003D91E	0x0000000A	[ 21] ___memcpy_chk
+0x0003D928	0x0000000A	[ 21] ___snprintf_chk
+0x0003D932	0x0000000A	[ 21] ___stack_chk_fail
+0x0003D93C	0x0000000A	[ 21] _access
+0x0003D946	0x0000000A	[ 21] _atoi
+0x0003D950	0x0000000A	[ 21] _bind
+0x0003D95A	0x0000000A	[ 21] _ceil
+0x0003D964	0x0000000A	[ 21] _close
+0x0003D96E	0x0000000A	[ 21] _fclose
+0x0003D978	0x0000000A	[ 21] _fcntl
+0x0003D982	0x0000000A	[ 21] _fflush
+0x0003D98C	0x0000000A	[ 21] _fileno
+0x0003D996	0x0000000A	[ 21] _fopen
+0x0003D9A0	0x0000000A	[ 21] _fprintf
+0x0003D9AA	0x0000000A	[ 21] _fputc
+0x0003D9B4	0x0000000A	[ 21] _fread
+0x0003D9BE	0x0000000A	[ 21] _free
+0x0003D9C8	0x0000000A	[ 21] _fseeko
+0x0003D9D2	0x0000000A	[ 21] _fsync
+0x0003D9DC	0x0000000A	[ 21] _ftello
+0x0003D9E6	0x0000000A	[ 21] _fwrite
+0x0003D9F0	0x0000000A	[ 21] _getsockopt
+0x0003D9FA	0x0000000A	[ 21] _inet_pton
+0x0003DA04	0x0000000A	[ 21] _localtime_r
+0x0003DA0E	0x0000000A	[ 21] _log
+0x0003DA18	0x0000000A	[ 21] _malloc
+0x0003DA22	0x0000000A	[ 21] _memcpy
+0x0003DA2C	0x0000000A	[ 21] _memset
+0x0003DA36	0x0000000A	[ 21] _pipe
+0x0003DA40	0x0000000A	[ 21] _rand
+0x0003DA4A	0x0000000A	[ 21] _read
+0x0003DA54	0x0000000A	[ 21] _realloc
+0x0003DA5E	0x0000000A	[ 21] _recv
+0x0003DA68	0x0000000A	[ 21] _recvfrom
+0x0003DA72	0x0000000A	[ 21] _recvmsg
+0x0003DA7C	0x0000000A	[ 21] _roundf
+0x0003DA86	0x0000000A	[ 21] _select$1050
+0x0003DA90	0x0000000A	[ 21] _sendmsg
+0x0003DA9A	0x0000000A	[ 21] _sendto
+0x0003DAA4	0x0000000A	[ 21] _setsockopt
+0x0003DAAE	0x0000000A	[ 21] _socket
+0x0003DAB8	0x0000000A	[ 21] _srand
+0x0003DAC2	0x0000000A	[ 21] _sscanf
+0x0003DACC	0x0000000A	[ 21] _strcasecmp
+0x0003DAD6	0x0000000A	[ 21] _strdup
+0x0003DAE0	0x0000000A	[ 21] _strerror
+0x0003DAEA	0x0000000A	[ 21] _strftime
+0x0003DAF4	0x0000000A	[ 21] _strlen
+0x0003DAFE	0x0000000A	[ 21] _strncmp
+0x0003DB08	0x0000000A	[ 21] _strndup
+0x0003DB12	0x0000000A	[ 21] _time
+0x0003DB1C	0x0000000A	[ 21] _write
+0x0003DB26	0x00000009	[  1] literal string: No error
+0x0003DB2F	0x0000000F	[  1] literal string: Bad parameters
+0x0003DB3E	0x0000001C	[  1] literal string: Unable to allocate resource
+0x0003DB5A	0x0000002A	[  1] literal string: Object is busy and can not be deleted yet
+0x0003DB84	0x0000000E	[  1] literal string: Queue is full
+0x0003DB92	0x0000001C	[  1] literal string: Waiting for synchronization
+0x0003DBAE	0x0000001C	[  1] literal string: Re-synchronization required
+0x0003DBCA	0x00000015	[  1] literal string: Resource unavailable
+0x0003DBDF	0x0000000A	[  1] literal string: Not found
+0x0003DBE9	0x0000000E	[  1] literal string: Invalid state
+0x0003DBF7	0x0000000C	[  1] literal string: Unsupported
+0x0003DC03	0x0000000E	[  1] literal string: Unknown value
+0x0003DC11	0x0000001F	[  2] literal string: ARSTREAM2_H264Filter_ProcessAu
+0x0003DC30	0x00000015	[  2] literal string: ARSTREAM2_H264Filter
+0x0003DC45	0x00000010	[  2] literal string: Invalid pointer
+0x0003DC55	0x0000002D	[  2] literal string: ARSTREAM2_H264Filter_ParseNalu() failed (%d)
+0x0003DC82	0x0000003C	[  2] literal string: ARSTREAM2_H264FilterError_HandleMissingSlices() failed (%d)
+0x0003DCBE	0x0000006E	[  2] literal string: FIXME! missingPacketsBefore==0 but currentSliceFirstMb=%d and expectedSliceFirstMb=0, this should not happen!
+0x0003DD2C	0x0000006F	[  2] literal string: FIXME! missingPacketsBefore==0 but currentSliceFirstMb=%d and expectedSliceFirstMb=%d, this should not happen!
+0x0003DD9B	0x00000040	[  2] literal string: ARSTREAM2_H264FilterError_HandleMissingEndOfFrame() failed (%d)
+0x0003DDDB	0x0000002A	[  2] literal string: AU output cancelled (!outputIncompleteAu)
+0x0003DE05	0x00000022	[  2] literal string: AU output cancelled (waitForSync)
+0x0003DE27	0x0000001E	[  2] literal string: MB status buffer is too small
+0x0003DE45	0x0000001A	[  2] literal string: ARSTREAM2_H264Filter_Init
+0x0003DE5F	0x0000001B	[  2] literal string: Invalid pointer for handle
+0x0003DE7A	0x0000001B	[  2] literal string: Invalid pointer for config
+0x0003DE95	0x0000001D	[  2] literal string: Allocation failed (size %zu)
+0x0003DEB2	0x00000028	[  2] literal string: ARSTREAM2_H264Parser_Init() failed (%d)
+0x0003DEDA	0x00000028	[  2] literal string: ARSTREAM2_H264Writer_Init() failed (%d)
+0x0003DF02	0x0000001F	[  2] literal string: ARSTREAM2_H264Filter_ParseNalu
+0x0003DF21	0x00000034	[  2] literal string: ARSTREAM2_H264Parser_SetupNalu_buffer() failed (%d)
+0x0003DF55	0x0000002D	[  2] literal string: ARSTREAM2_H264Parser_ParseNalu() failed (%d)
+0x0003DF82	0x00000030	[  2] literal string: ARSTREAM2_H264Parser_GetSliceInfo() failed (%d)
+0x0003DFB2	0x00000033	[  2] literal string: ARSTREAM2_H264Parser_GetSliceContext() failed (%d)
+0x0003DFE5	0x00000037	[  2] literal string: ARSTREAM2_H264Parser_GetRecoveryPointSei() failed (%d)
+0x0003E01C	0x00000032	[  2] literal string: ARSTREAM2_H264Parser_GetUserDataSei() failed (%d)
+0x0003E04E	0x00000045	[  2] literal string: ARSTREAM2_H264Sei_DeserializeUserDataParrotStreamingV2() failed (%d)
+0x0003E093	0x00000045	[  2] literal string: ARSTREAM2_H264Sei_DeserializeUserDataParrotStreamingV1() failed (%d)
+0x0003E0D8	0x00000030	[  2] literal string: Reallocation failed for user data SEI (size %d)
+0x0003E108	0x00000024	[  2] literal string: Allocation failed for SPS (size %d)
+0x0003E12C	0x00000024	[  2] literal string: Allocation failed for PPS (size %d)
+0x0003E150	0x00000028	[  2] literal string: ARSTREAM2_H264Filter_Sync() failed (%d)
+0x0003E178	0x0000001A	[  2] literal string: ARSTREAM2_H264Filter_Sync
+0x0003E192	0x00000034	[  2] literal string: ARSTREAM2_H264Parser_GetSpsPpsContext() failed (%d)
+0x0003E1C6	0x00000010	[  2] literal string: SPS/PPS sync OK
+0x0003E1D6	0x0000001A	[  2] literal string: spsPpsCallback failed: %s
+0x0003E1F0	0x0000002F	[  3] literal string: ARSTREAM2_H264FilterError_GenerateGrayIdrFrame
+0x0003E21F	0x0000001A	[  3] literal string: ARSTREAM2_H264FilterError
+0x0003E239	0x0000001B	[  3] literal string: No slice context available
+0x0003E254	0x00000030	[  3] literal string: NALU FIFO is full, cannot generate gray I-frame
+0x0003E284	0x00000037	[  3] literal string: ARSTREAM2_H264Writer_WriteGrayISliceNalu() failed (%d)
+0x0003E2BB	0x00000022	[  3] literal string: Gray I slice NALU output size: %d
+0x0003E2DD	0x0000001B	[  3] literal string: Failed to enqueue SPS (%d)
+0x0003E2F8	0x0000001B	[  3] literal string: Failed to enqueue PPS (%d)
+0x0003E313	0x0000001D	[  3] literal string: Failed to enqueue slice (%d)
+0x0003E330	0x0000002F	[  3] literal string: Failed to push free item in the NALU FIFO (%d)
+0x0003E35F	0x0000002E	[  3] literal string: ARSTREAM2_H264FilterError_HandleMissingSlices
+0x0003E38D	0x00000058	[  3] literal string: FIXME! #%d AUTS:%llu previousSliceIdx:%d currentSliceFirstMb:%d this should not happen!
+0x0003E3E5	0x00000074	[  3] literal string: FIXME! #%d AUTS:%llu previousSliceFirstMb:%d previousSliceMbCount:%d currentSliceFirstMb:%d this should not happen!
+0x0003E459	0x00000020	[  3] literal string: Access unit buffer is too small
+0x0003E479	0x0000003A	[  3] literal string: ARSTREAM2_H264Writer_WriteSkippedPSliceNalu() failed (%d)
+0x0003E4B3	0x00000022	[  3] literal string: Failed to enqueue NALU item in AU
+0x0003E4D5	0x0000001E	[  3] literal string: Failed to push free FIFO item
+0x0003E4F3	0x00000033	[  3] literal string: NALU FIFO is full, cannot generate skipped P slice
+0x0003E526	0x00000032	[  3] literal string: ARSTREAM2_H264FilterError_HandleMissingEndOfFrame
+0x0003E558	0x0000001F	[  4] literal string: ARSTREAM2_H264Parser_ParseNalu
+0x0003E577	0x00000015	[  4] literal string: ARSTREAM2_H264Parser
+0x0003E58C	0x0000000F	[  4] literal string: Invalid handle
+0x0003E59B	0x00000022	[  4] literal string: Failed to read from the bitstream
+0x0003E5BD	0x00000035	[  4] literal string: -- NALU found: nal_ref_idc=%d, nal_unit_type=%d (%s)
+0x0003E5F2	0x00000035	[  4] literal string: ARSTREAM2_H264Parser_ParseNaluType[%d]() failed (%d)
+0x0003E627	0x00000029	[  4] literal string:    Warning: forbidden_zero_bit is not 0!
+0x0003E650	0x00000027	[  4] literal string: ARSTREAM2_H264Parser_ReadNextNalu_file
+0x0003E677	0x00000015	[  4] literal string: Start code at 0x%08X
+0x0003E68C	0x00000037	[  4] literal string: ARSTREAM2_H264Parser_StartcodeMatch_file() failed (%d)
+0x0003E6C3	0x00000017	[  4] literal string: Failed to seek in file
+0x0003E6DA	0x0000001E	[  4] literal string: Reallocation failed (size %d)
+0x0003E6F8	0x00000020	[  4] literal string: Failed to read %d bytes in file
+0x0003E718	0x00000012	[  4] literal string: Invalid NALU size
+0x0003E72A	0x00000014	[  4] literal string: No start code found
+0x0003E73E	0x00000029	[  4] literal string: ARSTREAM2_H264Parser_ReadNextNalu_buffer
+0x0003E767	0x00000026	[  4] literal string: ARSTREAM2_H264Parser_SetupNalu_buffer
+0x0003E78D	0x00000025	[  4] literal string: ARSTREAM2_H264Parser_GetLastNaluType
+0x0003E7B2	0x00000022	[  4] literal string: ARSTREAM2_H264Parser_GetSliceInfo
+0x0003E7D4	0x00000029	[  4] literal string: ARSTREAM2_H264Parser_GetUserDataSeiCount
+0x0003E7FD	0x00000029	[  4] literal string: ARSTREAM2_H264Parser_GetRecoveryPointSei
+0x0003E826	0x00000024	[  4] literal string: ARSTREAM2_H264Parser_GetUserDataSei
+0x0003E84A	0x0000000E	[  4] literal string: Invalid index
+0x0003E858	0x00000026	[  4] literal string: ARSTREAM2_H264Parser_GetSpsPpsContext
+0x0003E87E	0x00000025	[  4] literal string: ARSTREAM2_H264Parser_GetSliceContext
+0x0003E8A3	0x0000001A	[  4] literal string: ARSTREAM2_H264Parser_Init
+0x0003E8BD	0x0000000A	[  4] literal string: undefined
+0x0003E8C7	0x0000000C	[  4] literal string: coded slice
+0x0003E8D3	0x0000001D	[  4] literal string: coded slice data partition A
+0x0003E8F0	0x0000001D	[  4] literal string: coded slice data partition B
+0x0003E90D	0x0000001D	[  4] literal string: coded slice data partition C
+0x0003E92A	0x00000010	[  4] literal string: coded slice IDR
+0x0003E93A	0x00000004	[  4] literal string: SEI
+0x0003E93E	0x00000004	[  4] literal string: SPS
+0x0003E942	0x00000004	[  4] literal string: PPS
+0x0003E946	0x00000016	[  4] literal string: access unit delimiter
+0x0003E95C	0x00000010	[  4] literal string: end of sequence
+0x0003E96C	0x0000000E	[  4] literal string: end of stream
+0x0003E97A	0x0000000C	[  4] literal string: filler data
+0x0003E986	0x0000000E	[  4] literal string: SPS extension
+0x0003E994	0x0000000C	[  4] literal string: prefix NALU
+0x0003E9A0	0x0000000B	[  4] literal string: subset SPS
+0x0003E9AB	0x00000009	[  4] literal string: reserved
+0x0003E9B4	0x00000024	[  4] literal string: coded slice auxiliary coded picture
+0x0003E9D8	0x00000016	[  4] literal string: coded slice extension
+0x0003E9EE	0x00000023	[  4] literal string: coded slice extension - depth view
+0x0003EA11	0x0000000C	[  4] literal string: unspecified
+0x0003EA1D	0x00000020	[  4] literal string: ARSTREAM2_H264Parser_ParseSlice
+0x0003EA3D	0x0000002B	[  4] literal string: -- slice_layer_without_partitioning_rbsp()
+0x0003EA68	0x00000014	[  4] literal string: ---- slice_header()
+0x0003EA7C	0x0000001E	[  4] literal string: ------ first_mb_in_slice = %d
+0x0003EA9A	0x0000001C	[  4] literal string: ------ slice_type = %d (%s)
+0x0003EAB6	0x0000000A	[  4] literal string: (invalid)
+0x0003EAC0	0x00000021	[  4] literal string: ------ pic_parameter_set_id = %d
+0x0003EAE1	0x0000001C	[  4] literal string: ------ colour_plane_id = %d
+0x0003EAFD	0x00000016	[  4] literal string: ------ frame_num = %d
+0x0003EB13	0x0000001B	[  4] literal string: ------ field_pic_flag = %d
+0x0003EB2E	0x0000001E	[  4] literal string: ------ bottom_field_flag = %d
+0x0003EB4C	0x00000017	[  4] literal string: ------ idr_pic_id = %d
+0x0003EB63	0x0000001E	[  4] literal string: ------ pic_order_cnt_lsb = %d
+0x0003EB81	0x00000027	[  4] literal string: ------ delta_pic_order_cnt_bottom = %d
+0x0003EBA8	0x00000023	[  4] literal string: ------ delta_pic_order_cnt[0] = %d
+0x0003EBCB	0x00000023	[  4] literal string: ------ delta_pic_order_cnt[1] = %d
+0x0003EBEE	0x0000001E	[  4] literal string: ------ redundant_pic_cnt = %d
+0x0003EC0C	0x00000028	[  4] literal string: ------ direct_spatial_mv_pred_flag = %d
+0x0003EC34	0x0000002D	[  4] literal string: ------ num_ref_idx_active_override_flag = %d
+0x0003EC61	0x00000029	[  4] literal string: ------ num_ref_idx_l0_active_minus1 = %d
+0x0003EC8A	0x00000029	[  4] literal string: ------ num_ref_idx_l1_active_minus1 = %d
+0x0003ECB3	0x0000003F	[  4] literal string: ARSTREAM2_H264Parser_ParseRefPicListModification() failed (%d)
+0x0003ECF2	0x00000038	[  4] literal string: ARSTREAM2_H264Parser_ParsePredWeightTable() failed (%d)
+0x0003ED2A	0x00000039	[  4] literal string: ARSTREAM2_H264Parser_ParseDecRefPicMarking() failed (%d)
+0x0003ED63	0x0000001B	[  4] literal string: ------ cabac_init_idc = %d
+0x0003ED7E	0x0000001B	[  4] literal string: ------ slice_qp_delta = %d
+0x0003ED99	0x0000001F	[  4] literal string: ------ sp_for_switch_flag = %d
+0x0003EDB8	0x0000001B	[  4] literal string: ------ slice_qs_delta = %d
+0x0003EDD3	0x0000002A	[  4] literal string: ------ disable_deblocking_filter_idc = %d
+0x0003EDFD	0x00000027	[  4] literal string: ------ slice_alpha_c0_offset_div2 = %d
+0x0003EE24	0x00000023	[  4] literal string: ------ slice_beta_offset_div2 = %d
+0x0003EE47	0x00000025	[  4] literal string: ------ slice_group_change_cycle = %d
+0x0003EE6C	0x00000002	[  4] literal string: P
+0x0003EE6E	0x00000002	[  4] literal string: B
+0x0003EE70	0x00000002	[  4] literal string: I
+0x0003EE72	0x00000003	[  4] literal string: SP
+0x0003EE75	0x00000003	[  4] literal string: SI
+0x0003EE78	0x00000008	[  4] literal string: P (all)
+0x0003EE80	0x00000008	[  4] literal string: B (all)
+0x0003EE88	0x00000008	[  4] literal string: I (all)
+0x0003EE90	0x00000009	[  4] literal string: SP (all)
+0x0003EE99	0x00000009	[  4] literal string: SI (all)
+0x0003EEA2	0x00000031	[  4] literal string: ARSTREAM2_H264Parser_ParseRefPicListModification
+0x0003EED3	0x00000023	[  4] literal string: ------ ref_pic_list_modification()
+0x0003EEF6	0x00000030	[  4] literal string: -------- ref_pic_list_modification_flag_l0 = %d
+0x0003EF26	0x0000002B	[  4] literal string: -------- modification_of_pic_nums_idc = %d
+0x0003EF51	0x00000026	[  4] literal string: -------- abs_diff_pic_num_minus1 = %d
+0x0003EF77	0x00000020	[  4] literal string: -------- long_term_pic_num = %d
+0x0003EF97	0x00000030	[  4] literal string: -------- ref_pic_list_modification_flag_l1 = %d
+0x0003EFC7	0x0000002A	[  4] literal string: ARSTREAM2_H264Parser_ParsePredWeightTable
+0x0003EFF1	0x0000001B	[  4] literal string: ------ pred_weight_table()
+0x0003F00C	0x00000025	[  4] literal string: -------- luma_log2_weight_denom = %d
+0x0003F031	0x0000002B	[  4] literal string: ARSTREAM2_H264Parser_ParseDecRefPicMarking
+0x0003F05C	0x0000001D	[  4] literal string: ------ dec_ref_pic_marking()
+0x0003F079	0x0000002B	[  4] literal string: -------- no_output_of_prior_pics_flag = %d
+0x0003F0A4	0x00000027	[  4] literal string: -------- long_term_reference_flag = %d
+0x0003F0CB	0x00000031	[  4] literal string: -------- adaptive_ref_pic_marking_mode_flag = %d
+0x0003F0FC	0x00000032	[  4] literal string: -------- memory_management_control_operation = %d
+0x0003F12E	0x0000002C	[  4] literal string: -------- difference_of_pic_nums_minus1 = %d
+0x0003F15A	0x00000022	[  4] literal string: -------- long_term_frame_idx = %d
+0x0003F17C	0x0000002C	[  4] literal string: -------- max_long_term_frame_idx_plus1 = %d
+0x0003F1A8	0x0000001E	[  4] literal string: ARSTREAM2_H264Parser_ParseSei
+0x0003F1C6	0x0000000E	[  4] literal string: -- sei_rbsp()
+0x0003F1D4	0x00000034	[  4] literal string: ---- last_payload_type_byte = %d (payloadType = %d)
+0x0003F208	0x00000034	[  4] literal string: ---- last_payload_size_byte = %d (payloadSize = %d)
+0x0003F23C	0x00000043	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_bufferingPeriod() failed (%d)
+0x0003F27F	0x0000003D	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_picTiming() failed (%d)
+0x0003F2BC	0x00000041	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_recoveryPoint() failed (%d)
+0x0003F2FD	0x00000048	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_userDataUnregistered() failed (%d)
+0x0003F345	0x00000029	[  4] literal string: ---- unsupported payload type (skipping)
+0x0003F36E	0x00000018	[  4] literal string: skipBytes() failed (%d)
+0x0003F386	0x00000033	[  4] literal string: ---- warning: read bits != payload size (%d != %d)
+0x0003F3B9	0x00000035	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_bufferingPeriod
+0x0003F3EE	0x0000001B	[  4] literal string: ---- SEI: buffering_period
+0x0003F409	0x00000021	[  4] literal string: ------ seq_parameter_set_id = %d
+0x0003F42A	0x0000002A	[  4] literal string: ------ initial_cpb_removal_delay[%d] = %d
+0x0003F454	0x00000031	[  4] literal string: ------ initial_cpb_removal_delay_offset[%d] = %d
+0x0003F485	0x0000002F	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_picTiming
+0x0003F4B4	0x00000015	[  4] literal string: ---- SEI: pic_timing
+0x0003F4C9	0x0000001E	[  4] literal string: ------ cpb_removal_delay = %d
+0x0003F4E7	0x0000001D	[  4] literal string: ------ dpb_output_delay = %d
+0x0003F504	0x00000017	[  4] literal string: ------ pic_struct = %d
+0x0003F51B	0x00000025	[  4] literal string: ------ clock_timestamp_flag[%d] = %d
+0x0003F540	0x00000014	[  4] literal string: ------ ct_type = %d
+0x0003F554	0x00000022	[  4] literal string: ------ nuit_field_based_flag = %d
+0x0003F576	0x0000001A	[  4] literal string: ------ counting_type = %d
+0x0003F590	0x00000020	[  4] literal string: ------ full_timestamp_flag = %d
+0x0003F5B0	0x0000001F	[  4] literal string: ------ discontinuity_flag = %d
+0x0003F5CF	0x0000001D	[  4] literal string: ------ cnt_dropped_flag = %d
+0x0003F5EC	0x00000015	[  4] literal string: ------ n_frames = %d
+0x0003F601	0x0000001A	[  4] literal string: ------ seconds_value = %d
+0x0003F61B	0x0000001A	[  4] literal string: ------ minutes_value = %d
+0x0003F635	0x00000018	[  4] literal string: ------ hours_value = %d
+0x0003F64D	0x00000019	[  4] literal string: ------ seconds_flag = %d
+0x0003F666	0x00000019	[  4] literal string: ------ minutes_flag = %d
+0x0003F67F	0x00000017	[  4] literal string: ------ hours_flag = %d
+0x0003F696	0x00000018	[  4] literal string: ------ time_offset = %d
+0x0003F6AE	0x0000001D	[  4] literal string: ------ clockTimestamp = %llu
+0x0003F6CB	0x00000033	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_recoveryPoint
+0x0003F6FE	0x00000019	[  4] literal string: ---- SEI: recovery_point
+0x0003F717	0x00000021	[  4] literal string: ------ recovery_frame_count = %d
+0x0003F738	0x0000001D	[  4] literal string: ------ exact_match_flag = %d
+0x0003F755	0x0000001D	[  4] literal string: ------ broken_link_flag = %d
+0x0003F772	0x00000025	[  4] literal string: ------ changing_slice_group_idc = %d
+0x0003F797	0x0000003A	[  4] literal string: ARSTREAM2_H264Parser_ParseSeiPayload_userDataUnregistered
+0x0003F7D1	0x00000021	[  4] literal string: ---- SEI: user_data_unregistered
+0x0003F7F2	0x00000035	[  4] literal string: ---- wrong size for user_data_unregistered (%d < 16)
+0x0003F827	0x00000035	[  4] literal string: ------ uuid_iso_iec_11578 = %08x-%04x-%04x-%08x-%08x
+0x0003F85C	0x0000001C	[  4] literal string: Allocation failed (size %d)
+0x0003F878	0x0000000A	[  4] literal string: skipBytes
+0x0003F882	0x0000000D	[  4] literal string: moreRbspData
+0x0003F88F	0x00000019	[  4] literal string: Failed on moreRbspData()
+0x0003F8A8	0x0000001E	[  4] literal string: ARSTREAM2_H264Parser_ParseSps
+0x0003F8C6	0x0000001C	[  4] literal string: -- seq_parameter_set_rbsp()
+0x0003F8E2	0x00000016	[  4] literal string: ---- profile_idc = %d
+0x0003F8F8	0x0000001F	[  4] literal string: ---- constraint_set0_flag = %d
+0x0003F917	0x0000001F	[  4] literal string: ---- constraint_set1_flag = %d
+0x0003F936	0x0000001F	[  4] literal string: ---- constraint_set2_flag = %d
+0x0003F955	0x0000001F	[  4] literal string: ---- constraint_set3_flag = %d
+0x0003F974	0x0000001F	[  4] literal string: ---- constraint_set4_flag = %d
+0x0003F993	0x0000001F	[  4] literal string: ---- constraint_set5_flag = %d
+0x0003F9B2	0x00000020	[  4] literal string: ---- reserved_zero_2bits = %d%d
+0x0003F9D2	0x00000014	[  4] literal string: ---- level_idc = %d
+0x0003F9E6	0x0000001F	[  4] literal string: ---- seq_parameter_set_id = %d
+0x0003FA05	0x0000001C	[  4] literal string: ---- chroma_format_idc = %d
+0x0003FA21	0x00000025	[  4] literal string: ---- separate_colour_plane_flag = %d
+0x0003FA46	0x00000020	[  4] literal string: ---- bit_depth_luma_minus8 = %d
+0x0003FA66	0x00000022	[  4] literal string: ---- bit_depth_chroma_minus8 = %d
+0x0003FA88	0x0000002F	[  4] literal string: ---- qpprime_y_zero_transform_bypass_flag = %d
+0x0003FAB7	0x0000002A	[  4] literal string: ---- seq_scaling_matrix_present_flag = %d
+0x0003FAE1	0x0000002C	[  4] literal string: ---- seq_scaling_list_present_flag[%d] = %d
+0x0003FB0D	0x00000034	[  4] literal string: ARSTREAM2_H264Parser_ParseScalingList() failed (%d)
+0x0003FB41	0x00000024	[  4] literal string: ---- log2_max_frame_num_minus4 = %d
+0x0003FB65	0x0000001D	[  4] literal string: ---- pic_order_cnt_type = %d
+0x0003FB82	0x0000002C	[  4] literal string: ---- log2_max_pic_order_cnt_lsb_minus4 = %d
+0x0003FBAE	0x0000002B	[  4] literal string: ---- delta_pic_order_always_zero_flag = %d
+0x0003FBD9	0x00000021	[  4] literal string: ---- offset_for_non_ref_pic = %d
+0x0003FBFA	0x00000029	[  4] literal string: ---- offset_for_top_to_bottom_field = %d
+0x0003FC23	0x00000030	[  4] literal string: ---- num_ref_frames_in_pic_order_cnt_cycle = %d
+0x0003FC53	0x00000023	[  4] literal string: ---- offset_for_ref_frame[%d] = %d
+0x0003FC76	0x0000001D	[  4] literal string: ---- max_num_ref_frames = %d
+0x0003FC93	0x0000002F	[  4] literal string: ---- gaps_in_frame_num_value_allowed_flag = %d
+0x0003FCC2	0x00000036	[  4] literal string: ---- pic_width_in_mbs_minus1 = %d (width = %d pixels)
+0x0003FCF8	0x00000029	[  4] literal string: ---- pic_height_in_map_units_minus1 = %d
+0x0003FD21	0x00000033	[  4] literal string: ---- frame_mbs_only_flag = %d (height = %d pixels)
+0x0003FD54	0x00000027	[  4] literal string: ---- mb_adaptive_frame_field_flag = %d
+0x0003FD7B	0x00000024	[  4] literal string: ---- direct_8x8_inference_flag = %d
+0x0003FD9F	0x0000001E	[  4] literal string: ---- frame_cropping_flag = %d
+0x0003FDBD	0x00000021	[  4] literal string: ---- frame_crop_left_offset = %d
+0x0003FDDE	0x00000022	[  4] literal string: ---- frame_crop_right_offset = %d
+0x0003FE00	0x00000020	[  4] literal string: ---- frame_crop_top_offset = %d
+0x0003FE20	0x00000023	[  4] literal string: ---- frame_crop_bottom_offset = %d
+0x0003FE43	0x00000026	[  4] literal string: ---- vui_parameters_present_flag = %d
+0x0003FE69	0x0000002C	[  4] literal string: ARSTREAM2_H264Parser_ParseVui() failed (%d)
+0x0003FE95	0x00000026	[  4] literal string: ARSTREAM2_H264Parser_ParseScalingList
+0x0003FEBB	0x00000014	[  4] literal string: ---- scaling_list()
+0x0003FECF	0x00000018	[  4] literal string: ------ delta_scale = %d
+0x0003FEE7	0x0000001E	[  4] literal string: ARSTREAM2_H264Parser_ParseVui
+0x0003FF05	0x00000016	[  4] literal string: ---- vui_parameters()
+0x0003FF1B	0x0000002B	[  4] literal string: ------ aspect_ratio_info_present_flag = %d
+0x0003FF46	0x0000001D	[  4] literal string: ------ aspect_ratio_idc = %d
+0x0003FF63	0x00000016	[  4] literal string: ------ sar_width = %d
+0x0003FF79	0x00000017	[  4] literal string: ------ sar_height = %d
+0x0003FF90	0x00000027	[  4] literal string: ------ overscan_info_present_flag = %d
+0x0003FFB7	0x00000026	[  4] literal string: ------ overscan_appropriate_flag = %d
+0x0003FFDD	0x0000002B	[  4] literal string: ------ video_signal_type_present_flag = %d
+0x00040008	0x00000019	[  4] literal string: ------ video_format = %d
+0x00040021	0x00000022	[  4] literal string: ------ video_full_range_flag = %d
+0x00040043	0x0000002C	[  4] literal string: ------ colour_description_present_flag = %d
+0x0004006F	0x0000001D	[  4] literal string: ------ colour_primaries = %d
+0x0004008C	0x00000025	[  4] literal string: ------ transfer_characteristics = %d
+0x000400B1	0x00000020	[  4] literal string: ------ matrix_coefficients = %d
+0x000400D1	0x00000029	[  4] literal string: ------ chroma_loc_info_present_flag = %d
+0x000400FA	0x0000002D	[  4] literal string: ------ chroma_sample_loc_type_top_field = %d
+0x00040127	0x00000030	[  4] literal string: ------ chroma_sample_loc_type_bottom_field = %d
+0x00040157	0x00000025	[  4] literal string: ------ timing_info_present_flag = %d
+0x0004017C	0x0000001E	[  4] literal string: ------ num_units_in_tick = %d
+0x0004019A	0x00000017	[  4] literal string: ------ time_scale = %d
+0x000401B1	0x00000022	[  4] literal string: ------ fixed_frame_rate_flag = %d
+0x000401D3	0x0000002C	[  4] literal string: ------ nal_hrd_parameters_present_flag = %d
+0x000401FF	0x00000032	[  4] literal string: ARSTREAM2_H264Parser_ParseHrdParams() failed (%d)
+0x00040231	0x0000002C	[  4] literal string: ------ vcl_hrd_parameters_present_flag = %d
+0x0004025D	0x0000001F	[  4] literal string: ------ low_delay_hrd_flag = %d
+0x0004027C	0x00000024	[  4] literal string: ------ pic_struct_present_flag = %d
+0x000402A0	0x00000027	[  4] literal string: ------ bitstream_restriction_flag = %d
+0x000402C7	0x00000034	[  4] literal string: ------ motion_vectors_over_pic_boundaries_flag = %d
+0x000402FB	0x00000024	[  4] literal string: ------ max_bytes_per_pic_denom = %d
+0x0004031F	0x00000022	[  4] literal string: ------ max_bits_per_mb_denom = %d
+0x00040341	0x0000002A	[  4] literal string: ------ log2_max_mv_length_horizontal = %d
+0x0004036B	0x00000028	[  4] literal string: ------ log2_max_mv_length_vertical = %d
+0x00040393	0x00000023	[  4] literal string: ------ max_num_reorder_frames = %d
+0x000403B6	0x00000024	[  4] literal string: ------ max_dec_frame_buffering = %d
+0x000403DA	0x00000024	[  4] literal string: ARSTREAM2_H264Parser_ParseHrdParams
+0x000403FE	0x00000018	[  4] literal string: ------ hrd_parameters()
+0x00040416	0x0000001D	[  4] literal string: -------- cpb_cnt_minus1 = %d
+0x00040433	0x0000001D	[  4] literal string: -------- bit_rate_scale = %d
+0x00040450	0x0000001D	[  4] literal string: -------- cpb_size_scale = %d
+0x0004046D	0x00000028	[  4] literal string: -------- bit_rate_value_minus1[%d] = %d
+0x00040495	0x00000028	[  4] literal string: -------- cpb_size_value_minus1[%d] = %d
+0x000404BD	0x0000001B	[  4] literal string: -------- cbr_flag[%d] = %d
+0x000404D8	0x00000036	[  4] literal string: -------- initial_cpb_removal_delay_length_minus1 = %d
+0x0004050E	0x0000002E	[  4] literal string: -------- cpb_removal_delay_length_minus1 = %d
+0x0004053C	0x0000002D	[  4] literal string: -------- dpb_output_delay_length_minus1 = %d
+0x00040569	0x00000021	[  4] literal string: -------- time_offset_length = %d
+0x0004058A	0x0000001E	[  4] literal string: ARSTREAM2_H264Parser_ParsePps
+0x000405A8	0x0000001C	[  4] literal string: -- pic_parameter_set_rbsp()
+0x000405C4	0x0000001F	[  4] literal string: ---- pic_parameter_set_id = %d
+0x000405E3	0x00000023	[  4] literal string: ---- entropy_coding_mode_flag = %d
+0x00040606	0x00000037	[  4] literal string: ---- bottom_field_pic_order_in_frame_present_flag = %d
+0x0004063D	0x00000022	[  4] literal string: ---- num_slice_groups_minus1 = %d
+0x0004065F	0x0000001F	[  4] literal string: ---- slice_group_map_type = %d
+0x0004067E	0x00000020	[  4] literal string: ---- run_length_minus1[%d] = %d
+0x0004069E	0x00000017	[  4] literal string: ---- top_left[%d] = %d
+0x000406B5	0x0000001B	[  4] literal string: ---- bottom_right[%d] = %d
+0x000406D0	0x0000002C	[  4] literal string: ---- slice_group_change_direction_flag = %d
+0x000406FC	0x00000029	[  4] literal string: ---- slice_group_change_rate_minus1 = %d
+0x00040725	0x00000027	[  4] literal string: ---- pic_size_in_map_units_minus1 = %d
+0x0004074C	0x0000001D	[  4] literal string: ---- slice_group_id[%d] = %d
+0x00040769	0x0000002F	[  4] literal string: ---- num_ref_idx_l0_default_active_minus1 = %d
+0x00040798	0x0000002F	[  4] literal string: ---- num_ref_idx_l1_default_active_minus1 = %d
+0x000407C7	0x0000001D	[  4] literal string: ---- weighted_pred_flag = %d
+0x000407E4	0x0000001E	[  4] literal string: ---- weighted_bipred_idc = %d
+0x00040802	0x0000001E	[  4] literal string: ---- pic_init_qp_minus26 = %d
+0x00040820	0x0000001E	[  4] literal string: ---- pic_init_qs_minus26 = %d
+0x0004083E	0x00000021	[  4] literal string: ---- chroma_qp_index_offset = %d
+0x0004085F	0x00000031	[  4] literal string: ---- deblocking_filter_control_present_flag = %d
+0x00040890	0x00000026	[  4] literal string: ---- constrained_intra_pred_flag = %d
+0x000408B6	0x00000029	[  4] literal string: ---- redundant_pic_cnt_present_flag = %d
+0x000408DF	0x00000022	[  4] literal string: ---- transform_8x8_mode_flag = %d
+0x00040901	0x0000002A	[  4] literal string: ---- pic_scaling_matrix_present_flag = %d
+0x0004092B	0x0000002C	[  4] literal string: ---- pic_scaling_list_present_flag[%d] = %d
+0x00040957	0x00000028	[  4] literal string: ---- second_chroma_qp_index_offset = %d
+0x0004097F	0x0000001E	[  4] literal string: ARSTREAM2_H264Parser_ParseAud
+0x0004099D	0x00000020	[  4] literal string: -- access_unit_delimiter_rbsp()
+0x000409BD	0x0000001B	[  4] literal string: ---- primary_pic_type = %d
+0x000409D8	0x00000025	[  4] literal string: ARSTREAM2_H264Parser_ParseFillerData
+0x000409FD	0x00000016	[  4] literal string: -- filler_data_rbsp()
+0x00040A13	0x0000002D	[  6] literal string: ARSTREAM2_H264Writer_RewriteNonRefPSliceNalu
+0x00040A40	0x00000015	[  6] literal string: ARSTREAM2_H264Writer
+0x00040A55	0x00000018	[  6] literal string: Invalid SPS/PPS context
+0x00040A6D	0x00000046	[  6] literal string: Slice context: adaptive_ref_pic_marking_mode_flag==1 is not supported
+0x00040AB3	0x0000001E	[  6] literal string: Slice context is not provided
+0x00040AD1	0x0000003B	[  6] literal string: Error: ARSTREAM2_H264Writer_WriteSliceHeader() failed (%d)
+0x00040B0C	0x0000002B	[  6] literal string: Unsupported slice header length (%d vs %d)
+0x00040B37	0x00000018	[  6] literal string: Unsupported length (%d)
+0x00040B4F	0x0000001A	[  6] literal string: Unsupported length-2 (%d)
+0x00040B69	0x0000001C	[  7] literal string: ARSTREAM2_H264_NaluFifoInit
+0x00040B85	0x0000000F	[  7] literal string: ARSTREAM2_H264
+0x00040B94	0x00000017	[  7] literal string: Invalid FIFO size (%d)
+0x00040BAB	0x0000001B	[  7] literal string: Mutex creation failed (%d)
+0x00040BC6	0x00000022	[  7] literal string: FIFO allocation failed (size %zu)
+0x00040BE8	0x0000001C	[  7] literal string: ARSTREAM2_H264_NaluFifoFree
+0x00040C04	0x00000023	[  7] literal string: ARSTREAM2_H264_NaluFifoPopFreeItem
+0x00040C27	0x00000012	[  7] literal string: NALU FIFO is full
+0x00040C39	0x00000024	[  7] literal string: ARSTREAM2_H264_NaluFifoPushFreeItem
+0x00040C5D	0x00000023	[  7] literal string: ARSTREAM2_H264_NaluFifoEnqueueItem
+0x00040C80	0x00000023	[  7] literal string: ARSTREAM2_H264_NaluFifoDequeueItem
+0x00040CA3	0x0000001D	[  7] literal string: ARSTREAM2_H264_NaluFifoFlush
+0x00040CC0	0x00000032	[  7] literal string: ARSTREAM2_H264_NaluFifoPushFreeItem() failed (%d)
+0x00040CF2	0x0000001A	[  7] literal string: ARSTREAM2_H264_AuFifoInit
+0x00040D0C	0x0000001C	[  7] literal string: Invalid item max count (%d)
+0x00040D28	0x0000001E	[  7] literal string: Invalid buffer max count (%d)
+0x00040D46	0x0000002C	[  7] literal string: ARSTREAM2_H264_AuNaluFifoInit() failed (%d)
+0x00040D72	0x00000028	[  7] literal string: FIFO buffer allocation failed (size %d)
+0x00040D9A	0x0000001A	[  7] literal string: ARSTREAM2_H264_AuFifoFree
+0x00040DB4	0x0000002C	[  7] literal string: ARSTREAM2_H264_AuNaluFifoFree() failed (%d)
+0x00040DE0	0x0000001E	[  7] literal string: ARSTREAM2_H264_AuFifoAddQueue
+0x00040DFE	0x00000021	[  7] literal string: ARSTREAM2_H264_AuFifoRemoveQueue
+0x00040E1F	0x0000001F	[  7] literal string: ARSTREAM2_H264_AuFifoGetBuffer
+0x00040E3E	0x00000017	[  7] literal string: No free buffer in pool
+0x00040E55	0x00000022	[  7] literal string: ARSTREAM2_H264_AuFifoBufferAddRef
+0x00040E77	0x00000021	[  7] literal string: ARSTREAM2_H264_AuFifoUnrefBuffer
+0x00040E98	0x0000003A	[  7] literal string: FIXME! Ref count is already null, this should not happen!
+0x00040ED2	0x00000021	[  7] literal string: ARSTREAM2_H264_AuFifoPopFreeItem
+0x00040EF3	0x00000010	[  7] literal string: AU FIFO is full
+0x00040F03	0x00000022	[  7] literal string: ARSTREAM2_H264_AuFifoPushFreeItem
+0x00040F25	0x00000021	[  7] literal string: ARSTREAM2_H264_AuFifoEnqueueItem
+0x00040F46	0x00000021	[  7] literal string: ARSTREAM2_H264_AuFifoDequeueItem
+0x00040F67	0x00000020	[  7] literal string: ARSTREAM2_H264_AuFifoFlushQueue
+0x00040F87	0x0000002F	[  7] literal string: ARSTREAM2_H264_AuFifoUnrefBuffer() failed (%d)
+0x00040FB6	0x00000030	[  7] literal string: ARSTREAM2_H264_AuFifoPushFreeItem() failed (%d)
+0x00040FE6	0x0000001B	[  7] literal string: ARSTREAM2_H264_AuFifoFlush
+0x00041001	0x0000001E	[  7] literal string: ARSTREAM2_H264_AuNaluFifoInit
+0x0004101F	0x0000001E	[  7] literal string: ARSTREAM2_H264_AuNaluFifoFree
+0x0004103D	0x00000025	[  7] literal string: ARSTREAM2_H264_AuNaluFifoPopFreeItem
+0x00041062	0x00000015	[  7] literal string: AU-NALU FIFO is full
+0x00041077	0x00000026	[  7] literal string: ARSTREAM2_H264_AuNaluFifoPushFreeItem
+0x0004109D	0x0000001D	[  7] literal string: ARSTREAM2_H264_AuEnqueueNalu
+0x000410BA	0x00000023	[  7] literal string: ARSTREAM2_H264_AuEnqueueNaluBefore
+0x000410DD	0x0000001D	[  7] literal string: ARSTREAM2_H264_AuDequeueNalu
+0x000410FA	0x0000001F	[  7] literal string: ARSTREAM2_H264_AuNaluFifoFlush
+0x00041119	0x00000023	[  7] literal string: ARSTREAM2_H264_AuFifoDuplicateItem
+0x0004113C	0x0000002B	[  7] literal string: Failed to pop free item from the NALU FIFO
+0x00041167	0x00000029	[  7] literal string: Failed to pop free item from the AU FIFO
+0x00041190	0x0000002D	[  7] literal string: Failed to push free item in the AU FIFO (%d)
+0x000411BD	0x00000022	[  7] literal string: ARSTREAM2_H264_AuCheckSizeRealloc
+0x000411DF	0x00000025	[  7] literal string: Access unit realloc failed (size %u)
+0x00041204	0x00000026	[  7] literal string: Invalid NALU offset in AU buffer (%d)
+0x0004122A	0x0000002A	[  7] literal string: ARSTREAM2_H264_AuMbStatusCheckSizeRealloc
+0x00041254	0x0000001B	[  8] literal string: ARSTREAM2_RtpReceiver_Stop
+0x0004126F	0x00000016	[  8] literal string: ARSTREAM2_RtpReceiver
+0x00041285	0x00000038	[  8] literal string: Failed to teardown the stream channel (error %d : %s).\n
+0x000412BD	0x00000038	[  8] literal string: Failed to teardown the control channel (error %d : %s).
+0x000412F5	0x0000001A	[  8] literal string: ARSTREAM2_RtpReceiver_New
+0x0004130F	0x00000013	[  8] literal string: No config provided
+0x00041322	0x00000023	[  8] literal string: Config: no canonical name provided
+0x00041345	0x00000018	[  8] literal string: No packet FIFO provided
+0x0004135D	0x0000001D	[  8] literal string: No access unit FIFO provided
+0x0004137A	0x0000002A	[  8] literal string: No access unit callback function provided
+0x000413A4	0x0000001B	[  8] literal string: No net/mux config provided
+0x000413BF	0x00000030	[  8] literal string: Both net/mux config provided. Cannot use both !
+0x000413EF	0x00000023	[  8] literal string: Config: no server address provided
+0x00041412	0x00000020	[  8] literal string: Config: no mux context provided
+0x00041432	0x00000012	[  8] literal string: Allocation failed
+0x00041444	0x00000003	[  8] literal string: %s
+0x00041447	0x0000003F	[  8] literal string: Config: max packet size is too small to hold a receiver report
+0x00041486	0x0000001F	[  8] literal string: New RTP Receiver using sockets
+0x000414A5	0x0000001B	[  8] literal string: New RTP Receiver using mux
+0x000414C0	0x00000022	[  8] literal string: FIFO allocation failed (size %ld)
+0x000414E2	0x00000018	[  8] literal string: Invalid msgVecCount: %d
+0x000414FA	0x0000002E	[  8] literal string: Failed to setup the stream channel (error %d)
+0x00041528	0x0000002F	[  8] literal string: Failed to setup the control channel (error %d)
+0x00041557	0x0000001E	[  8] literal string: Memory allocation failed (%d)
+0x00041575	0x00000039	[  8] literal string: Failed to teardown the control channel (error %d : %s).\n
+0x000415AE	0x0000001D	[  8] literal string: ARSTREAM2_RtpReceiver_Delete
+0x000415CB	0x00000021	[  8] literal string: ARSTREAM2_RtpReceiver_ProcessRtp
+0x000415EC	0x0000001B	[  8] literal string: Exception on stream socket
+0x00041607	0x0000003A	[  8] literal string: ARSTREAM2_RTP_Receiver_PacketFifoFillMsgVec() failed (%d)
+0x00041641	0x00000031	[  8] literal string: Got an EPIPE for stream channel, stopping thread
+0x00041672	0x00000019	[  8] literal string: Failed to read data (%d)
+0x0004168B	0x0000003D	[  8] literal string: ARSTREAM2_RTP_Receiver_PacketFifoAddFromMsgVec() failed (%d)
+0x000416C8	0x0000003C	[  8] literal string: ARSTREAM2_RTPH264_Receiver_PacketFifoToAuFifo() failed (%d)
+0x00041704	0x00000022	[  8] literal string: ARSTREAM2_RtpReceiver_ProcessRtcp
+0x00041726	0x0000001C	[  8] literal string: Exception on control socket
+0x00041742	0x00000026	[  8] literal string: Control channel - read error (%d): %s
+0x00041768	0x00000032	[  8] literal string: Got an EPIPE for control channel, stopping thread
+0x0004179A	0x0000002C	[  8] literal string: Failed to process compound RTCP packet (%d)
+0x000417C6	0x00000056	[  8] literal string: Dropped %d RTCP packets out of %d (%.1f%%) on socket buffer full in last %.1f seconds
+0x0004181C	0x00000026	[  8] literal string: Control channel - send error (%d): %s
+0x00041842	0x0000002D	[  8] literal string: ARSTREAM2_RTCP_LossReportReset() failed (%d)
+0x0004186F	0x00000028	[  8] literal string: ARSTREAM2_RtpReceiver_StreamSocketSetup
+0x00041897	0x0000001F	[  8] literal string: Failed to create stream socket
+0x000418B6	0x00000023	[  8] literal string: Error on setsockopt: error=%d (%s)
+0x000418D9	0x0000002D	[  8] literal string: Failed to set to non-blocking: error=%d (%s)
+0x00041906	0x0000001F	[  8] literal string: Failed to convert address '%s'
+0x00041925	0x0000002E	[  8] literal string: Failed to join multacast group: error=%d (%s)
+0x00041953	0x0000001F	[  8] literal string: Invalid multicast address '%s'
+0x00041972	0x00000038	[  8] literal string: Failed to set socket option SO_REUSEADDR: error=%d (%s)
+0x000419AA	0x00000033	[  8] literal string: Error on stream socket bind port=%d: error=%d (%s)
+0x000419DD	0x00000022	[  8] literal string: ARSTREAM2_RtpReceiver_NetRecvMmsg
+0x000419FF	0x00000028	[  8] literal string: Stream socket - recvmmsg error (%d): %s
+0x00041A27	0x00000029	[  8] literal string: ARSTREAM2_RtpReceiver_ControlSocketSetup
+0x00041A50	0x00000020	[  8] literal string: Failed to create control socket
+0x00041A70	0x00000034	[  8] literal string: Error on control socket bind port=%d: error=%d (%s)
+0x00041AA4	0x0000002A	[  8] literal string: Failed to set the send socket buffer size
+0x00041ACE	0x0000002E	[  8] literal string: ARSTREAM2_RtpReceiver_SetSocketSendBufferSize
+0x00041AFC	0x00000043	[  8] literal string: Failed to set socket send buffer size to 2*%d bytes: error=%d (%s)
+0x00041B3F	0x00000035	[  8] literal string: Failed to get socket send buffer size: error=%d (%s)
+0x00041B74	0x00000026	[  8] literal string: Socket send buffer size is 2*%d bytes
+0x00041B9A	0x00000029	[  8] literal string: ARSTREAM2_RtpReceiver_NetReadControlData
+0x00041BC3	0x00000018	[  8] literal string: Server control port: %d
+0x00041BDB	0x00000025	[  8] literal string: ARSTREAM2_RtpReceiver_StreamMuxSetup
+0x00041C00	0x0000003A	[  8] literal string: Error while closing mux channel in error handler: %s (%d)
+0x00041C3A	0x00000022	[  8] literal string: ARSTREAM2_RtpReceiver_MuxRecvMmsg
+0x00041C5C	0x00000026	[  8] literal string: ARSTREAM2_RtpReceiver_ControlMuxSetup
+0x00041C82	0x00000018	[  9] literal string: ARSTREAM2_RtpSender_New
+0x00041C9A	0x00000014	[  9] literal string: ARSTREAM2_RtpSender
+0x00041CAE	0x00000028	[  9] literal string: Config: no destination address provided
+0x00041CD6	0x00000021	[  9] literal string: Config: no client ports provided
+0x00041CF7	0x00000020	[  9] literal string: Config: no packet FIFO provided
+0x00041D17	0x0000003D	[  9] literal string: Config: max packet size is too small to hold a sender report
+0x00041D54	0x00000024	[  9] literal string: MsgVec allocation failed (size %ld)
+0x00041D78	0x0000002D	[  9] literal string: Failed to setup the stream socket (error %d)
+0x00041DA5	0x0000002E	[  9] literal string: Failed to setup the control socket (error %d)
+0x00041DD3	0x00000006	[  9] literal string: %s/%s
+0x00041DD9	0x0000000B	[  9] literal string: rtpmonitor
+0x00041DE4	0x0000000F	[  9] literal string: %s/%s/%s_%s.%s
+0x00041DF3	0x00000013	[  9] literal string: sender_rtp_monitor
+0x00041E06	0x00000004	[  9] literal string: dat
+0x00041E0A	0x00000002	[  9] literal string: w
+0x00041E0C	0x0000002C	[  9] literal string: Unable to open RTP monitor output file '%s'
+0x00041E38	0x00000024	[  9] literal string: Opened RTP monitor output file '%s'
+0x00041E5C	0x0000007C	[  9] literal string: ntpTimestamp inputTimestamp outputTimestamp rtpTimestamp rtpSeqNum rtpMarkerBit importance priority bytesSent bytesDropped\n
+0x00041ED8	0x0000001F	[  9] literal string: ARSTREAM2_RtpSender_ProcessRtp
+0x00041EF7	0x00000027	[  9] literal string: Failed to clean FIFO from timeout (%d)
+0x00041F1E	0x00000005	[  9] literal string: %s%d
+0x00041F23	0x00000002	[  9] literal string:  
+0x00041F25	0x00000001	[  9] literal string: 
+0x00041F26	0x00000055	[  9] literal string: Dropped %d packets out of %d (%.1f%%) from FIFO on timeout (%s) in last %.1f seconds
+0x00041F7B	0x0000003C	[  9] literal string: ARSTREAM2_RTPH264_Sender_NaluFifoToPacketFifo() failed (%d)
+0x00041FB7	0x0000001B	[  9] literal string: Failed to fill msgVec (%d)
+0x00041FD2	0x00000028	[  9] literal string: Stream socket - sendmmsg error (%d): %s
+0x00041FFA	0x00000026	[  9] literal string: Failed to clean FIFO from msgVec (%d)
+0x00042020	0x00000020	[  9] literal string: ARSTREAM2_RtpSender_ProcessRtcp
+0x00042040	0x00000025	[  9] literal string: Control socket - read error (%d): %s
+0x00042065	0x00000025	[  9] literal string: Control socket - send error (%d): %s
+0x0004208A	0x00000025	[  9] literal string: ARSTREAM2_RtpSender_SetDynamicConfig
+0x000420AF	0x00000006	[  9] literal string: %llu 
+0x000420B5	0x00000019	[  9] literal string: %lu %u %u %u %u %lu %lu\n
+0x000420CE	0x00000026	[  9] literal string: ARSTREAM2_RtpSender_StreamSocketSetup
+0x000420F4	0x00000046	[  9] literal string: Trying to send multicast to address '%s' without an interface address
+0x0004213A	0x0000002B	[  9] literal string: Error on stream socket bind: error=%d (%s)
+0x00042165	0x00000027	[  9] literal string: ARSTREAM2_RtpSender_ControlSocketSetup
+0x0004218C	0x0000002C	[  9] literal string: ARSTREAM2_RtpSender_SetSocketSendBufferSize
+0x000421B8	0x0000001D	[ 10] literal string: ARSTREAM2_RTP_PacketFifoInit
+0x000421D5	0x0000000E	[ 10] literal string: ARSTREAM2_Rtp
+0x000421E3	0x0000002F	[ 10] literal string: FIFO packet buffer allocation failed (size %d)
+0x00042212	0x00000030	[ 10] literal string: FIFO packet buffer allocation failed (size %zu)
+0x00042242	0x0000001D	[ 10] literal string: ARSTREAM2_RTP_PacketFifoFree
+0x0004225F	0x00000021	[ 10] literal string: ARSTREAM2_RTP_PacketFifoAddQueue
+0x00042280	0x00000024	[ 10] literal string: ARSTREAM2_RTP_PacketFifoRemoveQueue
+0x000422A4	0x00000022	[ 10] literal string: ARSTREAM2_RTP_PacketFifoGetBuffer
+0x000422C6	0x00000025	[ 10] literal string: ARSTREAM2_RTP_PacketFifoBufferAddRef
+0x000422EB	0x00000024	[ 10] literal string: ARSTREAM2_RTP_PacketFifoUnrefBuffer
+0x0004230F	0x00000024	[ 10] literal string: ARSTREAM2_RTP_PacketFifoPopFreeItem
+0x00042333	0x00000014	[ 10] literal string: Packet FIFO is full
+0x00042347	0x00000025	[ 10] literal string: ARSTREAM2_RTP_PacketFifoPushFreeItem
+0x0004236C	0x00000024	[ 10] literal string: ARSTREAM2_RTP_PacketFifoEnqueueItem
+0x00042390	0x00000035	[ 10] literal string: ARSTREAM2_RTP_PacketFifoEnqueueItemOrderedByPriority
+0x000423C5	0x00000033	[ 10] literal string: ARSTREAM2_RTP_PacketFifoEnqueueItemOrderedBySeqNum
+0x000423F8	0x00000024	[ 10] literal string: ARSTREAM2_RTP_PacketFifoDequeueItem
+0x0004241C	0x00000021	[ 10] literal string: ARSTREAM2_RTP_PacketFifoPeekItem
+0x0004243D	0x00000026	[ 10] literal string: ARSTREAM2_RTP_PacketFifoDuplicateItem
+0x00042463	0x0000002A	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoFillMsgVec
+0x0004248D	0x00000014	[ 10] literal string: Invalid msgVecCount
+0x000424A1	0x0000002F	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoCleanFromMsgVec
+0x000424D0	0x0000003B	[ 10] literal string: Sent size (%d) does not match message iov total size (%zu)
+0x0004250B	0x00000030	[ 10] literal string: ARSTREAM2_RTP_Sender_FinishPacket() failed (%d)
+0x0004253B	0x00000030	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoCleanFromTimeout
+0x0004256B	0x00000015	[ 10] literal string: Invalid current time
+0x00042580	0x0000002A	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoRandomDrop
+0x000425AA	0x0000002A	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoFlushQueue
+0x000425D4	0x00000025	[ 10] literal string: ARSTREAM2_RTP_Sender_PacketFifoFlush
+0x000425F9	0x00000024	[ 10] literal string: ARSTREAM2_RTP_Sender_GeneratePacket
+0x0004261D	0x0000001A	[ 10] literal string: Invalid payload size (%d)
+0x00042637	0x00000022	[ 10] literal string: ARSTREAM2_RTP_Sender_FinishPacket
+0x00042659	0x0000002C	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoFillMsgVec
+0x00042685	0x00000028	[ 10] literal string: Packet FIFO is full => flush to recover
+0x000426AD	0x00000035	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoFlush() failed (%d)
+0x000426E2	0x00000013	[ 10] literal string: %d packets flushed
+0x000426F5	0x0000002F	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoAddFromMsgVec
+0x00042724	0x0000001A	[ 10] literal string: Invalid resend queue list
+0x0004273E	0x00000013	[ 10] literal string: Empty msgVec array
+0x00042751	0x00000038	[ 10] literal string: Duplicate RTP packet received (seqNum %d, extSeqNum %d)
+0x00042789	0x00000032	[ 10] literal string: ARSTREAM2_RTP_PacketFifoEnqueueItem() failed (%d)
+0x000427BB	0x00000034	[ 10] literal string: Failed to enqueue packet into resend queue #%d (%d)
+0x000427EF	0x00000022	[ 10] literal string: Garbage count mismatch: %d vs. %d
+0x00042811	0x0000001E	[ 10] literal string: Pop count mismatch: %d vs. %d
+0x0004282F	0x0000002C	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoFlushQueue
+0x0004285B	0x00000027	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoFlush
+0x00042882	0x0000002F	[ 10] literal string: ARSTREAM2_RTP_Receiver_PacketFifoResendEnqueue
+0x000428B1	0x00000033	[ 10] literal string: ARSTREAM2_RTP_PacketFifoBufferAddRef() failed (%d)
+0x000428E4	0x0000002D	[ 10] literal string: Failed to pop free item from the packet FIFO
+0x00042911	0x0000001C	[ 10] literal string: Failed to unref buffer (%d)
+0x0004292D	0x0000002E	[ 11] literal string: ARSTREAM2_RTPH264_Sender_NaluFifoToPacketFifo
+0x0004295B	0x00000039	[ 11] literal string: ARSTREAM2_RTPH264_Sender_FinishStapAPacket() failed (%d)
+0x00042994	0x00000032	[ 11] literal string: ARSTREAM2_RTPH264_Sender_FuAPackets() failed (%d)
+0x000429C6	0x00000038	[ 11] literal string: ARSTREAM2_RTPH264_Sender_SingleNaluPacket() failed (%d)
+0x000429FE	0x00000038	[ 11] literal string: ARSTREAM2_RTPH264_Sender_BeginStapAPacket() failed (%d)
+0x00042A36	0x00000034	[ 11] literal string: Time %llu: dropped NALU (%.1fms late) (seqNum = %d)
+0x00042A6A	0x00000030	[ 11] literal string: ARSTREAM2_RTPH264_Sender_NaluDrop() failed (%d)
+0x00042A9A	0x00000023	[ 11] literal string: ARSTREAM2_RTPH264_Sender_FifoFlush
+0x00042ABD	0x0000001B	[ 11] literal string: Flushed %d NALUs from FIFO
+0x00042AD8	0x00000022	[ 11] literal string: ARSTREAM2_RTPH264_Sender_NaluDrop
+0x00042AFA	0x0000002E	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_PacketFifoToAuFifo
+0x00042B28	0x0000002B	[ 11] literal string: ARSTREAM2_RTCP_LossReportSet() failed (%d)
+0x00042B53	0x00000037	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_DropFuAPacket() failed (%d)
+0x00042B8A	0x00000021	[ 11] literal string: Failed to output the access unit
+0x00042BAB	0x00000026	[ 11] literal string: Invalid access unit callback function
+0x00042BD1	0x0000003D	[ 11] literal string: Access unit FIFO is full => flush to recover (%d AU flushed)
+0x00042C0E	0x00000039	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_BeginFuAPackets() failed (%d)
+0x00042C47	0x0000003B	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_AppendPacketToFuA() failed (%d)
+0x00042C82	0x0000003A	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_FinishFuAPackets() failed (%d)
+0x00042CBC	0x0000003A	[ 11] literal string: Invalid payload size (%d) for FU-A packet at extSeqNum %d
+0x00042CF6	0x00000035	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_StapAPacket() failed (%d)
+0x00042D2B	0x0000003C	[ 11] literal string: Invalid payload size (%d) for STAP-A packet at extSeqNum %d
+0x00042D67	0x0000003A	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_SingleNaluPacket() failed (%d)
+0x00042DA1	0x00000035	[ 11] literal string: Invalid payload size (%d) for packet at extSeqNum %d
+0x00042DD6	0x00000023	[ 11] literal string: Failed to unref packet buffer (%d)
+0x00042DF9	0x00000031	[ 11] literal string: Failed to push free item in the packet FIFO (%d)
+0x00042E2A	0x00000023	[ 11] literal string: Failed to dequeue packet from FIFO
+0x00042E4D	0x00000022	[ 11] literal string: ARSTREAM2_RTPH264_FifoDequeueNalu
+0x00042E6F	0x0000001C	[ 11] literal string: Failed to dequeue FIFO item
+0x00042E8B	0x00000024	[ 11] literal string: ARSTREAM2_RTPH264_Sender_FuAPackets
+0x00042EAF	0x0000004B	[ 11] literal string: RTP extension header size error: expected %d bytes, got length of %d bytes
+0x00042EFA	0x00000033	[ 11] literal string: Header extension size exceeds max packet size (%d)
+0x00042F2D	0x0000002A	[ 11] literal string: Payload size exceeds max packet size (%d)
+0x00042F57	0x0000003D	[ 11] literal string: Packet FIFO is full => flush to recover (%d packets flushed)
+0x00042F94	0x00000040	[ 11] literal string: Time %llu: FU-A, packetSize + 2 > maxPacketSize (packetSize=%d)
+0x00042FD4	0x0000002A	[ 11] literal string: ARSTREAM2_RTPH264_Sender_SingleNaluPacket
+0x00042FFE	0x0000002A	[ 11] literal string: ARSTREAM2_RTPH264_Sender_BeginStapAPacket
+0x00043028	0x0000002D	[ 11] literal string: ARSTREAM2_RTPH264_Sender_AppendToStapAPacket
+0x00043055	0x0000002A	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_DropFuAPackets
+0x0004307F	0x0000002B	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_BeginFuAPackets
+0x000430AA	0x0000002D	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_AppendPacketToFuA
+0x000430D7	0x0000002C	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_FinishFuAPackets
+0x00043103	0x00000027	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_StapAPacket
+0x0004312A	0x0000002C	[ 11] literal string: ARSTREAM2_RTPH264_Receiver_SingleNaluPacket
+0x00043156	0x0000001D	[ 12] literal string: ARSTREAM2_RTCP_GetPacketType
+0x00043173	0x0000000F	[ 12] literal string: ARSTREAM2_Rtcp
+0x00043182	0x00000019	[ 12] literal string: Invalid buffer size (%d)
+0x0004319B	0x00000023	[ 12] literal string: Invalid RTCP protocol version (%d)
+0x000431BE	0x00000039	[ 12] literal string: Invalid length (%d -> %d bytes) for %d bytes buffer size
+0x000431F7	0x0000002C	[ 12] literal string: ARSTREAM2_RTCP_Sender_ProcessReceiverReport
+0x00043223	0x00000014	[ 12] literal string: Invalid buffer size
+0x00043237	0x0000002E	[ 12] literal string: Invalid receiver report protocol version (%d)
+0x00043265	0x00000029	[ 12] literal string: Invalid receiver report packet type (%d)
+0x0004328E	0x00000028	[ 12] literal string: Unsupported reception report count (%d)
+0x000432B6	0x0000001F	[ 12] literal string: Invalid receiver report length
+0x000432D5	0x00000019	[ 12] literal string: Unexpected receiver SSRC
+0x000432EE	0x00000017	[ 12] literal string: Unexpected sender SSRC
+0x00043305	0x0000002B	[ 12] literal string: ARSTREAM2_RTCP_Sender_GenerateSenderReport
+0x00043330	0x0000002C	[ 12] literal string: ARSTREAM2_RTCP_Receiver_ProcessSenderReport
+0x0004335C	0x0000002C	[ 12] literal string: Invalid sender report protocol version (%d)
+0x00043388	0x00000027	[ 12] literal string: Invalid sender report packet type (%d)
+0x000433AF	0x0000001D	[ 12] literal string: Invalid sender report length
+0x000433CC	0x00000038	[ 12] literal string: Out of order or duplicate sender report (%llu vs. %llu)
+0x00043404	0x0000002F	[ 12] literal string: ARSTREAM2_RTCP_Receiver_GenerateReceiverReport
+0x00043433	0x0000001A	[ 12] literal string: No sender report received
+0x0004344D	0x00000029	[ 12] literal string: ARSTREAM2_RTCP_GenerateSourceDescription
+0x00043476	0x00000018	[ 12] literal string: Invalid SDES item count
+0x0004348E	0x0000001D	[ 12] literal string: Buffer is too small for SDES
+0x000434AB	0x00000028	[ 12] literal string: ARSTREAM2_RTCP_ProcessSourceDescription
+0x000434D3	0x0000001C	[ 12] literal string: Invalid SDES item max count
+0x000434EF	0x00000031	[ 12] literal string: Invalid source description protocol version (%d)
+0x00043520	0x0000002C	[ 12] literal string: Invalid source description packet type (%d)
+0x0004354C	0x00000029	[ 12] literal string: Invalid source description packet length
+0x00043575	0x0000001F	[ 12] literal string: ARSTREAM2_RTCP_LossReportReset
+0x00043594	0x0000001D	[ 12] literal string: ARSTREAM2_RTCP_LossReportSet
+0x000435B1	0x00000036	[ 12] literal string: Loss report packet count is too large (%d), resetting
+0x000435E7	0x00000026	[ 12] literal string: ARSTREAM2_RTCP_GenerateExtendedReport
+0x0004360D	0x0000001B	[ 12] literal string: Buffer is too small for XR
+0x00043628	0x00000025	[ 12] literal string: ARSTREAM2_RTCP_ProcessExtendedReport
+0x0004364D	0x00000035	[ 12] literal string: Invalid extended report packet protocol version (%d)
+0x00043682	0x00000029	[ 12] literal string: Invalid extended report packet type (%d)
+0x000436AB	0x00000015	[ 12] literal string: Unexpected peer SSRC
+0x000436C0	0x0000002B	[ 12] literal string: Invalid extended report packet length (%d)
+0x000436EB	0x0000001A	[ 12] literal string: Thinning is not supported
+0x00043705	0x00000043	[ 12] literal string: Invalid length (%d -> %d bytes) for %d bytes remaining buffer size
+0x00043748	0x00000023	[ 12] literal string: Invalid loss RLE block length (%d)
+0x0004376B	0x00000028	[ 12] literal string: Word count is too large (%d), resetting
+0x00043793	0x00000025	[ 12] literal string: Invalid DJB report block length (%d)
+0x000437B8	0x0000002B	[ 12] literal string: ARSTREAM2_RTCP_GetApplicationPacketSubtype
+0x000437E3	0x00000031	[ 12] literal string: Invalid application packet protocol version (%d)
+0x00043814	0x00000025	[ 12] literal string: Invalid application packet type (%d)
+0x00043839	0x00000029	[ 12] literal string: Invalid application packet name (0x%08X)
+0x00043862	0x00000022	[ 12] literal string: Invalid application packet length
+0x00043884	0x0000002D	[ 12] literal string: ARSTREAM2_RTCP_GenerateApplicationClockDelta
+0x000438B1	0x0000002C	[ 12] literal string: ARSTREAM2_RTCP_ProcessApplicationClockDelta
+0x000438DD	0x00000028	[ 12] literal string: Invalid application packet subtype (%d)
+0x00043905	0x00000027	[ 12] literal string: Invalid application packet length (%d)
+0x0004392C	0x0000002D	[ 12] literal string: ARSTREAM2_RTCP_GenerateApplicationVideoStats
+0x00043959	0x00000014	[ 12] literal string: Invalid class count
+0x0004396D	0x00000013	[ 12] literal string: Invalid zone count
+0x00043980	0x00000024	[ 12] literal string: Buffer is too small for video stats
+0x000439A4	0x0000002C	[ 12] literal string: ARSTREAM2_RTCP_ProcessApplicationVideoStats
+0x000439D0	0x0000001F	[ 12] literal string: Unexpected video stats version
+0x000439EF	0x00000025	[ 12] literal string: Invalid video stats class count (%d)
+0x00043A14	0x00000024	[ 12] literal string: Invalid video stats zone count (%d)
+0x00043A38	0x0000002D	[ 12] literal string: ARSTREAM2_RTCP_Sender_GenerateCompoundPacket
+0x00043A65	0x00000018	[ 12] literal string: Invalid max packet size
+0x00043A7D	0x00000026	[ 12] literal string: Failed to generate sender report (%d)
+0x00043AA3	0x0000002B	[ 12] literal string: Failed to generate source description (%d)
+0x00043ACE	0x00000038	[ 12] literal string: Failed to generate application defined clock delta (%d)
+0x00043B06	0x0000002F	[ 12] literal string: ARSTREAM2_RTCP_Receiver_GenerateCompoundPacket
+0x00043B35	0x00000028	[ 12] literal string: Failed to generate receiver report (%d)
+0x00043B5D	0x00000028	[ 12] literal string: Failed to generate extended report (%d)
+0x00043B85	0x00000038	[ 12] literal string: Failed to generate application defined video stats (%d)
+0x00043BBD	0x0000002C	[ 12] literal string: ARSTREAM2_RTCP_Sender_ProcessCompoundPacket
+0x00043BE9	0x00000027	[ 12] literal string: Failed to process receiver report (%d)
+0x00043C10	0x00000027	[ 12] literal string: Failed to process extended report (%d)
+0x00043C37	0x0000002A	[ 12] literal string: Failed to process source description (%d)
+0x00043C61	0x0000002F	[ 12] literal string: Failed to process application clock delta (%d)
+0x00043C90	0x0000002F	[ 12] literal string: Failed to process application video stats (%d)
+0x00043CBF	0x0000002E	[ 12] literal string: ARSTREAM2_RTCP_Receiver_ProcessCompoundPacket
+0x00043CED	0x00000025	[ 12] literal string: Failed to process sender report (%d)
+0x00043D12	0x0000001E	[ 13] literal string: ARSTREAM2_StreamRecorder_Init
+0x00043D30	0x00000019	[ 13] literal string: ARSTREAM2_StreamRecorder
+0x00043D49	0x00000018	[ 13] literal string: Invalid media file name
+0x00043D61	0x00000005	[ 13] literal string: .mp4
+0x00043D66	0x00000005	[ 13] literal string: .264
+0x00043D6B	0x00000006	[ 13] literal string: .h264
+0x00043D71	0x00000022	[ 13] literal string: Invalid media file name extension
+0x00043D93	0x0000000C	[ 13] literal string: Invalid SPS
+0x00043D9F	0x0000000C	[ 13] literal string: Invalid PPS
+0x00043DAB	0x00000010	[ 13] literal string: Invalid AU FIFO
+0x00043DBB	0x00000016	[ 13] literal string: Invalid AU FIFO queue
+0x00043DD1	0x0000000E	[ 13] literal string: Invalid mutex
+0x00043DDF	0x0000000D	[ 13] literal string: Invalid cond
+0x00043DEC	0x0000002E	[ 13] literal string: ARMEDIA_VideoEncapsuler_New() failed: %d (%s)
+0x00043E1A	0x0000003E	[ 13] literal string: ARMEDIA_VideoEncapsuler_SetAvcParameterSets() failed: %d (%s)
+0x00043E58	0x00000003	[ 13] literal string: wb
+0x00043E5B	0x00000019	[ 13] literal string: Failed to open file '%s'
+0x00043E74	0x0000001E	[ 13] literal string: ARSTREAM2_StreamRecorder_Free
+0x00043E92	0x00000012	[ 13] literal string: Thread is stopped
+0x00043EA4	0x00000040	[ 13] literal string: Call ARSTREAM2_StreamRecorder_Stop before calling this function
+0x00043EE4	0x0000001E	[ 13] literal string: ARSTREAM2_StreamRecorder_Stop
+0x00043F02	0x0000001C	[ 13] literal string: Stopping stream recorder...
+0x00043F1E	0x0000002C	[ 13] literal string: ARSTREAM2_StreamRecorder_SetUntimedMetadata
+0x00043F4A	0x00000011	[ 13] literal string: Invalid metadata
+0x00043F5B	0x0000003D	[ 13] literal string: ARMEDIA_VideoEncapsuler_SetUntimedMetadata() failed: %d (%s)
+0x00043F98	0x00000023	[ 13] literal string: ARSTREAM2_StreamRecorder_RunThread
+0x00043FBB	0x0000001F	[ 13] literal string: Stream recorder thread running
+0x00043FDA	0x0000002D	[ 13] literal string: Metadata buffer allocation failed (size: %d)
+0x00044007	0x00000038	[ 13] literal string: application/octet-stream;type=com.parrot.videometadata1
+0x0004403F	0x00000038	[ 13] literal string: application/octet-stream;type=com.parrot.videometadata2
+0x00044077	0x0000003A	[ 13] literal string: ARMEDIA_VideoEncapsuler_SetMetadataInfo() failed: %d (%s)
+0x000440B1	0x00000043	[ 13] literal string: ARSTREAM2_StreamRecorder_StreamingToRecordingMetadata() failed: %d
+0x000440F4	0x00000033	[ 13] literal string: ARMEDIA_VideoEncapsuler_AddFrame() failed: %d (%s)
+0x00044127	0x00000021	[ 13] literal string: Stream recorder thread has ended
+0x00044148	0x0000000B	[ 14] literal string: videostats
+0x00044153	0x00000029	[ 14] literal string: ARSTREAM2_StreamStats_VideoStatsFileOpen
+0x0004417C	0x00000016	[ 14] literal string: ARSTREAM2_StreamStats
+0x00044192	0x0000002C	[ 14] literal string: Unable to open video stats output file '%s'
+0x000441BE	0x00000024	[ 14] literal string: Opened video stats output file '%s'
+0x000441E2	0x00000004	[ 14] literal string: %s 
+0x000441E6	0x00000024	[ 14] literal string: Video stats output file title: '%s'
+0x0004420A	0x00000006	[ 14] literal string: # %s\n
+0x00044210	0x0000006D	[ 14] literal string: timestamp rssi totalFrameCount outputFrameCount erroredOutputFrameCount discardedFrameCount missedFrameCount
+0x0004427D	0x000000A2	[ 14] literal string:  timestampDeltaIntegral timestampDeltaIntegralSq timingErrorIntegral timingErrorIntegralSq estimatedLatencyIntegral estimatedLatencyIntegralSq erroredSecondCount
+0x0004431F	0x0000001E	[ 14] literal string:  erroredSecondCountByZone[%d]
+0x0004433D	0x0000001A	[ 14] literal string:  macroblockStatus[%d][%d]
+0x00044357	0x0000001C	[ 14] literal string: %llu %i %lu %lu %lu %lu %lu
+0x00044373	0x00000023	[ 14] literal string:  %llu %llu %llu %llu %llu %llu %lu
+0x00044396	0x00000005	[ 14] literal string:  %lu
+0x0004439B	0x00000009	[ 14] literal string: rtpstats
+0x000443A4	0x00000027	[ 14] literal string: ARSTREAM2_StreamStats_RtpStatsFileOpen
+0x000443CB	0x0000002A	[ 14] literal string: Unable to open RTP stats output file '%s'
+0x000443F5	0x00000022	[ 14] literal string: Opened RTP stats output file '%s'
+0x00044417	0x00000022	[ 14] literal string: RTP stats output file title: '%s'
+0x00044439	0x00000005	[ 14] literal string: rssi
+0x0004443E	0x00000089	[ 14] literal string:  senderStatsTimestamp senderStatsSentPacketCount senderStatsDroppedPacketCount senderStatsSentByteIntegral senderStatsSentByteIntegralSq
+0x000444C7	0x000000D7	[ 14] literal string:  senderStatsDroppedByteIntegral senderStatsDroppedByteIntegralSq senderStatsInputToSentTimeIntegral senderStatsInputToSentTimeIntegralSq senderStatsInputToDroppedTimeIntegral senderStatsInputToDroppedTimeIntegralSq
+0x0004459E	0x0000006E	[ 14] literal string:  senderReportTimestamp senderReportLastInterval senderReportIntervalPacketCount senderReportIntervalByteCount
+0x0004460C	0x000000C1	[ 14] literal string:  receiverReportTimestamp receiverReportRoundTripDelay receiverReportInterarrivalJitter receiverReportReceiverLostCount receiverReportReceiverFractionLost receiverReportReceiverExtHighestSeqNum
+0x000446CD	0x0000008E	[ 14] literal string:  djbMetricsReportTimestamp djbMetricsReportDjbNominal djbMetricsReportDjbMax djbMetricsReportDjbHighWatermark djbMetricsReportDjbLowWatermark
+0x0004475B	0x00000057	[ 14] literal string:  peerClockDelta clockDeltaRoundTripDelay clockDeltaPeer2meDelay clockDeltaMe2peerDelay
+0x000447B2	0x00000003	[ 14] literal string: %i
+0x000447B5	0x00000036	[ 14] literal string:  %llu %lu %lu %llu %llu %llu %llu %llu %llu %llu %llu
+0x000447EB	0x00000012	[ 14] literal string:  %llu %lu %lu %lu
+0x000447FD	0x0000001A	[ 14] literal string:  %llu %lu %lu %lu %lu %lu
+0x00044817	0x0000001D	[ 14] literal string:  %llu %i %lu %lu %lu %lu %lu
+0x00044834	0x00000016	[ 14] literal string:  %llu %lu %lu %lu %lu
+0x0004484A	0x00000012	[ 14] literal string:  %lld %lu %lu %lu
+0x0004485C	0x00000008	[ 14] literal string: rtploss
+0x00044864	0x00000026	[ 14] literal string: ARSTREAM2_StreamStats_RtpLossFileOpen
+0x0004488A	0x00000029	[ 14] literal string: Unable to open RTP loss output file '%s'
+0x000448B3	0x00000021	[ 14] literal string: Opened RTP loss output file '%s'
+0x000448D4	0x00000021	[ 14] literal string: RTP loss output file title: '%s'
+0x000448F5	0x0000002D	[ 14] literal string: timestamp startSeqNum endSeqNum receivedFlag
+0x00044922	0x0000000C	[ 14] literal string: %llu %u %u 
+0x0004492E	0x0000001C	[ 15] literal string: ARSTREAM2_StreamSender_Init
+0x0004494A	0x00000017	[ 15] literal string: ARSTREAM2_StreamSender
+0x00044961	0x0000000C	[ 15] literal string: %FT%H%M%S%z
+0x0004496D	0x0000002F	[ 15] literal string: ARSTREAM2_RTP_PacketFifoAddQueue() failed (%d)
+0x0004499C	0x00000021	[ 15] literal string: Error while creating sender : %s
+0x000449BD	0x0000001C	[ 15] literal string: ARSTREAM2_StreamSender_Stop
+0x000449D9	0x00000002	[ 15] literal string: x
+0x000449DB	0x0000001C	[ 15] literal string: ARSTREAM2_StreamSender_Free
+0x000449F7	0x0000001C	[ 15] literal string: Unable to delete sender: %s
+0x00044A13	0x00000040	[ 15] literal string: Call ARSTREAM2_StreamSender_Stop() before calling this function
+0x00044A53	0x00000024	[ 15] literal string: ARSTREAM2_StreamSender_SendNNewNalu
+0x00044A77	0x00000026	[ 15] literal string: ARSTREAM2_StreamSender_FlushNaluQueue
+0x00044A9D	0x00000021	[ 15] literal string: ARSTREAM2_StreamSender_RunThread
+0x00044ABE	0x00000016	[ 15] literal string: Sender thread running
+0x00044AD4	0x00000032	[ 15] literal string: ARSTREAM2_RtpSender_GetSelectParams() failed (%d)
+0x00044B06	0x00000016	[ 15] literal string: Select error (%d): %s
+0x00044B1C	0x0000002E	[ 15] literal string: ARSTREAM2_RtpSender_ProcessRtcp() failed (%d)
+0x00044B4A	0x0000002D	[ 15] literal string: ARSTREAM2_RtpSender_ProcessRtp() failed (%d)
+0x00044B77	0x00000022	[ 15] literal string: Failed to read from pipe (%d): %s
+0x00044B99	0x00000014	[ 15] literal string: Sender thread ended
+0x00044BAD	0x00000028	[ 15] literal string: ARSTREAM2_StreamSender_GetDynamicConfig
+0x00044BD5	0x0000000F	[ 15] literal string: Invalid config
+0x00044BE4	0x00000028	[ 15] literal string: ARSTREAM2_StreamSender_SetDynamicConfig
+0x00044C0C	0x0000002A	[ 15] literal string: ARSTREAM2_StreamSender_GetUntimedMetadata
+0x00044C36	0x0000000B	[ 15] literal string: %lf,%lf,%f
+0x00044C41	0x0000000D	[ 15] literal string: picture_hfov
+0x00044C4E	0x00000003	[ 15] literal string: %f
+0x00044C51	0x0000000D	[ 15] literal string: picture_vfov
+0x00044C5E	0x00000009	[ 15] literal string: run_date
+0x00044C67	0x00000007	[ 15] literal string: run_id
+0x00044C6E	0x00000006	[ 15] literal string: maker
+0x00044C74	0x00000006	[ 15] literal string: model
+0x00044C7A	0x00000009	[ 15] literal string: model_id
+0x00044C83	0x00000009	[ 15] literal string: build_id
+0x00044C8C	0x00000006	[ 15] literal string: title
+0x00044C92	0x00000008	[ 15] literal string: comment
+0x00044C9A	0x0000000A	[ 15] literal string: copyright
+0x00044CA4	0x0000002A	[ 15] literal string: ARSTREAM2_StreamSender_SetUntimedMetadata
+0x00044CCE	0x0000000F	[ 15] literal string: %.8f,%.8f,%.8f
+0x00044CDD	0x00000005	[ 15] literal string: %.2f
+0x00044CE2	0x0000002E	[ 15] literal string: ARSTREAM2_StreamSender_GetPeerUntimedMetadata
+0x00044D10	0x00000025	[ 15] literal string: ARSTREAM2_StreamSender_GetMonitoring
+0x00044D35	0x0000002A	[ 15] literal string: ARSTREAM2_StreamSender_VideoStatsCallback
+0x00044D5F	0x0000001E	[ 16] literal string: ARSTREAM2_StreamReceiver_Init
+0x00044D7D	0x00000019	[ 16] literal string: ARSTREAM2_StreamReceiver
+0x00044D96	0x00000016	[ 16] literal string: No net nor mux config
+0x00044DAC	0x00000021	[ 16] literal string: Both net and mux config provided
+0x00044DCD	0x0000001A	[ 16] literal string: Cond creation failed (%d)
+0x00044DE7	0x00000028	[ 16] literal string: ARSTREAM2_H264_AuFifoInit() failed (%d)
+0x00044E0F	0x00000023	[ 16] literal string: Error while creating receiver : %s
+0x00044E32	0x00000024	[ 16] literal string: Error while creating H264Filter: %s
+0x00044E56	0x0000001E	[ 16] literal string: ARSTREAM2_StreamReceiver_Free
+0x00044E74	0x0000004B	[ 16] literal string: Call ARSTREAM2_StreamReceiver_StopAppOutput() before calling this function
+0x00044EBF	0x00000042	[ 16] literal string: Call ARSTREAM2_StreamReceiver_Stop() before calling this function
+0x00044F01	0x0000003A	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderFree() failed (%d)
+0x00044F3B	0x0000001E	[ 16] literal string: Unable to delete receiver: %s
+0x00044F59	0x00000020	[ 16] literal string: Unable to delete H264Filter: %s
+0x00044F79	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_RunAppOutputThread
+0x00044FA5	0x0000001A	[ 16] literal string: App output thread running
+0x00044FBF	0x00000032	[ 16] literal string: ARSTREAM2_H264Filter_GetVideoParams() failed (%d)
+0x00044FF1	0x0000001F	[ 16] literal string: getAuBufferCallback failed: %s
+0x00045010	0x00000035	[ 16] literal string: ARSTREAM2_RtpReceiver_UpdateVideoStats() failed (%d)
+0x00045045	0x0000001B	[ 16] literal string: auReadyCallback failed: %s
+0x00045060	0x0000001C	[ 16] literal string: App output thread has ended
+0x0004507C	0x0000002A	[ 16] literal string: ARSTREAM2_StreamReceiver_RunNetworkThread
+0x000450A6	0x00000018	[ 16] literal string: Receiver thread running
+0x000450BE	0x00000034	[ 16] literal string: ARSTREAM2_RtpReceiver_GetSelectParams() failed (%d)
+0x000450F2	0x00000030	[ 16] literal string: ARSTREAM2_RtpReceiver_ProcessRtcp() failed (%d)
+0x00045122	0x0000002F	[ 16] literal string: ARSTREAM2_RtpReceiver_ProcessRtp() failed (%d)
+0x00045151	0x0000002F	[ 16] literal string: ARSTREAM2_RtpReceiver_ProcessEnd() failed (%d)
+0x00045180	0x0000001A	[ 16] literal string: Receiver thread has ended
+0x0004519A	0x00000028	[ 16] literal string: ARSTREAM2_StreamReceiver_StartAppOutput
+0x000451C2	0x0000002D	[ 16] literal string: Invalid getAuBufferCallback function pointer
+0x000451EF	0x00000029	[ 16] literal string: Invalid auReadyCallback function pointer
+0x00045218	0x00000026	[ 16] literal string: Application output is already running
+0x0004523E	0x0000002C	[ 16] literal string: ARSTREAM2_H264_AuFifoAddQueue() failed (%d)
+0x0004526A	0x00000024	[ 16] literal string: Application SPS/PPS callback failed
+0x0004528E	0x00000016	[ 16] literal string: App output is running
+0x000452A4	0x00000027	[ 16] literal string: ARSTREAM2_StreamReceiver_StopAppOutput
+0x000452CB	0x0000002F	[ 16] literal string: ARSTREAM2_H264_AuFifoRemoveQueue() failed (%d)
+0x000452FA	0x00000016	[ 16] literal string: App output is stopped
+0x00045310	0x0000001E	[ 16] literal string: ARSTREAM2_StreamReceiver_Stop
+0x0004532E	0x00000015	[ 16] literal string: Stopping receiver...
+0x00045343	0x0000003A	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderStop() failed (%d)
+0x0004537D	0x00000023	[ 16] literal string: ARSTREAM2_StreamReceiver_GetSpsPps
+0x000453A0	0x00000016	[ 16] literal string: Invalid size pointers
+0x000453B6	0x00000008	[ 16] literal string: No sync
+0x000453BE	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_GetUntimedMetadata
+0x000453EA	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_SetUntimedMetadata
+0x00045416	0x0000000F	[ 16] literal string: %.8f,%.8f,%.2f
+0x00045425	0x00000030	[ 16] literal string: ARSTREAM2_StreamReceiver_GetPeerUntimedMetadata
+0x00045455	0x00000027	[ 16] literal string: ARSTREAM2_StreamReceiver_StartResender
+0x0004547C	0x0000001D	[ 16] literal string: Invalid pointer for resender
+0x00045499	0x00000026	[ 16] literal string: ARSTREAM2_StreamReceiver_StopResender
+0x000454BF	0x00000018	[ 16] literal string: Invalid receiver handle
+0x000454D7	0x0000002D	[ 16] literal string: ARSTREAM2_RtpSender_ProcessEnd() failed (%d)
+0x00045504	0x00000027	[ 16] literal string: ARSTREAM2_StreamReceiver_StartRecorder
+0x0004552B	0x00000019	[ 16] literal string: Invalid record file name
+0x00045544	0x0000001C	[ 16] literal string: Recorder is already started
+0x00045560	0x00000019	[ 16] literal string: String allocation failed
+0x00045579	0x0000003A	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderInit() failed (%d)
+0x000455B3	0x00000026	[ 16] literal string: ARSTREAM2_StreamReceiver_StopRecorder
+0x000455D9	0x00000015	[ 16] literal string: Recorder not started
+0x000455EE	0x0000002F	[ 16] literal string: ARSTREAM2_StreamReceiver_RtpReceiverAuCallback
+0x0004561D	0x0000003A	[ 16] literal string: ARSTREAM2_StreamReceiver_AppOutputAuEnqueue() failed (%d)
+0x00045657	0x00000039	[ 16] literal string: ARSTREAM2_StreamReceiver_RecorderAuEnqueue() failed (%d)
+0x00045690	0x0000002D	[ 16] literal string: ARSTREAM2_H264Filter_ProcessAu() failed (%d)
+0x000456BD	0x0000002E	[ 16] literal string: ARSTREAM2_StreamReceiver_GenerateGrayIdrFrame
+0x000456EB	0x00000052	[ 16] literal string: AU FIFO is full, cannot generate gray I-frame => flush to recover (%d AU flushed)
+0x0004573D	0x0000003D	[ 16] literal string: ARSTREAM2_H264FilterError_GenerateGrayIdrFrame() failed (%d)
+0x0004577A	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_AppOutputAuEnqueue
+0x000457A6	0x00000030	[ 16] literal string: ARSTREAM2_H264_AuFifoBufferAddRef() failed (%d)
+0x000457D6	0x0000002F	[ 16] literal string: ARSTREAM2_H264_AuFifoEnqueueItem() failed (%d)
+0x00045805	0x0000002B	[ 16] literal string: ARSTREAM2_StreamReceiver_RecorderAuEnqueue
+0x00045830	0x00000032	[ 16] literal string: ARSTREAM2_StreamReceiver_H264FilterSpsPpsCallback
+0x00045862	0x00000036	[ 16] literal string: ARSTREAM2_H264Filter_StreamRecorderInit() failed (%d)
+0x00045898	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderFree
+0x000458C4	0x0000002C	[ 16] literal string: Stream recorder is not stopped, cannot free
+0x000458F0	0x00000020	[ 16] literal string: ARSAL_Thread_Join() failed (%d)
+0x00045910	0x00000023	[ 16] literal string: ARSAL_Thread_Destroy() failed (%d)
+0x00045933	0x00000030	[ 16] literal string: ARSTREAM2_StreamRecorder_Free() failed (%d): %s
+0x00045963	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderStop
+0x0004598F	0x00000042	[ 16] literal string: ARSTREAM2_StreamReceiver_GetPeerUntimedMetadata() failed: %d (%s)
+0x000459D1	0x0000003E	[ 16] literal string: ARSTREAM2_StreamRecorder_SetUntimedMetadata() failed: %d (%s)
+0x00045A0F	0x00000030	[ 16] literal string: ARSTREAM2_StreamRecorder_Stop() failed: %d (%s)
+0x00045A3F	0x0000002C	[ 16] literal string: ARSTREAM2_StreamReceiver_StreamRecorderInit
+0x00045A6B	0x00000030	[ 16] literal string: ARSTREAM2_StreamRecorder_Init() failed (%d): %s
+0x00045A9B	0x00000025	[ 16] literal string: Recorder thread creation failed (%d)
+0x00045AC0	0x00000009	[ 16] literal string: videorec
+0x00045AC9	0x00000004	[ 16] literal string: mp4
+0x00045ACD	0x0000002B	[ 16] literal string: ARSTREAM2_StreamReceiver_AutoStartRecorder
+0x00045AF8	0x00000030	[ 16] literal string: Auto record failed: recorder is already started
+0x00045B28	0x0000002D	[ 16] literal string: Auto record failed: string allocation failed
+0x00045B55	0x0000004E	[ 16] literal string: Auto record failed: ARSTREAM2_StreamReceiver_StreamRecorderInit() failed (%d)
+0x00045BA3	0x00000020	[ 16] literal string: Auto record started (file '%s')
+0x00045BD0	0x00000010	[  2] 16-byte-literal
+0x00045BE0	0x00000004	[  2] 4-byte-literal
+0x00045BF0	0x00000010	[  3] 16-byte-literal
+0x00045C00	0x00000008	[  4] 8-byte-literal
+0x00045C10	0x00000040	[  4] _ARSTREAM2_H264Parser_picStructToNumClockTS
+0x00045C50	0x00000010	[  5] 16-byte-literal
+0x00045C60	0x00000010	[  5] 16-byte-literal
+0x00045C70	0x00000010	[  5] 16-byte-literal
+0x00045C80	0x00000008	[  8] 8-byte-literal
+0x00045C88	0x00000008	[  8] 8-byte-literal
+0x00045C90	0x00000010	[  8] 16-byte-literal
+0x00045CA0	0x00000010	[  8] 16-byte-literal
+0x00045CB0	0x00000010	[  8] 16-byte-literal
+0x00045CC0	0x00000010	[  8] 16-byte-literal
+0x00045CD0	0x00000010	[  8] 16-byte-literal
+0x00045CE0	0x00000008	[  9] 8-byte-literal
+0x00045CE8	0x00000008	[  9] 8-byte-literal
+0x00045CF0	0x00000008	[  9] 8-byte-literal
+0x00045D00	0x00000010	[ 10] 16-byte-literal
+0x00045D10	0x00000004	[ 10] 4-byte-literal
+0x00045D18	0x00000008	[ 11] 8-byte-literal
+0x00045D20	0x00000010	[ 12] 16-byte-literal
+0x00045D30	0x00000010	[ 12] 16-byte-literal
+0x00045D40	0x00000008	[ 12] 8-byte-literal
+0x00045D50	0x00000010	[ 15] 16-byte-literal
+0x00045D60	0x00000008	[ 15] 8-byte-literal
+0x00045D68	0x00000290	[  0] compact unwind info
+0x00046000	0x00000008	[  0] non-lazy-pointer-to-local: dyld_stub_binder
+0x00046008	0x00000008	[  0] non-lazy-pointer
+0x00046010	0x00000008	[  0] non-lazy-pointer-to-local: ___stack_chk_guard
+0x00046018	0x00000008	[ 20] _ARMEDIA_Error_ToString
+0x00046020	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_AddFrame
+0x00046028	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_Finish
+0x00046030	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_New
+0x00046038	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_SetAvcParameterSets
+0x00046040	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_SetMetadataInfo
+0x00046048	0x00000008	[ 20] _ARMEDIA_VideoEncapsuler_SetUntimedMetadata
+0x00046050	0x00000008	[ 17] _ARSAL_Cond_Destroy
+0x00046058	0x00000008	[ 17] _ARSAL_Cond_Init
+0x00046060	0x00000008	[ 17] _ARSAL_Cond_Signal
+0x00046068	0x00000008	[ 17] _ARSAL_Cond_Timedwait
+0x00046070	0x00000008	[ 17] _ARSAL_Cond_Wait
+0x00046078	0x00000008	[ 17] _ARSAL_Mutex_Destroy
+0x00046080	0x00000008	[ 17] _ARSAL_Mutex_Init
+0x00046088	0x00000008	[ 17] _ARSAL_Mutex_Lock
+0x00046090	0x00000008	[ 17] _ARSAL_Mutex_Unlock
+0x00046098	0x00000008	[ 17] _ARSAL_Print_PrintRawEx
+0x000460A0	0x00000008	[ 17] _ARSAL_Socket_Setsockopt
+0x000460A8	0x00000008	[ 17] _ARSAL_Thread_Create
+0x000460B0	0x00000008	[ 17] _ARSAL_Thread_Destroy
+0x000460B8	0x00000008	[ 17] _ARSAL_Thread_Join
+0x000460C0	0x00000008	[ 17] _ARSAL_Time_GetTime
+0x000460C8	0x00000008	[ 21] ___bzero
+0x000460D0	0x00000008	[ 21] ___error
+0x000460D8	0x00000008	[ 21] ___memcpy_chk
+0x000460E0	0x00000008	[ 21] ___snprintf_chk
+0x000460E8	0x00000008	[ 21] ___stack_chk_fail
+0x000460F0	0x00000008	[ 21] _access
+0x000460F8	0x00000008	[ 21] _atoi
+0x00046100	0x00000008	[ 21] _bind
+0x00046108	0x00000008	[ 21] _ceil
+0x00046110	0x00000008	[ 21] _close
+0x00046118	0x00000008	[ 21] _fclose
+0x00046120	0x00000008	[ 21] _fcntl
+0x00046128	0x00000008	[ 21] _fflush
+0x00046130	0x00000008	[ 21] _fileno
+0x00046138	0x00000008	[ 21] _fopen
+0x00046140	0x00000008	[ 21] _fprintf
+0x00046148	0x00000008	[ 21] _fputc
+0x00046150	0x00000008	[ 21] _fread
+0x00046158	0x00000008	[ 21] _free
+0x00046160	0x00000008	[ 21] _fseeko
+0x00046168	0x00000008	[ 21] _fsync
+0x00046170	0x00000008	[ 21] _ftello
+0x00046178	0x00000008	[ 21] _fwrite
+0x00046180	0x00000008	[ 21] _getsockopt
+0x00046188	0x00000008	[ 21] _inet_pton
+0x00046190	0x00000008	[ 21] _localtime_r
+0x00046198	0x00000008	[ 21] _log
+0x000461A0	0x00000008	[ 21] _malloc
+0x000461A8	0x00000008	[ 21] _memcpy
+0x000461B0	0x00000008	[ 21] _memset
+0x000461B8	0x00000008	[ 18] _mux_channel_alloc_queue
+0x000461C0	0x00000008	[ 18] _mux_channel_close
+0x000461C8	0x00000008	[ 18] _mux_channel_open
+0x000461D0	0x00000008	[ 18] _mux_encode
+0x000461D8	0x00000008	[ 18] _mux_queue_get_buf
+0x000461E0	0x00000008	[ 18] _mux_queue_try_get_buf
+0x000461E8	0x00000008	[ 18] _mux_ref
+0x000461F0	0x00000008	[ 18] _mux_unref
+0x000461F8	0x00000008	[ 21] _pipe
+0x00046200	0x00000008	[ 19] _pomp_buffer_get_cdata
+0x00046208	0x00000008	[ 19] _pomp_buffer_new_with_data
+0x00046210	0x00000008	[ 19] _pomp_buffer_unref
+0x00046218	0x00000008	[ 21] _rand
+0x00046220	0x00000008	[ 21] _read
+0x00046228	0x00000008	[ 21] _realloc
+0x00046230	0x00000008	[ 21] _recv
+0x00046238	0x00000008	[ 21] _recvfrom
+0x00046240	0x00000008	[ 21] _recvmsg
+0x00046248	0x00000008	[ 21] _roundf
+0x00046250	0x00000008	[ 21] _select$1050
+0x00046258	0x00000008	[ 21] _sendmsg
+0x00046260	0x00000008	[ 21] _sendto
+0x00046268	0x00000008	[ 21] _setsockopt
+0x00046270	0x00000008	[ 21] _socket
+0x00046278	0x00000008	[ 21] _srand
+0x00046280	0x00000008	[ 21] _sscanf
+0x00046288	0x00000008	[ 21] _strcasecmp
+0x00046290	0x00000008	[ 21] _strdup
+0x00046298	0x00000008	[ 21] _strerror
+0x000462A0	0x00000008	[ 21] _strftime
+0x000462A8	0x00000008	[ 21] _strlen
+0x000462B0	0x00000008	[ 21] _strncmp
+0x000462B8	0x00000008	[ 21] _strndup
+0x000462C0	0x00000008	[ 21] _time
+0x000462C8	0x00000008	[ 21] _write
+0x000462D0	0x00000058	[  1] l_switch.table
+0x00046330	0x00000100	[  4] _ARSTREAM2_H264Parser_naluTypeStr
+0x00046430	0x00000100	[  4] _ARSTREAM2_H264Parser_ParseNaluType
+0x00046530	0x00000050	[  4] _ARSTREAM2_H264Parser_sliceTypeStr
+
+# Dead Stripped Symbols:
+#        	Size    	File  Name
+<<dead>> 	0x00000018	[  1] CIE
+<<dead>> 	0x00000010	[  2] 16-byte-literal
+<<dead>> 	0x00000018	[  2] CIE
+<<dead>> 	0x0000001E	[  3] literal string: MB status buffer is too small
+<<dead>> 	0x00000033	[  3] literal string: ARSTREAM2_H264Parser_GetSliceContext() failed (%d)
+<<dead>> 	0x00000018	[  3] CIE
+<<dead>> 	0x00000008	[  4] 8-byte-literal
+<<dead>> 	0x0000000E	[  4] literal string: Invalid state
+<<dead>> 	0x00000010	[  4] literal string: Invalid pointer
+<<dead>> 	0x0000001B	[  4] literal string: Invalid pointer for handle
+<<dead>> 	0x0000001D	[  4] literal string: Allocation failed (size %zu)
+<<dead>> 	0x00000018	[  4] CIE
+<<dead>> 	0x00000010	[  5] 16-byte-literal
+<<dead>> 	0x00000018	[  5] CIE
+<<dead>> 	0x00000008	[  6] 8-byte-literal
+<<dead>> 	0x00000018	[  6] CIE
+<<dead>> 	0x00000010	[  7] literal string: Invalid pointer
+<<dead>> 	0x00000018	[  7] CIE
+<<dead>> 	0x00000010	[  8] literal string: Invalid pointer
+<<dead>> 	0x00000018	[  8] CIE
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000008	[  9] 8-byte-literal
+<<dead>> 	0x00000010	[  9] 16-byte-literal
+<<dead>> 	0x00000010	[  9] 16-byte-literal
+<<dead>> 	0x00000010	[  9] 16-byte-literal
+<<dead>> 	0x00000013	[  9] literal string: No config provided
+<<dead>> 	0x00000023	[  9] literal string: Config: no canonical name provided
+<<dead>> 	0x00000003	[  9] literal string: %s
+<<dead>> 	0x00000018	[  9] literal string: Invalid msgVecCount: %d
+<<dead>> 	0x0000001E	[  9] literal string: Memory allocation failed (%d)
+<<dead>> 	0x0000001B	[  9] literal string: Exception on stream socket
+<<dead>> 	0x0000001C	[  9] literal string: Exception on control socket
+<<dead>> 	0x0000002C	[  9] literal string: Failed to process compound RTCP packet (%d)
+<<dead>> 	0x00000056	[  9] literal string: Dropped %d RTCP packets out of %d (%.1f%%) on socket buffer full in last %.1f seconds
+<<dead>> 	0x0000002A	[  9] literal string: Failed to set the send socket buffer size
+<<dead>> 	0x0000001F	[  9] literal string: Failed to create stream socket
+<<dead>> 	0x00000023	[  9] literal string: Error on setsockopt: error=%d (%s)
+<<dead>> 	0x0000002D	[  9] literal string: Failed to set to non-blocking: error=%d (%s)
+<<dead>> 	0x0000001F	[  9] literal string: Failed to convert address '%s'
+<<dead>> 	0x0000001F	[  9] literal string: Invalid multicast address '%s'
+<<dead>> 	0x00000020	[  9] literal string: Failed to create control socket
+<<dead>> 	0x00000038	[  9] literal string: Failed to set socket option SO_REUSEADDR: error=%d (%s)
+<<dead>> 	0x00000034	[  9] literal string: Error on control socket bind port=%d: error=%d (%s)
+<<dead>> 	0x00000043	[  9] literal string: Failed to set socket send buffer size to 2*%d bytes: error=%d (%s)
+<<dead>> 	0x00000035	[  9] literal string: Failed to get socket send buffer size: error=%d (%s)
+<<dead>> 	0x00000026	[  9] literal string: Socket send buffer size is 2*%d bytes
+<<dead>> 	0x00000018	[  9] CIE
+<<dead>> 	0x00000010	[ 10] literal string: Invalid pointer
+<<dead>> 	0x0000001C	[ 10] literal string: Invalid item max count (%d)
+<<dead>> 	0x0000001E	[ 10] literal string: Invalid buffer max count (%d)
+<<dead>> 	0x00000022	[ 10] literal string: FIFO allocation failed (size %zu)
+<<dead>> 	0x00000017	[ 10] literal string: No free buffer in pool
+<<dead>> 	0x0000003A	[ 10] literal string: FIXME! Ref count is already null, this should not happen!
+<<dead>> 	0x00000029	[ 10] literal string: Failed to pop free item from the AU FIFO
+<<dead>> 	0x00000018	[ 10] CIE
+<<dead>> 	0x0000000E	[ 11] literal string: ARSTREAM2_Rtp
+<<dead>> 	0x00000010	[ 11] literal string: Invalid pointer
+<<dead>> 	0x00000015	[ 11] literal string: Invalid current time
+<<dead>> 	0x0000001C	[ 11] literal string: Failed to unref buffer (%d)
+<<dead>> 	0x0000002D	[ 11] literal string: Failed to push free item in the AU FIFO (%d)
+<<dead>> 	0x0000001E	[ 11] literal string: Failed to push free FIFO item
+<<dead>> 	0x00000020	[ 11] literal string: Access unit buffer is too small
+<<dead>> 	0x00000015	[ 11] literal string: AU-NALU FIFO is full
+<<dead>> 	0x00000026	[ 11] literal string: Invalid NALU offset in AU buffer (%d)
+<<dead>> 	0x00000022	[ 11] literal string: Failed to enqueue NALU item in AU
+<<dead>> 	0x00000018	[ 11] CIE
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] 16-byte-literal
+<<dead>> 	0x00000010	[ 12] literal string: Invalid pointer
+<<dead>> 	0x00000003	[ 12] literal string: %s
+<<dead>> 	0x0000001D	[ 12] literal string: Allocation failed (size %zu)
+<<dead>> 	0x00000018	[ 12] CIE
+<<dead>> 	0x0000001B	[ 13] literal string: Invalid pointer for handle
+<<dead>> 	0x0000001B	[ 13] literal string: Invalid pointer for config
+<<dead>> 	0x0000001D	[ 13] literal string: Allocation failed (size %zu)
+<<dead>> 	0x00000001	[ 13] literal string: 
+<<dead>> 	0x0000000F	[ 13] literal string: Invalid handle
+<<dead>> 	0x00000003	[ 13] literal string: %s
+<<dead>> 	0x0000001C	[ 13] literal string: Failed to unref buffer (%d)
+<<dead>> 	0x0000002D	[ 13] literal string: Failed to push free item in the AU FIFO (%d)
+<<dead>> 	0x00000018	[ 13] CIE
+<<dead>> 	0x0000000F	[ 14] literal string: %s/%s/%s_%s.%s
+<<dead>> 	0x00000004	[ 14] literal string: dat
+<<dead>> 	0x00000002	[ 14] literal string: w
+<<dead>> 	0x00000003	[ 14] literal string: %s
+<<dead>> 	0x00000018	[ 14] CIE
+<<dead>> 	0x00000010	[ 15] 16-byte-literal
+<<dead>> 	0x0000001B	[ 15] literal string: Invalid pointer for handle
+<<dead>> 	0x0000001B	[ 15] literal string: Invalid pointer for config
+<<dead>> 	0x0000001D	[ 15] literal string: Allocation failed (size %zu)
+<<dead>> 	0x0000000F	[ 15] literal string: Invalid handle
+<<dead>> 	0x00000010	[ 15] literal string: Invalid pointer
+<<dead>> 	0x00000011	[ 15] literal string: Invalid metadata
+<<dead>> 	0x00000012	[ 15] literal string: Allocation failed
+<<dead>> 	0x00000018	[ 15] CIE
+<<dead>> 	0x00000010	[ 16] 16-byte-literal
+<<dead>> 	0x00000010	[ 16] 16-byte-literal
+<<dead>> 	0x00000008	[ 16] 8-byte-literal
+<<dead>> 	0x0000001B	[ 16] literal string: Invalid pointer for handle
+<<dead>> 	0x0000001B	[ 16] literal string: Invalid pointer for config
+<<dead>> 	0x0000001D	[ 16] literal string: Allocation failed (size %zu)
+<<dead>> 	0x00000012	[ 16] literal string: Allocation failed
+<<dead>> 	0x0000000C	[ 16] literal string: %FT%H%M%S%z
+<<dead>> 	0x0000001B	[ 16] literal string: Mutex creation failed (%d)
+<<dead>> 	0x0000002F	[ 16] literal string: ARSTREAM2_RTP_PacketFifoAddQueue() failed (%d)
+<<dead>> 	0x0000001C	[ 16] literal string: Unable to delete sender: %s
+<<dead>> 	0x0000000F	[ 16] literal string: Invalid handle
+<<dead>> 	0x0000001C	[ 16] literal string: Failed to unref buffer (%d)
+<<dead>> 	0x0000002D	[ 16] literal string: Failed to push free item in the AU FIFO (%d)
+<<dead>> 	0x00000016	[ 16] literal string: Select error (%d): %s
+<<dead>> 	0x0000002E	[ 16] literal string: ARSTREAM2_RtpSender_ProcessRtcp() failed (%d)
+<<dead>> 	0x0000002D	[ 16] literal string: ARSTREAM2_RtpSender_ProcessRtp() failed (%d)
+<<dead>> 	0x00000022	[ 16] literal string: Failed to read from pipe (%d): %s
+<<dead>> 	0x00000002	[ 16] literal string: x
+<<dead>> 	0x00000011	[ 16] literal string: Invalid metadata
+<<dead>> 	0x0000000B	[ 16] literal string: %lf,%lf,%f
+<<dead>> 	0x0000000D	[ 16] literal string: picture_hfov
+<<dead>> 	0x00000003	[ 16] literal string: %f
+<<dead>> 	0x0000000D	[ 16] literal string: picture_vfov
+<<dead>> 	0x00000009	[ 16] literal string: run_date
+<<dead>> 	0x00000007	[ 16] literal string: run_id
+<<dead>> 	0x00000006	[ 16] literal string: maker
+<<dead>> 	0x00000006	[ 16] literal string: model
+<<dead>> 	0x00000009	[ 16] literal string: model_id
+<<dead>> 	0x00000009	[ 16] literal string: build_id
+<<dead>> 	0x00000006	[ 16] literal string: title
+<<dead>> 	0x00000008	[ 16] literal string: comment
+<<dead>> 	0x0000000A	[ 16] literal string: copyright
+<<dead>> 	0x00000005	[ 16] literal string: %.2f
+<<dead>> 	0x00000021	[ 16] literal string: Error while creating sender : %s
+<<dead>> 	0x00000010	[ 16] literal string: Invalid pointer
+<<dead>> 	0x00000029	[ 16] literal string: Failed to pop free item from the AU FIFO
+<<dead>> 	0x00000006	[ 16] literal string: %s/%s
+<<dead>> 	0x0000000F	[ 16] literal string: %s/%s/%s_%s.%s
+<<dead>> 	0x00000018	[ 16] CIE

@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	ignorecase = true
+	precomposeunicode = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip -- %f
+[remote "github"]
+	url = https://github.com/Parrot-Developers/libARDiscovery
+	projectname = libARDiscovery
+	fetch = +refs/heads/*:refs/remotes/github/*

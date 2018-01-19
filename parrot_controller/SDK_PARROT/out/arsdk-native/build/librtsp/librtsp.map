@@ -1,0 +1,356 @@
+# Path: out/arsdk-native/build/librtsp/librtsp.dylib
+# Arch: x86_64
+# Object files:
+[  0] linker synthesized
+[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp.c.o
+[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp_server.c.o
+[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp_client.c.o
+[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/librtsp/obj/src/rtsp_log.c.o
+[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libpomp.dylib
+[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libfutils.dylib
+[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
+[  8] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+# Sections:
+# Address	Size    	Segment	Section
+0x00001040	0x00005147	__TEXT	__text
+0x00006188	0x0000015C	__TEXT	__stubs
+0x000062E4	0x00000254	__TEXT	__stub_helper
+0x00006538	0x00000A3B	__TEXT	__cstring
+0x00006F74	0x0000008C	__TEXT	__unwind_info
+0x00007000	0x00000010	__DATA	__nl_symbol_ptr
+0x00007010	0x00000008	__DATA	__got
+0x00007018	0x000001D0	__DATA	__la_symbol_ptr
+0x000071E8	0x00000020	__DATA	__data
+# Symbols:
+# Address	Size    	File  Name
+0x00001040	0x00000200	[  1] _rtsp_response_header_copy
+0x00001240	0x00000120	[  1] _rtsp_response_header_free
+0x00001360	0x000008CC	[  1] _rtsp_response_header_read
+0x00001C30	0x00000320	[  2] _rtsp_server_new
+0x00001F50	0x00000280	[  2] _rtsp_server_pomp_cb
+0x000021D0	0x0000009A	[  2] _rtsp_server_destroy
+0x00002270	0x00000670	[  3] _rtsp_client_new
+0x000028E0	0x00000300	[  3] _rtsp_client_pipe_cb
+0x00002BE0	0x00000270	[  3] _rtsp_client_mbox_cb
+0x00002E50	0x00000190	[  3] _rtsp_client_pomp_event_cb
+0x00002FE0	0x00000700	[  3] _rtsp_client_pomp_cb
+0x000036E0	0x00000370	[  3] _rtsp_client_timer_cb
+0x00003A50	0x000003E0	[  3] _rtsp_client_destroy
+0x00003E30	0x00000620	[  3] _rtsp_client_connect
+0x00004450	0x00000200	[  3] _rtsp_client_disconnect
+0x00004650	0x000003F0	[  3] _rtsp_client_options
+0x00004A40	0x00000500	[  3] _rtsp_client_describe
+0x00004F40	0x00000810	[  3] _rtsp_client_setup
+0x00005750	0x00000520	[  3] _rtsp_client_play
+0x00005C70	0x00000517	[  3] _rtsp_client_teardown
+0x00006188	0x00000006	[  8] ___error
+0x0000618E	0x00000006	[  8] ___snprintf_chk
+0x00006194	0x00000006	[  8] ___stack_chk_fail
+0x0000619A	0x00000006	[  8] _asprintf
+0x000061A0	0x00000006	[  8] _atoi
+0x000061A6	0x00000006	[  8] _calloc
+0x000061AC	0x00000006	[  8] _close
+0x000061B2	0x00000006	[  8] _free
+0x000061B8	0x00000006	[  8] _gettimeofday
+0x000061BE	0x00000006	[  8] _inet_pton
+0x000061C4	0x00000006	[  8] _malloc
+0x000061CA	0x00000006	[  6] _mbox_destroy
+0x000061D0	0x00000006	[  6] _mbox_get_read_fd
+0x000061D6	0x00000006	[  6] _mbox_new
+0x000061DC	0x00000006	[  6] _mbox_peek
+0x000061E2	0x00000006	[  6] _mbox_push
+0x000061E8	0x00000006	[  8] _memcpy
+0x000061EE	0x00000006	[  8] _pipe
+0x000061F4	0x00000006	[  5] _pomp_buffer_get_cdata
+0x000061FA	0x00000006	[  5] _pomp_buffer_new_with_data
+0x00006200	0x00000006	[  5] _pomp_buffer_unref
+0x00006206	0x00000006	[  5] _pomp_conn_disconnect
+0x0000620C	0x00000006	[  5] _pomp_conn_send_raw_buf
+0x00006212	0x00000006	[  5] _pomp_ctx_connect
+0x00006218	0x00000006	[  5] _pomp_ctx_destroy
+0x0000621E	0x00000006	[  5] _pomp_ctx_listen
+0x00006224	0x00000006	[  5] _pomp_ctx_new_with_loop
+0x0000622A	0x00000006	[  5] _pomp_ctx_send_raw_buf
+0x00006230	0x00000006	[  5] _pomp_ctx_set_raw
+0x00006236	0x00000006	[  5] _pomp_ctx_stop
+0x0000623C	0x00000006	[  5] _pomp_loop_add
+0x00006242	0x00000006	[  5] _pomp_loop_remove
+0x00006248	0x00000006	[  5] _pomp_timer_destroy
+0x0000624E	0x00000006	[  5] _pomp_timer_new
+0x00006254	0x00000006	[  5] _pomp_timer_set
+0x0000625A	0x00000006	[  8] _pthread_cond_destroy
+0x00006260	0x00000006	[  8] _pthread_cond_init
+0x00006266	0x00000006	[  8] _pthread_cond_signal
+0x0000626C	0x00000006	[  8] _pthread_cond_timedwait
+0x00006272	0x00000006	[  8] _pthread_cond_wait
+0x00006278	0x00000006	[  8] _pthread_mutex_destroy
+0x0000627E	0x00000006	[  8] _pthread_mutex_init
+0x00006284	0x00000006	[  8] _pthread_mutex_lock
+0x0000628A	0x00000006	[  8] _pthread_mutex_unlock
+0x00006290	0x00000006	[  8] _read
+0x00006296	0x00000006	[  8] _strchr
+0x0000629C	0x00000006	[  8] _strcmp
+0x000062A2	0x00000006	[  8] _strdup
+0x000062A8	0x00000006	[  8] _strerror
+0x000062AE	0x00000006	[  8] _strlen
+0x000062B4	0x00000006	[  8] _strncasecmp
+0x000062BA	0x00000006	[  8] _strncmp
+0x000062C0	0x00000006	[  8] _strtok_r
+0x000062C6	0x00000006	[  6] _time_timespec_add_us
+0x000062CC	0x00000006	[  6] _time_timeval_to_timespec
+0x000062D2	0x00000006	[  7] _ulog_init_cookie
+0x000062D8	0x00000006	[  7] _ulog_log_write
+0x000062DE	0x00000006	[  8] _write
+0x000062E4	0x00000010	[  0] helper helper
+0x000062F4	0x0000000A	[  5] _pomp_buffer_get_cdata
+0x000062FE	0x0000000A	[  5] _pomp_buffer_new_with_data
+0x00006308	0x0000000A	[  5] _pomp_buffer_unref
+0x00006312	0x0000000A	[  5] _pomp_conn_disconnect
+0x0000631C	0x0000000A	[  5] _pomp_conn_send_raw_buf
+0x00006326	0x0000000A	[  5] _pomp_ctx_connect
+0x00006330	0x0000000A	[  5] _pomp_ctx_destroy
+0x0000633A	0x0000000A	[  5] _pomp_ctx_listen
+0x00006344	0x0000000A	[  5] _pomp_ctx_new_with_loop
+0x0000634E	0x0000000A	[  5] _pomp_ctx_send_raw_buf
+0x00006358	0x0000000A	[  5] _pomp_ctx_set_raw
+0x00006362	0x0000000A	[  5] _pomp_ctx_stop
+0x0000636C	0x0000000A	[  5] _pomp_loop_add
+0x00006376	0x0000000A	[  5] _pomp_loop_remove
+0x00006380	0x0000000A	[  5] _pomp_timer_destroy
+0x0000638A	0x0000000A	[  5] _pomp_timer_new
+0x00006394	0x0000000A	[  5] _pomp_timer_set
+0x0000639E	0x0000000A	[  6] _mbox_destroy
+0x000063A8	0x0000000A	[  6] _mbox_get_read_fd
+0x000063B2	0x0000000A	[  6] _mbox_new
+0x000063BC	0x0000000A	[  6] _mbox_peek
+0x000063C6	0x0000000A	[  6] _mbox_push
+0x000063D0	0x0000000A	[  6] _time_timespec_add_us
+0x000063DA	0x0000000A	[  6] _time_timeval_to_timespec
+0x000063E4	0x0000000A	[  7] _ulog_init_cookie
+0x000063EE	0x0000000A	[  7] _ulog_log_write
+0x000063F8	0x0000000A	[  8] ___error
+0x00006402	0x0000000A	[  8] ___snprintf_chk
+0x0000640C	0x0000000A	[  8] ___stack_chk_fail
+0x00006416	0x0000000A	[  8] _asprintf
+0x00006420	0x0000000A	[  8] _atoi
+0x0000642A	0x0000000A	[  8] _calloc
+0x00006434	0x0000000A	[  8] _close
+0x0000643E	0x0000000A	[  8] _free
+0x00006448	0x0000000A	[  8] _gettimeofday
+0x00006452	0x0000000A	[  8] _inet_pton
+0x0000645C	0x0000000A	[  8] _malloc
+0x00006466	0x0000000A	[  8] _memcpy
+0x00006470	0x0000000A	[  8] _pipe
+0x0000647A	0x0000000A	[  8] _pthread_cond_destroy
+0x00006484	0x0000000A	[  8] _pthread_cond_init
+0x0000648E	0x0000000A	[  8] _pthread_cond_signal
+0x00006498	0x0000000A	[  8] _pthread_cond_timedwait
+0x000064A2	0x0000000A	[  8] _pthread_cond_wait
+0x000064AC	0x0000000A	[  8] _pthread_mutex_destroy
+0x000064B6	0x0000000A	[  8] _pthread_mutex_init
+0x000064C0	0x0000000A	[  8] _pthread_mutex_lock
+0x000064CA	0x0000000A	[  8] _pthread_mutex_unlock
+0x000064D4	0x0000000A	[  8] _read
+0x000064DE	0x0000000A	[  8] _strchr
+0x000064E8	0x0000000A	[  8] _strcmp
+0x000064F2	0x0000000A	[  8] _strdup
+0x000064FC	0x0000000A	[  8] _strerror
+0x00006506	0x0000000A	[  8] _strlen
+0x00006510	0x0000000A	[  8] _strncasecmp
+0x0000651A	0x0000000A	[  8] _strncmp
+0x00006524	0x0000000A	[  8] _strtok_r
+0x0000652E	0x0000000A	[  8] _write
+0x00006538	0x00000012	[  1] literal string: %s:%d: err=%d(%s)
+0x0000654A	0x0000001A	[  1] literal string: rtsp_response_header_copy
+0x00006564	0x0000001A	[  1] literal string: rtsp_response_header_free
+0x0000657E	0x0000001A	[  1] literal string: rtsp_response_header_read
+0x00006598	0x00000002	[  1] literal string: \n
+0x0000659A	0x00000016	[  1] literal string: invalid response data
+0x000065B0	0x00000002	[  1] literal string:  
+0x000065B2	0x00000009	[  1] literal string: RTSP/1.0
+0x000065BB	0x0000001E	[  1] literal string: invalid RTSP protocol version
+0x000065D9	0x00000018	[  1] literal string: malformed RTSP response
+0x000065F1	0x00000013	[  1] literal string: RTSP status %d: %s
+0x00006604	0x00000001	[  1] literal string: 
+0x00006605	0x00000005	[  1] literal string: Cseq
+0x0000660A	0x00000008	[  1] literal string: Session
+0x00006612	0x0000000F	[  1] literal string: Content-Length
+0x00006621	0x0000000D	[  1] literal string: Content-Type
+0x0000662E	0x00000011	[  1] literal string: Content-Encoding
+0x0000663F	0x00000011	[  1] literal string: Content-Language
+0x00006650	0x0000000D	[  1] literal string: Content-Base
+0x0000665D	0x00000011	[  1] literal string: Content-Location
+0x0000666E	0x0000000A	[  1] literal string: Transport
+0x00006678	0x00000023	[  1] literal string: failed to parse 'transport' header
+0x0000669B	0x00000007	[  1] literal string: Public
+0x000066A2	0x00000008	[  1] literal string: timeout
+0x000066AA	0x00000002	[  1] literal string: ;
+0x000066AC	0x00000008	[  1] literal string: RTP/AVP
+0x000066B4	0x0000000C	[  1] literal string: RTP/AVP/UDP
+0x000066C0	0x0000001F	[  1] literal string: unsupported transport protocol
+0x000066DF	0x00000002	[  1] literal string: =
+0x000066E1	0x0000000C	[  1] literal string: server_port
+0x000066ED	0x00000002	[  1] literal string: ,
+0x000066EF	0x00000008	[  1] literal string: OPTIONS
+0x000066F7	0x00000009	[  1] literal string: DESCRIBE
+0x00006700	0x00000009	[  1] literal string: ANNOUNCE
+0x00006709	0x00000006	[  1] literal string: SETUP
+0x0000670F	0x00000005	[  1] literal string: PLAY
+0x00006714	0x00000006	[  1] literal string: PAUSE
+0x0000671A	0x00000009	[  1] literal string: TEARDOWN
+0x00006723	0x0000000E	[  1] literal string: GET_PARAMETER
+0x00006731	0x0000000E	[  1] literal string: SET_PARAMETER
+0x0000673F	0x00000009	[  1] literal string: REDIRECT
+0x00006748	0x00000007	[  1] literal string: RECORD
+0x0000674F	0x00000010	[  2] literal string: rtsp_server_new
+0x0000675F	0x0000001F	[  2] literal string: pomp creation failed, aborting
+0x0000677E	0x00000015	[  2] literal string: %s:%d: %s err=%d(%s)
+0x00006793	0x00000027	[  2] literal string: cannot switch pomp context to raw mode
+0x000067BA	0x0000001B	[  2] literal string: failed to listen, aborting
+0x000067D5	0x00000014	[  2] literal string: rtsp_server_destroy
+0x000067E9	0x00000014	[  2] literal string: rtsp_server_pomp_cb
+0x000067FD	0x0000001B	[  2] literal string: failed to get request data
+0x00006818	0x0000000D	[  2] literal string: received: %s
+0x00006825	0x00000005	[  2] literal string: MEUH
+0x0000682A	0x0000001C	[  2] literal string: failed to allocate response
+0x00006846	0x0000000D	[  2] literal string: response: %s
+0x00006853	0x00000018	[  2] literal string: failed to send response
+0x0000686B	0x00000010	[  3] literal string: rtsp_client_new
+0x0000687B	0x0000000F	[  3] literal string: librtsp_client
+0x0000688A	0x00000023	[  3] literal string: string allocation failed, aborting
+0x000068AD	0x00000015	[  3] literal string: pipe creation failed
+0x000068C2	0x0000001E	[  3] literal string: failed to add pipe fd to loop
+0x000068E0	0x00000015	[  3] literal string: mbox creation failed
+0x000068F5	0x0000001E	[  3] literal string: failed to add mbox fd to loop
+0x00006913	0x00000025	[  3] literal string: pomp timer creation failed, aborting
+0x00006938	0x00000020	[  3] literal string: mutex creation failed, aborting
+0x00006958	0x0000001F	[  3] literal string: cond creation failed, aborting
+0x00006977	0x00000014	[  3] literal string: rtsp_client_destroy
+0x0000698B	0x00000020	[  3] literal string: failed to destroy timer context
+0x000069AB	0x0000001F	[  3] literal string: failed to destroy pomp context
+0x000069CA	0x00000023	[  3] literal string: failed to remove mbox fd from loop
+0x000069ED	0x00000023	[  3] literal string: failed to remove pipe fd from loop
+0x00006A10	0x00000002	[  3] literal string: x
+0x00006A12	0x00000014	[  3] literal string: rtsp_client_connect
+0x00006A26	0x00000008	[  3] literal string: rtsp://
+0x00006A2E	0x00000019	[  3] literal string: client already connected
+0x00006A47	0x00000002	[  3] literal string: /
+0x00006A49	0x0000001E	[  3] literal string: invalid server host, aborting
+0x00006A67	0x0000001E	[  3] literal string: invalid server port, aborting
+0x00006A85	0x00000020	[  3] literal string: invalid resource path, aborting
+0x00006AA5	0x00000027	[  3] literal string: failed to convert address %s, aborting
+0x00006ACC	0x00000017	[  3] literal string: rtsp_client_disconnect
+0x00006AE3	0x00000018	[  3] literal string: client is not connected
+0x00006AFB	0x00000022	[  3] literal string: timeout waiting for disconnection
+0x00006B1D	0x00000014	[  3] literal string: rtsp_client_options
+0x00006B31	0x0000002E	[  3] literal string: OPTIONS %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\n\n
+0x00006B5F	0x00000018	[  3] literal string: failed to write request
+0x00006B77	0x00000019	[  3] literal string: failed to push into mbox
+0x00006B90	0x00000011	[  3] literal string: timeout on reply
+0x00006BA1	0x00000014	[  3] literal string: failed to get reply
+0x00006BB5	0x00000015	[  3] literal string: rtsp_client_describe
+0x00006BCA	0x00000047	[  3] literal string: DESCRIBE %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nAccept: application/sdp\n\n
+0x00006C11	0x00000012	[  3] literal string: rtsp_client_setup
+0x00006C23	0x00000005	[  3] literal string: %s%s
+0x00006C28	0x00000006	[  3] literal string: %s/%s
+0x00006C2E	0x00000065	[  3] literal string: SETUP %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nTransport: RTP/AVP;unicast;client_port=%d-%d\nSession: %s\n\n
+0x00006C93	0x00000059	[  3] literal string: SETUP %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nTransport: RTP/AVP;unicast;client_port=%d-%d\n\n
+0x00006CEC	0x00000011	[  3] literal string: rtsp_client_play
+0x00006CFD	0x00000049	[  3] literal string: PLAY %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nSession: %s\nRange: npt=0.000-\n\n
+0x00006D46	0x00000015	[  3] literal string: rtsp_client_teardown
+0x00006D5B	0x0000003B	[  3] literal string: TEARDOWN %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nSession: %s\n\n
+0x00006D96	0x00000014	[  3] literal string: rtsp_client_pipe_cb
+0x00006DAA	0x00000019	[  3] literal string: failed to read from pipe
+0x00006DC3	0x00000017	[  3] literal string: connecting to URL '%s'
+0x00006DDA	0x00000012	[  3] literal string: failed to connect
+0x00006DEC	0x00000015	[  3] literal string: failed to disconnect
+0x00006E01	0x00000011	[  3] literal string: client connected
+0x00006E12	0x00000012	[  3] literal string: allocation failed
+0x00006E24	0x00000014	[  3] literal string: client disconnected
+0x00006E38	0x00000014	[  3] literal string: rtsp_client_mbox_cb
+0x00006E4C	0x00000019	[  3] literal string: failed to read from mbox
+0x00006E65	0x00000017	[  3] literal string: failed to send request
+0x00006E7C	0x00000015	[  3] literal string: rtsp_client_timer_cb
+0x00006E91	0x00000040	[  3] literal string: GET_PARAMETER %s RTSP/1.0\nCseq: %d\nUser-Agent: %s\nSession: %s\n\n
+0x00006ED1	0x00000014	[  3] literal string: rtsp_client_pomp_cb
+0x00006EE5	0x0000001C	[  3] literal string: failed to get response data
+0x00006F01	0x00000020	[  3] literal string: failed to parse response header
+0x00006F21	0x00000010	[  3] literal string: unexpected Cseq
+0x00006F31	0x00000014	[  3] literal string: failed to set timer
+0x00006F45	0x00000016	[  3] literal string: unexpected session id
+0x00006F5B	0x00000010	[  3] literal string: application/sdp
+0x00006F6B	0x00000008	[  4] literal string: librtsp
+0x00006F74	0x0000008C	[  0] compact unwind info
+0x00007000	0x00000008	[  0] non-lazy-pointer-to-local: dyld_stub_binder
+0x00007008	0x00000008	[  0] non-lazy-pointer
+0x00007010	0x00000008	[  0] non-lazy-pointer-to-local: ___stack_chk_guard
+0x00007018	0x00000008	[  8] ___error
+0x00007020	0x00000008	[  8] ___snprintf_chk
+0x00007028	0x00000008	[  8] ___stack_chk_fail
+0x00007030	0x00000008	[  8] _asprintf
+0x00007038	0x00000008	[  8] _atoi
+0x00007040	0x00000008	[  8] _calloc
+0x00007048	0x00000008	[  8] _close
+0x00007050	0x00000008	[  8] _free
+0x00007058	0x00000008	[  8] _gettimeofday
+0x00007060	0x00000008	[  8] _inet_pton
+0x00007068	0x00000008	[  8] _malloc
+0x00007070	0x00000008	[  6] _mbox_destroy
+0x00007078	0x00000008	[  6] _mbox_get_read_fd
+0x00007080	0x00000008	[  6] _mbox_new
+0x00007088	0x00000008	[  6] _mbox_peek
+0x00007090	0x00000008	[  6] _mbox_push
+0x00007098	0x00000008	[  8] _memcpy
+0x000070A0	0x00000008	[  8] _pipe
+0x000070A8	0x00000008	[  5] _pomp_buffer_get_cdata
+0x000070B0	0x00000008	[  5] _pomp_buffer_new_with_data
+0x000070B8	0x00000008	[  5] _pomp_buffer_unref
+0x000070C0	0x00000008	[  5] _pomp_conn_disconnect
+0x000070C8	0x00000008	[  5] _pomp_conn_send_raw_buf
+0x000070D0	0x00000008	[  5] _pomp_ctx_connect
+0x000070D8	0x00000008	[  5] _pomp_ctx_destroy
+0x000070E0	0x00000008	[  5] _pomp_ctx_listen
+0x000070E8	0x00000008	[  5] _pomp_ctx_new_with_loop
+0x000070F0	0x00000008	[  5] _pomp_ctx_send_raw_buf
+0x000070F8	0x00000008	[  5] _pomp_ctx_set_raw
+0x00007100	0x00000008	[  5] _pomp_ctx_stop
+0x00007108	0x00000008	[  5] _pomp_loop_add
+0x00007110	0x00000008	[  5] _pomp_loop_remove
+0x00007118	0x00000008	[  5] _pomp_timer_destroy
+0x00007120	0x00000008	[  5] _pomp_timer_new
+0x00007128	0x00000008	[  5] _pomp_timer_set
+0x00007130	0x00000008	[  8] _pthread_cond_destroy
+0x00007138	0x00000008	[  8] _pthread_cond_init
+0x00007140	0x00000008	[  8] _pthread_cond_signal
+0x00007148	0x00000008	[  8] _pthread_cond_timedwait
+0x00007150	0x00000008	[  8] _pthread_cond_wait
+0x00007158	0x00000008	[  8] _pthread_mutex_destroy
+0x00007160	0x00000008	[  8] _pthread_mutex_init
+0x00007168	0x00000008	[  8] _pthread_mutex_lock
+0x00007170	0x00000008	[  8] _pthread_mutex_unlock
+0x00007178	0x00000008	[  8] _read
+0x00007180	0x00000008	[  8] _strchr
+0x00007188	0x00000008	[  8] _strcmp
+0x00007190	0x00000008	[  8] _strdup
+0x00007198	0x00000008	[  8] _strerror
+0x000071A0	0x00000008	[  8] _strlen
+0x000071A8	0x00000008	[  8] _strncasecmp
+0x000071B0	0x00000008	[  8] _strncmp
+0x000071B8	0x00000008	[  8] _strtok_r
+0x000071C0	0x00000008	[  6] _time_timespec_add_us
+0x000071C8	0x00000008	[  6] _time_timeval_to_timespec
+0x000071D0	0x00000008	[  7] _ulog_init_cookie
+0x000071D8	0x00000008	[  7] _ulog_log_write
+0x000071E0	0x00000008	[  8] _write
+0x000071E8	0x00000020	[  4] ___ulog_cookie_librtsp
+
+# Dead Stripped Symbols:
+#        	Size    	File  Name
+<<dead>> 	0x00000018	[  1] CIE
+<<dead>> 	0x00000012	[  2] literal string: %s:%d: err=%d(%s)
+<<dead>> 	0x00000018	[  2] CIE
+<<dead>> 	0x00000012	[  3] literal string: %s:%d: err=%d(%s)
+<<dead>> 	0x00000015	[  3] literal string: %s:%d: %s err=%d(%s)
+<<dead>> 	0x0000001F	[  3] literal string: pomp creation failed, aborting
+<<dead>> 	0x00000027	[  3] literal string: cannot switch pomp context to raw mode
+<<dead>> 	0x00000018	[  3] CIE

@@ -1,0 +1,419 @@
+# Path: out/arsdk-native/build/libARUtils/libarutils.dylib
+# Arch: x86_64
+# Object files:
+[  0] linker synthesized
+[  1] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/Sources/ARUTILS_FileSystem.c.o
+[  2] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/Sources/ARUTILS_Http.c.o
+[  3] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/Sources/ARUTILS_Manager.c.o
+[  4] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/Sources/ARUTILS_WifiFtp.c.o
+[  5] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/gen/Sources/ARUTILS_Error.c.o
+[  6] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/build/libARUtils/obj/Sources/ARUTILS_BLEFtp_stub.c.o
+[  7] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libarsal.dylib
+[  8] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libardiscovery.dylib
+[  9] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libmux.dylib
+[ 10] /Users/nicolassalleron/Desktop/SDK_PARROT/out/arsdk-native/staging/usr/lib/libcurl.dylib
+[ 11] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+# Sections:
+# Address	Size    	Segment	Section
+0x000009B0	0x00005A16	__TEXT	__text
+0x000063C6	0x0000015C	__TEXT	__stubs
+0x00006524	0x00000254	__TEXT	__stub_helper
+0x00006780	0x00000030	__TEXT	__const
+0x000067B0	0x0000072B	__TEXT	__cstring
+0x00006EDC	0x00000124	__TEXT	__unwind_info
+0x00007000	0x00000008	__DATA	__got
+0x00007008	0x00000010	__DATA	__nl_symbol_ptr
+0x00007018	0x000001D0	__DATA	__la_symbol_ptr
+# Symbols:
+# Address	Size    	File  Name
+0x000009B0	0x00000080	[  1] _ARUTILS_FileSystem_IsExist
+0x00000A30	0x000000E0	[  1] _ARUTILS_FileSystem_GetFileSize
+0x00000B10	0x00000080	[  1] _ARUTILS_FileSystem_Rename
+0x00000B90	0x00000060	[  1] _ARUTILS_FileSystem_RemoveFile
+0x00000BF0	0x00000090	[  1] _ARUTILS_FileSystem_RemoveDir
+0x00000C80	0x000000E0	[  1] _ARUTILS_FileSystem_RemoveDirCallback
+0x00000D60	0x000000D0	[  1] _ARUTILS_FileSystem_GetFreeSpace
+0x00000E30	0x000001F0	[  2] _ARUTILS_Http_Connection_New
+0x00001020	0x00000080	[  2] _ARUTILS_Http_Connection_Delete
+0x000010A0	0x000000C0	[  2] _ARUTILS_Http_FreeCallbackData
+0x00001160	0x00000080	[  2] _ARUTILS_Http_Connection_Cancel
+0x000011E0	0x00000030	[  2] _ARUTILS_Http_Get
+0x00001210	0x000004E0	[  2] _ARUTILS_Http_Get_Internal
+0x000016F0	0x00000030	[  2] _ARUTILS_Http_Get_WithBuffer
+0x00001720	0x00000060	[  2] _ARUTILS_Http_IsCanceled
+0x00001780	0x00000200	[  2] _ARUTILS_Http_ResetOptions
+0x00001980	0x00000160	[  2] _ARUTILS_Http_WriteDataCallback
+0x00001AE0	0x00000070	[  2] _ARUTILS_Http_ProgressCallback
+0x00001B50	0x00000030	[  2] _ARUTILS_Http_GetErrorFromCode
+0x00001B80	0x00000060	[  2] _ARUTILS_Http_SetSeverCertificate
+0x00001BE0	0x00000460	[  2] _ARUTILS_Http_Post_WithFiles
+0x00002040	0x000006A0	[  2] _ARUTILS_Http_Post_WithRange
+0x000026E0	0x00000170	[  2] _ARUTILS_Http_ReadDataCallback
+0x00002850	0x00000030	[  2] _ARUTILS_Http_OpensocketCallback
+0x00002880	0x00000023	[  2] _ARUTILS_Http_ClosesocketCallback
+0x000028B0	0x00000060	[  3] _ARUTILS_Manager_New
+0x00002910	0x00000060	[  3] _ARUTILS_Manager_Delete
+0x00002970	0x000001E0	[  3] _ARUTILS_Manager_InitFtp
+0x00002B50	0x00000030	[  3] _ARUTILS_Manager_CloseFtp
+0x00002B80	0x00000020	[  3] _ARUTILS_Manager_Ftp_Connection_Disconnect
+0x00002BA0	0x00000020	[  3] _ARUTILS_Manager_Ftp_Connection_Reconnect
+0x00002BC0	0x00000020	[  3] _ARUTILS_Manager_Ftp_Connection_Cancel
+0x00002BE0	0x00000020	[  3] _ARUTILS_Manager_Ftp_Connection_IsCanceled
+0x00002C00	0x00000020	[  3] _ARUTILS_Manager_Ftp_Connection_Reset
+0x00002C20	0x00000020	[  3] _ARUTILS_Manager_Ftp_List
+0x00002C40	0x00000020	[  3] _ARUTILS_Manager_Ftp_Size
+0x00002C60	0x00000020	[  3] _ARUTILS_Manager_Ftp_Get_WithBuffer
+0x00002C80	0x00000020	[  3] _ARUTILS_Manager_Ftp_Get
+0x00002CA0	0x00000020	[  3] _ARUTILS_Manager_Ftp_Put
+0x00002CC0	0x00000020	[  3] _ARUTILS_Manager_Ftp_Delete
+0x00002CE0	0x00000020	[  3] _ARUTILS_Manager_Ftp_RemoveDir
+0x00002D00	0x0000001C	[  3] _ARUTILS_Manager_Ftp_Rename
+0x00002D20	0x00000250	[  4] _ARUTILS_WifiFtp_Connection_New
+0x00002F70	0x00000120	[  4] _ARUTILS_WifiFtp_Connection_Delete
+0x00003090	0x00000090	[  4] _ARUTILS_WifiFtp_FreeCallbackData
+0x00003120	0x000000B0	[  4] _ARUTILS_WifiFtp_Connection_Cancel
+0x000031D0	0x00000080	[  4] _ARUTILS_WifiFtp_Connection_Reset
+0x00003250	0x00000620	[  4] _ARUTILS_WifiFtp_List
+0x00003870	0x00000060	[  4] _ARUTILS_WifiFtp_IsCanceled
+0x000038D0	0x000000C0	[  4] _ARUTILS_WifiFtp_Cd
+0x00003990	0x00000230	[  4] _ARUTILS_WifiFtp_ResetOptions
+0x00003BC0	0x00000170	[  4] _ARUTILS_WifiFtp_WriteDataCallback
+0x00003D30	0x00000080	[  4] _ARUTILS_WifiFtp_GetErrorFromCode
+0x00003DB0	0x00000410	[  4] _ARUTILS_WifiFtp_Rename
+0x000041C0	0x000004A0	[  4] _ARUTILS_WifiFtp_Size
+0x00004660	0x000003B0	[  4] _ARUTILS_WifiFtp_Command
+0x00004A10	0x00000090	[  4] _ARUTILS_WifiFtp_Delete
+0x00004AA0	0x00000030	[  4] _ARUTILS_WifiFtp_Get
+0x00004AD0	0x00000630	[  4] _ARUTILS_WifiFtp_GetInternal
+0x00005100	0x00000030	[  4] _ARUTILS_WifiFtp_Get_WithBuffer
+0x00005130	0x000000C0	[  4] _ARUTILS_WifiFtp_ProgressCallback
+0x000051F0	0x00000600	[  4] _ARUTILS_WifiFtp_Put
+0x000057F0	0x000000D0	[  4] _ARUTILS_WifiFtp_ReadDataCallback
+0x000058C0	0x00000200	[  4] _ARUTILS_Ftp_List_GetNextItem
+0x00005AC0	0x00000110	[  4] _ARUTILS_Ftp_List_GetItemSize
+0x00005BD0	0x00000060	[  4] _ARUTILS_WifiFtp_OpensocketCallback
+0x00005C30	0x00000050	[  4] _ARUTILS_WifiFtp_ClosesocketCallback
+0x00005C80	0x00000020	[  4] _ARUTILS_Manager_InitWifiFtp
+0x00005CA0	0x00000180	[  4] _ARUTILS_Manager_InitWifiFtpOverMux
+0x00005E20	0x00000040	[  4] _ARUTILS_WifiFtpAL_Connection_Disconnect
+0x00005E60	0x00000040	[  4] _ARUTILS_WifiFtpAL_Connection_Reconnect
+0x00005EA0	0x00000010	[  4] _ARUTILS_WifiFtpAL_Connection_Cancel
+0x00005EB0	0x00000060	[  4] _ARUTILS_WifiFtpAL_Connection_IsCanceled
+0x00005F10	0x00000080	[  4] _ARUTILS_WifiFtpAL_Connection_Reset
+0x00005F90	0x00000010	[  4] _ARUTILS_WifiFtpAL_List
+0x00005FA0	0x00000010	[  4] _ARUTILS_WifiFtpAL_Size
+0x00005FB0	0x00000030	[  4] _ARUTILS_WifiFtpAL_Get_WithBuffer
+0x00005FE0	0x00000030	[  4] _ARUTILS_WifiFtpAL_Get
+0x00006010	0x00000010	[  4] _ARUTILS_WifiFtpAL_Put
+0x00006020	0x00000090	[  4] _ARUTILS_WifiFtpAL_Delete
+0x000060B0	0x00000090	[  4] _ARUTILS_WifiFtpAL_RemoveDir
+0x00006140	0x00000010	[  4] _ARUTILS_WifiFtpAL_Rename
+0x00006150	0x00000030	[  4] _ARUTILS_Manager_CloseWifiFtp
+0x00006180	0x00000224	[  5] _ARUTILS_Error_ToString
+0x000063B0	0x00000010	[  6] _ARUTILS_Manager_InitBLEFtp
+0x000063C0	0x00000006	[  6] _ARUTILS_Manager_CloseBLEFtp
+0x000063C6	0x00000006	[  8] _ARDISCOVERY_DEVICE_WifiGetIpAddress
+0x000063CC	0x00000006	[  8] _ARDISCOVERY_Device_BLEGetDevice
+0x000063D2	0x00000006	[  8] _ARDISCOVERY_Device_UsbGetMux
+0x000063D8	0x00000006	[  8] _ARDISCOVERY_getProductFamily
+0x000063DE	0x00000006	[  7] _ARSAL_Nftw
+0x000063E4	0x00000006	[  7] _ARSAL_Print_PrintRawEx
+0x000063EA	0x00000006	[  7] _ARSAL_Sem_Destroy
+0x000063F0	0x00000006	[  7] _ARSAL_Sem_Init
+0x000063F6	0x00000006	[  7] _ARSAL_Sem_Post
+0x000063FC	0x00000006	[  7] _ARSAL_Sem_Trywait
+0x00006402	0x00000006	[ 11] ___error
+0x00006408	0x00000006	[ 11] ___snprintf_chk
+0x0000640E	0x00000006	[ 11] ___sprintf_chk
+0x00006414	0x00000006	[ 11] ___stack_chk_fail
+0x0000641A	0x00000006	[ 11] ___strncat_chk
+0x00006420	0x00000006	[ 11] _calloc
+0x00006426	0x00000006	[ 11] _close
+0x0000642C	0x00000006	[ 10] _curl_easy_cleanup
+0x00006432	0x00000006	[ 10] _curl_easy_getinfo
+0x00006438	0x00000006	[ 10] _curl_easy_init
+0x0000643E	0x00000006	[ 10] _curl_easy_perform
+0x00006444	0x00000006	[ 10] _curl_easy_reset
+0x0000644A	0x00000006	[ 10] _curl_easy_setopt
+0x00006450	0x00000006	[ 10] _curl_formadd
+0x00006456	0x00000006	[ 10] _curl_formfree
+0x0000645C	0x00000006	[ 10] _curl_slist_append
+0x00006462	0x00000006	[ 10] _curl_slist_free_all
+0x00006468	0x00000006	[ 11] _fclose
+0x0000646E	0x00000006	[ 11] _feof
+0x00006474	0x00000006	[ 11] _ferror
+0x0000647A	0x00000006	[ 11] _fflush
+0x00006480	0x00000006	[ 11] _fopen
+0x00006486	0x00000006	[ 11] _fread
+0x0000648C	0x00000006	[ 11] _free
+0x00006492	0x00000006	[ 11] _fseek
+0x00006498	0x00000006	[ 11] _fwrite
+0x0000649E	0x00000006	[ 11] _lseek
+0x000064A4	0x00000006	[ 11] _memcpy
+0x000064AA	0x00000006	[  9] _mux_channel_close
+0x000064B0	0x00000006	[  9] _mux_channel_open_ftp
+0x000064B6	0x00000006	[ 11] _open
+0x000064BC	0x00000006	[ 11] _read
+0x000064C2	0x00000006	[ 11] _realloc
+0x000064C8	0x00000006	[ 11] _remove
+0x000064CE	0x00000006	[ 11] _rename
+0x000064D4	0x00000006	[ 11] _rmdir
+0x000064DA	0x00000006	[ 11] _shutdown
+0x000064E0	0x00000006	[ 11] _socket
+0x000064E6	0x00000006	[ 11] _sscanf
+0x000064EC	0x00000006	[ 11] _stat$INODE64
+0x000064F2	0x00000006	[ 11] _statfs$INODE64
+0x000064F8	0x00000006	[ 11] _strchr
+0x000064FE	0x00000006	[ 11] _strcmp
+0x00006504	0x00000006	[ 11] _strerror
+0x0000650A	0x00000006	[ 11] _strlen
+0x00006510	0x00000006	[ 11] _strncmp
+0x00006516	0x00000006	[ 11] _strncpy
+0x0000651C	0x00000006	[ 11] _write
+0x00006524	0x00000010	[  0] helper helper
+0x00006534	0x0000000A	[  7] _ARSAL_Nftw
+0x0000653E	0x0000000A	[  7] _ARSAL_Print_PrintRawEx
+0x00006548	0x0000000A	[  7] _ARSAL_Sem_Destroy
+0x00006552	0x0000000A	[  7] _ARSAL_Sem_Init
+0x0000655C	0x0000000A	[  7] _ARSAL_Sem_Post
+0x00006566	0x0000000A	[  7] _ARSAL_Sem_Trywait
+0x00006570	0x0000000A	[  8] _ARDISCOVERY_DEVICE_WifiGetIpAddress
+0x0000657A	0x0000000A	[  8] _ARDISCOVERY_Device_BLEGetDevice
+0x00006584	0x0000000A	[  8] _ARDISCOVERY_Device_UsbGetMux
+0x0000658E	0x0000000A	[  8] _ARDISCOVERY_getProductFamily
+0x00006598	0x0000000A	[  9] _mux_channel_close
+0x000065A2	0x0000000A	[  9] _mux_channel_open_ftp
+0x000065AC	0x0000000A	[ 10] _curl_easy_cleanup
+0x000065B6	0x0000000A	[ 10] _curl_easy_getinfo
+0x000065C0	0x0000000A	[ 10] _curl_easy_init
+0x000065CA	0x0000000A	[ 10] _curl_easy_perform
+0x000065D4	0x0000000A	[ 10] _curl_easy_reset
+0x000065DE	0x0000000A	[ 10] _curl_easy_setopt
+0x000065E8	0x0000000A	[ 10] _curl_formadd
+0x000065F2	0x0000000A	[ 10] _curl_formfree
+0x000065FC	0x0000000A	[ 10] _curl_slist_append
+0x00006606	0x0000000A	[ 10] _curl_slist_free_all
+0x00006610	0x0000000A	[ 11] ___error
+0x0000661A	0x0000000A	[ 11] ___snprintf_chk
+0x00006624	0x0000000A	[ 11] ___sprintf_chk
+0x0000662E	0x0000000A	[ 11] ___stack_chk_fail
+0x00006638	0x0000000A	[ 11] ___strncat_chk
+0x00006642	0x0000000A	[ 11] _calloc
+0x0000664C	0x0000000A	[ 11] _close
+0x00006656	0x0000000A	[ 11] _fclose
+0x00006660	0x0000000A	[ 11] _feof
+0x0000666A	0x0000000A	[ 11] _ferror
+0x00006674	0x0000000A	[ 11] _fflush
+0x0000667E	0x0000000A	[ 11] _fopen
+0x00006688	0x0000000A	[ 11] _fread
+0x00006692	0x0000000A	[ 11] _free
+0x0000669C	0x0000000A	[ 11] _fseek
+0x000066A6	0x0000000A	[ 11] _fwrite
+0x000066B0	0x0000000A	[ 11] _lseek
+0x000066BA	0x0000000A	[ 11] _memcpy
+0x000066C4	0x0000000A	[ 11] _open
+0x000066CE	0x0000000A	[ 11] _read
+0x000066D8	0x0000000A	[ 11] _realloc
+0x000066E2	0x0000000A	[ 11] _remove
+0x000066EC	0x0000000A	[ 11] _rename
+0x000066F6	0x0000000A	[ 11] _rmdir
+0x00006700	0x0000000A	[ 11] _shutdown
+0x0000670A	0x0000000A	[ 11] _socket
+0x00006714	0x0000000A	[ 11] _sscanf
+0x0000671E	0x0000000A	[ 11] _stat$INODE64
+0x00006728	0x0000000A	[ 11] _statfs$INODE64
+0x00006732	0x0000000A	[ 11] _strchr
+0x0000673C	0x0000000A	[ 11] _strcmp
+0x00006746	0x0000000A	[ 11] _strerror
+0x00006750	0x0000000A	[ 11] _strlen
+0x0000675A	0x0000000A	[ 11] _strncmp
+0x00006764	0x0000000A	[ 11] _strncpy
+0x0000676E	0x0000000A	[ 11] _write
+0x00006780	0x00000010	[  1] 16-byte-literal
+0x00006790	0x00000010	[  1] 16-byte-literal
+0x000067A0	0x00000008	[  2] 8-byte-literal
+0x000067A8	0x00000008	[  4] 8-byte-literal
+0x000067B0	0x0000001F	[  1] literal string: ARUTILS_FileSystem_GetFileSize
+0x000067CF	0x0000000B	[  1] literal string: FileSystem
+0x000067DA	0x00000003	[  1] literal string: %s
+0x000067DD	0x00000005	[  1] literal string: null
+0x000067E2	0x0000001A	[  1] literal string: ARUTILS_FileSystem_Rename
+0x000067FC	0x00000007	[  1] literal string: %s, %s
+0x00006803	0x0000001E	[  1] literal string: ARUTILS_FileSystem_RemoveFile
+0x00006821	0x0000001D	[  1] literal string: ARUTILS_FileSystem_RemoveDir
+0x0000683E	0x00000020	[  1] literal string: ARUTILS_FileSystem_GetFreeSpace
+0x0000685E	0x00000025	[  1] literal string: ARUTILS_FileSystem_RemoveDirCallback
+0x00006883	0x00000016	[  1] literal string: remove '%s' error: %s
+0x00006899	0x0000001C	[  2] literal string: ARUTILS_Http_Connection_New
+0x000068B5	0x00000005	[  2] literal string: Http
+0x000068BA	0x0000000B	[  2] literal string: %s, %d, %s
+0x000068C5	0x0000000D	[  2] literal string: http://%s:%d
+0x000068D2	0x0000000E	[  2] literal string: https://%s:%d
+0x000068E0	0x0000001F	[  2] literal string: ARUTILS_Http_Connection_Delete
+0x000068FF	0x00000001	[  2] literal string: 
+0x00006900	0x0000001F	[  2] literal string: ARUTILS_Http_Connection_Cancel
+0x0000691F	0x0000001A	[  2] literal string: ARUTILS_Http_Get_Internal
+0x00006939	0x00000002	[  2] literal string: /
+0x0000693B	0x00000007	[  2] literal string: %s%s%s
+0x00006942	0x00000003	[  2] literal string: wb
+0x00006945	0x0000001C	[  2] literal string: ARUTILS_Http_Post_WithFiles
+0x00006961	0x00000003	[  2] literal string: %d
+0x00006964	0x00000005	[  2] literal string: POST
+0x00006969	0x00000008	[  2] literal string: Expect:
+0x00006971	0x00000007	[  2] literal string: file%d
+0x00006978	0x00000019	[  2] literal string: application/octet-stream
+0x00006991	0x0000001C	[  2] literal string: ARUTILS_Http_Post_WithRange
+0x000069AD	0x00000003	[  2] literal string: rb
+0x000069B0	0x0000001E	[  2] literal string: Content-Range: bytes %d-%d/%d
+0x000069CE	0x00000004	[  2] literal string: md5
+0x000069D2	0x00000005	[  2] literal string: file
+0x000069D7	0x00000014	[  3] literal string: ARUTILS_Manager_New
+0x000069EB	0x00000008	[  3] literal string: Manager
+0x000069F3	0x00000017	[  3] literal string: ARUTILS_Manager_Delete
+0x00006A0A	0x00000006	[  3] literal string: drone
+0x00006A10	0x0000000E	[  3] literal string: skycontroller
+0x00006A1E	0x0000000A	[  3] literal string: anonymous
+0x00006A28	0x0000001F	[  4] literal string: ARUTILS_WifiFtp_Connection_New
+0x00006A47	0x00000008	[  4] literal string: WifiFtp
+0x00006A4F	0x00000024	[  4] literal string: server=%s, port=%d, mux=%p, user=%s
+0x00006A73	0x00000008	[  4] literal string: 0.0.0.0
+0x00006A7B	0x0000001A	[  4] literal string:  Error opening mux ftp %d
+0x00006A95	0x0000000A	[  4] literal string: 127.0.0.1
+0x00006A9F	0x0000000D	[  4] literal string: ftp://%s:%d/
+0x00006AAC	0x00000022	[  4] literal string: ARUTILS_WifiFtp_Connection_Delete
+0x00006ACE	0x00000022	[  4] literal string: ARUTILS_WifiFtp_Connection_Cancel
+0x00006AF0	0x00000021	[  4] literal string: ARUTILS_WifiFtp_Connection_Reset
+0x00006B11	0x00000015	[  4] literal string: ARUTILS_WifiFtp_List
+0x00006B26	0x00000006	[  4] literal string: LIST 
+0x00006B2C	0x00000017	[  4] literal string: ARUTILS_WifiFtp_Rename
+0x00006B43	0x00000006	[  4] literal string: RNFR 
+0x00006B49	0x00000006	[  4] literal string: RNTO 
+0x00006B4F	0x00000015	[  4] literal string: ARUTILS_WifiFtp_Size
+0x00006B64	0x00000006	[  4] literal string: SIZE 
+0x00006B6A	0x0000000C	[  4] literal string: SIZE: %.0lf
+0x00006B76	0x00000018	[  4] literal string: ARUTILS_WifiFtp_Command
+0x00006B8E	0x00000015	[  4] literal string: curl_easy_perform %d
+0x00006BA3	0x00000017	[  4] literal string: ARUTILS_WifiFtp_Delete
+0x00006BBA	0x00000006	[  4] literal string: DELE 
+0x00006BC0	0x00000013	[  4] literal string: ARUTILS_WifiFtp_Cd
+0x00006BD3	0x00000005	[  4] literal string: CWD 
+0x00006BD8	0x0000000A	[  4] literal string: result %d
+0x00006BE2	0x0000001C	[  4] literal string: ARUTILS_WifiFtp_GetInternal
+0x00006BFE	0x0000000B	[  4] literal string: %s, %s, %d
+0x00006C09	0x00000014	[  4] literal string: ARUTILS_WifiFtp_Put
+0x00006C1D	0x00000046	[  4] literal string: Remote File is bigger than local file, force to re-put file from zero
+0x00006C63	0x00000004	[  4] literal string: %lf
+0x00006C67	0x0000001A	[  4] literal string: ARUTILS_WifiFtp_RemoveDir
+0x00006C81	0x00000005	[  4] literal string: RMD 
+0x00006C86	0x00000009	[  5] literal string: No error
+0x00006C8F	0x00000016	[  5] literal string: Unknown generic error
+0x00006CA5	0x00000018	[  5] literal string: Memory allocation error
+0x00006CBD	0x00000015	[  5] literal string: Bad parameters error
+0x00006CD2	0x0000000D	[  5] literal string: System error
+0x00006CDF	0x00000019	[  5] literal string: Function not implemented
+0x00006CF8	0x00000016	[  5] literal string: curl allocation error
+0x00006D0E	0x00000016	[  5] literal string: curl set option error
+0x00006D24	0x00000014	[  5] literal string: curl get info error
+0x00006D38	0x00000013	[  5] literal string: curl perform error
+0x00006D4B	0x00000015	[  5] literal string: file not found error
+0x00006D60	0x00000012	[  5] literal string: ftp connect error
+0x00006D72	0x0000000F	[  5] literal string: ftp code error
+0x00006D81	0x00000014	[  5] literal string: ftp file size error
+0x00006D95	0x00000011	[  5] literal string: ftp resume error
+0x00006DA6	0x00000018	[  5] literal string: ftp user canceled error
+0x00006DBE	0x0000000F	[  5] literal string: ftp file error
+0x00006DCD	0x0000000E	[  5] literal string: ftp md5 error
+0x00006DDB	0x00000013	[  5] literal string: http connect error
+0x00006DEE	0x00000010	[  5] literal string: http code error
+0x00006DFE	0x0000001C	[  5] literal string: http authorization required
+0x00006E1A	0x00000013	[  5] literal string: http access denied
+0x00006E2D	0x00000015	[  5] literal string: http file size error
+0x00006E42	0x00000012	[  5] literal string: http resume error
+0x00006E54	0x00000019	[  5] literal string: http user canceled error
+0x00006E6D	0x00000015	[  5] literal string: BLE ftp failed error
+0x00006E82	0x00000033	[  5] literal string: Network type, not available for the platform error
+0x00006EB5	0x00000018	[  5] literal string: RFComm ftp failed error
+0x00006ECD	0x0000000E	[  5] literal string: Unknown value
+0x00006EDC	0x00000124	[  0] compact unwind info
+0x00007000	0x00000008	[  0] non-lazy-pointer-to-local: ___stack_chk_guard
+0x00007008	0x00000008	[  0] non-lazy-pointer-to-local: dyld_stub_binder
+0x00007010	0x00000008	[  0] non-lazy-pointer
+0x00007018	0x00000008	[  8] _ARDISCOVERY_DEVICE_WifiGetIpAddress
+0x00007020	0x00000008	[  8] _ARDISCOVERY_Device_BLEGetDevice
+0x00007028	0x00000008	[  8] _ARDISCOVERY_Device_UsbGetMux
+0x00007030	0x00000008	[  8] _ARDISCOVERY_getProductFamily
+0x00007038	0x00000008	[  7] _ARSAL_Nftw
+0x00007040	0x00000008	[  7] _ARSAL_Print_PrintRawEx
+0x00007048	0x00000008	[  7] _ARSAL_Sem_Destroy
+0x00007050	0x00000008	[  7] _ARSAL_Sem_Init
+0x00007058	0x00000008	[  7] _ARSAL_Sem_Post
+0x00007060	0x00000008	[  7] _ARSAL_Sem_Trywait
+0x00007068	0x00000008	[ 11] ___error
+0x00007070	0x00000008	[ 11] ___snprintf_chk
+0x00007078	0x00000008	[ 11] ___sprintf_chk
+0x00007080	0x00000008	[ 11] ___stack_chk_fail
+0x00007088	0x00000008	[ 11] ___strncat_chk
+0x00007090	0x00000008	[ 11] _calloc
+0x00007098	0x00000008	[ 11] _close
+0x000070A0	0x00000008	[ 10] _curl_easy_cleanup
+0x000070A8	0x00000008	[ 10] _curl_easy_getinfo
+0x000070B0	0x00000008	[ 10] _curl_easy_init
+0x000070B8	0x00000008	[ 10] _curl_easy_perform
+0x000070C0	0x00000008	[ 10] _curl_easy_reset
+0x000070C8	0x00000008	[ 10] _curl_easy_setopt
+0x000070D0	0x00000008	[ 10] _curl_formadd
+0x000070D8	0x00000008	[ 10] _curl_formfree
+0x000070E0	0x00000008	[ 10] _curl_slist_append
+0x000070E8	0x00000008	[ 10] _curl_slist_free_all
+0x000070F0	0x00000008	[ 11] _fclose
+0x000070F8	0x00000008	[ 11] _feof
+0x00007100	0x00000008	[ 11] _ferror
+0x00007108	0x00000008	[ 11] _fflush
+0x00007110	0x00000008	[ 11] _fopen
+0x00007118	0x00000008	[ 11] _fread
+0x00007120	0x00000008	[ 11] _free
+0x00007128	0x00000008	[ 11] _fseek
+0x00007130	0x00000008	[ 11] _fwrite
+0x00007138	0x00000008	[ 11] _lseek
+0x00007140	0x00000008	[ 11] _memcpy
+0x00007148	0x00000008	[  9] _mux_channel_close
+0x00007150	0x00000008	[  9] _mux_channel_open_ftp
+0x00007158	0x00000008	[ 11] _open
+0x00007160	0x00000008	[ 11] _read
+0x00007168	0x00000008	[ 11] _realloc
+0x00007170	0x00000008	[ 11] _remove
+0x00007178	0x00000008	[ 11] _rename
+0x00007180	0x00000008	[ 11] _rmdir
+0x00007188	0x00000008	[ 11] _shutdown
+0x00007190	0x00000008	[ 11] _socket
+0x00007198	0x00000008	[ 11] _sscanf
+0x000071A0	0x00000008	[ 11] _stat$INODE64
+0x000071A8	0x00000008	[ 11] _statfs$INODE64
+0x000071B0	0x00000008	[ 11] _strchr
+0x000071B8	0x00000008	[ 11] _strcmp
+0x000071C0	0x00000008	[ 11] _strerror
+0x000071C8	0x00000008	[ 11] _strlen
+0x000071D0	0x00000008	[ 11] _strncmp
+0x000071D8	0x00000008	[ 11] _strncpy
+0x000071E0	0x00000008	[ 11] _write
+
+# Dead Stripped Symbols:
+#        	Size    	File  Name
+<<dead>> 	0x00000018	[  1] CIE
+<<dead>> 	0x00000005	[  2] literal string: null
+<<dead>> 	0x00000003	[  2] literal string: %s
+<<dead>> 	0x00000007	[  2] literal string: %s, %s
+<<dead>> 	0x00000018	[  2] CIE
+<<dead>> 	0x00000003	[  3] literal string: %s
+<<dead>> 	0x00000001	[  3] literal string: 
+<<dead>> 	0x00000018	[  3] CIE
+<<dead>> 	0x00000008	[  4] 8-byte-literal
+<<dead>> 	0x00000005	[  4] literal string: null
+<<dead>> 	0x00000006	[  4] literal string: drone
+<<dead>> 	0x00000003	[  4] literal string: %s
+<<dead>> 	0x00000001	[  4] literal string: 
+<<dead>> 	0x00000002	[  4] literal string: /
+<<dead>> 	0x00000007	[  4] literal string: %s, %s
+<<dead>> 	0x00000018	[  4] CIE
+<<dead>> 	0x00000018	[  5] CIE
+<<dead>> 	0x00000018	[  6] CIE
