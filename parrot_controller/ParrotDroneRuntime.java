@@ -34,7 +34,7 @@ import fr.roboticiens.paralleles.Parallele;
 import fr.roboticiens.prologue.Prologue;
 import fr.roboticiens.types.Pourcent;
 
-public class DroneRuntimePrint implements DroneRuntime {
+public class ParrotDroneRuntime implements DroneRuntime {
 
 	public static final int DECOLLER_INPUT_CODE = 1;
 	public static final int ATTERRIR_INPUT_CODE = 2;
@@ -85,7 +85,7 @@ public class DroneRuntimePrint implements DroneRuntime {
 	private final Condition hasStarted = lockState.newCondition();
 	private final Condition hasStopped = lockState.newCondition();
 	
-	public  DroneRuntimePrint(final String parrotExecutablePath) {
+	public  ParrotDroneRuntime(final String parrotExecutablePath) {
 		 try {
 			 this.processBuilder = new ProcessBuilder(parrotExecutablePath);
 			 this.processBuilder.redirectError(Redirect.INHERIT);
