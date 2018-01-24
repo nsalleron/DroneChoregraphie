@@ -1,0 +1,179 @@
+# Path: out/arsdk-native/build/libfutils/libfutils.dylib
+# Arch: x86_64
+# Object files:
+[  0] linker synthesized
+[  1] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/hash.c.o
+[  2] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/timetools.c.o
+[  3] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/fdutils.c.o
+[  4] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/synctools.c.o
+[  5] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/systimetools.c.o
+[  6] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libfutils/obj/src/mbox.c.o
+[  7] /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/lib/libulog.dylib
+[  8] /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+# Sections:
+# Address	Size    	Segment	Section
+0x00001500	0x000016D6	__TEXT	__text
+0x00002BD6	0x00000090	__TEXT	__stubs
+0x00002C68	0x00000100	__TEXT	__stub_helper
+0x00002D70	0x000000A8	__TEXT	__const
+0x00002E18	0x0000011A	__TEXT	__cstring
+0x00002F34	0x000000C0	__TEXT	__unwind_info
+0x00003000	0x00000010	__DATA	__nl_symbol_ptr
+0x00003010	0x00000008	__DATA	__got
+0x00003018	0x000000C0	__DATA	__la_symbol_ptr
+0x000030D8	0x00000060	__DATA	__data
+0x00003138	0x00000010	__DATA	__bss
+# Symbols:
+# Address	Size    	File  Name
+0x00001500	0x000000B0	[  1] _hash_init
+0x000015B0	0x00000090	[  1] _hash_remove_all
+0x00001640	0x000000B0	[  1] _hash_destroy
+0x000016F0	0x000000F0	[  1] _hash_insert
+0x000017E0	0x000000F0	[  1] _hash_insert_const
+0x000018D0	0x00000090	[  1] _hash_lookup
+0x00001960	0x00000080	[  1] _hash_lookup_const
+0x000019E0	0x000000B5	[  1] _hash_remove
+0x00001AA0	0x000000F0	[  2] _time_get_monotonic
+0x00001B90	0x00000060	[  2] _time_timespec_diff
+0x00001BF0	0x000000E0	[  2] _time_timespec_diff_in_range
+0x00001CD0	0x00000090	[  2] _time_timespec_cmp
+0x00001D60	0x00000040	[  2] _time_timespec_to_us
+0x00001DA0	0x00000030	[  2] _time_timespec_to_ns
+0x00001DD0	0x00000050	[  2] _time_ns_to_timespec
+0x00001E20	0x00000050	[  2] _time_us_to_timespec
+0x00001E70	0x000001B0	[  2] _time_timespec_diff_now
+0x00002020	0x00000090	[  2] _time_timespec_add_ns
+0x000020B0	0x000000C0	[  2] _time_timespec_add_us
+0x00002170	0x00000030	[  2] _time_timeval_to_timespec
+0x000021A0	0x0000003A	[  2] _time_timeval_to_ms
+0x000021E0	0x00000050	[  3] _fd_set_close_on_exec
+0x00002230	0x00000030	[  3] _fd_has_close_on_exec
+0x00002260	0x00000054	[  3] _fd_add_flags
+0x000022C0	0x00000010	[  4] _sync_file
+0x000022D0	0x00000100	[  4] _synctool
+0x000023D0	0x00000010	[  4] _sync_folder
+0x000023E0	0x000001B8	[  4] _sync_file_and_folder
+0x000025A0	0x00000060	[  5] _time_ctx_init
+0x00002600	0x000000B0	[  5] _time_ctx_set_date
+0x000026B0	0x000000A0	[  5] _time_ctx_set_hour
+0x00002750	0x000000C0	[  5] _time_ctx_get_time
+0x00002810	0x00000070	[  5] _time_system_set_time
+0x00002880	0x00000070	[  5] _time_system_get_time
+0x000028F0	0x00000070	[  5] _time_system_create_tm
+0x00002960	0x000000B7	[  5] _time_system_convert_time
+0x00002A20	0x00000080	[  6] _mbox_new
+0x00002AA0	0x00000040	[  6] _mbox_destroy
+0x00002AE0	0x00000020	[  6] _mbox_get_read_fd
+0x00002B00	0x00000060	[  6] _mbox_push
+0x00002B60	0x00000076	[  6] _mbox_peek
+0x00002BD6	0x00000006	[  8] ___error
+0x00002BDC	0x00000006	[  8] _calloc
+0x00002BE2	0x00000006	[  8] _clock_gettime
+0x00002BE8	0x00000006	[  8] _close
+0x00002BEE	0x00000006	[  8] _fcntl
+0x00002BF4	0x00000006	[  8] _free
+0x00002BFA	0x00000006	[  8] _fsync
+0x00002C00	0x00000006	[  8] _gettimeofday
+0x00002C06	0x00000006	[  8] _gmtime_r
+0x00002C0C	0x00000006	[  8] _mach_absolute_time
+0x00002C12	0x00000006	[  8] _mach_timebase_info
+0x00002C18	0x00000006	[  8] _mktime
+0x00002C1E	0x00000006	[  8] _open
+0x00002C24	0x00000006	[  8] _pipe
+0x00002C2A	0x00000006	[  8] _read
+0x00002C30	0x00000006	[  8] _settimeofday
+0x00002C36	0x00000006	[  8] _strdup
+0x00002C3C	0x00000006	[  8] _strerror
+0x00002C42	0x00000006	[  8] _strftime
+0x00002C48	0x00000006	[  8] _strptime
+0x00002C4E	0x00000006	[  8] _strrchr
+0x00002C54	0x00000006	[  7] _ulog_init_cookie
+0x00002C5A	0x00000006	[  7] _ulog_log_write
+0x00002C60	0x00000006	[  8] _write
+0x00002C68	0x00000010	[  0] helper helper
+0x00002C78	0x0000000A	[  7] _ulog_init_cookie
+0x00002C82	0x0000000A	[  7] _ulog_log_write
+0x00002C8C	0x0000000A	[  8] ___error
+0x00002C96	0x0000000A	[  8] _calloc
+0x00002CA0	0x0000000A	[  8] _clock_gettime
+0x00002CAA	0x0000000A	[  8] _close
+0x00002CB4	0x0000000A	[  8] _fcntl
+0x00002CBE	0x0000000A	[  8] _free
+0x00002CC8	0x0000000A	[  8] _fsync
+0x00002CD2	0x0000000A	[  8] _gettimeofday
+0x00002CDC	0x0000000A	[  8] _gmtime_r
+0x00002CE6	0x0000000A	[  8] _mach_absolute_time
+0x00002CF0	0x0000000A	[  8] _mach_timebase_info
+0x00002CFA	0x0000000A	[  8] _mktime
+0x00002D04	0x0000000A	[  8] _open
+0x00002D0E	0x0000000A	[  8] _pipe
+0x00002D18	0x0000000A	[  8] _read
+0x00002D22	0x0000000A	[  8] _settimeofday
+0x00002D2C	0x0000000A	[  8] _strdup
+0x00002D36	0x0000000A	[  8] _strerror
+0x00002D40	0x0000000A	[  8] _strftime
+0x00002D4A	0x0000000A	[  8] _strptime
+0x00002D54	0x0000000A	[  8] _strrchr
+0x00002D5E	0x0000000A	[  8] _write
+0x00002D70	0x00000080	[  1] _hash_prime_tab
+0x00002DF0	0x00000010	[  2] 16-byte-literal
+0x00002E00	0x00000010	[  2] 16-byte-literal
+0x00002E10	0x00000008	[  2] 8-byte-literal
+0x00002E18	0x0000000A	[  2] literal string: timetools
+0x00002E22	0x0000001D	[  2] literal string: time_get_monotonic error: %s
+0x00002E3F	0x00000023	[  2] literal string: Null argument in time_timespec_cmp
+0x00002E62	0x0000000A	[  4] literal string: synctools
+0x00002E6C	0x0000001E	[  4] literal string: sync_file(%s) failed : %d(%s)
+0x00002E8A	0x00000019	[  4] literal string: Could not duplicate path
+0x00002EA3	0x00000022	[  4] literal string: Could not get parent folder of %s
+0x00002EC5	0x00000020	[  4] literal string: sync_folder(%s) failed : %d(%s)
+0x00002EE5	0x00000019	[  4] literal string: open(%s) failed : %d(%m)
+0x00002EFE	0x0000001A	[  4] literal string: fsync(%s) failed : %d(%m)
+0x00002F18	0x0000000D	[  5] literal string: systimetools
+0x00002F25	0x00000003	[  5] literal string: %F
+0x00002F28	0x0000000A	[  5] literal string: T%H%M%S%z
+0x00002F34	0x000000C0	[  0] compact unwind info
+0x00003000	0x00000008	[  0] non-lazy-pointer-to-local: dyld_stub_binder
+0x00003008	0x00000008	[  0] non-lazy-pointer
+0x00003010	0x00000008	[  0] non-lazy-pointer-to-local: _clock_gettime
+0x00003018	0x00000008	[  8] ___error
+0x00003020	0x00000008	[  8] _calloc
+0x00003028	0x00000008	[  8] _clock_gettime
+0x00003030	0x00000008	[  8] _close
+0x00003038	0x00000008	[  8] _fcntl
+0x00003040	0x00000008	[  8] _free
+0x00003048	0x00000008	[  8] _fsync
+0x00003050	0x00000008	[  8] _gettimeofday
+0x00003058	0x00000008	[  8] _gmtime_r
+0x00003060	0x00000008	[  8] _mach_absolute_time
+0x00003068	0x00000008	[  8] _mach_timebase_info
+0x00003070	0x00000008	[  8] _mktime
+0x00003078	0x00000008	[  8] _open
+0x00003080	0x00000008	[  8] _pipe
+0x00003088	0x00000008	[  8] _read
+0x00003090	0x00000008	[  8] _settimeofday
+0x00003098	0x00000008	[  8] _strdup
+0x000030A0	0x00000008	[  8] _strerror
+0x000030A8	0x00000008	[  8] _strftime
+0x000030B0	0x00000008	[  8] _strptime
+0x000030B8	0x00000008	[  8] _strrchr
+0x000030C0	0x00000008	[  7] _ulog_init_cookie
+0x000030C8	0x00000008	[  7] _ulog_log_write
+0x000030D0	0x00000008	[  8] _write
+0x000030D8	0x00000020	[  2] ___ulog_cookie_timetools
+0x000030F8	0x00000020	[  4] ___ulog_cookie_synctools
+0x00003118	0x00000020	[  5] ___ulog_cookie_systimetools
+0x00003138	0x00000008	[  2] _time_get_monotonic_internal_mach.nsmul
+0x00003140	0x00000008	[  2] _time_get_monotonic_internal_mach.nsratio
+
+# Dead Stripped Symbols:
+#        	Size    	File  Name
+<<dead>> 	0x00000018	[  1] CIE
+<<dead>> 	0x00000010	[  2] 16-byte-literal
+<<dead>> 	0x00000010	[  2] 16-byte-literal
+<<dead>> 	0x00000008	[  2] 8-byte-literal
+<<dead>> 	0x00000018	[  2] CIE
+<<dead>> 	0x00000018	[  3] CIE
+<<dead>> 	0x00000018	[  4] CIE
+<<dead>> 	0x00000018	[  5] CIE
+<<dead>> 	0x00000018	[  6] CIE

@@ -1,0 +1,29 @@
+{
+  "core.filemode": [
+    "true"
+  ], 
+  "core.repositoryformatversion": [
+    "0"
+  ], 
+  "branch.default.merge": [
+    "refs/heads/master"
+  ], 
+  "core.ignorecase": [
+    "true"
+  ], 
+  "filter.lfs.smudge": [
+    "git-lfs smudge --skip -- %f"
+  ], 
+  "remote.origin.url": [
+    "https://github.com/Parrot-Developers/arsdk_manifests.git"
+  ], 
+  "core.precomposeunicode": [
+    "true"
+  ], 
+  "branch.default.remote": [
+    "origin"
+  ], 
+  "remote.origin.fetch": [
+    "+refs/heads/*:refs/remotes/origin/*"
+  ]
+}

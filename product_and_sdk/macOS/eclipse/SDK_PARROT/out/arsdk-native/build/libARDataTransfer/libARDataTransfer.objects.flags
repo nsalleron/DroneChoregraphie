@@ -1,0 +1,21 @@
+TARGET_GLOBAL_C_INCLUDES := /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/include/x86_64-apple-darwin /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/include
+TARGET_GLOBAL_ASFLAGS := 
+TARGET_GLOBAL_OBJCFLAGS := -fobjc-arc
+TARGET_GLOBAL_VALAFLAGS := --vapidir=/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging-host/usr/share/vala-0.20/vapi --vapidir=/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/share/vala/vapi --target-glib=2.36
+TARGET_GLOBAL_PCHFLAGS := -x c++-header
+TARGET_GLOBAL_LDLIBS := 
+PRIVATE_GLOBAL_CFLAGS := -std=gnu99 -pipe -O2 -g -ffunction-sections -DALCHEMY_BUILD -m64 -fPIC -msse -msse2 -mssse3 -arch x86_64 -mmacosx-version-min=10.10 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Qunused-arguments
+PRIVATE_GLOBAL_CXXFLAGS := 
+PRIVATE_GLOBAL_LDFLAGS := -O2 -m64 -lc++ -arch x86_64 -mmacosx-version-min=10.10 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -L/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/lib -L/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/lib/x86_64-apple-darwin -L/Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/staging/usr/lib
+PRIVATE_C_INCLUDES := /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libARDataTransfer /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libARDataTransfer /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libARDataTransfer/Includes /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libARDataTransfer/Sources /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libmux/include/ /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libARSAL/Config/darwin /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/libpomp/include /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/packages/ulog/libulog/include
+PRIVATE_ASFLAGS := 
+PRIVATE_CFLAGS := -DHAVE_CONFIG_H -include /Users/nicolassalleron/Desktop/IDMProject/product_and_sdk/macOS/eclipse/SDK_PARROT/out/arsdk-native/build/libARNetwork/autoconf-libARNetwork.h -DBUILD_LIBARUTILS -DBUILD_LIBARDISCOVERY -DBUILD_CURL -DBUILD_LIBARNETWORK -DBUILD_LIBARCOMMANDS -DBUILD_LIBARDISCOVERY_HEADERS -DBUILD_JSON -DBUILD_LIBARNETWORKAL -DBUILD_LIBMUX -DBUILD_LIBARSAL -DBUILD_LIBPOMP -DBUILD_LIBULOG -DBUILD_LIBRESSL
+PRIVATE_CXXFLAGS := 
+PRIVATE_OBJCFLAGS := 
+PRIVATE_VALAFLAGS := --define BUILD_LIBARUTILS --define BUILD_LIBARDISCOVERY --define BUILD_LIBARNETWORK --define BUILD_LIBARCOMMANDS --define BUILD_LIBARNETWORKAL --define BUILD_LIBMUX --define BUILD_LIBARSAL --define BUILD_LIBPOMP --define BUILD_LIBULOG
+PRIVATE_PCH_INCLUDE := 
+PRIVATE_LDFLAGS := 
+PRIVATE_LDLIBS := 
+PRIVATE_WARNINGS_CFLAGS := -Wmissing-prototypes -Wno-strict-prototypes -Wall -Wextra -Wno-unused -Wno-unused-parameter -Wunused-value -Wunused-variable -Wunused-label -Wpointer-arith -Wformat-nonliteral -Wformat-security -Winit-self -fdiagnostics-show-option -fcolor-diagnostics -Wunreachable-code
+PRIVATE_WARNINGS_CXXFLAGS := -Wno-ctor-dtor-privacy -Wno-non-virtual-dtor -Wreorder -Woverloaded-virtual -Wall -Wextra -Wno-unused -Wno-unused-parameter -Wunused-value -Wunused-variable -Wunused-label -Wpointer-arith -Wformat-nonliteral -Wformat-security -Winit-self -fdiagnostics-show-option -fcolor-diagnostics -Wunreachable-code
+
