@@ -1,0 +1,14 @@
+ /*
+  * Paramètres d'exécution
+  */
+define eloignement_max 2
+define hauteur_max 2
+define vitesse_deplacement_max 100%
+define vitesse_hauteur_max 100%
+define vitesse_rotation_max 100%
+
+main {
+	decoller()
+	// main auto-généré
+	atterrir()
+}

@@ -86,70 +86,72 @@ public class ParrotDroneRuntime implements DroneRuntime {
 	private final Condition hasStopped = lockState.newCondition();
 	
 	public  ParrotDroneRuntime(final String parrotExecutablePath) {
-		 try {
-			 this.processBuilder = new ProcessBuilder(parrotExecutablePath);
-			 this.processBuilder.redirectError(Redirect.INHERIT);
-			 this.process = processBuilder.start();
+		this.processBuilder = new ProcessBuilder(parrotExecutablePath);
+		this.processBuilder.redirectError(Redirect.INHERIT);
+	}
+	
+	@Override
+	public void start(){
+		 
+		try{
+			this.input = process.getInputStream();
+		 	this.output = process.getOutputStream();
+		 
+		 	this.brInput = new BufferedReader(new InputStreamReader(input));
+		 	this.bwOutput = new BufferedWriter(new OutputStreamWriter(output));
+		 
+		 	this.printerThread = new Thread(new Runnable() {
 			 
-			 this.input = process.getInputStream();
-			 this.output = process.getOutputStream();
-			 
-			 this.brInput = new BufferedReader(new InputStreamReader(input));
-			 this.bwOutput = new BufferedWriter(new OutputStreamWriter(output));
-			 
-			 this.printerThread = new Thread(new Runnable() {
-				 
-				@Override
-				public void run() {
-					String line = null;
-					try {
-						while((line = brInput.readLine()) != null) {
-							System.out.println("INPUT : " +line);
-							if(line.equals(STATE_STARTED)) {
-								droneState = DroneState.STARTED;
-								lockState.lock();
-								try {
-									hasStarted.signalAll();
-								} finally {
-									lockState.unlock();
-								}
-							} else if(line.equals(STATE_FLYING)) {
-								droneState = DroneState.FLYING;
-								lockState.lock();
-								try {
-									hasTakenOff.signalAll();
-								} finally {
-									lockState.unlock();
-								}
-							} else if(line.equals(STATE_LANDED)) {
-								droneState = DroneState.LANDED;
-								lockState.lock();
-								try {
-									hasLanded.signalAll();
-								} finally {
-									lockState.unlock();
-								}
-							} else if(line.equals(STATE_STOPPED)) {
-								droneState = DroneState.STOPPED;
-								lockState.lock();
-								try {
-									hasStopped.signalAll();
-								} finally {
-									lockState.unlock();
-								}
-							} else {
-								System.out.println(line);
+			@Override
+			public void run() {
+				String line = null;
+				try {
+					while((line = brInput.readLine()) != null) {
+						System.out.println("INPUT : " +line);
+						if(line.equals(STATE_STARTED)) {
+							droneState = DroneState.STARTED;
+							lockState.lock();
+							try {
+								hasStarted.signalAll();
+							} finally {
+								lockState.unlock();
 							}
-						} // fin while(readLine)
-						
-					} catch (IOException e) {
-						return;
-					}
+						} else if(line.equals(STATE_FLYING)) {
+							droneState = DroneState.FLYING;
+							lockState.lock();
+							try {
+								hasTakenOff.signalAll();
+							} finally {
+								lockState.unlock();
+							}
+						} else if(line.equals(STATE_LANDED)) {
+							droneState = DroneState.LANDED;
+							lockState.lock();
+							try {
+								hasLanded.signalAll();
+							} finally {
+								lockState.unlock();
+							}
+						} else if(line.equals(STATE_STOPPED)) {
+							droneState = DroneState.STOPPED;
+							lockState.lock();
+							try {
+								hasStopped.signalAll();
+							} finally {
+								lockState.unlock();
+							}
+						} else {
+							System.out.println(line);
+						}
+					} // fin while(readLine)
+					
+				} catch (IOException e) {
+					return;
 				}
-			 });
-			 this.printerThread.start();
-			 
-		} catch (IOException e) {
+			}
+		 });
+		 this.printerThread.start();
+		}catch (Exception e) {
 			e.printStackTrace();
 			process.destroy();
 			System.exit(-1);

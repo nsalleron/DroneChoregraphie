@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+/Users/nicolassalleron/Desktop/IDMProject/product_builds/macosx.cocoa.x86_64/eclipse/DroneDSLEditor.app/Contents/MacOS/workspace/.metadata/.plugins/org.eclipse.jdt.core
+3429437687.index
+2605661255.index
+1001945677.index
+3650568168.index

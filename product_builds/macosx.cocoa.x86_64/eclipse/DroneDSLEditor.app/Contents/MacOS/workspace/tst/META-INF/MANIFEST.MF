@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: tst
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: tst; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: fr.idmteam1.idmproject.dronedsl
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
