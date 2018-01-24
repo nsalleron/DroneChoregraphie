@@ -1,1 +1,0 @@
-0000000000000000000000000000000000000000 bb593a8d6e61697f23706ba4d0f550f7035b88bf Nicolas SALLERON <nicolas.salleron@gmail.com> 1515589322 +0100	fetch --progress github --tags +refs/heads/*:refs/remotes/github/*: storing head
