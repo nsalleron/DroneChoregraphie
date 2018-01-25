@@ -240,11 +240,15 @@
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
 	</extension>
+	
+	<!-- Désactiver la génération automatique à la sauvegarde pour la faire explicitement via un menu
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="fr.idmteam1.idmproject.dronedsl.ui.DroneDSLExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
 			fileExtensions="main_drone"/>
 	</extension>
+	-->
+	
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
 			category="fr.idmteam1.idmproject.dronedsl.DroneDSL"
