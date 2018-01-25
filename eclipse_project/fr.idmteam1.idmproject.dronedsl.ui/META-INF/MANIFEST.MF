@@ -18,10 +18,19 @@ Require-Bundle: fr.idmteam1.idmproject.dronedsl,
  org.eclipse.xtend.lib;resolution:=optional,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.core.runtime,
- org.eclipse.core.resources
-Import-Package: org.apache.log4j
+ org.eclipse.core.resources,
+ org.eclipse.ui.workbench,
+ org.eclipse.core.commands,
+ org.eclipse.xtext,
+ org.eclipse.xtext.util,
+ org.eclipse.jface,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.generator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: fr.idmteam1.idmproject.dronedsl.ui.contentassist,
+ fr.idmteam1.idmproject.dronedsl.ui.handler,
  fr.idmteam1.idmproject.dronedsl.ui.internal,
  fr.idmteam1.idmproject.dronedsl.ui.quickfix
 Bundle-Activator: fr.idmteam1.idmproject.dronedsl.ui.internal.DronedslActivator

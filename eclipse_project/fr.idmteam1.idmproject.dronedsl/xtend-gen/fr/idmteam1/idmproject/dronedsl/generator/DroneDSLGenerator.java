@@ -27,6 +27,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Pair;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -35,7 +36,7 @@ import org.eclipse.xtext.xbase.lib.Pair;
  */
 @SuppressWarnings("all")
 public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfigurationProvider {
-  private final LinkedHashMap<String, CharSequence> stubFilesMap = CollectionLiterals.<String, CharSequence>newLinkedHashMap(
+  private final LinkedHashMap<String, CharSequence> mainStubFilesMap = CollectionLiterals.<String, CharSequence>newLinkedHashMap(
     Pair.<String, CharSequence>of("../src/fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
     Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
     Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
@@ -60,6 +61,33 @@ public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfi
     Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
     Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/ParrotDroneRuntime.java", this.contentDroneRuntimePrintClass()));
   
+  private final LinkedHashMap<String, CharSequence> libStubFilesMap = CollectionLiterals.<String, CharSequence>newLinkedHashMap(
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/body/BodyInstruction.java", this.contentBodyInstructionClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Atterrir.java", this.contentAtterrirClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Avancer.java", this.contentAvancerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeAvecDureeVitesse.java", this.contentCommandeAvecDureeVitesseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeBasique.java", this.contentCommandeBasiqueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/CommandeParallelisable.java", this.contentCommandeParallelisableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Decoller.java", this.contentDecollerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Descendre.java", this.contentDescendreClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Droite.java", this.contentDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Gauche.java", this.contentGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Monter.java", this.contentMonterClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Pause.java", this.contentPauseClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/Reculer.java", this.contentReculerClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationDroite.java", this.contentRotationDroiteClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/commandes/RotationGauche.java", this.contentRotationGaucheClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/imports/Import.java", this.contentImportClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/paralleles/Parallele.java", this.contentParalleleClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/prologue/Prologue.java", this.contentPrologueClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Pourcent.java", this.contentPourcentClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/types/Seconde.java", this.contentSecondeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntime.java", this.contentDroneRuntimeClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/DroneRuntimeExecutable.java", this.contentDroneRuntimeExecutableClass()), 
+    Pair.<String, CharSequence>of("../src/fr/roboticiens/runtime/ParrotDroneRuntime.java", this.contentDroneRuntimePrintClass()));
+  
+  private final String packagePath = "../src/fr/roboticiens/";
+  
   private final String mainFilePath = "../src/fr/roboticiens/Main.java";
   
   @Override
@@ -67,17 +95,31 @@ public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfi
     boolean _isEmpty = IterableExtensions.isEmpty(Iterables.<Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), Model.class));
     boolean _not = (!_isEmpty);
     if (_not) {
-      this.generateStubFiles(fsa);
+      this.generateMainStubFiles(fsa);
       Iterable<Model> _filter = Iterables.<Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), Model.class);
       for (final Model m : _filter) {
         fsa.generateFile(this.mainFilePath, this.compile(m));
       }
+    } else {
+      boolean _isEmpty_1 = IterableExtensions.isEmpty(Iterables.<fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model.class));
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
+        this.generateLibStubFiles(fsa);
+        Iterable<fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model> _filter_1 = Iterables.<fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model.class);
+        for (final fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model m_1 : _filter_1) {
+          {
+            final String libName = input.getURI().trimFileExtension().lastSegment();
+            final String capitalizedFileName = StringExtensions.toFirstUpper(libName);
+            final String filename = ((this.packagePath + capitalizedFileName) + ".java");
+            fsa.generateFile(filename, this.compile(m_1));
+          }
+        }
+      }
     }
-    fsa.deleteFile("../src-gen/");
   }
   
-  public void generateStubFiles(final IFileSystemAccess2 fsa) {
-    Iterator<Map.Entry<String, CharSequence>> itr = this.stubFilesMap.entrySet().iterator();
+  public void generateMainStubFiles(final IFileSystemAccess2 fsa) {
+    Iterator<Map.Entry<String, CharSequence>> itr = this.mainStubFilesMap.entrySet().iterator();
     while (itr.hasNext()) {
       {
         Map.Entry<String, CharSequence> entry = itr.next();
@@ -88,13 +130,18 @@ public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfi
     }
   }
   
-  /**
-   * «IF e.imports!== null»
-   * « FOR f:e.imports»
-   * «f.compile»
-   * «ENDFOR»
-   * «ENDIF»
-   */
+  public void generateLibStubFiles(final IFileSystemAccess2 fsa) {
+    Iterator<Map.Entry<String, CharSequence>> itr = this.libStubFilesMap.entrySet().iterator();
+    while (itr.hasNext()) {
+      {
+        Map.Entry<String, CharSequence> entry = itr.next();
+        String filepath = entry.getKey();
+        CharSequence content = entry.getValue();
+        fsa.generateFile(filepath, content);
+      }
+    }
+  }
+  
   public CharSequence compile(final Model e) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package fr.roboticiens;");
@@ -184,7 +231,72 @@ public class DroneDSLGenerator extends AbstractGenerator implements IOutputConfi
     return _builder;
   }
   
+  public CharSequence compile(final fr.idmteam1.idmproject.dronedsl.droneDSLLib.Model e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package fr.roboticiens;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.commandes.*;");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.paralleles.*;");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.runtime.*;");
+    _builder.newLine();
+    _builder.append("import fr.roboticiens.types.*;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("public class ");
+    String _firstUpper = StringExtensions.toFirstUpper(e.eResource().getURI().trimFileExtension().lastSegment());
+    _builder.append(_firstUpper);
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl> _fonctions = e.getFonctions();
+      boolean _tripleNotEquals = (_fonctions != null);
+      if (_tripleNotEquals) {
+        {
+          EList<fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl> _fonctions_1 = e.getFonctions();
+          for(final fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl f : _fonctions_1) {
+            CharSequence _compile = this.compile(f);
+            _builder.append(_compile);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
   public CharSequence compile(final FonctionDecl e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("\t");
+    _builder.append("public static void ");
+    String _name = e.getName();
+    _builder.append(_name, "\t");
+    _builder.append("(DroneRuntime runtime) {");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<EObject> _body = e.getBody();
+      for(final EObject f : _body) {
+        String _string = f.toString();
+        _builder.append(_string);
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("}");
+    return _builder;
+  }
+  
+  public CharSequence compile(final fr.idmteam1.idmproject.dronedsl.droneDSLLib.FonctionDecl e) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("\t");
     _builder.append("public static void ");

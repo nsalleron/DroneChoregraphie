@@ -17,6 +17,7 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Pair;
@@ -58,6 +59,7 @@ public class DroneDSLLibGenerator extends AbstractGenerator {
   
   @Override
   public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    InputOutput.<String>println("doGenerate DroneDSLLib");
     boolean _isEmpty = IterableExtensions.isEmpty(Iterables.<Model>filter(IteratorExtensions.<EObject>toIterable(input.getAllContents()), Model.class));
     boolean _not = (!_isEmpty);
     if (_not) {
