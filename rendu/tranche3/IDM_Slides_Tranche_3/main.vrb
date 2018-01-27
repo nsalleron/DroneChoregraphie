@@ -1,0 +1,17 @@
+\frametitle{Prologue}
+\begin{block}{Définir 5 constantes de vol}
+\begin{itemize}
+\item \alert{define} \emph{vitesse\_hauteur\_max}: vitesse maximale d'élévation du drone pour la chorégraphie.
+\item \alert{define} \emph{vitesse\_deplacement\_max}: vitesse maximale de déplacement sur le plan horizontal du drone pour la chorégraphie.
+\item \alert{define} \emph{vitesse\_rotation\_max}: vitesse maximale de rotation du drone pour la chorégraphie.
+\item \alert{define} \emph{hauteur\_max}: Cette constante permet de limiter l'altitude maximale du drone en vol.
+\item \alert{define} \emph{eloignement\_max}: Cette constante permet de contr\^oler la distance horizontale du drone en vol par rapport au point de décollage.
+\end{itemize}
+\end{block}
+
+
+Exemple de define :
+\begin{center}
+\color{Framarouge}
+	define vitesse\_hauteur\_max \color{Framagris}50\%
+\end{center}
