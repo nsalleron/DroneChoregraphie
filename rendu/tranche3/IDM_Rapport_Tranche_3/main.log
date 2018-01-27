@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.26)  27 JAN 2018 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.26)  27 JAN 2018 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,7 +362,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<UPMC_Sorbonne_Universites_svg.jpg, id=4, 1629.08624pt x 654.445pt>
+<UPMC_Sorbonne_Universites_svg.jpg, id=60, 1629.08624pt x 654.445pt>
 File: UPMC_Sorbonne_Universites_svg.jpg Graphic file (type jpg)
 
 <use UPMC_Sorbonne_Universites_svg.jpg>
@@ -375,12 +375,10 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UPMC_
-Sorbonne_Universites_svg.jpg>]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+Sorbonne_Universites_svg.jpg>] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
@@ -412,13 +410,13 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
  [2]
-<Distrib.png, id=25, 321.2pt x 58.2175pt>
+<Distrib.png, id=93, 321.2pt x 58.2175pt>
 File: Distrib.png Graphic file (type png)
  <use Distrib.png>
 Package pdftex.def Info: Distrib.png used on input line 94.
 (pdftex.def)             Requested size: 240.89941pt x 43.66301pt.
 
-<Contenu.png, id=27, 304.13625pt x 156.585pt>
+<Contenu.png, id=95, 304.13625pt x 156.585pt>
 File: Contenu.png Graphic file (type png)
  <use Contenu.png>
 Package pdftex.def Info: Contenu.png used on input line 105.
@@ -432,25 +430,25 @@ Overfull \hbox (32.44147pt too wide) in paragraph at lines 120--121
 epertoire pour stocker ses chor^^Segraphies. 
  []
 
-<03.png, id=37, 696.6025pt x 301.125pt>
+<03.png, id=104, 696.6025pt x 301.125pt>
 File: 03.png Graphic file (type png)
  <use 03.png>
 Package pdftex.def Info: 03.png used on input line 124.
 (pdftex.def)             Requested size: 348.3004pt x 150.56212pt.
 
-<04.png, id=38, 979.66pt x 215.80624pt>
+<04.png, id=105, 979.66pt x 215.80624pt>
 File: 04.png Graphic file (type png)
  <use 04.png>
 Package pdftex.def Info: 04.png used on input line 132.
 (pdftex.def)             Requested size: 195.92853pt x 43.16048pt.
 
-<05.png, id=39, 612.2875pt x 499.8675pt>
+<05.png, id=106, 612.2875pt x 499.8675pt>
 File: 05.png Graphic file (type png)
  <use 05.png>
 Package pdftex.def Info: 05.png used on input line 140.
 (pdftex.def)             Requested size: 244.91066pt x 199.94345pt.
 
-<06.png, id=40, 615.29875pt x 501.875pt>
+<06.png, id=107, 615.29875pt x 501.875pt>
 File: 06.png Graphic file (type png)
  <use 06.png>
 Package pdftex.def Info: 06.png used on input line 148.
@@ -459,16 +457,16 @@ Package pdftex.def Info: 06.png used on input line 148.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./03.png> <./04.png> <./05.png>] <07.png, id=51, 327.2225pt x 303.1325pt>
+[4 <./03.png> <./04.png> <./05.png>] <07.png, id=118, 327.2225pt x 303.1325pt>
 File: 07.png Graphic file (type png)
 
 <use 07.png>
 Package pdftex.def Info: 07.png used on input line 157.
 (pdftex.def)             Requested size: 196.335pt x 181.8809pt.
- [5 <./06.png> <./07.png>] <09.png, id=60, 265.99374pt x 200.75pt>
+ [5 <./06.png> <./07.png>]
+<09.png, id=127, 265.99374pt x 200.75pt>
 File: 09.png Graphic file (type png)
-
-<use 09.png>
+ <use 09.png>
 Package pdftex.def Info: 09.png used on input line 165.
 (pdftex.def)             Requested size: 212.79527pt x 160.6002pt.
 
@@ -477,7 +475,7 @@ Overfull \hbox (7.68839pt too wide) in paragraph at lines 169--170
 ain.main[]-drone qui repr^^Sesente
  []
 
-<08.png, id=61, 321.2pt x 297.11pt>
+<08.png, id=128, 321.2pt x 297.11pt>
 File: 08.png Graphic file (type png)
  <use 08.png>
 Package pdftex.def Info: 08.png used on input line 174.
@@ -563,25 +561,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  B738344B69EDC8536D122FF3EFD04CA3;1009.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B738344B69EDC8536D122FF3EFD04CA3;1009.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
  ) 
 Here is how much of TeX's memory you used:
- 7753 strings out of 493014
- 109121 string characters out of 6133351
- 209154 words of memory out of 5000000
- 11146 multiletter control sequences out of 15000+600000
+ 7770 strings out of 493014
+ 109385 string characters out of 6133351
+ 209347 words of memory out of 5000000
+ 11161 multiletter control sequences out of 15000+600000
  10593 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,12n,43p,688b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -591,10 +579,10 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></u
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (14 pages, 1534589 bytes).
+Output written on main.pdf (14 pages, 1536428 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 213 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  48 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
